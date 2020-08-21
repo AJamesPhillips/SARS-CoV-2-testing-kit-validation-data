@@ -1,7 +1,10 @@
 from enum import Enum, auto
 from html.parser import HTMLParser
 import json
+import os
 import re
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 FILE_DATE = "2020-08-18"
 
@@ -193,7 +196,8 @@ class IVParser(HTMLParser):
 
 iv_parser = IVParser()
 
-with open("../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE), "r") as f:
+FDA_EUA_html_page_file_path = dir_path + "/../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE)
+with open(FDA_EUA_html_page_file_path, "r") as f:
     html = f.read()
 
     # simplify
@@ -208,7 +212,8 @@ with open("../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE), "r") as f:
     # [print(r) for r in iv_parser.rows]
     print("{} rows parsed".format(len(iv_parser.rows)))
 
-    with open("../data/FDA-EUA/parsed/{}.json".format(FILE_DATE), "w") as f:
+    json_file_path_for_parsed_data = dir_path + "/../data/FDA-EUA/parsed/{}.json".format(FILE_DATE)
+    with open(json_file_path_for_parsed_data, "w") as f:
         f.write(json.dumps(iv_parser.rows, indent=4))
 
 
