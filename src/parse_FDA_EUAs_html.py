@@ -40,7 +40,6 @@ class IVParser(HTMLParser):
         "Fact Sheet for Patients / Recipients (URL to PDF)",
         "Information for Use (IFU) (URL to PDF)",
         "Emergency Use Authorisation (URL to PDF)",
-        # "Other Authorization Labeling",
         "Amendments and Other Documents (PDF)",
         "Federal Register Notice for EUA",
     ]
@@ -126,25 +125,33 @@ class IVParser(HTMLParser):
 
             self.data_subposition += 1
 
+        # Technology
         elif self.data_position == 3:
             if self.current_row[4] is not None:
                 raise Exception("Only expecting one value for Technology")
             self.current_row[4] = data
 
+        # Authorised Settings
         elif self.data_position == 4:
             if self.current_row[5] is not None:
                 raise Exception("Only expecting one value for Authorised Settings")
             self.current_row[5] = data
 
+        # Authorization Labeling & "extra"
         elif self.data_position == 5:
             if data == "HCP":
                 if self.current_row[6] is not None:
                     raise Exception("Only expecting one value for HCP Fact Sheet URL")
                 self.current_row[6] = self.current_a_tag_url
             elif "Patient" in data or data == "Recipients":
-                if self.current_row[7] is not None:
+                if self.current_row[7] is None:
+                    self.current_row[7] = self.current_a_tag_url
+                else:
                     print("Warning: multiple values for Patient / Recipients Fact Sheet URL")
-                self.current_row[7] = self.current_a_tag_url
+                    if not isinstance(self.current_row[7], list):
+                        self.current_row[7] = [self.current_row[7]]
+                    self.current_row[7].append(self.current_a_tag_url)
+
             elif "IFU" in data:
                 if self.current_row[8] is not None:
                     print("Warning: multiple values for IFU URL")
@@ -159,7 +166,22 @@ class IVParser(HTMLParser):
                 print("Unparsed data", data)
 
         elif self.data_position == 6:
-            pass
+            if self.current_a_tag_url is None:
+                if "None currently" in data:
+                    pass
+                elif not data.strip():
+                    pass
+                else:
+                    print("Have unexpected text for \"Amendments and Other Documents\" field: ", data)
+            else:
+                if "None currently" in data:
+                    print("Have unexpected url in \"Amendments and Other Documents\" field: ", self.current_a_tag_url)
+                elif "B)" in data:
+                    pass
+                elif data.strip():
+                    if not isinstance(self.current_row[10], list):
+                        self.current_row[10] = []
+                    self.current_row[10].append(self.current_a_tag_url)
 
         elif self.data_position == 7:
             pass
