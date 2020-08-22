@@ -1,0 +1,3 @@
+../../data/FDA-EUA/PDFs
+../../data/FDA-EUA/templates/molecular-labs
+../../data/FDA-EUA/templates/molecular-manufacturers

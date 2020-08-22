@@ -1,0 +1,121 @@
+<html>
+<head>
+    <script>"<PDFJS>"</script>
+    <script>"<PDFJS_WORKER>"</script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;</script>
+    <style>
+        canvas {
+            border: thin solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="link_to_pdf_file"></div>
+
+    <div id="page_container"></div>
+
+    <script>
+        function mouse_click ({ page_number, start_x, start_y, end_x, end_y }) {
+            console.log("click!!", { page_number, start_x, start_y, end_x, end_y })
+        }
+
+        function mouse_moved ({ page_number, start_x, start_y, end_x, end_y }) {
+            console.log("moved!!", { page_number, start_x, start_y, end_x, end_y })
+        }
+    </script>
+
+    <script>
+        function add_canvas_mouse_event_handlers ({ canvas, page_number }) {
+            function default_mouse_click_handler ({ page_number, start_x, start_y, end_x, end_y }) {
+                console.log("click", { page_number, start_x, start_y, end_x, end_y })
+            }
+
+            function default_mouse_moved_handler ({ page_number, start_x, start_y, end_x, end_y }) {
+                console.log("moved", { page_number, start_x, start_y, end_x, end_y })
+            }
+
+            const mouse_click_handler = window["mouse_click"] || default_mouse_click_handler
+            const mouse_moved_handler = window["mouse_moved"] || default_mouse_moved_handler
+
+            let mouseIsDown = false
+            let start_x = null
+            let start_y = null
+            let end_x = null
+            let end_y = null
+
+            canvas.onmousedown = function (e) {
+                if (mouseIsDown) return
+
+                start_x = event.clientX - canvas.offsetLeft + document.body.scrollLeft
+                start_y = event.clientY - canvas.offsetTop + document.body.scrollTop
+                end_x = null
+                end_y = null
+
+                mouseIsDown = true
+            }
+
+            canvas.onmouseup = function (e) {
+                if (mouseIsDown)
+                {
+                    mouse_click_handler({ page_number, start_x, start_y, end_x, end_y })
+                }
+
+                mouseIsDown = false
+            }
+
+            canvas.onmousemove = function (e) {
+                if (mouseIsDown)
+                {
+                    end_x = event.clientX - canvas.offsetLeft + document.body.scrollLeft
+                    end_y = event.clientY - canvas.offsetTop + document.body.scrollTop
+                    mouse_moved_handler({ page_number, start_x, start_y, end_x, end_y })
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // https://mozilla.github.io/pdf.js/examples/index.html#interactive-examples
+
+        const pdf_file_data = "<PDF_FILE_DATA_JSON>";
+
+        const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data["relative_file_path"];
+
+        // show raw link
+        const link_to_pdf_el = document.getElementById("link_to_pdf_file")
+        link_to_pdf_el.innerHTML = `<a href="${path_to_pdf}">Showing PDF from: ${path_to_pdf}</a>`
+
+        // Render PDF
+        const loadingTask = pdfjsLib.getDocument(path_to_pdf)
+        loadingTask.promise.then(function(pdf) {
+            const page_container_el = document.getElementById("page_container")
+
+            for (let page_number = 1; page_number <= pdf.numPages; ++page_number) {
+                pdf.getPage(page_number).then(page => {
+                    const canvas = document.createElement("canvas")
+                    page_container_el.appendChild(canvas)
+                    page_container_el.appendChild(document.createElement("br"))
+
+                    if (window["add_canvas_mouse_event_handlers"])
+                    {
+                        add_canvas_mouse_event_handlers({ canvas, page_number })
+                    }
+
+                    const scale = 1.5
+                    const viewport = page.getViewport({ scale: scale })
+                    canvas.height = viewport.height
+                    canvas.width = viewport.width
+                    const context = canvas.getContext("2d")
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    }
+                    page.render(renderContext)
+                })
+            }
+        })
+    </script>
+</body>
+</html>
