@@ -35,7 +35,6 @@ def media(file_id):
         binary_pdf = f.read()
 
     response = make_response(binary_pdf)
-    response.headers['Content-Type'] = 'application/pdf'
-    response.headers['Content-Disposition'] = \
-        'inline; filename=%s.pdf' % 'yourfilename'
+    response.headers["Content-Type"] = "application/pdf"
+    response.headers["Content-Disposition"] = "inline; filename={}.pdf".format(file_id)
     return response

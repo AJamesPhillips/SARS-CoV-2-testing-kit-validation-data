@@ -19,11 +19,15 @@
 
 ### FDA EUA html pages
 
-    export FLASK_APP=src/serve_FDA_EUA_html.py && flask run
+    export FLASK_APP=src/serve_FDA_EUA_html.py && flask run --port=5001
 
 ### FDA EUA assessment page
 
-    export FLASK_APP=src/FDA_EUA_assessment/serve.py && flask run
+    export FLASK_APP=src/FDA_EUA_assessment/serve.py && flask run --port=5002
+
+### PDF annotator
+
+    export FLASK_APP=src/annotated_PDFs/serve.py && flask run --port=5003
 
 
 # Dev

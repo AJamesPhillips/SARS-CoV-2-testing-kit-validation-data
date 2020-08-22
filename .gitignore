@@ -3,3 +3,4 @@
 venv
 node_modules
 # src/**/*.js
+__pycache__
