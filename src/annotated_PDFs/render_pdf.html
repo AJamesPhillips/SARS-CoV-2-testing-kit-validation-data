@@ -4,9 +4,32 @@
     <script>"<PDFJS_WORKER>"</script>
     <script>pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;</script>
     <style>
-        canvas {
-            border: thin solid black;
+        .page_container
+        {
             margin: 5px;
+            position: relative;
+        }
+
+        canvas
+        {
+            border: thin solid black;
+            position: absolute;
+        }
+
+        .annotations_container, .annotation
+        {
+            position: absolute;
+        }
+
+        .annotation
+        {
+            background-color: rgba(200, 200, 255, 0.6);
+                             /* rgba(254, 255, 200, 0.7); */
+            pointer-events: none; /* Later may want to move this to an ".annotation.editing" class */
+        }
+        .annotation.invalid
+        {
+            background-color: rgba(255, 50, 50, 0.5);
         }
     </style>
 </head>
@@ -14,64 +37,197 @@
 
     <div id="link_to_pdf_file"></div>
 
-    <div id="page_container"></div>
+    <div id="pages_container"></div>
 
     <script>
-        function mouse_click ({ page_number, start_x, start_y, end_x, end_y }) {
-            console.log("click!!", { page_number, start_x, start_y, end_x, end_y })
+        const debug_log = false
+        const MIN_SIZE = 10
+
+        let highlight_start_x = null
+        let highlight_start_y = null
+        let highlight_end_x = null
+        let highlight_end_y = null
+        let highlight_el = null
+        let highlight_page_number = null
+
+
+        function calc_size ()
+        {
+            const width = highlight_end_x - highlight_start_x
+            const height = highlight_end_y - highlight_start_y
+
+            return { width, height }
         }
 
-        function mouse_moved ({ page_number, start_x, start_y, end_x, end_y }) {
-            console.log("moved!!", { page_number, start_x, start_y, end_x, end_y })
+
+        function update_highlight_el ()
+        {
+            const { width, height } = calc_size()
+
+            highlight_el.style.left = width < 0 ? highlight_start_x + width : highlight_start_x
+            highlight_el.style.width = width < 0 ? -width : width
+
+            highlight_el.style.top = height < 0 ? highlight_start_y + height : highlight_start_y
+            highlight_el.style.height = height < 0 ? -height : height
+        }
+
+
+        function valid_annotation ()
+        {
+            const { width, height } = calc_size()
+
+            return Math.abs(width) >= MIN_SIZE && Math.abs(height) >= MIN_SIZE
+        }
+
+
+        function create_mouse_handlers ({ page_number, annotations_container })
+        {
+            function mouse_down_handler ({ x, y })
+            {
+                debug_log && console.log("mouse down!!", {
+                    page_number,
+                    highlight_start_x,
+                    highlight_start_y,
+                    highlight_end_x,
+                    highlight_end_y
+                })
+
+                highlight_page_number = page_number
+
+                if (highlight_el)
+                {
+                    highlight_el.remove()
+                }
+
+                highlight_el = document.createElement("div")
+                highlight_el.className = "annotation"
+                annotations_container.appendChild(highlight_el)
+
+                highlight_start_x = highlight_end_x = x
+                highlight_start_y = highlight_end_y = y
+                update_highlight_el()
+            }
+
+
+            function mouse_moved_handler ({ x, y })
+            {
+                debug_log && console.log("mouse moved!!", {
+                    page_number,
+                    highlight_start_x,
+                    highlight_start_y,
+                    highlight_end_x,
+                    highlight_end_y
+                })
+
+                if (highlight_page_number !== page_number) return
+
+                highlight_end_x = x
+                highlight_end_y = y
+                valid_annotation()
+                    ? highlight_el.classList.remove("invalid")
+                    : highlight_el.classList.add("invalid")
+                update_highlight_el()
+            }
+
+
+            function mouse_up_handler ({ x, y })
+            {
+                debug_log && console.log("mouse up!!", {
+                    page_number,
+                    highlight_start_x,
+                    highlight_start_y,
+                    highlight_end_x,
+                    highlight_end_y
+                })
+
+                if (highlight_page_number !== page_number) return
+
+                highlight_end_x = x
+                highlight_end_y = y
+                update_highlight_el()
+                if (valid_annotation())
+                {
+
+                }
+                else
+                {
+                    highlight_el.remove()
+                }
+                highlight_el = null
+                highlight_page_number = null
+            }
+
+
+            return {
+                mouse_down_handler,
+                mouse_moved_handler,
+                mouse_up_handler,
+            }
         }
     </script>
 
     <script>
-        function add_canvas_mouse_event_handlers ({ canvas, page_number }) {
-            function default_mouse_click_handler ({ page_number, start_x, start_y, end_x, end_y }) {
-                console.log("click", { page_number, start_x, start_y, end_x, end_y })
-            }
-
-            function default_mouse_moved_handler ({ page_number, start_x, start_y, end_x, end_y }) {
-                console.log("moved", { page_number, start_x, start_y, end_x, end_y })
-            }
-
-            const mouse_click_handler = window["mouse_click"] || default_mouse_click_handler
-            const mouse_moved_handler = window["mouse_moved"] || default_mouse_moved_handler
-
-            let mouseIsDown = false
-            let start_x = null
-            let start_y = null
-            let end_x = null
-            let end_y = null
-
-            canvas.onmousedown = function (e) {
-                if (mouseIsDown) return
-
-                start_x = event.clientX - canvas.offsetLeft + document.body.scrollLeft
-                start_y = event.clientY - canvas.offsetTop + document.body.scrollTop
-                end_x = null
-                end_y = null
-
-                mouseIsDown = true
-            }
-
-            canvas.onmouseup = function (e) {
-                if (mouseIsDown)
+        function add_canvas_mouse_event_handlers ({ canvas, page_number, annotations_container })
+        {
+            function create_default_mouse_handlers ({ page_number, annotations_container })
+            {
+                function mouse_down_handler ({ page_number, x, y })
                 {
-                    mouse_click_handler({ page_number, start_x, start_y, end_x, end_y })
+                    console.log("mouse down", { page_number, x, y })
                 }
 
-                mouseIsDown = false
+                function mouse_moved_handler ({ page_number, x, y })
+                {
+                    console.log("moved", { page_number, x, y })
+                }
+
+                function mouse_up_handler ({ page_number, x, y })
+                {
+                    console.log("mouse_up", { page_number, x, y })
+                }
+
+                return {
+                    mouse_down_handler,
+                    mouse_moved_handler,
+                    mouse_up_handler,
+                }
             }
 
-            canvas.onmousemove = function (e) {
-                if (mouseIsDown)
-                {
-                    end_x = event.clientX - canvas.offsetLeft + document.body.scrollLeft
-                    end_y = event.clientY - canvas.offsetTop + document.body.scrollTop
-                    mouse_moved_handler({ page_number, start_x, start_y, end_x, end_y })
-                }
+            const create_handlers = window["create_mouse_handlers"] || create_default_mouse_handlers
+            const {
+                mouse_down_handler,
+                mouse_moved_handler,
+                mouse_up_handler,
+            } = create_handlers({ page_number, annotations_container })
+
+            let element = canvas
+            let top = 0
+            let left = 0
+            do {
+                top += element.offsetTop  || 0
+                left += element.offsetLeft || 0
+                element = element.offsetParent
+            } while (element)
+
+            canvas.onmousedown = function (e)
+            {
+                const x = event.clientX - left + document.body.scrollLeft
+                const y = event.clientY - top + document.body.scrollTop
+                mouse_down_handler({ x, y })
+            }
+
+            canvas.onmousemove = function (e)
+            {
+                const x = event.clientX - left + document.body.scrollLeft
+                const y = event.clientY - top + document.body.scrollTop
+                mouse_moved_handler({ x, y })
+            }
+
+            canvas.onmouseup = function (e)
+            {
+                const x = event.clientX - left + document.body.scrollLeft
+                const y = event.clientY - top + document.body.scrollTop
+                mouse_up_handler({ x, y })
             }
         }
     </script>
@@ -89,24 +245,39 @@
 
         // Render PDF
         const loadingTask = pdfjsLib.getDocument(path_to_pdf)
-        loadingTask.promise.then(function(pdf) {
-            const page_container_el = document.getElementById("page_container")
+        loadingTask.promise.then(function(pdf)
+        {
+            const pages_container_el = document.getElementById("pages_container")
 
-            for (let page_number = 1; page_number <= pdf.numPages; ++page_number) {
-                pdf.getPage(page_number).then(page => {
+            for (let page_number = 1; page_number <= pdf.numPages; ++page_number)
+            {
+
+                pdf.getPage(page_number).then(page =>
+                {
+                    const page_container = document.createElement("div")
+                    page_container.className = "page_container"
+                    pages_container_el.appendChild(page_container)
+                    pages_container_el.appendChild(document.createElement("br"))
+
                     const canvas = document.createElement("canvas")
-                    page_container_el.appendChild(canvas)
-                    page_container_el.appendChild(document.createElement("br"))
+                    const annotations_container = document.createElement("div")
+                    annotations_container.className = "annotations_container"
+                    page_container.appendChild(canvas)
+                    page_container.appendChild(annotations_container)
 
                     if (window["add_canvas_mouse_event_handlers"])
                     {
-                        add_canvas_mouse_event_handlers({ canvas, page_number })
+                        add_canvas_mouse_event_handlers({ canvas, page_number, annotations_container })
                     }
 
                     const scale = 1.5
                     const viewport = page.getViewport({ scale: scale })
+
+                    page_container.style.height = viewport.height
+                    page_container.style.width = viewport.width
                     canvas.height = viewport.height
                     canvas.width = viewport.width
+
                     const context = canvas.getContext("2d")
                     const renderContext = {
                         canvasContext: context,
