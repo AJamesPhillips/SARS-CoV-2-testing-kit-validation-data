@@ -4,6 +4,11 @@
     <script>"<PDFJS_WORKER>"</script>
     <script>pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;</script>
     <style>
+        #pages_container, #annotations_list
+        {
+            float: left;
+        }
+
         .page_container
         {
             margin: 5px;
@@ -37,9 +42,113 @@
 
     <div id="link_to_pdf_file"></div>
 
-    <div id="pages_container"></div>
+    <div>
+        <div id="pages_container"></div>
+        <div id="annotations_list">
+            <h3>List of annotations:</h3>
+        </div>
+    </div>
 
     <script>
+        const pdf_file_data = "<PDF_FILE_DATA_JSON>";
+
+        const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data["relative_file_path"]
+        const path_to_pdf_annotations = "/annotation?relative_file_path=" + pdf_file_data["relative_file_path"]
+    </script>
+
+    <script>
+        const annotations_list_el = document.getElementById("annotations_list")
+
+        function record_annotation ({ page_number, left, top, width, height, colour, text, label_ids })
+        {
+            const data_to_send = JSON.stringify({ page_number, left, top, width, height, colour, text, label_ids });
+
+            fetch(path_to_pdf_annotations, {
+                credentials: "same-origin",
+                mode: "same-origin",
+                method: "post",
+                headers: { "Content-Type": "application/json" },
+                body: data_to_send
+            })
+                .then(resp => {
+                    if (resp.status === 200) {
+                        return resp.json()
+                    } else {
+                        return Promise.reject("server error")
+                    }
+                })
+                .then(json_data_received => {
+                    let data_received = JSON.parse(json_data_received)
+                })
+                .catch(err => {
+                    if (err === "server") return
+                    console.log(err)
+                })
+        }
+
+        function add_annotation_to_list ({ id, colour })
+        {
+            const annotation_list_el = document.createElement("div")
+            annotation_list_el.innerText = id
+            annotation_list_el.style.backgroundColor = colour
+            annotations_list_el.appendChild(annotation_list_el)
+        }
+
+        let temp_annotation_id = -1;
+        function add_annotation ({ page_number, left, top, width, height, colour, text, label_ids })
+        {
+            const annotation = {
+                id: temp_annotation_id--,
+                page_number,
+                left,
+                top,
+                width,
+                height,
+                colour,
+                text,
+                label_ids,
+            }
+            pdf_file_data.annotations.push(annotation)
+
+            add_annotation_to_list(annotation)
+            record_annotation(annotation)
+        }
+    </script>
+
+    <script>
+        // Functions to create annotations over PDF
+        function get_annotations_container_el_for_page_number ({ page_number })
+        {
+            return document.getElementById(`annotations_container_el_${page_number}`)
+        }
+
+        function create_empty_annotation ({ page_number })
+        {
+            const highlight_el = document.createElement("div")
+            highlight_el.className = "annotation"
+            const annotations_container_el = get_annotations_container_el_for_page_number({ page_number })
+            annotations_container_el.appendChild(highlight_el)
+
+            return highlight_el
+        }
+
+        function create_annotation ({ page_number, left, top, width, height, colour, text, label_ids })
+        {
+            const highlight_el = create_empty_annotation({ page_number })
+            highlight_el.style.left = left
+            highlight_el.style.top = top
+            highlight_el.style.width = width
+            highlight_el.style.height = height
+            highlight_el.style.backgroundColor = colour
+            highlight_el.innerText = text
+        }
+    </script>
+
+    <script>
+        // Create mouse handlers factory for handling mouse events from
+        // PDF
+        // Dependency on add_annotation
+
         const debug_log = false
         const MIN_SIZE = 10
 
@@ -80,7 +189,7 @@
         }
 
 
-        function create_mouse_handlers ({ page_number, annotations_container })
+        function create_mouse_handlers ({ page_number })
         {
             function mouse_down_handler ({ x, y })
             {
@@ -99,9 +208,7 @@
                     highlight_el.remove()
                 }
 
-                highlight_el = document.createElement("div")
-                highlight_el.className = "annotation"
-                annotations_container.appendChild(highlight_el)
+                highlight_el = create_empty_annotation({ page_number })
 
                 highlight_start_x = highlight_end_x = x
                 highlight_start_y = highlight_end_y = y
@@ -145,13 +252,24 @@
                 highlight_end_x = x
                 highlight_end_y = y
                 update_highlight_el()
-                if (valid_annotation())
-                {
-
-                }
-                else
+                if (!valid_annotation())
                 {
                     highlight_el.remove()
+                }
+                else if (window["add_annotation"])
+                {
+                    const annotation = {
+                        page_number,
+                        left: highlight_el.style.left,
+                        top: highlight_el.style.top,
+                        width: highlight_el.style.width,
+                        height: highlight_el.style.height,
+                        // colour: highlight_el.style.backgroundColor,
+                        colour: window.getComputedStyle(highlight_el).backgroundColor,
+                        text: "",
+                        label_ids: [],
+                    }
+                    add_annotation(annotation)
                 }
                 highlight_el = null
                 highlight_page_number = null
@@ -167,9 +285,12 @@
     </script>
 
     <script>
-        function add_canvas_mouse_event_handlers ({ canvas, page_number, annotations_container })
+        // mouse event handler factory
+        // dependency on create_mouse_handlers
+
+        function add_canvas_mouse_event_handlers ({ canvas, page_number })
         {
-            function create_default_mouse_handlers ({ page_number, annotations_container })
+            function create_default_mouse_handlers ({ page_number })
             {
                 function mouse_down_handler ({ page_number, x, y })
                 {
@@ -198,7 +319,7 @@
                 mouse_down_handler,
                 mouse_moved_handler,
                 mouse_up_handler,
-            } = create_handlers({ page_number, annotations_container })
+            } = create_handlers({ page_number })
 
             let element = canvas
             let top = 0
@@ -233,17 +354,30 @@
     </script>
 
     <script>
-        // https://mozilla.github.io/pdf.js/examples/index.html#interactive-examples
-
-        const pdf_file_data = "<PDF_FILE_DATA_JSON>";
-
-        const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data["relative_file_path"];
-
         // show raw link
         const link_to_pdf_el = document.getElementById("link_to_pdf_file")
         link_to_pdf_el.innerHTML = `<a href="${path_to_pdf}">Showing PDF from: ${path_to_pdf}</a>`
 
-        // Render PDF
+        // show list of annotations
+        pdf_file_data.annotations.forEach(add_annotation_to_list)
+
+        // Add annotations to PDF
+        function add_annotations_to_PDF_page ({ page_number })
+        {
+            pdf_file_data.annotations.filter(annotation => {
+                return annotation.page_number === page_number
+            })
+            .forEach(annotation => {
+                create_annotation(annotation)
+            })
+        }
+    </script>
+
+    <script>
+        // Render the PDF
+        //   Dependency on adding mouse event handlers
+        // https://mozilla.github.io/pdf.js/examples/index.html#interactive-examples
+
         const loadingTask = pdfjsLib.getDocument(path_to_pdf)
         loadingTask.promise.then(function(pdf)
         {
@@ -260,14 +394,16 @@
                     pages_container_el.appendChild(document.createElement("br"))
 
                     const canvas = document.createElement("canvas")
-                    const annotations_container = document.createElement("div")
-                    annotations_container.className = "annotations_container"
+                    const annotations_container_el = document.createElement("div")
+                    annotations_container_el.className = "annotations_container"
+                    annotations_container_el.id = `annotations_container_el_${page_number}`
+
                     page_container.appendChild(canvas)
-                    page_container.appendChild(annotations_container)
+                    page_container.appendChild(annotations_container_el)
 
                     if (window["add_canvas_mouse_event_handlers"])
                     {
-                        add_canvas_mouse_event_handlers({ canvas, page_number, annotations_container })
+                        add_canvas_mouse_event_handlers({ canvas, page_number })
                     }
 
                     const scale = 1.5
@@ -284,6 +420,9 @@
                         viewport: viewport
                     }
                     page.render(renderContext)
+                    .promise.then(() => {
+                        add_annotations_to_PDF_page({ page_number })
+                    })
                 })
             }
         })

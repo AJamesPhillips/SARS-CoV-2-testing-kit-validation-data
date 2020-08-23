@@ -163,4 +163,24 @@ def serve_pdf():
     return response
 
 
+@app.route("/annotation", methods = ["POST"])
+def annotation():
+    relative_file_path = request.args.get("relative_file_path")
+    if relative_file_path not in relative_file_path_to_pdf_files_data:
+        return "relative_file_path not found for " + relative_file_path
+
+    pdf_file_data = relative_file_path_to_pdf_files_data[relative_file_path]
+
+    annotation = request.get_json()  # TODO validate this data
+
+    # Might be racy but should be fine for single user
+    annotation["id"] = len(pdf_file_data["annotations"])
+    pdf_file_data["annotations"].append(annotation)
+
+    with open(dir_path + "/" + relative_file_path + ".annotations", "w") as f:
+        json.dump(pdf_file_data, f, indent=0)
+
+    return json.dumps(annotation)
+
+
 populate_pdf_files_data()
