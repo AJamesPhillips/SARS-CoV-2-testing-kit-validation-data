@@ -22,33 +22,15 @@ def sha1_hash_file(file_descriptor):
     # BUF_SIZE is totally arbitrary, change for your app!
     BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
 
-    # md5 = hashlib.md5()
     sha1 = hashlib.sha1()
 
     while True:
         data = file_descriptor.read(BUF_SIZE)
         if not data:
             break
-        # md5.update(data)
         sha1.update(data)
 
     return sha1.hexdigest()
-
-
-# def find_common_parent_directory(dir1, dir2):
-#     dir1 = os.path.abspath(dir1)
-#     dir2 = os.path.abspath(dir2)
-
-#     dir1_parts = dir1.split("/")
-#     dir2_parts = dir2.split("/")
-
-#     common_parent_dir = []
-#     for i, v in enumerate(dir1_parts):
-#         if v != dir2_parts[i]:
-#             break
-#         common_parent_dir.append(v)
-
-#     return "/".join(common_parent_dir)
 
 
 def upsert_meta_data_annotations_file(relative_file_path):
@@ -58,23 +40,21 @@ def upsert_meta_data_annotations_file(relative_file_path):
         with open(dir_path + "/" + relative_file_path, "rb") as f:
             file_sha1_hash = sha1_hash_file(f)
 
-        # common_parent_dir = find_common_parent_directory(dir_path, file_path)
-        # truncated_file_path = os.path.abspath(file_path).replace(common_parent_dir, "")
+        meta_data = {
+            "relative_file_path": relative_file_path,
+            "file_sha1_hash": file_sha1_hash,
+            "annotations": [],
+        }
 
         with open(meta_file_path, "w") as f:
-            json.dump({
-                "relative_file_path": relative_file_path,
-                "file_sha1_hash": file_sha1_hash,
-                "annotations": [],
-            }, f, indent=0)
+            json.dump(meta_data, f, indent=0)
 
     with open(meta_file_path, "r") as f:
         return json.load(f)
 
 
 pdf_files_data = []
-# sha1_hash_to_pdf_files_data = dict()
-relative_file_path_to_pdf_files_data = dict()
+relative_file_paths = set()
 
 def populate_pdf_files_data():
     print("Populating PDF files data")
@@ -85,19 +65,14 @@ def populate_pdf_files_data():
         for file_name in file_names:
             if file_name.endswith(".pdf"):
                 relative_file_path = directory + "/" + file_name
+                relative_file_paths.add(relative_file_path)
+
                 meta_data = upsert_meta_data_annotations_file(relative_file_path)
                 pdf_file_data = {
                     "file_name": file_name,
                     **meta_data,
                 }
                 pdf_files_data.append(pdf_file_data)
-
-                # if meta_data["file_sha1_hash"] in sha1_hash_to_pdf_files_data:
-                #     print(file_path, sha1_hash_to_pdf_files_data[meta_data["file_sha1_hash"]]["file_path"])
-                #     raise Exception("Hash_conflict for: " + meta_data["file_sha1_hash"])
-
-                # sha1_hash_to_pdf_files_data[meta_data["file_sha1_hash"]] = pdf_file_data
-                relative_file_path_to_pdf_files_data[meta_data["relative_file_path"]] = pdf_file_data
 
     print("Populated server with {} PDF files".format(len(pdf_files_data)))
 
@@ -112,24 +87,17 @@ def index():
 
         pdf_file_path_html_links += "<a href=\"/render_pdf?relative_file_path={relative_file_path}\">{file_name}</a><br/>\n".format(**pdf_file_data)
 
-
     return pdf_file_path_html_links
 
 
 @app.route("/render_pdf")
 def render_pdf():
-
-    # sha1_hash = request.args.get("file_sha1_hash")
-    # if sha1_hash not in sha1_hash_to_pdf_files_data:
-    #     return "Hash not found for " + sha1_hash
-
     relative_file_path = request.args.get("relative_file_path")
-    if relative_file_path not in relative_file_path_to_pdf_files_data:
+    if relative_file_path not in relative_file_paths:
         return "relative_file_path not found for " + relative_file_path
 
-    pdf_file_data = relative_file_path_to_pdf_files_data[relative_file_path]
-
-    pdf_file_data_json = json.dumps(pdf_file_data)
+    with open(dir_path + "/" + relative_file_path + ".annotations", "r") as f:
+        pdf_file_data_json = f.read()
 
     with open(dir_path + "/render_pdf.html", "r") as f:
         html = f.read()
@@ -151,7 +119,7 @@ def render_pdf():
 @app.route("/serve_pdf")
 def serve_pdf():
     relative_file_path = request.args.get("relative_file_path")
-    if relative_file_path not in relative_file_path_to_pdf_files_data:
+    if relative_file_path not in relative_file_paths:
         return "relative_file_path not found for " + relative_file_path
 
     with open(dir_path + "/" + relative_file_path, "rb") as f:
@@ -166,10 +134,11 @@ def serve_pdf():
 @app.route("/annotation", methods = ["POST"])
 def annotation():
     relative_file_path = request.args.get("relative_file_path")
-    if relative_file_path not in relative_file_path_to_pdf_files_data:
+    if relative_file_path not in relative_file_paths:
         return "relative_file_path not found for " + relative_file_path
 
-    pdf_file_data = relative_file_path_to_pdf_files_data[relative_file_path]
+    with open(dir_path + "/" + relative_file_path + ".annotations", "r") as f:
+        pdf_file_data = json.load(f)
 
     annotation = request.get_json()  # TODO validate this data
 
