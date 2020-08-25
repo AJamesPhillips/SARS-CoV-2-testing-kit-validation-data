@@ -88,10 +88,10 @@
                 })
         }
 
-        function add_annotation_to_list ({ id, page_number, colour })
+        function add_annotation_to_list ({ id, page_number, colour, text })
         {
             const annotation_list_el = document.createElement("div")
-            annotation_list_el.innerText = `id: ${id}  page: ${page_number}`
+            annotation_list_el.innerText = `id: ${id}  page: ${page_number}  text: ${text}`
             annotation_list_el.style.backgroundColor = colour
             annotation_list_el.className = `annotation_${id}`
             annotations_list_el.appendChild(annotation_list_el)
@@ -126,7 +126,9 @@
                 vars[decodeURIComponent(key)] = decodeURIComponent(_var)
             })
 
-            const highlighted_annotation_ids = vars["highlighted_annotation_ids"].split(",") || []
+            const highlighted_annotation_ids = vars["highlighted_annotation_ids"]
+                ? vars["highlighted_annotation_ids"].split(",")
+                : []
             programmatic_styles_el.innerHTML = ""
             if (!highlighted_annotation_ids.length) return
             const class_names = highlighted_annotation_ids.map(id => `.annotation_${id}`).join(",")
@@ -160,7 +162,7 @@
             annotation_el.style.width = width
             annotation_el.style.height = height
             annotation_el.style.backgroundColor = colour
-            annotation_el.innerText = text
+            annotation_el.title = text
         }
     </script>
 
@@ -406,49 +408,64 @@
         {
             const pages_container_el = document.getElementById("pages_container")
 
-            for (let page_number = 1; page_number <= pdf.numPages; ++page_number)
-            {
-
-                pdf.getPage(page_number).then(page =>
-                {
-                    const page_container = document.createElement("div")
-                    page_container.className = "page_container"
-                    pages_container_el.appendChild(page_container)
-                    pages_container_el.appendChild(document.createElement("br"))
-
-                    const canvas = document.createElement("canvas")
-                    const annotations_container_el = document.createElement("div")
-                    annotations_container_el.className = "annotations_container"
-                    annotations_container_el.id = `annotations_container_el_${page_number}`
-
-                    page_container.appendChild(canvas)
-                    page_container.appendChild(annotations_container_el)
-
-                    if (window["add_canvas_mouse_event_handlers"])
-                    {
-                        add_canvas_mouse_event_handlers({ canvas, page_number })
-                    }
-
-                    const scale = 1.5
-                    const viewport = page.getViewport({ scale: scale })
-
-                    page_container.style.height = viewport.height
-                    page_container.style.width = viewport.width
-                    canvas.height = viewport.height
-                    canvas.width = viewport.width
-
-                    const context = canvas.getContext("2d")
-                    const renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    }
-                    page.render(renderContext)
-                    .promise.then(() => {
-                        add_annotations_to_PDF_page({ page_number })
-                    })
-                })
-            }
+            // assume there is always at least 1 page to render
+            render_pdf_page ({ pdf, pages_container_el, page_number: 1 })
         })
+
+        function render_pdf_page ({ pdf, pages_container_el, page_number })
+        {
+            pdf.getPage(page_number).then(page =>
+            {
+                const page_container = document.createElement("div")
+                page_container.className = "page_container"
+                pages_container_el.appendChild(page_container)
+                const page_number_el = document.createElement("div")
+                page_number_el.innerText = page_number
+                pages_container_el.appendChild(page_number_el)
+                pages_container_el.appendChild(document.createElement("br"))
+
+                const canvas = document.createElement("canvas")
+                const annotations_container_el = document.createElement("div")
+                annotations_container_el.className = "annotations_container"
+                annotations_container_el.id = `annotations_container_el_${page_number}`
+
+                page_container.appendChild(canvas)
+                page_container.appendChild(annotations_container_el)
+
+                if (window["add_canvas_mouse_event_handlers"])
+                {
+                    add_canvas_mouse_event_handlers({ canvas, page_number })
+                }
+
+                const scale = 1.5
+                const viewport = page.getViewport({ scale: scale })
+
+                page_container.style.height = viewport.height
+                page_container.style.width = viewport.width
+                canvas.height = viewport.height
+                canvas.width = viewport.width
+
+                const context = canvas.getContext("2d")
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                }
+                page.render(renderContext)
+                .promise.then(() =>
+                {
+                    add_annotations_to_PDF_page({ page_number })
+
+                    if (page_number < pdf.numPages)
+                    {
+                        render_pdf_page({
+                            pdf,
+                            pages_container_el,
+                            page_number: page_number + 1,
+                        })
+                    }
+                })
+            })
+        }
     </script>
 </body>
 </html>
