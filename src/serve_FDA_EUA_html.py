@@ -1,4 +1,4 @@
-from flask import Flask, make_response
+from flask import Flask, make_response, redirect
 import os
 
 app = Flask(__name__)
@@ -31,10 +31,14 @@ def media(file_id):
         </body>
         </html>""".format(url="https://www.fda.gov/media/{}/download".format(file_id))
 
-    with open(file_path, "rb") as f:
-        binary_pdf = f.read()
+    pdf_annotation_server_url = "http://localhost:5003"
+    redirect_url = pdf_annotation_server_url + "/render_pdf?relative_file_path=../../data/FDA-EUA/PDFs/{}.pdf".format(file_id)
+    return redirect(redirect_url, code=302)
 
-    response = make_response(binary_pdf)
-    response.headers["Content-Type"] = "application/pdf"
-    response.headers["Content-Disposition"] = "inline; filename={}.pdf".format(file_id)
-    return response
+    # with open(file_path, "rb") as f:
+    #     binary_pdf = f.read()
+
+    # response = make_response(binary_pdf)
+    # response.headers["Content-Type"] = "application/pdf"
+    # response.headers["Content-Disposition"] = "inline; filename={}.pdf".format(file_id)
+    # return response
