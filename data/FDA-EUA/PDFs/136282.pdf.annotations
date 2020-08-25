@@ -1,5 +1,105 @@
 {
 "relative_file_path": "../../data/FDA-EUA/PDFs/136282.pdf",
 "file_sha1_hash": "0d7f2b7697275557a49d6db05921c67308aa608b",
-"annotations": []
+"annotations": [
+{
+"page_number": 6,
+"left": "191px",
+"top": "771px",
+"width": "133px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "What is the \"Standard technique\" for sample collection?",
+"label_ids": [],
+"id": 0
+},
+{
+"page_number": 6,
+"left": "157px",
+"top": "966px",
+"width": "107px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "CLSI MM13-A seems to discuss molecular but not clinical / physical collection",
+"label_ids": [],
+"id": 1
+},
+{
+"page_number": 6,
+"left": "542px",
+"top": "869px",
+"width": "110px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Which kind of transport media?",
+"label_ids": [],
+"id": 2
+},
+{
+"page_number": 4,
+"left": "249px",
+"top": "346px",
+"width": "527px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Detection method",
+"label_ids": [],
+"id": 3
+},
+{
+"page_number": 4,
+"left": "106px",
+"top": "386px",
+"width": "630px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Detection method",
+"label_ids": [],
+"id": 4
+},
+{
+"page_number": 12,
+"left": "102px",
+"top": "701px",
+"width": "449px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Clinical validation sample type, number, partial patient type",
+"label_ids": [],
+"id": 5
+},
+{
+"page_number": 3,
+"left": "104px",
+"top": "183px",
+"width": "358px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Intended use population?",
+"label_ids": [],
+"id": 6
+},
+{
+"page_number": 12,
+"left": "102px",
+"top": "806px",
+"width": "714px",
+"height": "176px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Clinical evaluation confusion matrix",
+"label_ids": [],
+"id": 7
+},
+{
+"page_number": 12,
+"left": "105px",
+"top": "992px",
+"width": "423px",
+"height": "48px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Calculated PPA and NPA plus confidence intervals",
+"label_ids": [],
+"id": 8
+}
+]
 }
