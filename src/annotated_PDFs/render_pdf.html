@@ -30,7 +30,10 @@
         {
             background-color: rgba(200, 200, 255, 0.6);
                              /* rgba(254, 255, 200, 0.7); */
-            pointer-events: none; /* Later may want to move this to an ".annotation.editing" class */
+        }
+        .annotation.editing_dimensions
+        {
+            pointer-events: none;
         }
         .annotation.invalid
         {
@@ -93,7 +96,7 @@
             const annotation_list_el = document.createElement("div")
             annotation_list_el.innerText = `id: ${id}  page: ${page_number}  text: ${text}`
             annotation_list_el.style.backgroundColor = colour
-            annotation_list_el.className = `annotation_${id}`
+            annotation_list_el.className = `annotation_list_element annotation_${id}`
             annotations_list_el.appendChild(annotation_list_el)
         }
 
@@ -116,8 +119,12 @@
             record_annotation(annotation)
         }
 
-        const programmatic_styles_el = document.getElementById("programmatic_styles")
-        function update_highlighted_annotations ()
+    </script>
+
+
+    <script>
+
+        function parse_location_search ()
         {
             const query = window.location.search.substring(1)
             const vars = {}
@@ -126,14 +133,112 @@
                 vars[decodeURIComponent(key)] = decodeURIComponent(_var)
             })
 
+            return vars
+        }
+
+        function get_highlighted_annotation_ids ()
+        {
+            const vars = parse_location_search()
+
             const highlighted_annotation_ids = vars["highlighted_annotation_ids"]
                 ? vars["highlighted_annotation_ids"].split(",")
                 : []
+
+            return highlighted_annotation_ids
+        }
+
+        const programmatic_styles_el = document.getElementById("programmatic_styles")
+        function update_highlighted_annotations ()
+        {
+            const highlighted_annotation_ids = get_highlighted_annotation_ids()
+
             programmatic_styles_el.innerHTML = ""
             if (!highlighted_annotation_ids.length) return
             const class_names = highlighted_annotation_ids.map(id => `.annotation_${id}`).join(",")
             // TODO: remove `!important` hack
             programmatic_styles_el.innerHTML = `${class_names} { background-color: rgba(255, 245, 150, 0.7) !important; }`
+
+            scroll_to_a_highlighted_annotation({ highlighted_annotation_ids })
+        }
+
+        function scroll_to_a_highlighted_annotation ({ highlighted_annotation_ids })
+        {
+            if (!an_annotation_in_view({ highlighted_annotation_ids }))
+            {
+                // console.log("Annotations not in view")
+                const annotation_id = highlighted_annotation_ids[0]
+                const el = document.getElementsByClassName(`annotation annotation_${annotation_id}`)[0]
+                scroll_to_element(el)
+            }
+        }
+
+        function an_annotation_in_view ({ highlighted_annotation_ids })
+        {
+            let one_in_view = false
+            highlighted_annotation_ids.forEach(id =>
+            {
+                one_in_view = one_in_view || annotation_in_view(id)
+            })
+            return one_in_view
+        }
+
+        function annotation_in_view (annotation_id)
+        {
+            const el = document.getElementsByClassName(`annotation annotation_${annotation_id}`)[0]
+            return element_in_view(el)
+        }
+
+        function element_in_view (el)
+        {
+            if (!(el && el.getBoundingClientRect)) return false
+
+            const rect = el.getBoundingClientRect()
+
+            return (
+                rect.top >= 0 &&
+                //rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) //&& /* or $(window).height() */
+                //rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+            )
+        }
+
+        function scroll_to_element (el)
+        {
+            if (!(el && el.scrollIntoView)) return false
+            el.scrollIntoView()
+        }
+
+        function toggle_annotation_highlight (annotation_id)
+        {
+            const annotation_id_str = annotation_id.toString()
+            const highlighted_annotation_ids = get_highlighted_annotation_ids()
+            const modified = highlighted_annotation_ids.filter(v => v !== annotation_id_str)
+            if (modified.length === highlighted_annotation_ids.length)
+            {
+                modified.push(annotation_id_str)
+            }
+
+            update_page_location({ highlighted_annotation_ids: modified })
+        }
+
+        function update_page_location ({ highlighted_annotation_ids })
+        {
+            const vars = parse_location_search()
+            vars["highlighted_annotation_ids"] = highlighted_annotation_ids.join(",")
+            const search = []
+            Object.keys(vars).forEach(key =>
+            {
+                search.push(`${key}=${encodeURIComponent(vars[key])}`)
+            })
+            const search_string = search.join("&")
+
+            var new_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + search_string
+            if (history.pushState)
+            {
+                window.history.pushState({ path: new_url }, "", new_url)
+                update_highlighted_annotations()
+            }
+            else window.location = new_url
         }
     </script>
 
@@ -144,19 +249,20 @@
             return document.getElementById(`annotations_container_el_${page_number}`)
         }
 
-        function create_empty_annotation ({ id, page_number })
+        function create_empty_annotation ({ id, page_number, editing_dimensions })
         {
             const annotation_el = document.createElement("div")
-            annotation_el.className = `annotation annotation_${id}`
+            annotation_el.className = `annotation annotation_${id}` + (editing_dimensions ? " editing_dimensions" : "")
             const annotations_container_el = get_annotations_container_el_for_page_number({ page_number })
             annotations_container_el.appendChild(annotation_el)
+            annotation_el.onclick = () => toggle_annotation_highlight(id)
 
             return annotation_el
         }
 
         function create_annotation ({ id, page_number, left, top, width, height, colour, text, label_ids })
         {
-            const annotation_el = create_empty_annotation({ id, page_number })
+            const annotation_el = create_empty_annotation({ id, page_number, editing_dimensions: false })
             annotation_el.style.left = left
             annotation_el.style.top = top
             annotation_el.style.width = width
@@ -231,7 +337,7 @@
                     temp_annotation_el.remove()
                 }
 
-                temp_annotation_el = create_empty_annotation({ id: temp_annotation_id, page_number })
+                temp_annotation_el = create_empty_annotation({ id: temp_annotation_id, page_number, editing_dimensions: true })
 
                 highlight_start_x = highlight_end_x = x
                 highlight_start_y = highlight_end_y = y
@@ -294,6 +400,7 @@
                         label_ids: [],
                     }
                     add_annotation(annotation)
+                    temp_annotation_el.classList.remove("editing_dimensions")
                 }
                 temp_annotation_el = null
                 highlight_page_number = null
@@ -384,7 +491,6 @@
 
         // show list of annotations
         pdf_file_data.annotations.forEach(add_annotation_to_list)
-        update_highlighted_annotations()
 
         // Add annotations to PDF
         function add_annotations_to_PDF_page ({ page_number })
@@ -463,8 +569,17 @@
                             page_number: page_number + 1,
                         })
                     }
+                    else
+                    {
+                        finished_rendering_pdf()
+                    }
                 })
             })
+        }
+
+        function finished_rendering_pdf ()
+        {
+            update_highlighted_annotations()
         }
     </script>
 </body>
