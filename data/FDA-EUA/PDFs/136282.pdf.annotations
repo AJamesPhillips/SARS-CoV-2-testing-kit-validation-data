@@ -81,17 +81,6 @@
 },
 {
 "page_number": 12,
-"left": "102px",
-"top": "806px",
-"width": "714px",
-"height": "176px",
-"colour": "rgba(200, 200, 255, 0.6)",
-"text": "Clinical evaluation confusion matrix",
-"label_ids": [],
-"id": 7
-},
-{
-"page_number": 12,
 "left": "105px",
 "top": "992px",
 "width": "423px",
@@ -99,7 +88,29 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Calculated PPA and NPA plus confidence intervals",
 "label_ids": [],
+"id": 7
+},
+{
+"page_number": 12,
+"left": "305px",
+"top": "934px",
+"width": "150px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Positive clinical samples",
+"label_ids": [],
 "id": 8
+},
+{
+"page_number": 12,
+"left": "482px",
+"top": "934px",
+"width": "150px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Negative control clinical samples",
+"label_ids": [],
+"id": 9
 }
 ]
 }
