@@ -4,6 +4,12 @@
     <script>"<PDFJS_WORKER>"</script>
     <script>pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;</script>
     <style>
+        #loading_progress
+        {
+            text-align: center;
+            font-size: 25;
+        }
+
         #pages_container, #annotations_list
         {
             float: left;
@@ -44,7 +50,7 @@
     <style id="programmatic_styles"></style>
 </head>
 <body>
-
+    <div id="loading_progress"></div>
     <div id="link_to_pdf_file"></div>
 
     <div>
@@ -505,6 +511,22 @@
     </script>
 
     <script>
+        let max_number_of_pages = undefined
+        let loading_progress_el = document.getElementById("loading_progress")
+        function update_loading_progress ({ page_number, max_pages })
+        {
+            max_number_of_pages = max_pages || max_number_of_pages
+            page_number = page_number || 0
+
+            const progress = ((page_number / max_number_of_pages) * 100).toFixed(0)
+            loading_progress_el.innerText = `Progress: ${progress}%`
+            if (page_number === max_pages) setTimeout(() => {
+                loading_progress_el.style.display = "none"
+            }, 500)
+        }
+    </script>
+
+    <script>
         // Render the PDF
         //   Dependency on adding mouse event handlers
         // https://mozilla.github.io/pdf.js/examples/index.html#interactive-examples
@@ -514,8 +536,9 @@
         {
             const pages_container_el = document.getElementById("pages_container")
 
+            update_loading_progress({ max_pages: pdf.numPages })
             // assume there is always at least 1 page to render
-            render_pdf_page ({ pdf, pages_container_el, page_number: 1 })
+            render_pdf_page({ pdf, pages_container_el, page_number: 1 })
         })
 
         function render_pdf_page ({ pdf, pages_container_el, page_number })
@@ -560,6 +583,7 @@
                 .promise.then(() =>
                 {
                     add_annotations_to_PDF_page({ page_number })
+                    update_loading_progress({ page_number })
 
                     if (page_number < pdf.numPages)
                     {
