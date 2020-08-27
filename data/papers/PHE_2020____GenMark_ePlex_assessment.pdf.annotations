@@ -1,5 +1,160 @@
 {
 "relative_file_path": "../../data/papers/PHE_2020____GenMark_ePlex_assessment.pdf",
 "file_sha1_hash": "a76b0425323e6a94355a55160a373f72b1cd8118",
-"annotations": []
+"annotations": [
+{
+"page_number": 3,
+"left": "332px",
+"top": "754px",
+"width": "125px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 0
+},
+{
+"page_number": 3,
+"left": "153px",
+"top": "755px",
+"width": "146px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 1
+},
+{
+"page_number": 3,
+"left": "60px",
+"top": "781px",
+"width": "215px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 2
+},
+{
+"page_number": 3,
+"left": "449px",
+"top": "1097px",
+"width": "257px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 3
+},
+{
+"page_number": 4,
+"left": "520px",
+"top": "274px",
+"width": "212px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 4
+},
+{
+"page_number": 4,
+"left": "255px",
+"top": "274px",
+"width": "56px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 5
+},
+{
+"page_number": 4,
+"left": "113px",
+"top": "830px",
+"width": "130px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 6
+},
+{
+"page_number": 4,
+"left": "528px",
+"top": "830px",
+"width": "210px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 7
+},
+{
+"page_number": 4,
+"left": "61px",
+"top": "856px",
+"width": "697px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 8
+},
+{
+"page_number": 4,
+"left": "61px",
+"top": "905px",
+"width": "708px",
+"height": "79px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Could the ePlex assay have correctly identified lower dilution series of -8 or -9?",
+"label_ids": [],
+"id": 9
+},
+{
+"page_number": 5,
+"left": "308px",
+"top": "244px",
+"width": "121px",
+"height": "83px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 10
+},
+{
+"page_number": 5,
+"left": "682px",
+"top": "245px",
+"width": "121px",
+"height": "82px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 11
+},
+{
+"page_number": 5,
+"left": "556px",
+"top": "243px",
+"width": "122px",
+"height": "84px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 12
+},
+{
+"page_number": 5,
+"left": "433px",
+"top": "245px",
+"width": "119px",
+"height": "83px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"label_ids": [],
+"id": 13
+}
+]
 }
