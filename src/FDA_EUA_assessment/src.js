@@ -1,12 +1,21 @@
-var _a;
+var _a, _b, _c;
 var DATA_KEYS;
 (function (DATA_KEYS) {
     DATA_KEYS["test_descriptor__manufacturer_name"] = "test_descriptor__manufacturer_name";
     DATA_KEYS["test_descriptor__test_name"] = "test_descriptor__test_name";
     DATA_KEYS["validation_condition__author"] = "validation_condition__author";
     DATA_KEYS["validation_condition__date"] = "validation_condition__date";
+    DATA_KEYS["validation_condition__specimen_type"] = "validation_condition__specimen_type";
+    DATA_KEYS["validation_condition__swab_type"] = "validation_condition__swab_type";
+    DATA_KEYS["validation_condition__transport_medium"] = "validation_condition__transport_medium";
+    DATA_KEYS["validation_condition__sample_volume"] = "validation_condition__sample_volume";
+    DATA_KEYS["validation_condition__comparator_test"] = "validation_condition__comparator_test";
     DATA_KEYS["metrics__num_clinical_samples__positive"] = "metrics__num_clinical_samples__positive";
     DATA_KEYS["metrics__num_clinical_samples__negative_controls"] = "metrics__num_clinical_samples__negative_controls";
+    DATA_KEYS["metrics__confusion_matrix__true_positives"] = "metrics__confusion_matrix__true_positives";
+    DATA_KEYS["metrics__confusion_matrix__false_negatives"] = "metrics__confusion_matrix__false_negatives";
+    DATA_KEYS["metrics__confusion_matrix__true_negatives"] = "metrics__confusion_matrix__true_negatives";
+    DATA_KEYS["metrics__confusion_matrix__false_positives"] = "metrics__confusion_matrix__false_positives";
 })(DATA_KEYS || (DATA_KEYS = {}));
 var data = [
     (_a = {},
@@ -14,6 +23,11 @@ var data = [
         _a[DATA_KEYS.test_descriptor__test_name] = { value: "ePlex SARS-CoV-2 Test", refs: [] },
         _a[DATA_KEYS.validation_condition__author] = { value: "self", refs: [] },
         _a[DATA_KEYS.validation_condition__date] = { value: "", refs: [] },
+        _a[DATA_KEYS.validation_condition__specimen_type] = { value: "", refs: [] },
+        _a[DATA_KEYS.validation_condition__swab_type] = { value: "", refs: [] },
+        _a[DATA_KEYS.validation_condition__transport_medium] = { value: "", refs: [] },
+        _a[DATA_KEYS.validation_condition__sample_volume] = { value: "", refs: [] },
+        _a[DATA_KEYS.validation_condition__comparator_test] = { value: "", refs: [] },
         _a[DATA_KEYS.metrics__num_clinical_samples__positive] = {
             value: 18,
             refs: [
@@ -26,7 +40,89 @@ var data = [
                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2FFDA-EUA%2FPDFs%2F136282.pdf&highlighted_annotation_ids=9"
             ]
         },
-        _a)
+        _a[DATA_KEYS.metrics__confusion_matrix__true_positives] = { value: "", refs: [] },
+        _a[DATA_KEYS.metrics__confusion_matrix__false_negatives] = { value: "", refs: [] },
+        _a[DATA_KEYS.metrics__confusion_matrix__true_negatives] = { value: "", refs: [] },
+        _a[DATA_KEYS.metrics__confusion_matrix__false_positives] = { value: "", refs: [] },
+        _a),
+    (_b = {},
+        _b[DATA_KEYS.test_descriptor__manufacturer_name] = { value: "", refs: [] },
+        _b[DATA_KEYS.test_descriptor__test_name] = { value: "ePlex SARS-CoV-2 Test", refs: [] },
+        _b[DATA_KEYS.validation_condition__author] = { value: "Uhteg, et al.", refs: ["https://doi.org/10.1016/j.jcv.2020.104384"] },
+        _b[DATA_KEYS.validation_condition__date] = { value: "2020-04-16", refs: [] },
+        _b[DATA_KEYS.validation_condition__specimen_type] = { value: "", refs: [] },
+        _b[DATA_KEYS.validation_condition__swab_type] = { value: "", refs: [] },
+        _b[DATA_KEYS.validation_condition__transport_medium] = { value: "", refs: [] },
+        _b[DATA_KEYS.validation_condition__sample_volume] = { value: "", refs: [] },
+        _b[DATA_KEYS.validation_condition__comparator_test] = { value: "", refs: [] },
+        _b[DATA_KEYS.metrics__num_clinical_samples__positive] = {
+            value: 13,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=5"
+            ]
+        },
+        _b[DATA_KEYS.metrics__num_clinical_samples__negative_controls] = {
+            value: 34,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=6"
+            ]
+        },
+        _b[DATA_KEYS.metrics__confusion_matrix__true_positives] = { value: "", refs: [] },
+        _b[DATA_KEYS.metrics__confusion_matrix__false_negatives] = { value: "", refs: [] },
+        _b[DATA_KEYS.metrics__confusion_matrix__true_negatives] = { value: "", refs: [] },
+        _b[DATA_KEYS.metrics__confusion_matrix__false_positives] = { value: "", refs: [] },
+        _b),
+    (_c = {},
+        _c[DATA_KEYS.test_descriptor__manufacturer_name] = { value: "", refs: [] },
+        _c[DATA_KEYS.test_descriptor__test_name] = { value: "ePlex SARS-CoV-2 Test", refs: [] },
+        _c[DATA_KEYS.validation_condition__author] = { value: "PHE", refs: ["https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/897832/Rapid_Assessment_of_GenMark_ePlex_SARS_CoV_2_test_V1.00e.pdf"] },
+        _c[DATA_KEYS.validation_condition__date] = { value: "2020-07-08", refs: [] },
+        _c[DATA_KEYS.validation_condition__specimen_type] = {
+            value: "NP?",
+            comment: "It should be NP specimens but clinical specimen type not stated",
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=3"
+            ]
+        },
+        _c[DATA_KEYS.validation_condition__swab_type] = { value: "_?_", refs: [] },
+        _c[DATA_KEYS.validation_condition__transport_medium] = {
+            value: "VTM _?_",
+            comment: "Unknown brand or formulation of VTM",
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=4"
+            ]
+        },
+        _c[DATA_KEYS.validation_condition__sample_volume] = { value: "200 ul", refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=5"
+            ] },
+        _c[DATA_KEYS.validation_condition__comparator_test] = { value: "in-house PHE PCR assay", refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=2"
+            ] },
+        _c[DATA_KEYS.metrics__num_clinical_samples__positive] = {
+            value: 93,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=0"
+            ]
+        },
+        _c[DATA_KEYS.metrics__num_clinical_samples__negative_controls] = {
+            value: 120,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=1"
+            ]
+        },
+        _c[DATA_KEYS.metrics__confusion_matrix__true_positives] = { value: 101, refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=10"
+            ] },
+        _c[DATA_KEYS.metrics__confusion_matrix__false_negatives] = { value: 1, refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=11"
+            ] },
+        _c[DATA_KEYS.metrics__confusion_matrix__true_negatives] = { value: 124, refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=12"
+            ] },
+        _c[DATA_KEYS.metrics__confusion_matrix__false_positives] = { value: 2, refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=13"
+            ] },
+        _c),
 ];
 // Merge with FDA_EUA_PARSED_DATA
 var FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data.reduce(function (accum, row) {
@@ -174,7 +270,6 @@ var headers = [
                 title: "Date",
                 data_key: DATA_KEYS.validation_condition__date
             },
-            { title: "Specimen type", data_key: null },
             {
                 title: "Patient details",
                 data_key: null,
@@ -185,6 +280,16 @@ var headers = [
                 ]
             },
             { title: "Disease stage", data_key: null },
+            {
+                title: "Specimen",
+                data_key: null,
+                children: [
+                    { title: "Type", data_key: DATA_KEYS.validation_condition__specimen_type },
+                    { title: "Swab type", data_key: DATA_KEYS.validation_condition__swab_type },
+                    { title: "Transport medium", data_key: DATA_KEYS.validation_condition__transport_medium },
+                    { title: "Sample volume", data_key: DATA_KEYS.validation_condition__sample_volume },
+                ]
+            },
         ]
     },
     {
@@ -211,7 +316,27 @@ var headers = [
                     },
                 ]
             },
+            {
+                title: "Comparator test",
+                data_key: DATA_KEYS.validation_condition__comparator_test
+            },
+            {
+                title: "Confusion matrix",
+                data_key: null,
+                children: [
+                    { title: "True positives", data_key: DATA_KEYS.metrics__confusion_matrix__true_positives },
+                    { title: "False negatives", data_key: DATA_KEYS.metrics__confusion_matrix__false_negatives },
+                    { title: "True negatives", data_key: DATA_KEYS.metrics__confusion_matrix__true_negatives },
+                    { title: "False positives", data_key: DATA_KEYS.metrics__confusion_matrix__false_positives },
+                ]
+            },
         ]
+    },
+    {
+        title: "Derived values",
+        data_key: null,
+        category: "derived_values",
+        children: []
     },
 ];
 function build_header(headers) {

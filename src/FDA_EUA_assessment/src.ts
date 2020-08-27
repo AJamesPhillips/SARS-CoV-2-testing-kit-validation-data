@@ -7,8 +7,17 @@ enum DATA_KEYS {
     test_descriptor__test_name = "test_descriptor__test_name",
     validation_condition__author = "validation_condition__author",
     validation_condition__date = "validation_condition__date",
+    validation_condition__specimen_type = "validation_condition__specimen_type",
+    validation_condition__swab_type = "validation_condition__swab_type",
+    validation_condition__transport_medium = "validation_condition__transport_medium",
+    validation_condition__sample_volume = "validation_condition__sample_volume",
+    validation_condition__comparator_test = "validation_condition__comparator_test",
     metrics__num_clinical_samples__positive = "metrics__num_clinical_samples__positive",
     metrics__num_clinical_samples__negative_controls = "metrics__num_clinical_samples__negative_controls",
+    metrics__confusion_matrix__true_positives = "metrics__confusion_matrix__true_positives",
+    metrics__confusion_matrix__false_negatives = "metrics__confusion_matrix__false_negatives",
+    metrics__confusion_matrix__true_negatives = "metrics__confusion_matrix__true_negatives",
+    metrics__confusion_matrix__false_positives = "metrics__confusion_matrix__false_positives",
 }
 
 
@@ -16,6 +25,7 @@ enum DATA_KEYS {
 interface DATA_NODE
 {
     value: string | number
+    comment?: string
     refs: string[]
 }
 interface DATA_ROW
@@ -24,8 +34,17 @@ interface DATA_ROW
     test_descriptor__test_name: DATA_NODE,
     validation_condition__author: DATA_NODE,
     validation_condition__date: DATA_NODE,
+    validation_condition__specimen_type: DATA_NODE,
+    validation_condition__swab_type: DATA_NODE,
+    validation_condition__transport_medium: DATA_NODE,
+    validation_condition__sample_volume: DATA_NODE,
+    validation_condition__comparator_test: DATA_NODE,
     metrics__num_clinical_samples__positive: DATA_NODE,
     metrics__num_clinical_samples__negative_controls: DATA_NODE,
+    metrics__confusion_matrix__true_positives: DATA_NODE,
+    metrics__confusion_matrix__false_negatives: DATA_NODE,
+    metrics__confusion_matrix__true_negatives: DATA_NODE,
+    metrics__confusion_matrix__false_positives: DATA_NODE,
 }
 type DATA = DATA_ROW[]
 const data: DATA = [
@@ -34,6 +53,11 @@ const data: DATA = [
         [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
         [DATA_KEYS.validation_condition__author]: { value: "self", refs: [] },
         [DATA_KEYS.validation_condition__date]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__specimen_type]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__transport_medium]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [] },
         [DATA_KEYS.metrics__num_clinical_samples__positive]: {
             value: 18,
             refs: [
@@ -46,7 +70,87 @@ const data: DATA = [
                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2FFDA-EUA%2FPDFs%2F136282.pdf&highlighted_annotation_ids=9"
             ]
         },
-    }
+        [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
+    },
+    {
+        [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+        [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
+        [DATA_KEYS.validation_condition__author]: { value: "Uhteg, et al.", refs: ["https://doi.org/10.1016/j.jcv.2020.104384"] },
+        [DATA_KEYS.validation_condition__date]: { value: "2020-04-16", refs: [] },
+        [DATA_KEYS.validation_condition__specimen_type]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__transport_medium]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+            value: 13,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=5"
+            ]
+        },
+        [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+            value: 34,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=6"
+            ]
+        },
+        [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: "", refs: [] },
+        [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
+    },
+    {
+        [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+        [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
+        [DATA_KEYS.validation_condition__author]: { value: "PHE", refs: ["https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/897832/Rapid_Assessment_of_GenMark_ePlex_SARS_CoV_2_test_V1.00e.pdf"] },
+        [DATA_KEYS.validation_condition__date]: { value: "2020-07-08", refs: [] },
+        [DATA_KEYS.validation_condition__specimen_type]: {
+            value: "NP?",
+            comment: "It should be NP specimens but clinical specimen type not stated",
+            refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=3"
+        ] },
+        [DATA_KEYS.validation_condition__swab_type]: { value: "_?_", refs: [] },
+        [DATA_KEYS.validation_condition__transport_medium]: {
+            value: "VTM _?_",
+            comment: "Unknown brand or formulation of VTM",
+            refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=4"
+        ] },
+        [DATA_KEYS.validation_condition__sample_volume]: { value: "200 ul", refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=5"
+        ] },
+        [DATA_KEYS.validation_condition__comparator_test]: { value: "in-house PHE PCR assay", refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=2"
+        ] },
+        [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+            value: 93,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=0"
+            ]
+        },
+        [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+            value: 120,
+            refs: [
+                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=1"
+            ]
+        },
+        [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: 101, refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=10"
+        ] },
+        [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: 1, refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=11"
+        ] },
+        [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: 124, refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=12"
+        ] },
+        [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: 2, refs: [
+            "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=13"
+        ] },
+    },
 ]
 
 
@@ -221,7 +325,6 @@ const headers: HEADERS = [
                 title: "Date",
                 data_key: DATA_KEYS.validation_condition__date,
             },
-            { title: "Specimen type", data_key: null, },
             {
                 title: "Patient details",
                 data_key: null,
@@ -232,6 +335,16 @@ const headers: HEADERS = [
                 ]
             },
             { title: "Disease stage", data_key: null, },
+            {
+                title: "Specimen",
+                data_key: null,
+                children: [
+                    { title: "Type", data_key: DATA_KEYS.validation_condition__specimen_type, },
+                    { title: "Swab type", data_key: DATA_KEYS.validation_condition__swab_type, },
+                    { title: "Transport medium", data_key: DATA_KEYS.validation_condition__transport_medium, },
+                    { title: "Sample volume", data_key: DATA_KEYS.validation_condition__sample_volume, },
+                ]
+            },
         ],
     },
     {
@@ -258,7 +371,27 @@ const headers: HEADERS = [
                     },
                 ]
             },
+            {
+                title: "Comparator test",
+                data_key: DATA_KEYS.validation_condition__comparator_test,
+            },
+            {
+                title: "Confusion matrix",
+                data_key: null,
+                children: [
+                    { title: "True positives", data_key: DATA_KEYS.metrics__confusion_matrix__true_positives },
+                    { title: "False negatives", data_key: DATA_KEYS.metrics__confusion_matrix__false_negatives },
+                    { title: "True negatives", data_key: DATA_KEYS.metrics__confusion_matrix__true_negatives },
+                    { title: "False positives", data_key: DATA_KEYS.metrics__confusion_matrix__false_positives },
+                ]
+            },
         ],
+    },
+    {
+        title: "Derived values",
+        data_key: null,
+        category: "derived_values",
+        children: [],
     },
 ]
 
