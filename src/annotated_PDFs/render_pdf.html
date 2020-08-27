@@ -60,71 +60,12 @@
         </div>
     </div>
 
+
     <script>
         const pdf_file_data = "<PDF_FILE_DATA_JSON>";
 
         const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data["relative_file_path"]
         const path_to_pdf_annotations = "/annotation?relative_file_path=" + pdf_file_data["relative_file_path"]
-    </script>
-
-    <script>
-        const annotations_list_el = document.getElementById("annotations_list")
-
-        function record_annotation ({ page_number, left, top, width, height, colour, text, label_ids })
-        {
-            const data_to_send = JSON.stringify({ page_number, left, top, width, height, colour, text, label_ids });
-
-            fetch(path_to_pdf_annotations, {
-                credentials: "same-origin",
-                mode: "same-origin",
-                method: "post",
-                headers: { "Content-Type": "application/json" },
-                body: data_to_send
-            })
-                .then(resp => {
-                    if (resp.status === 200) {
-                        return resp.json()
-                    } else {
-                        return Promise.reject("server error")
-                    }
-                })
-                .then(json_data_received => {
-                    let data_received = JSON.parse(json_data_received)
-                })
-                .catch(err => {
-                    if (err === "server") return
-                    console.log(err)
-                })
-        }
-
-        function add_annotation_to_list ({ id, page_number, colour, text })
-        {
-            const annotation_list_el = document.createElement("div")
-            annotation_list_el.innerText = `id: ${id}  page: ${page_number}  text: ${text}`
-            annotation_list_el.style.backgroundColor = colour
-            annotation_list_el.className = `annotation_list_element annotation_${id}`
-            annotations_list_el.appendChild(annotation_list_el)
-        }
-
-        function add_annotation ({ id, page_number, left, top, width, height, colour, text, label_ids })
-        {
-            const annotation = {
-                id,
-                page_number,
-                left,
-                top,
-                width,
-                height,
-                colour,
-                text,
-                label_ids,
-            }
-            pdf_file_data.annotations.push(annotation)
-
-            add_annotation_to_list(annotation)
-            record_annotation(annotation)
-        }
-
     </script>
 
 
@@ -164,24 +105,24 @@
             // TODO: remove `!important` hack
             programmatic_styles_el.innerHTML = `${class_names} { background-color: rgba(255, 245, 150, 0.7) !important; }`
 
-            scroll_to_a_highlighted_annotation({ highlighted_annotation_ids })
+            scroll_to_an_annotation({ annotation_ids: highlighted_annotation_ids })
         }
 
-        function scroll_to_a_highlighted_annotation ({ highlighted_annotation_ids })
+        function scroll_to_an_annotation ({ annotation_ids })
         {
-            if (!an_annotation_in_view({ highlighted_annotation_ids }))
+            if (!an_annotation_in_view({ annotation_ids }))
             {
                 // console.log("Annotations not in view")
-                const annotation_id = highlighted_annotation_ids[0]
+                const annotation_id = annotation_ids[0]
                 const el = document.getElementsByClassName(`annotation annotation_${annotation_id}`)[0]
                 scroll_to_element(el)
             }
         }
 
-        function an_annotation_in_view ({ highlighted_annotation_ids })
+        function an_annotation_in_view ({ annotation_ids })
         {
             let one_in_view = false
-            highlighted_annotation_ids.forEach(id =>
+            annotation_ids.forEach(id =>
             {
                 one_in_view = one_in_view || annotation_in_view(id)
             })
@@ -247,6 +188,71 @@
             else window.location = new_url
         }
     </script>
+
+
+    <script>
+        const annotations_list_el = document.getElementById("annotations_list")
+
+        function record_annotation ({ page_number, left, top, width, height, colour, text, label_ids })
+        {
+            const data_to_send = JSON.stringify({ page_number, left, top, width, height, colour, text, label_ids });
+
+            fetch(path_to_pdf_annotations, {
+                credentials: "same-origin",
+                mode: "same-origin",
+                method: "post",
+                headers: { "Content-Type": "application/json" },
+                body: data_to_send
+            })
+                .then(resp => {
+                    if (resp.status === 200) {
+                        return resp.json()
+                    } else {
+                        return Promise.reject("server error")
+                    }
+                })
+                .then(json_data_received => {
+                    let data_received = JSON.parse(json_data_received)
+                })
+                .catch(err => {
+                    if (err === "server") return
+                    console.log(err)
+                })
+        }
+
+
+        function add_annotation_to_list ({ id, page_number, colour, text })
+        {
+            const annotation_list_el = document.createElement("div")
+            annotation_list_el.innerText = `id: ${id}  page: ${page_number}  text: ${text}`
+            annotation_list_el.style.backgroundColor = colour
+            annotation_list_el.className = `annotation_list_element annotation_${id}`
+            annotation_list_el.onclick = () => scroll_to_an_annotation({ annotation_ids: [id] })
+            annotations_list_el.appendChild(annotation_list_el)
+        }
+
+
+        function add_annotation ({ id, page_number, left, top, width, height, colour, text, label_ids })
+        {
+            const annotation = {
+                id,
+                page_number,
+                left,
+                top,
+                width,
+                height,
+                colour,
+                text,
+                label_ids,
+            }
+            pdf_file_data.annotations.push(annotation)
+
+            add_annotation_to_list(annotation)
+            record_annotation(annotation)
+        }
+
+    </script>
+
 
     <script>
         // Functions to create annotations over PDF
