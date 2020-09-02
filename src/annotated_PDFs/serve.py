@@ -41,6 +41,7 @@ def upsert_meta_data_annotations_file(relative_file_path):
             file_sha1_hash = sha1_hash_file(f)
 
         meta_data = {
+            "version": 1,
             "relative_file_path": relative_file_path,
             "file_sha1_hash": file_sha1_hash,
             "annotations": [],
@@ -50,7 +51,14 @@ def upsert_meta_data_annotations_file(relative_file_path):
             json.dump(meta_data, f, indent=0)
 
     with open(meta_file_path, "r") as f:
-        return json.load(f)
+        meta_data = json.load(f)
+
+    if "version" not in meta_data:
+        meta_data = { "version": 1, **meta_data }
+        with open(meta_file_path, "w") as f:
+            json.dump(meta_data, f, indent=0)
+
+    return meta_data
 
 
 pdf_files_data = []
