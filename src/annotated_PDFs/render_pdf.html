@@ -14,6 +14,14 @@
         {
             float: left;
         }
+        #pages_container
+        {
+            width: 70%;
+        }
+        #annotations_list
+        {
+            width: 30%;
+        }
 
         .page_container
         {
@@ -44,6 +52,13 @@
         .annotation.invalid
         {
             background-color: rgba(255, 50, 50, 0.5);
+        }
+
+        .annotation_list_element
+        {
+            margin: 5px;
+            padding: 2px 2px;
+            border-radius: 2px;
         }
     </style>
 
@@ -175,7 +190,7 @@
             const search = []
             Object.keys(vars).forEach(key =>
             {
-                search.push(`${key}=${encodeURIComponent(vars[key])}`)
+                search.push(`${key}=${/* encodeURIComponent */(vars[key])}`)
             })
             const search_string = search.join("&")
 
@@ -428,6 +443,21 @@
     </script>
 
     <script>
+        function get_element_position (element)
+        {
+            let top = 0
+            let left = 0
+            do {
+                top += element.offsetTop  || 0
+                left += element.offsetLeft || 0
+                element = element.offsetParent
+            } while (element)
+
+            return { top, left }
+        }
+    </script>
+
+    <script>
         // mouse event handler factory
         // dependency on create_mouse_handlers
 
@@ -464,17 +494,17 @@
                 mouse_up_handler,
             } = create_handlers({ page_number })
 
-            let element = canvas
-            let top = 0
-            let left = 0
-            do {
-                top += element.offsetTop  || 0
-                left += element.offsetLeft || 0
-                element = element.offsetParent
-            } while (element)
+            let position_set = false
+            let left = undefined
+            let top = undefined
 
             canvas.onmousedown = function (e)
             {
+                const position = get_element_position(canvas)
+                left = position.left
+                top = position.top
+                position_set = true
+
                 const x = event.clientX - left + document.body.scrollLeft
                 const y = event.clientY - top + document.body.scrollTop
                 mouse_down_handler({ x, y })
@@ -482,6 +512,8 @@
 
             canvas.onmousemove = function (e)
             {
+                if (!position_set) return
+
                 const x = event.clientX - left + document.body.scrollLeft
                 const y = event.clientY - top + document.body.scrollTop
                 mouse_moved_handler({ x, y })
@@ -489,9 +521,12 @@
 
             canvas.onmouseup = function (e)
             {
+                if (!position_set) return
+
                 const x = event.clientX - left + document.body.scrollLeft
                 const y = event.clientY - top + document.body.scrollTop
                 mouse_up_handler({ x, y })
+                position_set = false
             }
         }
     </script>
@@ -517,14 +552,15 @@
     </script>
 
     <script>
-        let max_number_of_pages = undefined
+        let _max_pages = undefined
         let loading_progress_el = document.getElementById("loading_progress")
         function update_loading_progress ({ page_number, max_pages })
         {
-            max_number_of_pages = max_pages || max_number_of_pages
             page_number = page_number || 0
+            if (max_pages) _max_pages = max_pages
+            else max_pages = _max_pages
 
-            const progress = ((page_number / max_number_of_pages) * 100).toFixed(0)
+            const progress = ((page_number / max_pages) * 100).toFixed(0)
             loading_progress_el.innerText = `Progress: ${progress}%`
             if (page_number === max_pages) setTimeout(() => {
                 loading_progress_el.style.display = "none"
