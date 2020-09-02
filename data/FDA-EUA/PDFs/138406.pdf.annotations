@@ -1,5 +1,105 @@
 {
 "relative_file_path": "../../data/FDA-EUA/PDFs/138406.pdf",
 "file_sha1_hash": "288a7557a76d90d38af66d4c08911116d8a3a003",
-"annotations": []
+"annotations": [
+{
+"page_number": 1,
+"left": "655px",
+"top": "425px",
+"width": "105px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Transport temperature",
+"label_ids": [],
+"id": 0
+},
+{
+"page_number": 1,
+"left": "132px",
+"top": "445px",
+"width": "155px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Transport temperature",
+"label_ids": [],
+"id": 1
+},
+{
+"page_number": 1,
+"left": "131px",
+"top": "815px",
+"width": "642px",
+"height": "90px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "This is when the internal control is more important.  And this data could be very valuable for all public health initiatives around the world.",
+"label_ids": [],
+"id": 2
+},
+{
+"page_number": 2,
+"left": "131px",
+"top": "204px",
+"width": "637px",
+"height": "49px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Sample taker; Sample type",
+"label_ids": [],
+"id": 3
+},
+{
+"page_number": 2,
+"left": "132px",
+"top": "623px",
+"width": "638px",
+"height": "69px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Third party detection system",
+"label_ids": [],
+"id": 4
+},
+{
+"page_number": 2,
+"left": "139px",
+"top": "947px",
+"width": "373px",
+"height": "39px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Swab type?; Transport container?; Transport media?",
+"label_ids": [],
+"id": 5
+},
+{
+"page_number": 5,
+"left": "132px",
+"top": "226px",
+"width": "654px",
+"height": "47px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Temperature stability test method",
+"label_ids": [],
+"id": 6
+},
+{
+"page_number": 5,
+"left": "228px",
+"top": "600px",
+"width": "67px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Targetted viral gene",
+"label_ids": [],
+"id": 7
+},
+{
+"page_number": 6,
+"left": "127px",
+"top": "857px",
+"width": "651px",
+"height": "166px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "100% is great but slightly suspicious for such a large sample size.  I hope they ran this with negative controls to check for cross contamination / contamination of primers",
+"label_ids": [],
+"id": 8
+}
+]
 }
