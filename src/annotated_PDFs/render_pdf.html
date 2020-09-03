@@ -106,14 +106,18 @@
                 ? vars["highlighted_annotation_ids"].split(",")
                 : []
 
-            return highlighted_annotation_ids
+            // Check each actually exists
+            const filtered_highlighted_annotation_ids = highlighted_annotation_ids.filter(id => {
+                const els = document.getElementsByClassName(`annotation_${id}`)
+                return els.length
+            })
+
+            return filtered_highlighted_annotation_ids
         }
 
         const programmatic_styles_el = document.getElementById("programmatic_styles")
-        function update_highlighted_annotations ()
+        function update_highlighted_annotations ({ highlighted_annotation_ids })
         {
-            const highlighted_annotation_ids = get_highlighted_annotation_ids()
-
             programmatic_styles_el.innerHTML = ""
             if (!highlighted_annotation_ids.length) return
             const class_names = highlighted_annotation_ids.map(id => `.annotation_${id}`).join(",")
@@ -180,13 +184,22 @@
                 modified.push(annotation_id_str)
             }
 
-            update_page_location({ highlighted_annotation_ids: modified })
+            update_page_location_and_highlighted_annotations({ highlighted_annotation_ids: modified })
         }
 
         function update_page_location ({ highlighted_annotation_ids })
         {
             const vars = parse_location_search()
-            vars["highlighted_annotation_ids"] = highlighted_annotation_ids.join(",")
+
+            if (highlighted_annotation_ids.length)
+            {
+                vars["highlighted_annotation_ids"] = highlighted_annotation_ids.join(",")
+            }
+            else
+            {
+                delete vars["highlighted_annotation_ids"]
+            }
+
             const search = []
             Object.keys(vars).forEach(key =>
             {
@@ -198,9 +211,16 @@
             if (history.pushState)
             {
                 window.history.pushState({ path: new_url }, "", new_url)
-                update_highlighted_annotations()
             }
             else window.location = new_url
+        }
+
+        function update_page_location_and_highlighted_annotations ({ highlighted_annotation_ids } = {})
+        {
+            highlighted_annotation_ids = highlighted_annotation_ids || get_highlighted_annotation_ids()
+
+            update_page_location ({ highlighted_annotation_ids })
+            update_highlighted_annotations ({ highlighted_annotation_ids })
         }
     </script>
 
@@ -242,7 +262,10 @@
             annotation_list_el.innerText = `id: ${id}  page: ${page_number}  text: ${text}`
             annotation_list_el.style.backgroundColor = colour
             annotation_list_el.className = `annotation_list_element annotation_${id}`
-            annotation_list_el.onclick = () => scroll_to_an_annotation({ annotation_ids: [id] })
+            annotation_list_el.onclick = () => {
+                toggle_annotation_highlight(id)
+                scroll_to_an_annotation({ annotation_ids: [id] })
+            }
             annotations_list_el.appendChild(annotation_list_el)
         }
 
@@ -645,7 +668,7 @@
 
         function finished_rendering_pdf ()
         {
-            update_highlighted_annotations()
+            update_page_location_and_highlighted_annotations()
         }
     </script>
 </body>
