@@ -1,5 +1,5 @@
 {
-"version": 1,
+"version": 2,
 "relative_file_path": "../../data/papers/Uhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf",
 "file_sha1_hash": "6ce385a8170e169f83258ae1db0b631c21dbb018",
 "annotations": [
@@ -80,5 +80,6 @@
 "labels": [],
 "id": 6
 }
-]
+],
+"comments": []
 }

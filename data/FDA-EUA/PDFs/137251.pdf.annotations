@@ -1,6 +1,7 @@
 {
-"version": 1,
+"version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137251.pdf",
 "file_sha1_hash": "f29250dd5c0c39c157d7e1b14243e48fbd4e306e",
-"annotations": []
+"annotations": [],
+"comments": []
 }
