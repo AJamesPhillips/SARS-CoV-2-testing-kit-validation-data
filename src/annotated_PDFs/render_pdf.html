@@ -10,17 +10,41 @@
             font-size: 25;
         }
 
-        #pages_container, #annotations_list
-        {
-            float: left;
-        }
         #pages_container
         {
+            float: left;
             width: 70%;
         }
-        #annotations_list
+
+        #side_panel
         {
             width: 30%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #fbfbfb;
+            padding: 5px;
+        }
+        #side_panel>div
+        {
+            overflow: scroll;
+        }
+        #annotations_list {
+            height: 40%;
+        }
+        #annotation_details
+        {
+            height: 20%;
+        }
+        #labels_list
+        {
+            height: 40%;
+        }
+        #labels_list .label {
+            border: thin solid #ccc;
+            border-radius: 2px;
+            margin: 2px;
         }
 
         .page_container
@@ -68,10 +92,19 @@
     <div id="loading_progress"></div>
     <div id="link_to_pdf_file"></div>
 
-    <div>
-        <div id="pages_container"></div>
+    <div id="pages_container"></div>
+
+    <div id="side_panel">
+        <button id="save_changes" disabled="true">Save Changes</button>
         <div id="annotations_list">
-            <h3>List of annotations:</h3>
+            <!-- <h3>List of annotations:</h3> -->
+        </div>
+        <div id="annotation_details">
+            <!-- <h3>Annotation_details</h3> -->
+        </div>
+        <div id="labels_list">
+            <h3>List of labels:</h3>
+            <input type="text" id="labels_search" />
         </div>
     </div>
 
@@ -81,8 +114,44 @@
 
         const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data["relative_file_path"]
         const path_to_pdf_annotations = "/annotation?relative_file_path=" + pdf_file_data["relative_file_path"]
+
+        const common_labels = "<COMMON_LABELS_DATA_JSON>";
+
     </script>
 
+    <script>
+        function has_unsaved_changes ()
+        {
+            return pdf_file_data.annotations.find(annotation => annotation.dirty)
+        }
+
+        // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
+        window.addEventListener("beforeunload", function (e)
+        {
+            if (has_unsaved_changes())
+            {
+                e.preventDefault()
+                e["returnValue"] = ``
+            }
+            else
+            {
+                console.log("You are safe to leave")
+                // the absence of a returnValue property on the event will guarantee the browser unload happens
+                delete e["returnValue"]
+            }
+        })
+    </script>
+
+    <script>
+        const update_page_location_listeners = []
+        const change_annotation_listeners = []
+        const label_el_click_listeners = []
+
+        function annotation_data_changed ()
+        {
+            change_annotation_listeners.forEach(listener => listener())
+        }
+    </script>
 
     <script>
 
@@ -102,17 +171,21 @@
         {
             const vars = parse_location_search()
 
-            const highlighted_annotation_ids = vars["highlighted_annotation_ids"]
+            const highlighted_annotation_ids = (vars["highlighted_annotation_ids"]
                 ? vars["highlighted_annotation_ids"].split(",")
-                : []
+                : [])
+                .map(i => parseInt(i, 10))
 
             // Check each actually exists
-            const filtered_highlighted_annotation_ids = highlighted_annotation_ids.filter(id => {
-                const els = document.getElementsByClassName(`annotation_${id}`)
-                return els.length
-            })
+            const filtered_highlighted_annotation_ids = highlighted_annotation_ids.filter(annotation_elements_exist)
 
             return filtered_highlighted_annotation_ids
+        }
+
+        function annotation_elements_exist (annotation_id)
+        {
+            const els = document.getElementsByClassName(`annotation_${annotation_id}`)
+            return !!els.length
         }
 
         const programmatic_styles_el = document.getElementById("programmatic_styles")
@@ -176,15 +249,23 @@
 
         function toggle_annotation_highlight (annotation_id)
         {
-            const annotation_id_str = annotation_id.toString()
-            const highlighted_annotation_ids = get_highlighted_annotation_ids()
-            const modified = highlighted_annotation_ids.filter(v => v !== annotation_id_str)
-            if (modified.length === highlighted_annotation_ids.length)
+            let highlighted_annotation_ids = get_highlighted_annotation_ids()
+            if (annotation_highlighted(annotation_id))
             {
-                modified.push(annotation_id_str)
+                highlighted_annotation_ids = highlighted_annotation_ids.filter(v => v !== annotation_id)
+            }
+            else if (annotation_elements_exist(annotation_id))
+            {
+                highlighted_annotation_ids.push(annotation_id)
             }
 
-            update_page_location_and_highlighted_annotations({ highlighted_annotation_ids: modified })
+            update_page_location_and_highlighted_annotations({ highlighted_annotation_ids })
+        }
+
+        function annotation_highlighted (annotation_id)
+        {
+            const highlighted_annotation_ids = get_highlighted_annotation_ids()
+            return highlighted_annotation_ids.includes(annotation_id)
         }
 
         function update_page_location ({ highlighted_annotation_ids })
@@ -213,14 +294,16 @@
                 window.history.pushState({ path: new_url }, "", new_url)
             }
             else window.location = new_url
+
+            update_page_location_listeners.forEach(listener => listener())
         }
 
         function update_page_location_and_highlighted_annotations ({ highlighted_annotation_ids } = {})
         {
             highlighted_annotation_ids = highlighted_annotation_ids || get_highlighted_annotation_ids()
 
-            update_page_location ({ highlighted_annotation_ids })
-            update_highlighted_annotations ({ highlighted_annotation_ids })
+            update_page_location({ highlighted_annotation_ids })
+            update_highlighted_annotations({ highlighted_annotation_ids })
         }
     </script>
 
@@ -228,9 +311,15 @@
     <script>
         const annotations_list_el = document.getElementById("annotations_list")
 
-        function record_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
+        function post_annotations_to_server ()
         {
-            const data_to_send = JSON.stringify({ id, page_number, left, top, width, height, colour, text, labels });
+            const data_to_send = JSON.stringify(pdf_file_data.annotations)
+            pdf_file_data.annotations.forEach(annotation =>
+            {
+                annotation.dirty = false
+            })
+
+            annotation_data_changed()
 
             fetch(path_to_pdf_annotations, {
                 credentials: "same-origin",
@@ -241,14 +330,18 @@
             })
                 .then(resp => {
                     if (resp.status === 200) {
-                        return resp.json()
+                        // return resp.text()
                     } else {
+                        pdf_file_data.annotations = JSON.parse(data_to_send)
+                        annotation_data_changed()
+
                         return Promise.reject("server error")
                     }
                 })
-                .then(json_data_received => {
-                    let data_received = JSON.parse(json_data_received)
-                })
+                // .then(json_data_received => {
+                //     const data_received = JSON.parse(json_data_received)
+                //     update_annotation_id({ old_id: id, new_id: data_received.id })
+                // })
                 .catch(err => {
                     if (err === "server") return
                     console.log(err)
@@ -256,19 +349,59 @@
         }
 
 
-        function add_annotation_to_list ({ id, page_number, colour, text })
+        function refresh_annotations_list ()
+        {
+            annotations_list_el.innerHTML = ""
+            pdf_file_data.annotations.forEach(add_annotation_to_list)
+        }
+        change_annotation_listeners.push(refresh_annotations_list)
+
+
+        function add_annotation_to_list ({ id, page_number, colour, text, labels, dirty })
         {
             const annotation_list_el = document.createElement("div")
-            annotation_list_el.innerText = `id: ${id}  page: ${page_number}  text: ${text}`
+            const display_html = (dirty ? "⚠ " : "") + `page: ${page_number}  text: ${text}  labels: ${labels.map(l => `<div>${l.text}</div>`).join("")}`
+            annotation_list_el.innerHTML = display_html
             annotation_list_el.style.backgroundColor = colour
             annotation_list_el.className = `annotation_list_element annotation_${id}`
+            annotation_list_el.dataset.annotation_id = id
             annotation_list_el.onclick = () => {
+                const id = parseInt(annotation_list_el.dataset.annotation_id, 10)
                 toggle_annotation_highlight(id)
                 scroll_to_an_annotation({ annotation_ids: [id] })
             }
             annotations_list_el.appendChild(annotation_list_el)
         }
+    </script>
+    <script>
 
+        // function update_annotation_id ({ old_id, new_id })
+        // {
+        //     const is_highlighted = annotation_highlighted(old_id)
+
+        //     const class_name = `annotation_${old_id}`
+        //     const els = document.getElementsByClassName(class_name)
+        //     Array.from(els).forEach(el => {
+        //         el.dataset.annotation_id = new_id
+        //         el.classList.remove(class_name)
+        //         el.classList.add(`annotation_${new_id}`)
+        //     })
+
+        //     update_pdf_annotation_id_data({ old_id, new_id })
+
+        //     if (is_highlighted)
+        //     {
+        //         toggle_annotation_highlight(new_id)
+        //         // Don't need this as there's a check to remove old ids
+        //         // toggle_annotation_highlight(old_id)
+        //     }
+        // }
+
+        // function update_pdf_annotation_id_data ({ old_id, new_id })
+        // {
+        //     const annotation = pdf_file_data.annotations.find(annotation => annotation.id === old_id)
+        //     annotation.id = new_id
+        // }
 
         function add_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
         {
@@ -284,9 +417,8 @@
                 labels,
             }
             pdf_file_data.annotations.push(annotation)
-
-            add_annotation_to_list(annotation)
-            record_annotation(annotation)
+            annotation_data_changed()
+            update_page_location_and_highlighted_annotations({ highlighted_annotation_ids: [id] })
         }
 
     </script>
@@ -319,6 +451,16 @@
             annotation_el.style.height = height
             annotation_el.style.backgroundColor = colour
             annotation_el.title = text
+        }
+
+        function add_annotations_to_PDF_page ({ page_number })
+        {
+            pdf_file_data.annotations.filter(annotation => {
+                return annotation.page_number === page_number
+            })
+            .forEach(annotation => {
+                create_annotation(annotation)
+            })
         }
     </script>
 
@@ -559,19 +701,127 @@
         const link_to_pdf_el = document.getElementById("link_to_pdf_file")
         link_to_pdf_el.innerHTML = `<a href="${path_to_pdf}">Showing PDF from: ${path_to_pdf}</a>`
 
-        // show list of annotations
-        pdf_file_data.annotations.forEach(add_annotation_to_list)
-
-        // Add annotations to PDF
-        function add_annotations_to_PDF_page ({ page_number })
+        function render_side_panel ()
         {
-            pdf_file_data.annotations.filter(annotation => {
-                return annotation.page_number === page_number
+            set_up_save_button()
+            refresh_annotations_list()
+            render_annotation_details_side_panel()
+            render_labels_side_panel()
+        }
+
+        function set_up_save_button ()
+        {
+            const save_button_el = document.getElementById("save_changes")
+
+            change_annotation_listeners.push(() =>
+            {
+                save_button_el.disabled = false
             })
-            .forEach(annotation => {
-                create_annotation(annotation)
+
+            save_button_el.addEventListener("click", () =>
+            {
+                post_annotations_to_server()
             })
         }
+
+        function render_annotation_details_side_panel ()
+        {
+            const annotations_detail_el = document.getElementById("annotation_details")
+
+            function update_annotation_details_side_panel ()
+            {
+                const highlighted_annotation_ids = get_highlighted_annotation_ids()
+
+                if (!highlighted_annotation_ids.length)
+                {
+                    annotations_detail_el.innerText = "No annotations selected"
+                }
+                else if (highlighted_annotation_ids.length > 1)
+                {
+                    annotations_detail_el.innerText = "Multiple annotations selected"
+                }
+                else
+                {
+                    const annotation_id = highlighted_annotation_ids[0]
+                    const annotation = pdf_file_data.annotations.find(annotation => annotation.id === annotation_id)
+
+                    annotations_detail_el.innerHTML = `Text: <input type="text" id="annotation_text" />`
+
+                    const annotation_text_el = document.getElementById("annotation_text")
+                    annotation_text_el.value = annotation.text
+
+                    annotation_text_el.addEventListener("change", () => {
+                        annotation.text = annotation_text_el.value
+                        annotation.dirty = true
+                        annotation_data_changed()
+                    })
+                }
+            }
+
+            update_page_location_listeners.push(update_annotation_details_side_panel)
+            change_annotation_listeners.push(update_annotation_details_side_panel)
+        }
+
+
+        function render_labels_side_panel ()
+        {
+            const labels_list_el = document.getElementById("labels_list")
+
+            const label_search_listeners = []
+
+            Object.keys(common_labels)
+                .map(label_id => ({
+                    id: parseInt(label_id, 10),
+                    text: common_labels[label_id],
+                    lower_case_text: common_labels[label_id].toLowerCase(),
+                }))
+                .sort((a, b) => a.lower_case_text < b.lower_case_text ? -1 : 1)
+                .forEach(label => {
+                    const label_el = document.createElement("div")
+                    label_el.innerText = label.text
+                    label_el.className = "label"
+                    labels_list_el.appendChild(label_el)
+
+                    label_search_listeners.push(label_search_text => {
+                        label_el.style.removeProperty("display")
+
+                        if (label_search_text && !label.lower_case_text.includes(label_search_text))
+                        {
+                            label_el.style.setProperty("display", "none")
+                        }
+                    })
+
+                    label_el.addEventListener("click", () => {
+                        label_el_click_listeners.forEach(listener => listener({ id: label.id, text: label.text }))
+                    })
+                })
+
+            const labels_search_el = document.getElementById("labels_search")
+            labels_search_el.addEventListener("input", e => {
+                const label_search_text = e.target.value
+                label_search_listeners.forEach(listener => listener(label_search_text))
+            })
+        }
+
+        render_side_panel()
+    </script>
+
+    <script>
+        label_el_click_listeners.push((new_label) => {
+            const highlighted_annotation_ids = get_highlighted_annotation_ids()
+            if (highlighted_annotation_ids.length === 1)
+            {
+                const annotation_id = highlighted_annotation_ids[0]
+                const annotation = pdf_file_data.annotations.find(annotation => annotation.id === annotation_id)
+                const filtered_labels = annotation.labels.filter(({ id }) => id !== new_label.id)
+
+                if (filtered_labels.length !== annotation.labels.length) annotation.labels = filtered_labels
+                else annotation.labels.push(new_label)
+                annotation.dirty = true
+
+                annotation_data_changed()
+            }
+        })
     </script>
 
     <script>

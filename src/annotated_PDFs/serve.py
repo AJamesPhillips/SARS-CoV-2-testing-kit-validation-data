@@ -85,7 +85,7 @@ def upsert_meta_data_annotations_file(relative_file_path):
 
     meta_data = ensure_consistent_labels(
         meta_data=meta_data,
-        force_update=True,
+        force_update=False,
     )
 
     with open(meta_file_path, "w") as f:
@@ -124,24 +124,34 @@ def ensure_consistent_labels(meta_data, force_update):
             label_id = label["id"]
             common_label_text = common_labels.get(label_id, None)
 
+            msg = "label id: {label_id} text: \"{original_label_text}\" in annotation {annotation_id} of file \"{relative_file_path}\"".format(
+                label_id=label_id,
+                original_label_text=label["text"],
+                annotation_id=annotation["id"],
+                relative_file_path=meta_data["relative_file_path"],
+            )
+
             if label_id not in common_labels:
-                print("Adding label id: {id} text: {text} to common labels".format(**label))
-                common_labels[label_id] = label["text"]
+                if force_update:
+                    raise Exception("TODO: Add {msg} to common labels".format(msg=msg))
+                    # TODO
+                    # common_labels[label_id] = label["text"]
+                    # Save to file
+                else:
+                    raise Exception("{msg} not in common labels.csv".format(msg=msg))
 
             elif label["text"] != common_label_text:
-                msg = "label text: \"{original_label_text}\" in annotation {annotation_id} of file \"{relative_file_path}\".  Common label text: \"{common_label_text}\" for label id: {label_id}".format(
-                    original_label_text=label["text"],
-                    annotation_id=annotation["id"],
-                    relative_file_path=meta_data["relative_file_path"],
-                    common_label_text=common_label_text,
-                    label_id=label_id,
-                )
-
                 if force_update:
                     label["text"] = common_label_text
-                    print("Updating " + msg)
+                    print("Updating text of {msg} to common label text: \"{common_label_text}\"".format(
+                        msg=msg,
+                        common_label_text=common_label_text,
+                    ))
                 else:
-                    raise Exception("Mistmatch with " + msg)
+                    raise Exception("Mismatch with common label text of \"{common_label_text}\" with {msg}".format(
+                        common_label_text=common_label_text,
+                        msg=msg,
+                    ))
 
     return meta_data
 
@@ -227,11 +237,14 @@ def annotation():
     with open(dir_path + "/" + relative_file_path + ".annotations", "r") as f:
         pdf_file_data = json.load(f)
 
-    annotation = request.get_json()  # TODO validate this data
+    annotations = request.get_json()  # TODO validate this data
 
     # Racy but should be fine for single user
-    annotation["id"] = len(pdf_file_data["annotations"])
-    pdf_file_data["annotations"].append(annotation)
+    for (i, annotation) in enumerate(annotations):
+        annotation["id"] = i
+        if "dirty" in annotation:
+            del annotation["dirty"]
+    pdf_file_data["annotations"] = annotations
 
     # Racy but should be fine for single user
     with open(dir_path + "/" + relative_file_path + ".annotations", "w") as f:
