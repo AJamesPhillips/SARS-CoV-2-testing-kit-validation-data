@@ -9,14 +9,6 @@ app = Flask(__name__)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
-with open(dir_path + "/PDF_directories.txt", "r") as f:
-    directories = f.read().split("\n")
-
-    directories = [directory.strip() for directory in directories if directory.strip()]
-    directories = [directory for directory in directories if os.path.isdir(dir_path + "/" + directory)]
-    print("Serving PDFs from following directories: \n   * " + "\n   * ".join(directories))
-
-
 # Adapted from: https://stackoverflow.com/a/22058673/539490
 def sha1_hash_file(file_descriptor):
     # BUF_SIZE is totally arbitrary, change for your app!
@@ -36,36 +28,42 @@ def sha1_hash_file(file_descriptor):
 def upsert_meta_data_annotations_file(relative_file_path):
     meta_file_path = dir_path + "/" + relative_file_path + ".annotations"
 
-    if not os.path.isfile(meta_file_path):
+    current_version = 2
+
+    if os.path.isfile(meta_file_path):
+        with open(meta_file_path, "r") as f:
+            meta_data = json.load(f)
+    else:
         with open(dir_path + "/" + relative_file_path, "rb") as f:
             file_sha1_hash = sha1_hash_file(f)
 
         meta_data = {
-            "version": 1,
+            "version": current_version,
             "relative_file_path": relative_file_path,
             "file_sha1_hash": file_sha1_hash,
             "annotations": [],
         }
 
-        with open(meta_file_path, "w") as f:
-            json.dump(meta_data, f, indent=0)
+    if meta_data["version"] != current_version:
+        meta_data = upgrade_meta_data(meta_data)
 
-    with open(meta_file_path, "r") as f:
-        meta_data = json.load(f)
-
-    if "version" not in meta_data:
-        meta_data = { "version": 1, **meta_data }
-        with open(meta_file_path, "w") as f:
-            json.dump(meta_data, f, indent=0)
+    with open(meta_file_path, "w") as f:
+        json.dump(meta_data, f, indent=0)
 
     return meta_data
 
 
-pdf_files_data = []
-relative_file_paths = set()
+def upgrade_meta_data(meta_data):
+    if meta_data["version"] == 1:
+        meta_data["version"] = 2
+        meta_data["comments"] = []
+    return meta_data
 
-def populate_pdf_files_data():
-    print("Populating PDF files data")
+
+def populate_data():
+    print("Populating data")
+
+    directories = get_directories()
 
     for directory in directories:
         file_names = os.listdir(dir_path + "/" + directory)
@@ -73,16 +71,38 @@ def populate_pdf_files_data():
         for file_name in file_names:
             if file_name.endswith(".pdf"):
                 relative_file_path = directory + "/" + file_name
-                relative_file_paths.add(relative_file_path)
 
                 meta_data = upsert_meta_data_annotations_file(relative_file_path)
-                pdf_file_data = {
-                    "file_name": file_name,
-                    **meta_data,
-                }
-                pdf_files_data.append(pdf_file_data)
 
-    print("Populated server with {} PDF files".format(len(pdf_files_data)))
+                populate_relative_file_paths(relative_file_path)
+                populate_pdf_files_data(file_name=file_name, meta_data=meta_data)
+
+    print("Populated server with data from {} PDF files".format(len(pdf_files_data)))
+
+
+def get_directories():
+    with open(dir_path + "/PDF_directories.txt", "r") as f:
+        directories = f.read().split("\n")
+
+        directories = [directory.strip() for directory in directories if directory.strip()]
+        directories = [directory for directory in directories if os.path.isdir(dir_path + "/" + directory)]
+        print("Serving PDFs from following directories: \n   * " + "\n   * ".join(directories))
+
+    return directories
+
+
+relative_file_paths = set()
+def populate_relative_file_paths(relative_file_path):
+    relative_file_paths.add(relative_file_path)
+
+
+pdf_files_data = []
+def populate_pdf_files_data(file_name, meta_data):
+    pdf_file_data = {
+        "file_name": file_name,
+        **meta_data,
+    }
+    pdf_files_data.append(pdf_file_data)
 
 
 @app.route("/")
@@ -104,9 +124,6 @@ def render_pdf():
     if relative_file_path not in relative_file_paths:
         return "relative_file_path not found for " + relative_file_path
 
-    with open(dir_path + "/" + relative_file_path + ".annotations", "r") as f:
-        pdf_file_data_json = f.read()
-
     with open(dir_path + "/render_pdf.html", "r") as f:
         html = f.read()
 
@@ -116,10 +133,14 @@ def render_pdf():
     with open(dir_path + "/lib/pdfjs.worker.js", "r") as f:
         pdfjs_worker_file = f.read()
 
+    with open(dir_path + "/" + relative_file_path + ".annotations", "r") as f:
+        pdf_file_data_json = f.read()
+
     html = (html
         .replace("\"<PDFJS>\"", pdfjs_file)
         .replace("\"<PDFJS_WORKER>\"", pdfjs_worker_file)
-        .replace("\"<PDF_FILE_DATA_JSON>\"", pdf_file_data_json))
+        .replace("\"<PDF_FILE_DATA_JSON>\"", pdf_file_data_json)
+    )
 
     return html
 
@@ -150,14 +171,15 @@ def annotation():
 
     annotation = request.get_json()  # TODO validate this data
 
-    # Might be racy but should be fine for single user
+    # Racy but should be fine for single user
     annotation["id"] = len(pdf_file_data["annotations"])
     pdf_file_data["annotations"].append(annotation)
 
+    # Racy but should be fine for single user
     with open(dir_path + "/" + relative_file_path + ".annotations", "w") as f:
         json.dump(pdf_file_data, f, indent=0)
 
     return json.dumps(annotation)
 
 
-populate_pdf_files_data()
+populate_data()
