@@ -1,0 +1,61 @@
+0,Supported specimen types
+1,Appropriate testing population
+2,Sample pooling
+3,Sample pooling/Approach
+4,Sample pooling/Max no. specimens
+5,Detects pathogen(s)
+6,Viral gene(s) targetted
+7,Test technology
+8,Intended user
+9,Compatible equipment
+10,RNA extraction & purification
+11,RNA extraction & purification/Specimen input volume ul
+12,RNA extraction & purification/Method(s)
+13,RNA extraction & purification/Elution volume ul
+14,RNA extraction & purification/Automation and or manual
+15,Reverse transcription
+16,Reverse transcription/Input volume ul
+17,Reverse transcription/Enzyme mix or kits
+18,Nucleic acid amplification
+19,Nucleic acid amplification/Technology
+20,Nucleic acid amplification/Instrument
+21,Nucleic acid amplification/Enzyme mix or kits
+22,Quantification fluorescence detection
+23,Quantification fluorescence detection/Instrument
+24,Author
+25,Date
+26,Patient details
+27,Patient details/Age
+28,Patient details/Race
+29,Patient details/Gender
+30,Disease stage
+31,Specimen
+32,Specimen/Type
+33,Specimen/Swab type
+34,Specimen/Transport medium
+35,Specimen/Volume ul
+36,Number of clinical samples
+37,Number of clinical samples/Positives
+38,Number of clinical samples/Controls (negatives)
+39,Comparator test
+40,Confusion matrix
+41,Confusion matrix/True positives
+42,Confusion matrix/False negatives
+43,Confusion matrix/True negatives
+44,Confusion matrix/False positives
+45,Test technology/description
+46,Intended patient population details
+47,Intended patient population details/Age
+48,Intended patient population details/Race
+49,Intended patient population details/Gender
+50,Intended patient population details/Symptoms
+51,Intended patient population details/Exposure
+52,Calculated PPA
+53,Calculated PPA confidence interval
+54,Calculated NPA
+55,Calculated NPA confidence interval
+56,Specimen/Transport container(s)
+57,Specimen/Transport conditions
+58,Specimen/Transport conditions/Temperature
+59,Specimen/Transport conditions/Maximum duration
+60,Third party detection system
