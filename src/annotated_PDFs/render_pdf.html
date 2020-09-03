@@ -228,9 +228,9 @@
     <script>
         const annotations_list_el = document.getElementById("annotations_list")
 
-        function record_annotation ({ page_number, left, top, width, height, colour, text, label_ids })
+        function record_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
         {
-            const data_to_send = JSON.stringify({ page_number, left, top, width, height, colour, text, label_ids });
+            const data_to_send = JSON.stringify({ id, page_number, left, top, width, height, colour, text, labels });
 
             fetch(path_to_pdf_annotations, {
                 credentials: "same-origin",
@@ -270,7 +270,7 @@
         }
 
 
-        function add_annotation ({ id, page_number, left, top, width, height, colour, text, label_ids })
+        function add_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
         {
             const annotation = {
                 id,
@@ -281,7 +281,7 @@
                 height,
                 colour,
                 text,
-                label_ids,
+                labels,
             }
             pdf_file_data.annotations.push(annotation)
 
@@ -310,7 +310,7 @@
             return annotation_el
         }
 
-        function create_annotation ({ id, page_number, left, top, width, height, colour, text, label_ids })
+        function create_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
         {
             const annotation_el = create_empty_annotation({ id, page_number, editing_dimensions: false })
             annotation_el.style.left = left
@@ -447,7 +447,7 @@
                         // colour: temp_annotation_el.style.backgroundColor,
                         colour: window.getComputedStyle(temp_annotation_el).backgroundColor,
                         text: "",
-                        label_ids: [],
+                        labels: [],
                     }
                     add_annotation(annotation)
                     temp_annotation_el.classList.remove("editing_dimensions")

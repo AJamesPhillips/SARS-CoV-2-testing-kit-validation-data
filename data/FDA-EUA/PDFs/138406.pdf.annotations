@@ -11,7 +11,7 @@
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Transport temperature",
-"label_ids": [],
+"labels": [],
 "id": 0
 },
 {
@@ -22,7 +22,7 @@
 "height": "24px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Transport temperature",
-"label_ids": [],
+"labels": [],
 "id": 1
 },
 {
@@ -33,7 +33,7 @@
 "height": "90px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "This is when the internal control is more important.  And this data could be very valuable for all public health initiatives around the world.",
-"label_ids": [],
+"labels": [],
 "id": 2
 },
 {
@@ -44,7 +44,7 @@
 "height": "49px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Sample taker; Sample type",
-"label_ids": [],
+"labels": [],
 "id": 3
 },
 {
@@ -55,7 +55,7 @@
 "height": "69px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Third party detection system",
-"label_ids": [],
+"labels": [],
 "id": 4
 },
 {
@@ -66,7 +66,7 @@
 "height": "39px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Swab type?; Transport container?; Transport media?",
-"label_ids": [],
+"labels": [],
 "id": 5
 },
 {
@@ -77,7 +77,7 @@
 "height": "47px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Temperature stability test method",
-"label_ids": [],
+"labels": [],
 "id": 6
 },
 {
@@ -88,7 +88,7 @@
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Targetted viral gene",
-"label_ids": [],
+"labels": [],
 "id": 7
 },
 {
@@ -99,7 +99,7 @@
 "height": "166px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "100% is great but slightly suspicious for such a large sample size.  I hope they ran this with negative controls to check for cross contamination / contamination of primers",
-"label_ids": [],
+"labels": [],
 "id": 8
 }
 ]

@@ -11,7 +11,7 @@
 "height": "62px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Perhaps a lot of the viral copies where present inside the human cell and not yet in viral particles?",
-"label_ids": [],
+"labels": [],
 "id": 0
 },
 {
@@ -22,7 +22,7 @@
 "height": "33px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
-"label_ids": [],
+"labels": [],
 "id": 1
 },
 {
@@ -33,7 +33,7 @@
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CDC and RealStar positive clinical samples",
-"label_ids": [],
+"labels": [],
 "id": 2
 },
 {
@@ -44,7 +44,7 @@
 "height": "19px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CDC and RealStar negative clinical samples",
-"label_ids": [],
+"labels": [],
 "id": 3
 },
 {
@@ -55,7 +55,7 @@
 "height": "17px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CDC and RealStar clinical sample type",
-"label_ids": [],
+"labels": [],
 "id": 4
 },
 {
@@ -66,7 +66,7 @@
 "height": "17px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ePlex and RealStar positive clinical samples",
-"label_ids": [],
+"labels": [],
 "id": 5
 },
 {
@@ -77,7 +77,7 @@
 "height": "15px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ePlex and RealStar negative clinical samples",
-"label_ids": [],
+"labels": [],
 "id": 6
 }
 ]

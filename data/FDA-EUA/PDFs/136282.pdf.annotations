@@ -11,7 +11,7 @@
 "height": "24px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "What is the \"Standard technique\" for sample collection?",
-"label_ids": [],
+"labels": [],
 "id": 0
 },
 {
@@ -22,7 +22,7 @@
 "height": "25px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CLSI MM13-A seems to discuss molecular but not clinical / physical collection",
-"label_ids": [],
+"labels": [],
 "id": 1
 },
 {
@@ -33,7 +33,7 @@
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Which kind of transport media?",
-"label_ids": [],
+"labels": [],
 "id": 2
 },
 {
@@ -44,7 +44,7 @@
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Detection method",
-"label_ids": [],
+"labels": [],
 "id": 3
 },
 {
@@ -55,7 +55,7 @@
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Detection method",
-"label_ids": [],
+"labels": [],
 "id": 4
 },
 {
@@ -66,7 +66,7 @@
 "height": "23px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Clinical validation sample type, number, partial patient type",
-"label_ids": [],
+"labels": [],
 "id": 5
 },
 {
@@ -77,7 +77,7 @@
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Intended use population?",
-"label_ids": [],
+"labels": [],
 "id": 6
 },
 {
@@ -88,7 +88,7 @@
 "height": "48px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Calculated PPA and NPA plus confidence intervals",
-"label_ids": [],
+"labels": [],
 "id": 7
 },
 {
@@ -99,7 +99,7 @@
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Positive clinical samples",
-"label_ids": [],
+"labels": [],
 "id": 8
 },
 {
@@ -110,7 +110,7 @@
 "height": "22px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Negative control clinical samples",
-"label_ids": [],
+"labels": [],
 "id": 9
 }
 ]
