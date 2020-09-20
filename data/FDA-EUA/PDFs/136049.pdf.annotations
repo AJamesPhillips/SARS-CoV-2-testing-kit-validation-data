@@ -2,6 +2,23 @@
 "version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136049.pdf",
 "file_sha1_hash": "f11389354034a294f1721988435f610172a76cea",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 23,
+"left": "49px",
+"top": "273px",
+"width": "821px",
+"height": "48px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "cultured virus isolate from US patient (USA-WA1/2020, catalog number NR-52281, lot number 70033175, 2.8E+05 TCID50/mL)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+]
+}
+],
 "comments": []
 }
