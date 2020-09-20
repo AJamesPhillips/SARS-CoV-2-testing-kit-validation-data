@@ -59,3 +59,10 @@
 58,Specimen/Transport conditions/Temperature
 59,Specimen/Transport conditions/Maximum duration
 60,Third party detection system
+61,Specimen/Synthetic Specimen
+62,Specimen/Synthetic Specimen/Virus
+63,Specimen/Synthetic Specimen/Virus/Source
+64,Specimen/Synthetic Specimen/Clinical matrix
+65,Limit of Detection (LOD)
+66,Limit of Detection (LOD)/Value
+67,Limit of Detection (LOD)/Units
