@@ -123,6 +123,108 @@ var data = [
                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=13"
             ] },
         _c),
+    {
+        [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+        [DATA_KEYS.test_descriptor__test_name]: { value: "cobas SARS-CoV-2", refs: [] },
+        [DATA_KEYS.validation_condition__author]: { value: "self", refs: [] },
+        [DATA_KEYS.validation_condition__date]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__specimen_type]: {
+            value: "",
+            comment: "",
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__transport_medium]: {
+            value: "",
+            comment: "",
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [
+                ""
+            ] },
+        [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+            value: 0,
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+            value: 0,
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: 0, refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: 0, refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: 0, refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: 0, refs: [
+                ""
+            ] },
+    },
+    {
+        [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+        [DATA_KEYS.test_descriptor__test_name]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__author]: { value: "self", refs: [] },
+        [DATA_KEYS.validation_condition__date]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__specimen_type]: {
+            value: "",
+            comment: "",
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+        [DATA_KEYS.validation_condition__transport_medium]: {
+            value: "",
+            comment: "",
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [
+                ""
+            ] },
+        [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+            value: 0,
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+            value: 0,
+            refs: [
+                ""
+            ]
+        },
+        [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: 0, refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: 0, refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: 0, refs: [
+                ""
+            ] },
+        [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: 0, refs: [
+                ""
+            ] },
+    },
 ];
 // Merge with FDA_EUA_PARSED_DATA
 var FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data.reduce(function (accum, row) {
@@ -160,7 +262,7 @@ data.forEach(function (row) {
         }
     }
     else {
-        console.error("test_name not present in fda_eua_parsed_data: " + test_name);
+        console.error(`test_name "${test_name}" not present in fda_eua_parsed_data: ` + test_name);
     }
 });
 var headers = [
