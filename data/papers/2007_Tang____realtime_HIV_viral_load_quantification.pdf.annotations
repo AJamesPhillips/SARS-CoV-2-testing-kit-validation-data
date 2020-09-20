@@ -1,0 +1,18 @@
+{
+"version": 2,
+"relative_file_path": "../../data/papers/2007_Tang____realtime_HIV_viral_load_quantification.pdf",
+"file_sha1_hash": "8cbc1d870b405f3085915ddd56f9252c8e0a4746",
+"annotations": [
+{
+"id": 0,
+"page_number": 8,
+"left": "63px",
+"top": "600px",
+"width": "384px",
+"height": "160px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Technique to decrease false negative rate in presence of mutation(s)",
+"labels": []
+}
+]
+}
