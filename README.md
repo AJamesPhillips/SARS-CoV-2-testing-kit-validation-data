@@ -21,7 +21,7 @@
 
     export FLASK_APP=src/serve_FDA_EUA_html.py && flask run --port=5001
 
-### FDA EUA assessment page
+### Assessment page of FDA EUAs
 
     export FLASK_APP=src/FDA_EUA_assessment/serve.py && flask run --port=5002
 
