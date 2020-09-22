@@ -68,11 +68,12 @@
         {
             background-color: rgba(200, 200, 255, 0.6);
                              /* rgba(254, 255, 200, 0.7); */
-        }
-        .annotation.editing_dimensions
-        {
             pointer-events: none;
         }
+        /* .annotation.editing_dimensions
+        {
+            pointer-events: none;
+        } */
         .annotation.invalid
         {
             background-color: rgba(255, 50, 50, 0.5);
@@ -105,9 +106,13 @@
         <div id="labels_list">
             <h3>List of labels:</h3>
             <input type="text" id="labels_search" />
+            <input type="button" id="labels_search_clear" value="x" onclick="el = document.getElementById('labels_search'); el.value = ''; event = new Event('change'); el.dispatchEvent(event);" />
         </div>
     </div>
 
+    <script>
+        const debug_log = false
+    </script>
 
     <script>
         const pdf_file_data = "<PDF_FILE_DATA_JSON>";
@@ -144,12 +149,23 @@
 
     <script>
         const update_page_location_listeners = []
-        const change_annotation_listeners = []
+        const changed_annotations_data_listeners = []
+        const saved_annotations_data_listeners = []
         const label_el_click_listeners = []
 
         function annotation_data_changed ()
         {
-            change_annotation_listeners.forEach(listener => listener())
+            changed_annotations_data_listeners.forEach(listener => listener())
+        }
+
+        function annotation_data_saved ()
+        {
+            saved_annotations_data_listeners.forEach(listener => listener())
+        }
+
+        function label_el_clicked (label)
+        {
+            label_el_click_listeners.forEach(listener => listener({ id: label.id, text: label.text }))
         }
     </script>
 
@@ -330,6 +346,9 @@
             })
                 .then(resp => {
                     if (resp.status === 200) {
+                        // This is racy
+                        annotation_data_saved()
+
                         // return resp.text()
                     } else {
                         pdf_file_data.annotations = JSON.parse(data_to_send)
@@ -352,12 +371,12 @@
         function refresh_annotations_list ()
         {
             annotations_list_el.innerHTML = ""
-            pdf_file_data.annotations.forEach(add_annotation_to_list)
+            pdf_file_data.annotations.forEach(add_annotation_list_element)
         }
-        change_annotation_listeners.push(refresh_annotations_list)
+        changed_annotations_data_listeners.push(refresh_annotations_list)
 
 
-        function add_annotation_to_list ({ id, page_number, colour, text, labels, dirty })
+        function add_annotation_list_element ({ id, page_number, colour, text, labels, dirty })
         {
             const annotation_list_el = document.createElement("div")
             const display_html = (dirty ? "⚠ " : "") + `page: ${page_number}  text: ${text}  labels: ${labels.map(l => `<div>${l.text}</div>`).join("")}`
@@ -367,6 +386,7 @@
             annotation_list_el.dataset.annotation_id = id
             annotation_list_el.onclick = () => {
                 const id = parseInt(annotation_list_el.dataset.annotation_id, 10)
+                debug_log && console.log(`Annotation ${id} clicked`)
                 toggle_annotation_highlight(id)
                 scroll_to_an_annotation({ annotation_ids: [id] })
             }
@@ -403,9 +423,9 @@
         //     annotation.id = new_id
         // }
 
-        function add_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
+        function create_annotation_data ({ id, page_number, left, top, width, height, colour, text, labels })
         {
-            const annotation = {
+            const annotation_data = {
                 id,
                 page_number,
                 left,
@@ -416,7 +436,7 @@
                 text,
                 labels,
             }
-            pdf_file_data.annotations.push(annotation)
+            pdf_file_data.annotations.push(annotation_data)
             annotation_data_changed()
             update_page_location_and_highlighted_annotations({ highlighted_annotation_ids: [id] })
         }
@@ -431,20 +451,23 @@
             return document.getElementById(`annotations_container_el_${page_number}`)
         }
 
-        function create_empty_annotation ({ id, page_number, editing_dimensions })
+        function create_empty_annotation_el ({ id, page_number, editing_dimensions })
         {
             const annotation_el = document.createElement("div")
             annotation_el.className = `annotation annotation_${id}` + (editing_dimensions ? " editing_dimensions" : "")
             const annotations_container_el = get_annotations_container_el_for_page_number({ page_number })
             annotations_container_el.appendChild(annotation_el)
-            annotation_el.onclick = () => toggle_annotation_highlight(id)
+
+            // If the toggle annotation highlight is needed then will need to change
+            // `pointer-events: none;`  on .annotation class elements
+            //annotation_el.onclick = () => toggle_annotation_highlight(id)
 
             return annotation_el
         }
 
-        function create_annotation ({ id, page_number, left, top, width, height, colour, text, labels })
+        function create_annotation_el ({ id, page_number, left, top, width, height, colour, text, labels })
         {
-            const annotation_el = create_empty_annotation({ id, page_number, editing_dimensions: false })
+            const annotation_el = create_empty_annotation_el({ id, page_number, editing_dimensions: false })
             annotation_el.style.left = left
             annotation_el.style.top = top
             annotation_el.style.width = width
@@ -459,7 +482,7 @@
                 return annotation.page_number === page_number
             })
             .forEach(annotation => {
-                create_annotation(annotation)
+                create_annotation_el(annotation)
             })
         }
     </script>
@@ -467,9 +490,7 @@
     <script>
         // Create mouse handlers factory for handling mouse events from
         // PDF
-        // Dependency on add_annotation
-
-        const debug_log = false
+        // Dependency on create_annotation_data
         const MIN_SIZE = 10
 
         let highlight_start_x = null
@@ -529,7 +550,7 @@
                     temp_annotation_el.remove()
                 }
 
-                temp_annotation_el = create_empty_annotation({ id: temp_annotation_id, page_number, editing_dimensions: true })
+                temp_annotation_el = create_empty_annotation_el({ id: temp_annotation_id, page_number, editing_dimensions: true })
 
                 highlight_start_x = highlight_end_x = x
                 highlight_start_y = highlight_end_y = y
@@ -577,9 +598,9 @@
                 {
                     temp_annotation_el.remove()
                 }
-                else if (window["add_annotation"])
+                else if (window["create_annotation_data"])
                 {
-                    const annotation = {
+                    const annotation_data = {
                         id: temp_annotation_id--,
                         page_number,
                         left: temp_annotation_el.style.left,
@@ -591,7 +612,7 @@
                         text: "",
                         labels: [],
                     }
-                    add_annotation(annotation)
+                    create_annotation_data(annotation_data)
                     temp_annotation_el.classList.remove("editing_dimensions")
                 }
                 temp_annotation_el = null
@@ -713,9 +734,14 @@
         {
             const save_button_el = document.getElementById("save_changes")
 
-            change_annotation_listeners.push(() =>
+            changed_annotations_data_listeners.push(() =>
             {
                 save_button_el.disabled = false
+            })
+
+            saved_annotations_data_listeners.push(() =>
+            {
+                save_button_el.disabled = true
             })
 
             save_button_el.addEventListener("click", () =>
@@ -759,7 +785,7 @@
             }
 
             update_page_location_listeners.push(update_annotation_details_side_panel)
-            change_annotation_listeners.push(update_annotation_details_side_panel)
+            changed_annotations_data_listeners.push(update_annotation_details_side_panel)
         }
 
 
@@ -791,16 +817,18 @@
                         }
                     })
 
-                    label_el.addEventListener("click", () => {
-                        label_el_click_listeners.forEach(listener => listener({ id: label.id, text: label.text }))
-                    })
+                    label_el.addEventListener("click", () => label_el_clicked(label))
                 })
 
             const labels_search_el = document.getElementById("labels_search")
-            labels_search_el.addEventListener("input", e => {
+            function handle_search_text_change (e)
+            {
                 const label_search_text = e.target.value
                 label_search_listeners.forEach(listener => listener(label_search_text))
-            })
+            }
+            labels_search_el.addEventListener("input", handle_search_text_change)
+            // Need to handle on change for `labels_search_clear` button to work correctly.
+            labels_search_el.addEventListener("change", handle_search_text_change)
         }
 
         render_side_panel()
