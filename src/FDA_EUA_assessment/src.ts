@@ -47,7 +47,7 @@ interface DATA_ROW
     metrics__confusion_matrix__false_positives: DATA_NODE,
 }
 type DATA = DATA_ROW[]
-const data: DATA = [
+const extracted_data: DATA = [
     {
         [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
         [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
@@ -151,6 +151,33 @@ const data: DATA = [
             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=13"
         ] },
     },
+    // {
+    //     [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+    //     [DATA_KEYS.test_descriptor__test_name]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__author]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__date]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__specimen_type]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__transport_medium]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [] },
+    //     [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [] },
+    //     [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+    //         value: 0,
+    //         refs: [
+    //             ""
+    //         ]
+    //     },
+    //     [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+    //         value: 0,
+    //         refs: [
+    //             ""
+    //         ]
+    //     },
+    //     [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: "", refs: [] },
+    //     [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: "", refs: [] },
+    //     [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: "", refs: [] },
+    //     [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
+    // },
 ]
 
 
@@ -173,7 +200,7 @@ const FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data.reduce((accum, row)
     return accum
 }, {})
 
-data.forEach(row =>
+extracted_data.forEach(row =>
 {
     const test_name = row[DATA_KEYS.test_descriptor__test_name].value
     const fda_eua = FDA_EUA_PARSED_DATA_BY_TEST_NAME[test_name]
@@ -199,7 +226,7 @@ data.forEach(row =>
     }
     else
     {
-        console.error(`test_name not present in fda_eua_parsed_data: ${test_name}`)
+        console.error(`test_name "${test_name}" not present in fda_eua_parsed_data.`)
     }
 })
 
@@ -511,4 +538,4 @@ function populate_table_body (headers: HEADERS, data: DATA)
 
 
 build_header(headers)
-populate_table_body(headers, data)
+populate_table_body(headers, extracted_data)
