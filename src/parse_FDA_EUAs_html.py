@@ -60,7 +60,8 @@ class IVParser(HTMLParser):
 
         # print("Got tag: ", tag)
         if tag == "tr":
-            self.current_row = [None] * len(self.HEADERS)
+            self.current_row = [""] * len(self.HEADERS)
+            self.current_row[8] = []
             self.current_row[10] = []
             self.data_position = -1
 
@@ -106,19 +107,19 @@ class IVParser(HTMLParser):
             return
 
         if self.data_position == 0:
-            if self.current_row[0] is not None:
+            if self.current_row[0]:
                 raise Exception("Only expecting one value for date")
             self.current_row[0] = parse_date(data)
 
         elif self.data_position == 1:
-            if self.current_row[1] is not None:
+            if self.current_row[1]:
                 raise Exception("Only expecting one value for Entity name")
             self.current_row[1] = data
 
         elif self.data_position == 2:
 
             if self.data_subposition == 0:
-                if self.current_row[2] is not None:
+                if self.current_row[2]:
                     raise Exception("Only expecting one value for Test name")
                 self.current_row[2] = data
                 self.current_row[3] = self.current_a_tag_url
@@ -131,24 +132,24 @@ class IVParser(HTMLParser):
 
         # Technology
         elif self.data_position == 3:
-            if self.current_row[4] is not None:
+            if self.current_row[4]:
                 raise Exception("Only expecting one value for Technology")
             self.current_row[4] = data
 
         # Authorised Settings
         elif self.data_position == 4:
-            if self.current_row[5] is not None:
+            if self.current_row[5]:
                 raise Exception("Only expecting one value for Authorised Settings")
             self.current_row[5] = data
 
         # Authorization Labeling & "extra"
         elif self.data_position == 5:
             if data == "HCP":
-                if self.current_row[6] is not None:
+                if self.current_row[6]:
                     raise Exception("Only expecting one value for HCP Fact Sheet URL")
                 self.current_row[6] = self.current_a_tag_url
             elif "Patient" in data or data == "Recipients":
-                if self.current_row[7] is None:
+                if not self.current_row[7]:
                     self.current_row[7] = self.current_a_tag_url
                 else:
                     print("Warning: multiple values for Patient / Recipients Fact Sheet URL")
@@ -157,11 +158,11 @@ class IVParser(HTMLParser):
                     self.current_row[7].append(self.current_a_tag_url)
 
             elif "IFU" in data:
-                if self.current_row[8] is not None:
-                    print("Warning: multiple values for IFU URL")
-                self.current_row[8] = self.current_a_tag_url
+                # if len(self.current_row[8]):
+                #     print("Warning: multiple values for IFU URL for " + self.current_row[1])
+                self.current_row[8].append(self.current_a_tag_url)
             elif data == "EUA Summary":
-                if self.current_row[9] is not None:
+                if self.current_row[9]:
                     raise Exception("Only expecting one value for EUA Summary URL")
                 self.current_row[9] = self.current_a_tag_url
             elif "B)" in data:
@@ -170,7 +171,7 @@ class IVParser(HTMLParser):
                 print("Unparsed data", data)
 
         elif self.data_position == 6:
-            if self.current_a_tag_url is None:
+            if not self.current_a_tag_url:
                 if "None currently" in data:
                     pass
                 elif not data.strip():

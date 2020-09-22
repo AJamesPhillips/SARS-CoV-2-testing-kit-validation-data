@@ -22,14 +22,16 @@
         "H",
         "https://www.fda.gov/media/134920/download",
         "https://www.fda.gov/media/134921/download",
-        "https://www.fda.gov/media/134922/download",
-        null,
+        [
+            "https://www.fda.gov/media/134922/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136572/download",
             "https://www.fda.gov/media/138931/download",
             "https://www.fda.gov/media/140088/download"
         ],
-        null
+        ""
     ],
     [
         "2020-02-29",
@@ -40,12 +42,14 @@
         "H",
         "https://www.fda.gov/media/135662/download",
         "https://www.fda.gov/media/135663/download",
-        "https://www.fda.gov/media/135847/download",
-        null,
+        [
+            "https://www.fda.gov/media/135847/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136122/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-12",
@@ -56,13 +60,15 @@
         "H, M",
         "https://www.fda.gov/media/136047/download",
         "https://www.fda.gov/media/136048/download",
-        "https://www.fda.gov/media/136049/download",
-        null,
+        [
+            "https://www.fda.gov/media/136049/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136589/download",
             "https://www.fda.gov/media/138071/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-13",
@@ -73,15 +79,17 @@
         "H",
         "https://www.fda.gov/media/136111/download",
         "https://www.fda.gov/media/136114/download",
-        "https://www.fda.gov/media/136112/download",
-        null,
+        [
+            "https://www.fda.gov/media/136112/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137164/download",
             "https://www.fda.gov/media/136413/download",
             "https://www.fda.gov/media/137922/download",
             "https://www.fda.gov/media/140298/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-16",
@@ -92,12 +100,14 @@
         "H",
         "https://www.fda.gov/media/136154/download",
         "https://www.fda.gov/media/136155/download",
-        "https://www.fda.gov/media/136156/download",
-        null,
+        [
+            "https://www.fda.gov/media/136156/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137368/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-16",
@@ -108,13 +118,16 @@
         "H",
         "https://www.fda.gov/media/136149/download",
         "https://www.fda.gov/media/136150/download",
-        "https://www.fda.gov/media/139732/download",
+        [
+            "https://www.fda.gov/media/137154/download",
+            "https://www.fda.gov/media/139732/download"
+        ],
         "https://www.fda.gov/media/136151/download",
         [
             "https://www.fda.gov/media/136973/download",
             "https://www.fda.gov/media/139733/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-17",
@@ -125,13 +138,15 @@
         "H",
         "https://www.fda.gov/media/136226/download",
         "https://www.fda.gov/media/136225/download",
-        "https://www.fda.gov/media/136227/download",
-        null,
+        [
+            "https://www.fda.gov/media/136227/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136342/download",
             "https://www.fda.gov/media/136819/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-17",
@@ -142,13 +157,16 @@
         "H",
         "https://www.fda.gov/media/136229/download",
         "https://www.fda.gov/media/136230/download",
-        "https://www.fda.gov/media/138402/download",
-        null,
+        [
+            "https://www.fda.gov/media/136231/download",
+            "https://www.fda.gov/media/138402/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136487/download",
             "https://www.fda.gov/media/140607/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-18",
@@ -159,13 +177,15 @@
         "H",
         "https://www.fda.gov/media/136256/download",
         "https://www.fda.gov/media/136257/download",
-        "https://www.fda.gov/media/136258/download",
-        null,
+        [
+            "https://www.fda.gov/media/136258/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137181/download",
             "https://www.fda.gov/media/140667/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-19",
@@ -176,14 +196,16 @@
         "H, M",
         "https://www.fda.gov/media/136285/download",
         "https://www.fda.gov/media/136287/download",
-        "https://www.fda.gov/media/136286/download",
-        null,
+        [
+            "https://www.fda.gov/media/136286/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136488/download",
             "https://www.fda.gov/media/136940/download",
             "https://www.fda.gov/media/138665/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-19",
@@ -194,10 +216,12 @@
         "H, M",
         "https://www.fda.gov/media/136281/download",
         "https://www.fda.gov/media/136284/download",
-        "https://www.fda.gov/media/136282/download",
-        null,
+        [
+            "https://www.fda.gov/media/136282/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-03-20",
@@ -208,12 +232,14 @@
         "H",
         "https://www.fda.gov/media/136308/download",
         "https://www.fda.gov/media/136307/download",
-        "https://www.fda.gov/media/136309/download",
-        null,
+        [
+            "https://www.fda.gov/media/136309/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136824/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-20",
@@ -224,13 +250,16 @@
         "H, M, W",
         "https://www.fda.gov/media/136313/download",
         "https://www.fda.gov/media/136312/download",
-        "https://www.fda.gov/media/136315/download",
-        null,
+        [
+            "https://www.fda.gov/media/136314/download",
+            "https://www.fda.gov/media/136315/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136856/download",
             "https://www.fda.gov/media/140985/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-23",
@@ -241,12 +270,14 @@
         "H, M",
         "https://www.fda.gov/media/136357/download",
         "https://www.fda.gov/media/136358/download",
-        "https://www.fda.gov/media/136353/download",
-        null,
+        [
+            "https://www.fda.gov/media/136353/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137534/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-23",
@@ -257,12 +288,14 @@
         "H, M, W",
         "https://www.fda.gov/media/136347/download",
         "https://www.fda.gov/media/136349/download",
-        "https://www.fda.gov/media/136355/download",
-        null,
+        [
+            "https://www.fda.gov/media/136355/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137533/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-24",
@@ -273,12 +306,14 @@
         "H",
         "https://www.fda.gov/media/136408/download",
         "https://www.fda.gov/media/136409/download",
-        "https://www.fda.gov/media/136410/download",
-        null,
+        [
+            "https://www.fda.gov/media/136410/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/136616/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-25",
@@ -289,10 +324,10 @@
         "H",
         "https://www.fda.gov/media/136451/download",
         "https://www.fda.gov/media/136452/download",
-        null,
+        [],
         "https://www.fda.gov/media/136453/download",
         [],
-        null
+        ""
     ],
     [
         "2020-03-26",
@@ -303,12 +338,14 @@
         "H",
         "https://www.fda.gov/media/136471/download",
         "https://www.fda.gov/media/136474/download",
-        "https://www.fda.gov/media/136472/download",
-        null,
+        [
+            "https://www.fda.gov/media/136472/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137354/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-27",
@@ -319,12 +356,14 @@
         "H, M, W",
         "https://www.fda.gov/media/136523/download",
         "https://www.fda.gov/media/136524/download",
-        "https://www.fda.gov/media/136525/download",
-        null,
+        [
+            "https://www.fda.gov/media/136525/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137181/download"
         ],
-        null
+        ""
     ],
     [
         "2020-03-27",
@@ -335,10 +374,12 @@
         "H",
         "https://www.fda.gov/media/136498/download",
         "https://www.fda.gov/media/136499/download",
-        "https://www.fda.gov/media/136500/download",
-        null,
+        [
+            "https://www.fda.gov/media/136500/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-03-30",
@@ -349,10 +390,12 @@
         "H, M",
         "https://www.fda.gov/media/136564/download",
         "https://www.fda.gov/media/136567/download",
-        "https://www.fda.gov/media/136565/download",
-        null,
+        [
+            "https://www.fda.gov/media/136565/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-03-30",
@@ -363,12 +406,14 @@
         "H, M",
         "https://www.fda.gov/media/136568/download",
         "https://www.fda.gov/media/136570/download",
-        "https://www.fda.gov/media/136571/download",
-        null,
+        [
+            "https://www.fda.gov/media/136571/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137355/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-01",
@@ -379,10 +424,12 @@
         "H, M",
         "https://www.fda.gov/media/136623/download",
         "https://www.fda.gov/media/136624/download",
-        "https://www.fda.gov/media/136625/download",
-        null,
+        [
+            "https://www.fda.gov/media/136625/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-01",
@@ -393,10 +440,10 @@
         "H",
         "https://www.fda.gov/media/136619/download",
         "https://www.fda.gov/media/136620/download",
-        null,
+        [],
         "https://www.fda.gov/media/136621/download",
         [],
-        null
+        ""
     ],
     [
         "2020-04-02",
@@ -407,12 +454,14 @@
         "H, M",
         "https://www.fda.gov/media/136652/download",
         "https://www.fda.gov/media/136651/download",
-        "https://www.fda.gov/media/136653/download",
-        null,
+        [
+            "https://www.fda.gov/media/136653/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138478/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-03",
@@ -423,12 +472,14 @@
         "H, M",
         "https://www.fda.gov/media/136692/download",
         "https://www.fda.gov/media/136695/download",
-        "https://www.fda.gov/media/136693/download",
-        null,
+        [
+            "https://www.fda.gov/media/136693/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137938/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-03",
@@ -439,12 +490,14 @@
         "H",
         "https://www.fda.gov/media/136689/download",
         "https://www.fda.gov/media/136690/download",
-        "https://www.fda.gov/media/136691/download",
-        null,
+        [
+            "https://www.fda.gov/media/136691/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138666/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-03",
@@ -455,10 +508,12 @@
         "H",
         "https://www.fda.gov/media/136685/download",
         "https://www.fda.gov/media/136686/download",
-        "https://www.fda.gov/media/136687/download",
-        null,
+        [
+            "https://www.fda.gov/media/136687/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-06",
@@ -469,10 +524,12 @@
         "H",
         "https://www.fda.gov/media/136736/download",
         "https://www.fda.gov/media/136737/download",
-        "https://www.fda.gov/media/136738/download",
-        null,
+        [
+            "https://www.fda.gov/media/136738/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-07",
@@ -483,13 +540,15 @@
         "H",
         "https://www.fda.gov/media/136785/download",
         "https://www.fda.gov/media/136788/download",
-        "https://www.fda.gov/media/136786/download",
-        null,
+        [
+            "https://www.fda.gov/media/136786/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138598/download",
             "https://www.fda.gov/media/141022/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-08",
@@ -500,12 +559,14 @@
         "H, M",
         "https://www.fda.gov/media/136815/download",
         "https://www.fda.gov/media/136814/download",
-        "https://www.fda.gov/media/136816/download",
-        null,
+        [
+            "https://www.fda.gov/media/136816/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138932/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-08",
@@ -516,10 +577,12 @@
         "H",
         "https://www.fda.gov/media/136807/download",
         "https://www.fda.gov/media/136808/download",
-        "https://www.fda.gov/media/136809/download",
-        null,
+        [
+            "https://www.fda.gov/media/136809/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-10",
@@ -530,12 +593,14 @@
         "H",
         "https://www.fda.gov/media/136869/download",
         "https://www.fda.gov/media/136871/download",
-        "https://www.fda.gov/media/136870/download",
-        null,
+        [
+            "https://www.fda.gov/media/136870/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140334/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-10",
@@ -546,10 +611,12 @@
         "H",
         "https://www.fda.gov/media/137774/download",
         "https://www.fda.gov/media/137771/download",
-        "https://www.fda.gov/media/137782/download",
+        [
+            "https://www.fda.gov/media/137782/download"
+        ],
         "https://www.fda.gov/media/137776/download",
         [],
-        null
+        ""
     ],
     [
         "2020-04-14",
@@ -560,10 +627,12 @@
         "H, M",
         "https://www.fda.gov/media/136970/download",
         "https://www.fda.gov/media/136969/download",
-        "https://www.fda.gov/media/136967/download",
-        null,
+        [
+            "https://www.fda.gov/media/136967/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-15",
@@ -574,12 +643,14 @@
         "H",
         "https://www.fda.gov/media/137025/download",
         "https://www.fda.gov/media/137024/download",
-        "https://www.fda.gov/media/137026/download",
-        null,
+        [
+            "https://www.fda.gov/media/137026/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138534/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-15",
@@ -590,10 +661,10 @@
         "H",
         "https://www.fda.gov/media/137030/download",
         "https://www.fda.gov/media/137033/download",
-        null,
+        [],
         "https://www.fda.gov/media/137029/download",
         [],
-        null
+        ""
     ],
     [
         "2020-04-16",
@@ -604,10 +675,12 @@
         "H",
         "https://www.fda.gov/media/137091/download",
         "https://www.fda.gov/media/137092/download",
-        "https://www.fda.gov/media/137093/download",
-        null,
+        [
+            "https://www.fda.gov/media/137093/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-16",
@@ -618,12 +691,12 @@
         "H",
         "https://www.fda.gov/media/137087/download",
         "https://www.fda.gov/media/137086/download",
-        null,
+        [],
         "https://www.fda.gov/media/137089/download",
         [
             "https://www.fda.gov/media/138834/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-17",
@@ -634,10 +707,12 @@
         "H",
         "https://www.fda.gov/media/137118/download",
         "https://www.fda.gov/media/137119/download",
-        "https://www.fda.gov/media/137120/download",
-        null,
+        [
+            "https://www.fda.gov/media/137120/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-18",
@@ -648,10 +723,12 @@
         "H",
         "https://www.fda.gov/media/137114/download",
         "https://www.fda.gov/media/137115/download",
-        "https://www.fda.gov/media/137116/download",
-        null,
+        [
+            "https://www.fda.gov/media/137116/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-20",
@@ -662,13 +739,15 @@
         "H",
         "https://www.fda.gov/media/137152/download",
         "https://www.fda.gov/media/137151/download",
-        "https://www.fda.gov/media/137153/download",
-        null,
+        [
+            "https://www.fda.gov/media/137153/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137937/download",
             "https://www.fda.gov/media/140984/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-21",
@@ -679,12 +758,14 @@
         "H",
         "https://www.fda.gov/media/137177/download",
         "https://www.fda.gov/media/137180/download",
-        "https://www.fda.gov/media/137178/download",
-        null,
+        [
+            "https://www.fda.gov/media/137178/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140539/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-22",
@@ -695,10 +776,12 @@
         "H",
         "https://www.fda.gov/media/137251/download",
         "https://www.fda.gov/media/137254/download",
-        "https://www.fda.gov/media/137252/download",
-        null,
+        [
+            "https://www.fda.gov/media/137252/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-23",
@@ -709,10 +792,12 @@
         "H",
         "https://www.fda.gov/media/137301/download",
         "https://www.fda.gov/media/137304/download",
-        "https://www.fda.gov/media/137302/download",
-        null,
+        [
+            "https://www.fda.gov/media/137302/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-24",
@@ -723,12 +808,14 @@
         "H, M",
         "https://www.fda.gov/media/137357/download",
         "https://www.fda.gov/media/137358/download",
-        "https://www.fda.gov/media/137359/download",
-        null,
+        [
+            "https://www.fda.gov/media/137359/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140377/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-24",
@@ -739,12 +826,14 @@
         "H, M",
         "https://www.fda.gov/media/137361/download",
         "https://www.fda.gov/media/137362/download",
-        "https://www.fda.gov/media/137363/download",
-        null,
+        [
+            "https://www.fda.gov/media/137363/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138250/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-26",
@@ -755,13 +844,16 @@
         "H, M",
         "https://www.fda.gov/media/137381/download",
         "https://www.fda.gov/media/137382/download",
-        "https://www.fda.gov/media/137910/download",
-        null,
+        [
+            "https://www.fda.gov/media/137383/download",
+            "https://www.fda.gov/media/137910/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/137911/download",
             "https://www.fda.gov/media/139406/download"
         ],
-        null
+        ""
     ],
     [
         "2020-04-27",
@@ -772,10 +864,12 @@
         "H",
         "https://www.fda.gov/media/137422/download",
         "https://www.fda.gov/media/137421/download",
-        "https://www.fda.gov/media/137425/download",
-        null,
+        [
+            "https://www.fda.gov/media/137425/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-29",
@@ -786,10 +880,12 @@
         "H",
         "https://www.fda.gov/media/137485/download",
         "https://www.fda.gov/media/137486/download",
-        "https://www.fda.gov/media/137483/download",
-        null,
+        [
+            "https://www.fda.gov/media/137483/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-29",
@@ -800,10 +896,12 @@
         "H",
         "https://www.fda.gov/media/137488/download",
         "https://www.fda.gov/media/137491/download",
-        "https://www.fda.gov/media/137489/download",
-        null,
+        [
+            "https://www.fda.gov/media/137489/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-29",
@@ -814,10 +912,12 @@
         "H",
         "https://www.fda.gov/media/137492/download",
         "https://www.fda.gov/media/137495/download",
-        "https://www.fda.gov/media/137493/download",
-        null,
+        [
+            "https://www.fda.gov/media/137493/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-04-30",
@@ -828,10 +928,10 @@
         "H",
         "https://www.fda.gov/media/137542/download",
         "https://www.fda.gov/media/137543/download",
-        null,
+        [],
         "https://www.fda.gov/media/137541/download",
         [],
-        null
+        ""
     ],
     [
         "2020-05-01",
@@ -842,12 +942,14 @@
         "H",
         "https://www.fda.gov/media/137577/download",
         "https://www.fda.gov/media/137578/download",
-        "https://www.fda.gov/media/137579/download",
-        null,
+        [
+            "https://www.fda.gov/media/137579/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140335/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-01",
@@ -858,10 +960,12 @@
         "H, M",
         "https://www.fda.gov/media/137581/download",
         "https://www.fda.gov/media/137582/download",
-        "https://www.fda.gov/media/137583/download",
-        null,
+        [
+            "https://www.fda.gov/media/137583/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-02",
@@ -872,13 +976,15 @@
         "H, M",
         "https://www.fda.gov/media/137603/download",
         "https://www.fda.gov/media/137604/download",
-        "https://www.fda.gov/media/138169/download",
-        null,
+        [
+            "https://www.fda.gov/media/138169/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138667/download",
             "https://www.fda.gov/media/140538/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-04",
@@ -889,10 +995,12 @@
         "H",
         "https://www.fda.gov/media/137607/download",
         "https://www.fda.gov/media/137608/download",
-        "https://www.fda.gov/media/137609/download",
-        null,
+        [
+            "https://www.fda.gov/media/137609/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-04",
@@ -903,10 +1011,12 @@
         "H",
         "https://www.fda.gov/media/137650/download",
         "https://www.fda.gov/media/137653/download",
-        "https://www.fda.gov/media/137651/download",
-        null,
+        [
+            "https://www.fda.gov/media/137651/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-05",
@@ -917,12 +1027,14 @@
         "H",
         "https://www.fda.gov/media/137688/download",
         "https://www.fda.gov/media/137689/download",
-        "https://www.fda.gov/media/137690/download",
-        null,
+        [
+            "https://www.fda.gov/media/137690/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/139933/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-06",
@@ -933,13 +1045,15 @@
         "H",
         "https://www.fda.gov/media/137740/download",
         "https://www.fda.gov/media/137738/download",
-        "https://www.fda.gov/media/137739/download",
-        null,
+        [
+            "https://www.fda.gov/media/137739/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138479/download",
             "https://www.fda.gov/media/140637/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-06",
@@ -950,10 +1064,12 @@
         "H",
         "https://www.fda.gov/media/137745/download",
         "https://www.fda.gov/media/137748/download",
-        "https://www.fda.gov/media/137746/download",
-        null,
+        [
+            "https://www.fda.gov/media/137746/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-06",
@@ -964,10 +1080,12 @@
         "H",
         "https://www.fda.gov/media/137741/download",
         "https://www.fda.gov/media/137741/download",
-        "https://www.fda.gov/media/137742/download",
-        null,
+        [
+            "https://www.fda.gov/media/137742/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-07",
@@ -978,13 +1096,15 @@
         "H",
         "https://www.fda.gov/media/137778/download",
         "https://www.fda.gov/media/137779/download",
-        "https://www.fda.gov/media/137780/download",
-        null,
+        [
+            "https://www.fda.gov/media/137780/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138181/download",
             "https://www.fda.gov/media/138651/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-08",
@@ -995,13 +1115,15 @@
         "H, M, W",
         "https://www.fda.gov/media/137884/download",
         "https://www.fda.gov/media/137887/download",
-        "https://www.fda.gov/media/137885/download",
-        null,
+        [
+            "https://www.fda.gov/media/137885/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/138789/download",
             "https://www.fda.gov/media/140299/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-08",
@@ -1012,10 +1134,12 @@
         "H",
         "https://www.fda.gov/media/137893/download",
         "https://www.fda.gov/media/137894/download",
-        "https://www.fda.gov/media/137895/download",
-        null,
+        [
+            "https://www.fda.gov/media/137895/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-11",
@@ -1026,10 +1150,12 @@
         "H",
         "https://www.fda.gov/media/137933/download",
         "https://www.fda.gov/media/137936/download",
-        "https://www.fda.gov/media/137935/download",
-        null,
+        [
+            "https://www.fda.gov/media/137935/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-11",
@@ -1040,12 +1166,14 @@
         "H",
         "https://www.fda.gov/media/137978/download",
         "https://www.fda.gov/media/137981/download",
-        "https://www.fda.gov/media/137979/download",
-        null,
+        [
+            "https://www.fda.gov/media/137979/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140333/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-13",
@@ -1056,13 +1184,15 @@
         "H",
         "https://www.fda.gov/media/138058/download",
         "https://www.fda.gov/media/138061/download",
-        "https://www.fda.gov/media/138059/download",
-        null,
+        [
+            "https://www.fda.gov/media/138059/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/139870/download",
             "https://www.fda.gov/media/140666/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-14",
@@ -1073,12 +1203,14 @@
         "H",
         "https://www.fda.gov/media/138095/download",
         "https://www.fda.gov/media/138098/download",
-        "https://www.fda.gov/media/138096/download",
-        null,
+        [
+            "https://www.fda.gov/media/138096/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140430/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-14",
@@ -1089,10 +1221,12 @@
         "H",
         "https://www.fda.gov/media/138099/download",
         "https://www.fda.gov/media/138102/download",
-        "https://www.fda.gov/media/138100/download",
-        null,
+        [
+            "https://www.fda.gov/media/138100/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-15",
@@ -1101,12 +1235,14 @@
         "https://www.fda.gov/media/138144/download",
         "Home Collection Kit",
         "N/A",
-        null,
-        null,
-        "https://www.fda.gov/media/138145/download",
+        "",
+        "",
+        [
+            "https://www.fda.gov/media/138145/download"
+        ],
         "https://www.fda.gov/media/138146/download",
         [],
-        null
+        ""
     ],
     [
         "2020-05-15",
@@ -1117,12 +1253,14 @@
         "H",
         "https://www.fda.gov/media/138148/download",
         "https://www.fda.gov/media/138149/download",
-        "https://www.fda.gov/media/139072/download",
+        [
+            "https://www.fda.gov/media/139072/download"
+        ],
         "https://www.fda.gov/media/138150/download",
         [
             "https://www.fda.gov/media/139071/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-15",
@@ -1133,10 +1271,10 @@
         "H",
         "https://www.fda.gov/media/138152/download",
         "https://www.fda.gov/media/138153/download",
-        null,
+        [],
         "https://www.fda.gov/media/138154/download",
         [],
-        null
+        ""
     ],
     [
         "2020-05-18",
@@ -1147,10 +1285,12 @@
         "H",
         "https://www.fda.gov/media/138177/download",
         "https://www.fda.gov/media/138180/download",
-        "https://www.fda.gov/media/138178/download",
-        null,
+        [
+            "https://www.fda.gov/media/138178/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-18",
@@ -1161,10 +1301,13 @@
         "H",
         "https://www.fda.gov/media/140448/download",
         "https://www.fda.gov/media/140449/download",
-        "https://www.fda.gov/media/140451/download",
+        [
+            "https://www.fda.gov/media/140450/download",
+            "https://www.fda.gov/media/140451/download"
+        ],
         "https://www.fda.gov/media/138249/download",
         [],
-        null
+        ""
     ],
     [
         "2020-05-21",
@@ -1175,10 +1318,12 @@
         "H",
         "https://www.fda.gov/media/138289/download",
         "https://www.fda.gov/media/138291/download",
-        "https://www.fda.gov/media/138290/download",
-        null,
+        [
+            "https://www.fda.gov/media/138290/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-21",
@@ -1189,10 +1334,12 @@
         "H",
         "https://www.fda.gov/media/138302/download",
         "https://www.fda.gov/media/138305/download",
-        "https://www.fda.gov/media/138303/download",
-        null,
+        [
+            "https://www.fda.gov/media/138303/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-21",
@@ -1203,10 +1350,12 @@
         "H",
         "https://www.fda.gov/media/138298/download",
         "https://www.fda.gov/media/138301/download",
-        "https://www.fda.gov/media/138307/download",
-        null,
+        [
+            "https://www.fda.gov/media/138307/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-21",
@@ -1217,12 +1366,15 @@
         "H",
         "https://www.fda.gov/media/138293/download",
         "https://www.fda.gov/media/138296/download",
-        "https://www.fda.gov/media/140087/download",
+        [
+            "https://www.fda.gov/media/138294/download",
+            "https://www.fda.gov/media/140087/download"
+        ],
         "https://www.fda.gov/media/138297/download",
         [
             "https://www.fda.gov/media/139325/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-22",
@@ -1233,12 +1385,14 @@
         "H",
         "https://www.fda.gov/media/138344/download",
         "https://www.fda.gov/media/138346/download",
-        "https://www.fda.gov/media/138345/download",
-        null,
+        [
+            "https://www.fda.gov/media/138345/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/141060/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-22",
@@ -1249,10 +1403,10 @@
         "H",
         "https://www.fda.gov/media/140794/download",
         "https://www.fda.gov/media/140795/download",
-        null,
+        [],
         "https://www.fda.gov/media/138328/download",
         [],
-        null
+        ""
     ],
     [
         "2020-05-28",
@@ -1263,12 +1417,14 @@
         "H",
         "https://www.fda.gov/media/138403/download",
         "https://www.fda.gov/media/138404/download",
-        "https://www.fda.gov/media/138407/download",
+        [
+            "https://www.fda.gov/media/138407/download"
+        ],
         "https://www.fda.gov/media/138406/download",
         [
             "https://www.fda.gov/media/139784/download"
         ],
-        null
+        ""
     ],
     [
         "2020-05-29",
@@ -1279,10 +1435,12 @@
         "H, M",
         "https://www.fda.gov/media/138444/download",
         "https://www.fda.gov/media/138445/download",
-        "https://www.fda.gov/media/138446/download",
-        null,
+        [
+            "https://www.fda.gov/media/138446/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-29",
@@ -1293,10 +1451,12 @@
         "H, M",
         "https://www.fda.gov/media/138440/download",
         "https://www.fda.gov/media/138441/download",
-        "https://www.fda.gov/media/138442/download",
-        null,
+        [
+            "https://www.fda.gov/media/138442/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-05-29",
@@ -1307,10 +1467,12 @@
         "H, M",
         "https://www.fda.gov/media/138436/download",
         "https://www.fda.gov/media/138437/download",
-        "https://www.fda.gov/media/138438/download",
-        null,
+        [
+            "https://www.fda.gov/media/138438/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-01",
@@ -1321,12 +1483,12 @@
         "H",
         "https://www.fda.gov/media/138531/download",
         "https://www.fda.gov/media/138533/download",
-        null,
+        [],
         "https://www.fda.gov/media/138530/download",
         [
             "https://www.fda.gov/media/139668/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-02",
@@ -1337,10 +1499,12 @@
         "H, M",
         "https://www.fda.gov/media/138594/download",
         "https://www.fda.gov/media/138597/download",
-        "https://www.fda.gov/media/138595/download",
-        null,
+        [
+            "https://www.fda.gov/media/138595/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-04",
@@ -1351,10 +1515,10 @@
         "H",
         "https://www.fda.gov/media/138627/download",
         "https://www.fda.gov/media/138628/download",
-        null,
+        [],
         "https://www.fda.gov/media/138629/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-04",
@@ -1365,12 +1529,15 @@
         "H",
         "https://www.fda.gov/media/138663/download",
         "https://www.fda.gov/media/138653/download",
-        "https://www.fda.gov/media/138656/download",
+        [
+            "https://www.fda.gov/media/138655/download",
+            "https://www.fda.gov/media/138656/download"
+        ],
         "https://www.fda.gov/media/138654/download",
         [
             "https://www.fda.gov/media/139508/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-04",
@@ -1381,12 +1548,14 @@
         "H, M",
         "https://www.fda.gov/media/138658/download",
         "https://www.fda.gov/media/138659/download",
-        "https://www.fda.gov/media/138660/download",
-        null,
+        [
+            "https://www.fda.gov/media/138660/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140428/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-05",
@@ -1397,10 +1566,12 @@
         "H",
         "https://www.fda.gov/media/138683/download",
         "https://www.fda.gov/media/138684/download",
-        "https://www.fda.gov/media/138685/download",
-        null,
+        [
+            "https://www.fda.gov/media/138685/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-08",
@@ -1411,10 +1582,12 @@
         "H",
         "https://www.fda.gov/media/138759/download",
         "https://www.fda.gov/media/138760/download",
-        "https://www.fda.gov/media/138761/download",
-        null,
+        [
+            "https://www.fda.gov/media/138761/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-08",
@@ -1425,12 +1598,14 @@
         "H, M",
         "https://www.fda.gov/media/138755/download",
         "https://www.fda.gov/media/138756/download",
-        "https://www.fda.gov/media/138757/download",
-        null,
+        [
+            "https://www.fda.gov/media/138757/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140981/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-08",
@@ -1441,12 +1616,14 @@
         "H, M",
         "https://www.fda.gov/media/138751/download",
         "https://www.fda.gov/media/138752/download",
-        "https://www.fda.gov/media/138753/download",
-        null,
+        [
+            "https://www.fda.gov/media/138753/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140982/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-09",
@@ -1457,10 +1634,12 @@
         "H",
         "https://www.fda.gov/media/138775/download",
         "https://www.fda.gov/media/138777/download",
-        "https://www.fda.gov/media/138776/download",
-        null,
+        [
+            "https://www.fda.gov/media/138776/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-09",
@@ -1471,10 +1650,12 @@
         "H",
         "https://www.fda.gov/media/138785/download",
         "https://www.fda.gov/media/138788/download",
-        "https://www.fda.gov/media/138786/download",
-        null,
+        [
+            "https://www.fda.gov/media/138786/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-10",
@@ -1485,10 +1666,12 @@
         "H, M, W",
         "https://www.fda.gov/media/138824/download",
         "https://www.fda.gov/media/138825/download",
-        "https://www.fda.gov/media/138826/download",
-        null,
+        [
+            "https://www.fda.gov/media/138826/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-10",
@@ -1499,10 +1682,12 @@
         "H",
         "https://www.fda.gov/media/138820/download",
         "https://www.fda.gov/media/138821/download",
-        "https://www.fda.gov/media/138822/download",
-        null,
+        [
+            "https://www.fda.gov/media/138822/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-10",
@@ -1513,10 +1698,10 @@
         "H",
         "https://www.fda.gov/media/138816/download",
         "https://www.fda.gov/media/138817/download",
-        null,
+        [],
         "https://www.fda.gov/media/138818/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-10",
@@ -1527,10 +1712,12 @@
         "H",
         "https://www.fda.gov/media/138808/download",
         "https://www.fda.gov/media/138809/download",
-        "https://www.fda.gov/media/138810/download",
-        null,
+        [
+            "https://www.fda.gov/media/138810/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-12",
@@ -1541,10 +1728,12 @@
         "H",
         "https://www.fda.gov/media/138927/download",
         "https://www.fda.gov/media/138930/download",
-        "https://www.fda.gov/media/138928/download",
-        null,
+        [
+            "https://www.fda.gov/media/138928/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-13",
@@ -1555,10 +1744,12 @@
         "H",
         "https://www.fda.gov/media/139068/download",
         "https://www.fda.gov/media/139070/download",
-        "https://www.fda.gov/media/139069/download",
+        [
+            "https://www.fda.gov/media/139069/download"
+        ],
         "https://www.fda.gov/media/139067/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-15",
@@ -1569,10 +1760,12 @@
         "H",
         "https://www.fda.gov/media/139047/download",
         "https://www.fda.gov/media/139048/download",
-        "https://www.fda.gov/media/139049/download",
-        null,
+        [
+            "https://www.fda.gov/media/139049/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-15",
@@ -1583,10 +1776,10 @@
         "H",
         "https://www.fda.gov/media/139051/download",
         "https://www.fda.gov/media/139052/download",
-        null,
+        [],
         "https://www.fda.gov/media/139053/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-17",
@@ -1597,10 +1790,10 @@
         "H",
         "https://www.fda.gov/media/139290/download",
         "https://www.fda.gov/media/139291/download",
-        null,
+        [],
         "https://www.fda.gov/media/139292/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-17",
@@ -1611,10 +1804,10 @@
         "H",
         "https://www.fda.gov/media/139286/download",
         "https://www.fda.gov/media/139287/download",
-        null,
+        [],
         "https://www.fda.gov/media/139288/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-18",
@@ -1625,12 +1818,14 @@
         "H",
         "https://www.fda.gov/media/139294/download",
         "https://www.fda.gov/media/139295/download",
-        "https://www.fda.gov/media/139296/download",
-        null,
+        [
+            "https://www.fda.gov/media/139296/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140357/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-18",
@@ -1641,10 +1836,12 @@
         "H",
         "https://www.fda.gov/media/139277/download",
         "https://www.fda.gov/media/139278/download",
-        "https://www.fda.gov/media/139279/download",
-        null,
+        [
+            "https://www.fda.gov/media/139279/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-18",
@@ -1655,12 +1852,14 @@
         "H, M",
         "https://www.fda.gov/media/139281/download",
         "https://www.fda.gov/media/139282/download",
-        "https://www.fda.gov/media/139283/download",
-        null,
+        [
+            "https://www.fda.gov/media/139283/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140782/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-19",
@@ -1671,12 +1870,14 @@
         "H, M",
         "https://www.fda.gov/media/139409/download",
         "https://www.fda.gov/media/139408/download",
-        "https://www.fda.gov/media/139410/download",
-        null,
+        [
+            "https://www.fda.gov/media/139410/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/141150/download"
         ],
-        null
+        ""
     ],
     [
         "2020-06-23",
@@ -1687,10 +1888,12 @@
         "H",
         "https://www.fda.gov/media/139441/download",
         "https://www.fda.gov/media/139445/download",
-        "https://www.fda.gov/media/139442/download",
-        null,
+        [
+            "https://www.fda.gov/media/139442/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-23",
@@ -1701,10 +1904,10 @@
         "H",
         "https://www.fda.gov/media/139438/download",
         "https://www.fda.gov/media/139440/download",
-        null,
+        [],
         "https://www.fda.gov/media/139437/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-23",
@@ -1715,10 +1918,10 @@
         "H",
         "https://www.fda.gov/media/139435/download",
         "https://www.fda.gov/media/139436/download",
-        null,
+        [],
         "https://www.fda.gov/media/139434/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-23",
@@ -1729,10 +1932,10 @@
         "H",
         "https://www.fda.gov/media/139447/download",
         "https://www.fda.gov/media/139448/download",
-        null,
+        [],
         "https://www.fda.gov/media/139446/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-24",
@@ -1743,10 +1946,10 @@
         "H",
         "https://www.fda.gov/media/139510/download",
         "https://www.fda.gov/media/139511/download",
-        null,
+        [],
         "https://www.fda.gov/media/139512/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-25",
@@ -1757,10 +1960,12 @@
         "H",
         "https://www.fda.gov/media/139526/download",
         "https://www.fda.gov/media/139529/download",
-        "https://www.fda.gov/media/139527/download",
-        null,
+        [
+            "https://www.fda.gov/media/139527/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-25",
@@ -1771,10 +1976,12 @@
         "H",
         "https://www.fda.gov/media/139522/download",
         "https://www.fda.gov/media/139525/download",
-        "https://www.fda.gov/media/139523/download",
-        null,
+        [
+            "https://www.fda.gov/media/139523/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-25",
@@ -1785,10 +1992,10 @@
         "H",
         "https://www.fda.gov/media/139514/download",
         "https://www.fda.gov/media/139515/download",
-        null,
+        [],
         "https://www.fda.gov/media/139516/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-26",
@@ -1799,10 +2006,10 @@
         "H",
         "https://www.fda.gov/media/139570/download",
         "https://www.fda.gov/media/139571/download",
-        null,
+        [],
         "https://www.fda.gov/media/139572/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-26",
@@ -1813,10 +2020,12 @@
         "H, M",
         "https://www.fda.gov/media/139625/download",
         "https://www.fda.gov/media/139626/download",
-        "https://www.fda.gov/media/139627/download",
-        null,
+        [
+            "https://www.fda.gov/media/139627/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-29",
@@ -1827,10 +2036,10 @@
         "H",
         "https://www.fda.gov/media/139621/download",
         "https://www.fda.gov/media/139622/download",
-        null,
+        [],
         "https://www.fda.gov/media/139623/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-29",
@@ -1841,10 +2050,10 @@
         "H",
         "https://www.fda.gov/media/139670/download",
         "https://www.fda.gov/media/139671/download",
-        null,
+        [],
         "https://www.fda.gov/media/139672/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-30",
@@ -1853,12 +2062,14 @@
         "https://www.fda.gov/media/139681/download",
         "Molecular",
         " ",
-        null,
-        null,
-        "https://www.fda.gov/media/139682/download",
+        "",
+        "",
+        [
+            "https://www.fda.gov/media/139682/download"
+        ],
         "https://www.fda.gov/media/139683/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-30",
@@ -1869,10 +2080,12 @@
         "H",
         "https://www.fda.gov/media/139678/download",
         "https://www.fda.gov/media/139679/download",
-        "https://www.fda.gov/media/139680/download",
-        null,
+        [
+            "https://www.fda.gov/media/139680/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-06-30",
@@ -1883,10 +2096,10 @@
         "H",
         "https://www.fda.gov/media/139674/download",
         "https://www.fda.gov/media/139675/download",
-        null,
+        [],
         "https://www.fda.gov/media/139676/download",
         [],
-        null
+        ""
     ],
     [
         "2020-06-30",
@@ -1897,10 +2110,12 @@
         "H",
         "https://www.fda.gov/media/139727/download",
         "https://www.fda.gov/media/139729/download",
-        "https://www.fda.gov/media/139730/download",
-        null,
+        [
+            "https://www.fda.gov/media/139730/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-01",
@@ -1911,10 +2126,10 @@
         "H",
         "https://www.fda.gov/media/139723/download",
         "https://www.fda.gov/media/139724/download",
-        null,
+        [],
         "https://www.fda.gov/media/139725/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-02",
@@ -1925,10 +2140,12 @@
         "H",
         "https://www.fda.gov/media/139742/download",
         "https://www.fda.gov/media/139745/download",
-        "https://www.fda.gov/media/139743/download",
-        null,
+        [
+            "https://www.fda.gov/media/139743/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-02",
@@ -1939,12 +2156,14 @@
         "H, M, W",
         "https://www.fda.gov/media/139753/download",
         "https://www.fda.gov/media/139754/download",
-        "https://www.fda.gov/media/139755/download",
-        null,
+        [
+            "https://www.fda.gov/media/139755/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140429/download"
         ],
-        null
+        ""
     ],
     [
         "2020-07-06",
@@ -1955,10 +2174,10 @@
         "H",
         "https://www.fda.gov/media/139786/download",
         "https://www.fda.gov/media/139787/download",
-        null,
+        [],
         "https://www.fda.gov/media/139788/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-06",
@@ -1969,10 +2188,12 @@
         "H, M",
         "https://www.fda.gov/media/139790/download",
         "https://www.fda.gov/media/139791/download",
-        "https://www.fda.gov/media/139792/download",
-        null,
+        [
+            "https://www.fda.gov/media/139792/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-07",
@@ -1983,10 +2204,12 @@
         "H",
         "https://www.fda.gov/media/139827/download",
         "https://www.fda.gov/media/139830/download",
-        "https://www.fda.gov/media/139828/download",
-        null,
+        [
+            "https://www.fda.gov/media/139828/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-07",
@@ -1997,10 +2220,12 @@
         "H",
         "https://www.fda.gov/media/139831/download",
         "https://www.fda.gov/media/139834/download",
-        "https://www.fda.gov/media/139832/download",
-        null,
+        [
+            "https://www.fda.gov/media/139832/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-07",
@@ -2011,10 +2236,10 @@
         "H",
         "https://www.fda.gov/media/139837/download",
         "https://www.fda.gov/media/139839/download",
-        null,
+        [],
         "https://www.fda.gov/media/139836/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-08",
@@ -2025,10 +2250,10 @@
         "H",
         "https://www.fda.gov/media/139859/download",
         "https://www.fda.gov/media/139861/download",
-        null,
+        [],
         "https://www.fda.gov/media/139858/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-08",
@@ -2039,10 +2264,12 @@
         "H, M",
         "https://www.fda.gov/media/139863/download",
         "https://www.fda.gov/media/139867/download",
-        "https://www.fda.gov/media/139865/download",
-        null,
+        [
+            "https://www.fda.gov/media/139865/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-09",
@@ -2053,10 +2280,10 @@
         "H",
         "https://www.fda.gov/media/139935/download",
         "https://www.fda.gov/media/139936/download",
-        null,
+        [],
         "https://www.fda.gov/media/139937/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-09",
@@ -2067,10 +2294,12 @@
         "H",
         "https://www.fda.gov/media/139939/download",
         "https://www.fda.gov/media/139940/download",
-        "https://www.fda.gov/media/139941/download",
-        null,
+        [
+            "https://www.fda.gov/media/139941/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-10",
@@ -2081,10 +2310,12 @@
         "H, M",
         "https://www.fda.gov/media/140028/download",
         "https://www.fda.gov/media/140037/download",
-        "https://www.fda.gov/media/140030/download",
-        null,
+        [
+            "https://www.fda.gov/media/140030/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-10",
@@ -2095,10 +2326,10 @@
         "H",
         "https://www.fda.gov/media/140008/download",
         "https://www.fda.gov/media/140026/download",
-        null,
+        [],
         "https://www.fda.gov/media/140007/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-13",
@@ -2109,10 +2340,10 @@
         "H",
         "https://www.fda.gov/media/140076/download",
         "https://www.fda.gov/media/140077/download",
-        null,
+        [],
         "https://www.fda.gov/media/140078/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-13",
@@ -2123,12 +2354,14 @@
         "H",
         "https://www.fda.gov/media/140071/download",
         "https://www.fda.gov/media/140072/download",
-        "https://www.fda.gov/media/140073/download",
-        null,
+        [
+            "https://www.fda.gov/media/140073/download"
+        ],
+        "",
         [
             "https://www.fda.gov/media/140983/download"
         ],
-        null
+        ""
     ],
     [
         "2020-07-13",
@@ -2139,10 +2372,12 @@
         "H",
         "https://www.fda.gov/media/140067/download",
         "https://www.fda.gov/media/140068/download",
-        "https://www.fda.gov/media/140069/download",
-        null,
+        [
+            "https://www.fda.gov/media/140069/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-13",
@@ -2153,10 +2388,12 @@
         "H, M",
         "https://www.fda.gov/media/140080/download",
         "https://www.fda.gov/media/140081/download",
-        "https://www.fda.gov/media/140082/download",
-        null,
+        [
+            "https://www.fda.gov/media/140082/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-15",
@@ -2167,10 +2404,12 @@
         "H",
         "https://www.fda.gov/media/140237/download",
         "https://www.fda.gov/media/140238/download",
-        "https://www.fda.gov/media/140240/download",
+        [
+            "https://www.fda.gov/media/140240/download"
+        ],
         "https://www.fda.gov/media/140239/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-15",
@@ -2181,10 +2420,12 @@
         "H",
         "https://www.fda.gov/media/140232/download",
         "https://www.fda.gov/media/140233/download",
-        "https://www.fda.gov/media/140235/download",
+        [
+            "https://www.fda.gov/media/140235/download"
+        ],
         "https://www.fda.gov/media/140234/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-15",
@@ -2195,10 +2436,12 @@
         "H",
         "https://www.fda.gov/media/140227/download",
         "https://www.fda.gov/media/140228/download",
-        "https://www.fda.gov/media/140230/download",
+        [
+            "https://www.fda.gov/media/140230/download"
+        ],
         "https://www.fda.gov/media/140229/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-16",
@@ -2209,10 +2452,10 @@
         "H",
         "https://www.fda.gov/media/140260/download",
         "https://www.fda.gov/media/140262/download",
-        null,
+        [],
         "https://www.fda.gov/media/140259/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-16",
@@ -2223,10 +2466,12 @@
         "H",
         "https://www.fda.gov/media/140255/download",
         "https://www.fda.gov/media/140258/download",
-        "https://www.fda.gov/media/140256/download",
-        null,
+        [
+            "https://www.fda.gov/media/140256/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-17",
@@ -2237,10 +2482,10 @@
         "H",
         "https://www.fda.gov/media/140291/download",
         "https://www.fda.gov/media/140292/download",
-        null,
+        [],
         "https://www.fda.gov/media/140293/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-17",
@@ -2251,10 +2496,12 @@
         "H, M",
         "https://www.fda.gov/media/140295/download",
         "https://www.fda.gov/media/140296/download",
-        "https://www.fda.gov/media/140297/download",
-        null,
+        [
+            "https://www.fda.gov/media/140297/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-21",
@@ -2265,10 +2512,12 @@
         "H",
         "https://www.fda.gov/media/140353/download",
         "https://www.fda.gov/media/140356/download",
-        "https://www.fda.gov/media/140354/download",
-        null,
+        [
+            "https://www.fda.gov/media/140354/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-23",
@@ -2279,10 +2528,10 @@
         "H",
         "https://www.fda.gov/media/140421/download",
         "https://www.fda.gov/media/140423/download",
-        null,
+        [],
         "https://www.fda.gov/media/140420/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-24",
@@ -2293,10 +2542,12 @@
         "H",
         "https://www.fda.gov/media/140424/download",
         "https://www.fda.gov/media/140427/download",
-        "https://www.fda.gov/media/140425/download",
-        null,
+        [
+            "https://www.fda.gov/media/140425/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-24",
@@ -2307,10 +2558,12 @@
         "H, M",
         "https://www.fda.gov/media/140441/download",
         "https://www.fda.gov/media/140442/download",
-        "https://www.fda.gov/media/140443/download",
-        null,
+        [
+            "https://www.fda.gov/media/140443/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-24",
@@ -2321,10 +2574,12 @@
         "H, M",
         "https://www.fda.gov/media/140445/download",
         "https://www.fda.gov/media/140446/download",
-        "https://www.fda.gov/media/140447/download",
-        null,
+        [
+            "https://www.fda.gov/media/140447/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-27",
@@ -2335,10 +2590,10 @@
         "H",
         "https://www.fda.gov/media/140545/download",
         "https://www.fda.gov/media/140546/download",
-        null,
+        [],
         "https://www.fda.gov/media/140547/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-27",
@@ -2349,10 +2604,10 @@
         "H",
         "https://www.fda.gov/media/140541/download",
         "https://www.fda.gov/media/140542/download",
-        null,
+        [],
         "https://www.fda.gov/media/140543/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-30",
@@ -2363,10 +2618,12 @@
         "H",
         "https://www.fda.gov/media/140662/download",
         "https://www.fda.gov/media/140665/download",
-        "https://www.fda.gov/media/140663/download",
+        [
+            "https://www.fda.gov/media/140663/download"
+        ],
         "https://www.fda.gov/media/140661/download",
         [],
-        null
+        ""
     ],
     [
         "2020-07-31",
@@ -2377,10 +2634,12 @@
         "H, M",
         "https://www.fda.gov/media/140698/download",
         "https://www.fda.gov/media/140701/download",
-        "https://www.fda.gov/media/140699/download",
-        null,
+        [
+            "https://www.fda.gov/media/140699/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-31",
@@ -2391,10 +2650,12 @@
         "H, M",
         "https://www.fda.gov/media/140702/download",
         "https://www.fda.gov/media/140705/download",
-        "https://www.fda.gov/media/140704/download",
-        null,
+        [
+            "https://www.fda.gov/media/140704/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-31",
@@ -2405,10 +2666,12 @@
         "H",
         "https://www.fda.gov/media/140716/download",
         "https://www.fda.gov/media/140719/download",
-        "https://www.fda.gov/media/140717/download",
-        null,
+        [
+            "https://www.fda.gov/media/140717/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-07-31",
@@ -2419,10 +2682,10 @@
         "H",
         "https://www.fda.gov/media/140715/download",
         "https://www.fda.gov/media/140715/download",
-        null,
+        [],
         "https://www.fda.gov/media/140712/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-03",
@@ -2433,10 +2696,10 @@
         "H",
         "https://www.fda.gov/media/140774/download",
         "https://www.fda.gov/media/140775/download",
-        null,
+        [],
         "https://www.fda.gov/media/140776/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-03",
@@ -2447,12 +2710,14 @@
         "H",
         "https://www.fda.gov/media/140778/download",
         "https://www.fda.gov/media/140779/download",
-        "https://www.fda.gov/media/140781/download",
+        [
+            "https://www.fda.gov/media/140781/download"
+        ],
         "https://www.fda.gov/media/140780/download",
         [
             "https://www.fda.gov/media/141058/download"
         ],
-        null
+        ""
     ],
     [
         "2020-08-03",
@@ -2463,10 +2728,10 @@
         "H",
         "https://www.fda.gov/media/140786/download",
         "https://www.fda.gov/media/140787/download",
-        null,
+        [],
         "https://www.fda.gov/media/140788/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-03",
@@ -2477,10 +2742,10 @@
         "H",
         "https://www.fda.gov/media/140790/download",
         "https://www.fda.gov/media/140791/download",
-        null,
+        [],
         "https://www.fda.gov/media/140792/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-03",
@@ -2491,10 +2756,10 @@
         "H",
         "https://www.fda.gov/media/140816/download",
         "https://www.fda.gov/media/140817/download",
-        null,
+        [],
         "https://www.fda.gov/media/140818/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-05",
@@ -2505,10 +2770,12 @@
         "H",
         "https://www.fda.gov/media/140920/download",
         "https://www.fda.gov/media/140921/download",
-        "https://www.fda.gov/media/140922/download",
-        null,
+        [
+            "https://www.fda.gov/media/140922/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-08-05",
@@ -2519,10 +2786,12 @@
         "H",
         "https://www.fda.gov/media/140927/download",
         "https://www.fda.gov/media/140928/download",
-        "https://www.fda.gov/media/140929/download",
-        null,
+        [
+            "https://www.fda.gov/media/140929/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-08-06",
@@ -2533,10 +2802,10 @@
         "H",
         "https://www.fda.gov/media/140915/download",
         "https://www.fda.gov/media/140916/download",
-        null,
+        [],
         "https://www.fda.gov/media/140917/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-06",
@@ -2547,10 +2816,12 @@
         "H, M ",
         "https://www.fda.gov/media/140935/download",
         "https://www.fda.gov/media/140936/download",
-        "https://www.fda.gov/media/140937/download",
-        null,
+        [
+            "https://www.fda.gov/media/140937/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-08-06",
@@ -2561,10 +2832,12 @@
         "H, M",
         "https://www.fda.gov/media/140931/download",
         "https://www.fda.gov/media/140932/download",
-        "https://www.fda.gov/media/140933/download",
-        null,
+        [
+            "https://www.fda.gov/media/140933/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-08-07",
@@ -2575,10 +2848,10 @@
         "H",
         "https://www.fda.gov/media/140978/download",
         "https://www.fda.gov/media/140979/download",
-        null,
+        [],
         "https://www.fda.gov/media/140980/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-10",
@@ -2589,10 +2862,10 @@
         "H",
         "https://www.fda.gov/media/141014/download",
         "https://www.fda.gov/media/141015/download",
-        null,
+        [],
         "https://www.fda.gov/media/141016/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-10",
@@ -2603,10 +2876,10 @@
         "H",
         "https://www.fda.gov/media/141019/download",
         "https://www.fda.gov/media/141020/download",
-        null,
+        [],
         "https://www.fda.gov/media/141021/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-11",
@@ -2617,10 +2890,12 @@
         "H",
         "https://www.fda.gov/media/141055/download",
         "https://www.fda.gov/media/141056/download",
-        "https://www.fda.gov/media/141057/download",
-        null,
+        [
+            "https://www.fda.gov/media/141057/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-08-11",
@@ -2631,10 +2906,12 @@
         "H",
         "https://www.fda.gov/media/141050/download",
         "https://www.fda.gov/media/141051/download",
-        "https://www.fda.gov/media/141052/download",
-        null,
+        [
+            "https://www.fda.gov/media/141052/download"
+        ],
+        "",
         [],
-        null
+        ""
     ],
     [
         "2020-08-13",
@@ -2645,10 +2922,10 @@
         "H",
         "https://www.fda.gov/media/141147/download",
         "https://www.fda.gov/media/141148/download",
-        null,
+        [],
         "https://www.fda.gov/media/141149/download",
         [],
-        null
+        ""
     ],
     [
         "2020-08-15",
@@ -2659,9 +2936,9 @@
         "H",
         "https://www.fda.gov/media/141193/download",
         "https://www.fda.gov/media/141195/download",
-        null,
+        [],
         "https://www.fda.gov/media/141192/download",
         [],
-        null
+        ""
     ]
 ]
