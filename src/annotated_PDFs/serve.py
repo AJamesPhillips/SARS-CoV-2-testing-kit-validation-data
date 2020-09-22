@@ -1,21 +1,25 @@
 from flask import Flask, make_response, request
-import csv
 import hashlib
 import json
 import os
 import sys
 
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from common import calculate_common_labels, get_directories
 
-app = Flask(__name__)
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
+app = Flask(__name__)
 
-
+common_labels = dict()
 def populate_data():
     print("Populating data")
 
-    calculate_common_labels()
+    global common_labels
+    common_labels = calculate_common_labels()
 
     directories = get_directories()
+    print("Serving PDFs from following directories: \n   * " + "\n   * ".join(directories))
 
     for directory in directories:
         file_names = os.listdir(dir_path + "/" + directory)
@@ -30,35 +34,6 @@ def populate_data():
                 populate_pdf_files_data(file_name=file_name, meta_data=meta_data)
 
     print("Populated server with data from {} PDF files".format(len(pdf_files_data)))
-
-
-common_labels = dict()
-def calculate_common_labels():
-    with open(dir_path + "/common_labels.csv", "r") as f:
-        labels_csv = csv.reader(f, delimiter=",")
-        for (i, values) in enumerate(labels_csv):
-            try:
-                label_id = int(values[0])
-            except Exception as e:
-                raise Exception("Invalid label id: \"{}\" on row: {}".format(values[0], i))
-
-            label_text = values[1]
-
-            if label_id in common_labels:
-                raise Exception("Common labels has duplicate id: {} for label text: \"{}\" and \"{}\"".format(label_id, common_labels[label_id], label_text))
-
-            common_labels[label_id] = label_text
-
-
-def get_directories():
-    with open(dir_path + "/PDF_directories.txt", "r") as f:
-        directories = f.read().split("\n")
-
-        directories = [directory.strip() for directory in directories if directory.strip()]
-        directories = [directory for directory in directories if os.path.isdir(dir_path + "/" + directory)]
-        print("Serving PDFs from following directories: \n   * " + "\n   * ".join(directories))
-
-    return directories
 
 
 def upsert_meta_data_annotations_file(relative_file_path):

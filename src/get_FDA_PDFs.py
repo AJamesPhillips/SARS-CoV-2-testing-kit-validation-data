@@ -1,21 +1,14 @@
-import json
 import os
 import re
 import requests
 import time
 
 
+from common import get_fda_eua_parsed_data, get_FDA_EUA_pdf_file_path_from_url
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
-FILE_DATE = "2020-08-18"
+
 DELAY_SECONDS_BETWEEN_REQUESTS = 2
-
-
-def get_data():
-    json_file_path_for_parsed_data = dir_path + "/../data/FDA-EUA/parsed/{}.json".format(FILE_DATE)
-    with open(json_file_path_for_parsed_data, "r") as f:
-        data = json.load(f)
-
-    return data
 
 
 def filter_for_urls(data):
@@ -51,9 +44,7 @@ def check_urls_are_unique(urls):
 def download_urls(urls):
     for url in urls:
 
-        matches = re.match("https://www.fda.gov/media/(\d+)/download", url)
-        file_id = matches.groups()[0]
-        file_path = dir_path + "/../data/FDA-EUA/PDFs/{}.pdf".format(file_id)
+        file_path = get_FDA_EUA_pdf_file_path_from_url(url)
 
         if os.path.isfile(file_path):
             print("Skipping " + url)
@@ -68,8 +59,8 @@ def download_urls(urls):
 
 
 def main():
-    data = get_data()
-    urls = filter_for_urls(data)
+    fda_eua_parsed_data = get_fda_eua_parsed_data()
+    urls = filter_for_urls(fda_eua_parsed_data)
     check_urls_are_unique(urls)
     download_urls(urls)
 
