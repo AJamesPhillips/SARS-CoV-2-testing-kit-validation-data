@@ -61,6 +61,7 @@ class IVParser(HTMLParser):
         # print("Got tag: ", tag)
         if tag == "tr":
             self.current_row = [None] * len(self.HEADERS)
+            self.current_row[10] = []
             self.data_position = -1
 
         elif tag == "td":
@@ -182,8 +183,6 @@ class IVParser(HTMLParser):
                 elif "B)" in data:
                     pass
                 elif data.strip():
-                    if not isinstance(self.current_row[10], list):
-                        self.current_row[10] = []
                     self.current_row[10].append(self.current_a_tag_url)
 
         elif self.data_position == 7:
