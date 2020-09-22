@@ -18,6 +18,19 @@ def get_fda_eua_parsed_data():
     return fda_eua_parsed_data
 
 
+# pass it fda_eua_parsed_data or a data row to get all urls
+def filter_for_urls(data):
+    urls = []
+
+    if isinstance(data, list):
+        for v in data:
+            urls += filter_for_urls(v)
+    elif isinstance(data, str) and re.match(r'^https?://', data):
+        urls.append(data)
+
+    return urls
+
+
 def get_FDA_EUA_pdf_file_path_from_url(url):
     matches = re.match("https://www.fda.gov/media/(\d+)/download", url)
     file_id = matches.groups()[0]
@@ -55,3 +68,32 @@ def get_directories():
         directories = [directory for directory in directories if os.path.isdir(dir_path + "/" + directory)]
 
     return directories
+
+
+def get_annotations_by_test_name(fda_eua_parsed_data):
+
+    # skip first row as it is headers
+    data_rows = fda_eua_parsed_data[1:]
+
+    annotations_by_test_name = dict()
+
+    for data_row in data_rows:
+        test_name = data_row[2]
+        all_annotations = []
+
+        urls = filter_for_urls(data_row)
+
+        for url in urls:
+            file_path = get_FDA_EUA_pdf_file_path_from_url(url)
+            annotations_file_path = file_path + ".annotations"
+
+            if not os.path.isfile(annotations_file_path):
+                continue
+
+            with open(annotations_file_path, "r") as f:
+                annotations = json.load(f)
+                all_annotations.append(annotations)
+
+        annotations_by_test_name[test_name] = all_annotations
+
+    return annotations_by_test_name

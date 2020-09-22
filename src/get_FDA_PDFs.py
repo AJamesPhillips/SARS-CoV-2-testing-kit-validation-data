@@ -4,23 +4,11 @@ import requests
 import time
 
 
-from common import get_fda_eua_parsed_data, get_FDA_EUA_pdf_file_path_from_url
+from common import get_fda_eua_parsed_data, filter_for_urls, get_FDA_EUA_pdf_file_path_from_url
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 DELAY_SECONDS_BETWEEN_REQUESTS = 2
-
-
-def filter_for_urls(data):
-    urls = []
-
-    if isinstance(data, list):
-        for v in data:
-            urls += filter_for_urls(v)
-    elif isinstance(data, str) and re.match(r'^https?://', data):
-        urls.append(data)
-
-    return urls
 
 
 def check_urls_are_unique(urls):

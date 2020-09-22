@@ -1,10 +1,13 @@
 from flask import Flask, make_response
+import json
 import os
+import sys
 
-app = Flask(__name__)
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from common import get_fda_eua_parsed_data, get_annotations_by_test_name
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
-
-FILE_DATE = "2020-08-18"
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -13,15 +16,15 @@ def index():
     with open(html_file_path, "r") as f:
         html_contents = f.read()
 
-    data_file_path = dir_path + "/../../data/FDA-EUA/parsed/{}.json".format(FILE_DATE)
-    with open(data_file_path, "r") as f:
-        data = f.read()
+    fda_eua_parsed_data = get_fda_eua_parsed_data()
+    annnotations_by_test_name = get_annotations_by_test_name(fda_eua_parsed_data)
 
     src_file_path = dir_path + "/src.js"
     with open(src_file_path, "r") as f:
         src = f.read()
 
-    html_contents = html_contents.replace("\"<DATA>\"", data)
+    html_contents = html_contents.replace("\"<FDA_EUA_PARSED_DATA>\"", json.dumps(fda_eua_parsed_data))
+    html_contents = html_contents.replace("\"<ANNNOTATIONS_BY_TEST_NAME>\"", json.dumps(annnotations_by_test_name))
     html_contents = html_contents.replace("\"<SRC>\"", src)
 
     return html_contents
