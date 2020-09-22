@@ -66,3 +66,7 @@
 65,Limit of Detection (LOD)
 66,Limit of Detection (LOD)/Value
 67,Limit of Detection (LOD)/Units
+68,Limit of Detection (LOD)/Minimum Replicates
+69,Limit of Detection (LOD)/Concentration Range
+70,Limit of Detection (LOD)/Concentration Range/Steps/Number of steps
+71,Limit of Detection (LOD)/Concentration Range/Steps/Dilution per step
