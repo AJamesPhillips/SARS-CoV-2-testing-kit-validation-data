@@ -228,7 +228,7 @@ def annotation():
     with open(dir_path + "/" + relative_file_path + ".annotations", "w") as f:
         json.dump(pdf_file_data, f, indent=0)
 
-    return json.dumps(annotation)
+    return json.dumps(annotations)
 
 
 populate_data()

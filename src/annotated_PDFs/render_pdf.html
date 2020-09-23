@@ -97,6 +97,7 @@
 
     <div id="side_panel">
         <button id="save_changes" disabled="true">Save Changes</button>
+        <button id="delete_annotations" disabled="true" title="Delete annotations">X</button>
         <div id="annotations_list">
             <!-- <h3>List of annotations:</h3> -->
         </div>
@@ -150,17 +151,11 @@
     <script>
         const update_page_location_listeners = []
         const changed_annotations_data_listeners = []
-        const saved_annotations_data_listeners = []
         const label_el_click_listeners = []
 
-        function annotation_data_changed ()
+        function annotation_data_changed (saved = false)
         {
-            changed_annotations_data_listeners.forEach(listener => listener())
-        }
-
-        function annotation_data_saved ()
-        {
-            saved_annotations_data_listeners.forEach(listener => listener())
+            changed_annotations_data_listeners.forEach(listener => listener(saved))
         }
 
         function label_el_clicked (label)
@@ -183,6 +178,7 @@
             return vars
         }
 
+
         function get_highlighted_annotation_ids ()
         {
             const vars = parse_location_search()
@@ -193,16 +189,19 @@
                 .map(i => parseInt(i, 10))
 
             // Check each actually exists
-            const filtered_highlighted_annotation_ids = highlighted_annotation_ids.filter(annotation_elements_exist)
+            const filtered_highlighted_annotation_ids = highlighted_annotation_ids.filter(annotation_exist)
 
             return filtered_highlighted_annotation_ids
         }
 
-        function annotation_elements_exist (annotation_id)
+
+        function annotation_exist (annotation_id)
         {
-            const els = document.getElementsByClassName(`annotation_${annotation_id}`)
-            return !!els.length
+            // const els = document.getElementsByClassName(`annotation_${annotation_id}`)
+            // return !!els.length
+            return !!pdf_file_data.annotations.find(annotation => annotation.id === annotation_id)
         }
+
 
         const programmatic_styles_el = document.getElementById("programmatic_styles")
         function update_highlighted_annotations ({ highlighted_annotation_ids })
@@ -216,6 +215,7 @@
             scroll_to_an_annotation({ annotation_ids: highlighted_annotation_ids })
         }
 
+
         function scroll_to_an_annotation ({ annotation_ids })
         {
             if (!an_annotation_in_view({ annotation_ids }))
@@ -227,6 +227,7 @@
             }
         }
 
+
         function an_annotation_in_view ({ annotation_ids })
         {
             let one_in_view = false
@@ -237,11 +238,13 @@
             return one_in_view
         }
 
+
         function annotation_in_view (annotation_id)
         {
             const el = document.getElementsByClassName(`annotation annotation_${annotation_id}`)[0]
             return element_in_view(el)
         }
+
 
         function element_in_view (el)
         {
@@ -257,6 +260,7 @@
             )
         }
 
+
         function scroll_to_element (el)
         {
             if (!(el && el.scrollIntoView)) return false
@@ -270,7 +274,7 @@
             {
                 highlighted_annotation_ids = highlighted_annotation_ids.filter(v => v !== annotation_id)
             }
-            else if (annotation_elements_exist(annotation_id))
+            else if (annotation_exist(annotation_id))
             {
                 highlighted_annotation_ids.push(annotation_id)
             }
@@ -278,11 +282,13 @@
             update_page_location_and_highlighted_annotations({ highlighted_annotation_ids })
         }
 
+
         function annotation_highlighted (annotation_id)
         {
             const highlighted_annotation_ids = get_highlighted_annotation_ids()
             return highlighted_annotation_ids.includes(annotation_id)
         }
+
 
         function update_page_location ({ highlighted_annotation_ids })
         {
@@ -314,6 +320,7 @@
             update_page_location_listeners.forEach(listener => listener())
         }
 
+
         function update_page_location_and_highlighted_annotations ({ highlighted_annotation_ids } = {})
         {
             highlighted_annotation_ids = highlighted_annotation_ids || get_highlighted_annotation_ids()
@@ -335,7 +342,7 @@
                 annotation.dirty = false
             })
 
-            annotation_data_changed()
+            // annotation_data_changed()
 
             fetch(path_to_pdf_annotations, {
                 credentials: "same-origin",
@@ -347,12 +354,12 @@
                 .then(resp => {
                     if (resp.status === 200) {
                         // This is racy
-                        annotation_data_saved()
+                        annotation_data_changed(true)
 
                         // return resp.text()
                     } else {
                         pdf_file_data.annotations = JSON.parse(data_to_send)
-                        annotation_data_changed()
+                        annotation_data_changed(false)
 
                         return Promise.reject("server error")
                     }
@@ -444,6 +451,25 @@
             update_page_location_and_highlighted_annotations({ highlighted_annotation_ids: [id] })
         }
 
+
+        function delete_annotations (annotation_ids)
+        {
+            const annotation_ids_set = new Set(annotation_ids)
+            pdf_file_data.annotations = pdf_file_data.annotations.filter(annotation =>
+            {
+                return !annotation_ids_set.has(annotation.id)
+            })
+            annotation_data_changed()
+            update_page_location_and_highlighted_annotations()
+
+            // Also need to clear annotations rendered onto PDF pages
+            annotation_ids.forEach(id =>
+            {
+                const annotation_el = document.getElementsByClassName(`annotation_${id}`)[0]
+                annotation_el && annotation_el.remove()
+            })
+        }
+
     </script>
 
 
@@ -468,6 +494,7 @@
             return annotation_el
         }
 
+
         function create_annotation_el ({ id, page_number, left, top, width, height, colour, text, labels })
         {
             const annotation_el = create_empty_annotation_el({ id, page_number, editing_dimensions: false })
@@ -478,6 +505,7 @@
             annotation_el.style.backgroundColor = colour
             annotation_el.title = text
         }
+
 
         function add_annotations_to_PDF_page ({ page_number })
         {
@@ -728,6 +756,7 @@
         function render_side_panel ()
         {
             set_up_save_button()
+            set_up_delete_annotations_button()
             refresh_annotations_list()
             render_annotation_details_side_panel()
             render_labels_side_panel()
@@ -737,14 +766,9 @@
         {
             const save_button_el = document.getElementById("save_changes")
 
-            changed_annotations_data_listeners.push(() =>
+            changed_annotations_data_listeners.push((saved) =>
             {
-                save_button_el.disabled = false
-            })
-
-            saved_annotations_data_listeners.push(() =>
-            {
-                save_button_el.disabled = true
+                save_button_el.disabled = saved
             })
 
             save_button_el.addEventListener("click", () =>
@@ -752,6 +776,24 @@
                 post_annotations_to_server()
             })
         }
+
+        function set_up_delete_annotations_button ()
+        {
+            const delete_annotations_button_el = document.getElementById("delete_annotations")
+
+            update_page_location_listeners.push(() =>
+            {
+                const highlighted_annotations = get_highlighted_annotation_ids()
+                delete_annotations_button_el.disabled = !highlighted_annotations.length
+            })
+
+            delete_annotations_button_el.addEventListener("click", () =>
+            {
+                const highlighted_annotations = get_highlighted_annotation_ids()
+                delete_annotations(highlighted_annotations)
+            })
+        }
+
 
         function render_annotation_details_side_panel ()
         {
