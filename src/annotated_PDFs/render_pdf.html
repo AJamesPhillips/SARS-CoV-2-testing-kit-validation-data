@@ -204,7 +204,7 @@
         {
             // const els = document.getElementsByClassName(`annotation_${annotation_id}`)
             // return !!els.length
-            return !!pdf_file_data.annotations.find(annotation => annotation.id === annotation_id)
+            return !!pdf_file_data.annotations.find(annotation => annotation.id === annotation_id && !annotation.deleted)
         }
 
 
@@ -383,7 +383,9 @@
         function refresh_annotations_list ()
         {
             annotations_list_el.innerHTML = ""
-            pdf_file_data.annotations.forEach(add_annotation_list_element)
+            pdf_file_data.annotations
+                .filter(annotation => !annotation.deleted)
+                .forEach(add_annotation_list_element)
         }
         changed_annotations_data_listeners.push(refresh_annotations_list)
 
@@ -462,9 +464,17 @@
         function delete_annotations (annotation_ids)
         {
             const annotation_ids_set = new Set(annotation_ids)
-            pdf_file_data.annotations = pdf_file_data.annotations.filter(annotation =>
+            pdf_file_data.annotations = pdf_file_data.annotations.map(annotation =>
             {
-                return !annotation_ids_set.has(annotation.id)
+                const to_delete = annotation_ids_set.has(annotation.id)
+
+                if (!to_delete) return annotation
+
+                return {
+                    id: annotation.id,
+                    deleted: true,
+                    dirty: true,
+                }
             })
             annotation_data_changed()
             update_page_location_and_highlighted_annotations()
@@ -516,7 +526,9 @@
 
         function add_annotations_to_PDF_page ({ page_number })
         {
-            pdf_file_data.annotations.filter(annotation => {
+            pdf_file_data.annotations
+            .filter(annotation => !annotation.deleted)
+            .filter(annotation => {
                 return annotation.page_number === page_number
             })
             .forEach(annotation => {
