@@ -32,6 +32,12 @@ interface Annotation
     colour: string
     text: string
     labels: Label[]
+    deleted?: false
+}
+type AnnotationEntry = Annotation |
+{
+    id: number
+    deleted: true
 }
 interface AnnotationWithFilePath extends Annotation
 {
@@ -42,7 +48,7 @@ interface AnnotationFile
     version: number
     relative_file_path: string
     file_sha1_hash: string
-    annotations: Annotation[]
+    annotations: AnnotationEntry[]
     comments: string[]
 }
 interface ANNOTATIONS_BY_TEST_NAME
@@ -92,6 +98,7 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.metrics__confusion_matrix__true_negatives]: 1,
     // [DATA_KEYS.metrics__confusion_matrix__false_positives]: 1,
 }
+const LABEL_IDS_MAPPED = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
 
 
 interface FDA_EUA_PARSED_DATA_BY_TEST_NAME
@@ -219,7 +226,10 @@ function filter_annotation_files_for_label (annotation_files: AnnotationFile[], 
 
 function filter_annotations_for_label (annotation_file: AnnotationFile, label_id: number): AnnotationWithFilePath[]
 {
-    return annotation_file.annotations
+    const annotations: Annotation[] = annotation_file.annotations
+        .filter(annotation => !annotation.deleted) as any
+
+    return annotations
         .filter(annotation =>
             {
                 return annotation.labels.filter(label => label.id === label_id).length

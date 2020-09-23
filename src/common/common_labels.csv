@@ -71,3 +71,7 @@
 70,Limit of Detection (LOD)/Concentration Range/Steps/Number of steps
 71,Limit of Detection (LOD)/Concentration Range/Steps/Dilution per step
 72,Nucleic acid amplification/Reaction/Volume in μl
+73,Meta/Not specified
+74,Meta/Error
+75,Specimen/Collection protocol
+76,Specimen/Collection protocol/Standard

@@ -47,6 +47,7 @@ var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
     _a[DATA_KEYS.validation_condition__author] = 24,
     _a[DATA_KEYS.validation_condition__date] = 25,
     _a);
+var LABEL_IDS_MAPPED = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
 var FDA_EUA_parsed_data_by_test_name = fda_eua_parsed_data
     .slice(1) // skip first row of json array which contains csv-like array of headers
     .reduce(function (accum, row) {
@@ -112,7 +113,9 @@ function filter_annotation_files_for_label(annotation_files, label_id) {
     return annotations;
 }
 function filter_annotations_for_label(annotation_file, label_id) {
-    return annotation_file.annotations
+    var annotations = annotation_file.annotations
+        .filter(function (annotation) { return !annotation.deleted; });
+    return annotations
         .filter(function (annotation) {
         return annotation.labels.filter(function (label) { return label.id === label_id; }).length;
     })
