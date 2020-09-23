@@ -379,7 +379,9 @@
         function add_annotation_list_element ({ id, page_number, colour, text, labels, dirty })
         {
             const annotation_list_el = document.createElement("div")
+
             const display_html = (dirty ? "⚠ " : "") + `page: ${page_number}  text: ${text}  labels: ${labels.map(l => `<div>${l.text}</div>`).join("")}`
+
             annotation_list_el.innerHTML = display_html
             annotation_list_el.style.backgroundColor = colour
             annotation_list_el.className = `annotation_list_element annotation_${id}`
@@ -390,6 +392,7 @@
                 toggle_annotation_highlight(id)
                 scroll_to_an_annotation({ annotation_ids: [id] })
             }
+
             annotations_list_el.appendChild(annotation_list_el)
         }
     </script>

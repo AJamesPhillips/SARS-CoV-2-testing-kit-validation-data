@@ -160,6 +160,9 @@ def index():
 
 @app.route("/render_pdf")
 def render_pdf():
+    global common_labels
+    common_labels = calculate_common_labels()
+
     relative_file_path = request.args.get("relative_file_path")
     if relative_file_path not in relative_file_paths:
         return "relative_file_path not found for " + relative_file_path
