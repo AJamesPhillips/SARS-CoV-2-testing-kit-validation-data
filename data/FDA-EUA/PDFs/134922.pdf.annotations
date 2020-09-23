@@ -28,7 +28,80 @@
 "height": "19px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "suspension of human A549 cells and viral transport medium (VTM) to mimic clinical specimen",
-"labels": []
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+]
+},
+{
+"id": 2,
+"deleted": true
+},
+{
+"id": 3,
+"page_number": 41,
+"left": "640px",
+"top": "822px",
+"width": "117px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNA copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
+},
+{
+"id": 4,
+"page_number": 41,
+"left": "306px",
+"top": "893px",
+"width": "24px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+]
+},
+{
+"id": 5,
+"page_number": 41,
+"left": "508px",
+"top": "902px",
+"width": "53px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "3.162",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 6,
+"page_number": 41,
+"left": "697px",
+"top": "899px",
+"width": "46px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
 }
 ],
 "comments": []

@@ -2,6 +2,227 @@
 "version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137302.pdf",
 "file_sha1_hash": "15f6a67e620b0e5d40fc8c0ac040e40bad0da5da",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 13,
+"left": "122px",
+"top": "224px",
+"width": "706px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 viral genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+]
+},
+{
+"id": 1,
+"page_number": 13,
+"left": "221px",
+"top": "237px",
+"width": "25px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "not specified",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+]
+},
+{
+"id": 2,
+"page_number": 13,
+"left": "354px",
+"top": "226px",
+"width": "133px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+]
+},
+{
+"id": 3,
+"deleted": true
+},
+{
+"id": 4,
+"page_number": 13,
+"left": "354px",
+"top": "243px",
+"width": "470px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "sputum and nasopharyngeal swab specimen (collected in UTM)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+]
+},
+{
+"id": 5,
+"page_number": 13,
+"left": "635px",
+"top": "181px",
+"width": "167px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies(cp) / \u03bcl",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
+},
+{
+"id": 6,
+"page_number": 13,
+"left": "363px",
+"top": "279px",
+"width": "29px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 7,
+"page_number": 13,
+"left": "172px",
+"top": "301px",
+"width": "37px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 8,
+"page_number": 13,
+"left": "522px",
+"top": "301px",
+"width": "47px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.125 but table 2 shows it should be 0.25 or the 0.5 for ABI 7500 Sputum could be 0.25.  However perhaps this is because ORF1ab positive treated differently to E gene positive (see Interpretation of Results table on page 10)",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+},
+{
+"id": 74,
+"text": "Meta/Error"
+}
+]
+},
+{
+"id": 9,
+"page_number": 13,
+"left": "267px",
+"top": "320px",
+"width": "32px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 10,
+"page_number": 13,
+"left": "613px",
+"top": "319px",
+"width": "34px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 11,
+"page_number": 13,
+"left": "177px",
+"top": "317px",
+"width": "60px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Minor error: should be CFX96",
+"labels": [
+{
+"id": 74,
+"text": "Meta/Error"
+}
+]
+},
+{
+"id": 12,
+"page_number": 3,
+"left": "452px",
+"top": "1013px",
+"width": "262px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab (RdRp), E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+]
+},
+{
+"id": 13,
+"page_number": 7,
+"left": "103px",
+"top": "149px",
+"width": "788px",
+"height": "955px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Nasopharyngeal swab, Oropharyngeal swab, Nasal mid-turbinate (NMT) swab, also called Deep Nasal Swab, Anterior nares specimen (NS), Sputum",
+"labels": [
+{
+"id": 75,
+"text": "Specimen/Collection protocol"
+}
+]
+}
+],
 "comments": []
 }
