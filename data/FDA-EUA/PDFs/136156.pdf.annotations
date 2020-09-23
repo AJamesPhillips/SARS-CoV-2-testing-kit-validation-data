@@ -2,6 +2,114 @@
 "version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136156.pdf",
 "file_sha1_hash": "efadcde94e402666e093f16a23b9fd1a3191d6be",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 18,
+"left": "116px",
+"top": "206px",
+"width": "688px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Pooled nasopharyngeal swab specimens, also confirmed with (see below) saline, Liquid Amies, STM (Specimen Transport Medium), pooled clinical bronchoalveolar lavage fluid lower respiratory tract specimens.",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+]
+},
+{
+"id": 1,
+"page_number": 18,
+"left": "288px",
+"top": "224px",
+"width": "294px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Inactivated cultured SARS-CoV-2 virus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+]
+},
+{
+"id": 2,
+"page_number": 18,
+"left": "117px",
+"top": "223px",
+"width": "717px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "USA-WA1/2020; BEI Resources; NR-52281",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+]
+},
+{
+"id": 3,
+"page_number": 18,
+"left": "636px",
+"top": "259px",
+"width": "48px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.01",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 4,
+"page_number": 18,
+"left": "687px",
+"top": "261px",
+"width": "89px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
+},
+{
+"id": 5,
+"page_number": 18,
+"left": "354px",
+"top": "279px",
+"width": "105px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+]
+},
+{
+"id": 6,
+"page_number": 18,
+"left": "115px",
+"top": "300px",
+"width": "696px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Other synthetic sample clinical matrices but no replicate number explicitly given.",
+"labels": []
+}
+],
 "comments": []
 }

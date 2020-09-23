@@ -2,6 +2,215 @@
 "version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136112.pdf",
 "file_sha1_hash": "a663c02a08a6aea26e7adafb1a6feb823cf70eeb",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 66,
+"left": "245px",
+"top": "447px",
+"width": "578px",
+"height": "61px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Pooled banked Nasopharyngeal swab (NP) and Bronchoalveolar lavage (BAL) samples, obtained from U.S. patients in the years 2015-2019",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+]
+},
+{
+"id": 1,
+"page_number": 66,
+"left": "243px",
+"top": "484px",
+"width": "580px",
+"height": "38px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": " purified SARS-CoV-2 viral genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+]
+},
+{
+"id": 2,
+"page_number": 66,
+"left": "486px",
+"top": "562px",
+"width": "99px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+]
+},
+{
+"id": 3,
+"page_number": 68,
+"left": "570px",
+"top": "411px",
+"width": "123px",
+"height": "53px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "10",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 4,
+"page_number": 66,
+"left": "78px",
+"top": "881px",
+"width": "98px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "GCE / reaction",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
+},
+{
+"id": 5,
+"page_number": 7,
+"left": "268px",
+"top": "413px",
+"width": "580px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasopharyngeal, oropharyngeal, nasal, and mid-turbinate swabs, and nasopharyngeal aspirate) and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+]
+},
+{
+"id": 6,
+"page_number": 17,
+"left": "281px",
+"top": "165px",
+"width": "95px",
+"height": "70px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+]
+},
+{
+"id": 7,
+"page_number": 30,
+"left": "236px",
+"top": "457px",
+"width": "588px",
+"height": "91px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "variable",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+}
+]
+},
+{
+"id": 8,
+"page_number": 33,
+"left": "352px",
+"top": "471px",
+"width": "61px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "25",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+}
+]
+},
+{
+"id": 9,
+"page_number": 35,
+"left": "372px",
+"top": "757px",
+"width": "67px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+}
+]
+},
+{
+"id": 10,
+"page_number": 37,
+"left": "372px",
+"top": "762px",
+"width": "70px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "25",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+}
+]
+},
+{
+"id": 11,
+"page_number": 39,
+"left": "364px",
+"top": "933px",
+"width": "84px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+}
+]
+},
+{
+"id": 12,
+"page_number": 66,
+"left": "243px",
+"top": "406px",
+"width": "564px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Genomic Copy Equivalents (GCE)",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
+}
+],
 "comments": []
 }

@@ -2,6 +2,157 @@
 "version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/135847.pdf",
 "file_sha1_hash": "a3b523008658be6054829d68096b60817b20cae4",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 21,
+"left": "528px",
+"top": "212px",
+"width": "110px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+]
+},
+{
+"id": 1,
+"page_number": 21,
+"left": "387px",
+"top": "247px",
+"width": "28px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 2,
+"page_number": 21,
+"left": "411px",
+"top": "244px",
+"width": "189px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / reaction",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
+},
+{
+"id": 3,
+"page_number": 7,
+"left": "115px",
+"top": "301px",
+"width": "219px",
+"height": "91px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Curious this is listed first but LOD is 5 to 10 higher (less sensitive) - ref annotation 4",
+"labels": []
+},
+{
+"id": 4,
+"page_number": 21,
+"left": "103px",
+"top": "269px",
+"width": "685px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "250",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 5,
+"page_number": 15,
+"left": "127px",
+"top": "908px",
+"width": "291px",
+"height": "43px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "These instructions for negative control well will not allow for detection of cross contamination whilst in template addition room, a potentially important source of contamination and false positives.",
+"labels": []
+},
+{
+"id": 6,
+"page_number": 16,
+"left": "345px",
+"top": "258px",
+"width": "28px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+}
+]
+},
+{
+"id": 7,
+"page_number": 21,
+"left": "240px",
+"top": "155px",
+"width": "278px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "quantified whole viral genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+]
+},
+{
+"id": 8,
+"page_number": 21,
+"left": "492px",
+"top": "158px",
+"width": "41px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "not specified",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+]
+},
+{
+"id": 9,
+"page_number": 19,
+"left": "319px",
+"top": "191px",
+"width": "104px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+]
+}
+],
 "comments": []
 }

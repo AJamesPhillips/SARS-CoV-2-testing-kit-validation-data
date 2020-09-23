@@ -18,6 +18,102 @@
 "text": "Specimen/Synthetic Specimen/Virus/Source"
 }
 ]
+},
+{
+"id": 1,
+"page_number": 23,
+"left": "475px",
+"top": "293px",
+"width": "170px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "simulated clinical matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+]
+},
+{
+"id": 2,
+"page_number": 23,
+"left": "715px",
+"top": "293px",
+"width": "150px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "7",
+"labels": [
+{
+"id": 70,
+"text": "Limit of Detection (LOD)/Concentration Range/Steps/Number of steps"
+}
+]
+},
+{
+"id": 3,
+"page_number": 23,
+"left": "87px",
+"top": "316px",
+"width": "271px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "3",
+"labels": [
+{
+"id": 71,
+"text": "Limit of Detection (LOD)/Concentration Range/Steps/Dilution per step"
+}
+]
+},
+{
+"id": 4,
+"page_number": 23,
+"left": "533px",
+"top": "317px",
+"width": "204px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+]
+},
+{
+"id": 5,
+"page_number": 23,
+"left": "738px",
+"top": "368px",
+"width": "41px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.009",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+]
+},
+{
+"id": 6,
+"page_number": 23,
+"left": "91px",
+"top": "391px",
+"width": "80px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+]
 }
 ],
 "comments": []

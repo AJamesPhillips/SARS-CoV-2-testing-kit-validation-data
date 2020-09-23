@@ -2,6 +2,34 @@
 "version": 2,
 "relative_file_path": "../../data/FDA-EUA/PDFs/134922.pdf",
 "file_sha1_hash": "a4f7004fca3a39a0f036a0897de3bf2e7413b508",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 40,
+"left": "74px",
+"top": "912px",
+"width": "754px",
+"height": "43px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "characterized stocks of in vitro transcribed full length RNA (N gene; GenBank accession: MN908947.2)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+]
+},
+{
+"id": 1,
+"page_number": 40,
+"left": "72px",
+"top": "954px",
+"width": "694px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "suspension of human A549 cells and viral transport medium (VTM) to mimic clinical specimen",
+"labels": []
+}
+],
 "comments": []
 }
