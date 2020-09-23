@@ -39,7 +39,7 @@ def populate_data():
 def upsert_meta_data_annotations_file(relative_file_path):
     meta_file_path = dir_path + "/" + relative_file_path + ".annotations"
 
-    current_version = 2
+    current_version = 3
 
     if os.path.isfile(meta_file_path):
         with open(meta_file_path, "r") as f:
@@ -53,6 +53,7 @@ def upsert_meta_data_annotations_file(relative_file_path):
             "relative_file_path": relative_file_path,
             "file_sha1_hash": file_sha1_hash,
             "annotations": [],
+            "comments": [],
         }
 
     if meta_data["version"] != current_version:
@@ -86,14 +87,16 @@ def sha1_hash_file(file_descriptor):
 
 
 def upgrade_meta_data(meta_data):
-    if meta_data["version"] == 1:
-        meta_data["version"] = 2
-        meta_data["comments"] = []
+    meta_data["version"] = 3
+    for annotation in meta_data["annotations"]:
+        annotation["comment"] = ""
+
     return meta_data
 
 
 def ensure_consistent_labels(meta_data, force_update):
     for annotation in meta_data["annotations"]:
+
         for label in annotation["labels"]:
 
             label_id = label["id"]

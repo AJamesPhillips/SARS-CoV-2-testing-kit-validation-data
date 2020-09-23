@@ -442,7 +442,7 @@
         //     annotation.id = new_id
         // }
 
-        function create_annotation_data ({ id, page_number, left, top, width, height, colour, text, labels })
+        function create_annotation_data ({ id, page_number, left, top, width, height, colour, text, labels, comment })
         {
             const annotation_data = {
                 id,
@@ -454,6 +454,7 @@
                 colour,
                 text,
                 labels,
+                comment,
             }
             pdf_file_data.annotations.push(annotation_data)
             annotation_data_changed()
@@ -512,7 +513,7 @@
         }
 
 
-        function create_annotation_el ({ id, page_number, left, top, width, height, colour, text, labels })
+        function create_annotation_el ({ id, page_number, left, top, width, height, colour, text, labels, comment })
         {
             const annotation_el = create_empty_annotation_el({ id, page_number, editing_dimensions: false })
             annotation_el.style.left = left
@@ -661,6 +662,7 @@
                         colour: window.getComputedStyle(temp_annotation_el).backgroundColor,
                         text: "",
                         labels: [],
+                        comment: "",
                     }
                     create_annotation_data(annotation_data)
                     temp_annotation_el.classList.remove("editing_dimensions")
