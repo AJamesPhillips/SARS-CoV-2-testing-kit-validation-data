@@ -34,6 +34,7 @@ interface Annotation
     colour: string
     text: string
     labels: Label[]
+    comment: string
     deleted?: false  // should not actually ever be present
 }
 interface DeletedAnnotation
@@ -116,6 +117,10 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.metrics__confusion_matrix__false_positives]: 1,
 }
 const LABEL_IDS_MAPPED_TO_DATA_KEY = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
+const LABEL_ID__META__NOT_SPECIFIED = 73
+const LABEL_ID__META__ERROR = 74
+LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__NOT_SPECIFIED)
+LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__ERROR)
 
 
 function get_all_annotation_label_ids ()
@@ -289,7 +294,31 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
 {
     if (annotations.length === 0) return
 
-    const value = annotations.map(annotation => annotation.text).join(", ")
+    let comments = ""
+    let value = annotations.map(annotation => {
+        let value = annotation.text
+
+        if (annotation.labels.find(label => label.id === LABEL_ID__META__NOT_SPECIFIED))
+        {
+            value = `<span class="warning_symbol" title="Value not specified">⚠</span> ` + value
+            console.log("NOT_SPECIFIED " + value)
+        }
+
+        if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR))
+        {
+            value = `<span class="error_symbol" title="Potential error">⚠</span> ` + value
+        }
+
+        if (annotation.comment)
+        {
+            comments += `<span title="${annotation.comment}">C</span> `
+        }
+
+        return value
+    }).join(", ")
+
+    value = value + "<br/>" + comments
+
     const refs = annotations.map(annotation => ref_link(annotation.relative_file_path, annotation.id))
 
     const data_node: DATA_NODE = { value, refs }
@@ -794,9 +823,12 @@ function populate_table_body (headers: HEADERS, data: DATA)
             const cell = row.insertCell()
             if (header.data_key !== null && data_row[header.data_key])
             {
-                const value = data_row[header.data_key].value.toString()
-                cell.innerHTML = `<div>${value}</div>`
-                const refs = data_row[header.data_key].refs
+                const data_node: DATA_NODE = data_row[header.data_key]
+
+                const value = data_node.value.toString()
+                const value_title = value.replace(/(<([^>]+)>)/ig, "");
+                cell.innerHTML = `<div title="${value_title}">${value}</div>`
+                const refs = data_node.refs
                 cell.innerHTML += refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
             }
         })

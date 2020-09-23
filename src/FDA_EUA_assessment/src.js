@@ -61,6 +61,10 @@ var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
     _a[DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source] = 63,
     _a);
 var LABEL_IDS_MAPPED_TO_DATA_KEY = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
+var LABEL_ID__META__NOT_SPECIFIED = 73;
+var LABEL_ID__META__ERROR = 74;
+LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__NOT_SPECIFIED);
+LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__ERROR);
 function get_all_annotation_label_ids() {
     var all_annotation_label_ids = new Set();
     Object.values(annotations_by_test_name)
@@ -141,7 +145,22 @@ function filter_annotations_for_label(annotation_file, label_id) {
 function apply_data_string(row, data_key, annotations) {
     if (annotations.length === 0)
         return;
-    var value = annotations.map(function (annotation) { return annotation.text; }).join(", ");
+    var comments = "";
+    var value = annotations.map(function (annotation) {
+        var value = annotation.text;
+        if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__NOT_SPECIFIED; })) {
+            value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> " + value;
+            console.log("NOT_SPECIFIED " + value);
+        }
+        if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR; })) {
+            value = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span> " + value;
+        }
+        if (annotation.comment) {
+            comments += "<span title=\"" + annotation.comment + "\">C</span> ";
+        }
+        return value;
+    }).join(", ");
+    value = value + "<br/>" + comments;
     var refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
     var data_node = { value: value, refs: refs };
     row[data_key] = data_node;
@@ -431,9 +450,11 @@ function populate_table_body(headers, data) {
         iterate_lowest_header(headers, function (header) {
             var cell = row.insertCell();
             if (header.data_key !== null && data_row[header.data_key]) {
-                var value = data_row[header.data_key].value.toString();
-                cell.innerHTML = "<div>" + value + "</div>";
-                var refs = data_row[header.data_key].refs;
+                var data_node = data_row[header.data_key];
+                var value = data_node.value.toString();
+                var value_title = value.replace(/(<([^>]+)>)/ig, "");
+                cell.innerHTML = "<div title=\"" + value_title + "\">" + value + "</div>";
+                var refs = data_node.refs;
                 cell.innerHTML += refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
             }
         });
