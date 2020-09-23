@@ -1,5 +1,5 @@
 {
-"version": 2,
+"version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137302.pdf",
 "file_sha1_hash": "15f6a67e620b0e5d40fc8c0ac040e40bad0da5da",
 "annotations": [
@@ -17,7 +17,8 @@
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 1,
@@ -37,7 +38,8 @@
 "id": 73,
 "text": "Meta/Not specified"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 2,
@@ -53,11 +55,14 @@
 "id": 68,
 "text": "Limit of Detection (LOD)/Minimum Replicates"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 3,
-"deleted": true
+"deleted": true,
+"comment": "",
+"labels": []
 },
 {
 "id": 4,
@@ -73,7 +78,8 @@
 "id": 64,
 "text": "Specimen/Synthetic Specimen/Clinical matrix"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 5,
@@ -89,7 +95,8 @@
 "id": 67,
 "text": "Limit of Detection (LOD)/Units"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 6,
@@ -105,7 +112,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 7,
@@ -121,7 +129,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 8,
@@ -141,7 +150,8 @@
 "id": 74,
 "text": "Meta/Error"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 9,
@@ -157,7 +167,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 10,
@@ -173,7 +184,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 11,
@@ -189,7 +201,8 @@
 "id": 74,
 "text": "Meta/Error"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 12,
@@ -205,7 +218,8 @@
 "id": 6,
 "text": "Viral gene(s) targetted"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 13,
@@ -221,7 +235,8 @@
 "id": 75,
 "text": "Specimen/Collection protocol"
 }
-]
+],
+"comment": ""
 }
 ],
 "comments": []

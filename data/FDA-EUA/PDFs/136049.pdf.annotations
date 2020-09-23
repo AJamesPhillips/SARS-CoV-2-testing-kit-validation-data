@@ -1,5 +1,5 @@
 {
-"version": 2,
+"version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136049.pdf",
 "file_sha1_hash": "f11389354034a294f1721988435f610172a76cea",
 "annotations": [
@@ -17,7 +17,8 @@
 "id": 63,
 "text": "Specimen/Synthetic Specimen/Virus/Source"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 1,
@@ -33,7 +34,8 @@
 "id": 64,
 "text": "Specimen/Synthetic Specimen/Clinical matrix"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 2,
@@ -49,7 +51,8 @@
 "id": 70,
 "text": "Limit of Detection (LOD)/Concentration Range/Steps/Number of steps"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 3,
@@ -65,7 +68,8 @@
 "id": 71,
 "text": "Limit of Detection (LOD)/Concentration Range/Steps/Dilution per step"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 4,
@@ -81,7 +85,8 @@
 "id": 68,
 "text": "Limit of Detection (LOD)/Minimum Replicates"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 5,
@@ -97,7 +102,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 6,
@@ -113,7 +119,8 @@
 "id": 67,
 "text": "Limit of Detection (LOD)/Units"
 }
-]
+],
+"comment": ""
 }
 ],
 "comments": []

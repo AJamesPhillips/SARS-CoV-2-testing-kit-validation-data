@@ -1,5 +1,5 @@
 {
-"version": 2,
+"version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136156.pdf",
 "file_sha1_hash": "efadcde94e402666e093f16a23b9fd1a3191d6be",
 "annotations": [
@@ -17,7 +17,8 @@
 "id": 64,
 "text": "Specimen/Synthetic Specimen/Clinical matrix"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 1,
@@ -33,7 +34,8 @@
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 2,
@@ -49,7 +51,8 @@
 "id": 63,
 "text": "Specimen/Synthetic Specimen/Virus/Source"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 3,
@@ -65,7 +68,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 4,
@@ -81,7 +85,8 @@
 "id": 67,
 "text": "Limit of Detection (LOD)/Units"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 5,
@@ -97,7 +102,8 @@
 "id": 68,
 "text": "Limit of Detection (LOD)/Minimum Replicates"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 6,
@@ -108,7 +114,8 @@
 "height": "45px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Other synthetic sample clinical matrices but no replicate number explicitly given.",
-"labels": []
+"labels": [],
+"comment": ""
 }
 ],
 "comments": []

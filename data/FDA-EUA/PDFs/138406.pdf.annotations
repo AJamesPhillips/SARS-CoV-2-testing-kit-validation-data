@@ -1,5 +1,5 @@
 {
-"version": 2,
+"version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138406.pdf",
 "file_sha1_hash": "288a7557a76d90d38af66d4c08911116d8a3a003",
 "annotations": [
@@ -12,7 +12,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Transport temperature",
 "labels": [],
-"id": 0
+"id": 0,
+"comment": ""
 },
 {
 "page_number": 1,
@@ -23,7 +24,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Transport temperature",
 "labels": [],
-"id": 1
+"id": 1,
+"comment": ""
 },
 {
 "page_number": 1,
@@ -34,7 +36,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "This is when the internal control is more important.  And this data could be very valuable for all public health initiatives around the world.",
 "labels": [],
-"id": 2
+"id": 2,
+"comment": ""
 },
 {
 "page_number": 2,
@@ -45,7 +48,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Sample taker; Sample type",
 "labels": [],
-"id": 3
+"id": 3,
+"comment": ""
 },
 {
 "page_number": 2,
@@ -56,7 +60,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Third party detection system",
 "labels": [],
-"id": 4
+"id": 4,
+"comment": ""
 },
 {
 "page_number": 2,
@@ -67,7 +72,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Swab type?; Transport container?; Transport media?",
 "labels": [],
-"id": 5
+"id": 5,
+"comment": ""
 },
 {
 "page_number": 5,
@@ -78,7 +84,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Temperature stability test method",
 "labels": [],
-"id": 6
+"id": 6,
+"comment": ""
 },
 {
 "page_number": 5,
@@ -89,7 +96,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Targetted viral gene",
 "labels": [],
-"id": 7
+"id": 7,
+"comment": ""
 },
 {
 "page_number": 6,
@@ -100,7 +108,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "100% is great but slightly suspicious for such a large sample size.  I hope they ran this with negative controls to check for cross contamination / contamination of primers",
 "labels": [],
-"id": 8
+"id": 8,
+"comment": ""
 }
 ],
 "comments": []

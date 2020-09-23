@@ -1,5 +1,5 @@
 {
-"version": 2,
+"version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136112.pdf",
 "file_sha1_hash": "a663c02a08a6aea26e7adafb1a6feb823cf70eeb",
 "annotations": [
@@ -17,7 +17,8 @@
 "id": 64,
 "text": "Specimen/Synthetic Specimen/Clinical matrix"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 1,
@@ -33,7 +34,8 @@
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 2,
@@ -49,7 +51,8 @@
 "id": 68,
 "text": "Limit of Detection (LOD)/Minimum Replicates"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 3,
@@ -65,7 +68,8 @@
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 4,
@@ -81,7 +85,8 @@
 "id": 67,
 "text": "Limit of Detection (LOD)/Units"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 5,
@@ -97,7 +102,8 @@
 "id": 0,
 "text": "Supported specimen types"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 6,
@@ -113,7 +119,8 @@
 "id": 6,
 "text": "Viral gene(s) targetted"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 7,
@@ -129,7 +136,8 @@
 "id": 72,
 "text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 8,
@@ -145,7 +153,8 @@
 "id": 72,
 "text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 9,
@@ -161,7 +170,8 @@
 "id": 72,
 "text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 10,
@@ -177,7 +187,8 @@
 "id": 72,
 "text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 11,
@@ -193,7 +204,8 @@
 "id": 72,
 "text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
 }
-]
+],
+"comment": ""
 },
 {
 "id": 12,
@@ -209,7 +221,8 @@
 "id": 67,
 "text": "Limit of Detection (LOD)/Units"
 }
-]
+],
+"comment": ""
 }
 ],
 "comments": []

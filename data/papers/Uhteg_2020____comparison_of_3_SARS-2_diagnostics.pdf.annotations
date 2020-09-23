@@ -1,5 +1,5 @@
 {
-"version": 2,
+"version": 3,
 "relative_file_path": "../../data/papers/Uhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf",
 "file_sha1_hash": "6ce385a8170e169f83258ae1db0b631c21dbb018",
 "annotations": [
@@ -12,7 +12,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Perhaps a lot of the viral copies where present inside the human cell and not yet in viral particles?",
 "labels": [],
-"id": 0
+"id": 0,
+"comment": ""
 },
 {
 "page_number": 3,
@@ -23,7 +24,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [],
-"id": 1
+"id": 1,
+"comment": ""
 },
 {
 "page_number": 4,
@@ -34,7 +36,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CDC and RealStar positive clinical samples",
 "labels": [],
-"id": 2
+"id": 2,
+"comment": ""
 },
 {
 "page_number": 4,
@@ -45,7 +48,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CDC and RealStar negative clinical samples",
 "labels": [],
-"id": 3
+"id": 3,
+"comment": ""
 },
 {
 "page_number": 4,
@@ -56,7 +60,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "CDC and RealStar clinical sample type",
 "labels": [],
-"id": 4
+"id": 4,
+"comment": ""
 },
 {
 "page_number": 4,
@@ -67,7 +72,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ePlex and RealStar positive clinical samples",
 "labels": [],
-"id": 5
+"id": 5,
+"comment": ""
 },
 {
 "page_number": 4,
@@ -78,7 +84,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ePlex and RealStar negative clinical samples",
 "labels": [],
-"id": 6
+"id": 6,
+"comment": ""
 }
 ],
 "comments": []
