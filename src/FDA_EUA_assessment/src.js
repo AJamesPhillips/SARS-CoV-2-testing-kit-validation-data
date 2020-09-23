@@ -1,8 +1,28 @@
-var _a, _b, _c;
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+var _a;
 var DATA_KEYS;
 (function (DATA_KEYS) {
     DATA_KEYS["test_descriptor__manufacturer_name"] = "test_descriptor__manufacturer_name";
     DATA_KEYS["test_descriptor__test_name"] = "test_descriptor__test_name";
+    DATA_KEYS["claims__limit_of_detection__value"] = "claims__limit_of_detection__value";
+    DATA_KEYS["claims__limit_of_detection__units"] = "claims__limit_of_detection__units";
     DATA_KEYS["validation_condition__author"] = "validation_condition__author";
     DATA_KEYS["validation_condition__date"] = "validation_condition__date";
     DATA_KEYS["validation_condition__specimen_type"] = "validation_condition__specimen_type";
@@ -17,115 +37,17 @@ var DATA_KEYS;
     DATA_KEYS["metrics__confusion_matrix__true_negatives"] = "metrics__confusion_matrix__true_negatives";
     DATA_KEYS["metrics__confusion_matrix__false_positives"] = "metrics__confusion_matrix__false_positives";
 })(DATA_KEYS || (DATA_KEYS = {}));
-var extracted_data = [
-    (_a = {},
-        _a[DATA_KEYS.test_descriptor__manufacturer_name] = { value: "", refs: [] },
-        _a[DATA_KEYS.test_descriptor__test_name] = { value: "ePlex SARS-CoV-2 Test", refs: [] },
-        _a[DATA_KEYS.validation_condition__author] = { value: "self", refs: [] },
-        _a[DATA_KEYS.validation_condition__date] = { value: "", refs: [] },
-        _a[DATA_KEYS.validation_condition__specimen_type] = { value: "", refs: [] },
-        _a[DATA_KEYS.validation_condition__swab_type] = { value: "", refs: [] },
-        _a[DATA_KEYS.validation_condition__transport_medium] = { value: "", refs: [] },
-        _a[DATA_KEYS.validation_condition__sample_volume] = { value: "", refs: [] },
-        _a[DATA_KEYS.validation_condition__comparator_test] = { value: "", refs: [] },
-        _a[DATA_KEYS.metrics__num_clinical_samples__positive] = {
-            value: 18,
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2FFDA-EUA%2FPDFs%2F136282.pdf&highlighted_annotation_ids=8"
-            ]
-        },
-        _a[DATA_KEYS.metrics__num_clinical_samples__negative_controls] = {
-            value: 47,
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2FFDA-EUA%2FPDFs%2F136282.pdf&highlighted_annotation_ids=9"
-            ]
-        },
-        _a[DATA_KEYS.metrics__confusion_matrix__true_positives] = { value: "", refs: [] },
-        _a[DATA_KEYS.metrics__confusion_matrix__false_negatives] = { value: "", refs: [] },
-        _a[DATA_KEYS.metrics__confusion_matrix__true_negatives] = { value: "", refs: [] },
-        _a[DATA_KEYS.metrics__confusion_matrix__false_positives] = { value: "", refs: [] },
-        _a),
-    (_b = {},
-        _b[DATA_KEYS.test_descriptor__manufacturer_name] = { value: "", refs: [] },
-        _b[DATA_KEYS.test_descriptor__test_name] = { value: "ePlex SARS-CoV-2 Test", refs: [] },
-        _b[DATA_KEYS.validation_condition__author] = { value: "Uhteg, et al.", refs: ["https://doi.org/10.1016/j.jcv.2020.104384"] },
-        _b[DATA_KEYS.validation_condition__date] = { value: "2020-04-16", refs: [] },
-        _b[DATA_KEYS.validation_condition__specimen_type] = { value: "", refs: [] },
-        _b[DATA_KEYS.validation_condition__swab_type] = { value: "", refs: [] },
-        _b[DATA_KEYS.validation_condition__transport_medium] = { value: "", refs: [] },
-        _b[DATA_KEYS.validation_condition__sample_volume] = { value: "", refs: [] },
-        _b[DATA_KEYS.validation_condition__comparator_test] = { value: "", refs: [] },
-        _b[DATA_KEYS.metrics__num_clinical_samples__positive] = {
-            value: 13,
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=5"
-            ]
-        },
-        _b[DATA_KEYS.metrics__num_clinical_samples__negative_controls] = {
-            value: 34,
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=6"
-            ]
-        },
-        _b[DATA_KEYS.metrics__confusion_matrix__true_positives] = { value: "", refs: [] },
-        _b[DATA_KEYS.metrics__confusion_matrix__false_negatives] = { value: "", refs: [] },
-        _b[DATA_KEYS.metrics__confusion_matrix__true_negatives] = { value: "", refs: [] },
-        _b[DATA_KEYS.metrics__confusion_matrix__false_positives] = { value: "", refs: [] },
-        _b),
-    (_c = {},
-        _c[DATA_KEYS.test_descriptor__manufacturer_name] = { value: "", refs: [] },
-        _c[DATA_KEYS.test_descriptor__test_name] = { value: "ePlex SARS-CoV-2 Test", refs: [] },
-        _c[DATA_KEYS.validation_condition__author] = { value: "PHE", refs: ["https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/897832/Rapid_Assessment_of_GenMark_ePlex_SARS_CoV_2_test_V1.00e.pdf"] },
-        _c[DATA_KEYS.validation_condition__date] = { value: "2020-07-08", refs: [] },
-        _c[DATA_KEYS.validation_condition__specimen_type] = {
-            value: "NP?",
-            comment: "It should be NP specimens but clinical specimen type not stated",
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=3"
-            ]
-        },
-        _c[DATA_KEYS.validation_condition__swab_type] = { value: "_?_", refs: [] },
-        _c[DATA_KEYS.validation_condition__transport_medium] = {
-            value: "VTM _?_",
-            comment: "Unknown brand or formulation of VTM",
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=4"
-            ]
-        },
-        _c[DATA_KEYS.validation_condition__sample_volume] = { value: "200 ul", refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=5"
-            ] },
-        _c[DATA_KEYS.validation_condition__comparator_test] = { value: "in-house PHE PCR assay", refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=2"
-            ] },
-        _c[DATA_KEYS.metrics__num_clinical_samples__positive] = {
-            value: 93,
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=0"
-            ]
-        },
-        _c[DATA_KEYS.metrics__num_clinical_samples__negative_controls] = {
-            value: 120,
-            refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=1"
-            ]
-        },
-        _c[DATA_KEYS.metrics__confusion_matrix__true_positives] = { value: 101, refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=10"
-            ] },
-        _c[DATA_KEYS.metrics__confusion_matrix__false_negatives] = { value: 1, refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=11"
-            ] },
-        _c[DATA_KEYS.metrics__confusion_matrix__true_negatives] = { value: 124, refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=12"
-            ] },
-        _c[DATA_KEYS.metrics__confusion_matrix__false_positives] = { value: 2, refs: [
-                "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=13"
-            ] },
-        _c),
-];
-// Merge with FDA_EUA_PARSED_DATA
-var FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data.reduce(function (accum, row) {
+var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
+    // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
+    // [DATA_KEYS.test_descriptor__test_name]: 1,
+    _a[DATA_KEYS.claims__limit_of_detection__value] = 66,
+    _a[DATA_KEYS.claims__limit_of_detection__units] = 67,
+    _a[DATA_KEYS.validation_condition__author] = 24,
+    _a[DATA_KEYS.validation_condition__date] = 25,
+    _a);
+var FDA_EUA_parsed_data_by_test_name = fda_eua_parsed_data
+    .slice(1) // skip first row of json array which contains csv-like array of headers
+    .reduce(function (accum, row) {
     var _a;
     var test_name = row[2];
     if (accum[test_name]) {
@@ -139,30 +61,76 @@ var FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data.reduce(function (accu
     }
     return accum;
 }, {});
-extracted_data.forEach(function (row) {
-    var test_name = row[DATA_KEYS.test_descriptor__test_name].value;
-    var fda_eua = FDA_EUA_PARSED_DATA_BY_TEST_NAME[test_name];
-    if (fda_eua) {
-        row[DATA_KEYS.test_descriptor__manufacturer_name] =
-            {
-                value: fda_eua[DATA_KEYS.test_descriptor__manufacturer_name],
-                refs: []
-            };
-        // Will likely delete this as EUA date is not the same as
-        // validation date if more recent data is given
-        var author = row[DATA_KEYS.validation_condition__author];
-        if (author && author.value === "self") {
-            row[DATA_KEYS.validation_condition__date] =
-                {
-                    value: fda_eua[DATA_KEYS.validation_condition__date],
-                    refs: []
-                };
+var extracted_data = fda_eua_parsed_data
+    .slice(1) // skip first row of json array which contains csv-like array of headers
+    .map(function (fda_eua_parsed_data_row) {
+    var test_name = fda_eua_parsed_data_row[2];
+    var manufacturer_name = fda_eua_parsed_data_row[1];
+    var date = fda_eua_parsed_data_row[0];
+    var row = {
+        test_descriptor__manufacturer_name: {
+            value: manufacturer_name,
+            refs: []
+        },
+        test_descriptor__test_name: {
+            value: test_name,
+            refs: []
+        },
+        validation_condition__author: {
+            value: "self",
+            refs: []
+        },
+        validation_condition__date: {
+            value: date,
+            refs: []
         }
-    }
-    else {
-        console.error("test_name \"" + test_name + "\" not present in fda_eua_parsed_data.");
-    }
+    };
+    add_data_from_annotations(row);
+    return row;
 });
+function add_data_from_annotations(row) {
+    var test_name = row[DATA_KEYS.test_descriptor__test_name].value;
+    var annotation_files = annnotations_by_test_name[test_name];
+    if (!annotation_files)
+        return;
+    add_specific_data_from_annotations(row, DATA_KEYS.claims__limit_of_detection__value, annotation_files);
+    add_specific_data_from_annotations(row, DATA_KEYS.claims__limit_of_detection__units, annotation_files);
+}
+function add_specific_data_from_annotations(row, data_key, annotation_files) {
+    var label_id = MAP_DATA_KEY_TO_LABEL_ID[data_key];
+    var annotations = filter_annotation_files_for_label(annotation_files, label_id);
+    apply_data_string(row, data_key, annotations);
+}
+function filter_annotation_files_for_label(annotation_files, label_id) {
+    var annotations = [];
+    annotation_files.forEach(function (annotation_file) {
+        annotations = __spreadArrays(annotations, filter_annotations_for_label(annotation_file, label_id));
+    });
+    return annotations;
+}
+function filter_annotations_for_label(annotation_file, label_id) {
+    return annotation_file.annotations
+        .filter(function (annotation) {
+        return annotation.labels.filter(function (label) { return label.id === label_id; }).length;
+    })
+        .map(function (annotation) {
+        return (__assign(__assign({}, annotation), { relative_file_path: annotation_file.relative_file_path }));
+    });
+}
+function apply_data_string(row, data_key, annotations) {
+    if (annotations.length === 0)
+        return;
+    var value = annotations.map(function (annotation) { return annotation.text; }).join(", ");
+    var refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
+    var data_node = { value: value, refs: refs };
+    row[data_key] = data_node;
+}
+function ref_link(relative_file_path, annotation_id) {
+    var ref = "http://localhost:5003/render_pdf?relative_file_path=" + relative_file_path;
+    if (annotation_id !== undefined)
+        ref += "&highlighted_annotation_ids=" + annotation_id;
+    return ref;
+}
 var headers = [
     {
         title: "Manufacturer",
@@ -186,7 +154,7 @@ var headers = [
         children: [
             { title: "Supported specimen types", data_key: null },
             {
-                // Not in May 13th version
+                // Not in May 13th version of FDA EUA template
                 title: "Appropriate testing population",
                 // e.g. * patients suspected of COVID-19 by a healthcare provider
                 //      * pooled samples
@@ -194,7 +162,7 @@ var headers = [
                 data_key: null
             },
             {
-                // Not in May 13th version
+                // Not in May 13th version of FDA EUA template
                 title: "Sample pooling",
                 data_key: null,
                 children: [
@@ -209,8 +177,24 @@ var headers = [
                 data_key: null
             },
             {
-                // Not in May 13th version
-                title: "Detects pathogen(s)", data_key: null
+                // Not in May 13th version of FDA EUA template
+                // i.e. can include more than just SARS-CoV-2
+                title: "Detects pathogen(s)",
+                data_key: null
+            },
+            {
+                title: "Limit of Detection (LOD)",
+                data_key: null,
+                children: [
+                    {
+                        title: "value",
+                        data_key: DATA_KEYS.claims__limit_of_detection__value
+                    },
+                    {
+                        title: "units",
+                        data_key: DATA_KEYS.claims__limit_of_detection__units
+                    },
+                ]
             },
             {
                 title: "Intended user",
@@ -415,9 +399,9 @@ function populate_table_body(headers, data) {
         var row = tbody_el.insertRow();
         iterate_lowest_header(headers, function (header) {
             var cell = row.insertCell();
-            if (header.data_key !== null) {
+            if (header.data_key !== null && data_row[header.data_key]) {
                 var value = data_row[header.data_key].value.toString();
-                cell.innerHTML = value;
+                cell.innerHTML = "<div>" + value + "</div>";
                 var refs = data_row[header.data_key].refs;
                 cell.innerHTML += refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
             }
