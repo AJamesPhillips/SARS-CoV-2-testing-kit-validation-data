@@ -1,4 +1,6 @@
 
+declare var labels: {[label_id: number]: string}
+
 type FDA_EUA_PARSED_DATA_ROW = [
     string,
     string,
@@ -32,13 +34,18 @@ interface Annotation
     colour: string
     text: string
     labels: Label[]
-    deleted?: false
+    deleted?: false  // should not actually ever be present
 }
-type AnnotationEntry = Annotation |
+interface DeletedAnnotation
 {
     id: number
     deleted: true
 }
+type AnnotationEntry = Annotation | DeletedAnnotation
+function is_annotation (annotation: AnnotationEntry): annotation is Annotation {
+    return !annotation.deleted
+}
+
 interface AnnotationWithFilePath extends Annotation
 {
     relative_file_path: string
@@ -55,7 +62,7 @@ interface ANNOTATIONS_BY_TEST_NAME
 {
     [test_name: string]: AnnotationFile[]
 }
-declare var annnotations_by_test_name: ANNOTATIONS_BY_TEST_NAME
+declare var annotations_by_test_name: ANNOTATIONS_BY_TEST_NAME
 
 
 enum DATA_KEYS {
@@ -64,13 +71,18 @@ enum DATA_KEYS {
     claims__limit_of_detection__value = "claims__limit_of_detection__value",
     claims__limit_of_detection__units = "claims__limit_of_detection__units",
     claims__reaction_volume_uL = "claims__reaction_volume_uL",
+    claims__supported_specimen_types = "claims__supported_specimen_types",
+    claims__target_viral_genes = "claims__target_viral_genes",
     validation_condition__author = "validation_condition__author",
+    validation_condition__comparator_test = "validation_condition__comparator_test",
     validation_condition__date = "validation_condition__date",
+    validation_condition__sample_volume = "validation_condition__sample_volume",
     validation_condition__specimen_type = "validation_condition__specimen_type",
     validation_condition__swab_type = "validation_condition__swab_type",
+    validation_condition__synthetic_specimen__clinical_matrix = "validation_condition__synthetic_specimen__clinical_matrix",
+    validation_condition__synthetic_specimen__viral_material = "validation_condition__synthetic_specimen__viral_material",
+    validation_condition__synthetic_specimen__viral_material_source = "validation_condition__synthetic_specimen__viral_material_source",
     validation_condition__transport_medium = "validation_condition__transport_medium",
-    validation_condition__sample_volume = "validation_condition__sample_volume",
-    validation_condition__comparator_test = "validation_condition__comparator_test",
     metrics__num_clinical_samples__positive = "metrics__num_clinical_samples__positive",
     metrics__num_clinical_samples__negative_controls = "metrics__num_clinical_samples__negative_controls",
     metrics__confusion_matrix__true_positives = "metrics__confusion_matrix__true_positives",
@@ -84,8 +96,13 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     [DATA_KEYS.claims__limit_of_detection__value]: 66,
     [DATA_KEYS.claims__limit_of_detection__units]: 67,
     [DATA_KEYS.claims__reaction_volume_uL]: 72,
+    [DATA_KEYS.claims__supported_specimen_types]: 0,
+    [DATA_KEYS.claims__target_viral_genes]: 6,
     [DATA_KEYS.validation_condition__author]: 24,
     [DATA_KEYS.validation_condition__date]: 25,
+    [DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix]: 64,
+    [DATA_KEYS.validation_condition__synthetic_specimen__viral_material]: 62,
+    [DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source]: 63,
     // [DATA_KEYS.validation_condition__specimen_type]: 1,
     // [DATA_KEYS.validation_condition__swab_type]: 1,
     // [DATA_KEYS.validation_condition__transport_medium]: 1,
@@ -98,36 +115,64 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.metrics__confusion_matrix__true_negatives]: 1,
     // [DATA_KEYS.metrics__confusion_matrix__false_positives]: 1,
 }
-const LABEL_IDS_MAPPED = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
+const LABEL_IDS_MAPPED_TO_DATA_KEY = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
 
 
-interface FDA_EUA_PARSED_DATA_BY_TEST_NAME
+function get_all_annotation_label_ids ()
 {
-    [test_name: string]:
-    {
-        [DATA_KEYS.test_descriptor__manufacturer_name]: string
-        [DATA_KEYS.validation_condition__date]: string
-    }
-}
-const FDA_EUA_parsed_data_by_test_name = fda_eua_parsed_data
-.slice(1) // skip first row of json array which contains csv-like array of headers
-.reduce((accum, row) => {
-    const test_name = row[2] as string
-    if (accum[test_name])
-    {
-        console.error(`Duplicate test_name in fda_eua_parsed_data: ${test_name}`)
-    }
-    else
-    {
-        accum[test_name] =
-        {
-            [DATA_KEYS.test_descriptor__manufacturer_name]: row[1] as string,
-            [DATA_KEYS.validation_condition__date]: row[0] as string,
-        }
-    }
+    const all_annotation_label_ids = new Set<number>()
 
-    return accum
-}, {} as FDA_EUA_PARSED_DATA_BY_TEST_NAME)
+    ;(Object as any).values(annotations_by_test_name)
+        .forEach((annotation_files: AnnotationFile[]) => {
+            annotation_files.forEach(annotation_file =>
+                {
+                    annotation_file.annotations
+                        .filter(is_annotation)
+                        .forEach(annotation =>
+                            {
+                                annotation.labels.forEach(label =>
+                                    {
+                                        all_annotation_label_ids.add(label.id)
+                                    })
+                            })
+                })
+        })
+
+    return all_annotation_label_ids
+}
+const all_annotation_label_ids = Array.from(get_all_annotation_label_ids())
+
+const unhandled_label_ids = all_annotation_label_ids.filter(x => !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x))
+
+console.log(`Unhandled label ids: ${unhandled_label_ids.map(id => `\n * ${id} -> ${labels[id]}`)}`)
+
+// interface FDA_EUA_PARSED_DATA_BY_TEST_NAME
+// {
+//     [test_name: string]:
+//     {
+//         [DATA_KEYS.test_descriptor__manufacturer_name]: string
+//         [DATA_KEYS.validation_condition__date]: string
+//     }
+// }
+// const FDA_EUA_parsed_data_by_test_name: FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data
+//     .slice(1) // skip first row of json array which contains csv-like array of headers
+//     .reduce((accum, row) => {
+//         const test_name = row[2] as string
+//         if (accum[test_name])
+//         {
+//             console.error(`Duplicate test_name in fda_eua_parsed_data: ${test_name}`)
+//         }
+//         else
+//         {
+//             accum[test_name] =
+//             {
+//                 [DATA_KEYS.test_descriptor__manufacturer_name]: row[1] as string,
+//                 [DATA_KEYS.validation_condition__date]: row[0] as string,
+//             }
+//         }
+
+//         return accum
+//     }, {} as FDA_EUA_PARSED_DATA_BY_TEST_NAME)
 
 
 interface DATA_NODE
@@ -158,43 +203,43 @@ interface DATA_ROW
 
 type DATA = DATA_ROW[]
 let extracted_data: DATA = fda_eua_parsed_data
-.slice(1) // skip first row of json array which contains csv-like array of headers
-.map(fda_eua_parsed_data_row =>
-    {
-        const test_name = fda_eua_parsed_data_row[2]
-        const manufacturer_name = fda_eua_parsed_data_row[1]
-        const date = fda_eua_parsed_data_row[0]
+    .slice(1) // skip first row of json array which contains csv-like array of headers
+    .map(fda_eua_parsed_data_row =>
+        {
+            const test_name = fda_eua_parsed_data_row[2]
+            const manufacturer_name = fda_eua_parsed_data_row[1]
+            const date = fda_eua_parsed_data_row[0]
 
-        const row: DATA_ROW = {
-            test_descriptor__manufacturer_name: {
-                value: manufacturer_name,
-                refs: [],
-            },
-            test_descriptor__test_name: {
-                value: test_name,
-                refs: [],
-            },
-            validation_condition__author: {
-                value: "self",
-                refs: [],
-            },
-            validation_condition__date: {
-                value: date,
-                refs: [],
-            },
-        }
+            const row: DATA_ROW = {
+                test_descriptor__manufacturer_name: {
+                    value: manufacturer_name,
+                    refs: [],
+                },
+                test_descriptor__test_name: {
+                    value: test_name,
+                    refs: [],
+                },
+                validation_condition__author: {
+                    value: "self",
+                    refs: [],
+                },
+                validation_condition__date: {
+                    value: date,
+                    refs: [],
+                },
+            }
 
-        add_data_from_annotations(row)
+            add_data_from_annotations(row)
 
-        return row
-    })
+            return row
+        })
 
 
 function add_data_from_annotations (row: DATA_ROW)
 {
     const test_name = row[DATA_KEYS.test_descriptor__test_name].value
 
-    const annotation_files = annnotations_by_test_name[test_name]
+    const annotation_files = annotations_by_test_name[test_name]
     if (!annotation_files) return
 
     Object.keys(MAP_DATA_KEY_TO_LABEL_ID).forEach((data_key: DATA_KEYS) =>
@@ -226,10 +271,8 @@ function filter_annotation_files_for_label (annotation_files: AnnotationFile[], 
 
 function filter_annotations_for_label (annotation_file: AnnotationFile, label_id: number): AnnotationWithFilePath[]
 {
-    const annotations: Annotation[] = annotation_file.annotations
-        .filter(annotation => !annotation.deleted) as any
-
-    return annotations
+    return annotation_file.annotations
+        .filter(is_annotation)
         .filter(annotation =>
             {
                 return annotation.labels.filter(label => label.id === label_id).length
@@ -464,7 +507,7 @@ const headers: HEADERS = [
         data_key: null,
         category: "test_claims",
         children: [
-            { title: "Supported specimen types", data_key: null, },
+            { title: "Supported specimen types", data_key: DATA_KEYS.claims__supported_specimen_types, },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Appropriate testing population",
@@ -482,7 +525,7 @@ const headers: HEADERS = [
                     { title: "Max no. specimens", data_key: null, },
                 ]
             },
-            { title: "Target gene(s) of SARS-CoV-2", data_key: null, },
+            { title: "Target gene(s) of SARS-CoV-2", data_key: DATA_KEYS.claims__target_viral_genes, },
             {
                 title: "Test technology",
                 // e.g. RT-qPCR
@@ -577,6 +620,15 @@ const headers: HEADERS = [
                 ]
             },
             { title: "Disease stage", data_key: null, },
+            {
+                title: "Synthetic Specimen",
+                data_key: null,
+                children: [
+                    { title: "Viral material", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material, },
+                    { title: "Viral material source", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source, },
+                    { title: "Clinical matrix", data_key: DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix, },
+                ]
+            },
             {
                 title: "Specimen",
                 data_key: null,

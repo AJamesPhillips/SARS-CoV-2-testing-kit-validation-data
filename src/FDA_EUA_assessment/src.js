@@ -17,6 +17,9 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 var _a;
+function is_annotation(annotation) {
+    return !annotation.deleted;
+}
 var DATA_KEYS;
 (function (DATA_KEYS) {
     DATA_KEYS["test_descriptor__manufacturer_name"] = "test_descriptor__manufacturer_name";
@@ -24,13 +27,18 @@ var DATA_KEYS;
     DATA_KEYS["claims__limit_of_detection__value"] = "claims__limit_of_detection__value";
     DATA_KEYS["claims__limit_of_detection__units"] = "claims__limit_of_detection__units";
     DATA_KEYS["claims__reaction_volume_uL"] = "claims__reaction_volume_uL";
+    DATA_KEYS["claims__supported_specimen_types"] = "claims__supported_specimen_types";
+    DATA_KEYS["claims__target_viral_genes"] = "claims__target_viral_genes";
     DATA_KEYS["validation_condition__author"] = "validation_condition__author";
+    DATA_KEYS["validation_condition__comparator_test"] = "validation_condition__comparator_test";
     DATA_KEYS["validation_condition__date"] = "validation_condition__date";
+    DATA_KEYS["validation_condition__sample_volume"] = "validation_condition__sample_volume";
     DATA_KEYS["validation_condition__specimen_type"] = "validation_condition__specimen_type";
     DATA_KEYS["validation_condition__swab_type"] = "validation_condition__swab_type";
+    DATA_KEYS["validation_condition__synthetic_specimen__clinical_matrix"] = "validation_condition__synthetic_specimen__clinical_matrix";
+    DATA_KEYS["validation_condition__synthetic_specimen__viral_material"] = "validation_condition__synthetic_specimen__viral_material";
+    DATA_KEYS["validation_condition__synthetic_specimen__viral_material_source"] = "validation_condition__synthetic_specimen__viral_material_source";
     DATA_KEYS["validation_condition__transport_medium"] = "validation_condition__transport_medium";
-    DATA_KEYS["validation_condition__sample_volume"] = "validation_condition__sample_volume";
-    DATA_KEYS["validation_condition__comparator_test"] = "validation_condition__comparator_test";
     DATA_KEYS["metrics__num_clinical_samples__positive"] = "metrics__num_clinical_samples__positive";
     DATA_KEYS["metrics__num_clinical_samples__negative_controls"] = "metrics__num_clinical_samples__negative_controls";
     DATA_KEYS["metrics__confusion_matrix__true_positives"] = "metrics__confusion_matrix__true_positives";
@@ -44,26 +52,34 @@ var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
     _a[DATA_KEYS.claims__limit_of_detection__value] = 66,
     _a[DATA_KEYS.claims__limit_of_detection__units] = 67,
     _a[DATA_KEYS.claims__reaction_volume_uL] = 72,
+    _a[DATA_KEYS.claims__supported_specimen_types] = 0,
+    _a[DATA_KEYS.claims__target_viral_genes] = 6,
     _a[DATA_KEYS.validation_condition__author] = 24,
     _a[DATA_KEYS.validation_condition__date] = 25,
+    _a[DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix] = 64,
+    _a[DATA_KEYS.validation_condition__synthetic_specimen__viral_material] = 62,
+    _a[DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source] = 63,
     _a);
-var LABEL_IDS_MAPPED = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
-var FDA_EUA_parsed_data_by_test_name = fda_eua_parsed_data
-    .slice(1) // skip first row of json array which contains csv-like array of headers
-    .reduce(function (accum, row) {
-    var _a;
-    var test_name = row[2];
-    if (accum[test_name]) {
-        console.error("Duplicate test_name in fda_eua_parsed_data: " + test_name);
-    }
-    else {
-        accum[test_name] = (_a = {},
-            _a[DATA_KEYS.test_descriptor__manufacturer_name] = row[1],
-            _a[DATA_KEYS.validation_condition__date] = row[0],
-            _a);
-    }
-    return accum;
-}, {});
+var LABEL_IDS_MAPPED_TO_DATA_KEY = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
+function get_all_annotation_label_ids() {
+    var all_annotation_label_ids = new Set();
+    Object.values(annotations_by_test_name)
+        .forEach(function (annotation_files) {
+        annotation_files.forEach(function (annotation_file) {
+            annotation_file.annotations
+                .filter(is_annotation)
+                .forEach(function (annotation) {
+                annotation.labels.forEach(function (label) {
+                    all_annotation_label_ids.add(label.id);
+                });
+            });
+        });
+    });
+    return all_annotation_label_ids;
+}
+var all_annotation_label_ids = Array.from(get_all_annotation_label_ids());
+var unhandled_label_ids = all_annotation_label_ids.filter(function (x) { return !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x); });
+console.log("Unhandled label ids: " + unhandled_label_ids.map(function (id) { return "\n * " + id + " -> " + labels[id]; }));
 var extracted_data = fda_eua_parsed_data
     .slice(1) // skip first row of json array which contains csv-like array of headers
     .map(function (fda_eua_parsed_data_row) {
@@ -93,7 +109,7 @@ var extracted_data = fda_eua_parsed_data
 });
 function add_data_from_annotations(row) {
     var test_name = row[DATA_KEYS.test_descriptor__test_name].value;
-    var annotation_files = annnotations_by_test_name[test_name];
+    var annotation_files = annotations_by_test_name[test_name];
     if (!annotation_files)
         return;
     Object.keys(MAP_DATA_KEY_TO_LABEL_ID).forEach(function (data_key) {
@@ -113,9 +129,8 @@ function filter_annotation_files_for_label(annotation_files, label_id) {
     return annotations;
 }
 function filter_annotations_for_label(annotation_file, label_id) {
-    var annotations = annotation_file.annotations
-        .filter(function (annotation) { return !annotation.deleted; });
-    return annotations
+    return annotation_file.annotations
+        .filter(is_annotation)
         .filter(function (annotation) {
         return annotation.labels.filter(function (label) { return label.id === label_id; }).length;
     })
@@ -158,7 +173,7 @@ var headers = [
         data_key: null,
         category: "test_claims",
         children: [
-            { title: "Supported specimen types", data_key: null },
+            { title: "Supported specimen types", data_key: DATA_KEYS.claims__supported_specimen_types },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Appropriate testing population",
@@ -176,7 +191,7 @@ var headers = [
                     { title: "Max no. specimens", data_key: null },
                 ]
             },
-            { title: "Target gene(s) of SARS-CoV-2", data_key: null },
+            { title: "Target gene(s) of SARS-CoV-2", data_key: DATA_KEYS.claims__target_viral_genes },
             {
                 title: "Test technology",
                 // e.g. RT-qPCR
@@ -271,6 +286,15 @@ var headers = [
                 ]
             },
             { title: "Disease stage", data_key: null },
+            {
+                title: "Synthetic Specimen",
+                data_key: null,
+                children: [
+                    { title: "Viral material", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material },
+                    { title: "Viral material source", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source },
+                    { title: "Clinical matrix", data_key: DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix },
+                ]
+            },
             {
                 title: "Specimen",
                 data_key: null,
