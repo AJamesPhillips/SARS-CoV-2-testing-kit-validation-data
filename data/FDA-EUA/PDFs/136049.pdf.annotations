@@ -5,20 +5,7 @@
 "annotations": [
 {
 "id": 0,
-"page_number": 23,
-"left": "49px",
-"top": "273px",
-"width": "821px",
-"height": "48px",
-"colour": "rgba(200, 200, 255, 0.6)",
-"text": "cultured virus isolate from US patient (USA-WA1/2020, catalog number NR-52281, lot number 70033175, 2.8E+05 TCID50/mL)",
-"labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
-],
-"comment": ""
+"deleted": true
 },
 {
 "id": 1,
@@ -118,6 +105,57 @@
 {
 "id": 67,
 "text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 23,
+"left": "216px",
+"top": "272px",
+"width": "186px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "cultured virus isolate",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 23,
+"left": "48px",
+"top": "1019px",
+"width": "821px",
+"height": "46px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources (USA-WA1/2020, catalog number NR-52281)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 23,
+"left": "50px",
+"top": "295px",
+"width": "282px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "lot number 70033175, 2.8E+05 TCID50/mL",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
 }
 ],
 "comment": ""

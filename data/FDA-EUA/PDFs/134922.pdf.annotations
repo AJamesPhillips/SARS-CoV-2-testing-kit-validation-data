@@ -18,7 +18,7 @@
 "text": "Specimen/Synthetic Specimen/Virus"
 }
 ],
-"comment": ""
+"comment": "Why does it say \"in vitro transcribed full length RNA\" and then say \"N gene\"?"
 },
 {
 "id": 1,
@@ -107,6 +107,27 @@
 {
 "id": 66,
 "text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 40,
+"left": "316px",
+"top": "930px",
+"width": "22px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
 }
 ],
 "comment": ""

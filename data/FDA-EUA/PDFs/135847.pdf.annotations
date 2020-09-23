@@ -137,11 +137,15 @@
 "width": "41px",
 "height": "19px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "not specified",
+"text": "",
 "labels": [
 {
 "id": 63,
 "text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
 }
 ],
 "comment": ""
