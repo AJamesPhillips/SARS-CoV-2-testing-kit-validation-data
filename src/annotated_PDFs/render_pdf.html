@@ -4,6 +4,11 @@
     <script>"<PDFJS_WORKER>"</script>
     <script>pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;</script>
     <style>
+        body
+        {
+            font-family: sans-serif;
+        }
+
         #loading_progress
         {
             text-align: center;
@@ -387,7 +392,9 @@
         {
             const annotation_list_el = document.createElement("div")
 
-            const display_html = (dirty ? "⚠ " : "") + `page: ${page_number}  text: ${text}  labels: ${labels.map(l => `<div>${l.text}</div>`).join("")}`
+            const unsaved_warning = (dirty ? `<span style="background-color: yellow;">⚠</span> ` : "")
+            const labels_html = labels.map(l => `<div>${l.text}</div>`).join("")
+            const display_html = unsaved_warning + `${text} <br><br><div style="float: left;"><span style="color: #777; font-size: 10px;">Labels: </span>${labels_html}</div><div style="float: right; color: #777; font-size: 10px;">page: ${page_number}</div> <div style="clear: both;"></div>`
 
             annotation_list_el.innerHTML = display_html
             annotation_list_el.style.backgroundColor = colour

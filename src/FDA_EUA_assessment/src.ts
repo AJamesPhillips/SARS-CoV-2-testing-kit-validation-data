@@ -57,6 +57,7 @@ enum DATA_KEYS {
     test_descriptor__test_name = "test_descriptor__test_name",
     claims__limit_of_detection__value = "claims__limit_of_detection__value",
     claims__limit_of_detection__units = "claims__limit_of_detection__units",
+    claims__reaction_volume_uL = "claims__reaction_volume_uL",
     validation_condition__author = "validation_condition__author",
     validation_condition__date = "validation_condition__date",
     validation_condition__specimen_type = "validation_condition__specimen_type",
@@ -76,6 +77,7 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.test_descriptor__test_name]: 1,
     [DATA_KEYS.claims__limit_of_detection__value]: 66,
     [DATA_KEYS.claims__limit_of_detection__units]: 67,
+    [DATA_KEYS.claims__reaction_volume_uL]: 72,
     [DATA_KEYS.validation_condition__author]: 24,
     [DATA_KEYS.validation_condition__date]: 25,
     // [DATA_KEYS.validation_condition__specimen_type]: 1,
@@ -188,8 +190,10 @@ function add_data_from_annotations (row: DATA_ROW)
     const annotation_files = annnotations_by_test_name[test_name]
     if (!annotation_files) return
 
-    add_specific_data_from_annotations(row, DATA_KEYS.claims__limit_of_detection__value, annotation_files)
-    add_specific_data_from_annotations(row, DATA_KEYS.claims__limit_of_detection__units, annotation_files)
+    Object.keys(MAP_DATA_KEY_TO_LABEL_ID).forEach((data_key: DATA_KEYS) =>
+        {
+            add_specific_data_from_annotations(row, data_key, annotation_files)
+        })
 }
 
 
@@ -528,6 +532,7 @@ const headers: HEADERS = [
                 children: [
                     { title: "Instrument", data_key: null, },
                     { title: "Enzyme mix / kits", data_key: null, },
+                    { title: "Reaction volume / μL", data_key: DATA_KEYS.claims__reaction_volume_uL, },
                 ]
             },
             {

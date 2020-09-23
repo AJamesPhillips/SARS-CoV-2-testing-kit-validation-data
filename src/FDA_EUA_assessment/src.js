@@ -23,6 +23,7 @@ var DATA_KEYS;
     DATA_KEYS["test_descriptor__test_name"] = "test_descriptor__test_name";
     DATA_KEYS["claims__limit_of_detection__value"] = "claims__limit_of_detection__value";
     DATA_KEYS["claims__limit_of_detection__units"] = "claims__limit_of_detection__units";
+    DATA_KEYS["claims__reaction_volume_uL"] = "claims__reaction_volume_uL";
     DATA_KEYS["validation_condition__author"] = "validation_condition__author";
     DATA_KEYS["validation_condition__date"] = "validation_condition__date";
     DATA_KEYS["validation_condition__specimen_type"] = "validation_condition__specimen_type";
@@ -42,6 +43,7 @@ var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
     // [DATA_KEYS.test_descriptor__test_name]: 1,
     _a[DATA_KEYS.claims__limit_of_detection__value] = 66,
     _a[DATA_KEYS.claims__limit_of_detection__units] = 67,
+    _a[DATA_KEYS.claims__reaction_volume_uL] = 72,
     _a[DATA_KEYS.validation_condition__author] = 24,
     _a[DATA_KEYS.validation_condition__date] = 25,
     _a);
@@ -93,8 +95,9 @@ function add_data_from_annotations(row) {
     var annotation_files = annnotations_by_test_name[test_name];
     if (!annotation_files)
         return;
-    add_specific_data_from_annotations(row, DATA_KEYS.claims__limit_of_detection__value, annotation_files);
-    add_specific_data_from_annotations(row, DATA_KEYS.claims__limit_of_detection__units, annotation_files);
+    Object.keys(MAP_DATA_KEY_TO_LABEL_ID).forEach(function (data_key) {
+        add_specific_data_from_annotations(row, data_key, annotation_files);
+    });
 }
 function add_specific_data_from_annotations(row, data_key, annotation_files) {
     var label_id = MAP_DATA_KEY_TO_LABEL_ID[data_key];
@@ -230,6 +233,7 @@ var headers = [
                 children: [
                     { title: "Instrument", data_key: null },
                     { title: "Enzyme mix / kits", data_key: null },
+                    { title: "Reaction volume / μL", data_key: DATA_KEYS.claims__reaction_volume_uL },
                 ]
             },
             {
