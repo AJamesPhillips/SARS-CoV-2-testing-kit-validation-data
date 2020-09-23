@@ -149,14 +149,13 @@ function apply_data_string(row, data_key, annotations) {
     var value = annotations.map(function (annotation) {
         var value = annotation.text;
         if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__NOT_SPECIFIED; })) {
-            value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> " + value;
-            console.log("NOT_SPECIFIED " + value);
+            value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> Not specified"; // + value
         }
         if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR; })) {
             value = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span> " + value;
         }
         if (annotation.comment) {
-            comments += "<span title=\"" + annotation.comment + "\">C</span> ";
+            comments += "<span title=\"" + html_safe_ish(annotation.comment) + "\">C</span> ";
         }
         return value;
     }).join(", ");
@@ -452,13 +451,18 @@ function populate_table_body(headers, data) {
             if (header.data_key !== null && data_row[header.data_key]) {
                 var data_node = data_row[header.data_key];
                 var value = data_node.value.toString();
-                var value_title = value.replace(/(<([^>]+)>)/ig, "");
+                var value_title = html_safe_ish(value);
                 cell.innerHTML = "<div title=\"" + value_title + "\">" + value + "</div>";
                 var refs = data_node.refs;
                 cell.innerHTML += refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
             }
         });
     });
+}
+// DO NOT USE THIS IN PRODUCTION
+function html_safe_ish(value) {
+    return value.replace(/(<([^>]+)>)/ig, "")
+        .replace(/"/ig, "'");
 }
 build_header(headers);
 populate_table_body(headers, extracted_data);

@@ -300,8 +300,7 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
 
         if (annotation.labels.find(label => label.id === LABEL_ID__META__NOT_SPECIFIED))
         {
-            value = `<span class="warning_symbol" title="Value not specified">⚠</span> ` + value
-            console.log("NOT_SPECIFIED " + value)
+            value = `<span class="warning_symbol" title="Value not specified">⚠</span> Not specified`// + value
         }
 
         if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR))
@@ -311,7 +310,7 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
 
         if (annotation.comment)
         {
-            comments += `<span title="${annotation.comment}">C</span> `
+            comments += `<span title="${html_safe_ish(annotation.comment)}">C</span> `
         }
 
         return value
@@ -826,13 +825,21 @@ function populate_table_body (headers: HEADERS, data: DATA)
                 const data_node: DATA_NODE = data_row[header.data_key]
 
                 const value = data_node.value.toString()
-                const value_title = value.replace(/(<([^>]+)>)/ig, "");
+                const value_title = html_safe_ish(value)
                 cell.innerHTML = `<div title="${value_title}">${value}</div>`
                 const refs = data_node.refs
                 cell.innerHTML += refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
             }
         })
     })
+}
+
+
+// DO NOT USE THIS IN PRODUCTION
+function html_safe_ish (value)
+{
+    return value.replace(/(<([^>]+)>)/ig, "")
+        .replace(/"/ig, `'`)
 }
 
 

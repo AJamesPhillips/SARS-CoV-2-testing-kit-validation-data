@@ -837,13 +837,24 @@
                     const annotation_id = highlighted_annotation_ids[0]
                     const annotation = pdf_file_data.annotations.find(annotation => annotation.id === annotation_id)
 
-                    annotations_detail_el.innerHTML = `Text: <input type="text" id="annotation_text" />`
+                    annotations_detail_el.innerHTML = `Text: <input type="text" id="annotation_text" />
+                    <br/>
+                    Comment: <input type="text" id="annotation_comment" />`
 
                     const annotation_text_el = document.getElementById("annotation_text")
                     annotation_text_el.value = annotation.text
 
+                    const annotation_comment_el = document.getElementById("annotation_comment")
+                    annotation_comment_el.value = annotation.comment
+
                     annotation_text_el.addEventListener("change", () => {
                         annotation.text = annotation_text_el.value
+                        annotation.dirty = true
+                        annotation_data_changed()
+                    })
+
+                    annotation_comment_el.addEventListener("change", () => {
+                        annotation.comment = annotation_comment_el.value
                         annotation.dirty = true
                         annotation_data_changed()
                     })
