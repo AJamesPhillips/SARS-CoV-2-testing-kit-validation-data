@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "tsc --watch --outFile ./src/FDA_EUA_assessment/src.js  ./src/FDA_EUA_assessment/src.ts"
+    "watch": "tsc --watch --lib dom,es2020 --outFile ./src/FDA_EUA_assessment/src.js ./src/FDA_EUA_assessment/src.ts"
   },
   "author": "",
   "license": "ISC",

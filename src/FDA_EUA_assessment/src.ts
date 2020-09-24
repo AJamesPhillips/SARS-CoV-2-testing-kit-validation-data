@@ -306,7 +306,8 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
 
         if (annotation.labels.find(label => label.id === LABEL_ID__META__NOT_SPECIFIED))
         {
-            value = `<span class="warning_symbol" title="Value not specified">⚠</span> Not specified`// + value
+            let append_text = value ? value + " (not specified)" : "Not specified"
+            value = `<span class="warning_symbol" title="Value not specified">⚠</span> ${append_text}`
         }
 
         if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR))
@@ -831,6 +832,10 @@ function populate_table_body (headers: HEADERS, data: DATA)
     const table_el = document.getElementById("data_table")
     const tbody_el = table_el.getElementsByTagName("tbody")[0]
 
+    const win: any = window
+    win.click_el = undefined
+    win.click_el_func = undefined
+
     data.forEach(data_row =>
     {
         const row = tbody_el.insertRow()
@@ -844,12 +849,31 @@ function populate_table_body (headers: HEADERS, data: DATA)
 
                 const value = data_node.value.toString()
                 const value_title = html_safe_ish(value)
-                cell.innerHTML = `<div title="${value_title}">${value}</div>`
+                const value_el = document.createElement("div")
+                value_el.innerHTML = value
+                value_el.title = value_title
+                // value_el.addEventListener("click", () =>
+                // {
+                //     debugger
+                //     value_el.classList.toggle("expanded")
+                // })
+
+                cell.appendChild(value_el)
+
                 const refs = data_node.refs
                 cell.innerHTML += refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
+
+                if (!win.click_el_func)
+                {
+                    win.click_el_func = () => console.log("hellow world!!!")
+                    value_el.onclick = win.click_el_func
+                    win.click_el = value_el
+                }
             }
         })
     })
+
+    debugger
 }
 
 

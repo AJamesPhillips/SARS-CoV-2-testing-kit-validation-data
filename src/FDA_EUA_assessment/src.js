@@ -155,7 +155,8 @@ function apply_data_string(row, data_key, annotations) {
     var value = annotations.map(function (annotation) {
         var value = annotation.text;
         if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__NOT_SPECIFIED; })) {
-            value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> Not specified"; // + value
+            var append_text = value ? value + " (not specified)" : "Not specified";
+            value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> " + append_text;
         }
         if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR; })) {
             value = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span> " + value;
@@ -462,6 +463,9 @@ function iterate_lowest_header(headers, func) {
 function populate_table_body(headers, data) {
     var table_el = document.getElementById("data_table");
     var tbody_el = table_el.getElementsByTagName("tbody")[0];
+    var win = window;
+    win.click_el = undefined;
+    win.click_el_func = undefined;
     data.forEach(function (data_row) {
         var row = tbody_el.insertRow();
         iterate_lowest_header(headers, function (header) {
@@ -470,12 +474,26 @@ function populate_table_body(headers, data) {
                 var data_node = data_row[header.data_key];
                 var value = data_node.value.toString();
                 var value_title = html_safe_ish(value);
-                cell.innerHTML = "<div title=\"" + value_title + "\">" + value + "</div>";
+                var value_el = document.createElement("div");
+                value_el.innerHTML = value;
+                value_el.title = value_title;
+                // value_el.addEventListener("click", () =>
+                // {
+                //     debugger
+                //     value_el.classList.toggle("expanded")
+                // })
+                cell.appendChild(value_el);
                 var refs = data_node.refs;
                 cell.innerHTML += refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
+                if (!win.click_el_func) {
+                    win.click_el_func = function () { return console.log("hellow world!!!"); };
+                    value_el.onclick = win.click_el_func;
+                    win.click_el = value_el;
+                }
             }
         });
     });
+    debugger;
 }
 // DO NOT USE THIS IN PRODUCTION
 function html_safe_ish(value) {
