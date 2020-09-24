@@ -2,6 +2,206 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136355.pdf",
 "file_sha1_hash": "8a8fb4bd826da69243ba1a499e99b6e41424139d",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 13,
+"left": "358px",
+"top": "156px",
+"width": "294px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 RNA (strain USA_WA1/2020)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 13,
+"left": "639px",
+"top": "157px",
+"width": "19px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 13,
+"left": "583px",
+"top": "174px",
+"width": "170px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Accula SARS-CoV-2 Buffer",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 13,
+"left": "51px",
+"top": "191px",
+"width": "211px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled Throat Swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 13,
+"left": "304px",
+"top": "191px",
+"width": "380px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Pooled Throat and Nasal Swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 13,
+"left": "687px",
+"top": "190px",
+"width": "47px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 13,
+"left": "164px",
+"top": "356px",
+"width": "27px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "100",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Accula SARS-CoV-2 Buffer"
+},
+{
+"id": 7,
+"page_number": 13,
+"left": "160px",
+"top": "419px",
+"width": "30px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "200",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Pooled throat swab"
+},
+{
+"id": 8,
+"page_number": 13,
+"left": "160px",
+"top": "488px",
+"width": "32px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "200",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Pooled throat and nasal swab"
+},
+{
+"id": 9,
+"page_number": 13,
+"left": "264px",
+"top": "234px",
+"width": "95px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / reaction",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"deleted": true
+},
+{
+"id": 11,
+"page_number": 13,
+"left": "254px",
+"top": "178px",
+"width": "210px",
+"height": "13px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "60",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+},
+{
+"id": 65,
+"text": "Limit of Detection (LOD)"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Marked as not specified as it is not clear this is the final reaction volume and if 60 \u03bcl is the volume dispensed by the pipettes"
+}
+],
 "comments": []
 }

@@ -122,6 +122,196 @@
 "labels": [],
 "id": 9,
 "comment": ""
+},
+{
+"id": 10,
+"page_number": 3,
+"left": "104px",
+"top": "166px",
+"width": "273px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab specimens (NPS)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 3,
+"left": "378px",
+"top": "163px",
+"width": "246px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "viral transport media (VTM)",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 4,
+"left": "134px",
+"top": "327px",
+"width": "79px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"deleted": true
+},
+{
+"id": 14,
+"page_number": 13,
+"left": "316px",
+"top": "193px",
+"width": "29px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 13,
+"left": "738px",
+"top": "197px",
+"width": "22px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 13,
+"left": "637px",
+"top": "361px",
+"width": "50px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "100",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 17,
+"page_number": 13,
+"left": "686px",
+"top": "362px",
+"width": "70px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcl",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 18,
+"deleted": true
+},
+{
+"id": 19,
+"page_number": 4,
+"left": "425px",
+"top": "324px",
+"width": "96px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 20,
+"page_number": 13,
+"left": "180px",
+"top": "196px",
+"width": "153px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "in vitro transcript (IVT)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 21,
+"page_number": 13,
+"left": "559px",
+"top": "198px",
+"width": "98px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1x PBS buffer",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

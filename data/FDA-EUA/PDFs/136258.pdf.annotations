@@ -2,6 +2,198 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136258.pdf",
 "file_sha1_hash": "fbc7b4702d80a83505a4996ec4de1b63711bf06a",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 10,
+"left": "446px",
+"top": "125px",
+"width": "368px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Seracare, AccuPlex COVID-19, 1.3E+07 copies/mL",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": "Note the dPCR lacks information for reproducibility (such as dMIQE checklist)"
+},
+{
+"id": 1,
+"page_number": 10,
+"left": "214px",
+"top": "125px",
+"width": "233px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "recombinant virus containing SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 10,
+"left": "231px",
+"top": "142px",
+"width": "143px",
+"height": "13px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "simulated nasal matrix (SNM)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 10,
+"left": "364px",
+"top": "142px",
+"width": "18px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 10,
+"left": "459px",
+"top": "171px",
+"width": "14px",
+"height": "10px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 10,
+"left": "626px",
+"top": "183px",
+"width": "26px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 10,
+"left": "652px",
+"top": "185px",
+"width": "79px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcl",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 2,
+"left": "597px",
+"top": "325px",
+"width": "171px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 2,
+"left": "90px",
+"top": "380px",
+"width": "724px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 84,
+"text": "Controls/Internal/Extraction control material/Description"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 2,
+"left": "393px",
+"top": "392px",
+"width": "22px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 85,
+"text": "Controls/Internal/Extraction control material/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 1,
+"left": "118px",
+"top": "434px",
+"width": "446px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swabs, nasopharyngeal (NP) and oropharyngeal (OP) swabs, and bronchoalveolar lavage fluid (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

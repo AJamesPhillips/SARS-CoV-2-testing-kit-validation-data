@@ -2,6 +2,379 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136286.pdf",
 "file_sha1_hash": "5bc6e193da73f4ce0bf8c7e84cbc2eb1f6d1663e",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 6,
+"left": "67px",
+"top": "664px",
+"width": "799px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "quantitated extracted viral genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 6,
+"left": "148px",
+"top": "673px",
+"width": "20px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "106px",
+"top": "725px",
+"width": "95px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "48",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 6,
+"left": "491px",
+"top": "769px",
+"width": "27px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "LoD for Viral Genomic RNA in UTM with RNasin"
+},
+{
+"id": 4,
+"page_number": 6,
+"left": "517px",
+"top": "768px",
+"width": "66px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcl",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"deleted": true
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "464px",
+"top": "800px",
+"width": "258px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Viral Genomic RNA in UTM with RNasin",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 1,
+"left": "70px",
+"top": "387px",
+"width": "689px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs (NPS), nasal swabs (NS), nasal wash/aspirate (NW) or bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "68px",
+"top": "1044px",
+"width": "796px",
+"height": "35px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated titered COVID-19 viral particles, strain 2019-nCoV/USA-WA1/2020",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "326px",
+"top": "1057px",
+"width": "18px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "391px",
+"top": "1106px",
+"width": "91px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 7,
+"left": "478px",
+"top": "84px",
+"width": "29px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.242",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "LoD for inactivated viral particles in pooled Nasal Swab specimens in UTM"
+},
+{
+"id": 12,
+"deleted": true
+},
+{
+"id": 13,
+"page_number": 6,
+"left": "145px",
+"top": "1076px",
+"width": "289px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative nasal swab specimens in UTM",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 7,
+"left": "485px",
+"top": "404px",
+"width": "27px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "LoD for inactivated viral particles in pooled Nasal Wash specimens"
+},
+{
+"id": 15,
+"page_number": 7,
+"left": "633px",
+"top": "313px",
+"width": "232px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative NW (Nasal Wash) specimen matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 7,
+"left": "487px",
+"top": "696px",
+"width": "35px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1.208",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "LoD for inactivated viral particles in pooled negative BAL matrix"
+},
+{
+"id": 17,
+"page_number": 7,
+"left": "639px",
+"top": "605px",
+"width": "174px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative BAL matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 18,
+"page_number": 1,
+"left": "68px",
+"top": "1050px",
+"width": "139px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 19,
+"page_number": 10,
+"left": "131px",
+"top": "179px",
+"width": "658px",
+"height": "606px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 87,
+"text": "Potential interfering substances"
+}
+],
+"comment": ""
+},
+{
+"id": 20,
+"page_number": 10,
+"left": "156px",
+"top": "132px",
+"width": "323px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 88,
+"text": "Potential interfering substances/Test synthetic sample"
+}
+],
+"comment": ""
+},
+{
+"id": 21,
+"page_number": 10,
+"left": "581px",
+"top": "116px",
+"width": "148px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [],
+"comment": "Should also test for false positives as some may cause that by changing primer binding affinities"
+},
+{
+"id": 22,
+"page_number": 1,
+"left": "740px",
+"top": "1080px",
+"width": "55px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

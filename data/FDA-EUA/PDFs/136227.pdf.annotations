@@ -108,7 +108,7 @@
 "width": "170px",
 "height": "26px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies(cp) / \u03bcl",
+"text": "genome copies / \u03bcl",
 "labels": [
 {
 "id": 67,

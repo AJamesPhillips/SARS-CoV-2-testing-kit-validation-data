@@ -84,7 +84,12 @@
 "height": "22px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.136",
-"labels": [],
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
 "comment": ""
 },
 {
@@ -95,7 +100,7 @@
 "width": "70px",
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies(cp) / \u03bcl",
+"text": "genome copies / \u03bcl",
 "labels": [
 {
 "id": 67,

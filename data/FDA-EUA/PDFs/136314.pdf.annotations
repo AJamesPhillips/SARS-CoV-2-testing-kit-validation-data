@@ -2,6 +2,232 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136314.pdf",
 "file_sha1_hash": "b3de50a7a92866e92bb0db9f0864b38dc164b567",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 21,
+"left": "479px",
+"top": "976px",
+"width": "366px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "live SARS-CoV-2 virus (USA_WA1/2020 strain)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 21,
+"left": "830px",
+"top": "975px",
+"width": "31px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 21,
+"left": "287px",
+"top": "999px",
+"width": "385px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "viral transport medium and NP swab clinical matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 8,
+"left": "153px",
+"top": "684px",
+"width": "722px",
+"height": "137px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 75,
+"text": "Specimen/Collection protocol"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 9,
+"left": "132px",
+"top": "122px",
+"width": "755px",
+"height": "915px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 75,
+"text": "Specimen/Collection protocol"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 10,
+"left": "146px",
+"top": "128px",
+"width": "747px",
+"height": "911px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 75,
+"text": "Specimen/Collection protocol"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 11,
+"left": "148px",
+"top": "132px",
+"width": "747px",
+"height": "95px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 75,
+"text": "Specimen/Collection protocol"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 15,
+"left": "545px",
+"top": "150px",
+"width": "128px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 3,
+"left": "199px",
+"top": "363px",
+"width": "653px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasopharyngeal, oropharyngeal, nasal, or mid-turbinate swab and/or nasal wash/aspirate)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 21,
+"left": "201px",
+"top": "1041px",
+"width": "55px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.005",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "N2 target"
+},
+{
+"id": 10,
+"page_number": 21,
+"left": "287px",
+"top": "1043px",
+"width": "54px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.02",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "E target"
+},
+{
+"id": 11,
+"page_number": 21,
+"left": "341px",
+"top": "1041px",
+"width": "66px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "PFU / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 22,
+"left": "199px",
+"top": "148px",
+"width": "29px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
