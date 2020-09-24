@@ -2,6 +2,167 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136231.pdf",
 "file_sha1_hash": "f9a694500522d767e43fd367d32d5a3c80c655ba",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 18,
+"left": "103px",
+"top": "221px",
+"width": "482px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 viral RNA transcript containing an 1100 nucleotide region from the N gene",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 18,
+"left": "600px",
+"top": "221px",
+"width": "222px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "stabilizing buffer RNA Diluent P",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 18,
+"left": "571px",
+"top": "215px",
+"width": "23px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 18,
+"left": "782px",
+"top": "288px",
+"width": "28px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 18,
+"left": "602px",
+"top": "358px",
+"width": "32px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.136",
+"labels": [],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 18,
+"left": "632px",
+"top": "361px",
+"width": "70px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies(cp) / \u03bcl",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 2,
+"left": "48px",
+"top": "359px",
+"width": "818px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (for example, nasopharyngeal swabs, oropharyngeal swabs, sputum, BAL, and tracheal aspirates)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+},
+{
+"id": 74,
+"text": "Meta/Error"
+}
+],
+"comment": "Marked with error as BAL etc are lower respiratory specimens"
+},
+{
+"id": 7,
+"page_number": 2,
+"left": "330px",
+"top": "408px",
+"width": "170px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 2,
+"left": "500px",
+"top": "412px",
+"width": "71px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1 & N3",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Marked not specified as the specific sequences of primers and probes are not given."
+}
+],
 "comments": []
 }
