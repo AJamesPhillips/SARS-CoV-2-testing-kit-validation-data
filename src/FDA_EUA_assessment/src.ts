@@ -69,8 +69,11 @@ declare var annotations_by_test_name: ANNOTATIONS_BY_TEST_NAME
 enum DATA_KEYS {
     test_descriptor__manufacturer_name = "test_descriptor__manufacturer_name",
     test_descriptor__test_name = "test_descriptor__test_name",
+    claims__limit_of_detection__minimum_replicates = "claims__limit_of_detection__minimum_replicates",
     claims__limit_of_detection__value = "claims__limit_of_detection__value",
     claims__limit_of_detection__units = "claims__limit_of_detection__units",
+    claims__primers_and_probes__sequences = "claims__primers_and_probes__sequences",
+    claims__primers_and_probes__sources = "claims__primers_and_probes__sources",
     claims__reaction_volume_uL = "claims__reaction_volume_uL",
     claims__supported_specimen_types = "claims__supported_specimen_types",
     claims__target_viral_genes = "claims__target_viral_genes",
@@ -94,8 +97,11 @@ enum DATA_KEYS {
 const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
     // [DATA_KEYS.test_descriptor__test_name]: 1,
+    [DATA_KEYS.claims__limit_of_detection__minimum_replicates]: 68,
     [DATA_KEYS.claims__limit_of_detection__value]: 66,
     [DATA_KEYS.claims__limit_of_detection__units]: 67,
+    [DATA_KEYS.claims__primers_and_probes__sequences]: 78,
+    [DATA_KEYS.claims__primers_and_probes__sources]: 79,
     [DATA_KEYS.claims__reaction_volume_uL]: 72,
     [DATA_KEYS.claims__supported_specimen_types]: 0,
     [DATA_KEYS.claims__target_viral_genes]: 6,
@@ -555,6 +561,14 @@ const headers: HEADERS = [
             },
             { title: "Target gene(s) of SARS-CoV-2", data_key: DATA_KEYS.claims__target_viral_genes, },
             {
+                title: "Primers and probes",
+                data_key: null,
+                children: [
+                    { title: "Sequences", data_key: DATA_KEYS.claims__primers_and_probes__sequences, },
+                    { title: "Sources", data_key: DATA_KEYS.claims__primers_and_probes__sources, },
+                ]
+            },
+            {
                 title: "Test technology",
                 // e.g. RT-qPCR
                 data_key: null,
@@ -576,6 +590,10 @@ const headers: HEADERS = [
                     {
                         title: "units",
                         data_key: DATA_KEYS.claims__limit_of_detection__units,
+                    },
+                    {
+                        title: "Minimum replicates",
+                        data_key: DATA_KEYS.claims__limit_of_detection__minimum_replicates,
                     },
                 ]
             },

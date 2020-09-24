@@ -24,8 +24,11 @@ var DATA_KEYS;
 (function (DATA_KEYS) {
     DATA_KEYS["test_descriptor__manufacturer_name"] = "test_descriptor__manufacturer_name";
     DATA_KEYS["test_descriptor__test_name"] = "test_descriptor__test_name";
+    DATA_KEYS["claims__limit_of_detection__minimum_replicates"] = "claims__limit_of_detection__minimum_replicates";
     DATA_KEYS["claims__limit_of_detection__value"] = "claims__limit_of_detection__value";
     DATA_KEYS["claims__limit_of_detection__units"] = "claims__limit_of_detection__units";
+    DATA_KEYS["claims__primers_and_probes__sequences"] = "claims__primers_and_probes__sequences";
+    DATA_KEYS["claims__primers_and_probes__sources"] = "claims__primers_and_probes__sources";
     DATA_KEYS["claims__reaction_volume_uL"] = "claims__reaction_volume_uL";
     DATA_KEYS["claims__supported_specimen_types"] = "claims__supported_specimen_types";
     DATA_KEYS["claims__target_viral_genes"] = "claims__target_viral_genes";
@@ -49,8 +52,11 @@ var DATA_KEYS;
 var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
     // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
     // [DATA_KEYS.test_descriptor__test_name]: 1,
+    _a[DATA_KEYS.claims__limit_of_detection__minimum_replicates] = 68,
     _a[DATA_KEYS.claims__limit_of_detection__value] = 66,
     _a[DATA_KEYS.claims__limit_of_detection__units] = 67,
+    _a[DATA_KEYS.claims__primers_and_probes__sequences] = 78,
+    _a[DATA_KEYS.claims__primers_and_probes__sources] = 79,
     _a[DATA_KEYS.claims__reaction_volume_uL] = 72,
     _a[DATA_KEYS.claims__supported_specimen_types] = 0,
     _a[DATA_KEYS.claims__target_viral_genes] = 6,
@@ -211,6 +217,14 @@ var headers = [
             },
             { title: "Target gene(s) of SARS-CoV-2", data_key: DATA_KEYS.claims__target_viral_genes },
             {
+                title: "Primers and probes",
+                data_key: null,
+                children: [
+                    { title: "Sequences", data_key: DATA_KEYS.claims__primers_and_probes__sequences },
+                    { title: "Sources", data_key: DATA_KEYS.claims__primers_and_probes__sources },
+                ]
+            },
+            {
                 title: "Test technology",
                 // e.g. RT-qPCR
                 data_key: null
@@ -232,6 +246,10 @@ var headers = [
                     {
                         title: "units",
                         data_key: DATA_KEYS.claims__limit_of_detection__units
+                    },
+                    {
+                        title: "Minimum replicates",
+                        data_key: DATA_KEYS.claims__limit_of_detection__minimum_replicates
                     },
                 ]
             },

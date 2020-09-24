@@ -51,6 +51,9 @@
             border-radius: 2px;
             margin: 2px;
         }
+        #labels_list .label.priority {
+            border: thin solid orange;
+        }
 
         .page_container
         {
@@ -872,17 +875,38 @@
 
             const label_search_listeners = []
 
+            const priority_label_ids = new Set([
+                // Temporary addition for LOD and synthetic controls labelling work
+                68, 66, 67, 72, 0, 6, 64, 62, 63, 73,
+            ])
+
             Object.keys(common_labels)
-                .map(label_id => ({
-                    id: parseInt(label_id, 10),
-                    text: common_labels[label_id],
-                    lower_case_text: common_labels[label_id].toLowerCase(),
-                }))
-                .sort((a, b) => a.lower_case_text < b.lower_case_text ? -1 : 1)
+                .map(label_id =>
+                {
+                    const id = parseInt(label_id, 10)
+
+                    return {
+                        id,
+                        text: common_labels[label_id],
+                        lower_case_text: common_labels[label_id].toLowerCase(),
+                        priority: priority_label_ids.has(id),
+                    }
+                })
+                .sort((a, b) =>
+                {
+                    if (a.priority === b.priority)
+                    {
+                        return a.lower_case_text < b.lower_case_text ? -1 : 1
+                    }
+                    else
+                    {
+                        return a.priority ? -1 : 1
+                    }
+                })
                 .forEach(label => {
                     const label_el = document.createElement("div")
                     label_el.innerText = label.text
-                    label_el.className = "label"
+                    label_el.className = "label" + (label.priority ? " priority" : "")
                     labels_list_el.appendChild(label_el)
 
                     label_search_listeners.push(label_search_text => {
