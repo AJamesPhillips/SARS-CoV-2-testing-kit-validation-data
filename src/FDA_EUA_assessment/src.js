@@ -209,6 +209,179 @@ function ref_link(relative_file_path, annotation_id) {
         ref += "&highlighted_annotation_ids=" + annotation_id;
     return ref;
 }
+// const extracted_data: DATA = [
+//     {
+//         [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+//         [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
+//         [DATA_KEYS.validation_condition__author]: { value: "self", refs: [] },
+//         [DATA_KEYS.validation_condition__date]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__specimen_type]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__transport_medium]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+//             value: 18,
+//             refs: [
+//                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2FFDA-EUA%2FPDFs%2F136282.pdf&highlighted_annotation_ids=8"
+//             ]
+//         },
+//         [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+//             value: 47,
+//             refs: [
+//                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2FFDA-EUA%2FPDFs%2F136282.pdf&highlighted_annotation_ids=9"
+//             ]
+//         },
+//         [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
+//     },
+//     {
+//         [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+//         [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
+//         [DATA_KEYS.validation_condition__author]: { value: "Uhteg, et al.", refs: ["https://doi.org/10.1016/j.jcv.2020.104384"] },
+//         [DATA_KEYS.validation_condition__date]: { value: "2020-04-16", refs: [] },
+//         [DATA_KEYS.validation_condition__specimen_type]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__transport_medium]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [] },
+//         [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+//             value: 13,
+//             refs: [
+//                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=5"
+//             ]
+//         },
+//         [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+//             value: 34,
+//             refs: [
+//                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FUhteg_2020____comparison_of_3_SARS-2_diagnostics.pdf&highlighted_annotation_ids=6"
+//             ]
+//         },
+//         [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: "", refs: [] },
+//         [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
+//     },
+//     {
+//         [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+//         [DATA_KEYS.test_descriptor__test_name]: { value: "ePlex SARS-CoV-2 Test", refs: [] },
+//         [DATA_KEYS.validation_condition__author]: { value: "PHE", refs: ["https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/897832/Rapid_Assessment_of_GenMark_ePlex_SARS_CoV_2_test_V1.00e.pdf"] },
+//         [DATA_KEYS.validation_condition__date]: { value: "2020-07-08", refs: [] },
+//         [DATA_KEYS.validation_condition__specimen_type]: {
+//             value: "NP?",
+//             comment: "It should be NP specimens but clinical specimen type not stated",
+//             refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=3"
+//         ] },
+//         [DATA_KEYS.validation_condition__swab_type]: { value: "_?_", refs: [] },
+//         [DATA_KEYS.validation_condition__transport_medium]: {
+//             value: "VTM _?_",
+//             comment: "Unknown brand or formulation of VTM",
+//             refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=4"
+//         ] },
+//         [DATA_KEYS.validation_condition__sample_volume]: { value: "200 ul", refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=5"
+//         ] },
+//         [DATA_KEYS.validation_condition__comparator_test]: { value: "in-house PHE PCR assay", refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=2"
+//         ] },
+//         [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+//             value: 93,
+//             refs: [
+//                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=0"
+//             ]
+//         },
+//         [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+//             value: 120,
+//             refs: [
+//                 "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=1"
+//             ]
+//         },
+//         [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: 101, refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=10"
+//         ] },
+//         [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: 1, refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=11"
+//         ] },
+//         [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: 124, refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=12"
+//         ] },
+//         [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: 2, refs: [
+//             "http://localhost:5003/render_pdf?relative_file_path=..%2F..%2Fdata%2Fpapers%2FPHE_2020____GenMark_ePlex_assessment.pdf&highlighted_annotation_ids=13"
+//         ] },
+//     },
+//     // {
+//     //     [DATA_KEYS.test_descriptor__manufacturer_name]: { value: "", refs: [] },
+//     //     [DATA_KEYS.test_descriptor__test_name]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__author]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__date]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__specimen_type]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__swab_type]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__transport_medium]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__sample_volume]: { value: "", refs: [] },
+//     //     [DATA_KEYS.validation_condition__comparator_test]: { value: "", refs: [] },
+//     //     [DATA_KEYS.metrics__num_clinical_samples__positive]: {
+//     //         value: 0,
+//     //         refs: [
+//     //             ""
+//     //         ]
+//     //     },
+//     //     [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: {
+//     //         value: 0,
+//     //         refs: [
+//     //             ""
+//     //         ]
+//     //     },
+//     //     [DATA_KEYS.metrics__confusion_matrix__true_positives]: { value: "", refs: [] },
+//     //     [DATA_KEYS.metrics__confusion_matrix__false_negatives]: { value: "", refs: [] },
+//     //     [DATA_KEYS.metrics__confusion_matrix__true_negatives]: { value: "", refs: [] },
+//     //     [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
+//     // },
+// ]
+// extracted_data.forEach(row =>
+// {
+//     const test_name = row[DATA_KEYS.test_descriptor__test_name].value
+//     const fda_eua = FDA_EUA_parsed_data_by_test_name[test_name]
+//     if (fda_eua)
+//     {
+//         row[DATA_KEYS.test_descriptor__manufacturer_name] =
+//         {
+//             value: fda_eua[DATA_KEYS.test_descriptor__manufacturer_name],
+//             refs: [],
+//         }
+//         // Will likely delete this as EUA date is not the same as
+//         // validation date if more recent data is given
+//         const author = row[DATA_KEYS.validation_condition__author]
+//         if (author && author.value === "self")
+//         {
+//             row[DATA_KEYS.validation_condition__date] =
+//             {
+//                 value: fda_eua[DATA_KEYS.validation_condition__date],
+//                 refs: [],
+//             }
+//         }
+//     }
+//     else
+//     {
+//         console.error(`test_name "${test_name}" not present in fda_eua_parsed_data.`)
+//     }
+// })
+function activate_options() {
+    var cells_expanded = false;
+    document.getElementById("toggle_expanded_cells").onclick = function () {
+        cells_expanded = !cells_expanded;
+        var cells = Array.from(document.getElementsByClassName("value_el"));
+        if (cells_expanded) {
+            cells.forEach(function (cell) { return cell.classList.add("expanded"); });
+        }
+        else {
+            cells.forEach(function (cell) { return cell.classList.remove("expanded"); });
+        }
+    };
+}
 var headers = [
     {
         title: "Manufacturer",
@@ -525,10 +698,10 @@ function populate_table_body(headers, data) {
                 var value = data_node.value.toString();
                 var value_title = html_safe_ish(value);
                 var value_el_1 = document.createElement("div");
+                value_el_1.className = "value_el";
                 value_el_1.innerHTML = value;
                 value_el_1.title = value_title;
                 value_el_1.addEventListener("click", function () {
-                    debugger;
                     value_el_1.classList.toggle("expanded");
                 });
                 cell.appendChild(value_el_1);
@@ -540,10 +713,23 @@ function populate_table_body(headers, data) {
         });
     });
 }
+function update_progress() {
+    var progress_el = document.getElementById("progress");
+    var tbody = document.getElementsByTagName("tbody")[0];
+    var total_rows = tbody.children.length;
+    var total_completed = 0;
+    Array.from(tbody.children).forEach(function (row) {
+        total_completed += (row.children[2].innerHTML !== "" ? 1 : 0);
+    });
+    var percentage = ((total_completed / total_rows) * 100).toFixed(1);
+    progress_el.innerText = percentage + "% " + total_completed + "/" + total_rows;
+}
 // DO NOT USE THIS IN PRODUCTION
 function html_safe_ish(value) {
     return value.replace(/(<([^>]+)>)/ig, "")
         .replace(/"/ig, "'");
 }
+activate_options();
 build_header(headers);
 populate_table_body(headers, extracted_data);
+update_progress();

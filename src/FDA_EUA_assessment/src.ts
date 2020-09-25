@@ -544,6 +544,24 @@ function ref_link (relative_file_path: string, annotation_id?: number)
 // })
 
 
+function activate_options ()
+{
+    let cells_expanded = false
+    document.getElementById("toggle_expanded_cells").onclick = () =>
+    {
+        cells_expanded = !cells_expanded
+        const cells = Array.from(document.getElementsByClassName("value_el"))
+        if (cells_expanded)
+        {
+            cells.forEach(cell => cell.classList.add("expanded"))
+        }
+        else
+        {
+            cells.forEach(cell => cell.classList.remove("expanded"))
+        }
+    }
+}
+
 
 interface HEADER {
     title: string
@@ -903,11 +921,11 @@ function populate_table_body (headers: HEADERS, data: DATA)
                 const value = data_node.value.toString()
                 const value_title = html_safe_ish(value)
                 const value_el = document.createElement("div")
+                value_el.className = "value_el"
                 value_el.innerHTML = value
                 value_el.title = value_title
                 value_el.addEventListener("click", () =>
                 {
-                    debugger
                     value_el.classList.toggle("expanded")
                 })
 
@@ -923,6 +941,22 @@ function populate_table_body (headers: HEADERS, data: DATA)
     })
 }
 
+function update_progress ()
+{
+    const progress_el = document.getElementById("progress")
+
+    const tbody = document.getElementsByTagName("tbody")[0]
+    const total_rows = tbody.children.length
+    let total_completed = 0
+    Array.from(tbody.children).forEach(row =>
+        {
+            total_completed += (row.children[2].innerHTML !== "" ? 1 : 0)
+        })
+
+    const percentage = ((total_completed / total_rows) * 100).toFixed(1)
+    progress_el.innerText = `${percentage}% ${total_completed}/${total_rows}`
+}
+
 
 // DO NOT USE THIS IN PRODUCTION
 function html_safe_ish (value)
@@ -932,5 +966,7 @@ function html_safe_ish (value)
 }
 
 
+activate_options()
 build_header(headers)
 populate_table_body(headers, extracted_data)
+update_progress()
