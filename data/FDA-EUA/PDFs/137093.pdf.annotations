@@ -2,6 +2,172 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137093.pdf",
 "file_sha1_hash": "86c076301e94002204f11d73404f6cb6afe7b28a",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "78px",
+"top": "181.333px",
+"width": "554px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal/oropharyngeal swabs, nasal swabs and mid-turbinate swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "712px",
+"top": "323.333px",
+"width": "100px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N, E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "128px",
+"top": "444.111px",
+"width": "53px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "GUSB",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 23,
+"left": "233px",
+"top": "133.223px",
+"width": "293px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 23,
+"left": "517px",
+"top": "129.223px",
+"width": "16px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 23,
+"left": "135px",
+"top": "133.668px",
+"width": "14px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 23,
+"left": "152px",
+"top": "132.668px",
+"width": "61px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 23,
+"left": "406px",
+"top": "160.668px",
+"width": "47px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+},
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 23,
+"left": "310px",
+"top": "283.779px",
+"width": "49px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

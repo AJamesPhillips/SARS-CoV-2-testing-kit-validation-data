@@ -2,6 +2,291 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137089.pdf",
 "file_sha1_hash": "82fbe48b59e6b8cd8db15e2c408d13e02b02e3f5",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "130px",
+"top": "421px",
+"width": "661px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "oropharyngeal (throat) swab, nasopharyngeal swab, nasal swab, and oral fluid specimens",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "401px",
+"top": "358.111px",
+"width": "228px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "swab (Curative Inc., #K00023)",
+"labels": [
+{
+"id": 33,
+"text": "Specimen/Swab type"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "133px",
+"top": "377.111px",
+"width": "298px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "collection tube (Curative Inc., #K00016)",
+"labels": [
+{
+"id": 56,
+"text": "Specimen/Transport container(s)"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "432px",
+"top": "379.111px",
+"width": "351px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "containing DNA/RNA Shield (Zymo Research, #R1100)",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"deleted": true
+},
+{
+"id": 5,
+"page_number": 2,
+"left": "140px",
+"top": "886.333px",
+"width": "154px",
+"height": "96px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 2,
+"left": "142px",
+"top": "1005.78px",
+"width": "147px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 2,
+"left": "404px",
+"top": "871.778px",
+"width": "193px",
+"height": "166px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "IDT, Biosearch Technologies",
+"labels": [
+{
+"id": 79,
+"text": "Primers and probes/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "366px",
+"top": "238.556px",
+"width": "147px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "513px",
+"top": "237.556px",
+"width": "247px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources Catalog No. NR52285 (Lot # 70333700)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "567px",
+"top": "262.556px",
+"width": "211px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative oral fluid specimens",
+"labels": [
+{
+"id": 73,
+"text": "Meta/Not specified"
+},
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": "Marked as not specified as \"oral fluid\" covers multiple, and different, clinical matrices."
+},
+{
+"id": 11,
+"page_number": 5,
+"left": "174px",
+"top": "280.556px",
+"width": "128px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "volunteer donors",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"deleted": true
+},
+{
+"id": 13,
+"page_number": 5,
+"left": "332px",
+"top": "281.556px",
+"width": "198px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "DNA/RNA Shield solution",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": "Not technical clinical matrix but is inline with how samples would arrive at a lab."
+},
+{
+"id": 14,
+"page_number": 5,
+"left": "534px",
+"top": "281.556px",
+"width": "195px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Zymo Research, #R1100",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 5,
+"left": "355px",
+"top": "380.889px",
+"width": "25px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 5,
+"left": "155px",
+"top": "443.889px",
+"width": "33px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.2",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 17,
+"page_number": 5,
+"left": "188px",
+"top": "444.889px",
+"width": "81px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

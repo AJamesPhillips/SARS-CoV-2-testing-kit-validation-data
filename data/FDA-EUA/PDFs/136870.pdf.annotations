@@ -2,6 +2,236 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136870.pdf",
 "file_sha1_hash": "d10b5d357aa2054b6912f710609cd0b410ecfcb6",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 5,
+"left": "190px",
+"top": "185.444px",
+"width": "510px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal, nasopharyngeal (NP), and oropharyngeal (OP) swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "516px",
+"top": "814.222px",
+"width": "189px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "374px",
+"top": "129.222px",
+"width": "165px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Gapdh",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 22,
+"left": "319px",
+"top": "404.779px",
+"width": "176px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "oropharyngeal swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 22,
+"left": "612px",
+"top": "401.779px",
+"width": "161px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "healthy individuals",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 22,
+"left": "659px",
+"top": "426.779px",
+"width": "157px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Twist RNA control",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 23,
+"left": "100px",
+"top": "212.223px",
+"width": "351px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "AccuPlex SARSCoV-2 Verification Panel from SeraCare",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 23,
+"left": "455px",
+"top": "217.223px",
+"width": "110px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare (0505-0129)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 23,
+"left": "108px",
+"top": "235.111px",
+"width": "341px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative nasopharyngeal swab specimen",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 23,
+"left": "437px",
+"top": "231.111px",
+"width": "16px",
+"height": "34px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 23,
+"left": "157px",
+"top": "711.889px",
+"width": "111px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 23,
+"left": "401px",
+"top": "752.557px",
+"width": "27px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "10",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 23,
+"left": "431px",
+"top": "755.557px",
+"width": "82px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

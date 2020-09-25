@@ -2,6 +2,181 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137178.pdf",
 "file_sha1_hash": "29962d2cb590c431f14e72989effd86ee7d8a433",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "105px",
+"top": "227.667px",
+"width": "686px",
+"height": "71px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab, oropharyngeal swab, anterior nasal swab, midturbinate nasal swab, nasopharyngeal wash/aspirate, nasal aspirate, bronchoalveolar lavage (BAL) and sputum",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "105px",
+"top": "211.556px",
+"width": "99px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 68,
+"left": "137px",
+"top": "276.336px",
+"width": "652px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "AccuPlex SARS-COV-2 Reference Material Kit, Seracare Life Sciences, Inc., Cat no. 0505-0126",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 68,
+"left": "139px",
+"top": "273.336px",
+"width": "222px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 reference RNA material",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 68,
+"left": "133px",
+"top": "338.336px",
+"width": "221px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "clinical sputum matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 68,
+"left": "341px",
+"top": "334px",
+"width": "22px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 68,
+"left": "227px",
+"top": "427px",
+"width": "39px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 68,
+"left": "362px",
+"top": "841.555px",
+"width": "65px",
+"height": "83px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E, RdRp, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 69,
+"left": "489px",
+"top": "521.117px",
+"width": "60px",
+"height": "97px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "4.167",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 69,
+"left": "645px",
+"top": "517.117px",
+"width": "91px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

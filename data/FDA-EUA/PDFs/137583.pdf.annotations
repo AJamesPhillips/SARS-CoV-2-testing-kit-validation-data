@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137583.pdf",
 "file_sha1_hash": "644932c76f1b8e6e8269ed2849abd5f9d47a09c8",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 2,
+"left": "218px",
+"top": "127.556px",
+"width": "216px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs (NPS)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 33,
+"left": "666px",
+"top": "209.336px",
+"width": "163px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated or infectious virus culture",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"deleted": true
+},
+{
+"id": 3,
+"page_number": 33,
+"left": "51px",
+"top": "292.336px",
+"width": "89px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "clinical nasopharyngeal swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 33,
+"left": "135px",
+"top": "289.336px",
+"width": "12px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 33,
+"left": "547px",
+"top": "399.668px",
+"width": "53px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Heat inactivated virus"
+},
+{
+"id": 6,
+"page_number": 33,
+"left": "599px",
+"top": "397.668px",
+"width": "60px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 33,
+"left": "49px",
+"top": "492.668px",
+"width": "780px",
+"height": "34px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "World Reference Center for Emerging Viruses and Arboviruses (WRCEVA)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": "Infectious virus"
+},
+{
+"id": 8,
+"page_number": 33,
+"left": "546px",
+"top": "438.555px",
+"width": "54px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.16",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "infectious virus"
+},
+{
+"id": 9,
+"page_number": 33,
+"left": "383px",
+"top": "401.891px",
+"width": "122px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ATCC\u00ae VR-1986HK",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 33,
+"left": "545px",
+"top": "290.891px",
+"width": "92px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

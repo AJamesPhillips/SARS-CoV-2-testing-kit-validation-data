@@ -2,6 +2,197 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137153.pdf",
 "file_sha1_hash": "9ccf4f81c186e18243ba669e9dd93f78ce8f93f9",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "327px",
+"top": "195.667px",
+"width": "466px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal, nasopharyngeal and oropharyngeal swabs and BAL specimens",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 3,
+"left": "101px",
+"top": "866.778px",
+"width": "694px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E, RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 3,
+"left": "300px",
+"top": "1002.78px",
+"width": "205px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 13,
+"left": "377px",
+"top": "650.445px",
+"width": "24px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 13,
+"left": "485px",
+"top": "647.445px",
+"width": "196px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 13,
+"left": "669px",
+"top": "644.445px",
+"width": "16px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 13,
+"left": "123px",
+"top": "666.445px",
+"width": "220px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 13,
+"left": "401px",
+"top": "666.445px",
+"width": "192px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "quantified clinical sample",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "quantitated by Droplet Digital PCR (QX200 Droplet Digital PCR System, BioRad).  Marking as not specified due to variability in dPCR technique and lack of dMIQE info provided here."
+},
+{
+"id": 8,
+"page_number": 13,
+"left": "226px",
+"top": "962.556px",
+"width": "29px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 13,
+"left": "253px",
+"top": "963.556px",
+"width": "72px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 13,
+"left": "124px",
+"top": "699.334px",
+"width": "477px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [],
+"comment": "Many other tests do not count a false negative of the control gene as a negative for the test.  It seems this test might have been able to report a lower LOD."
+}
+],
 "comments": []
 }

@@ -2,6 +2,172 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137120.pdf",
 "file_sha1_hash": "aa69a4e7da6456aad633951646000751198bef7e",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "105px",
+"top": "148.778px",
+"width": "691px",
+"height": "89px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper and lower respiratory specimens (such as anterior nasal swabs, mid-turbinate nasal swabs, nasopharyngeal swabs, oropharyngeal swabs, sputum, lower respiratory tract aspirates, bronchoalveolar lavage, and nasopharyngeal wash/aspirate or nasal aspirate)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 3,
+"left": "100px",
+"top": "773.667px",
+"width": "706px",
+"height": "44px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N, E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "163px",
+"top": "517px",
+"width": "339px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Lentivirus",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": "Presuming this provides a full process control."
+},
+{
+"id": 3,
+"deleted": true
+},
+{
+"id": 4,
+"page_number": 11,
+"left": "706px",
+"top": "259.778px",
+"width": "27px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 11,
+"left": "272px",
+"top": "312.778px",
+"width": "29px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.3",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 11,
+"left": "301px",
+"top": "316.778px",
+"width": "75px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": "throat swab and sputum specimens."
+},
+{
+"id": 7,
+"page_number": 11,
+"left": "493px",
+"top": "160.778px",
+"width": "255px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": " SARS-CoV-2 positive specimens",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 11,
+"left": "740px",
+"top": "155.778px",
+"width": "16px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 11,
+"left": "104px",
+"top": "180.778px",
+"width": "213px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "throat swab and sputum specimens",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

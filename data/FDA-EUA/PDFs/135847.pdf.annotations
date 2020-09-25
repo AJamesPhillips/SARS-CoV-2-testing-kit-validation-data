@@ -35,7 +35,7 @@
 "text": "Limit of Detection (LOD)/Value"
 }
 ],
-"comment": ""
+"comment": "Using bioMerieux NucliSENS easyMAG and EMAG extraction."
 },
 {
 "id": 2,
@@ -81,7 +81,7 @@
 "text": "Limit of Detection (LOD)/Value"
 }
 ],
-"comment": ""
+"comment": "Using Qiagen EZ1 extraction."
 },
 {
 "id": 5,

@@ -2,6 +2,232 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136653.pdf",
 "file_sha1_hash": "1248a93edde53bc77d5051e8177a4c852bccc580",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "108px",
+"top": "397px",
+"width": "691px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal, nasal, mid-turbinate, and oropharyngeal swab specimens, nasopharyngeal wash/aspirate or nasal aspirates",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 1,
+"left": "214px",
+"top": "676.444px",
+"width": "145px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 56,
+"text": "Specimen/Transport container(s)"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 1,
+"left": "206px",
+"top": "661.444px",
+"width": "515px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BD Universal Viral Transport System (UVT) or Copan Universal Transport Media System (UTM)",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 1,
+"left": "102px",
+"top": "735.556px",
+"width": "233px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nucleocapsid phosphoprotein gene (N1 and N2 regions)",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 1,
+"left": "553px",
+"top": "736.556px",
+"width": "91px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 1,
+"left": "109px",
+"top": "752.556px",
+"width": "518px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "References N1 and N2 primer/probe sets of the United States Centers for Disease Control and Prevention (US CDC)",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Says \"based on\", so may be different sequence etc"
+},
+{
+"id": 6,
+"page_number": 13,
+"left": "229px",
+"top": "282.223px",
+"width": "261px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genomic viral RNA from SARS-CoV-2",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 13,
+"left": "568px",
+"top": "282.223px",
+"width": "199px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources (Cat. No. NR-52285)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 13,
+"left": "234px",
+"top": "298.223px",
+"width": "252px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative nasopharyngeal clinical matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 13,
+"left": "674px",
+"top": "311.223px",
+"width": "17px",
+"height": "13px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 13,
+"left": "120px",
+"top": "355.223px",
+"width": "16px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.04",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 13,
+"left": "136px",
+"top": "357.223px",
+"width": "42px",
+"height": "13px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 13,
+"left": "105px",
+"top": "552px",
+"width": "703px",
+"height": "34px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Sequences identical to CDC N1 and N2 primer/probes.",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

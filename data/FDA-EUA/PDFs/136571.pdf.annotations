@@ -53,6 +53,167 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 3,
+"page_number": 24,
+"left": "385px",
+"top": "467.223px",
+"width": "80px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "300 \u03bcL",
+"labels": [
+{
+"id": 35,
+"text": "Specimen/Volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 38,
+"left": "39px",
+"top": "559.336px",
+"width": "559px",
+"height": "52px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1b poly gen (RdRp gene), E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 56,
+"left": "127px",
+"top": "714.223px",
+"width": "147px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "UTM and HeLa cells",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 56,
+"left": "265px",
+"top": "708.223px",
+"width": "22px",
+"height": "35px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "In house",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Presumably made in house?"
+},
+{
+"id": 7,
+"page_number": 56,
+"left": "39px",
+"top": "693.445px",
+"width": "221px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Hospital from Barcelona (Spain)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 56,
+"left": "290px",
+"top": "669.445px",
+"width": "182px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "quantified clinical sample",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "What type of sample?  How was it quantified?"
+},
+{
+"id": 9,
+"page_number": 56,
+"left": "561px",
+"top": "758.223px",
+"width": "35px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 57,
+"left": "419px",
+"top": "249.113px",
+"width": "22px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 57,
+"left": "440px",
+"top": "249.113px",
+"width": "59px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

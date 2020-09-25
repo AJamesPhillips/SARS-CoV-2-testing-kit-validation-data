@@ -2,6 +2,193 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137252.pdf",
 "file_sha1_hash": "09463fa532ee27fe845961bd2a7beeaab1838101",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 6,
+"left": "73px",
+"top": "163.556px",
+"width": "503px",
+"height": "64px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal washes and nasal aspirates",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 8,
+"left": "73px",
+"top": "311.667px",
+"width": "504px",
+"height": "69px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 8,
+"left": "71px",
+"top": "710.778px",
+"width": "506px",
+"height": "43px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Universal Transport Medium\u2122, UTM\u00ae (Copan, Murrieta, California, USA)",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 31,
+"left": "190px",
+"top": "604px",
+"width": "369px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "heat inactivated SARS-CoV-2 cell culture supernatant",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 31,
+"left": "58px",
+"top": "625.223px",
+"width": "505px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "4.6E+05 plaque forming units (PFU)/mL before inactivation; Institute of Virology, Charit\u00e9 Berlin, Germany",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 31,
+"left": "208px",
+"top": "690.223px",
+"width": "244px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "UTM\u00ae containing simulated nasal matrix  (5% w/v mucin, 5% v/v whole blood, 0.8% v/v NaCl (95% saline) and 0.00002% w/v human genomic DNA)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 31,
+"left": "442px",
+"top": "685.223px",
+"width": "17px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "In house",
+"labels": [],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 31,
+"left": "459px",
+"top": "750.111px",
+"width": "57px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "500",
+"labels": [
+{
+"id": 11,
+"text": "RNA extraction & purification/Specimen input volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 33,
+"left": "162px",
+"top": "623.779px",
+"width": "21px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 35,
+"left": "55px",
+"top": "186.334px",
+"width": "63px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 35,
+"left": "119px",
+"top": "186.334px",
+"width": "52px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "PFU / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

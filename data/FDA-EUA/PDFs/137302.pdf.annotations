@@ -217,6 +217,10 @@
 {
 "id": 6,
 "text": "Viral gene(s) targetted"
+},
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
 }
 ],
 "comment": ""
@@ -234,6 +238,44 @@
 {
 "id": 75,
 "text": "Specimen/Collection protocol"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 13,
+"left": "820px",
+"top": "241.667px",
+"width": "20px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 3,
+"left": "106px",
+"top": "439.667px",
+"width": "754px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal, oropharyngeal, nasal, and midturbinate nasal swab, and sputum",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
 }
 ],
 "comment": ""

@@ -2,6 +2,240 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136621.pdf",
 "file_sha1_hash": "2d18c696ac7110eded14dfeb4564163ff2a3900f",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "131px",
+"top": "478px",
+"width": "303px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal and oropharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 1,
+"left": "184px",
+"top": "994.333px",
+"width": "171px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 1,
+"left": "633px",
+"top": "993.333px",
+"width": "123px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "530px",
+"top": "498px",
+"width": "48px",
+"height": "126px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "IDT",
+"labels": [
+{
+"id": 79,
+"text": "Primers and probes/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 2,
+"left": "712px",
+"top": "498px",
+"width": "61px",
+"height": "124px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 4,
+"left": "641px",
+"top": "316.333px",
+"width": "112px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genomic SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 4,
+"left": "198px",
+"top": "337.333px",
+"width": "558px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI ATCC Genomic RNA from SARS Related Coronavirus 2 (Catalog No. NR-52285)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 4,
+"left": "281px",
+"top": "356.667px",
+"width": "266px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP) clinical matrix, presumed negative",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 4,
+"left": "535px",
+"top": "352.667px",
+"width": "20px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 4,
+"left": "383px",
+"top": "417.667px",
+"width": "24px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 4,
+"left": "176px",
+"top": "481.445px",
+"width": "27px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "8.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 4,
+"left": "204px",
+"top": "482.445px",
+"width": "49px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 4,
+"left": "196px",
+"top": "708.333px",
+"width": "552px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Refers to CDC N1 primer/probe set in \"FDA EUA EUA200001 \u201cCDC 2019-Novel Coronavirus (2019-nCoV) Real-Time RT-PCR Diagnostics Panel\u201d\"",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

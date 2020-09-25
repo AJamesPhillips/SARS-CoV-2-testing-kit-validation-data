@@ -2,6 +2,239 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136687.pdf",
 "file_sha1_hash": "0e9fe137a14afdb1e41b16bce90bd49fc32a37b0",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "79px",
+"top": "204.556px",
+"width": "754px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "lower respiratory tract fluids (e.g. bronchoalveolar lavage, sputum, tracheal aspirate), and upper respiratory tract fluids (e.g. nasopharyngeal and oropharyngeal swabs)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "406px",
+"top": "851px",
+"width": "216px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "315px",
+"top": "262.889px",
+"width": "50px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "140",
+"labels": [
+{
+"id": 35,
+"text": "Specimen/Volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 16,
+"left": "334px",
+"top": "497px",
+"width": "364px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genomic RNA of SARS-CoV-2, isolate USA-WA1/2020",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 16,
+"left": "79px",
+"top": "517px",
+"width": "184px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources, catalog number NR-52285",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"deleted": true
+},
+{
+"id": 6,
+"page_number": 16,
+"left": "413px",
+"top": "520px",
+"width": "411px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "sputum samples after the lysis step of the QIAamp Viral RNA Mini Kit (Cat# 52904) to prevent degradation of the RNA before the lysis",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 16,
+"left": "523px",
+"top": "550px",
+"width": "100px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "100",
+"labels": [
+{
+"id": 13,
+"text": "RNA extraction & purification/Elution volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"deleted": true
+},
+{
+"id": 9,
+"deleted": true
+},
+{
+"id": 10,
+"deleted": true
+},
+{
+"id": 11,
+"page_number": 17,
+"left": "305px",
+"top": "122.223px",
+"width": "220px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "4.29",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 17,
+"left": "399px",
+"top": "142.557px",
+"width": "28px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 17,
+"left": "453px",
+"top": "120.111px",
+"width": "70px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 4,
+"left": "132px",
+"top": "733.778px",
+"width": "562px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 73,
+"text": "Meta/Not specified"
+},
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+},
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 16,
+"left": "516px",
+"top": "513px",
+"width": "23px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
