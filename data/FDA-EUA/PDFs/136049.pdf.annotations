@@ -36,7 +36,7 @@
 "labels": [
 {
 "id": 70,
-"text": "Limit of Detection (LOD)/Concentration Range/Steps/Number of steps"
+"text": "Limit of Detection (LOD)/Concentration Range/Number of steps"
 }
 ],
 "comment": ""
@@ -53,7 +53,7 @@
 "labels": [
 {
 "id": 71,
-"text": "Limit of Detection (LOD)/Concentration Range/Steps/Dilution per step"
+"text": "Limit of Detection (LOD)/Concentration Range/Dilution per step"
 }
 ],
 "comment": ""
@@ -156,6 +156,99 @@
 {
 "id": 63,
 "text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"deleted": true
+},
+{
+"id": 11,
+"page_number": 4,
+"left": "208px",
+"top": "163.445px",
+"width": "462px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal, nasopharyngeal, and oropharyngeal swab ",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 4,
+"left": "50px",
+"top": "638.222px",
+"width": "789px",
+"height": "49px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Copan Universal Transport Medium System (UTM-RT), BD\u2122 Universal Viral Transport System (UVT), cobas\u00ae PCR Media, or 0.9% physiological saline",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 5,
+"left": "185px",
+"top": "119.333px",
+"width": "228px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 5,
+"left": "289px",
+"top": "139.333px",
+"width": "361px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 5,
+"left": "567px",
+"top": "215.111px",
+"width": "23px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
 }
 ],
 "comment": ""

@@ -116,6 +116,61 @@
 "text": "Other synthetic sample clinical matrices but no replicate number explicitly given.",
 "labels": [],
 "comment": ""
+},
+{
+"id": 7,
+"page_number": 2,
+"left": "118px",
+"top": "223px",
+"width": "666px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP), nasal, and oropharyngeal (OP) swab specimens and lower respiratory tract (LRT)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 3,
+"left": "341px",
+"top": "871.333px",
+"width": "122px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab Region 1, ORF1ab Region 2",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 3,
+"left": "465px",
+"top": "874.889px",
+"width": "26px",
+"height": "37px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

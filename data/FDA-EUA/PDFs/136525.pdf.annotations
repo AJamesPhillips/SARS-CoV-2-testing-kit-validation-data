@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136525.pdf",
 "file_sha1_hash": "2e3ba7c3db6165cb4b7cdeb133e1b8f13152c4e2",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "496px",
+"top": "362px",
+"width": "281px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal, nasopharyngeal or throat swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "254px",
+"top": "256.111px",
+"width": "116px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 14,
+"left": "105px",
+"top": "619.334px",
+"width": "711px",
+"height": "35px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "purified partial viral RNA containing target sequences from the SARS-CoV2 genome",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 14,
+"left": "429px",
+"top": "598.334px",
+"width": "251px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "natural nasopharyngeal swab matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 14,
+"left": "169px",
+"top": "637.334px",
+"width": "28px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 14,
+"left": "96px",
+"top": "660.445px",
+"width": "423px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": "They were \"presumed negative\".  So contamination could have yielded a falsely lower LoD."
+},
+{
+"id": 6,
+"page_number": 14,
+"left": "554px",
+"top": "663.668px",
+"width": "260px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ID NOW COVID-19 elution buffer",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 14,
+"left": "430px",
+"top": "895.889px",
+"width": "35px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.125",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 14,
+"left": "338px",
+"top": "877.889px",
+"width": "218px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 14,
+"left": "637px",
+"top": "894.889px",
+"width": "50px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

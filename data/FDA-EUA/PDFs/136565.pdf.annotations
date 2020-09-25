@@ -2,6 +2,240 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136565.pdf",
 "file_sha1_hash": "ab2ee274d5d50b2639b34087595931dfcef64a66",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 2,
+"left": "53px",
+"top": "723.333px",
+"width": "345px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Nasopharyngeal, oropharyngeal, or nasal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "523px",
+"top": "726.333px",
+"width": "279px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Copan UTM-RT\u00ae System or BD\u2122 UVT System",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 3,
+"left": "74px",
+"top": "383.222px",
+"width": "80px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Nsp2",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 3,
+"left": "689px",
+"top": "382.222px",
+"width": "91px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 2,
+"left": "582px",
+"top": "205px",
+"width": "185px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": "This is the only reference to BAL in the whole document.  It's not mentioned in \"Principles of the Procedure\" below."
+},
+{
+"id": 5,
+"page_number": 11,
+"left": "51px",
+"top": "194.334px",
+"width": "194px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab samples",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 11,
+"left": "234px",
+"top": "191.334px",
+"width": "19px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 11,
+"left": "247px",
+"top": "195.223px",
+"width": "507px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Nylon Flocked Swab collected in UTM [Copan Diagnostic Inc, CA] or VTM [BD, NJ]",
+"labels": [
+{
+"id": 103,
+"text": "Specimen/Synthetic Specimen/Swab type"
+},
+{
+"id": 104,
+"text": "Specimen/Synthetic Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 11,
+"left": "53px",
+"top": "215px",
+"width": "129px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 11,
+"left": "184px",
+"top": "216px",
+"width": "162px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources NR-52285",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 11,
+"left": "820px",
+"top": "215px",
+"width": "49px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 11,
+"left": "842px",
+"top": "237.667px",
+"width": "31px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.15",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 11,
+"left": "50px",
+"top": "255.667px",
+"width": "75px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

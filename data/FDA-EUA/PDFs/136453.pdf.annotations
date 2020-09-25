@@ -2,6 +2,202 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136453.pdf",
 "file_sha1_hash": "985532240addb465870c909b725e27cdcf377160",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "406px",
+"top": "457.222px",
+"width": "304px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal and oropharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "240px",
+"top": "108.889px",
+"width": "165px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "134px",
+"top": "131.889px",
+"width": "107px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "395px",
+"top": "106.889px",
+"width": "25px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "163px",
+"top": "336.333px",
+"width": "387px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "whole SARS-CoV-2 RNA (USA-WA1/2020)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "156px",
+"top": "358.333px",
+"width": "103px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources (NR-52285)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "158px",
+"top": "381.889px",
+"width": "586px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled nasopharyngeal and oropharyngeal iSWAB matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "392px",
+"top": "497.889px",
+"width": "34px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "256px",
+"top": "711.889px",
+"width": "35px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "55",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "225px",
+"top": "672.889px",
+"width": "92px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "378px",
+"top": "708.778px",
+"width": "48px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": "Calculated from 275 / 55.  Marked as potential error as reaction volume seems too small."
+}
+],
 "comments": []
 }

@@ -2,6 +2,299 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136472.pdf",
 "file_sha1_hash": "75e78f94c461feb9daab1cb57822b45f70e36369",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "103px",
+"top": "188.556px",
+"width": "679px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "throat (oropharyngeal) swabs, nasopharyngeal swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal washes, nasal aspirates and bronchoalveolar lavage fluid (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "453px",
+"top": "331.778px",
+"width": "72px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "167px",
+"top": "354.778px",
+"width": "257px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "human housekeeping gene \u03b2-Actin",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 15,
+"left": "402px",
+"top": "574px",
+"width": "377px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "30",
+"labels": [
+{
+"id": 72,
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 42,
+"left": "294px",
+"top": "285.668px",
+"width": "293px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Can not find mention of the pseudo-virus or RNA extraction \"above\"",
+"labels": [
+{
+"id": 73,
+"text": "Meta/Not specified"
+},
+{
+"id": 100,
+"text": "Meta/Error/Omission"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 42,
+"left": "98px",
+"top": "368.668px",
+"width": "428px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Can not find this ddPCR data in \"Table 7 below\"",
+"labels": [
+{
+"id": 73,
+"text": "Meta/Not specified"
+},
+{
+"id": 100,
+"text": "Meta/Error/Omission"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 42,
+"left": "668px",
+"top": "306.336px",
+"width": "145px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pseudo-virus RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": "What is this \"pseudo-virus\"?"
+},
+{
+"id": 7,
+"page_number": 42,
+"left": "103px",
+"top": "262.336px",
+"width": "719px",
+"height": "200px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "In house manufactured RNA",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Not clear what this material is as it is from a \"pseudo-virus\".  Also ddPCR obviously has large errors."
+},
+{
+"id": 8,
+"page_number": 42,
+"left": "290px",
+"top": "550.223px",
+"width": "32px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 42,
+"left": "223px",
+"top": "774.777px",
+"width": "52px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 42,
+"left": "191px",
+"top": "689.445px",
+"width": "108px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": "Assuming it's referring to genome copies."
+},
+{
+"id": 11,
+"deleted": true
+},
+{
+"id": 12,
+"page_number": 42,
+"left": "98px",
+"top": "860px",
+"width": "426px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Three SARS-CoV-2 positive clinical specimens",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 43,
+"left": "351px",
+"top": "641.223px",
+"width": "52px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.15",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "throat swab synthetic clinical specimen"
+},
+{
+"id": 14,
+"page_number": 43,
+"left": "359px",
+"top": "776.223px",
+"width": "46px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "BAL synthetic clinical specimen"
+},
+{
+"id": 15,
+"page_number": 42,
+"left": "103px",
+"top": "903.336px",
+"width": "286px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative clinical matrices (Throat swab and BAL)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 42,
+"left": "100px",
+"top": "391.223px",
+"width": "96px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

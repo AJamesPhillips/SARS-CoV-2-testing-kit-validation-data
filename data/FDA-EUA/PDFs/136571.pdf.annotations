@@ -2,6 +2,58 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136571.pdf",
 "file_sha1_hash": "e1972e05ebf9474235e3973e426ff06036082885",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "89px",
+"top": "238.556px",
+"width": "200px",
+"height": "25.2222px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs (NPS)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "352px",
+"top": "238.778px",
+"width": "173px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "universal transport media",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 21,
+"left": "256px",
+"top": "236.889px",
+"width": "140px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "MS2 Bacteriophage",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

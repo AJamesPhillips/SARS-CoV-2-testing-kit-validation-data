@@ -108,7 +108,7 @@
 "width": "170px",
 "height": "26px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcl",
+"text": "genome copies / \u03bcL",
 "labels": [
 {
 "id": 67,
@@ -145,8 +145,8 @@
 "text": "inactivated and stabilized MS2 Bacteriophage",
 "labels": [
 {
-"id": 84,
-"text": "Controls/Internal/Extraction control material/Description"
+"id": 105,
+"text": "Controls/Internal/Full process"
 }
 ],
 "comment": ""

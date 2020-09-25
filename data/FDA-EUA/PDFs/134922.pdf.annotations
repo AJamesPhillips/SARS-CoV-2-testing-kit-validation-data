@@ -148,6 +148,61 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 9,
+"page_number": 3,
+"left": "72px",
+"top": "161px",
+"width": "770px",
+"height": "63px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper and lower respiratory specimens (such as nasopharyngeal or oropharyngeal swabs, sputum, lower respiratory tract aspirates, bronchoalveolar lavage, and nasopharyngeal wash/aspirate or nasal aspirate)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "368px",
+"top": "547.222px",
+"width": "54px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 4,
+"left": "263px",
+"top": "151.556px",
+"width": "30px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

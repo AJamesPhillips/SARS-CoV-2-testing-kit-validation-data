@@ -107,7 +107,7 @@
 "labels": [
 {
 "id": 72,
-"text": "Nucleic acid amplification/Reaction/Volume in \u03bcl"
+"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
 }
 ],
 "comment": ""
@@ -158,11 +158,70 @@
 "width": "104px",
 "height": "27px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "N",
+"text": "N, N",
 "labels": [
 {
 "id": 6,
 "text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 3,
+"left": "142px",
+"top": "200px",
+"width": "371px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal/oropharyngeal swabs and sputa",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"deleted": true
+},
+{
+"id": 12,
+"page_number": 4,
+"left": "101px",
+"top": "223.778px",
+"width": "210px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 19,
+"left": "415px",
+"top": "186px",
+"width": "22px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
 }
 ],
 "comment": ""

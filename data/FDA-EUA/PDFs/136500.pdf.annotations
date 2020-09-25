@@ -2,6 +2,198 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/136500.pdf",
 "file_sha1_hash": "96a5e684c6186c8ecaab6910f4027d0277c73fd7",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 5,
+"left": "373px",
+"top": "223.889px",
+"width": "148px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 6,
+"left": "610px",
+"top": "523.333px",
+"width": "72px",
+"height": "81px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N, E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 7,
+"left": "235px",
+"top": "116.667px",
+"width": "128px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "MS2 Bacteriophage",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": "Validates extraction, reverse-transcription, and PCR steps"
+},
+{
+"id": 3,
+"page_number": 27,
+"left": "80px",
+"top": "905.668px",
+"width": "419px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Pooled negative nasopharyngeal specimens",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 27,
+"left": "500px",
+"top": "908.668px",
+"width": "249px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "collected from 2019-06-29 to 2019-07-14 from a US site",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 27,
+"left": "397px",
+"top": "927.668px",
+"width": "352px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Purified SARS-CoV-2 viral genomic RNA (USA_WA1/2020)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 27,
+"left": "209px",
+"top": "945.668px",
+"width": "454px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": " World Reference Center for Emerging Viruses and Arboviruses (WRCEVA)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 27,
+"left": "79px",
+"top": "964.445px",
+"width": "664px",
+"height": "37px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "purified SARS-2 genomic RNA was spiked into 200\u03bcL of pooled NCM containing 10\u03bcL MS2 internal control that was pre-mixed with easyMag\u00ae lysis buffer to bring the total volume to 1mL",
+"labels": [
+{
+"id": 101,
+"text": "Specimen/Synthetic Specimen/Other components"
+},
+{
+"id": 102,
+"text": "Specimen/Synthetic Specimen/Production method"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 28,
+"left": "329px",
+"top": "54.7793px",
+"width": "28px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 28,
+"left": "296px",
+"top": "74px",
+"width": "61px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 28,
+"left": "357px",
+"top": "74px",
+"width": "56px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
