@@ -68,9 +68,9 @@
 67,Limit of Detection (LOD)/Units
 68,Limit of Detection (LOD)/Minimum Replicates
 69,Limit of Detection (LOD)/Concentration Range
-70,Limit of Detection (LOD)/Concentration Range/Steps/Number of steps
-71,Limit of Detection (LOD)/Concentration Range/Steps/Dilution per step
-72,Nucleic acid amplification/Reaction/Volume in μl
+70,Limit of Detection (LOD)/Concentration Range/Number of steps
+71,Limit of Detection (LOD)/Concentration Range/Dilution per step
+72,Nucleic acid amplification/Reaction/Volume in μL
 73,Meta/Not specified
 74,Meta/Error
 75,Specimen/Collection protocol
@@ -87,3 +87,20 @@
 86,Specimen/Synthetic Specimen/Clinical matrix/Source
 87,Potential interfering substances
 88,Potential interfering substances/Test synthetic sample
+89,Time to test result in minutes
+90,Meta/Question to answer
+91,Meta/Reference/To read
+92,Statistics
+93,Statistics/Algorithms
+94,Statistics/Algorithms/Probit
+95,Statistics/Confidence intervals
+96,Statistics/Confidence intervals/Percentage
+97,Statistics/Confidence intervals/Upper value
+98,Statistics/Confidence intervals/Lower value
+99,Meta/Potential error
+100,Meta/Error/Omission
+101,Specimen/Synthetic Specimen/Other components
+102,Specimen/Synthetic Specimen/Production method
+103,Specimen/Synthetic Specimen/Swab type
+104,Specimen/Synthetic Specimen/Transport medium
+105,Controls/Internal/Full process

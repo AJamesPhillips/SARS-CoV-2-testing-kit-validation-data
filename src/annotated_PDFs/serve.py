@@ -97,6 +97,9 @@ def upgrade_meta_data(meta_data):
 def ensure_consistent_labels(meta_data, force_update):
     for annotation in meta_data["annotations"]:
 
+        if "deleted" in annotation and annotation["deleted"]:
+            continue
+
         for label in annotation["labels"]:
 
             label_id = label["id"]

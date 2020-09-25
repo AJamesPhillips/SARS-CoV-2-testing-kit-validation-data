@@ -54,6 +54,9 @@
         #labels_list .label.priority {
             border: thin solid orange;
         }
+        #labels_list .label.used_label {
+            background-color: lightgreen;
+        }
 
         .page_container
         {
@@ -126,11 +129,12 @@
     <script>
         const pdf_file_data = "<PDF_FILE_DATA_JSON>";
 
-        const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data["relative_file_path"]
-        const path_to_pdf_annotations = "/annotation?relative_file_path=" + pdf_file_data["relative_file_path"]
+        const path_to_pdf = "/serve_pdf?relative_file_path=" + pdf_file_data.relative_file_path
+        const path_to_pdf_annotations = "/annotation?relative_file_path=" + pdf_file_data.relative_file_path
 
         const common_labels = "<COMMON_LABELS_DATA_JSON>";
 
+        const not_deleted = annotation => !annotation.deleted
     </script>
 
     <script>
@@ -170,6 +174,35 @@
         {
             label_el_click_listeners.forEach(listener => listener({ id: label.id, text: label.text }))
         }
+
+        const changed_annotation_label_counts = []
+        let label_counts = {}
+        changed_annotations_data_listeners.push(() =>
+        {
+            const new_label_counts = calculate_label_counts(pdf_file_data.annotations)
+            if (JSON.stringify(label_counts) === JSON.stringify(new_label_counts)) return
+
+            changed_annotation_label_counts.forEach(listener => listener({ label_counts, new_label_counts }))
+
+            label_counts = new_label_counts
+        })
+
+        function calculate_label_counts (annotations)
+        {
+            const label_counts = {}
+
+            annotations
+            .filter(not_deleted)
+            .forEach(annotation =>
+            {
+                annotation.labels.forEach(label =>
+                {
+                    label_counts[label.id] = (label_counts[label.id] || 0) + 1
+                })
+            })
+
+            return label_counts
+        }
     </script>
 
     <script>
@@ -207,7 +240,9 @@
         {
             // const els = document.getElementsByClassName(`annotation_${annotation_id}`)
             // return !!els.length
-            return !!pdf_file_data.annotations.find(annotation => annotation.id === annotation_id && !annotation.deleted)
+            return !!pdf_file_data.annotations
+                .filter(not_deleted)
+                .find(annotation => annotation.id === annotation_id)
         }
 
 
@@ -387,7 +422,7 @@
         {
             annotations_list_el.innerHTML = ""
             pdf_file_data.annotations
-                .filter(annotation => !annotation.deleted)
+                .filter(not_deleted)
                 .forEach(add_annotation_list_element)
         }
         changed_annotations_data_listeners.push(refresh_annotations_list)
@@ -531,13 +566,9 @@
         function add_annotations_to_PDF_page ({ page_number })
         {
             pdf_file_data.annotations
-            .filter(annotation => !annotation.deleted)
-            .filter(annotation => {
-                return annotation.page_number === page_number
-            })
-            .forEach(annotation => {
-                create_annotation_el(annotation)
-            })
+            .filter(not_deleted)
+            .filter(annotation => annotation.page_number === page_number)
+            .forEach(create_annotation_el)
         }
     </script>
 
@@ -877,7 +908,7 @@
 
             const priority_label_ids = new Set([
                 // Temporary addition for LOD and synthetic controls labelling work
-                68, 66, 67, 72, 0, 6, 64, 62, 63, 73,
+                68, 66, 67, 72, 0, 6, 64, 62, 63, 73, 86,
             ])
 
             Object.keys(common_labels)
@@ -918,6 +949,19 @@
                         }
                     })
 
+                    changed_annotation_label_counts.push(({ label_counts, new_label_counts }) =>
+                    {
+                        const used_label = (!!new_label_counts[label.id])
+                        if (used_label)
+                        {
+                            label_el.classList.add("used_label")
+                        }
+                        else
+                        {
+                            label_el.classList.remove("used_label")
+                        }
+                    })
+
                     label_el.addEventListener("click", () => label_el_clicked(label))
                 })
 
@@ -931,8 +975,6 @@
             // Need to handle on change for `labels_search_clear` button to work correctly.
             labels_search_el.addEventListener("change", handle_search_text_change)
         }
-
-        render_side_panel()
     </script>
 
     <script>
@@ -954,6 +996,8 @@
     </script>
 
     <script>
+        // Loading progress
+
         let _max_pages = undefined
         let loading_progress_el = document.getElementById("loading_progress")
         function update_loading_progress ({ page_number, max_pages })
@@ -975,15 +1019,18 @@
         //   Dependency on adding mouse event handlers
         // https://mozilla.github.io/pdf.js/examples/index.html#interactive-examples
 
-        const loadingTask = pdfjsLib.getDocument(path_to_pdf)
-        loadingTask.promise.then(function(pdf)
+        function render_pdf ()
         {
-            const pages_container_el = document.getElementById("pages_container")
+            const loadingTask = pdfjsLib.getDocument(path_to_pdf)
+            loadingTask.promise.then(function(pdf)
+            {
+                const pages_container_el = document.getElementById("pages_container")
 
-            update_loading_progress({ max_pages: pdf.numPages })
-            // assume there is always at least 1 page to render
-            render_pdf_page({ pdf, pages_container_el, page_number: 1 })
-        })
+                update_loading_progress({ max_pages: pdf.numPages })
+                // assume there is always at least 1 page to render
+                render_pdf_page({ pdf, pages_container_el, page_number: 1 })
+            })
+        }
 
         function render_pdf_page ({ pdf, pages_container_el, page_number })
         {
@@ -1049,6 +1096,12 @@
         {
             update_page_location_and_highlighted_annotations()
         }
+    </script>
+
+    <script>
+        render_side_panel()
+        annotation_data_changed() // hack to get label "used_label" colour to sync
+        render_pdf()
     </script>
 </body>
 </html>

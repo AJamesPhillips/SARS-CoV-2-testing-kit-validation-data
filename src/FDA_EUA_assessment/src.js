@@ -24,13 +24,15 @@ var DATA_KEYS;
 (function (DATA_KEYS) {
     DATA_KEYS["test_descriptor__manufacturer_name"] = "test_descriptor__manufacturer_name";
     DATA_KEYS["test_descriptor__test_name"] = "test_descriptor__test_name";
+    DATA_KEYS["claims__controls__internal__human_gene_target"] = "claims__controls__internal__human_gene_target";
     DATA_KEYS["claims__limit_of_detection__minimum_replicates"] = "claims__limit_of_detection__minimum_replicates";
     DATA_KEYS["claims__limit_of_detection__value"] = "claims__limit_of_detection__value";
     DATA_KEYS["claims__limit_of_detection__units"] = "claims__limit_of_detection__units";
     DATA_KEYS["claims__primers_and_probes__sequences"] = "claims__primers_and_probes__sequences";
     DATA_KEYS["claims__primers_and_probes__sources"] = "claims__primers_and_probes__sources";
     DATA_KEYS["claims__reaction_volume_uL"] = "claims__reaction_volume_uL";
-    DATA_KEYS["claims__supported_specimen_types"] = "claims__supported_specimen_types";
+    DATA_KEYS["claims__specimen__supported_types"] = "claims__supported_specimen_types";
+    DATA_KEYS["claims__specimen__transport_medium"] = "claims__specimen__transport_medium";
     DATA_KEYS["claims__target_viral_genes"] = "claims__target_viral_genes";
     DATA_KEYS["validation_condition__author"] = "validation_condition__author";
     DATA_KEYS["validation_condition__comparator_test"] = "validation_condition__comparator_test";
@@ -39,6 +41,7 @@ var DATA_KEYS;
     DATA_KEYS["validation_condition__specimen_type"] = "validation_condition__specimen_type";
     DATA_KEYS["validation_condition__swab_type"] = "validation_condition__swab_type";
     DATA_KEYS["validation_condition__synthetic_specimen__clinical_matrix"] = "validation_condition__synthetic_specimen__clinical_matrix";
+    DATA_KEYS["validation_condition__synthetic_specimen__clinical_matrix_source"] = "validation_condition__synthetic_specimen__clinical_matrix_source";
     DATA_KEYS["validation_condition__synthetic_specimen__viral_material"] = "validation_condition__synthetic_specimen__viral_material";
     DATA_KEYS["validation_condition__synthetic_specimen__viral_material_source"] = "validation_condition__synthetic_specimen__viral_material_source";
     DATA_KEYS["validation_condition__transport_medium"] = "validation_condition__transport_medium";
@@ -52,25 +55,23 @@ var DATA_KEYS;
 var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
     // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
     // [DATA_KEYS.test_descriptor__test_name]: 1,
+    _a[DATA_KEYS.claims__controls__internal__human_gene_target] = 83,
     _a[DATA_KEYS.claims__limit_of_detection__minimum_replicates] = 68,
     _a[DATA_KEYS.claims__limit_of_detection__value] = 66,
     _a[DATA_KEYS.claims__limit_of_detection__units] = 67,
     _a[DATA_KEYS.claims__primers_and_probes__sequences] = 78,
     _a[DATA_KEYS.claims__primers_and_probes__sources] = 79,
     _a[DATA_KEYS.claims__reaction_volume_uL] = 72,
-    _a[DATA_KEYS.claims__supported_specimen_types] = 0,
+    _a[DATA_KEYS.claims__specimen__supported_types] = 0,
+    _a[DATA_KEYS.claims__specimen__transport_medium] = 34,
     _a[DATA_KEYS.claims__target_viral_genes] = 6,
     _a[DATA_KEYS.validation_condition__author] = 24,
     _a[DATA_KEYS.validation_condition__date] = 25,
     _a[DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix] = 64,
+    _a[DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix_source] = 86,
     _a[DATA_KEYS.validation_condition__synthetic_specimen__viral_material] = 62,
     _a[DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source] = 63,
     _a);
-var LABEL_IDS_MAPPED_TO_DATA_KEY = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
-var LABEL_ID__META__NOT_SPECIFIED = 73;
-var LABEL_ID__META__ERROR = 74;
-LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__NOT_SPECIFIED);
-LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__ERROR);
 function get_all_annotation_label_ids() {
     var all_annotation_label_ids = new Set();
     Object.values(annotations_by_test_name)
@@ -88,6 +89,37 @@ function get_all_annotation_label_ids() {
     return all_annotation_label_ids;
 }
 var all_annotation_label_ids = Array.from(get_all_annotation_label_ids());
+// Report on unused labels
+var LABEL_IDS_MAPPED_TO_DATA_KEY = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
+var LABEL_ID__META__NOT_SPECIFIED = 73;
+var LABEL_ID__META__ERROR = 74;
+var LABEL_ID__META__POTENTIAL_ERROR = 99;
+var LABEL_IDS_HANDLED_ELSE_WHERE = [
+    LABEL_ID__META__NOT_SPECIFIED,
+    LABEL_ID__META__ERROR,
+    LABEL_ID__META__POTENTIAL_ERROR,
+];
+LABEL_IDS_HANDLED_ELSE_WHERE.forEach(function (label_id) { return LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id); });
+var LABEL_IDS_TO_SILENCE = [
+    70,
+    71,
+    84,
+    85,
+    // 86, // -> Specimen/Synthetic Specimen/Clinical matrix/Source,
+    87,
+    88,
+    75,
+    89,
+    90,
+    96,
+    98,
+    97,
+    100,
+    82,
+    101,
+    102,
+];
+LABEL_IDS_TO_SILENCE.forEach(function (label_id) { return LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id); });
 var unhandled_label_ids = all_annotation_label_ids.filter(function (x) { return !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x); });
 console.log("Unhandled label ids: " + unhandled_label_ids.map(function (id) { return "\n * " + id + " -> " + labels[id]; }));
 var extracted_data = fda_eua_parsed_data
@@ -158,7 +190,7 @@ function apply_data_string(row, data_key, annotations) {
             var append_text = value ? value + " (not specified)" : "Not specified";
             value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> " + append_text;
         }
-        if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR; })) {
+        if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR || label.id === LABEL_ID__META__POTENTIAL_ERROR; })) {
             value = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span> " + value;
         }
         if (annotation.comment) {
@@ -198,7 +230,20 @@ var headers = [
         data_key: null,
         category: "test_claims",
         children: [
-            { title: "Supported specimen types", data_key: DATA_KEYS.claims__supported_specimen_types },
+            {
+                title: "Specimens",
+                data_key: null,
+                children: [
+                    {
+                        title: "Supported specimen types",
+                        data_key: DATA_KEYS.claims__specimen__supported_types
+                    },
+                    {
+                        title: "Transport medium",
+                        data_key: DATA_KEYS.claims__specimen__transport_medium
+                    },
+                ]
+            },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Appropriate testing population",
@@ -265,6 +310,13 @@ var headers = [
             //     // primer and probe sets and briefly describe what they detect. Please include the nucleic acid sequences for all primers and probes used in the test. Please indicate if the test uses biotin-Streptavidin/avidin chemistry
             // },
             {
+                title: "Controls",
+                data_key: null,
+                children: [
+                    { title: "Human gene", data_key: DATA_KEYS.claims__controls__internal__human_gene_target },
+                ]
+            },
+            {
                 title: "RNA extraction",
                 data_key: null,
                 children: [
@@ -330,6 +382,7 @@ var headers = [
                     { title: "Viral material", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material },
                     { title: "Viral material source", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source },
                     { title: "Clinical matrix", data_key: DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix },
+                    { title: "Clinical matrix source", data_key: DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix_source },
                 ]
             },
             {
@@ -463,9 +516,6 @@ function iterate_lowest_header(headers, func) {
 function populate_table_body(headers, data) {
     var table_el = document.getElementById("data_table");
     var tbody_el = table_el.getElementsByTagName("tbody")[0];
-    var win = window;
-    win.click_el = undefined;
-    win.click_el_func = undefined;
     data.forEach(function (data_row) {
         var row = tbody_el.insertRow();
         iterate_lowest_header(headers, function (header) {
@@ -474,26 +524,21 @@ function populate_table_body(headers, data) {
                 var data_node = data_row[header.data_key];
                 var value = data_node.value.toString();
                 var value_title = html_safe_ish(value);
-                var value_el = document.createElement("div");
-                value_el.innerHTML = value;
-                value_el.title = value_title;
-                // value_el.addEventListener("click", () =>
-                // {
-                //     debugger
-                //     value_el.classList.toggle("expanded")
-                // })
-                cell.appendChild(value_el);
+                var value_el_1 = document.createElement("div");
+                value_el_1.innerHTML = value;
+                value_el_1.title = value_title;
+                value_el_1.addEventListener("click", function () {
+                    debugger;
+                    value_el_1.classList.toggle("expanded");
+                });
+                cell.appendChild(value_el_1);
+                var ref_container_el = document.createElement("div");
                 var refs = data_node.refs;
-                cell.innerHTML += refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
-                if (!win.click_el_func) {
-                    win.click_el_func = function () { return console.log("hellow world!!!"); };
-                    value_el.onclick = win.click_el_func;
-                    win.click_el = value_el;
-                }
+                ref_container_el.innerHTML = refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
+                cell.appendChild(ref_container_el);
             }
         });
     });
-    debugger;
 }
 // DO NOT USE THIS IN PRODUCTION
 function html_safe_ish(value) {

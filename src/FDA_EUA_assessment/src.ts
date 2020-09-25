@@ -69,13 +69,15 @@ declare var annotations_by_test_name: ANNOTATIONS_BY_TEST_NAME
 enum DATA_KEYS {
     test_descriptor__manufacturer_name = "test_descriptor__manufacturer_name",
     test_descriptor__test_name = "test_descriptor__test_name",
+    claims__controls__internal__human_gene_target = "claims__controls__internal__human_gene_target",
     claims__limit_of_detection__minimum_replicates = "claims__limit_of_detection__minimum_replicates",
     claims__limit_of_detection__value = "claims__limit_of_detection__value",
     claims__limit_of_detection__units = "claims__limit_of_detection__units",
     claims__primers_and_probes__sequences = "claims__primers_and_probes__sequences",
     claims__primers_and_probes__sources = "claims__primers_and_probes__sources",
     claims__reaction_volume_uL = "claims__reaction_volume_uL",
-    claims__supported_specimen_types = "claims__supported_specimen_types",
+    claims__specimen__supported_types = "claims__supported_specimen_types",
+    claims__specimen__transport_medium = "claims__specimen__transport_medium",
     claims__target_viral_genes = "claims__target_viral_genes",
     validation_condition__author = "validation_condition__author",
     validation_condition__comparator_test = "validation_condition__comparator_test",
@@ -84,6 +86,7 @@ enum DATA_KEYS {
     validation_condition__specimen_type = "validation_condition__specimen_type",
     validation_condition__swab_type = "validation_condition__swab_type",
     validation_condition__synthetic_specimen__clinical_matrix = "validation_condition__synthetic_specimen__clinical_matrix",
+    validation_condition__synthetic_specimen__clinical_matrix_source = "validation_condition__synthetic_specimen__clinical_matrix_source",
     validation_condition__synthetic_specimen__viral_material = "validation_condition__synthetic_specimen__viral_material",
     validation_condition__synthetic_specimen__viral_material_source = "validation_condition__synthetic_specimen__viral_material_source",
     validation_condition__transport_medium = "validation_condition__transport_medium",
@@ -97,17 +100,20 @@ enum DATA_KEYS {
 const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
     // [DATA_KEYS.test_descriptor__test_name]: 1,
+    [DATA_KEYS.claims__controls__internal__human_gene_target]: 83,
     [DATA_KEYS.claims__limit_of_detection__minimum_replicates]: 68,
     [DATA_KEYS.claims__limit_of_detection__value]: 66,
     [DATA_KEYS.claims__limit_of_detection__units]: 67,
     [DATA_KEYS.claims__primers_and_probes__sequences]: 78,
     [DATA_KEYS.claims__primers_and_probes__sources]: 79,
     [DATA_KEYS.claims__reaction_volume_uL]: 72,
-    [DATA_KEYS.claims__supported_specimen_types]: 0,
+    [DATA_KEYS.claims__specimen__supported_types]: 0,
+    [DATA_KEYS.claims__specimen__transport_medium]: 34,
     [DATA_KEYS.claims__target_viral_genes]: 6,
     [DATA_KEYS.validation_condition__author]: 24,
     [DATA_KEYS.validation_condition__date]: 25,
     [DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix]: 64,
+    [DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix_source]: 86,
     [DATA_KEYS.validation_condition__synthetic_specimen__viral_material]: 62,
     [DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source]: 63,
     // [DATA_KEYS.validation_condition__specimen_type]: 1,
@@ -122,11 +128,6 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     // [DATA_KEYS.metrics__confusion_matrix__true_negatives]: 1,
     // [DATA_KEYS.metrics__confusion_matrix__false_positives]: 1,
 }
-const LABEL_IDS_MAPPED_TO_DATA_KEY = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
-const LABEL_ID__META__NOT_SPECIFIED = 73
-const LABEL_ID__META__ERROR = 74
-LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__NOT_SPECIFIED)
-LABEL_IDS_MAPPED_TO_DATA_KEY.add(LABEL_ID__META__ERROR)
 
 
 function get_all_annotation_label_ids ()
@@ -153,8 +154,43 @@ function get_all_annotation_label_ids ()
 }
 const all_annotation_label_ids = Array.from(get_all_annotation_label_ids())
 
-const unhandled_label_ids = all_annotation_label_ids.filter(x => !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x))
 
+// Report on unused labels
+
+const LABEL_IDS_MAPPED_TO_DATA_KEY = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
+const LABEL_ID__META__NOT_SPECIFIED = 73
+const LABEL_ID__META__ERROR = 74
+const LABEL_ID__META__POTENTIAL_ERROR = 99
+
+const LABEL_IDS_HANDLED_ELSE_WHERE = [
+    LABEL_ID__META__NOT_SPECIFIED,
+    LABEL_ID__META__ERROR,
+    LABEL_ID__META__POTENTIAL_ERROR,
+]
+LABEL_IDS_HANDLED_ELSE_WHERE.forEach(label_id => LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id))
+
+const LABEL_IDS_TO_SILENCE = [
+    70, // -> Limit of Detection (LOD)/Concentration Range/Number of steps,
+    71, // -> Limit of Detection (LOD)/Concentration Range/Dilution per step,
+    84, // -> Controls/Internal/Extraction control material/Description,
+    85, // -> Controls/Internal/Extraction control material/Source,
+    // 86, // -> Specimen/Synthetic Specimen/Clinical matrix/Source,
+    87, // -> Potential interfering substances,
+    88, // -> Potential interfering substances/Test synthetic sample,
+    75, // -> Specimen/Collection protocol,
+    89, // -> Time to test result in minutes,
+    90, // -> Meta/Question to answer,
+    96, // -> Statistics/Confidence intervals/Percentage,
+    98, // -> Statistics/Confidence intervals/Lower value,
+    97, // -> Statistics/Confidence intervals/Upper value,
+    100, // -> Meta/Error/Omission,
+    82, // -> Controls/Internal,
+    101, // -> Specimen/Synthetic Specimen/Other components,
+    102, // -> Specimen/Synthetic Specimen/Production method
+]
+LABEL_IDS_TO_SILENCE.forEach(label_id => LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id))
+
+const unhandled_label_ids = all_annotation_label_ids.filter(x => !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x))
 console.log(`Unhandled label ids: ${unhandled_label_ids.map(id => `\n * ${id} -> ${labels[id]}`)}`)
 
 // interface FDA_EUA_PARSED_DATA_BY_TEST_NAME
@@ -310,7 +346,7 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
             value = `<span class="warning_symbol" title="Value not specified">⚠</span> ${append_text}`
         }
 
-        if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR))
+        if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR || label.id === LABEL_ID__META__POTENTIAL_ERROR))
         {
             value = `<span class="error_symbol" title="Potential error">⚠</span> ` + value
         }
@@ -542,7 +578,20 @@ const headers: HEADERS = [
         data_key: null,
         category: "test_claims",
         children: [
-            { title: "Supported specimen types", data_key: DATA_KEYS.claims__supported_specimen_types, },
+            {
+                title: "Specimens",
+                data_key: null,
+                children: [
+                    {
+                        title: "Supported specimen types",
+                        data_key: DATA_KEYS.claims__specimen__supported_types,
+                    },
+                    {
+                        title: "Transport medium",
+                        data_key: DATA_KEYS.claims__specimen__transport_medium,
+                    },
+                ]
+            },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Appropriate testing population",
@@ -606,8 +655,15 @@ const headers: HEADERS = [
             { title: "Compatible equipment", data_key: null, },
             // {
                 // Product Overview/Test Principle...
-            //     // primer and probe sets and briefly describe what they detect. Please include the nucleic acid sequences for all primers and probes used in the test. Please indicate if the test uses biotin-Streptavidin/avidin chemistry
-            // },
+                //     // primer and probe sets and briefly describe what they detect. Please include the nucleic acid sequences for all primers and probes used in the test. Please indicate if the test uses biotin-Streptavidin/avidin chemistry
+                // },
+            {
+                title: "Controls",
+                data_key: null,
+                children: [
+                    { title: "Human gene", data_key: DATA_KEYS.claims__controls__internal__human_gene_target, },
+                ]
+            },
             {
                 title: "RNA extraction",
                 data_key: null,
@@ -674,6 +730,7 @@ const headers: HEADERS = [
                     { title: "Viral material", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material, },
                     { title: "Viral material source", data_key: DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source, },
                     { title: "Clinical matrix", data_key: DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix, },
+                    { title: "Clinical matrix source", data_key: DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix_source, },
                 ]
             },
             {
@@ -832,10 +889,6 @@ function populate_table_body (headers: HEADERS, data: DATA)
     const table_el = document.getElementById("data_table")
     const tbody_el = table_el.getElementsByTagName("tbody")[0]
 
-    const win: any = window
-    win.click_el = undefined
-    win.click_el_func = undefined
-
     data.forEach(data_row =>
     {
         const row = tbody_el.insertRow()
@@ -852,28 +905,22 @@ function populate_table_body (headers: HEADERS, data: DATA)
                 const value_el = document.createElement("div")
                 value_el.innerHTML = value
                 value_el.title = value_title
-                // value_el.addEventListener("click", () =>
-                // {
-                //     debugger
-                //     value_el.classList.toggle("expanded")
-                // })
+                value_el.addEventListener("click", () =>
+                {
+                    debugger
+                    value_el.classList.toggle("expanded")
+                })
 
                 cell.appendChild(value_el)
 
+                const ref_container_el = document.createElement("div")
                 const refs = data_node.refs
-                cell.innerHTML += refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
+                ref_container_el.innerHTML = refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
 
-                if (!win.click_el_func)
-                {
-                    win.click_el_func = () => console.log("hellow world!!!")
-                    value_el.onclick = win.click_el_func
-                    win.click_el = value_el
-                }
+                cell.appendChild(ref_container_el)
             }
         })
     })
-
-    debugger
 }
 
 
