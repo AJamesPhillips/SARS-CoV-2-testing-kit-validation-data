@@ -40,12 +40,25 @@
         }
         #annotation_details
         {
-            height: 20%;
+            height: 12%;
         }
         #labels_list
         {
-            height: 40%;
+            height: 48%;
         }
+
+        .annotation_list_element
+        {
+            margin: 5px;
+            padding: 2px 2px;
+            border-radius: 2px;
+        }
+
+        #annotation_text, #annotation_comment
+        {
+            width: 100%;
+        }
+
         #labels_list .label {
             border: thin solid #ccc;
             border-radius: 2px;
@@ -88,13 +101,6 @@
         .annotation.invalid
         {
             background-color: rgba(255, 50, 50, 0.5);
-        }
-
-        .annotation_list_element
-        {
-            margin: 5px;
-            padding: 2px 2px;
-            border-radius: 2px;
         }
     </style>
 
@@ -428,13 +434,22 @@
         changed_annotations_data_listeners.push(refresh_annotations_list)
 
 
-        function add_annotation_list_element ({ id, page_number, colour, text, labels, dirty })
+        function add_annotation_list_element ({ id, page_number, colour, text, labels, comment, dirty })
         {
             const annotation_list_el = document.createElement("div")
 
             const unsaved_warning = (dirty ? `<span style="background-color: yellow;">⚠</span> ` : "")
             const labels_html = labels.map(l => `<div>${l.text}</div>`).join("")
-            const display_html = unsaved_warning + `${text} <br><br><div style="float: left;"><span style="color: #777; font-size: 10px;">Labels: </span>${labels_html}</div><div style="float: right; color: #777; font-size: 10px;">page: ${page_number}</div> <div style="clear: both;"></div>`
+            const display_html = unsaved_warning + `${text} <br><br>
+            <div style="float: left;">
+                <span style="color: #777; font-size: 10px;">Comment: ${comment}</span>
+            </div>
+            <br>
+            <div style="float: left;">
+                <span style="color: #777; font-size: 10px;">Labels: </span>${labels_html}
+            </div>
+            <div style="float: right; color: #777; font-size: 10px;">page: ${page_number}</div>
+            <div style="clear: both;"></div>`
 
             annotation_list_el.innerHTML = display_html
             annotation_list_el.style.backgroundColor = colour
@@ -908,7 +923,7 @@
 
             const priority_label_ids = new Set([
                 // Temporary addition for LOD and synthetic controls labelling work
-                68, 66, 67, 72, 0, 6, 64, 62, 63, 73, 86,
+                68, 66, 67, 72, 0, 6, 64, 62, 63, 73, 86, 78, 83
             ])
 
             Object.keys(common_labels)

@@ -336,19 +336,26 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
 {
     if (annotations.length === 0) return
 
+    const WARNING_HTML_SYMBOL = `<span class="warning_symbol" title="Value not specified">⚠</span>`
+    const ERROR_HTML_SYMBOL = `<span class="error_symbol" title="Potential error">⚠</span>`
+
+    let includes_warning = false
+    let includes_error = false
     let comments = ""
     let value = annotations.map(annotation => {
         let value = annotation.text
 
         if (annotation.labels.find(label => label.id === LABEL_ID__META__NOT_SPECIFIED))
         {
+            includes_warning = true
             let append_text = value ? value + " (not specified)" : "Not specified"
-            value = `<span class="warning_symbol" title="Value not specified">⚠</span> ${append_text}`
+            value = `${WARNING_HTML_SYMBOL} ${append_text}`
         }
 
         if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR || label.id === LABEL_ID__META__POTENTIAL_ERROR))
         {
-            value = `<span class="error_symbol" title="Potential error">⚠</span> ` + value
+            includes_error = true
+            value = `${ERROR_HTML_SYMBOL} ${value}`
         }
 
         if (annotation.comment)
@@ -358,6 +365,16 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
 
         return value
     }).join(", ")
+
+    if (includes_warning)
+    {
+        //value = `${WARNING_HTML_SYMBOL} ${value}`
+    }
+
+    if (includes_error)
+    {
+        //value = `${ERROR_HTML_SYMBOL} ${value}`
+    }
 
     value = value + "<br/>" + comments
 

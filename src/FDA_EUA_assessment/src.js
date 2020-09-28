@@ -183,21 +183,33 @@ function filter_annotations_for_label(annotation_file, label_id) {
 function apply_data_string(row, data_key, annotations) {
     if (annotations.length === 0)
         return;
+    var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
+    var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
+    var includes_warning = false;
+    var includes_error = false;
     var comments = "";
     var value = annotations.map(function (annotation) {
         var value = annotation.text;
         if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__NOT_SPECIFIED; })) {
+            includes_warning = true;
             var append_text = value ? value + " (not specified)" : "Not specified";
-            value = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span> " + append_text;
+            value = WARNING_HTML_SYMBOL + " " + append_text;
         }
         if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR || label.id === LABEL_ID__META__POTENTIAL_ERROR; })) {
-            value = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span> " + value;
+            includes_error = true;
+            value = ERROR_HTML_SYMBOL + " " + value;
         }
         if (annotation.comment) {
             comments += "<span title=\"" + html_safe_ish(annotation.comment) + "\">C</span> ";
         }
         return value;
     }).join(", ");
+    if (includes_warning) {
+        //value = `${WARNING_HTML_SYMBOL} ${value}`
+    }
+    if (includes_error) {
+        //value = `${ERROR_HTML_SYMBOL} ${value}`
+    }
     value = value + "<br/>" + comments;
     var refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
     var data_node = { value: value, refs: refs };
