@@ -2,6 +2,325 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138059.pdf",
 "file_sha1_hash": "cae94bea8d49e7a640bc87156d836bf8c48b4eea",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "102px",
+"top": "170.445px",
+"width": "715px",
+"height": "86px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "anterior nasal swabs, selfcollected at a healthcare location or collected by a healthcare worker, and nasopharyngeal and oropharyngeal swabs, mid-turbinate nasal swabs, nasopharyngeal washes/aspirates or nasal aspirates, and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"deleted": true
+},
+{
+"id": 2,
+"page_number": 4,
+"left": "102px",
+"top": "586.333px",
+"width": "88px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "S, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "S1, S2"
+},
+{
+"id": 3,
+"page_number": 4,
+"left": "284px",
+"top": "1005.89px",
+"width": "138px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 17,
+"left": "508px",
+"top": "335.223px",
+"width": "239px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "whole viral SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 17,
+"left": "148px",
+"top": "361.223px",
+"width": "319px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ATCC, Manassas, VA (ATCC VR-1986D)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 17,
+"left": "349px",
+"top": "381.223px",
+"width": "467px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TRIzol and QIAamp extracted pooled clinical nasopharyngeal matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 17,
+"left": "149px",
+"top": "400.223px",
+"width": "16px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 18,
+"left": "150px",
+"top": "125.889px",
+"width": "348px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "heat inactivated SARS-CoV-2 virus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 18,
+"left": "603px",
+"top": "129.889px",
+"width": "214px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ATCC, Manassas, VA (VR1986HK)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 18,
+"left": "323px",
+"top": "151.889px",
+"width": "301px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative clinical nasopharyngeal matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 18,
+"left": "608px",
+"top": "146.889px",
+"width": "21px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 18,
+"left": "291px",
+"top": "294px",
+"width": "26px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 18,
+"left": "406px",
+"top": "361px",
+"width": "44px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.625",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 18,
+"left": "452px",
+"top": "360px",
+"width": "77px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 18,
+"left": "778px",
+"top": "678px",
+"width": "37px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 19,
+"left": "354px",
+"top": "110px",
+"width": "35px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 17,
+"page_number": 19,
+"left": "177px",
+"top": "604.334px",
+"width": "46px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.625",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 18,
+"page_number": 19,
+"left": "696px",
+"top": "602.334px",
+"width": "35px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

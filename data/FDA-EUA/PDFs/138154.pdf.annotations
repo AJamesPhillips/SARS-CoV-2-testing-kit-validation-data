@@ -2,6 +2,210 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138154.pdf",
 "file_sha1_hash": "bcd33d5ae83e1c69d9279ee7e6449f297108c51c",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "97px",
+"top": "352px",
+"width": "674px",
+"height": "46px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal, nasopharyngeal or oropharyngeal swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"deleted": true
+},
+{
+"id": 2,
+"page_number": 4,
+"left": "466px",
+"top": "352.333px",
+"width": "275px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 4,
+"left": "159px",
+"top": "330.333px",
+"width": "514px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "References: CDC 2019-Novel Coronavirus (2019-nCoV) RealTime RT-PCR Diagnostic Panel",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 4,
+"left": "188px",
+"top": "396.333px",
+"width": "617px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "375px",
+"top": "797.667px",
+"width": "149px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "562px",
+"top": "795.667px",
+"width": "36px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "464px",
+"top": "820.667px",
+"width": "335px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled respiratory matrix (NP and OP swabs collected in liquid Amies)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "286px",
+"top": "836.667px",
+"width": "24px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"deleted": true
+},
+{
+"id": 10,
+"deleted": true
+},
+{
+"id": 11,
+"page_number": 6,
+"left": "536px",
+"top": "445.333px",
+"width": "43px",
+"height": "76px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "9",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 6,
+"left": "208px",
+"top": "447.333px",
+"width": "193px",
+"height": "85px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 6,
+"left": "612px",
+"top": "825.889px",
+"width": "41px",
+"height": "94px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "29",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Using Precipitor instead of Zymo"
+}
+],
 "comments": []
 }

@@ -2,6 +2,198 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137742.pdf",
 "file_sha1_hash": "b0ac4118fc46ebd0e3a8ee2743f0c7dbdd9a38fd",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "150px",
+"top": "865.889px",
+"width": "560px",
+"height": "52px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal aspirates, nasal washes and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "320px",
+"top": "651.222px",
+"width": "144px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "682px",
+"top": "683.222px",
+"width": "58px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "439px",
+"top": "699.222px",
+"width": "131px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "HPRT1",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 15,
+"left": "97px",
+"top": "1123.22px",
+"width": "584px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated SARS\u2011CoV\u20112 viral culture (BetaCoV/France/IDF0571/2020, GISAID EPI ISL 411219)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 16,
+"left": "105px",
+"top": "103.223px",
+"width": "214px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "VIRPATH laboratory, Lyon, France",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 16,
+"left": "377px",
+"top": "105.223px",
+"width": "280px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "lysed negative clinical nasopharyngeal swabs",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 16,
+"left": "644px",
+"top": "97.2227px",
+"width": "23px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 16,
+"left": "621px",
+"top": "137.777px",
+"width": "83px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 16,
+"left": "100px",
+"top": "253.777px",
+"width": "31px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "380",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 16,
+"left": "132px",
+"top": "254.777px",
+"width": "131px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

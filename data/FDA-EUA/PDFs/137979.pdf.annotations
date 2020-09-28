@@ -2,6 +2,312 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137979.pdf",
 "file_sha1_hash": "451b904845a2e36d736519dc49ddc99a028373a5",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "93px",
+"top": "361px",
+"width": "734px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP) and oropharyngeal (OP) swabs, bronchoalveolar lavage fluid (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 1,
+"left": "395px",
+"top": "679.778px",
+"width": "102px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"deleted": true
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "93px",
+"top": "173.444px",
+"width": "723px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "hydroxypyruvate reductase gene from the pumpkin plant, in Armored RNA particle that has been diluted in negative human plasma",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": "Clinical matrix not the same as that of the test."
+},
+{
+"id": 4,
+"page_number": 8,
+"left": "215px",
+"top": "473.778px",
+"width": "230px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "synthetic SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 8,
+"left": "446px",
+"top": "475.778px",
+"width": "153px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare, AccuPlex COVID-19",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 8,
+"left": "192px",
+"top": "487.778px",
+"width": "151px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "simulated nasal matrix (SNM)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 8,
+"left": "331px",
+"top": "484.778px",
+"width": "16px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 8,
+"left": "605px",
+"top": "531.223px",
+"width": "24px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.100",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "genome copies / \u03bcL"
+},
+{
+"id": 9,
+"page_number": 8,
+"left": "649px",
+"top": "532.223px",
+"width": "64px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 8,
+"left": "330px",
+"top": "654.889px",
+"width": "189px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated cultured SARS-CoV-2 virus (USA-WA1/2020)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 8,
+"left": "603px",
+"top": "655.334px",
+"width": "131px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources; NR-52287",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 8,
+"left": "761px",
+"top": "518.334px",
+"width": "15px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 8,
+"left": "152px",
+"top": "672.334px",
+"width": "20px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 8,
+"left": "517px",
+"top": "673.334px",
+"width": "39px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.0037",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "TCID50 / mL"
+},
+{
+"id": 15,
+"page_number": 8,
+"left": "555px",
+"top": "674.334px",
+"width": "54px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 8,
+"left": "655px",
+"top": "672.889px",
+"width": "35px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.0022",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+},
+{
+"id": 98,
+"text": "Statistics/Confidence intervals/Lower value"
+}
+],
+"comment": "TCID50 / mL"
+},
+{
+"id": 17,
+"page_number": 8,
+"left": "701px",
+"top": "672.889px",
+"width": "36px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.0099",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+},
+{
+"id": 97,
+"text": "Statistics/Confidence intervals/Upper value"
+}
+],
+"comment": "TCID50 / mL"
+}
+],
 "comments": []
 }

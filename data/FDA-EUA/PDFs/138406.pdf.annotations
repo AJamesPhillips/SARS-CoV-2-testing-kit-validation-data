@@ -35,7 +35,12 @@
 "height": "90px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "This is when the internal control is more important.  And this data could be very valuable for all public health initiatives around the world.",
-"labels": [],
+"labels": [
+{
+"id": 74,
+"text": "Meta/Error"
+}
+],
 "id": 2,
 "comment": ""
 },
@@ -58,10 +63,10 @@
 "width": "638px",
 "height": "69px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "Third party detection system",
+"text": "Hologic Panther Fusion SARS-CoV-2 assay or the Hologic Aptima SARS-CoV-2 Assay (Panther System)",
 "labels": [],
 "id": 4,
-"comment": ""
+"comment": "Third party detection system"
 },
 {
 "page_number": 2,
@@ -110,6 +115,57 @@
 "labels": [],
 "id": 8,
 "comment": ""
+},
+{
+"id": 9,
+"page_number": 1,
+"left": "432px",
+"top": "339px",
+"width": "165px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "457px",
+"top": "433.778px",
+"width": "334px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.01",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "See http://localhost:5003/render_pdf?relative_file_path=../../data/FDA-EUA/PDFs/136156.pdf&highlighted_annotation_ids=3"
+},
+{
+"id": 11,
+"page_number": 5,
+"left": "760px",
+"top": "430.222px",
+"width": "75px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": "http://localhost:5003/render_pdf?relative_file_path=../../data/FDA-EUA/PDFs/136156.pdf&highlighted_annotation_ids=4"
 }
 ],
 "comments": []

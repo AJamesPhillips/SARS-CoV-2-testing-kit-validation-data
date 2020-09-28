@@ -2,6 +2,168 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138178.pdf",
 "file_sha1_hash": "18068f773814fb433c018391a25a9f4b7b5c9302",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "161px",
+"top": "230.222px",
+"width": "599px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal (NS), nasopharyngeal (NP), or oropharyngeal (OP) direct swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "265px",
+"top": "332.667px",
+"width": "225px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "PP1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 15,
+"left": "127px",
+"top": "398.889px",
+"width": "361px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": " gamma irradiated SARS-CoV-2",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 15,
+"left": "477px",
+"top": "395.889px",
+"width": "18px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 15,
+"left": "626px",
+"top": "397.889px",
+"width": "162px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal matrix in buffer",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 15,
+"left": "187px",
+"top": "419.889px",
+"width": "20px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 15,
+"left": "366px",
+"top": "579.777px",
+"width": "108px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 17,
+"left": "364px",
+"top": "1044.22px",
+"width": "28px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.8",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 17,
+"left": "386px",
+"top": "1037.22px",
+"width": "60px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

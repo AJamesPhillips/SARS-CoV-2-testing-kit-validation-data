@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138290.pdf",
 "file_sha1_hash": "42b11decc57ea3bfff5de83359a5960ba20569c6",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "73px",
+"top": "411.111px",
+"width": "757px",
+"height": "91px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, oropharyngeal, and nasopharyngeal swabs) and lower respiratory specimens (such as sputum, bronchioalveolar lavage (BAL), and tracheal aspirates)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "198px",
+"top": "233.778px",
+"width": "214px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 35,
+"left": "80px",
+"top": "262.445px",
+"width": "44px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 35,
+"left": "109px",
+"top": "259.668px",
+"width": "16px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 35,
+"left": "214px",
+"top": "261.668px",
+"width": "364px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "clinical sputum matrix pretreated with 4% NaOH",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": "I hope they left that NaOH to sit in the sputum for a while.  This is not part of the regular extract step so not a great contrived sample."
+},
+{
+"id": 5,
+"page_number": 35,
+"left": "369px",
+"top": "251.668px",
+"width": "17px",
+"height": "37px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 35,
+"left": "420px",
+"top": "498.336px",
+"width": "59px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 26,
+"left": "109px",
+"top": "543.223px",
+"width": "346px",
+"height": "34px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Human \u03b2 globin",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 35,
+"left": "336px",
+"top": "667.668px",
+"width": "35px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 35,
+"left": "371px",
+"top": "670.668px",
+"width": "81px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

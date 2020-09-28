@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137746.pdf",
 "file_sha1_hash": "62f72435671f66523a18f0e3cad3254640bcb953",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "127px",
+"top": "182.111px",
+"width": "676px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal swabs, nasopharyngeal swabs, oropharyngeal swabs, nasopharyngeal wash/aspirate or nasal aspirate) and bronchoalveolar lavage",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "240px",
+"top": "185.667px",
+"width": "358px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "315px",
+"top": "205.667px",
+"width": "199px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "POP7 gene (RNase P (RP))",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 25,
+"left": "556px",
+"top": "285.779px",
+"width": "94px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genomic SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 25,
+"left": "643px",
+"top": "274.779px",
+"width": "19px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 25,
+"left": "268px",
+"top": "304.779px",
+"width": "522px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled nasophrangeal swabs after the initial lysis step of the PureLinkTM Viral RNA/DNA Mini Kit (Thermo Fisher)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 25,
+"left": "453px",
+"top": "302.779px",
+"width": "22px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 25,
+"left": "129px",
+"top": "979.779px",
+"width": "38px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "6.75",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "ORF1ab gene target"
+},
+{
+"id": 8,
+"page_number": 25,
+"left": "559px",
+"top": "978.779px",
+"width": "37px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1.35",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "N gene target"
+},
+{
+"id": 9,
+"page_number": 25,
+"left": "164px",
+"top": "979.779px",
+"width": "40px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

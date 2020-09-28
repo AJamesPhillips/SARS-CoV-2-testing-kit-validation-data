@@ -2,6 +2,180 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138761.pdf",
 "file_sha1_hash": "5be638057a54f50d78c27f86794f9a50b3302fc0",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 2,
+"left": "61px",
+"top": "170.111px",
+"width": "774px",
+"height": "65px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, and oropharyngeal swabs) and bronchioalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 15,
+"left": "388px",
+"top": "342.777px",
+"width": "25px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 15,
+"left": "574px",
+"top": "339.777px",
+"width": "206px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative oropharyngeal swab matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 15,
+"left": "768px",
+"top": "333.777px",
+"width": "20px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 15,
+"left": "231px",
+"top": "361.777px",
+"width": "210px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Accuplex reference material",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 15,
+"left": "431px",
+"top": "354.777px",
+"width": "17px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare?",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 15,
+"left": "664px",
+"top": "398.777px",
+"width": "32px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.150",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 15,
+"left": "697px",
+"top": "396.777px",
+"width": "89px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 15,
+"left": "223px",
+"top": "821.445px",
+"width": "129px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 18,
+"left": "118px",
+"top": "376.889px",
+"width": "482px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [],
+"comment": "Included testing interference from human nucleic acids"
+}
+],
 "comments": []
 }

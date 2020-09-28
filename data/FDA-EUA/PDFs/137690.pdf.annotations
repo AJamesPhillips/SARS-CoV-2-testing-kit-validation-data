@@ -2,6 +2,252 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137690.pdf",
 "file_sha1_hash": "4716121f597e408a58ab775146338d28886a06ad",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "320px",
+"top": "340px",
+"width": "453px",
+"height": "58px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Upper respiratory specimens (such as nasal swabs, nasopharyngeal swabs, oropharyngeal swabs, nasopharyngeal wash/aspirate or nasal aspirate) and Bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"deleted": true
+},
+{
+"id": 2,
+"page_number": 1,
+"left": "321px",
+"top": "404px",
+"width": "50px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "200",
+"labels": [
+{
+"id": 35,
+"text": "Specimen/Volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 1,
+"left": "370px",
+"top": "404px",
+"width": "51px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "500",
+"labels": [
+{
+"id": 35,
+"text": "Specimen/Volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 3,
+"left": "536px",
+"top": "611.333px",
+"width": "184px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 39,
+"left": "327px",
+"top": "371.891px",
+"width": "350px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": " Zeptometrix, catalog number 0810587CFHI",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 39,
+"left": "377px",
+"top": "354.891px",
+"width": "384px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "cultured virus isolate from a US patient (USA-WA1/2020)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 39,
+"left": "211px",
+"top": "421.891px",
+"width": "620px",
+"height": "114px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [],
+"comment": "Protocol for determining LoD"
+},
+{
+"id": 8,
+"page_number": 39,
+"left": "211px",
+"top": "393.445px",
+"width": "245px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "simulated respiratory matrix (SRM)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 39,
+"left": "433px",
+"top": "388.445px",
+"width": "32px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 39,
+"left": "409px",
+"top": "593.668px",
+"width": "273px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ESwab\u2122 Liquid Amies medium [COPAN]",
+"labels": [
+{
+"id": 104,
+"text": "Specimen/Synthetic Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"deleted": true
+},
+{
+"id": 12,
+"page_number": 39,
+"left": "285px",
+"top": "892.891px",
+"width": "58px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.0023",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 39,
+"left": "341px",
+"top": "890.891px",
+"width": "72px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 39,
+"left": "433px",
+"top": "751.777px",
+"width": "37px",
+"height": "77px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "69",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 3,
+"left": "211px",
+"top": "652.222px",
+"width": "436px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "equine arteritis virus (EAV)",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

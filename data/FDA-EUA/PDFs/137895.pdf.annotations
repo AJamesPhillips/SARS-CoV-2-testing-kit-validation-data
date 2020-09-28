@@ -2,6 +2,299 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137895.pdf",
 "file_sha1_hash": "59bd38d249d9cfa89adf46a51d9732be25b0a401",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "184px",
+"top": "216.111px",
+"width": "335px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal and oropharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "304px",
+"top": "109.667px",
+"width": "215px",
+"height": "43px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 4,
+"left": "252px",
+"top": "149.667px",
+"width": "163px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 5,
+"left": "82px",
+"top": "214.444px",
+"width": "116px",
+"height": "87px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N2"
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "155px",
+"top": "710.222px",
+"width": "648px",
+"height": "124px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 29,
+"left": "495px",
+"top": "84.8906px",
+"width": "116px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 29,
+"left": "405px",
+"top": "108.891px",
+"width": "28px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "10",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 29,
+"left": "431px",
+"top": "108.891px",
+"width": "271px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / reaction",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 29,
+"left": "258px",
+"top": "147.113px",
+"width": "415px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5 upper respiratory samples (oropharyngeal swabs)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 29,
+"left": "127px",
+"top": "166.113px",
+"width": "18px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 29,
+"left": "72px",
+"top": "193.555px",
+"width": "121px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "whole viral genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 29,
+"left": "236px",
+"top": "194.555px",
+"width": "552px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "cells infected with SARS-CoV-2 obtained from a COVID-19 positive specimen in Hefei, China (COV20851-2)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 29,
+"left": "694px",
+"top": "105.555px",
+"width": "47px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Marked not specified because a) the input clinical volume can be up to 3.5 ml according to Qiagen's QIAamp DSP Viral RNA Mini Kit, b) it's not clear if 140 \u00b5L was used for the extraction step, c) if 60 \u00b5L was eluted from RNA extraction was 5 \u00b5L of this used for the test to go into each reaction volume?"
+},
+{
+"id": 13,
+"page_number": 9,
+"left": "466px",
+"top": "1023.44px",
+"width": "242px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Up to 3500",
+"labels": [
+{
+"id": 35,
+"text": "Specimen/Volume ul"
+}
+],
+"comment": "According to Qiagen's QIAamp DSP Viral RNA Mini Kit"
+},
+{
+"id": 14,
+"page_number": 9,
+"left": "624px",
+"top": "1042.67px",
+"width": "87px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "140",
+"labels": [
+{
+"id": 11,
+"text": "RNA extraction & purification/Specimen input volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 9,
+"left": "525px",
+"top": "1064.67px",
+"width": "49px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "60",
+"labels": [
+{
+"id": 13,
+"text": "RNA extraction & purification/Elution volume ul"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 11,
+"left": "147px",
+"top": "705.444px",
+"width": "69px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 16,
+"text": "Reverse transcription/Input volume ul"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

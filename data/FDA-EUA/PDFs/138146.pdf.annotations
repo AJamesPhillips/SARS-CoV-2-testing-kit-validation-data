@@ -2,6 +2,163 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138146.pdf",
 "file_sha1_hash": "05b403485fca306b22c3c50c51d531455678aa3d",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "125px",
+"top": "255px",
+"width": "260px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Home self-collected nasal swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "218px",
+"top": "671.445px",
+"width": "249px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "131px",
+"top": "877.445px",
+"width": "341px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2- negative human/porcine matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 6,
+"left": "460px",
+"top": "868.445px",
+"width": "27px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 6,
+"left": "134px",
+"top": "898.889px",
+"width": "122px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "previously confirmed, high-positive patient samples",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 6,
+"left": "246px",
+"top": "899.889px",
+"width": "18px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 7,
+"left": "124px",
+"top": "633.667px",
+"width": "673px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+},
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Perhaps information is contained within Quantigen Biosciences COVID-19 swab stability data?"
+},
+{
+"id": 7,
+"page_number": 7,
+"left": "533px",
+"top": "458.778px",
+"width": "251px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

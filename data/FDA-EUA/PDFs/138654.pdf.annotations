@@ -2,6 +2,215 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138654.pdf",
 "file_sha1_hash": "b62a2b6ea699962b15b57b89bcb118b34329e429",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "104px",
+"top": "460px",
+"width": "695px",
+"height": "69px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "oropharyngeal (throat) swabs, nasopharyngeal swabs, anterior nasal and mid-turbinate nasal swabs, nasopharyngeal washes/aspirates or nasal aspirates as well as bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 1,
+"left": "314px",
+"top": "543px",
+"width": "479px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "saliva specimens that are self-collected at home or in a healthcare setting",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "419px",
+"top": "718.889px",
+"width": "26px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 6,
+"left": "418px",
+"top": "867.889px",
+"width": "251px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs and saliva",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 6,
+"left": "525px",
+"top": "927.778px",
+"width": "19px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 6,
+"left": "129px",
+"top": "951.778px",
+"width": "222px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "synthetic SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "356px",
+"top": "949.778px",
+"width": "349px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Twist Bioscience, Cat #102019, MT007544.1",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "294px",
+"top": "358.778px",
+"width": "90px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N2"
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "307px",
+"top": "502.778px",
+"width": "209px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RPP30 protein subunit gene (RNase P (RP))",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 7,
+"left": "290px",
+"top": "910.445px",
+"width": "18px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 7,
+"left": "308px",
+"top": "913.445px",
+"width": "74px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 8,
+"left": "366px",
+"top": "604px",
+"width": "357px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

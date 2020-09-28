@@ -180,6 +180,44 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 11,
+"page_number": 13,
+"left": "423px",
+"top": "891px",
+"width": "173px",
+"height": "46px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "S, M",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 13,
+"left": "591px",
+"top": "886.89px",
+"width": "41px",
+"height": "49px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

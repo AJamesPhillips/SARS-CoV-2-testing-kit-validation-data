@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138096.pdf",
 "file_sha1_hash": "773cede93ac6a30df0b1b08414f0eb76e7afa9d8",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 2,
+"left": "119px",
+"top": "205.889px",
+"width": "713px",
+"height": "61px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP), nasal, mid-turbinate and oropharyngeal (OP) swab specimens, nasopharyngeal wash/ aspirate or nasal aspirates",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 19,
+"left": "114px",
+"top": "221.668px",
+"width": "426px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative clinical nasopharyngeal swab specimens",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 19,
+"left": "532px",
+"top": "220.668px",
+"width": "15px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 19,
+"left": "624px",
+"top": "218.668px",
+"width": "211px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated cultured SARSCoV-2 virus (USA-WA1/2020)",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 19,
+"left": "339px",
+"top": "241.668px",
+"width": "198px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources; NR-52281",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 19,
+"left": "241px",
+"top": "280.668px",
+"width": "42px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.01",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 19,
+"left": "286px",
+"top": "280.668px",
+"width": "81px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 19,
+"left": "507px",
+"top": "283.889px",
+"width": "44px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.026",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": "Why is the TCID50 / mL higher and not lower in the neat sample?   Unless perhaps the contrived clinical sample has been concentrated as part of the processing?"
+},
+{
+"id": 8,
+"page_number": 19,
+"left": "446px",
+"top": "298.334px",
+"width": "23px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 3,
+"left": "513px",
+"top": "842.667px",
+"width": "287px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -2,6 +2,155 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138776.pdf",
 "file_sha1_hash": "b1d0a803857fb70c021389dd31b15d9341c0e5dc",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "90px",
+"top": "360px",
+"width": "781px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP) swabs, oropharyngeal (OP) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasopharyngeal wash/aspirates, nasal aspirates, and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 31,
+"left": "618px",
+"top": "833px",
+"width": "201px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "synthetic SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 31,
+"left": "164px",
+"top": "851px",
+"width": "96px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Twist part # 102019",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 31,
+"left": "344px",
+"top": "852px",
+"width": "395px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled negative clinical matrix (nasopharyngeal swab specimen)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 31,
+"left": "727px",
+"top": "849px",
+"width": "21px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 31,
+"left": "280px",
+"top": "907px",
+"width": "35px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 31,
+"left": "316px",
+"top": "907px",
+"width": "102px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 9,
+"left": "116px",
+"top": "906.444px",
+"width": "728px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+},
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "May be specified somewhere but it's not in the most obvious / accessible places."
+}
+],
 "comments": []
 }

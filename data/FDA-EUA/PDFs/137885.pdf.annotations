@@ -2,6 +2,198 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137885.pdf",
 "file_sha1_hash": "c8a45b4c57823b5f30692455896d4f71701a2dc6",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "105px",
+"top": "474px",
+"width": "284px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP) and nasal (NS) swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "266px",
+"top": "362.333px",
+"width": "144px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 106,
+"text": "Viral protein(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 17,
+"left": "134px",
+"top": "496.668px",
+"width": "202px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "heat-inactivated SARS-CoV-2",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 17,
+"left": "339px",
+"top": "494.668px",
+"width": "175px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "bei Resources NR-52286",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 17,
+"left": "333px",
+"top": "616.668px",
+"width": "62px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "NP Swab",
+"labels": [
+{
+"id": 103,
+"text": "Specimen/Synthetic Specimen/Swab type"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 17,
+"left": "212px",
+"top": "660.668px",
+"width": "71px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "NP matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 17,
+"left": "274px",
+"top": "651.668px",
+"width": "23px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 17,
+"left": "689px",
+"top": "617.668px",
+"width": "112px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "virus diluted in saline",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 18,
+"left": "462px",
+"top": "106px",
+"width": "90px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 18,
+"left": "312px",
+"top": "170.223px",
+"width": "68px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "113",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 18,
+"left": "268px",
+"top": "167.223px",
+"width": "166px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
