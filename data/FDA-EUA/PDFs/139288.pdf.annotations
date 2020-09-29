@@ -2,6 +2,197 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139288.pdf",
 "file_sha1_hash": "c8c1655d18f699ad25c9bcc0476452af1bfa43ec",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "205px",
+"top": "497.111px",
+"width": "434px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal, oropharyngeal (OP), and nasopharyngeal (NP) swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "590px",
+"top": "549.111px",
+"width": "80px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "177px",
+"top": "841px",
+"width": "114px",
+"height": "126px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N2"
+},
+{
+"id": 3,
+"page_number": 4,
+"left": "367px",
+"top": "944.222px",
+"width": "290px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled nasopharyngeal (NP) specimen in VTM",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 4,
+"left": "646px",
+"top": "939.222px",
+"width": "16px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 4,
+"left": "222px",
+"top": "986.222px",
+"width": "172px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": " SARS-CoV-2 standard",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 4,
+"left": "508px",
+"top": "985.222px",
+"width": "274px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pre-mixed with NucliSens easyMAG Lysis Buffer",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 4,
+"left": "668px",
+"top": "965.222px",
+"width": "45px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Exact Diagnostics",
+"labels": [],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "505px",
+"top": "190.556px",
+"width": "23px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "528px",
+"top": "231.556px",
+"width": "35px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "565px",
+"top": "234.556px",
+"width": "52px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

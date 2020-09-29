@@ -2,6 +2,180 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138928.pdf",
 "file_sha1_hash": "f494c63c195380475bd8596ef2d86774bb1d2c6e",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "40px",
+"top": "77.2224px",
+"width": "551px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "anterior nasal and mid-turbinate nasal swabs, nasopharyngeal and oropharyngeal swabs, nasopharyngeal wash/aspirates or nasal aspirates and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "161px",
+"top": "809.667px",
+"width": "113px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 13,
+"left": "275px",
+"top": "208.89px",
+"width": "317px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "a positive patient NP swab sample extracted using the RTA Viral RNA Isolation Kit and quantitated by Droplet Digital PCR",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"deleted": true
+},
+{
+"id": 4,
+"page_number": 13,
+"left": "75px",
+"top": "289.89px",
+"width": "518px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "VTM",
+"labels": [
+{
+"id": 99,
+"text": "Meta/Potential error"
+},
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": "Marked as potential error as RNA is spiked into VTM but not clear if VTM is just VTM or VTM that contains a negative nasopharyngeal swab"
+},
+{
+"id": 5,
+"page_number": 13,
+"left": "369px",
+"top": "298.89px",
+"width": "12px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 13,
+"left": "422px",
+"top": "205.89px",
+"width": "11px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 13,
+"left": "71px",
+"top": "286.89px",
+"width": "19px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "24",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 13,
+"left": "406px",
+"top": "352.89px",
+"width": "15px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.038",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 13,
+"left": "420px",
+"top": "352.89px",
+"width": "52px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": "Marked as potential error as the value is inferred from rather than being directly from experimental data"
+}
+],
 "comments": []
 }

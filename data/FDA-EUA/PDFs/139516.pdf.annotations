@@ -2,6 +2,198 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139516.pdf",
 "file_sha1_hash": "c45dcae0dd2c9d904d06798aef16ba582ab293ee",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "134px",
+"top": "545px",
+"width": "652px",
+"height": "44px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, midturbinate, nasopharyngeal, and oropharyngeal swabs) and bronchioalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "124px",
+"top": "206.556px",
+"width": "259px",
+"height": "70px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N3, S"
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "396px",
+"top": "453.556px",
+"width": "164px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 5,
+"left": "131px",
+"top": "364.667px",
+"width": "329px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 viral stock USA-WA1/2020",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "466px",
+"top": "366.667px",
+"width": "212px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources; NR-52281",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "129px",
+"top": "405.111px",
+"width": "658px",
+"height": "47px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "phosphate buffered saline, inoculate dry NP swabs (FLOQSwabs, Copan)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "382px",
+"top": "427.111px",
+"width": "405px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "collected from individuals negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 6,
+"left": "210px",
+"top": "463.445px",
+"width": "27px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"deleted": true
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "544px",
+"top": "166.445px",
+"width": "148px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Dry Swab"
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "573px",
+"top": "170.889px",
+"width": "53px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 7,
+"left": "389px",
+"top": "145.222px",
+"width": "120px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Wet swab"
+}
+],
 "comments": []
 }

@@ -2,6 +2,189 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139279.pdf",
 "file_sha1_hash": "256e4cf599b082ba44b37435cf8a07bc2bd957f5",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "104px",
+"top": "164.667px",
+"width": "714px",
+"height": "66px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal aspirates, nasal washes, bronchoalveolar lavage (BAL) fluid and sputum",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "101px",
+"top": "103.222px",
+"width": "718px",
+"height": "50px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 4,
+"left": "591px",
+"top": "149.222px",
+"width": "177px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 21,
+"left": "108px",
+"top": "408.223px",
+"width": "708px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "15 total, 5 SARS-CoV-2 positive clinical specimens each of nasopharyngeal swabs, throat swabs and sputum",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"deleted": true
+},
+{
+"id": 5,
+"page_number": 21,
+"left": "102px",
+"top": "468.223px",
+"width": "184px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative clinical matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 21,
+"left": "275px",
+"top": "467.223px",
+"width": "19px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 21,
+"left": "293px",
+"top": "469.668px",
+"width": "520px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Quantitative RT-PCR was used to estimate the concentration of virus in each specimen prior to dilution",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 21,
+"left": "711px",
+"top": "509.668px",
+"width": "109px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Three lots of COVID-19 Coronavirus Real Time PCR Kits were included in the study.",
+"labels": [
+{
+"id": 107,
+"text": "Limit of Detection (LOD)/Protocol"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 21,
+"left": "426px",
+"top": "595.668px",
+"width": "62px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.35",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 21,
+"left": "483px",
+"top": "593.668px",
+"width": "82px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

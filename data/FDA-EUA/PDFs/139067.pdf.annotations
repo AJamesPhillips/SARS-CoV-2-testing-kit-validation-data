@@ -2,6 +2,184 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139067.pdf",
 "file_sha1_hash": "8f4e0284e61e7b31bb9519c559f0383881e39de2",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "293px",
+"top": "317.889px",
+"width": "266px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab specimens self-collected",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 8,
+"left": "527px",
+"top": "601.223px",
+"width": "253px",
+"height": "37px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, ORF1ab, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 8,
+"left": "468px",
+"top": "600.223px",
+"width": "49px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "MS2 Bacteriophage",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 8,
+"left": "592px",
+"top": "429.334px",
+"width": "58px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+},
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "It's not clear which LOD this refers to.  Is it this document that references ThermoFishers CoViD-19 EUA kit http://microbrush.com/wp-content/uploads/2020/09/COVID19-Elution-Validation-Quantigen.pdf ?"
+},
+{
+"id": 4,
+"page_number": 8,
+"left": "322px",
+"top": "453.778px",
+"width": "160px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 8,
+"left": "154px",
+"top": "454.778px",
+"width": "170px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 virus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 8,
+"left": "317px",
+"top": "448.778px",
+"width": "15px",
+"height": "35px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 8,
+"left": "421px",
+"top": "690.667px",
+"width": "37px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 8,
+"left": "132px",
+"top": "829.444px",
+"width": "657px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 107,
+"text": "Limit of Detection (LOD)/Protocol"
+}
+],
+"comment": "All of the expected positive samples remained positive.  Interesting there is some attempt at quantifying the margin of error though this is not completed"
+}
+],
 "comments": []
 }

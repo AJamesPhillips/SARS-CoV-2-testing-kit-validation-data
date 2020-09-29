@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139296.pdf",
 "file_sha1_hash": "a980a83eed2aeef352480d508890fc21104a11ff",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "102px",
+"top": "191.445px",
+"width": "716px",
+"height": "96px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal and oropharyngeal swabs, anterior nasal swab and mid-turbinate nasal swabs, nasopharyngeal aspirates/washes or nasal aspirates, and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "99px",
+"top": "925.111px",
+"width": "460px",
+"height": "101px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E, RdRp, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "344px",
+"top": "956.111px",
+"width": "194px",
+"height": "37px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 25,
+"left": "119px",
+"top": "606.891px",
+"width": "185px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "reference RNA control",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 25,
+"left": "342px",
+"top": "604.891px",
+"width": "474px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ThermoFisher Scientific, USA (AcroMetrixTM Coronavirus 2019 (COVID-19) RNA Control (Cat # 954519))",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 25,
+"left": "105px",
+"top": "642.891px",
+"width": "712px",
+"height": "63px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "(nasopharyngeal swab, oropharyngeal swab, and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 100,
+"text": "Meta/Error/Omission"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 25,
+"left": "517px",
+"top": "668.891px",
+"width": "28px",
+"height": "37px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "were screened negative by an EUA authorized assay",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Marked as Not specified as the specific EUA assay used is not declared. And the source of the clinical specimen matrices is not given."
+},
+{
+"id": 7,
+"page_number": 25,
+"left": "789px",
+"top": "873.445px",
+"width": "27px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 25,
+"left": "338px",
+"top": "935.445px",
+"width": "33px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "10",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 25,
+"left": "367px",
+"top": "937.445px",
+"width": "77px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -2,6 +2,210 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139680.pdf",
 "file_sha1_hash": "fd03e60c26072a39dc3364d7977847ffdf297df8",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"deleted": true
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "21px",
+"top": "218.444px",
+"width": "751px",
+"height": "77px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "respiratory specimens such as nasopharyngeal swabs, oropharyngeal swabs, anterior nasal swabs, mid-turbinate nasal swabs, bronchoalveolar lavage (BAL), and nasopharyngeal wash/aspirates or nasal aspirates",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 7,
+"left": "34px",
+"top": "434.445px",
+"width": "740px",
+"height": "57px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 7,
+"left": "34px",
+"top": "583.445px",
+"width": "713px",
+"height": "59px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Human acidic ribosomal protein (HuPO) gene",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 30,
+"left": "35px",
+"top": "288.891px",
+"width": "206px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 positive",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"deleted": true
+},
+{
+"id": 6,
+"page_number": 30,
+"left": "38px",
+"top": "307.891px",
+"width": "742px",
+"height": "63px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Viral RNA was quantitated in patient samples by comparison to a standard curve prepared from serial dilutions of SARS-CoV-2 IVT RNA transcript in NP swab matrix",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 30,
+"left": "152px",
+"top": "669.555px",
+"width": "72px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "diluted",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+},
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Diluted with what?"
+},
+{
+"id": 8,
+"page_number": 30,
+"left": "244px",
+"top": "288.223px",
+"width": "324px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP) swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 30,
+"left": "678px",
+"top": "641.891px",
+"width": "34px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 31,
+"left": "488px",
+"top": "367.445px",
+"width": "52px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "3.715",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "N gene target"
+},
+{
+"id": 11,
+"page_number": 31,
+"left": "539px",
+"top": "369.445px",
+"width": "89px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 31,
+"left": "489px",
+"top": "869.113px",
+"width": "51px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "2.524",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "RdRp gene target"
+}
+],
 "comments": []
 }

@@ -2,6 +2,168 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139292.pdf",
 "file_sha1_hash": "f59fb4b69bf0fdbe88fba98f7149c72ae3356781",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "133px",
+"top": "429px",
+"width": "629px",
+"height": "64px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab, oropharyngeal swab, anterior nasal swab, mid-turbinate nasal swab, nasopharyngeal wash/aspirate, nasal aspirate, and bronchoalveolar lavage specimens",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "526px",
+"top": "178.889px",
+"width": "227px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N2"
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "579px",
+"top": "199.333px",
+"width": "189px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "AccuPlex SARS-CoV-2 Verification Panel, synthetic SARS-CoV-2 virus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 6,
+"left": "298px",
+"top": "220.333px",
+"width": "135px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare (Cat# 0505-0129)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"deleted": true
+},
+{
+"id": 5,
+"page_number": 6,
+"left": "434px",
+"top": "933.445px",
+"width": "328px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled ten negative nasopharyngeal respiratory samples in VTM",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "275px",
+"top": "952.445px",
+"width": "23px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 6,
+"left": "562px",
+"top": "1039.22px",
+"width": "201px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "360px",
+"top": "1039.22px",
+"width": "35px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1.23",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "397px",
+"top": "1041.22px",
+"width": "77px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

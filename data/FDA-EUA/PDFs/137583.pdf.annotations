@@ -218,6 +218,23 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 13,
+"page_number": 33,
+"left": "50px",
+"top": "341.668px",
+"width": "771px",
+"height": "139px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 107,
+"text": "Limit of Detection (LOD)/Protocol"
+}
+],
+"comment": "Shows inactivated virus harder to detect that live virus."
 }
 ],
 "comments": []

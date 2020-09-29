@@ -2,6 +2,232 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138786.pdf",
 "file_sha1_hash": "3ef3621b5388f407faef1580eb68a19868777857",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "101px",
+"top": "342.667px",
+"width": "723px",
+"height": "68px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs, oropharyngeal swabs, anterior nasal swabs, mid-turbinate nasal swabs as well as nasal aspirate, nasal wash, and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "100px",
+"top": "440.556px",
+"width": "82px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "99px",
+"top": "462.556px",
+"width": "725px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N2"
+},
+{
+"id": 3,
+"page_number": 23,
+"left": "506px",
+"top": "574.668px",
+"width": "255px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Armored RNA Quant\u00ae SARS-CoV-2 control",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 23,
+"left": "133px",
+"top": "600.668px",
+"width": "214px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Asuragen (Catalog Number 52030)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 23,
+"left": "418px",
+"top": "594.668px",
+"width": "187px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative nasopharyngeal swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 23,
+"left": "595px",
+"top": "597.668px",
+"width": "20px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 23,
+"left": "735px",
+"top": "748.668px",
+"width": "23px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 23,
+"left": "359px",
+"top": "831.111px",
+"width": "231px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "assuming 100% extraction efficiency",
+"labels": [
+{
+"id": 90,
+"text": "Meta/Question to answer"
+}
+],
+"comment": "What does this mean?"
+},
+{
+"id": 9,
+"page_number": 23,
+"left": "324px",
+"top": "898.668px",
+"width": "39px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Applied Biosystems 7500 Fast and the Applied Biosystems Quant Studio 7"
+},
+{
+"id": 10,
+"page_number": 23,
+"left": "364px",
+"top": "895.668px",
+"width": "64px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 23,
+"left": "347px",
+"top": "920.668px",
+"width": "28px",
+"height": "14px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "250",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Applied Biosystems Quant Studio 12K system"
+},
+{
+"id": 12,
+"page_number": 23,
+"left": "134px",
+"top": "450.445px",
+"width": "164px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "200",
+"labels": [
+{
+"id": 35,
+"text": "Specimen/Volume ul"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
