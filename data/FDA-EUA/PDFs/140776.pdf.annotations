@@ -2,6 +2,270 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140776.pdf",
 "file_sha1_hash": "0ca277c3f86bb35fde91b98bb81b33b4c8a0e9b0",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "132px",
+"top": "499px",
+"width": "656px",
+"height": "67px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal, oropharyngeal (throat), anterior nasal, and mid-turbinate nasal swabs, as well as nasopharyngeal washes/aspirates or nasal aspirates, and bronchoalveolar lavage (BAL)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "345px",
+"top": "271px",
+"width": "433px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1, N3",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 10,
+"left": "482px",
+"top": "293px",
+"width": "31px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "60",
+"labels": [
+{
+"id": 41,
+"text": "Confusion matrix/True positives"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 10,
+"left": "610px",
+"top": "295px",
+"width": "22px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "3",
+"labels": [
+{
+"id": 44,
+"text": "Confusion matrix/False positives"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 10,
+"left": "609px",
+"top": "317px",
+"width": "25px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "57",
+"labels": [
+{
+"id": 43,
+"text": "Confusion matrix/True negatives"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 10,
+"left": "489px",
+"top": "315px",
+"width": "18px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0",
+"labels": [
+{
+"id": 42,
+"text": "Confusion matrix/False negatives"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 2,
+"left": "637px",
+"top": "310px",
+"width": "130px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 3,
+"left": "446px",
+"top": "125px",
+"width": "76px",
+"height": "93px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "10006606",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "This catalog number does not exist in IDT on 2020-09-30"
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "203px",
+"top": "232px",
+"width": "255px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "synthetic SARS-CoV-2 viral RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "498px",
+"top": "235px",
+"width": "283px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Twist Bioscience Cat # MT007544.1",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "458px",
+"top": "275px",
+"width": "306px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled clinical negative, nasopharyngeal swab or oropharyngeal swab matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 6,
+"left": "413px",
+"top": "292px",
+"width": "19px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 6,
+"left": "537px",
+"top": "673px",
+"width": "24px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "30",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 6,
+"left": "736px",
+"top": "739px",
+"width": "24px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "10",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 6,
+"left": "158px",
+"top": "761px",
+"width": "77px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

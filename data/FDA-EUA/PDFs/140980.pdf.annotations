@@ -2,6 +2,274 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140980.pdf",
 "file_sha1_hash": "ffe1f705a38e356a7bd8deaa139261f3dc657f7d",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "133px",
+"top": "538px",
+"width": "653px",
+"height": "44px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal and oropharyngeal swabs) and BAL",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "132px",
+"top": "257px",
+"width": "200px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1, N2",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "133px",
+"top": "256px",
+"width": "50px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "CDC published primer and probe sequences",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "187px",
+"top": "281px",
+"width": "87px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "213px",
+"top": "269px",
+"width": "294px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated SARS-CoV-2 virus samples",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "514px",
+"top": "269px",
+"width": "34px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "184px",
+"top": "293px",
+"width": "409px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab matrix previously tested negative",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "576px",
+"top": "289px",
+"width": "27px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "268px",
+"top": "820px",
+"width": "47px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "VTM",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "303px",
+"top": "816px",
+"width": "19px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "205px",
+"top": "882px",
+"width": "35px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "12.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 5,
+"left": "243px",
+"top": "886px",
+"width": "71px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 5,
+"left": "681px",
+"top": "799px",
+"width": "24px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 5,
+"left": "390px",
+"top": "773px",
+"width": "338px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Nasal swab combined with saline oral rinse",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 5,
+"left": "713px",
+"top": "770px",
+"width": "28px",
+"height": "32px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

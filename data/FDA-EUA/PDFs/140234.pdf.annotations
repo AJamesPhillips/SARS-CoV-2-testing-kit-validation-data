@@ -2,6 +2,41 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140234.pdf",
 "file_sha1_hash": "2d59ae237f8f470aeb60e8f22f95e8bad11f94aa",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "403px",
+"top": "297px",
+"width": "86px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "132px",
+"top": "964px",
+"width": "631px",
+"height": "48px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Roche cobas SARS-CoV-2 molecular test",
+"labels": [
+{
+"id": 60,
+"text": "Third party detection system"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

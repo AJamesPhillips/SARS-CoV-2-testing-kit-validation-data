@@ -2,6 +2,189 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140425.pdf",
 "file_sha1_hash": "6b282109722df933e39bf1133dba8ae158a4586c",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "165px",
+"top": "118px",
+"width": "125px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "oropharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 26,
+"left": "37px",
+"top": "268px",
+"width": "218px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 RNA virus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Is it RNA or is it the whole virus?"
+},
+{
+"id": 2,
+"page_number": 26,
+"left": "549px",
+"top": "252px",
+"width": "46px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ddPCR quantified",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 26,
+"left": "368px",
+"top": "270px",
+"width": "201px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "oropharyngeal swab specimens",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 26,
+"left": "70px",
+"top": "285px",
+"width": "227px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "confirmed negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 27,
+"left": "422px",
+"top": "103px",
+"width": "18px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 28,
+"left": "227px",
+"top": "400px",
+"width": "31px",
+"height": "15px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.3",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 28,
+"left": "256px",
+"top": "398px",
+"width": "67px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "50px",
+"top": "152px",
+"width": "97px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 20,
+"left": "417px",
+"top": "334px",
+"width": "181px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ACTB (\u03b2-actin)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

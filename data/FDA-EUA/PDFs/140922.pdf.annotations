@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140922.pdf",
 "file_sha1_hash": "a4c9ea190e9e184616f4ea34207a2ae6559fa417",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 5,
+"left": "101px",
+"top": "536px",
+"width": "716px",
+"height": "70px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, oropharyngeal swab specimens and nasopharyngeal wash/aspirate or nasal aspirate specimens)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 8,
+"left": "104px",
+"top": "652px",
+"width": "712px",
+"height": "42px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp, ORF1a",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 8,
+"left": "98px",
+"top": "710px",
+"width": "264px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "non-human synthetic DNA fragment",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+},
+{
+"id": 99,
+"text": "Meta/Potential error"
+}
+],
+"comment": "Marked as potential error as DNA fragment, unless packaged, is a purification but not an extraction-from-membrane/envelope control."
+},
+{
+"id": 3,
+"page_number": 14,
+"left": "657px",
+"top": "237px",
+"width": "157px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inactivated SARS-CoV-2",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 14,
+"left": "165px",
+"top": "258px",
+"width": "185px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI, cat.# NR-52286",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 14,
+"left": "681px",
+"top": "261px",
+"width": "133px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 14,
+"left": "150px",
+"top": "281px",
+"width": "17px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 14,
+"left": "621px",
+"top": "344px",
+"width": "26px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 14,
+"left": "122px",
+"top": "404px",
+"width": "36px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.56",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 14,
+"left": "157px",
+"top": "406px",
+"width": "69px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

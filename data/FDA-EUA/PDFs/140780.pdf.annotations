@@ -2,6 +2,181 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140780.pdf",
 "file_sha1_hash": "deb19d2b2414b567f30d57c6898eac3e454515ca",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "105px",
+"top": "569px",
+"width": "652px",
+"height": "47px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, and oropharyngeal swab specimens) and bronchoalveolar lavage",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 10,
+"left": "178px",
+"top": "567px",
+"width": "80px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 14,
+"left": "535px",
+"top": "488px",
+"width": "230px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "heat Inactivated SARS-CoV-2 Culture Fluid",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 14,
+"left": "246px",
+"top": "507px",
+"width": "284px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ZeptoMetrix Catalog #NATRVP-NNS",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 14,
+"left": "137px",
+"top": "529px",
+"width": "309px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "confirmed-negative nasopharyngeal swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 14,
+"left": "436px",
+"top": "525px",
+"width": "19px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 14,
+"left": "403px",
+"top": "896px",
+"width": "22px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 15,
+"left": "142px",
+"top": "291px",
+"width": "15px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 15,
+"left": "159px",
+"top": "290px",
+"width": "92px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 11,
+"left": "209px",
+"top": "587px",
+"width": "600px",
+"height": "52px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1, N2, N3, ORF1, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

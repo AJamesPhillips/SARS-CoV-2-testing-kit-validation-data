@@ -2,6 +2,181 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/138249.pdf",
 "file_sha1_hash": "61206065dc8f54455857ed2b4de81a0e86e2439b",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "133px",
+"top": "457px",
+"width": "651px",
+"height": "65px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs, oropharyngeal swabs, anterior nares swabs, midturbinate nasal swabs, nasopharyngeal washes/aspirates or nasal aspirates, as well as bronchoalveolar lavage",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 8,
+"left": "435px",
+"top": "931px",
+"width": "218px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 8,
+"left": "157px",
+"top": "952px",
+"width": "63px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ATCC VR-1986D",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 8,
+"left": "310px",
+"top": "953px",
+"width": "474px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative anterior nasal swab clinical matrix in DNA/RNA Shield media",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 8,
+"left": "775px",
+"top": "951px",
+"width": "22px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 9,
+"left": "397px",
+"top": "252px",
+"width": "25px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 9,
+"left": "285px",
+"top": "356px",
+"width": "40px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.75",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 9,
+"left": "320px",
+"top": "354px",
+"width": "82px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 9,
+"left": "388px",
+"top": "740px",
+"width": "118px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, E, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "303px",
+"top": "971px",
+"width": "133px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

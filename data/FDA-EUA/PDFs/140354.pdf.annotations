@@ -53,6 +53,163 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 3,
+"page_number": 22,
+"left": "202px",
+"top": "357px",
+"width": "313px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "AccuPlex SARS-CoV-2 Reference Material Kit",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 22,
+"left": "515px",
+"top": "355px",
+"width": "119px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare (Cat# 0505-0126)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 22,
+"left": "351px",
+"top": "380px",
+"width": "56px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "sputum",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 22,
+"left": "399px",
+"top": "375px",
+"width": "15px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 22,
+"left": "501px",
+"top": "544px",
+"width": "28px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 22,
+"left": "645px",
+"top": "648px",
+"width": "34px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "ABI QuantStudio 5"
+},
+{
+"id": 9,
+"page_number": 22,
+"left": "682px",
+"top": "644px",
+"width": "76px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 22,
+"left": "514px",
+"top": "866px",
+"width": "30px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.05",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "ABI 7500 Fast Dx"
+},
+{
+"id": 11,
+"page_number": 22,
+"left": "519px",
+"top": "1085px",
+"width": "28px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Bio-Rad CFX 384"
 }
 ],
 "comments": []

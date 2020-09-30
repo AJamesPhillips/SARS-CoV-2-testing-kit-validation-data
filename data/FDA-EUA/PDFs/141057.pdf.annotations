@@ -2,6 +2,147 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/141057.pdf",
 "file_sha1_hash": "521347231c2f5375fdd76089c1a6ffad127bce5d",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "87px",
+"top": "142px",
+"width": "734px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, midturbinate, nasopharyngeal and oropharyngeal swabs) and bronchoalveolar lavage",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 40,
+"left": "317px",
+"top": "315px",
+"width": "198px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal (NP) swab samples",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 40,
+"left": "504px",
+"top": "309px",
+"width": "18px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 40,
+"left": "604px",
+"top": "316px",
+"width": "197px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "quantified genomic RNA from SARS Related Coronavirus 2, Isolate USAWA1/2020",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 40,
+"left": "343px",
+"top": "331px",
+"width": "167px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ATCC\u00ae VR1986D\u2122, NR52285",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 40,
+"left": "361px",
+"top": "648px",
+"width": "20px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 40,
+"left": "339px",
+"top": "697px",
+"width": "24px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 40,
+"left": "366px",
+"top": "699px",
+"width": "65px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

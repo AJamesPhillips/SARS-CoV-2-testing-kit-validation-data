@@ -2,6 +2,41 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140792.pdf",
 "file_sha1_hash": "35d4a07ccbdcf894951cee354060c207d1088699",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "130px",
+"top": "482px",
+"width": "625px",
+"height": "60px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "clinician-instructed self-collected nasal swab specimens, and clinician-collected nasal, nasopharyngeal, and oropharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "284px",
+"top": "683px",
+"width": "306px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Aptima SARS-CoV-2 assay from Hologic",
+"labels": [
+{
+"id": 60,
+"text": "Third party detection system"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -2,6 +2,41 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140229.pdf",
 "file_sha1_hash": "2c136f1c74501c66655047abca89e1b66ac5d401",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "385px",
+"top": "294px",
+"width": "87px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "127px",
+"top": "965px",
+"width": "623px",
+"height": "54px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Hologic Panther Fusion SARS-CoV-2 molecular test",
+"labels": [
+{
+"id": 60,
+"text": "Third party detection system"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

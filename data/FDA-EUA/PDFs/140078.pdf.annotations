@@ -2,6 +2,210 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140078.pdf",
 "file_sha1_hash": "707118d706b5086db9c2a423e77a73cc27b4bcf6",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "132px",
+"top": "463px",
+"width": "656px",
+"height": "63px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (nasopharyngeal swabs, oropharyngeal (throat) swab, mid-turbinate nasal swabs, anterior nasal swabs, nasopharyngeal wash/aspirate or nasal aspirate)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "371px",
+"top": "312px",
+"width": "82px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 3,
+"left": "342px",
+"top": "624px",
+"width": "114px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 3,
+"left": "393px",
+"top": "538px",
+"width": "197px",
+"height": "33px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 4,
+"left": "489px",
+"top": "522px",
+"width": "188px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Nasopharyngeal samples",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 4,
+"left": "133px",
+"top": "543px",
+"width": "327px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "from persons without symptoms of infection",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 4,
+"left": "367px",
+"top": "478px",
+"width": "214px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 4,
+"left": "131px",
+"top": "505px",
+"width": "638px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "isolated from a patient specimen and quantified based on a standard curve generated using the plasmid control from Primerdesign to estimate the concentration",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 4,
+"left": "772px",
+"top": "748px",
+"width": "17px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 4,
+"left": "127px",
+"top": "770px",
+"width": "89px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 4,
+"left": "615px",
+"top": "706px",
+"width": "24px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

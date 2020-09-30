@@ -180,6 +180,23 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 10,
+"page_number": 3,
+"left": "115px",
+"top": "128px",
+"width": "666px",
+"height": "50px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "target capture, Transcription Mediated Amplification (TMA), and Dual Kinetic Assay (DKA)",
+"labels": [
+{
+"id": 7,
+"text": "Test technology"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

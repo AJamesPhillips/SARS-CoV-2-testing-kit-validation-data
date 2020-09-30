@@ -2,6 +2,202 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140818.pdf",
 "file_sha1_hash": "1c218f4a61d34e2c2a93cb6c201efa0c4d5758f7",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "259px",
+"top": "555px",
+"width": "303px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal and oropharyngeal swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "199px",
+"top": "1055px",
+"width": "41px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RPP30 protein subunit gene (RNase P (RP))",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 6,
+"left": "131px",
+"top": "508px",
+"width": "85px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1, N2",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 6,
+"left": "217px",
+"top": "488px",
+"width": "569px",
+"height": "42px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1, N2 primer/probe sets developed by the CDC",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 6,
+"left": "512px",
+"top": "108px",
+"width": "148px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "whole viral genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 6,
+"left": "647px",
+"top": "104px",
+"width": "23px",
+"height": "30px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "133px",
+"top": "134px",
+"width": "59px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled sputum",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 6,
+"left": "182px",
+"top": "127px",
+"width": "18px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "390px",
+"top": "276px",
+"width": "26px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "521px",
+"top": "358px",
+"width": "22px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "40",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "543px",
+"top": "359px",
+"width": "72px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

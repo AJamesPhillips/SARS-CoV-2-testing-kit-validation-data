@@ -2,6 +2,181 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140073.pdf",
 "file_sha1_hash": "514f30854da695ec4cacffeb272d01edd8622cef",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "105px",
+"top": "197px",
+"width": "686px",
+"height": "43px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal and oropharyngeal swabs) and BAL",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "101px",
+"top": "130px",
+"width": "691px",
+"height": "42px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "323px",
+"top": "275px",
+"width": "130px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 14,
+"left": "105px",
+"top": "514px",
+"width": "372px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Negative patient (Nasopharyngeal Swab) samples",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 14,
+"left": "465px",
+"top": "511px",
+"width": "22px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 14,
+"left": "602px",
+"top": "512px",
+"width": "142px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 14,
+"left": "104px",
+"top": "533px",
+"width": "188px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Twist Bioscience, Cat #102019",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 16,
+"left": "677px",
+"top": "430px",
+"width": "23px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "50",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 16,
+"left": "700px",
+"top": "427px",
+"width": "45px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 16,
+"left": "263px",
+"top": "604px",
+"width": "36px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -74,6 +74,129 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 5,
+"page_number": 6,
+"left": "284px",
+"top": "269px",
+"width": "283px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 RNA based pseudovirus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "213px",
+"top": "274px",
+"width": "69px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 6,
+"left": "667px",
+"top": "268px",
+"width": "105px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pool of nasal swab in oral rinse previously tested negative",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "503px",
+"top": "293px",
+"width": "20px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "609px",
+"top": "499px",
+"width": "25px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "15",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "634px",
+"top": "500px",
+"width": "74px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 6,
+"left": "329px",
+"top": "677px",
+"width": "31px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
 }
 ],
 "comments": []

@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140069.pdf",
 "file_sha1_hash": "06f5753c70daa9f116b5d0b0942aacba7e2fcaa0",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "102px",
+"top": "207px",
+"width": "696px",
+"height": "89px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "anterior/mid-turbinate nasal swabs, nasopharyngeal/oropharyngeal swabs, nasopharyngeal washes/aspirates or nasal aspirates, bronchoalveolar lavage (BAL), and sputum",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "114px",
+"top": "473px",
+"width": "105px",
+"height": "118px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E, RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "447px",
+"top": "430px",
+"width": "246px",
+"height": "120px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 22,
+"left": "421px",
+"top": "371px",
+"width": "225px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 22,
+"left": "101px",
+"top": "402px",
+"width": "693px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BetaCoV/Korea/KCDC03/2020 from the National Culture Collection for Pathogens (NCCP)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 22,
+"left": "101px",
+"top": "433px",
+"width": "186px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "sputum",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 22,
+"left": "289px",
+"top": "435px",
+"width": "343px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "screened negative by the PowerChek Kit",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 22,
+"left": "695px",
+"top": "662px",
+"width": "22px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 22,
+"left": "455px",
+"top": "794px",
+"width": "15px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "4",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 22,
+"left": "473px",
+"top": "796px",
+"width": "67px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

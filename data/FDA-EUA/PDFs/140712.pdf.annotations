@@ -2,6 +2,41 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140712.pdf",
 "file_sha1_hash": "5373374bd29ca87ce41940af36bd9e1242f4bead",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "132px",
+"top": "459px",
+"width": "653px",
+"height": "91px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "clinician-instructed selfcollected nasal swab specimens (collected on site), and clinician-collected upper respiratory specimens (nasopharyngeal, mid-turbinate, anterior nares or oropharyngeal swab specimens)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "458px",
+"top": "378px",
+"width": "154px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "cobas SARS-CoV-2, Roche Molecular Diagnostics",
+"labels": [
+{
+"id": 60,
+"text": "Third party detection system"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140259.pdf",
 "file_sha1_hash": "60c01444b8879e4651536dae560a4fdef68c7a16",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "105px",
+"top": "551px",
+"width": "699px",
+"height": "66px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, and oropharyngeal swab specimens), nasopharyngeal aspirate and bronchoalveolar lavage",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "358px",
+"top": "299px",
+"width": "247px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "MS2 Bacteriophage",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "601px",
+"top": "881px",
+"width": "139px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, S, ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 5,
+"left": "383px",
+"top": "873px",
+"width": "407px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "previously characterized positive nasopharyngeal swab",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "139px",
+"top": "897px",
+"width": "652px",
+"height": "40px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "quantified by Viracor Eurofins, calculated from the linear regression equation derived from a standard curve",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "139px",
+"top": "957px",
+"width": "242px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "405px",
+"top": "153px",
+"width": "23px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 6,
+"left": "388px",
+"top": "418px",
+"width": "35px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "422px",
+"top": "416px",
+"width": "79px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "370px",
+"top": "953px",
+"width": "20px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

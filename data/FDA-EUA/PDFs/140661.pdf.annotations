@@ -2,6 +2,198 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140661.pdf",
 "file_sha1_hash": "e37d110e559bd42afd003a07df80a769cdc18661",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "678px",
+"top": "526px",
+"width": "49px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "saliva",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "203px",
+"top": "660px",
+"width": "87px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "470px",
+"top": "660px",
+"width": "223px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "internal positive control (IPC)",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 5,
+"left": "599px",
+"top": "639px",
+"width": "234px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "spiking heat-inactivated SARSCoV-2 virus",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "180px",
+"top": "662px",
+"width": "394px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources Catalog No. NR-52286, Lot 70033548",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "73px",
+"top": "685px",
+"width": "123px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "saliva",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "201px",
+"top": "689px",
+"width": "601px",
+"height": "41px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "negative saliva was collected in the DNA Genotek OMNIgene ORAL OM-505 device from asymptomatic volunteers",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"deleted": true
+},
+{
+"id": 8,
+"page_number": 3,
+"left": "164px",
+"top": "612px",
+"width": "162px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "243px",
+"top": "209px",
+"width": "39px",
+"height": "96px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "23",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "78px",
+"top": "847px",
+"width": "40px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 5,
+"left": "115px",
+"top": "846px",
+"width": "100px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

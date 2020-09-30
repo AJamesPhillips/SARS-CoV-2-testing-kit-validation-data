@@ -2,6 +2,180 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140543.pdf",
 "file_sha1_hash": "2e77a0d99fea6bdd5bb1df8c0384122f1e22204b",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "133px",
+"top": "361px",
+"width": "642px",
+"height": "63px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal aspirates, nasal washes and bronchoalveolar lavage (BAL) fluid",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"deleted": true
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "383px",
+"top": "396px",
+"width": "220px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "packaged SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 5,
+"left": "611px",
+"top": "396px",
+"width": "168px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare Milford, MA",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "654px",
+"top": "422px",
+"width": "105px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "viral transport medium",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "216px",
+"top": "435px",
+"width": "19px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "311px",
+"top": "497px",
+"width": "22px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "351px",
+"top": "560px",
+"width": "26px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "1",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "448px",
+"top": "561px",
+"width": "183px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 1,
+"left": "500px",
+"top": "1030px",
+"width": "229px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N1, N2",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 2,
+"left": "314px",
+"top": "103px",
+"width": "206px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

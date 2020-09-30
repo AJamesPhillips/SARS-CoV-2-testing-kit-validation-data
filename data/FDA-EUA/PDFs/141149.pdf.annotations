@@ -2,6 +2,215 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/141149.pdf",
 "file_sha1_hash": "e5f45091a2be11ba46d11a08a6b0f5d00478305c",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "430px",
+"top": "494px",
+"width": "334px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "reverse transcription isothermal amplification",
+"labels": [
+{
+"id": 7,
+"text": "Test technology"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 1,
+"left": "132px",
+"top": "518px",
+"width": "624px",
+"height": "64px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, nasopharyngeal, and oropharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "331px",
+"top": "241px",
+"width": "106px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "131px",
+"top": "261px",
+"width": "659px",
+"height": "66px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Yu L, et al. Infectious Diseases; accessed from: http://medrxiv.org/lookup/doi/10.1101/2020.02.20.20025874, now published in Clinical Chemistry: https://academic.oup.com/clinchem/article/66/7/975/5823294",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "427px",
+"top": "406px",
+"width": "195px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "\u03b3-irradiated SARS-CoV-2",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "623px",
+"top": "404px",
+"width": "128px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI, NR-52287",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "390px",
+"top": "572px",
+"width": "22px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "170px",
+"top": "593px",
+"width": "167px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "335px",
+"top": "595px",
+"width": "277px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "confirmed negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "632px",
+"top": "609px",
+"width": "113px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "inserted into 1 mL transport medium",
+"labels": [
+{
+"id": 104,
+"text": "Specimen/Synthetic Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 5,
+"left": "418px",
+"top": "717px",
+"width": "31px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.125",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "Calculated from 1 swab per 1000 \u03bcL transport medium, so 125 genomes per 1000 \u03bcL == 0.125 genomes per 1 \u03bcL"
+},
+{
+"id": 11,
+"page_number": 5,
+"left": "451px",
+"top": "715px",
+"width": "221px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
