@@ -120,7 +120,7 @@
     <div id="pages_container"></div>
 
     <div id="side_panel">
-        <button id="save_changes" disabled="true">Save Changes</button>
+        <!-- <button id="save_changes" disabled="true">Save Changes</button> -->
         <span id="auto_save"></span>
         <button id="delete_annotations" disabled="true" title="Delete annotations">X</button>
         <div id="annotations_list">
@@ -432,12 +432,23 @@
         }
 
 
+        let number_of_annotations = pdf_file_data.annotations.length
         function refresh_annotations_list ()
         {
             annotations_list_el.innerHTML = ""
             pdf_file_data.annotations
                 .filter(not_deleted)
                 .forEach(add_annotation_list_element)
+
+            const new_number_of_annotations = pdf_file_data.annotations.length
+            const increased_annotations = new_number_of_annotations > number_of_annotations
+            number_of_annotations = new_number_of_annotations
+
+            if (increased_annotations)
+            {
+                // Scroll to bottom of list of annotations
+                annotations_list_el.scrollTop = annotations_list_el.scrollHeight
+            }
         }
         changed_annotations_data_listeners.push(refresh_annotations_list)
 
@@ -834,7 +845,7 @@
 
         function render_side_panel ()
         {
-            set_up_save_button()
+            // set_up_save_button()
             set_up_auto_save()
             set_up_delete_annotations_button()
             refresh_annotations_list()
@@ -842,20 +853,20 @@
             render_labels_side_panel()
         }
 
-        function set_up_save_button ()
-        {
-            const save_button_el = document.getElementById("save_changes")
+        // function set_up_save_button ()
+        // {
+        //     const save_button_el = document.getElementById("save_changes")
 
-            changed_annotations_data_listeners.push((saved) =>
-            {
-                save_button_el.disabled = saved
-            })
+        //     changed_annotations_data_listeners.push((saved) =>
+        //     {
+        //         save_button_el.disabled = saved
+        //     })
 
-            save_button_el.addEventListener("click", () =>
-            {
-                post_annotations_to_server()
-            })
-        }
+        //     save_button_el.addEventListener("click", () =>
+        //     {
+        //         post_annotations_to_server()
+        //     })
+        // }
 
         function set_up_auto_save ()
         {
@@ -863,8 +874,15 @@
 
             changed_annotations_data_listeners.push((saved) =>
             {
-                console.log(saved)
-                if (!saved) post_annotations_to_server()
+                if (!saved)
+                {
+                    auto_save_el.innerText = "Auto saving..."
+                    post_annotations_to_server()
+                }
+                else
+                {
+                    auto_save_el.innerText = "Saved"
+                }
             })
         }
 
