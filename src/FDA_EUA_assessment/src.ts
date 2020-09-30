@@ -159,13 +159,21 @@ const all_annotation_label_ids = Array.from(get_all_annotation_label_ids())
 
 const LABEL_IDS_MAPPED_TO_DATA_KEY = new Set<number>((Object as any).values(MAP_DATA_KEY_TO_LABEL_ID))
 const LABEL_ID__META__NOT_SPECIFIED = 73
+const LABEL_ID__META__NOT_SPECIFIED__PARTIAL_INFO = 109
+const LABEL_IDS__META__NOT_SPECIFIED = [
+    LABEL_ID__META__NOT_SPECIFIED,
+    LABEL_ID__META__NOT_SPECIFIED__PARTIAL_INFO,
+]
 const LABEL_ID__META__ERROR = 74
 const LABEL_ID__META__POTENTIAL_ERROR = 99
-
-const LABEL_IDS_HANDLED_ELSE_WHERE = [
-    LABEL_ID__META__NOT_SPECIFIED,
+const LABEL_IDS__META__ERRORS = [
     LABEL_ID__META__ERROR,
     LABEL_ID__META__POTENTIAL_ERROR,
+]
+
+const LABEL_IDS_HANDLED_ELSE_WHERE = [
+    ...LABEL_IDS__META__NOT_SPECIFIED,
+    ...LABEL_IDS__META__ERRORS,
 ]
 LABEL_IDS_HANDLED_ELSE_WHERE.forEach(label_id => LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id))
 
@@ -345,14 +353,14 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
     let value = annotations.map(annotation => {
         let value = annotation.text
 
-        if (annotation.labels.find(label => label.id === LABEL_ID__META__NOT_SPECIFIED))
+        if (annotation.labels.find(label => LABEL_IDS__META__NOT_SPECIFIED.includes(label.id)))
         {
             includes_warning = true
             let append_text = value ? value + " (not specified)" : "Not specified"
             value = `${WARNING_HTML_SYMBOL} ${append_text}`
         }
 
-        if (annotation.labels.find(label => label.id === LABEL_ID__META__ERROR || label.id === LABEL_ID__META__POTENTIAL_ERROR))
+        if (annotation.labels.find(label => LABEL_IDS__META__ERRORS.includes(label.id)))
         {
             includes_error = true
             value = `${ERROR_HTML_SYMBOL} ${value}`
@@ -366,14 +374,14 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
         return value
     }).join(", ")
 
-    if (includes_warning)
+    if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL))
     {
-        //value = `${WARNING_HTML_SYMBOL} ${value}`
+        value = `${WARNING_HTML_SYMBOL} ${value}`
     }
 
-    if (includes_error)
+    if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL))
     {
-        //value = `${ERROR_HTML_SYMBOL} ${value}`
+        value = `${ERROR_HTML_SYMBOL} ${value}`
     }
 
     value = value + "<br/>" + comments

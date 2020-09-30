@@ -92,13 +92,18 @@ var all_annotation_label_ids = Array.from(get_all_annotation_label_ids());
 // Report on unused labels
 var LABEL_IDS_MAPPED_TO_DATA_KEY = new Set(Object.values(MAP_DATA_KEY_TO_LABEL_ID));
 var LABEL_ID__META__NOT_SPECIFIED = 73;
+var LABEL_ID__META__NOT_SPECIFIED__PARTIAL_INFO = 109;
+var LABEL_IDS__META__NOT_SPECIFIED = [
+    LABEL_ID__META__NOT_SPECIFIED,
+    LABEL_ID__META__NOT_SPECIFIED__PARTIAL_INFO,
+];
 var LABEL_ID__META__ERROR = 74;
 var LABEL_ID__META__POTENTIAL_ERROR = 99;
-var LABEL_IDS_HANDLED_ELSE_WHERE = [
-    LABEL_ID__META__NOT_SPECIFIED,
+var LABEL_IDS__META__ERRORS = [
     LABEL_ID__META__ERROR,
     LABEL_ID__META__POTENTIAL_ERROR,
 ];
+var LABEL_IDS_HANDLED_ELSE_WHERE = __spreadArrays(LABEL_IDS__META__NOT_SPECIFIED, LABEL_IDS__META__ERRORS);
 LABEL_IDS_HANDLED_ELSE_WHERE.forEach(function (label_id) { return LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id); });
 var LABEL_IDS_TO_SILENCE = [
     70,
@@ -190,12 +195,12 @@ function apply_data_string(row, data_key, annotations) {
     var comments = "";
     var value = annotations.map(function (annotation) {
         var value = annotation.text;
-        if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__NOT_SPECIFIED; })) {
+        if (annotation.labels.find(function (label) { return LABEL_IDS__META__NOT_SPECIFIED.includes(label.id); })) {
             includes_warning = true;
             var append_text = value ? value + " (not specified)" : "Not specified";
             value = WARNING_HTML_SYMBOL + " " + append_text;
         }
-        if (annotation.labels.find(function (label) { return label.id === LABEL_ID__META__ERROR || label.id === LABEL_ID__META__POTENTIAL_ERROR; })) {
+        if (annotation.labels.find(function (label) { return LABEL_IDS__META__ERRORS.includes(label.id); })) {
             includes_error = true;
             value = ERROR_HTML_SYMBOL + " " + value;
         }
@@ -204,11 +209,11 @@ function apply_data_string(row, data_key, annotations) {
         }
         return value;
     }).join(", ");
-    if (includes_warning) {
-        //value = `${WARNING_HTML_SYMBOL} ${value}`
+    if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL)) {
+        value = WARNING_HTML_SYMBOL + " " + value;
     }
-    if (includes_error) {
-        //value = `${ERROR_HTML_SYMBOL} ${value}`
+    if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL)) {
+        value = ERROR_HTML_SYMBOL + " " + value;
     }
     value = value + "<br/>" + comments;
     var refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
