@@ -2,6 +2,79 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140293.pdf",
 "file_sha1_hash": "91d05d379e025d72e17f88cc435829414f79a34a",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"deleted": true
+},
+{
+"id": 1,
+"page_number": 1,
+"left": "326px",
+"top": "538px",
+"width": "270px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab and nasal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 1,
+"left": "131px",
+"top": "558px",
+"width": "525px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "universal transport media, and oral saline rinse",
+"labels": [
+{
+"id": 34,
+"text": "Specimen/Transport medium"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "354px",
+"top": "238px",
+"width": "148px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 2,
+"left": "156px",
+"top": "299px",
+"width": "129px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

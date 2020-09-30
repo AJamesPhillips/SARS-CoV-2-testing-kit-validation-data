@@ -2,6 +2,304 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139788.pdf",
 "file_sha1_hash": "c289e23553b1b491a3bc1dec9bbbe8560317c4a6",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "130px",
+"top": "466px",
+"width": "647px",
+"height": "67px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, and oropharyngeal swab specimens) and bronchoalveolar lavage",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "129px",
+"top": "252px",
+"width": "216px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, E",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "533px",
+"top": "272px",
+"width": "80px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 74,
+"text": "Meta/Error"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "613px",
+"top": "277px",
+"width": "68px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 74,
+"text": "Meta/Error"
+}
+],
+"comment": "RNAase P is spelt RNase P and not abbreviated to RdRp"
+},
+{
+"id": 4,
+"page_number": 2,
+"left": "388px",
+"top": "659px",
+"width": "144px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 3,
+"left": "185px",
+"top": "641px",
+"width": "599px",
+"height": "57px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "in-vitro transcribed EAV (Equine Arteritis Virus) RNA extraction control [of] the SARS-CoV-2 E gene",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
+}
+],
+"comment": "Marked with assumption as assuming it's enveloped rather than naked RNA"
+},
+{
+"id": 6,
+"page_number": 7,
+"left": "199px",
+"top": "470px",
+"width": "151px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 7,
+"left": "362px",
+"top": "469px",
+"width": "403px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Sera Care Control Catalog #0505-0126",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 7,
+"left": "158px",
+"top": "513px",
+"width": "242px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swab",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 7,
+"left": "470px",
+"top": "510px",
+"width": "279px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "confirmed negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 7,
+"left": "155px",
+"top": "942px",
+"width": "230px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "previously characterized positive nasopharyngeal patient sample",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 7,
+"left": "381px",
+"top": "937px",
+"width": "13px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 8,
+"left": "349px",
+"top": "667px",
+"width": "37px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.203",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "E gene target"
+},
+{
+"id": 13,
+"page_number": 8,
+"left": "498px",
+"top": "666px",
+"width": "58px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "21",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "N gene target"
+},
+{
+"id": 14,
+"page_number": 8,
+"left": "653px",
+"top": "667px",
+"width": "32px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.203",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "RdRp gene target"
+},
+{
+"id": 15,
+"page_number": 8,
+"left": "436px",
+"top": "542px",
+"width": "42px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 8,
+"left": "387px",
+"top": "664px",
+"width": "51px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

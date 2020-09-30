@@ -2,6 +2,219 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139743.pdf",
 "file_sha1_hash": "9ad959a903ae3c48bdc45650b5bbcf61ae40f36f",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "77px",
+"top": "160px",
+"width": "711px",
+"height": "63px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper or lower respiratory specimens (such as nasopharyngeal, oropharyngeal and nasal swabs, sputum, lower respiratory tract aspirates, bronchoalveolar lavage, and nasopharyngeal wash/aspirate or nasal aspirate)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "151px",
+"top": "244px",
+"width": "178px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 4,
+"left": "593px",
+"top": "285px",
+"width": "155px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 4,
+"left": "76px",
+"top": "202px",
+"width": "741px",
+"height": "44px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "influenza A virus, influenza B virus, and SARS-CoV-2",
+"labels": [
+{
+"id": 5,
+"text": "Detects pathogen(s)"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 32,
+"left": "565px",
+"top": "440px",
+"width": "127px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "live viral stocks of [...] SARS-COV-2 virus, 2019-nCoV/USA-WA1/2020",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 32,
+"left": "467px",
+"top": "876px",
+"width": "20px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 32,
+"left": "133px",
+"top": "482px",
+"width": "702px",
+"height": "48px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "dilutions of each virus were prepared with a diluent consisting of a suspension of human A549 cells and viral transport medium (VTM)",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 32,
+"left": "352px",
+"top": "501px",
+"width": "18px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "https://www.cdc.gov/coronavirus/2019-ncov/downloads/Viral-Transport-Medium.pdf",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
+}
+],
+"comment": "Assuming it's CDC's own formula."
+},
+{
+"id": 8,
+"page_number": 34,
+"left": "668px",
+"top": "153px",
+"width": "31px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 34,
+"left": "437px",
+"top": "465px",
+"width": "67px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.0101",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": "TaqPath 1-step Multiplex"
+},
+{
+"id": 10,
+"page_number": 34,
+"left": "682px",
+"top": "464px",
+"width": "67px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.0506",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 34,
+"left": "443px",
+"top": "334px",
+"width": "142px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / reaction",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -2,6 +2,287 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139836.pdf",
 "file_sha1_hash": "9bca75bd19b6c8d5f06cb12d3dbe8285d329db4e",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "104px",
+"top": "435px",
+"width": "698px",
+"height": "47px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab and nasopharyngeal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"deleted": true
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "464px",
+"top": "423px",
+"width": "240px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "GAC CCC AAA ATC AGC GAA AT",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 2,
+"left": "465px",
+"top": "459px",
+"width": "281px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCT GGT TAC TGC CAG TTG AAT CTG",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 2,
+"left": "466px",
+"top": "488px",
+"width": "320px",
+"height": "38px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "FAM-ACC CCG CAT TAC GTT TGG TGG ACC-BHQ1",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 2,
+"left": "465px",
+"top": "531px",
+"width": "235px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TTA CAA ACA TTG GCC GCA AA",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 2,
+"left": "464px",
+"top": "564px",
+"width": "218px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "GCG CGA CAT TCC GAA GAA",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 2,
+"left": "464px",
+"top": "593px",
+"width": "310px",
+"height": "34px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "FAM-ACA ATT TGC CCC CAG CGC TTC AG-BHQ1",
+"labels": [
+{
+"id": 78,
+"text": "Primers and probes/Sequences"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 2,
+"left": "125px",
+"top": "419px",
+"width": "141px",
+"height": "197px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": "N1, N2"
+},
+{
+"id": 9,
+"page_number": 2,
+"left": "278px",
+"top": "628px",
+"width": "143px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "335px",
+"top": "777px",
+"width": "218px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "synthetic SARS-CoV-2 RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 11,
+"page_number": 6,
+"left": "557px",
+"top": "778px",
+"width": "237px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Twist Bioscience, MN908947.3 (SKU 102024)",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 12,
+"page_number": 6,
+"left": "511px",
+"top": "924px",
+"width": "164px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab specimens",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 13,
+"page_number": 6,
+"left": "668px",
+"top": "923px",
+"width": "15px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": ""
+},
+{
+"id": 14,
+"page_number": 6,
+"left": "605px",
+"top": "1009px",
+"width": "20px",
+"height": "17px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 15,
+"page_number": 6,
+"left": "462px",
+"top": "1004px",
+"width": "35px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "6.25",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 16,
+"page_number": 6,
+"left": "493px",
+"top": "1006px",
+"width": "80px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

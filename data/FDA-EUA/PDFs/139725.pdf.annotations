@@ -2,6 +2,194 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139725.pdf",
 "file_sha1_hash": "8b9b1858f984220b836fc3007673d361b20aae3e",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "634px",
+"top": "561px",
+"width": "146px",
+"height": "29px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "dry oropharyngeal swabs",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "126px",
+"top": "249px",
+"width": "652px",
+"height": "49px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "E, RdRp",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 2,
+"left": "129px",
+"top": "330px",
+"width": "656px",
+"height": "50px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "internal control derived from sequences of the Equine Arteritis Virus (EAV) genome",
+"labels": [
+{
+"id": 105,
+"text": "Controls/Internal/Full process"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 6,
+"left": "126px",
+"top": "210px",
+"width": "254px",
+"height": "28px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "AccuPlex SARS-CoV-2 Verification panel",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 6,
+"left": "379px",
+"top": "214px",
+"width": "258px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare, Gaithersburg MD 20878",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 6,
+"left": "417px",
+"top": "297px",
+"width": "193px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "dry oropharyngeal swab/s",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 6,
+"left": "182px",
+"top": "299px",
+"width": "102px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "PBS solution",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 6,
+"left": "130px",
+"top": "320px",
+"width": "339px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "subject who tested negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 6,
+"left": "640px",
+"top": "893px",
+"width": "24px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 6,
+"left": "468px",
+"top": "934px",
+"width": "18px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "5",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 6,
+"left": "483px",
+"top": "935px",
+"width": "110px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -2,6 +2,185 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139828.pdf",
 "file_sha1_hash": "1bf0d4c14f06ecdbb4406c5795ee7d153aed27a3",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "106px",
+"top": "192px",
+"width": "710px",
+"height": "69px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, oropharyngeal swab specimens and nasopharyngeal wash/aspirate or nasal aspirate specimens)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 5,
+"left": "104px",
+"top": "358px",
+"width": "526px",
+"height": "45px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N, N",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 5,
+"left": "671px",
+"top": "376px",
+"width": "118px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 41,
+"left": "131px",
+"top": "644px",
+"width": "284px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare AccuPlex\u2122 SARS-CoV-2 Reference Material",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 41,
+"left": "429px",
+"top": "647px",
+"width": "383px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "SeraCare Material Code 0505-0126, Batch #10480311",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 41,
+"left": "131px",
+"top": "715px",
+"width": "29px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 41,
+"left": "416px",
+"top": "742px",
+"width": "258px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasopharyngeal swabs in VTM",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"deleted": true
+},
+{
+"id": 8,
+"page_number": 41,
+"left": "131px",
+"top": "760px",
+"width": "219px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "previously tested negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+},
+{
+"id": 109,
+"text": "Meta/Not specified/Partial information to reproduce"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 41,
+"left": "487px",
+"top": "783px",
+"width": "38px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.28",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 10,
+"page_number": 41,
+"left": "525px",
+"top": "785px",
+"width": "88px",
+"height": "25px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

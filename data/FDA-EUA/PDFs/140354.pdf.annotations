@@ -2,6 +2,58 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/140354.pdf",
 "file_sha1_hash": "202412cdba2acbf2a726039f719c61c964dfa94e",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 3,
+"left": "39px",
+"top": "165px",
+"width": "784px",
+"height": "48px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, nasopharyngeal, and oropharyngeal swab specimens) and sputum",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 4,
+"left": "350px",
+"top": "289px",
+"width": "115px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 4,
+"left": "592px",
+"top": "225px",
+"width": "93px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

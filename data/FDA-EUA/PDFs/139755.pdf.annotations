@@ -2,6 +2,164 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/139755.pdf",
 "file_sha1_hash": "236b8ba9b412e75ffce218c8607d7d01d8581a82",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "435px",
+"top": "282px",
+"width": "80px",
+"height": "24px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "nasal swab",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "371px",
+"top": "251px",
+"width": "132px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "N",
+"labels": [
+{
+"id": 106,
+"text": "Viral protein(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 13,
+"left": "106px",
+"top": "91px",
+"width": "234px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "viral sample inactivated by gamma irradiation",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 13,
+"left": "715px",
+"top": "90px",
+"width": "16px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "Even though TCID50 / mL is given this is not an SI unit so marking as not specified."
+},
+{
+"id": 4,
+"page_number": 13,
+"left": "119px",
+"top": "119px",
+"width": "157px",
+"height": "20px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "pooled human nasal matrix",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 13,
+"left": "280px",
+"top": "122px",
+"width": "395px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "healthy donors and confirmed negative for SARS-CoV-2",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 13,
+"left": "261px",
+"top": "199px",
+"width": "22px",
+"height": "16px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 13,
+"left": "320px",
+"top": "268px",
+"width": "59px",
+"height": "19px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "140",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 13,
+"left": "377px",
+"top": "268px",
+"width": "68px",
+"height": "21px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "TCID50 / mL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }
