@@ -401,6 +401,8 @@
 
             // annotation_data_changed()
 
+            console.log(`Saving ${pdf_file_data.annotations.length} annotations to server`)
+
             fetch(path_to_pdf_annotations, {
                 credentials: "same-origin",
                 mode: "same-origin",
@@ -871,17 +873,22 @@
         function set_up_auto_save ()
         {
             const auto_save_el = document.getElementById("auto_save")
+            let saving = false
 
             changed_annotations_data_listeners.push((saved) =>
             {
+                const annotation_count = pdf_file_data.annotations.length
+
                 if (!saved)
                 {
                     auto_save_el.innerText = "Auto saving..."
+                    saving = true
                     post_annotations_to_server()
                 }
-                else
+                else if (saving)
                 {
-                    auto_save_el.innerText = "Saved"
+                    saving = false
+                    auto_save_el.innerText = `Saved (${annotation_count})`
                 }
             })
         }
@@ -1155,7 +1162,7 @@
 
     <script>
         render_side_panel()
-        annotation_data_changed() // hack to get label "used_label" colour to sync
+        annotation_data_changed(true) // hack to get label "used_label" colour to sync
         render_pdf()
     </script>
 </body>

@@ -237,4 +237,13 @@ def annotation():
     return json.dumps(annotations)
 
 
+@app.after_request
+def add_header(response):
+    # if "Cache-Control" not in response.headers:
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
+
+
 populate_data()
