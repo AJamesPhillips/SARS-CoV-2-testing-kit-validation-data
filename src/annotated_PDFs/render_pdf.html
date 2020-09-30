@@ -35,7 +35,14 @@
         {
             overflow: scroll;
         }
-        #annotations_list {
+
+        #delete_annotations
+        {
+            float: right;
+        }
+
+        #annotations_list
+        {
             height: 40%;
         }
         #annotation_details
@@ -114,6 +121,7 @@
 
     <div id="side_panel">
         <button id="save_changes" disabled="true">Save Changes</button>
+        <span id="auto_save"></span>
         <button id="delete_annotations" disabled="true" title="Delete annotations">X</button>
         <div id="annotations_list">
             <!-- <h3>List of annotations:</h3> -->
@@ -508,6 +516,7 @@
                 text,
                 labels,
                 comment,
+                dirty: true,
             }
             pdf_file_data.annotations.push(annotation_data)
             annotation_data_changed()
@@ -826,6 +835,7 @@
         function render_side_panel ()
         {
             set_up_save_button()
+            set_up_auto_save()
             set_up_delete_annotations_button()
             refresh_annotations_list()
             render_annotation_details_side_panel()
@@ -844,6 +854,17 @@
             save_button_el.addEventListener("click", () =>
             {
                 post_annotations_to_server()
+            })
+        }
+
+        function set_up_auto_save ()
+        {
+            const auto_save_el = document.getElementById("auto_save")
+
+            changed_annotations_data_listeners.push((saved) =>
+            {
+                console.log(saved)
+                if (!saved) post_annotations_to_server()
             })
         }
 
@@ -923,7 +944,8 @@
 
             const priority_label_ids = new Set([
                 // Temporary addition for LOD and synthetic controls labelling work
-                68, 66, 67, 72, 0, 6, 64, 62, 63, 73, 86, 78, 83
+                68, 66, 67, 0, 6, 64, 62, 63, 73, 86, 83, 108, 109,
+                // 78, 72,
             ])
 
             Object.keys(common_labels)
