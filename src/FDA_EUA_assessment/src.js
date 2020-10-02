@@ -53,8 +53,6 @@ var DATA_KEYS;
     DATA_KEYS["metrics__confusion_matrix__false_positives"] = "metrics__confusion_matrix__false_positives";
 })(DATA_KEYS || (DATA_KEYS = {}));
 var MAP_DATA_KEY_TO_LABEL_ID = (_a = {},
-    // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
-    // [DATA_KEYS.test_descriptor__test_name]: 1,
     _a[DATA_KEYS.claims__controls__internal__human_gene_target] = 83,
     _a[DATA_KEYS.claims__limit_of_detection__minimum_replicates] = 68,
     _a[DATA_KEYS.claims__limit_of_detection__value] = 66,
@@ -127,46 +125,61 @@ var LABEL_IDS_TO_SILENCE = [
 LABEL_IDS_TO_SILENCE.forEach(function (label_id) { return LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_id); });
 var unhandled_label_ids = all_annotation_label_ids.filter(function (x) { return !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x); });
 console.log("Unhandled label ids: " + unhandled_label_ids.map(function (id) { return "\n * " + id + " -> " + labels[id]; }));
-var extracted_data = fda_eua_parsed_data
-    .slice(1) // skip first row of json array which contains csv-like array of headers
-    .map(function (fda_eua_parsed_data_row) {
-    var test_name = fda_eua_parsed_data_row[2];
-    var manufacturer_name = fda_eua_parsed_data_row[1];
-    var date = fda_eua_parsed_data_row[0];
-    var row = {
-        test_descriptor__manufacturer_name: {
-            value: manufacturer_name,
-            refs: []
-        },
-        test_descriptor__test_name: {
-            value: test_name,
-            refs: []
-        },
-        validation_condition__author: {
-            value: "self",
-            refs: []
-        },
-        validation_condition__date: {
-            value: date,
-            refs: []
-        }
-    };
-    add_data_from_annotations(row);
-    return row;
-});
-function add_data_from_annotations(row) {
+function reformat_fda_eua_parsed_data(fda_eua_parsed_data) {
+    return fda_eua_parsed_data
+        .slice(1) // skip first row of json array which contains csv-like array of headers
+        .map(function (fda_eua_parsed_data_row) {
+        var test_name = fda_eua_parsed_data_row[2];
+        var manufacturer_name = fda_eua_parsed_data_row[1];
+        var date = fda_eua_parsed_data_row[0];
+        var row = {
+            test_descriptor__manufacturer_name: {
+                value: manufacturer_name,
+                refs: [],
+                annotations: []
+            },
+            test_descriptor__test_name: {
+                value: test_name,
+                refs: [],
+                annotations: []
+            },
+            validation_condition__author: {
+                value: "self",
+                refs: [],
+                annotations: []
+            },
+            validation_condition__date: {
+                value: date,
+                refs: [],
+                annotations: []
+            }
+        };
+        return row;
+    });
+}
+function add_data_from_annotations(row, annotations_by_test_name) {
     var test_name = row[DATA_KEYS.test_descriptor__test_name].value;
     var annotation_files = annotations_by_test_name[test_name];
     if (!annotation_files)
         return;
     Object.keys(MAP_DATA_KEY_TO_LABEL_ID).forEach(function (data_key) {
-        add_specific_data_from_annotations(row, data_key, annotation_files);
+        var data_node = get_specific_annotations_data(data_key, annotation_files);
+        row[data_key] = data_node;
     });
 }
-function add_specific_data_from_annotations(row, data_key, annotation_files) {
+function get_specific_annotations_data(data_key, annotation_files) {
     var label_id = MAP_DATA_KEY_TO_LABEL_ID[data_key];
     var annotations = filter_annotation_files_for_label(annotation_files, label_id);
-    apply_data_string(row, data_key, annotations);
+    var value = "";
+    var refs = [];
+    var comments = "";
+    if (annotations.length > 0) {
+        value = value_from_annotations(annotations);
+        refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
+        comments = comments_from_annotations(annotations);
+        value = value + "<br/>" + comments;
+    }
+    return { value: value, refs: refs, annotations: annotations };
 }
 function filter_annotation_files_for_label(annotation_files, label_id) {
     var annotations = [];
@@ -185,14 +198,11 @@ function filter_annotations_for_label(annotation_file, label_id) {
         return (__assign(__assign({}, annotation), { relative_file_path: annotation_file.relative_file_path }));
     });
 }
-function apply_data_string(row, data_key, annotations) {
-    if (annotations.length === 0)
-        return;
+function value_from_annotations(annotations) {
     var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
     var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
     var includes_warning = false;
     var includes_error = false;
-    var comments = "";
     var value = annotations.map(function (annotation) {
         var value = annotation.text;
         if (annotation.labels.find(function (label) { return LABEL_IDS__META__NOT_SPECIFIED.includes(label.id); })) {
@@ -204,9 +214,6 @@ function apply_data_string(row, data_key, annotations) {
             includes_error = true;
             value = ERROR_HTML_SYMBOL + " " + value;
         }
-        if (annotation.comment) {
-            comments += "<span title=\"" + html_safe_ish(annotation.comment) + "\">C</span> ";
-        }
         return value;
     }).join(", ");
     if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL)) {
@@ -215,10 +222,16 @@ function apply_data_string(row, data_key, annotations) {
     if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL)) {
         value = ERROR_HTML_SYMBOL + " " + value;
     }
-    value = value + "<br/>" + comments;
-    var refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
-    var data_node = { value: value, refs: refs };
-    row[data_key] = data_node;
+    return value;
+}
+function comments_from_annotations(annotations) {
+    var comments = "";
+    annotations.forEach(function (annotation) {
+        if (annotation.comment) {
+            comments += "<span title=\"" + html_safe_ish(annotation.comment) + "\">C</span> ";
+        }
+    });
+    return comments;
 }
 function ref_link(relative_file_path, annotation_id) {
     var ref = "http://localhost:5003/render_pdf?relative_file_path=" + relative_file_path;
@@ -358,34 +371,6 @@ function ref_link(relative_file_path, annotation_id) {
 //     //     [DATA_KEYS.metrics__confusion_matrix__false_positives]: { value: "", refs: [] },
 //     // },
 // ]
-// extracted_data.forEach(row =>
-// {
-//     const test_name = row[DATA_KEYS.test_descriptor__test_name].value
-//     const fda_eua = FDA_EUA_parsed_data_by_test_name[test_name]
-//     if (fda_eua)
-//     {
-//         row[DATA_KEYS.test_descriptor__manufacturer_name] =
-//         {
-//             value: fda_eua[DATA_KEYS.test_descriptor__manufacturer_name],
-//             refs: [],
-//         }
-//         // Will likely delete this as EUA date is not the same as
-//         // validation date if more recent data is given
-//         const author = row[DATA_KEYS.validation_condition__author]
-//         if (author && author.value === "self")
-//         {
-//             row[DATA_KEYS.validation_condition__date] =
-//             {
-//                 value: fda_eua[DATA_KEYS.validation_condition__date],
-//                 refs: [],
-//             }
-//         }
-//     }
-//     else
-//     {
-//         console.error(`test_name "${test_name}" not present in fda_eua_parsed_data.`)
-//     }
-// })
 function activate_options() {
     var cells_expanded = false;
     document.getElementById("toggle_expanded_cells").onclick = function () {
@@ -747,6 +732,8 @@ function html_safe_ish(value) {
         .replace(/"/ig, "'");
 }
 activate_options();
+var extracted_data = reformat_fda_eua_parsed_data(fda_eua_parsed_data);
+extracted_data.forEach(function (row) { return add_data_from_annotations(row, annotations_by_test_name); });
 build_header(headers);
 populate_table_body(headers, extracted_data);
 update_progress();

@@ -1,6 +1,4 @@
 
-declare var labels: {[label_id: number]: string}
-
 type FDA_EUA_PARSED_DATA_ROW = [
     string,
     string,
@@ -16,13 +14,14 @@ type FDA_EUA_PARSED_DATA_ROW = [
     string,
 ]
 type FDA_EUA_PARSED_DATA = FDA_EUA_PARSED_DATA_ROW[]
-declare var fda_eua_parsed_data: FDA_EUA_PARSED_DATA
+
 
 interface Label
 {
     id: number
     text: string
 }
+
 interface Annotation
 {
     id: number
@@ -63,6 +62,10 @@ interface ANNOTATIONS_BY_TEST_NAME
 {
     [test_name: string]: AnnotationFile[]
 }
+
+
+declare var labels: {[label_id: number]: string}
+declare var fda_eua_parsed_data: FDA_EUA_PARSED_DATA
 declare var annotations_by_test_name: ANNOTATIONS_BY_TEST_NAME
 
 
@@ -98,8 +101,6 @@ enum DATA_KEYS {
     metrics__confusion_matrix__false_positives = "metrics__confusion_matrix__false_positives",
 }
 const MAP_DATA_KEY_TO_LABEL_ID = {
-    // [DATA_KEYS.test_descriptor__manufacturer_name]: 1,
-    // [DATA_KEYS.test_descriptor__test_name]: 1,
     [DATA_KEYS.claims__controls__internal__human_gene_target]: 83,
     [DATA_KEYS.claims__limit_of_detection__minimum_replicates]: 68,
     [DATA_KEYS.claims__limit_of_detection__value]: 66,
@@ -116,17 +117,6 @@ const MAP_DATA_KEY_TO_LABEL_ID = {
     [DATA_KEYS.validation_condition__synthetic_specimen__clinical_matrix_source]: 86,
     [DATA_KEYS.validation_condition__synthetic_specimen__viral_material]: 62,
     [DATA_KEYS.validation_condition__synthetic_specimen__viral_material_source]: 63,
-    // [DATA_KEYS.validation_condition__specimen_type]: 1,
-    // [DATA_KEYS.validation_condition__swab_type]: 1,
-    // [DATA_KEYS.validation_condition__transport_medium]: 1,
-    // [DATA_KEYS.validation_condition__sample_volume]: 1,
-    // [DATA_KEYS.validation_condition__comparator_test]: 1,
-    // [DATA_KEYS.metrics__num_clinical_samples__positive]: 1,
-    // [DATA_KEYS.metrics__num_clinical_samples__negative_controls]: 1,
-    // [DATA_KEYS.metrics__confusion_matrix__true_positives]: 1,
-    // [DATA_KEYS.metrics__confusion_matrix__false_negatives]: 1,
-    // [DATA_KEYS.metrics__confusion_matrix__true_negatives]: 1,
-    // [DATA_KEYS.metrics__confusion_matrix__false_positives]: 1,
 }
 
 
@@ -201,40 +191,13 @@ LABEL_IDS_TO_SILENCE.forEach(label_id => LABEL_IDS_MAPPED_TO_DATA_KEY.add(label_
 const unhandled_label_ids = all_annotation_label_ids.filter(x => !LABEL_IDS_MAPPED_TO_DATA_KEY.has(x))
 console.log(`Unhandled label ids: ${unhandled_label_ids.map(id => `\n * ${id} -> ${labels[id]}`)}`)
 
-// interface FDA_EUA_PARSED_DATA_BY_TEST_NAME
-// {
-//     [test_name: string]:
-//     {
-//         [DATA_KEYS.test_descriptor__manufacturer_name]: string
-//         [DATA_KEYS.validation_condition__date]: string
-//     }
-// }
-// const FDA_EUA_parsed_data_by_test_name: FDA_EUA_PARSED_DATA_BY_TEST_NAME = fda_eua_parsed_data
-//     .slice(1) // skip first row of json array which contains csv-like array of headers
-//     .reduce((accum, row) => {
-//         const test_name = row[2] as string
-//         if (accum[test_name])
-//         {
-//             console.error(`Duplicate test_name in fda_eua_parsed_data: ${test_name}`)
-//         }
-//         else
-//         {
-//             accum[test_name] =
-//             {
-//                 [DATA_KEYS.test_descriptor__manufacturer_name]: row[1] as string,
-//                 [DATA_KEYS.validation_condition__date]: row[0] as string,
-//             }
-//         }
-
-//         return accum
-//     }, {} as FDA_EUA_PARSED_DATA_BY_TEST_NAME)
-
 
 interface DATA_NODE
 {
-    value: string | number
+    value: string
     comment?: string
     refs: string[]
+    annotations: AnnotationWithFilePath[]
 }
 interface DATA_ROW
 {
@@ -242,22 +205,13 @@ interface DATA_ROW
     test_descriptor__test_name: DATA_NODE,
     validation_condition__author: DATA_NODE,
     validation_condition__date: DATA_NODE,
-    // validation_condition__specimen_type: DATA_NODE,
-    // validation_condition__swab_type: DATA_NODE,
-    // validation_condition__transport_medium: DATA_NODE,
-    // validation_condition__sample_volume: DATA_NODE,
-    // validation_condition__comparator_test: DATA_NODE,
-    // metrics__num_clinical_samples__positive: DATA_NODE,
-    // metrics__num_clinical_samples__negative_controls: DATA_NODE,
-    // metrics__confusion_matrix__true_positives: DATA_NODE,
-    // metrics__confusion_matrix__false_negatives: DATA_NODE,
-    // metrics__confusion_matrix__true_negatives: DATA_NODE,
-    // metrics__confusion_matrix__false_positives: DATA_NODE,
 }
 
 
 type DATA = DATA_ROW[]
-let extracted_data: DATA = fda_eua_parsed_data
+function reformat_fda_eua_parsed_data (fda_eua_parsed_data: FDA_EUA_PARSED_DATA): DATA
+{
+    return fda_eua_parsed_data
     .slice(1) // skip first row of json array which contains csv-like array of headers
     .map(fda_eua_parsed_data_row =>
         {
@@ -269,28 +223,31 @@ let extracted_data: DATA = fda_eua_parsed_data
                 test_descriptor__manufacturer_name: {
                     value: manufacturer_name,
                     refs: [],
+                    annotations: [],
                 },
                 test_descriptor__test_name: {
                     value: test_name,
                     refs: [],
+                    annotations: [],
                 },
                 validation_condition__author: {
                     value: "self",
                     refs: [],
+                    annotations: [],
                 },
                 validation_condition__date: {
                     value: date,
                     refs: [],
+                    annotations: [],
                 },
             }
 
-            add_data_from_annotations(row)
-
             return row
         })
+}
 
 
-function add_data_from_annotations (row: DATA_ROW)
+function add_data_from_annotations (row: DATA_ROW, annotations_by_test_name: ANNOTATIONS_BY_TEST_NAME)
 {
     const test_name = row[DATA_KEYS.test_descriptor__test_name].value
 
@@ -299,16 +256,31 @@ function add_data_from_annotations (row: DATA_ROW)
 
     Object.keys(MAP_DATA_KEY_TO_LABEL_ID).forEach((data_key: DATA_KEYS) =>
         {
-            add_specific_data_from_annotations(row, data_key, annotation_files)
+            const data_node = get_specific_annotations_data(data_key, annotation_files)
+            row[data_key] = data_node
         })
 }
 
 
-function add_specific_data_from_annotations (row: DATA_ROW, data_key: DATA_KEYS, annotation_files: AnnotationFile[])
+function get_specific_annotations_data (data_key: DATA_KEYS, annotation_files: AnnotationFile[]): DATA_NODE
 {
     const label_id = MAP_DATA_KEY_TO_LABEL_ID[data_key]
     const annotations = filter_annotation_files_for_label(annotation_files, label_id)
-    apply_data_string(row, data_key, annotations)
+
+    let value = ""
+    let refs = []
+    let comments = ""
+
+    if (annotations.length > 0)
+    {
+        value = value_from_annotations(annotations)
+        refs = annotations.map(annotation => ref_link(annotation.relative_file_path, annotation.id))
+        comments = comments_from_annotations(annotations)
+
+        value = value + "<br/>" + comments
+    }
+
+    return { value, refs, annotations }
 }
 
 
@@ -340,16 +312,14 @@ function filter_annotations_for_label (annotation_file: AnnotationFile, label_id
 }
 
 
-function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: AnnotationWithFilePath[])
+function value_from_annotations (annotations: AnnotationWithFilePath[]): string
 {
-    if (annotations.length === 0) return
-
     const WARNING_HTML_SYMBOL = `<span class="warning_symbol" title="Value not specified">⚠</span>`
     const ERROR_HTML_SYMBOL = `<span class="error_symbol" title="Potential error">⚠</span>`
 
     let includes_warning = false
     let includes_error = false
-    let comments = ""
+
     let value = annotations.map(annotation => {
         let value = annotation.text
 
@@ -366,11 +336,6 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
             value = `${ERROR_HTML_SYMBOL} ${value}`
         }
 
-        if (annotation.comment)
-        {
-            comments += `<span title="${html_safe_ish(annotation.comment)}">C</span> `
-        }
-
         return value
     }).join(", ")
 
@@ -384,13 +349,22 @@ function apply_data_string (row: DATA_ROW, data_key: DATA_KEYS, annotations: Ann
         value = `${ERROR_HTML_SYMBOL} ${value}`
     }
 
-    value = value + "<br/>" + comments
+    return value
+}
 
-    const refs = annotations.map(annotation => ref_link(annotation.relative_file_path, annotation.id))
 
-    const data_node: DATA_NODE = { value, refs }
+function comments_from_annotations (annotations: AnnotationWithFilePath[]): string
+{
+    let comments = ""
 
-    row[data_key] = data_node
+    annotations.forEach(annotation => {
+        if (annotation.comment)
+        {
+            comments += `<span title="${html_safe_ish(annotation.comment)}">C</span> `
+        }
+    })
+
+    return comments
 }
 
 
@@ -402,6 +376,7 @@ function ref_link (relative_file_path: string, annotation_id?: number)
 
     return ref
 }
+
 
 // const extracted_data: DATA = [
 //     {
@@ -536,37 +511,6 @@ function ref_link (relative_file_path: string, annotation_id?: number)
 //     // },
 // ]
 
-
-
-// extracted_data.forEach(row =>
-// {
-//     const test_name = row[DATA_KEYS.test_descriptor__test_name].value
-//     const fda_eua = FDA_EUA_parsed_data_by_test_name[test_name]
-//     if (fda_eua)
-//     {
-//         row[DATA_KEYS.test_descriptor__manufacturer_name] =
-//         {
-//             value: fda_eua[DATA_KEYS.test_descriptor__manufacturer_name],
-//             refs: [],
-//         }
-
-//         // Will likely delete this as EUA date is not the same as
-//         // validation date if more recent data is given
-//         const author = row[DATA_KEYS.validation_condition__author]
-//         if (author && author.value === "self")
-//         {
-//             row[DATA_KEYS.validation_condition__date] =
-//             {
-//                 value: fda_eua[DATA_KEYS.validation_condition__date],
-//                 refs: [],
-//             }
-//         }
-//     }
-//     else
-//     {
-//         console.error(`test_name "${test_name}" not present in fda_eua_parsed_data.`)
-//     }
-// })
 
 
 function activate_options ()
@@ -966,6 +910,7 @@ function populate_table_body (headers: HEADERS, data: DATA)
     })
 }
 
+
 function update_progress ()
 {
     const progress_el = document.getElementById("progress")
@@ -992,6 +937,8 @@ function html_safe_ish (value)
 
 
 activate_options()
+const extracted_data = reformat_fda_eua_parsed_data(fda_eua_parsed_data)
+extracted_data.forEach(row => add_data_from_annotations(row, annotations_by_test_name))
 build_header(headers)
 populate_table_body(headers, extracted_data)
 update_progress()
