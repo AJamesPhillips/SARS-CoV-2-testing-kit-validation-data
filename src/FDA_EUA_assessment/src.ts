@@ -75,7 +75,7 @@ declare var fda_eua_parsed_data: FDA_EUA_PARSED_DATA
 declare var annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME
 
 
-const LABELS = {
+const labels = {
     claims__controls__internal__human_gene_target: 83,
     claims__limit_of_detection__minimum_replicates: 68,
     claims__limit_of_detection__value: 66,
@@ -110,14 +110,15 @@ const LABELS = {
     validation_condition__synthetic_specimen__viral_material_source: 63,
     validation_condition__transport_medium: -1,
 }
+type LABELS = typeof labels
 
 const LABEL_IDS__META__NOT_SPECIFIED = [
-    LABELS.meta__not_specified,
-    LABELS.meta__not_specified__partial_info,
+    labels.meta__not_specified,
+    labels.meta__not_specified__partial_info,
 ]
 const LABEL_IDS__META__ERRORS = [
-    LABELS.meta__error,
-    LABELS.meta__potential_error,
+    labels.meta__error,
+    labels.meta__potential_error,
 ]
 
 function get_used_annotation_label_ids (annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME)
@@ -147,7 +148,7 @@ function get_used_annotation_label_ids (annotation_files_by_test_name: ANNOTATIO
 // Report on unused labels
 function report_on_unused_labels (label_ids_to_names: LABEL_IDS_TO_NAMES, used_annotation_label_ids: number[])
 {
-    const HANDLED_LABEL_IDS = new Set<number>((Object as any).values(LABELS))
+    const HANDLED_LABEL_IDS = new Set<number>((Object as any).values(labels))
 
     const LABEL_IDS_HANDLED_ELSE_WHERE = [
         ...LABEL_IDS__META__NOT_SPECIFIED,
@@ -194,8 +195,7 @@ interface DATA_ROW
 }
 
 
-type DATA = DATA_ROW[]
-function reformat_fda_eua_parsed_data (fda_eua_parsed_data: FDA_EUA_PARSED_DATA): DATA
+function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARSED_DATA): DATA_ROW[]
 {
     return fda_eua_parsed_data
     .slice(1) // skip first row of json array which contains csv-like array of headers
@@ -206,22 +206,22 @@ function reformat_fda_eua_parsed_data (fda_eua_parsed_data: FDA_EUA_PARSED_DATA)
             const date = fda_eua_parsed_data_row[0]
 
             const row: DATA_ROW = {
-                [LABELS.test_descriptor__manufacturer_name]: {
+                [labels.test_descriptor__manufacturer_name]: {
                     value: manufacturer_name,
                     refs: [],
                     annotations: [],
                 },
-                [LABELS.test_descriptor__test_name]: {
+                [labels.test_descriptor__test_name]: {
                     value: test_name,
                     refs: [],
                     annotations: [],
                 },
-                [LABELS.validation_condition__author]: {
+                [labels.validation_condition__author]: {
                     value: "self",
                     refs: [],
                     annotations: [],
                 },
-                [LABELS.validation_condition__date]: {
+                [labels.validation_condition__date]: {
                     value: date,
                     refs: [],
                     annotations: [],
@@ -233,14 +233,14 @@ function reformat_fda_eua_parsed_data (fda_eua_parsed_data: FDA_EUA_PARSED_DATA)
 }
 
 
-function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME)
+function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME, labels: LABELS)
 {
-    const test_name = row[LABELS.test_descriptor__test_name].value
+    const test_name = row[labels.test_descriptor__test_name].value
 
     const annotation_files = annotation_files_by_test_name[test_name]
     if (!annotation_files) return
 
-    ;(Object as any).values(LABELS).forEach((label_id: number) =>
+    ;(Object as any).values(labels).forEach((label_id: number) =>
         {
             if (row[label_id]) return // hack to avoid overwriting fields already set from parse FDA EUA data
 
@@ -539,11 +539,11 @@ const headers: HEADERS = [
         children: [
             {
                 title: "Name",
-                label_id: LABELS.test_descriptor__manufacturer_name,
+                label_id: labels.test_descriptor__manufacturer_name,
             },
             {
                 title: "Test name",
-                label_id: LABELS.test_descriptor__test_name,
+                label_id: labels.test_descriptor__test_name,
             },
         ],
     },
@@ -558,11 +558,11 @@ const headers: HEADERS = [
                 children: [
                     {
                         title: "Supported specimen types",
-                        label_id: LABELS.claims__specimen__supported_types,
+                        label_id: labels.claims__specimen__supported_types,
                     },
                     {
                         title: "Transport medium",
-                        label_id: LABELS.claims__specimen__transport_medium,
+                        label_id: labels.claims__specimen__transport_medium,
                     },
                 ]
             },
@@ -583,13 +583,13 @@ const headers: HEADERS = [
                     { title: "Max no. specimens", label_id: null, },
                 ]
             },
-            { title: "Target gene(s) of SARS-CoV-2", label_id: LABELS.claims__target_viral_genes, },
+            { title: "Target gene(s) of SARS-CoV-2", label_id: labels.claims__target_viral_genes, },
             {
                 title: "Primers and probes",
                 label_id: null,
                 children: [
-                    { title: "Sequences", label_id: LABELS.claims__primers_and_probes__sequences, },
-                    { title: "Sources", label_id: LABELS.claims__primers_and_probes__sources, },
+                    { title: "Sequences", label_id: labels.claims__primers_and_probes__sequences, },
+                    { title: "Sources", label_id: labels.claims__primers_and_probes__sources, },
                 ]
             },
             {
@@ -609,15 +609,15 @@ const headers: HEADERS = [
                 children: [
                     {
                         title: "value",
-                        label_id: LABELS.claims__limit_of_detection__value,
+                        label_id: labels.claims__limit_of_detection__value,
                     },
                     {
                         title: "units",
-                        label_id: LABELS.claims__limit_of_detection__units,
+                        label_id: labels.claims__limit_of_detection__units,
                     },
                     {
                         title: "Minimum replicates",
-                        label_id: LABELS.claims__limit_of_detection__minimum_replicates,
+                        label_id: labels.claims__limit_of_detection__minimum_replicates,
                     },
                 ]
             },
@@ -635,7 +635,7 @@ const headers: HEADERS = [
                 title: "Controls",
                 label_id: null,
                 children: [
-                    { title: "Human gene", label_id: LABELS.claims__controls__internal__human_gene_target, },
+                    { title: "Human gene", label_id: labels.claims__controls__internal__human_gene_target, },
                 ]
             },
             {
@@ -662,7 +662,7 @@ const headers: HEADERS = [
                 children: [
                     { title: "Instrument", label_id: null, },
                     { title: "Enzyme mix / kits", label_id: null, },
-                    { title: "Reaction volume / μL", label_id: LABELS.claims__reaction_volume_uL, },
+                    { title: "Reaction volume / μL", label_id: labels.claims__reaction_volume_uL, },
                 ]
             },
             {
@@ -681,11 +681,11 @@ const headers: HEADERS = [
         children: [
             {
                 title: "Author",
-                label_id: LABELS.validation_condition__author,
+                label_id: labels.validation_condition__author,
             },
             {
                 title: "Date",
-                label_id: LABELS.validation_condition__date,
+                label_id: labels.validation_condition__date,
             },
             {
                 title: "Patient details",
@@ -701,20 +701,20 @@ const headers: HEADERS = [
                 title: "Synthetic Specimen",
                 label_id: null,
                 children: [
-                    { title: "Viral material", label_id:LABELS.validation_condition__synthetic_specimen__viral_material, },
-                    { title: "Viral material source", label_id:LABELS.validation_condition__synthetic_specimen__viral_material_source, },
-                    { title: "Clinical matrix", label_id:LABELS.validation_condition__synthetic_specimen__clinical_matrix, },
-                    { title: "Clinical matrix source", label_id:LABELS.validation_condition__synthetic_specimen__clinical_matrix_source, },
+                    { title: "Viral material", label_id:labels.validation_condition__synthetic_specimen__viral_material, },
+                    { title: "Viral material source", label_id:labels.validation_condition__synthetic_specimen__viral_material_source, },
+                    { title: "Clinical matrix", label_id:labels.validation_condition__synthetic_specimen__clinical_matrix, },
+                    { title: "Clinical matrix source", label_id:labels.validation_condition__synthetic_specimen__clinical_matrix_source, },
                 ]
             },
             {
                 title: "Specimen",
                 label_id: null,
                 children: [
-                    { title: "Type", label_id: LABELS.validation_condition__specimen_type, },
-                    { title: "Swab type", label_id: LABELS.validation_condition__swab_type, },
-                    { title: "Transport medium", label_id: LABELS.validation_condition__transport_medium, },
-                    { title: "Sample volume", label_id: LABELS.validation_condition__sample_volume, },
+                    { title: "Type", label_id: labels.validation_condition__specimen_type, },
+                    { title: "Swab type", label_id: labels.validation_condition__swab_type, },
+                    { title: "Transport medium", label_id: labels.validation_condition__transport_medium, },
+                    { title: "Sample volume", label_id: labels.validation_condition__sample_volume, },
                 ]
             },
         ],
@@ -735,26 +735,26 @@ const headers: HEADERS = [
                 children: [
                     {
                         title: "Positives",
-                        label_id: LABELS.metrics__num_clinical_samples__positive,
+                        label_id: labels.metrics__num_clinical_samples__positive,
                     },
                     {
                         title: "Controls (negatives)",
-                        label_id: LABELS.metrics__num_clinical_samples__negative_controls,
+                        label_id: labels.metrics__num_clinical_samples__negative_controls,
                     },
                 ]
             },
             {
                 title: "Comparator test",
-                label_id: LABELS.validation_condition__comparator_test,
+                label_id: labels.validation_condition__comparator_test,
             },
             {
                 title: "Confusion matrix",
                 label_id: null,
                 children: [
-                    { title: "True positives", label_id: LABELS.metrics__confusion_matrix__true_positives },
-                    { title: "False negatives", label_id: LABELS.metrics__confusion_matrix__false_negatives },
-                    { title: "True negatives", label_id: LABELS.metrics__confusion_matrix__true_negatives },
-                    { title: "False positives", label_id: LABELS.metrics__confusion_matrix__false_positives },
+                    { title: "True positives", label_id: labels.metrics__confusion_matrix__true_positives },
+                    { title: "False negatives", label_id: labels.metrics__confusion_matrix__false_negatives },
+                    { title: "True negatives", label_id: labels.metrics__confusion_matrix__true_negatives },
+                    { title: "False positives", label_id: labels.metrics__confusion_matrix__false_positives },
                 ]
             },
         ],
@@ -858,12 +858,12 @@ function iterate_lowest_header (headers: HEADERS, func: (header: HEADER) => void
 }
 
 
-function populate_table_body (headers: HEADERS, data: DATA)
+function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
 {
     const table_el = document.getElementById("data_table")
     const tbody_el = table_el.getElementsByTagName("tbody")[0]
 
-    data.forEach(data_row =>
+    data_rows.forEach(data_row =>
     {
         const row = tbody_el.insertRow()
 
@@ -907,7 +907,7 @@ function update_progress ()
     let total_completed = 0
     Array.from(tbody.children).forEach(row =>
         {
-            total_completed += (row.children[2].innerHTML !== "" ? 1 : 0)
+            total_completed += ((row.children[2] as any).innerText !== "" ? 1 : 0)
         })
 
     const percentage = ((total_completed / total_rows) * 100).toFixed(1)
@@ -926,8 +926,8 @@ function html_safe_ish (value)
 activate_options()
 const used_annotation_label_ids = Array.from(get_used_annotation_label_ids(annotation_files_by_test_name))
 report_on_unused_labels(label_ids_to_names, used_annotation_label_ids)
-const extracted_data = reformat_fda_eua_parsed_data(fda_eua_parsed_data)
-extracted_data.forEach(row => add_data_from_annotations(row, annotation_files_by_test_name))
+const data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data)
+data_rows.forEach(row => add_data_from_annotations(row, annotation_files_by_test_name, labels))
 build_header(headers)
-populate_table_body(headers, extracted_data)
+populate_table_body(headers, data_rows)
 update_progress()
