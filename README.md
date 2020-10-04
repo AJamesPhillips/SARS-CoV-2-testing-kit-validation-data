@@ -12,8 +12,15 @@
 
 ## Run scripts
 
+### FDA EUAs page and related PDF files
+
     python3 src/parse_FDA_EUAs_html.py
     python3 src/get_FDA_PDFs.py
+
+### FDA reference panel html
+
+    python3 src/FDA_reference_panel/get_latest_version.py
+    python3 src/FDA_reference_panel/parse_versions.py
 
 ## Run local pages
 
