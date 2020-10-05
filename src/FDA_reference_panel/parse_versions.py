@@ -164,7 +164,7 @@ def parse_versions():
 
         output_file_name = file_name.replace(".html", ".json")
         with open(parsed_dir + "/" + output_file_name, "w") as f:
-            json.dump(parsed_result, f, indent=0)
+            json.dump(parsed_result, f, indent=2)
 
 
 parse_versions()
