@@ -16,6 +16,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
+var _a;
 function is_annotation(annotation) {
     return !annotation.deleted;
 }
@@ -62,6 +63,7 @@ var LABEL_IDS__META__ERRORS = [
     labels.meta__error,
     labels.meta__potential_error,
 ];
+var LABEL_IDS__META = __spreadArrays(LABEL_IDS__META__NOT_SPECIFIED, LABEL_IDS__META__ERRORS);
 function get_used_annotation_label_ids(annotation_files_by_test_name) {
     var used_annotation_label_ids = new Set();
     Object.values(annotation_files_by_test_name)
@@ -81,7 +83,7 @@ function get_used_annotation_label_ids(annotation_files_by_test_name) {
 // Report on unused labels
 function report_on_unused_labels(label_ids_to_names, used_annotation_label_ids) {
     var HANDLED_LABEL_IDS = new Set(Object.values(labels));
-    var LABEL_IDS_HANDLED_ELSE_WHERE = __spreadArrays(LABEL_IDS__META__NOT_SPECIFIED, LABEL_IDS__META__ERRORS);
+    var LABEL_IDS_HANDLED_ELSE_WHERE = LABEL_IDS__META;
     LABEL_IDS_HANDLED_ELSE_WHERE.forEach(function (label_id) { return HANDLED_LABEL_IDS.add(label_id); });
     var LABEL_IDS_TO_SILENCE = [
         70,
@@ -117,22 +119,18 @@ function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
         var row = (_a = {},
             _a[labels.test_descriptor__manufacturer_name] = {
                 value: manufacturer_name,
-                refs: [],
                 annotations: []
             },
             _a[labels.test_descriptor__test_name] = {
                 value: test_name,
-                refs: [],
                 annotations: []
             },
             _a[labels.validation_condition__author] = {
                 value: "self",
-                refs: [],
                 annotations: []
             },
             _a[labels.validation_condition__date] = {
                 value: date,
-                refs: [],
                 annotations: []
             },
             _a);
@@ -154,15 +152,13 @@ function add_data_from_annotations(row, annotation_files_by_test_name, labels) {
 function get_specific_annotations_data(label_id, annotation_files) {
     var annotations = filter_annotation_files_for_label(annotation_files, label_id);
     var value = "";
-    var refs = [];
     var comments = "";
     if (annotations.length > 0) {
         value = value_from_annotations(annotations);
-        refs = annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
         comments = comments_from_annotations(annotations);
         value = value + "<br/>" + comments;
     }
-    return { value: value, refs: refs, annotations: annotations };
+    return { value: value, annotations: annotations };
 }
 function filter_annotation_files_for_label(annotation_files, label_id) {
     var annotations = [];
@@ -181,17 +177,20 @@ function filter_annotations_for_label(annotation_file, label_id) {
         return (__assign(__assign({}, annotation), { relative_file_path: annotation_file.relative_file_path }));
     });
 }
+var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
+var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
+function not_specified_value_html(value) {
+    var append_text = value ? value + " (not specified)" : "Not specified";
+    return WARNING_HTML_SYMBOL + " " + append_text;
+}
 function value_from_annotations(annotations) {
-    var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
-    var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
     var includes_warning = false;
     var includes_error = false;
     var value = annotations.map(function (annotation) {
         var value = annotation.text;
         if (annotation.labels.find(function (label) { return LABEL_IDS__META__NOT_SPECIFIED.includes(label.id); })) {
             includes_warning = true;
-            var append_text = value ? value + " (not specified)" : "Not specified";
-            value = WARNING_HTML_SYMBOL + " " + append_text;
+            value = not_specified_value_html(value);
         }
         if (annotation.labels.find(function (label) { return LABEL_IDS__META__ERRORS.includes(label.id); })) {
             includes_error = true;
@@ -671,6 +670,65 @@ function iterate_lowest_header(headers, func) {
             }
     }
 }
+function has_only_subset_of_labels(labels, allowed_subset_ids) {
+    var allowed = new Set(allowed_subset_ids);
+    return labels.filter(function (label) { return !allowed.has(label.id); }).length === 0;
+}
+function default_value_handler(data_node) {
+    var refs = data_node.annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
+    return { string: data_node.value.toString(), refs: refs };
+}
+var lod_allowed_label_ids = __spreadArrays([labels.claims__limit_of_detection__value], LABEL_IDS__META);
+function limit_of_detection_value_handler(data_node) {
+    var min = Number.MAX_SAFE_INTEGER;
+    var max = Number.MIN_SAFE_INTEGER;
+    var min_ref;
+    var max_ref;
+    data_node.annotations
+        .forEach(function (annotation) {
+        if (has_only_subset_of_labels(annotation.labels, lod_allowed_label_ids)) {
+            var v = parseFloat(annotation.text);
+            var new_min = Math.min(min, v);
+            var new_max = Math.max(max, v);
+            var ref = ref_link(annotation.relative_file_path, annotation.id);
+            if (new_min !== min) {
+                min = new_min;
+                min_ref = ref;
+            }
+            if (new_max !== max) {
+                max = new_max;
+                max_ref = ref;
+            }
+        }
+    });
+    if (!min_ref) {
+        return {
+            string: not_specified_value_html(""),
+            refs: [],
+            data: { not_specified: true }
+        };
+    }
+    var same = min === max;
+    var string = same ? "" + min : min + " <-> " + max;
+    var refs = same ? [min_ref] : [min_ref, max_ref];
+    return { string: string, refs: refs, data: { min: min, max: max } };
+}
+var value_handlers = (_a = {},
+    _a[labels.claims__limit_of_detection__value] = limit_of_detection_value_handler,
+    _a);
+function create_table_cell_contents(value, refs) {
+    var value_title = html_safe_ish(value);
+    var value_el = document.createElement("div");
+    value_el.className = "value_el";
+    value_el.innerHTML = value;
+    value_el.title = value_title;
+    value_el.addEventListener("click", function () {
+        value_el.classList.toggle("expanded");
+    });
+    var ref_container_el = document.createElement("div");
+    ref_container_el.innerHTML = refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
+    return [value_el, ref_container_el];
+}
 function populate_table_body(headers, data_rows) {
     var table_el = document.getElementById("data_table");
     var tbody_el = table_el.getElementsByTagName("tbody")[0];
@@ -678,25 +736,30 @@ function populate_table_body(headers, data_rows) {
         var row = tbody_el.insertRow();
         iterate_lowest_header(headers, function (header) {
             var cell = row.insertCell();
-            if (header.label_id !== null && data_row[header.label_id]) {
-                var data_node = data_row[header.label_id];
-                var value = data_node.value.toString();
-                var value_title = html_safe_ish(value);
-                var value_el_1 = document.createElement("div");
-                value_el_1.className = "value_el";
-                value_el_1.innerHTML = value;
-                value_el_1.title = value_title;
-                value_el_1.addEventListener("click", function () {
-                    value_el_1.classList.toggle("expanded");
-                });
-                cell.appendChild(value_el_1);
-                var ref_container_el = document.createElement("div");
-                var refs = data_node.refs;
-                ref_container_el.innerHTML = refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
-                cell.appendChild(ref_container_el);
+            var data_node = data_row[header.label_id];
+            if (data_node && data_node.value) {
+                var value_handler = value_handlers[header.label_id] || default_value_handler;
+                var value = value_handler(data_node);
+                data_node.string = value.string;
+                data_node.refs = value.refs;
+                data_node.data = value.data;
+                var children = create_table_cell_contents(value.string, value.refs);
+                children.forEach(function (child_el) { return cell.appendChild(child_el); });
             }
         });
     });
+    var data_for_export = [];
+    data_rows.forEach(function (data_row) {
+        var lod = data_row[labels.claims__limit_of_detection__value].data || {};
+        data_for_export.push({
+            developer_name: data_row[labels.test_descriptor__manufacturer_name].value,
+            test_name: data_row[labels.test_descriptor__test_name].value,
+            lod_min: lod.min,
+            lod_max: lod.max,
+            lod_units: data_row[labels.claims__limit_of_detection__units].value
+        });
+    });
+    console.log(JSON.stringify(data_for_export, null, 2));
 }
 function update_progress() {
     var progress_el = document.getElementById("progress");

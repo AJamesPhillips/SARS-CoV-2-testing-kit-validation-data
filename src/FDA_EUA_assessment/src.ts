@@ -120,6 +120,10 @@ const LABEL_IDS__META__ERRORS = [
     labels.meta__error,
     labels.meta__potential_error,
 ]
+const LABEL_IDS__META = [
+    ...LABEL_IDS__META__NOT_SPECIFIED,
+    ...LABEL_IDS__META__ERRORS,
+]
 
 function get_used_annotation_label_ids (annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME)
 {
@@ -150,10 +154,7 @@ function report_on_unused_labels (label_ids_to_names: LABEL_IDS_TO_NAMES, used_a
 {
     const HANDLED_LABEL_IDS = new Set<number>((Object as any).values(labels))
 
-    const LABEL_IDS_HANDLED_ELSE_WHERE = [
-        ...LABEL_IDS__META__NOT_SPECIFIED,
-        ...LABEL_IDS__META__ERRORS,
-    ]
+    const LABEL_IDS_HANDLED_ELSE_WHERE = LABEL_IDS__META
     LABEL_IDS_HANDLED_ELSE_WHERE.forEach(label_id => HANDLED_LABEL_IDS.add(label_id))
 
     const LABEL_IDS_TO_SILENCE = [
@@ -186,8 +187,13 @@ interface DATA_NODE
 {
     value: string
     comment?: string
-    refs: string[]
     annotations: AnnotationWithFilePath[]
+
+    // Other fields added during rendering
+    // TODO: remove this complete hack
+    string?: string
+    refs?: string[]
+    data?: any
 }
 interface DATA_ROW
 {
@@ -208,22 +214,18 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
             const row: DATA_ROW = {
                 [labels.test_descriptor__manufacturer_name]: {
                     value: manufacturer_name,
-                    refs: [],
                     annotations: [],
                 },
                 [labels.test_descriptor__test_name]: {
                     value: test_name,
-                    refs: [],
                     annotations: [],
                 },
                 [labels.validation_condition__author]: {
                     value: "self",
-                    refs: [],
                     annotations: [],
                 },
                 [labels.validation_condition__date]: {
                     value: date,
-                    refs: [],
                     annotations: [],
                 },
             }
@@ -255,19 +257,17 @@ function get_specific_annotations_data (label_id: number, annotation_files: Anno
     const annotations = filter_annotation_files_for_label(annotation_files, label_id)
 
     let value = ""
-    let refs = []
     let comments = ""
 
     if (annotations.length > 0)
     {
         value = value_from_annotations(annotations)
-        refs = annotations.map(annotation => ref_link(annotation.relative_file_path, annotation.id))
         comments = comments_from_annotations(annotations)
 
         value = value + "<br/>" + comments
     }
 
-    return { value, refs, annotations }
+    return { value, annotations }
 }
 
 
@@ -299,11 +299,17 @@ function filter_annotations_for_label (annotation_file: AnnotationFile, label_id
 }
 
 
+const WARNING_HTML_SYMBOL = `<span class="warning_symbol" title="Value not specified">⚠</span>`
+const ERROR_HTML_SYMBOL = `<span class="error_symbol" title="Potential error">⚠</span>`
+function not_specified_value_html (value: string)
+{
+    const append_text = value ? value + " (not specified)" : "Not specified"
+    return `${WARNING_HTML_SYMBOL} ${append_text}`
+}
+
+
 function value_from_annotations (annotations: AnnotationWithFilePath[]): string
 {
-    const WARNING_HTML_SYMBOL = `<span class="warning_symbol" title="Value not specified">⚠</span>`
-    const ERROR_HTML_SYMBOL = `<span class="error_symbol" title="Potential error">⚠</span>`
-
     let includes_warning = false
     let includes_error = false
 
@@ -313,8 +319,7 @@ function value_from_annotations (annotations: AnnotationWithFilePath[]): string
         if (annotation.labels.find(label => LABEL_IDS__META__NOT_SPECIFIED.includes(label.id)))
         {
             includes_warning = true
-            let append_text = value ? value + " (not specified)" : "Not specified"
-            value = `${WARNING_HTML_SYMBOL} ${append_text}`
+            value = not_specified_value_html(value)
         }
 
         if (annotation.labels.find(label => LABEL_IDS__META__ERRORS.includes(label.id)))
@@ -858,6 +863,97 @@ function iterate_lowest_header (headers: HEADERS, func: (header: HEADER) => void
 }
 
 
+function has_only_subset_of_labels(labels: Label[], allowed_subset_ids: number[])
+{
+    const allowed = new Set(allowed_subset_ids)
+    return labels.filter(label => !allowed.has(label.id)).length === 0
+}
+
+
+interface VALUE_FOR_CELL <D> { string: string, refs: string[], data?: D }
+type VALUE_HANDLER<D> = (data_node: DATA_NODE) => VALUE_FOR_CELL<D>
+
+function default_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<undefined>
+{
+    const refs = data_node.annotations.map(annotation => ref_link(annotation.relative_file_path, annotation.id))
+    return { string: data_node.value.toString(), refs }
+}
+
+const lod_allowed_label_ids = [ labels.claims__limit_of_detection__value, ...LABEL_IDS__META ]
+type lod_value_data = { min: number, max: number } | { not_specified: true }
+function limit_of_detection_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data>
+{
+    let min = Number.MAX_SAFE_INTEGER
+    let max = Number.MIN_SAFE_INTEGER
+    let min_ref
+    let max_ref
+
+    data_node.annotations
+        .forEach(annotation =>
+            {
+                if (has_only_subset_of_labels(annotation.labels, lod_allowed_label_ids))
+                {
+                    const v = parseFloat(annotation.text)
+                    const new_min = Math.min(min, v)
+                    const new_max = Math.max(max, v)
+
+                    const ref = ref_link(annotation.relative_file_path, annotation.id)
+
+                    if (new_min !== min)
+                    {
+                        min = new_min
+                        min_ref = ref
+                    }
+
+                    if (new_max !== max)
+                    {
+                        max = new_max
+                        max_ref = ref
+                    }
+                }
+            })
+
+    if (!min_ref)
+    {
+        return {
+            string: not_specified_value_html(""),
+            refs: [],
+            data: { not_specified: true },
+        }
+    }
+
+    const same = min === max
+    const string = same ? `${min}` : `${min} <-> ${max}`
+    const refs = same ? [min_ref] : [min_ref, max_ref]
+
+    return { string, refs, data: { min, max } }
+}
+
+const value_handlers: {[label_id: number]: VALUE_HANDLER<any>} = {
+    [labels.claims__limit_of_detection__value]: limit_of_detection_value_handler
+}
+
+
+function create_table_cell_contents (value: string, refs: string[])
+{
+    const value_title = html_safe_ish(value)
+    const value_el = document.createElement("div")
+    value_el.className = "value_el"
+    value_el.innerHTML = value
+    value_el.title = value_title
+    value_el.addEventListener("click", () =>
+    {
+        value_el.classList.toggle("expanded")
+    })
+
+
+    const ref_container_el = document.createElement("div")
+    ref_container_el.innerHTML = refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
+
+    return [value_el, ref_container_el]
+}
+
+
 function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
 {
     const table_el = document.getElementById("data_table")
@@ -870,31 +966,44 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         iterate_lowest_header(headers, (header: HEADER) =>
         {
             const cell = row.insertCell()
-            if (header.label_id !== null && data_row[header.label_id])
+            const data_node: DATA_NODE = data_row[header.label_id]
+            if (data_node && data_node.value)
             {
-                const data_node: DATA_NODE = data_row[header.label_id]
+                const value_handler = value_handlers[header.label_id] || default_value_handler
+                const value = value_handler(data_node)
 
-                const value = data_node.value.toString()
-                const value_title = html_safe_ish(value)
-                const value_el = document.createElement("div")
-                value_el.className = "value_el"
-                value_el.innerHTML = value
-                value_el.title = value_title
-                value_el.addEventListener("click", () =>
-                {
-                    value_el.classList.toggle("expanded")
-                })
+                data_node.string = value.string
+                data_node.refs = value.refs
+                data_node.data = value.data
 
-                cell.appendChild(value_el)
-
-                const ref_container_el = document.createElement("div")
-                const refs = data_node.refs
-                ref_container_el.innerHTML = refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
-
-                cell.appendChild(ref_container_el)
+                const children = create_table_cell_contents(value.string, value.refs)
+                children.forEach(child_el => cell.appendChild(child_el))
             }
         })
     })
+
+    // Complete hack: TODO remove this
+    interface TempData
+    {
+        developer_name: string
+        test_name: string
+        lod_min: number
+        lod_max: number
+        lod_units: string
+    }
+    const data_for_export: TempData[] = []
+    data_rows.forEach(data_row => {
+        const lod = data_row[labels.claims__limit_of_detection__value].data || {}
+        data_for_export.push({
+            developer_name: data_row[labels.test_descriptor__manufacturer_name].value,
+            test_name: data_row[labels.test_descriptor__test_name].value,
+            lod_min: lod.min,
+            lod_max: lod.max,
+            lod_units: data_row[labels.claims__limit_of_detection__units].value,
+        })
+    })
+
+    console.log(JSON.stringify(data_for_export, null, 2))
 }
 
 
