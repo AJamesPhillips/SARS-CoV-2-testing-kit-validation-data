@@ -67,6 +67,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 120,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Partial Live Virus"
 }
 ],
 "comment": ""
@@ -86,7 +90,7 @@
 "text": "Specimen/Synthetic Specimen/Virus/Source"
 }
 ],
-"comment": ""
+"comment": "http://fubio.cn/uploadpic/2020517313791207794.docx"
 },
 {
 "id": 5,

@@ -107,11 +107,15 @@
 "text": "Specimen/Synthetic Specimen/Virus"
 },
 {
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
 }
 ],
-"comment": ""
+"comment": "Marked with 'reasonable assumption' referring to virus type of 'Naked RNA' as this is what Exact Diagnostics seems to provide"
 },
 {
 "id": 6,
@@ -139,7 +143,12 @@
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Exact Diagnostics",
-"labels": [],
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
 "comment": ""
 },
 {

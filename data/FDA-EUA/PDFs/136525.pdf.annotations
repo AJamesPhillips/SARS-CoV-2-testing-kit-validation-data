@@ -45,11 +45,15 @@
 "width": "711px",
 "height": "35px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "purified partial viral RNA containing target sequences from the SARS-CoV2 genome",
+"text": "purified viral RNA containing target sequences from the SARS-CoV2 genome",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 }
 ],
 "comment": ""

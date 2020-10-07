@@ -62,11 +62,15 @@
 "width": "155px",
 "height": "32px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genomic SARS-CoV-2 RNA",
+"text": "whole viral genomic RNA",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 }
 ],
 "comment": ""

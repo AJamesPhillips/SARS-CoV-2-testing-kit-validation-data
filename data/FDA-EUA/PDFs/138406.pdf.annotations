@@ -64,9 +64,14 @@
 "height": "69px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Hologic Panther Fusion SARS-CoV-2 assay or the Hologic Aptima SARS-CoV-2 Assay (Panther System)",
-"labels": [],
+"labels": [
+{
+"id": 60,
+"text": "Third party detection system"
+}
+],
 "id": 4,
-"comment": "Third party detection system"
+"comment": ""
 },
 {
 "page_number": 2,

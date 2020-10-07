@@ -66,11 +66,15 @@
 "width": "230px",
 "height": "17px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "synthetic SARS-CoV-2 RNA",
+"text": "recombinant virus containing SARS-CoV-2 RNA",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 114,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 }
 ],
 "comment": ""

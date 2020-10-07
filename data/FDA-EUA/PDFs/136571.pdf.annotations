@@ -158,11 +158,15 @@
 "text": "Specimen/Synthetic Specimen/Virus"
 },
 {
-"id": 73,
-"text": "Meta/Not specified"
+"id": 118,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
 }
 ],
-"comment": "What type of sample?  How was it quantified?"
+"comment": ""
 },
 {
 "id": 9,
@@ -214,6 +218,27 @@
 }
 ],
 "comment": ""
+},
+{
+"id": 12,
+"page_number": 56,
+"left": "458px",
+"top": "663px",
+"width": "22px",
+"height": "35px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 73,
+"text": "Meta/Not specified"
+}
+],
+"comment": "What type of sample?  How was it quantified?"
 }
 ],
 "comments": []

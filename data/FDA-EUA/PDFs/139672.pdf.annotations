@@ -67,9 +67,17 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
 }
 ],
-"comment": ""
+"comment": "Marked as 'reasonable assumption' regarding 'Naked RNA' as material as it is not specified on Page 3 under 'SARS-CoV-2 Positive Control'"
 },
 {
 "id": 4,

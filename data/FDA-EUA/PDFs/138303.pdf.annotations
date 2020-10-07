@@ -45,11 +45,15 @@
 "width": "239px",
 "height": "30px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "synthetic SARS-CoV-2 virus",
+"text": "SARS-CoV-2 packaged viral RNA",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 114,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 }
 ],
 "comment": ""

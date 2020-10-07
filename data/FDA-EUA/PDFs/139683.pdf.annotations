@@ -75,6 +75,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 118,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 }
 ],
 "comment": ""

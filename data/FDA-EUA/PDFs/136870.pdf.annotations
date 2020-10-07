@@ -105,6 +105,10 @@
 {
 "id": 63,
 "text": "Specimen/Synthetic Specimen/Virus/Source"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 }
 ],
 "comment": ""

@@ -62,11 +62,15 @@
 "width": "234px",
 "height": "28px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "spiking heat-inactivated SARSCoV-2 virus",
+"text": "spiking heat-inactivated SARS-CoV-2 virus",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 115,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
 }
 ],
 "comment": ""

@@ -83,11 +83,15 @@
 "width": "531px",
 "height": "40px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "synthetic SARS-CoV-2 virus",
+"text": "AccuPlex SARS-CoV-2 Reference Material Kit (SeraCare). AccuPlex recombinant materials are constructed with a replication-deficient mammalian virus producing a safe, non-infectious material",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 114,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 }
 ],
 "comment": ""

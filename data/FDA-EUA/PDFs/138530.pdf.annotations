@@ -130,11 +130,15 @@
 "width": "113px",
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genomic SARS-CoV-2 RNA",
+"text": "Genomic RNA from SARS-Related Coronavirus 2, Isolate USA-WA1/2020",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 }
 ],
 "comment": ""

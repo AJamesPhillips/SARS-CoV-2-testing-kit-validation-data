@@ -156,6 +156,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 114,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 }
 ],
 "comment": ""

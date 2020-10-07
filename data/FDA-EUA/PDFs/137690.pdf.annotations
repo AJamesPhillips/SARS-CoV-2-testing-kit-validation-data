@@ -90,7 +90,7 @@
 "text": "Specimen/Synthetic Specimen/Virus/Source"
 }
 ],
-"comment": ""
+"comment": "https://www.zeptometrix.com/products/sars-cov-2-isolate-usa-wa1-2020-culture-fluid-heat-inactivated-05-ml"
 },
 {
 "id": 6,
@@ -105,9 +105,13 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 115,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
 }
 ],
-"comment": ""
+"comment": "Is heat inactivate not live virus, according to source website: https://www.zeptometrix.com/products/sars-cov-2-isolate-usa-wa1-2020-culture-fluid-heat-inactivated-05-ml"
 },
 {
 "id": 7,

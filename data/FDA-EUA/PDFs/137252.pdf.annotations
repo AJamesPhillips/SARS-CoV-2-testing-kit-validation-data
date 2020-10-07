@@ -67,6 +67,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 115,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
 }
 ],
 "comment": ""

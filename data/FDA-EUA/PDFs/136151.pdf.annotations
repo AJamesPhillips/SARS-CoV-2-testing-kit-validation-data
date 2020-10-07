@@ -16,6 +16,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 }
 ],
 "comment": ""
@@ -60,7 +64,7 @@
 "text": "Meta/Error"
 }
 ],
-"comment": "Marked as error but could be because LoD experiment (vs preliminary) is not clearly articulated here."
+"comment": "Marked as error but could be because the preliminary experiment used RNA and the confirmatory experiment used live virus.  However it is not clear what was used as it refers to \"the quantified live ...\" which has not previously been mentioned in the LoD section."
 },
 {
 "id": 3,

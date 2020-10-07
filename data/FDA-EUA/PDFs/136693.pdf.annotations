@@ -84,6 +84,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 116,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Gamma radiation)"
 }
 ],
 "comment": ""

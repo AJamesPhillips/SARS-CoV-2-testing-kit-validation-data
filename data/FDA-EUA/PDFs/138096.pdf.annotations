@@ -71,6 +71,10 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 119,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
 }
 ],
 "comment": ""
@@ -90,7 +94,7 @@
 "text": "Specimen/Synthetic Specimen/Virus/Source"
 }
 ],
-"comment": ""
+"comment": "https://www.beiresources.org/Catalog/animalviruses/NR-52281.aspx"
 },
 {
 "id": 5,

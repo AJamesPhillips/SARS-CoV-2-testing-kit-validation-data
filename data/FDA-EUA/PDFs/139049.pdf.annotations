@@ -75,9 +75,17 @@
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 115,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
+},
+{
+"id": 108,
+"text": "Meta/Not specified/Reasonable assumption"
 }
 ],
-"comment": ""
+"comment": "Marked with 'reasonable assumption' referring to the method of inactivation (heat) as Zeptometrix supplies heat inactivated virus (https://www.zeptometrix.com/products/sars-cov-2-isolate-usa-wa1-2020-culture-fluid-heat-inactivated-05-ml) and does seem to provide virus inactivated using other methods"
 },
 {
 "id": 5,

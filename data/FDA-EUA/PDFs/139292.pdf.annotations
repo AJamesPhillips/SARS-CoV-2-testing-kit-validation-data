@@ -45,11 +45,15 @@
 "width": "189px",
 "height": "29px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "AccuPlex SARS-CoV-2 Verification Panel, synthetic SARS-CoV-2 virus",
+"text": "AccuPlex SARS-CoV-2 Verification Panel",
 "labels": [
 {
 "id": 62,
 "text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 114,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 }
 ],
 "comment": ""
