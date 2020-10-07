@@ -109,6 +109,15 @@ const labels = {
     validation_condition__synthetic_specimen__viral_material: 62,
     validation_condition__synthetic_specimen__viral_material_source: 63,
     validation_condition__transport_medium: -1,
+    synthetic_specimen_virus_type_Naked_RNA: 112,
+    synthetic_specimen_virus_type_Antigens: 113,
+    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
+    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
+    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
+    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
+    synthetic_specimen_virus_type_Live_Virus: 118,
+    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
+    synthetic_specimen_virus_type_Partial_Live_Virus: 120,
 }
 type LABELS = typeof labels
 
@@ -175,19 +184,39 @@ function report_on_unused_labels (label_ids_to_names: LABEL_IDS_TO_NAMES, used_a
         82, // -> Controls/Internal,
         101, // -> Specimen/Synthetic Specimen/Other components,
         102, // -> Specimen/Synthetic Specimen/Production method
+        105, // -> Controls/Internal/Full process,
+        103, // -> Specimen/Synthetic Specimen/Swab type,
+        104, // -> Specimen/Synthetic Specimen/Transport medium,
+        35, // -> Specimen/Volume ul,
+        56, // -> Specimen/Transport container(s),
+        13, // -> RNA extraction & purification/Elution volume ul,
+        11, // -> RNA extraction & purification/Specimen input volume ul,
+        33, // -> Specimen/Swab type,
+        107, // -> Limit of Detection (LOD)/Protocol,
+        106, // -> Viral protein(s) targetted,
+        16, // -> Reverse transcription/Input volume ul,
+        108, // -> Meta/Not specified/Reasonable assumption,
+        5, // -> Detects pathogen(s),
+        60, // -> Third party detection system
+
+        7, // -> Test technology,
     ]
     LABEL_IDS_TO_SILENCE.forEach(label_id => HANDLED_LABEL_IDS.add(label_id))
 
     const unhandled_label_ids = used_annotation_label_ids.filter(x => !HANDLED_LABEL_IDS.has(x))
-    console.log(`Unhandled label ids: ${unhandled_label_ids.map(id => `\n * ${id} -> ${label_ids_to_names[id]}`)}`)
+
+    if (unhandled_label_ids.length)
+    {
+        console.log(`Unhandled label ids: ${unhandled_label_ids.map(id => `\n * ${id} -> ${label_ids_to_names[id]}`)}`)
+    }
 }
 
 
 interface DATA_NODE
 {
-    value: string
-    comment?: string
     annotations: AnnotationWithFilePath[]
+
+    value?: string
 
     // Other fields added during rendering
     // TODO: remove this complete hack
@@ -213,20 +242,20 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
 
             const row: DATA_ROW = {
                 [labels.test_descriptor__manufacturer_name]: {
-                    value: manufacturer_name,
                     annotations: [],
+                    value: manufacturer_name,
                 },
                 [labels.test_descriptor__test_name]: {
-                    value: test_name,
                     annotations: [],
+                    value: test_name,
                 },
                 [labels.validation_condition__author]: {
-                    value: "self",
                     annotations: [],
+                    value: "self",
                 },
                 [labels.validation_condition__date]: {
-                    value: date,
                     annotations: [],
+                    value: date,
                 },
             }
 
@@ -246,28 +275,9 @@ function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_name
         {
             if (row[label_id]) return // hack to avoid overwriting fields already set from parse FDA EUA data
 
-            const data_node = get_specific_annotations_data(label_id, annotation_files)
-            row[label_id] = data_node
+            const annotations = filter_annotation_files_for_label(annotation_files, label_id)
+            row[label_id] = { annotations, refs: annotations.map(ref_link) }
         })
-}
-
-
-function get_specific_annotations_data (label_id: number, annotation_files: AnnotationFile[]): DATA_NODE
-{
-    const annotations = filter_annotation_files_for_label(annotation_files, label_id)
-
-    let value = ""
-    let comments = ""
-
-    if (annotations.length > 0)
-    {
-        value = value_from_annotations(annotations)
-        comments = comments_from_annotations(annotations)
-
-        value = value + "<br/>" + comments
-    }
-
-    return { value, annotations }
 }
 
 
@@ -296,77 +306,6 @@ function filter_annotations_for_label (annotation_file: AnnotationFile, label_id
               ...annotation,
               relative_file_path: annotation_file.relative_file_path,
             }))
-}
-
-
-const WARNING_HTML_SYMBOL = `<span class="warning_symbol" title="Value not specified">⚠</span>`
-const ERROR_HTML_SYMBOL = `<span class="error_symbol" title="Potential error">⚠</span>`
-function not_specified_value_html (value: string)
-{
-    const append_text = value ? value + " (not specified)" : "Not specified"
-    return `${WARNING_HTML_SYMBOL} ${append_text}`
-}
-
-
-function value_from_annotations (annotations: AnnotationWithFilePath[]): string
-{
-    let includes_warning = false
-    let includes_error = false
-
-    let value = annotations.map(annotation => {
-        let value = annotation.text
-
-        if (annotation.labels.find(label => LABEL_IDS__META__NOT_SPECIFIED.includes(label.id)))
-        {
-            includes_warning = true
-            value = not_specified_value_html(value)
-        }
-
-        if (annotation.labels.find(label => LABEL_IDS__META__ERRORS.includes(label.id)))
-        {
-            includes_error = true
-            value = `${ERROR_HTML_SYMBOL} ${value}`
-        }
-
-        return value
-    }).join(", ")
-
-    if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL))
-    {
-        value = `${WARNING_HTML_SYMBOL} ${value}`
-    }
-
-    if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL))
-    {
-        value = `${ERROR_HTML_SYMBOL} ${value}`
-    }
-
-    return value
-}
-
-
-function comments_from_annotations (annotations: AnnotationWithFilePath[]): string
-{
-    let comments = ""
-
-    annotations.forEach(annotation => {
-        if (annotation.comment)
-        {
-            comments += `<span title="${html_safe_ish(annotation.comment)}">C</span> `
-        }
-    })
-
-    return comments
-}
-
-
-function ref_link (relative_file_path: string, annotation_id?: number)
-{
-    let ref = `http://localhost:5003/render_pdf?relative_file_path=${relative_file_path}`
-
-    if (annotation_id !== undefined) ref += `&highlighted_annotation_ids=${annotation_id}`
-
-    return ref
 }
 
 
@@ -875,18 +814,104 @@ type VALUE_HANDLER<D> = (data_node: DATA_NODE) => VALUE_FOR_CELL<D>
 
 function default_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<undefined>
 {
-    const refs = data_node.annotations.map(annotation => ref_link(annotation.relative_file_path, annotation.id))
-    return { string: data_node.value.toString(), refs }
+    const annotations = data_node.annotations
+
+    let value = data_node.value || ""
+    let comments = ""
+
+    if (annotations.length > 0)
+    {
+        value = value_from_annotations(annotations)
+        comments = comments_from_annotations(annotations)
+
+        value = value + "<br/>" + comments
+    }
+
+    return { string: value, refs: data_node.refs }
 }
+
+
+const WARNING_HTML_SYMBOL = `<span class="warning_symbol" title="Value not specified">⚠</span>`
+const ERROR_HTML_SYMBOL = `<span class="error_symbol" title="Potential error">⚠</span>`
+function not_specified_value_html (value: string)
+{
+    const append_text = value ? value + " (not specified)" : "Not specified"
+    return `${WARNING_HTML_SYMBOL} ${append_text}`
+}
+
+
+function value_from_annotations (annotations: AnnotationWithFilePath[]): string
+{
+    let includes_warning = false
+    let includes_error = false
+
+    let value = annotations.map(annotation => {
+        let value = annotation.text
+
+        if (annotation.labels.find(label => LABEL_IDS__META__NOT_SPECIFIED.includes(label.id)))
+        {
+            includes_warning = true
+            value = not_specified_value_html(value)
+        }
+
+        if (annotation.labels.find(label => LABEL_IDS__META__ERRORS.includes(label.id)))
+        {
+            includes_error = true
+            value = `${ERROR_HTML_SYMBOL} ${value}`
+        }
+
+        return value
+    }).join(", ")
+
+    if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL))
+    {
+        value = `${WARNING_HTML_SYMBOL} ${value}`
+    }
+
+    if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL))
+    {
+        value = `${ERROR_HTML_SYMBOL} ${value}`
+    }
+
+    return value
+}
+
+
+function comments_from_annotations (annotations: AnnotationWithFilePath[]): string
+{
+    let comments = ""
+
+    annotations.forEach(annotation => {
+        if (annotation.comment)
+        {
+            comments += `<span title="${html_safe_ish(annotation.comment)}">C</span> `
+        }
+    })
+
+    return comments
+}
+
+
+function ref_link (annotation: AnnotationWithFilePath)
+{
+    const { relative_file_path, id } = annotation
+    let ref = `http://localhost:5003/render_pdf?relative_file_path=${relative_file_path}`
+
+    if (id !== undefined) ref += `&highlighted_annotation_ids=${id}`
+
+    return ref
+}
+
+
 
 const lod_allowed_label_ids = [ labels.claims__limit_of_detection__value, ...LABEL_IDS__META ]
 type lod_value_data = { min: number, max: number } | { not_specified: true }
-function limit_of_detection_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data>
+function lod_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data>
 {
     let min = Number.MAX_SAFE_INTEGER
     let max = Number.MIN_SAFE_INTEGER
-    let min_ref
-    let max_ref
+    let min_annotation
+    let max_annotation
 
     data_node.annotations
         .forEach(annotation =>
@@ -897,23 +922,21 @@ function limit_of_detection_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL
                     const new_min = Math.min(min, v)
                     const new_max = Math.max(max, v)
 
-                    const ref = ref_link(annotation.relative_file_path, annotation.id)
-
                     if (new_min !== min)
                     {
                         min = new_min
-                        min_ref = ref
+                        min_annotation = annotation
                     }
 
                     if (new_max !== max)
                     {
                         max = new_max
-                        max_ref = ref
+                        max_annotation = annotation
                     }
                 }
             })
 
-    if (!min_ref)
+    if (!min_annotation)
     {
         return {
             string: not_specified_value_html(""),
@@ -923,14 +946,57 @@ function limit_of_detection_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL
     }
 
     const same = min === max
-    const string = same ? `${min}` : `${min} <-> ${max}`
-    const refs = same ? [min_ref] : [min_ref, max_ref]
+    const comments = same ? comments_from_annotations([min_annotation]) : comments_from_annotations([min_annotation, max_annotation])
+    const string = (same ? `${min}` : `${min} <-> ${max}`) + "<br/>" + comments
+
+    const refs = same ? [ref_link(min_annotation)] : [ref_link(min_annotation), ref_link(max_annotation)]
 
     return { string, refs, data: { min, max } }
 }
 
+
+const virus_type_label_ids = new Set([
+    labels.synthetic_specimen_virus_type_Naked_RNA,
+    labels.synthetic_specimen_virus_type_Antigens,
+    labels.synthetic_specimen_virus_type_Synthetic_Viral_Particles,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__Heat,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__Gammma,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__Chemical,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified,
+    labels.synthetic_specimen_virus_type_Live_Virus,
+    labels.synthetic_specimen_virus_type_Partial_Live_Virus,
+])
+function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{type: string}>
+{
+    const annotations = data_node.annotations
+
+    const v = annotations.map(a => a.text).join(" ")
+
+    let string = ""
+    let type = ""
+    if (annotations.length)
+    {
+        type = `<span style="color: #ccc;">not parsed</span>`
+        annotations.forEach(a => a.labels.forEach(({ id }) =>
+        {
+            if (virus_type_label_ids.has(id))
+            {
+                const parts = label_ids_to_names[id].split("/")
+                type = parts[parts.length - 1]
+            }
+        }))
+
+        string = type + "; " + v
+    }
+
+    return { string, refs: data_node.refs, data: { type } }
+}
+
+
+
 const value_handlers: {[label_id: number]: VALUE_HANDLER<any>} = {
-    [labels.claims__limit_of_detection__value]: limit_of_detection_value_handler
+    [labels.claims__limit_of_detection__value]: lod_value_handler,
+    [labels.validation_condition__synthetic_specimen__viral_material]: synthetic_specimen__viral_material_value_handler,
 }
 
 
@@ -967,7 +1033,7 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         {
             const cell = row.insertCell()
             const data_node: DATA_NODE = data_row[header.label_id]
-            if (data_node && data_node.value)
+            if (data_node)
             {
                 const value_handler = value_handlers[header.label_id] || default_value_handler
                 const value = value_handler(data_node)
@@ -976,7 +1042,7 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
                 data_node.refs = value.refs
                 data_node.data = value.data
 
-                const children = create_table_cell_contents(value.string, value.refs)
+                const children = create_table_cell_contents(value.string, value.refs || [])
                 children.forEach(child_el => cell.appendChild(child_el))
             }
         })
@@ -990,16 +1056,20 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         lod_min: number
         lod_max: number
         lod_units: string
+        synthetic_specimen__viral_material: string
     }
     const data_for_export: TempData[] = []
     data_rows.forEach(data_row => {
         const lod = data_row[labels.claims__limit_of_detection__value].data || {}
+        const synthetic_specimen__viral_material = data_row[labels.validation_condition__synthetic_specimen__viral_material].data || {}
+
         data_for_export.push({
             developer_name: data_row[labels.test_descriptor__manufacturer_name].value,
             test_name: data_row[labels.test_descriptor__test_name].value,
             lod_min: lod.min,
             lod_max: lod.max,
             lod_units: data_row[labels.claims__limit_of_detection__units].value,
+            synthetic_specimen__viral_material: synthetic_specimen__viral_material.type,
         })
     })
 

@@ -53,7 +53,16 @@ var labels = {
     validation_condition__synthetic_specimen__clinical_matrix_source: 86,
     validation_condition__synthetic_specimen__viral_material: 62,
     validation_condition__synthetic_specimen__viral_material_source: 63,
-    validation_condition__transport_medium: -1
+    validation_condition__transport_medium: -1,
+    synthetic_specimen_virus_type_Naked_RNA: 112,
+    synthetic_specimen_virus_type_Antigens: 113,
+    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
+    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
+    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
+    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
+    synthetic_specimen_virus_type_Live_Virus: 118,
+    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
+    synthetic_specimen_virus_type_Partial_Live_Virus: 120
 };
 var LABEL_IDS__META__NOT_SPECIFIED = [
     labels.meta__not_specified,
@@ -103,10 +112,27 @@ function report_on_unused_labels(label_ids_to_names, used_annotation_label_ids) 
         82,
         101,
         102,
+        105,
+        103,
+        104,
+        35,
+        56,
+        13,
+        11,
+        33,
+        107,
+        106,
+        16,
+        108,
+        5,
+        60,
+        7,
     ];
     LABEL_IDS_TO_SILENCE.forEach(function (label_id) { return HANDLED_LABEL_IDS.add(label_id); });
     var unhandled_label_ids = used_annotation_label_ids.filter(function (x) { return !HANDLED_LABEL_IDS.has(x); });
-    console.log("Unhandled label ids: " + unhandled_label_ids.map(function (id) { return "\n * " + id + " -> " + label_ids_to_names[id]; }));
+    if (unhandled_label_ids.length) {
+        console.log("Unhandled label ids: " + unhandled_label_ids.map(function (id) { return "\n * " + id + " -> " + label_ids_to_names[id]; }));
+    }
 }
 function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
     return fda_eua_parsed_data
@@ -118,20 +144,20 @@ function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
         var date = fda_eua_parsed_data_row[0];
         var row = (_a = {},
             _a[labels.test_descriptor__manufacturer_name] = {
-                value: manufacturer_name,
-                annotations: []
+                annotations: [],
+                value: manufacturer_name
             },
             _a[labels.test_descriptor__test_name] = {
-                value: test_name,
-                annotations: []
+                annotations: [],
+                value: test_name
             },
             _a[labels.validation_condition__author] = {
-                value: "self",
-                annotations: []
+                annotations: [],
+                value: "self"
             },
             _a[labels.validation_condition__date] = {
-                value: date,
-                annotations: []
+                annotations: [],
+                value: date
             },
             _a);
         return row;
@@ -145,20 +171,9 @@ function add_data_from_annotations(row, annotation_files_by_test_name, labels) {
     Object.values(labels).forEach(function (label_id) {
         if (row[label_id])
             return; // hack to avoid overwriting fields already set from parse FDA EUA data
-        var data_node = get_specific_annotations_data(label_id, annotation_files);
-        row[label_id] = data_node;
+        var annotations = filter_annotation_files_for_label(annotation_files, label_id);
+        row[label_id] = { annotations: annotations, refs: annotations.map(ref_link) };
     });
-}
-function get_specific_annotations_data(label_id, annotation_files) {
-    var annotations = filter_annotation_files_for_label(annotation_files, label_id);
-    var value = "";
-    var comments = "";
-    if (annotations.length > 0) {
-        value = value_from_annotations(annotations);
-        comments = comments_from_annotations(annotations);
-        value = value + "<br/>" + comments;
-    }
-    return { value: value, annotations: annotations };
 }
 function filter_annotation_files_for_label(annotation_files, label_id) {
     var annotations = [];
@@ -176,50 +191,6 @@ function filter_annotations_for_label(annotation_file, label_id) {
         .map(function (annotation) {
         return (__assign(__assign({}, annotation), { relative_file_path: annotation_file.relative_file_path }));
     });
-}
-var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
-var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
-function not_specified_value_html(value) {
-    var append_text = value ? value + " (not specified)" : "Not specified";
-    return WARNING_HTML_SYMBOL + " " + append_text;
-}
-function value_from_annotations(annotations) {
-    var includes_warning = false;
-    var includes_error = false;
-    var value = annotations.map(function (annotation) {
-        var value = annotation.text;
-        if (annotation.labels.find(function (label) { return LABEL_IDS__META__NOT_SPECIFIED.includes(label.id); })) {
-            includes_warning = true;
-            value = not_specified_value_html(value);
-        }
-        if (annotation.labels.find(function (label) { return LABEL_IDS__META__ERRORS.includes(label.id); })) {
-            includes_error = true;
-            value = ERROR_HTML_SYMBOL + " " + value;
-        }
-        return value;
-    }).join(", ");
-    if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL)) {
-        value = WARNING_HTML_SYMBOL + " " + value;
-    }
-    if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL)) {
-        value = ERROR_HTML_SYMBOL + " " + value;
-    }
-    return value;
-}
-function comments_from_annotations(annotations) {
-    var comments = "";
-    annotations.forEach(function (annotation) {
-        if (annotation.comment) {
-            comments += "<span title=\"" + html_safe_ish(annotation.comment) + "\">C</span> ";
-        }
-    });
-    return comments;
-}
-function ref_link(relative_file_path, annotation_id) {
-    var ref = "http://localhost:5003/render_pdf?relative_file_path=" + relative_file_path;
-    if (annotation_id !== undefined)
-        ref += "&highlighted_annotation_ids=" + annotation_id;
-    return ref;
 }
 // const extracted_data: DATA = [
 //     {
@@ -675,33 +646,84 @@ function has_only_subset_of_labels(labels, allowed_subset_ids) {
     return labels.filter(function (label) { return !allowed.has(label.id); }).length === 0;
 }
 function default_value_handler(data_node) {
-    var refs = data_node.annotations.map(function (annotation) { return ref_link(annotation.relative_file_path, annotation.id); });
-    return { string: data_node.value.toString(), refs: refs };
+    var annotations = data_node.annotations;
+    var value = data_node.value || "";
+    var comments = "";
+    if (annotations.length > 0) {
+        value = value_from_annotations(annotations);
+        comments = comments_from_annotations(annotations);
+        value = value + "<br/>" + comments;
+    }
+    return { string: value, refs: data_node.refs };
+}
+var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
+var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
+function not_specified_value_html(value) {
+    var append_text = value ? value + " (not specified)" : "Not specified";
+    return WARNING_HTML_SYMBOL + " " + append_text;
+}
+function value_from_annotations(annotations) {
+    var includes_warning = false;
+    var includes_error = false;
+    var value = annotations.map(function (annotation) {
+        var value = annotation.text;
+        if (annotation.labels.find(function (label) { return LABEL_IDS__META__NOT_SPECIFIED.includes(label.id); })) {
+            includes_warning = true;
+            value = not_specified_value_html(value);
+        }
+        if (annotation.labels.find(function (label) { return LABEL_IDS__META__ERRORS.includes(label.id); })) {
+            includes_error = true;
+            value = ERROR_HTML_SYMBOL + " " + value;
+        }
+        return value;
+    }).join(", ");
+    if (includes_warning && !value.startsWith(WARNING_HTML_SYMBOL)) {
+        value = WARNING_HTML_SYMBOL + " " + value;
+    }
+    if (includes_error && !value.startsWith(ERROR_HTML_SYMBOL)) {
+        value = ERROR_HTML_SYMBOL + " " + value;
+    }
+    return value;
+}
+function comments_from_annotations(annotations) {
+    var comments = "";
+    annotations.forEach(function (annotation) {
+        if (annotation.comment) {
+            comments += "<span title=\"" + html_safe_ish(annotation.comment) + "\">C</span> ";
+        }
+    });
+    return comments;
+}
+function ref_link(annotation) {
+    var relative_file_path = annotation.relative_file_path, id = annotation.id;
+    var ref = "http://localhost:5003/render_pdf?relative_file_path=" + relative_file_path;
+    if (id !== undefined)
+        ref += "&highlighted_annotation_ids=" + id;
+    return ref;
 }
 var lod_allowed_label_ids = __spreadArrays([labels.claims__limit_of_detection__value], LABEL_IDS__META);
-function limit_of_detection_value_handler(data_node) {
+function lod_value_handler(data_node) {
     var min = Number.MAX_SAFE_INTEGER;
     var max = Number.MIN_SAFE_INTEGER;
-    var min_ref;
-    var max_ref;
+    var min_annotation;
+    var max_annotation;
     data_node.annotations
         .forEach(function (annotation) {
         if (has_only_subset_of_labels(annotation.labels, lod_allowed_label_ids)) {
             var v = parseFloat(annotation.text);
             var new_min = Math.min(min, v);
             var new_max = Math.max(max, v);
-            var ref = ref_link(annotation.relative_file_path, annotation.id);
             if (new_min !== min) {
                 min = new_min;
-                min_ref = ref;
+                min_annotation = annotation;
             }
             if (new_max !== max) {
                 max = new_max;
-                max_ref = ref;
+                max_annotation = annotation;
             }
         }
     });
-    if (!min_ref) {
+    if (!min_annotation) {
         return {
             string: not_specified_value_html(""),
             refs: [],
@@ -709,12 +731,43 @@ function limit_of_detection_value_handler(data_node) {
         };
     }
     var same = min === max;
-    var string = same ? "" + min : min + " <-> " + max;
-    var refs = same ? [min_ref] : [min_ref, max_ref];
+    var comments = same ? comments_from_annotations([min_annotation]) : comments_from_annotations([min_annotation, max_annotation]);
+    var string = (same ? "" + min : min + " <-> " + max) + "<br/>" + comments;
+    var refs = same ? [ref_link(min_annotation)] : [ref_link(min_annotation), ref_link(max_annotation)];
     return { string: string, refs: refs, data: { min: min, max: max } };
 }
+var virus_type_label_ids = new Set([
+    labels.synthetic_specimen_virus_type_Naked_RNA,
+    labels.synthetic_specimen_virus_type_Antigens,
+    labels.synthetic_specimen_virus_type_Synthetic_Viral_Particles,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__Heat,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__Gammma,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__Chemical,
+    labels.synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified,
+    labels.synthetic_specimen_virus_type_Live_Virus,
+    labels.synthetic_specimen_virus_type_Partial_Live_Virus,
+]);
+function synthetic_specimen__viral_material_value_handler(data_node) {
+    var annotations = data_node.annotations;
+    var v = annotations.map(function (a) { return a.text; }).join(" ");
+    var string = "";
+    var type = "";
+    if (annotations.length) {
+        type = "<span style=\"color: #ccc;\">not parsed</span>";
+        annotations.forEach(function (a) { return a.labels.forEach(function (_a) {
+            var id = _a.id;
+            if (virus_type_label_ids.has(id)) {
+                var parts = label_ids_to_names[id].split("/");
+                type = parts[parts.length - 1];
+            }
+        }); });
+        string = type + "; " + v;
+    }
+    return { string: string, refs: data_node.refs, data: { type: type } };
+}
 var value_handlers = (_a = {},
-    _a[labels.claims__limit_of_detection__value] = limit_of_detection_value_handler,
+    _a[labels.claims__limit_of_detection__value] = lod_value_handler,
+    _a[labels.validation_condition__synthetic_specimen__viral_material] = synthetic_specimen__viral_material_value_handler,
     _a);
 function create_table_cell_contents(value, refs) {
     var value_title = html_safe_ish(value);
@@ -737,13 +790,13 @@ function populate_table_body(headers, data_rows) {
         iterate_lowest_header(headers, function (header) {
             var cell = row.insertCell();
             var data_node = data_row[header.label_id];
-            if (data_node && data_node.value) {
+            if (data_node) {
                 var value_handler = value_handlers[header.label_id] || default_value_handler;
                 var value = value_handler(data_node);
                 data_node.string = value.string;
                 data_node.refs = value.refs;
                 data_node.data = value.data;
-                var children = create_table_cell_contents(value.string, value.refs);
+                var children = create_table_cell_contents(value.string, value.refs || []);
                 children.forEach(function (child_el) { return cell.appendChild(child_el); });
             }
         });
@@ -751,12 +804,14 @@ function populate_table_body(headers, data_rows) {
     var data_for_export = [];
     data_rows.forEach(function (data_row) {
         var lod = data_row[labels.claims__limit_of_detection__value].data || {};
+        var synthetic_specimen__viral_material = data_row[labels.validation_condition__synthetic_specimen__viral_material].data || {};
         data_for_export.push({
             developer_name: data_row[labels.test_descriptor__manufacturer_name].value,
             test_name: data_row[labels.test_descriptor__test_name].value,
             lod_min: lod.min,
             lod_max: lod.max,
-            lod_units: data_row[labels.claims__limit_of_detection__units].value
+            lod_units: data_row[labels.claims__limit_of_detection__units].value,
+            synthetic_specimen__viral_material: synthetic_specimen__viral_material.type
         });
     });
     console.log(JSON.stringify(data_for_export, null, 2));
