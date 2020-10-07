@@ -110,3 +110,12 @@
 109,Meta/Not specified/Partial information to reproduce
 110,Test name
 111,Test manufacturer
+112,Specimen/Synthetic Specimen/Virus/Type/Naked RNA
+113,Specimen/Synthetic Specimen/Virus/Type/Antigens
+114,Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles
+115,Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)
+116,Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Gamma radiation)
+117,Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Chemical)
+118,Specimen/Synthetic Specimen/Virus/Type/Live Virus
+119,Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)
+120,Specimen/Synthetic Specimen/Virus/Type/Partial Live Virus
