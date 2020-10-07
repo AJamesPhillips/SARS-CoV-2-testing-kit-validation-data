@@ -4,7 +4,7 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from common import calculate_common_labels, get_fda_eua_parsed_data, get_annotation_files_by_test_name
+from common import calculate_common_labels, get_fda_eua_parsed_data, get_annotation_files_by_test_id
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def index():
 
     labels = calculate_common_labels()
     fda_eua_parsed_data = get_fda_eua_parsed_data()
-    annotation_files_by_test_name = get_annotation_files_by_test_name(fda_eua_parsed_data)
+    annotation_files_by_test_id = get_annotation_files_by_test_id(fda_eua_parsed_data)
 
     src_file_path = dir_path + "/src.js"
     with open(src_file_path, "r") as f:
@@ -26,7 +26,7 @@ def index():
 
     html_contents = html_contents.replace("\"<LABEL_IDS_TO_NAMES>\"", json.dumps(labels))
     html_contents = html_contents.replace("\"<FDA_EUA_PARSED_DATA>\"", json.dumps(fda_eua_parsed_data))
-    html_contents = html_contents.replace("\"<ANNOTATION_FILES_BY_TEST_NAME>\"", json.dumps(annotation_files_by_test_name))
+    html_contents = html_contents.replace("\"<ANNOTATION_FILES_BY_TEST_ID>\"", json.dumps(annotation_files_by_test_id))
     html_contents = html_contents.replace("\"<SRC>\"", src)
 
     return html_contents

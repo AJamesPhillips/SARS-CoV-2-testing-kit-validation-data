@@ -70,12 +70,12 @@ def get_directories():
     return directories
 
 
-def get_annotation_files_by_test_name(fda_eua_parsed_data):
+def get_annotation_files_by_test_id(fda_eua_parsed_data):
 
     # skip first row as it is headers
     data_rows = fda_eua_parsed_data[1:]
 
-    annotation_files_by_test_name = dict()
+    annotation_files_by_test_id = dict()
 
     for data_row in data_rows:
         test_name = data_row[2]
@@ -94,6 +94,6 @@ def get_annotation_files_by_test_name(fda_eua_parsed_data):
                 annotation_file_contents = json.load(f)
                 all_annotation_files.append(annotation_file_contents)
 
-        annotation_files_by_test_name[test_name] = all_annotation_files
+        annotation_files_by_test_id[test_name] = all_annotation_files
 
-    return annotation_files_by_test_name
+    return annotation_files_by_test_id

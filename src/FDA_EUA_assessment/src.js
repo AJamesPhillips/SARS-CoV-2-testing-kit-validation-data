@@ -41,6 +41,15 @@ var labels = {
     metrics__confusion_matrix__true_positives: 41,
     metrics__num_clinical_samples__negative_controls: -1,
     metrics__num_clinical_samples__positive: -1,
+    synthetic_specimen_virus_type_Naked_RNA: 112,
+    synthetic_specimen_virus_type_Antigens: 113,
+    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
+    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
+    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
+    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
+    synthetic_specimen_virus_type_Live_Virus: 118,
+    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
+    synthetic_specimen_virus_type_Partial_Live_Virus: 120,
     test_descriptor__manufacturer_name: 111,
     test_descriptor__test_name: 110,
     validation_condition__author: 24,
@@ -53,16 +62,7 @@ var labels = {
     validation_condition__synthetic_specimen__clinical_matrix_source: 86,
     validation_condition__synthetic_specimen__viral_material: 62,
     validation_condition__synthetic_specimen__viral_material_source: 63,
-    validation_condition__transport_medium: -1,
-    synthetic_specimen_virus_type_Naked_RNA: 112,
-    synthetic_specimen_virus_type_Antigens: 113,
-    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
-    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
-    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
-    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
-    synthetic_specimen_virus_type_Live_Virus: 118,
-    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
-    synthetic_specimen_virus_type_Partial_Live_Virus: 120
+    validation_condition__transport_medium: -1
 };
 var LABEL_IDS__META__NOT_SPECIFIED = [
     labels.meta__not_specified,
@@ -73,9 +73,9 @@ var LABEL_IDS__META__ERRORS = [
     labels.meta__potential_error,
 ];
 var LABEL_IDS__META = __spreadArrays(LABEL_IDS__META__NOT_SPECIFIED, LABEL_IDS__META__ERRORS);
-function get_used_annotation_label_ids(annotation_files_by_test_name) {
+function get_used_annotation_label_ids(annotation_files_by_test_id) {
     var used_annotation_label_ids = new Set();
-    Object.values(annotation_files_by_test_name)
+    Object.values(annotation_files_by_test_id)
         .forEach(function (annotation_files) {
         annotation_files.forEach(function (annotation_file) {
             annotation_file.annotations
@@ -142,30 +142,32 @@ function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
         var test_name = fda_eua_parsed_data_row[2];
         var manufacturer_name = fda_eua_parsed_data_row[1];
         var date = fda_eua_parsed_data_row[0];
-        var row = (_a = {},
+        var row = (_a = {
+                test_id: test_name
+            },
             _a[labels.test_descriptor__manufacturer_name] = {
                 annotations: [],
-                value: manufacturer_name
+                data: { value: manufacturer_name }
             },
             _a[labels.test_descriptor__test_name] = {
                 annotations: [],
-                value: test_name
+                data: { value: test_name }
             },
             _a[labels.validation_condition__author] = {
                 annotations: [],
-                value: "self"
+                data: { value: "self" }
             },
             _a[labels.validation_condition__date] = {
                 annotations: [],
-                value: date
+                data: { value: date }
             },
             _a);
         return row;
     });
 }
-function add_data_from_annotations(row, annotation_files_by_test_name, labels) {
-    var test_name = row[labels.test_descriptor__test_name].value;
-    var annotation_files = annotation_files_by_test_name[test_name];
+function add_data_from_annotations(row, annotation_files_by_test_id, labels) {
+    var test_id = row.test_id;
+    var annotation_files = annotation_files_by_test_id[test_id];
     if (!annotation_files)
         return;
     Object.values(labels).forEach(function (label_id) {
@@ -645,16 +647,23 @@ function has_only_subset_of_labels(labels, allowed_subset_ids) {
     var allowed = new Set(allowed_subset_ids);
     return labels.filter(function (label) { return !allowed.has(label.id); }).length === 0;
 }
-function default_value_handler(data_node) {
+function data_value_handler(data_node) {
+    var value = (data_node.data || {}).value;
+    if (value === undefined)
+        console.warn("No .data.value present in: ", data_node);
+    value = value || "";
+    return { string: value, refs: data_node.refs || [], data: { value: value } };
+}
+function annotations_value_handler(data_node) {
     var annotations = data_node.annotations;
-    var value = data_node.value || "";
-    var comments = "";
+    var value = "";
+    var string = "";
     if (annotations.length > 0) {
         value = value_from_annotations(annotations);
-        comments = comments_from_annotations(annotations);
-        value = value + "<br/>" + comments;
+        var comments = comments_from_annotations(annotations);
+        string = value + "<br/>" + comments;
     }
-    return { string: value, refs: data_node.refs };
+    return { string: string, refs: data_node.refs, data: { value: value } };
 }
 var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
 var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
@@ -749,37 +758,41 @@ var virus_type_label_ids = new Set([
 ]);
 function synthetic_specimen__viral_material_value_handler(data_node) {
     var annotations = data_node.annotations;
-    var v = annotations.map(function (a) { return a.text; }).join(" ");
+    var v = annotations.map(function (a) { return a.text; }).join("; ");
     var string = "";
-    var type = "";
+    var types = [];
     if (annotations.length) {
-        type = "<span style=\"color: #ccc;\">not parsed</span>";
         annotations.forEach(function (a) { return a.labels.forEach(function (_a) {
             var id = _a.id;
             if (virus_type_label_ids.has(id)) {
                 var parts = label_ids_to_names[id].split("/");
-                type = parts[parts.length - 1];
+                types.push(parts[parts.length - 1]);
             }
         }); });
-        string = type + "; " + v;
+        var type = types.length ? types.join(", ") : "<span style=\"color: #ccc;\">not parsed</span>";
+        string = type + " | " + v;
     }
-    return { string: string, refs: data_node.refs, data: { type: type } };
+    return { string: string, refs: data_node.refs, data: { types: types } };
 }
 var value_handlers = (_a = {},
+    _a[labels.test_descriptor__manufacturer_name] = data_value_handler,
+    _a[labels.test_descriptor__test_name] = data_value_handler,
+    _a[labels.validation_condition__author] = data_value_handler,
+    _a[labels.validation_condition__date] = data_value_handler,
     _a[labels.claims__limit_of_detection__value] = lod_value_handler,
     _a[labels.validation_condition__synthetic_specimen__viral_material] = synthetic_specimen__viral_material_value_handler,
     _a);
-function create_table_cell_contents(value, refs) {
-    var value_title = html_safe_ish(value);
+function create_table_cell_contents(data_node) {
+    var value_title = html_safe_ish(data_node.html_display_string);
     var value_el = document.createElement("div");
     value_el.className = "value_el";
-    value_el.innerHTML = value;
+    value_el.innerHTML = data_node.html_display_string;
     value_el.title = value_title;
     value_el.addEventListener("click", function () {
         value_el.classList.toggle("expanded");
     });
     var ref_container_el = document.createElement("div");
-    ref_container_el.innerHTML = refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
+    ref_container_el.innerHTML = data_node.refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
     return [value_el, ref_container_el];
 }
 function populate_table_body(headers, data_rows) {
@@ -791,27 +804,29 @@ function populate_table_body(headers, data_rows) {
             var cell = row.insertCell();
             var data_node = data_row[header.label_id];
             if (data_node) {
-                var value_handler = value_handlers[header.label_id] || default_value_handler;
+                var value_handler = value_handlers[header.label_id] || annotations_value_handler;
                 var value = value_handler(data_node);
-                data_node.string = value.string;
+                data_node.html_display_string = value.string;
                 data_node.refs = value.refs;
                 data_node.data = value.data;
-                var children = create_table_cell_contents(value.string, value.refs || []);
+                var children = create_table_cell_contents(data_node);
                 children.forEach(function (child_el) { return cell.appendChild(child_el); });
             }
         });
     });
     var data_for_export = [];
     data_rows.forEach(function (data_row) {
-        var lod = data_row[labels.claims__limit_of_detection__value].data || {};
-        var synthetic_specimen__viral_material = data_row[labels.validation_condition__synthetic_specimen__viral_material].data || {};
+        var lod = (data_row[labels.claims__limit_of_detection__value] || {}).data || {};
+        var lod_units = ((data_row[labels.claims__limit_of_detection__units] || {}).data || {});
+        var synthetic_specimen__viral_material = (data_row[labels.validation_condition__synthetic_specimen__viral_material] || {}).data || {};
         data_for_export.push({
-            developer_name: data_row[labels.test_descriptor__manufacturer_name].value,
-            test_name: data_row[labels.test_descriptor__test_name].value,
+            test_id: data_row.test_id,
+            developer_name: data_row[labels.test_descriptor__manufacturer_name].data.value,
+            test_name: data_row[labels.test_descriptor__test_name].data.value,
             lod_min: lod.min,
             lod_max: lod.max,
-            lod_units: data_row[labels.claims__limit_of_detection__units].value,
-            synthetic_specimen__viral_material: synthetic_specimen__viral_material.type
+            lod_units: lod_units.value,
+            synthetic_specimen__viral_material: synthetic_specimen__viral_material.types
         });
     });
     console.log(JSON.stringify(data_for_export, null, 2));
@@ -833,10 +848,10 @@ function html_safe_ish(value) {
         .replace(/"/ig, "'");
 }
 activate_options();
-var used_annotation_label_ids = Array.from(get_used_annotation_label_ids(annotation_files_by_test_name));
+var used_annotation_label_ids = Array.from(get_used_annotation_label_ids(annotation_files_by_test_id));
 report_on_unused_labels(label_ids_to_names, used_annotation_label_ids);
 var data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data);
-data_rows.forEach(function (row) { return add_data_from_annotations(row, annotation_files_by_test_name, labels); });
+data_rows.forEach(function (row) { return add_data_from_annotations(row, annotation_files_by_test_id, labels); });
 build_header(headers);
 populate_table_body(headers, data_rows);
 update_progress();

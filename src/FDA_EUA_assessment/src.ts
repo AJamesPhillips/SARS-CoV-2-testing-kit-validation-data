@@ -64,15 +64,15 @@ interface AnnotationFile
     annotations: AnnotationEntry[]
     comments: string[]
 }
-interface ANNOTATION_FILES_BY_TEST_NAME
+interface ANNOTATION_FILES_BY_TEST_ID
 {
-    [test_name: string]: AnnotationFile[]
+    [test_id: string]: AnnotationFile[]
 }
 
 
 declare var label_ids_to_names: LABEL_IDS_TO_NAMES
 declare var fda_eua_parsed_data: FDA_EUA_PARSED_DATA
-declare var annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME
+declare var annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID
 
 
 const labels = {
@@ -96,6 +96,15 @@ const labels = {
     metrics__confusion_matrix__true_positives: 41,
     metrics__num_clinical_samples__negative_controls: -1,
     metrics__num_clinical_samples__positive: -1,
+    synthetic_specimen_virus_type_Naked_RNA: 112,
+    synthetic_specimen_virus_type_Antigens: 113,
+    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
+    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
+    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
+    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
+    synthetic_specimen_virus_type_Live_Virus: 118,
+    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
+    synthetic_specimen_virus_type_Partial_Live_Virus: 120,
     test_descriptor__manufacturer_name: 111,
     test_descriptor__test_name: 110,
     validation_condition__author: 24,
@@ -109,15 +118,6 @@ const labels = {
     validation_condition__synthetic_specimen__viral_material: 62,
     validation_condition__synthetic_specimen__viral_material_source: 63,
     validation_condition__transport_medium: -1,
-    synthetic_specimen_virus_type_Naked_RNA: 112,
-    synthetic_specimen_virus_type_Antigens: 113,
-    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
-    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
-    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
-    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
-    synthetic_specimen_virus_type_Live_Virus: 118,
-    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
-    synthetic_specimen_virus_type_Partial_Live_Virus: 120,
 }
 type LABELS = typeof labels
 
@@ -134,11 +134,11 @@ const LABEL_IDS__META = [
     ...LABEL_IDS__META__ERRORS,
 ]
 
-function get_used_annotation_label_ids (annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME)
+function get_used_annotation_label_ids (annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID)
 {
     const used_annotation_label_ids = new Set<number>()
 
-    ;(Object as any).values(annotation_files_by_test_name)
+    ;(Object as any).values(annotation_files_by_test_id)
         .forEach((annotation_files: AnnotationFile[]) => {
             annotation_files.forEach(annotation_file =>
                 {
@@ -216,16 +216,15 @@ interface DATA_NODE
 {
     annotations: AnnotationWithFilePath[]
 
-    value?: string
-
     // Other fields added during rendering
     // TODO: remove this complete hack
-    string?: string
+    html_display_string?: string
     refs?: string[]
     data?: any
 }
 interface DATA_ROW
 {
+    test_id: string
     [label_id: number]: DATA_NODE
 }
 
@@ -241,21 +240,22 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
             const date = fda_eua_parsed_data_row[0]
 
             const row: DATA_ROW = {
+                test_id: test_name,
                 [labels.test_descriptor__manufacturer_name]: {
                     annotations: [],
-                    value: manufacturer_name,
+                    data: { value: manufacturer_name },
                 },
                 [labels.test_descriptor__test_name]: {
                     annotations: [],
-                    value: test_name,
+                    data: { value: test_name },
                 },
                 [labels.validation_condition__author]: {
                     annotations: [],
-                    value: "self",
+                    data: { value: "self" },
                 },
                 [labels.validation_condition__date]: {
                     annotations: [],
-                    value: date,
+                    data: { value: date },
                 },
             }
 
@@ -264,11 +264,11 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
 }
 
 
-function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_name: ANNOTATION_FILES_BY_TEST_NAME, labels: LABELS)
+function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID, labels: LABELS)
 {
-    const test_name = row[labels.test_descriptor__test_name].value
+    const test_id = row.test_id
 
-    const annotation_files = annotation_files_by_test_name[test_name]
+    const annotation_files = annotation_files_by_test_id[test_id]
     if (!annotation_files) return
 
     ;(Object as any).values(labels).forEach((label_id: number) =>
@@ -812,22 +812,31 @@ function has_only_subset_of_labels(labels: Label[], allowed_subset_ids: number[]
 interface VALUE_FOR_CELL <D> { string: string, refs: string[], data?: D }
 type VALUE_HANDLER<D> = (data_node: DATA_NODE) => VALUE_FOR_CELL<D>
 
-function default_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<undefined>
+function data_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{ value: string }>
+{
+    let value = (data_node.data || {}).value
+    if (value === undefined) console.warn(`No .data.value present in: `, data_node)
+    value = value || ""
+
+    return { string: value, refs: data_node.refs || [], data: { value } }
+}
+
+function annotations_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{ value: string }>
 {
     const annotations = data_node.annotations
 
-    let value = data_node.value || ""
-    let comments = ""
+    let value = ""
+    let string = ""
 
     if (annotations.length > 0)
     {
         value = value_from_annotations(annotations)
-        comments = comments_from_annotations(annotations)
+        const comments = comments_from_annotations(annotations)
 
-        value = value + "<br/>" + comments
+        string = value + "<br/>" + comments
     }
 
-    return { string: value, refs: data_node.refs }
+    return { string, refs: data_node.refs, data: { value } }
 }
 
 
@@ -966,46 +975,53 @@ const virus_type_label_ids = new Set([
     labels.synthetic_specimen_virus_type_Live_Virus,
     labels.synthetic_specimen_virus_type_Partial_Live_Virus,
 ])
-function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{type: string}>
+function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{types: string[]}>
 {
     const annotations = data_node.annotations
 
-    const v = annotations.map(a => a.text).join(" ")
+    const v = annotations.map(a => a.text).join("; ")
 
     let string = ""
-    let type = ""
+    let types: string[] = []
     if (annotations.length)
     {
-        type = `<span style="color: #ccc;">not parsed</span>`
+
         annotations.forEach(a => a.labels.forEach(({ id }) =>
         {
             if (virus_type_label_ids.has(id))
             {
                 const parts = label_ids_to_names[id].split("/")
-                type = parts[parts.length - 1]
+                types.push(parts[parts.length - 1])
             }
         }))
 
-        string = type + "; " + v
+
+        const type = types.length ? types.join(", ") : `<span style="color: #ccc;">not parsed</span>`
+
+        string = type + " | " + v
     }
 
-    return { string, refs: data_node.refs, data: { type } }
+    return { string, refs: data_node.refs, data: { types } }
 }
 
 
 
 const value_handlers: {[label_id: number]: VALUE_HANDLER<any>} = {
+    [labels.test_descriptor__manufacturer_name]: data_value_handler,
+    [labels.test_descriptor__test_name]: data_value_handler,
+    [labels.validation_condition__author]: data_value_handler,
+    [labels.validation_condition__date]: data_value_handler,
     [labels.claims__limit_of_detection__value]: lod_value_handler,
     [labels.validation_condition__synthetic_specimen__viral_material]: synthetic_specimen__viral_material_value_handler,
 }
 
 
-function create_table_cell_contents (value: string, refs: string[])
+function create_table_cell_contents (data_node: DATA_NODE)
 {
-    const value_title = html_safe_ish(value)
+    const value_title = html_safe_ish(data_node.html_display_string)
     const value_el = document.createElement("div")
     value_el.className = "value_el"
-    value_el.innerHTML = value
+    value_el.innerHTML = data_node.html_display_string
     value_el.title = value_title
     value_el.addEventListener("click", () =>
     {
@@ -1014,7 +1030,7 @@ function create_table_cell_contents (value: string, refs: string[])
 
 
     const ref_container_el = document.createElement("div")
-    ref_container_el.innerHTML = refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
+    ref_container_el.innerHTML = data_node.refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
 
     return [value_el, ref_container_el]
 }
@@ -1035,14 +1051,14 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
             const data_node: DATA_NODE = data_row[header.label_id]
             if (data_node)
             {
-                const value_handler = value_handlers[header.label_id] || default_value_handler
+                const value_handler = value_handlers[header.label_id] || annotations_value_handler
                 const value = value_handler(data_node)
 
-                data_node.string = value.string
+                data_node.html_display_string = value.string
                 data_node.refs = value.refs
                 data_node.data = value.data
 
-                const children = create_table_cell_contents(value.string, value.refs || [])
+                const children = create_table_cell_contents(data_node)
                 children.forEach(child_el => cell.appendChild(child_el))
             }
         })
@@ -1051,6 +1067,7 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
     // Complete hack: TODO remove this
     interface TempData
     {
+        test_id: string
         developer_name: string
         test_name: string
         lod_min: number
@@ -1060,16 +1077,18 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
     }
     const data_for_export: TempData[] = []
     data_rows.forEach(data_row => {
-        const lod = data_row[labels.claims__limit_of_detection__value].data || {}
-        const synthetic_specimen__viral_material = data_row[labels.validation_condition__synthetic_specimen__viral_material].data || {}
+        const lod = (data_row[labels.claims__limit_of_detection__value] || {}).data || {}
+        const lod_units = ((data_row[labels.claims__limit_of_detection__units] || {}).data || {})
+        const synthetic_specimen__viral_material = (data_row[labels.validation_condition__synthetic_specimen__viral_material] || {}).data || {}
 
         data_for_export.push({
-            developer_name: data_row[labels.test_descriptor__manufacturer_name].value,
-            test_name: data_row[labels.test_descriptor__test_name].value,
+            test_id: data_row.test_id,
+            developer_name: data_row[labels.test_descriptor__manufacturer_name].data.value,
+            test_name: data_row[labels.test_descriptor__test_name].data.value,
             lod_min: lod.min,
             lod_max: lod.max,
-            lod_units: data_row[labels.claims__limit_of_detection__units].value,
-            synthetic_specimen__viral_material: synthetic_specimen__viral_material.type,
+            lod_units: lod_units.value,
+            synthetic_specimen__viral_material: synthetic_specimen__viral_material.types,
         })
     })
 
@@ -1103,10 +1122,10 @@ function html_safe_ish (value)
 
 
 activate_options()
-const used_annotation_label_ids = Array.from(get_used_annotation_label_ids(annotation_files_by_test_name))
+const used_annotation_label_ids = Array.from(get_used_annotation_label_ids(annotation_files_by_test_id))
 report_on_unused_labels(label_ids_to_names, used_annotation_label_ids)
 const data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data)
-data_rows.forEach(row => add_data_from_annotations(row, annotation_files_by_test_name, labels))
+data_rows.forEach(row => add_data_from_annotations(row, annotation_files_by_test_id, labels))
 build_header(headers)
 populate_table_body(headers, data_rows)
 update_progress()
