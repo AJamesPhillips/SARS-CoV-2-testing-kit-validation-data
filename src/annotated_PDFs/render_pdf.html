@@ -972,10 +972,37 @@
             const label_search_listeners = []
 
             const priority_label_ids = new Set([
-                // Temporary addition for LOD and synthetic controls labelling work
-                68, 66, 67, 0, 6, 64, 62, 63, 73, 86, 83, 108, 109,
-                // 78, 72,
+                // Label set for addition for LOD and synthetic controls labelling work
+                // 68,
+                // 66,
+                // 67,
+                // 0,
+                // 6,
+                // 64,
+                // 62,
+                // 63,
+                // 73,
+                // 86,
+                // 83,
+                // 108,
+                // 109,
+                // // 78, 72,
+
+                // Label set for viral material type
+                112, // Specimen/Synthetic Specimen/Virus/Type/Naked RNA
+                113, // Specimen/Synthetic Specimen/Virus/Type/Antigens
+                114, // Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles
+                115, // Specimen/Synthetic Specimen/Virus/Type/Heat Inactivated Virus
+                116, // Specimen/Synthetic Specimen/Virus/Type/Gammma Inactivated Virus
+                117, // Specimen/Synthetic Specimen/Virus/Type/Chemically Inactivated Virus
+                118, // Specimen/Synthetic Specimen/Virus/Type/Live Virus
+                119, // Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)
+                120, // Specimen/Synthetic Specimen/Virus/Type/Partial Live Virus
             ])
+
+            const hide_label_roots = [
+                "Specimen/Synthetic Specimen/Virus/Type/"
+            ]
 
             Object.keys(common_labels)
                 .map(label_id =>
@@ -1002,7 +1029,11 @@
                 })
                 .forEach(label => {
                     const label_el = document.createElement("div")
-                    label_el.innerText = label.text
+                    const label_text = hide_label_roots.reduce((accum, to_remove) =>
+                    {
+                        return accum.replace(to_remove, "")
+                    }, label.text)
+                    label_el.innerText = label_text
                     label_el.className = "label" + (label.priority ? " priority" : "")
                     labels_list_el.appendChild(label_el)
 
