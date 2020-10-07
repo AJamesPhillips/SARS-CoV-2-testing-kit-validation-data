@@ -167,7 +167,7 @@
 "width": "63px",
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "0.1",
+"text": "100",
 "labels": [
 {
 "id": 66,
@@ -184,7 +184,7 @@
 "width": "52px",
 "height": "17px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "PFU / mL",
+"text": "PFU / \u03bcL",
 "labels": [
 {
 "id": 67,

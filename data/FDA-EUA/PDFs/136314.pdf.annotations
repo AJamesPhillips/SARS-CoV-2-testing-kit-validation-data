@@ -172,7 +172,7 @@
 "width": "55px",
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "0.005",
+"text": "5",
 "labels": [
 {
 "id": 66,
@@ -189,7 +189,7 @@
 "width": "54px",
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "0.02",
+"text": "20",
 "labels": [
 {
 "id": 66,
@@ -206,7 +206,7 @@
 "width": "66px",
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "PFU / mL",
+"text": "PFU / \u03bcL",
 "labels": [
 {
 "id": 67,
