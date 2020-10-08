@@ -221,7 +221,7 @@ with open(FDA_EUA_html_page_file_path, "r") as f:
     html = f.read()
 
     # simplify
-    html = re.sub("\s*</?em>\s*", " ", html)
+    html = re.sub("</?em>", "", html)
     html = re.sub("<br />", " ", html)
     html = re.sub("\s+", " ", html)
     # normalise
