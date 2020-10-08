@@ -14,8 +14,8 @@
 
 ### FDA EUAs page and related PDF files
 
-    python3 src/parse_FDA_EUAs_html.py
-    python3 src/get_FDA_PDFs.py
+    python3 src/FDA_EUAs_list/parse_html.py
+    python3 src/FDA_EUAs_list/get_PDFs.py
 
 ### FDA reference panel html
 
@@ -26,7 +26,7 @@
 
 ### FDA EUA html pages
 
-    export FLASK_APP=src/serve_FDA_EUA_html.py && flask run --port=5001
+    export FLASK_APP=src/FDA_EUAs_list/serve_html.py && flask run --port=5001
 
 ### Assessment page of FDA EUAs
 

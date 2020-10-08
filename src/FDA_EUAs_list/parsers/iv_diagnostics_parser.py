@@ -1,33 +1,11 @@
-from enum import Enum, auto
 from html.parser import HTMLParser
-import json
-import os
-import re
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-FILE_DATE = "2020-08-18"
+from parsers.common import ParserState, ParserSubState, parse_date
 
 
-def parse_date(date_str):
-    date_parts = [part for part in date_str.split("/")]
-    return "{}-{}-{}".format(date_parts[2], date_parts[0], date_parts[1])
-
-
-class IVParserState(Enum):
-    INACTIVE = auto()
-    COLLECT_ROWS = auto()
-    FINISHED = auto()
-
-
-class IVParserSubState(Enum):
-    INACTIVE = auto()
-    COLLECT_CELL = auto()
-
-
-class IVParser(HTMLParser):
-    state = IVParserState.INACTIVE
-    substate = IVParserSubState.INACTIVE
+class IVDiagnosticsParser(HTMLParser):
+    state = ParserState.INACTIVE
+    substate = ParserSubState.INACTIVE
 
     current_row = None
     current_a_tag = None
@@ -49,10 +27,10 @@ class IVParser(HTMLParser):
     rows = []
 
     def handle_starttag(self, tag, attrs):
-        if tag == "tbody" and self.state != IVParserState.FINISHED:
-            self.state = IVParserState.COLLECT_ROWS
+        if tag == "tbody" and self.state != ParserState.FINISHED:
+            self.state = ParserState.COLLECT_ROWS
 
-        if self.state != IVParserState.COLLECT_ROWS:
+        if self.state != ParserState.COLLECT_ROWS:
             return
 
         self.current_a_tag = None
@@ -67,7 +45,7 @@ class IVParser(HTMLParser):
 
         elif tag == "td":
             self.data_position += 1
-            self.substate = IVParserSubState.COLLECT_CELL
+            self.substate = ParserSubState.COLLECT_CELL
             self.data_subposition = 0
 
         elif tag == "a":
@@ -82,28 +60,28 @@ class IVParser(HTMLParser):
 
 
     def handle_endtag(self, tag):
-        if self.state != IVParserState.COLLECT_ROWS:
+        if self.state != ParserState.COLLECT_ROWS:
             return
 
         if tag == "td":
-            self.substate = IVParserSubState.INACTIVE
+            self.substate = ParserSubState.INACTIVE
 
         elif tag == "tr":
             self.rows.append(self.current_row)
             self.current_row = None
 
             # temp
-            # self.state = IVParserState.FINISHED
+            # self.state = ParserState.FINISHED
 
         elif tag == "tbody":
-            self.state = IVParserState.FINISHED
+            self.state = ParserState.FINISHED
             self.rows = sorted(self.rows, key=lambda row: row[0])
             self.rows.insert(0, self.HEADERS)
 
 
     def handle_data(self, data):
-        if (self.state != IVParserState.COLLECT_ROWS or
-            self.substate != IVParserSubState.COLLECT_CELL):
+        if (self.state != ParserState.COLLECT_ROWS or
+            self.substate != ParserSubState.COLLECT_CELL):
             return
 
         if self.data_position == 0:
@@ -192,49 +170,3 @@ class IVParser(HTMLParser):
         else:
             pass
             print("Encountered some data  :", self.data_position, self.current_a_tag, data)
-
-
-def check_diagnostic_names_are_unique(data_rows):
-
-    # skip first row as it is headers
-    data_rows = data_rows[1:]
-
-    diagnostic_names = set()
-    duplicates = set()
-
-    for data_row in data_rows:
-        diagnostic_name = data_row[2]
-
-        if diagnostic_name in diagnostic_names:
-            duplicates.add(diagnostic_name)
-        else:
-            diagnostic_names.add(diagnostic_name)
-
-    if duplicates:
-        raise Exception("Found {} duplicates: {}".format(len(duplicates), duplicates))
-
-
-iv_parser = IVParser()
-
-FDA_EUA_html_page_file_path = dir_path + "/../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE)
-with open(FDA_EUA_html_page_file_path, "r") as f:
-    html = f.read()
-
-    # simplify
-    html = re.sub("</?em>", "", html)
-    html = re.sub("<br />", " ", html)
-    html = re.sub("\s+", " ", html)
-    # normalise
-    html = re.sub("<span\s*class=\"file-size\">396KB\)</span>", "396KB)", html)
-
-    iv_parser.feed(html)
-    data_rows = iv_parser.rows
-    check_diagnostic_names_are_unique(data_rows)
-
-    # [print(r) for r in iv_parser.rows]
-    print("{} rows parsed".format(len(iv_parser.rows)))
-
-    json_file_path_for_parsed_data = dir_path + "/../data/FDA-EUA/parsed/{}.json".format(FILE_DATE)
-    with open(json_file_path_for_parsed_data, "w") as f:
-        json.dump(data_rows, f, indent=4)
-

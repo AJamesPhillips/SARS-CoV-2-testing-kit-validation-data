@@ -10,7 +10,7 @@ FILE_DATE = "2020-08-18"
 
 @app.route("/")
 def index():
-    file_path = dir_path + "/../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE)
+    file_path = dir_path + "/../../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE)
     with open(file_path, "r") as f:
         contents = f.read()
 
@@ -19,7 +19,7 @@ def index():
 
 @app.route("/media/<int:file_id>/download")
 def media(file_id):
-    file_path = dir_path + "/../data/FDA-EUA/PDFs/{}.pdf".format(file_id)
+    file_path = dir_path + "/../../data/FDA-EUA/PDFs/{}.pdf".format(file_id)
 
     if not os.path.isfile(file_path):
         return """<html>
