@@ -3,6 +3,7 @@ import json
 import os
 import re
 
+from get_test_id import get_test_id
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 

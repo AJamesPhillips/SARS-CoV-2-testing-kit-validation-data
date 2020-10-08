@@ -1,9 +1,11 @@
 from enum import Enum, auto
+import os
+import sys
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, dir_path + "/../../common")
 
-def get_test_id(manufacturer_or_lab_name, test_name):
-    test_id = manufacturer_or_lab_name + "__" + test_name
-    return test_id
+from get_test_id import get_test_id
 
 
 def parse_date(date_str):
