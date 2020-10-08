@@ -2,19 +2,29 @@ import csv
 import json
 import os
 import re
+import sys
 
-from get_test_id import get_test_id
+from common.get_test_id import get_test_id
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
 DATA_DIRECTORY = dir_path + "/../../data/FDA-EUA/"
-JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_merged.json"
-JSON_FILE_PATH_FOR_FDA_EUA_iv_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_iv.json"
-JSON_FILE_PATH_FOR_FDA_EUA_high_complexity_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_high_complexity.json"
+JSON_FILE_PATH_FOR_FDA_EUA_PARSED_DATA = DATA_DIRECTORY + "parsed/latest.json"
 
 
-def get_fda_eua_parsed_data(merged):
+def get_fda_eua_parsed_data():
+    with open(JSON_FILE_PATH_FOR_FDA_EUA_PARSED_DATA, "r") as f:
+        fda_eua_merged_parsed_data = json.load(f)
+
+    return fda_eua_merged_parsed_data
+
+
+def deprecated_get_fda_eua_parsed_data(merged):
+    JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_merged.json"
+    JSON_FILE_PATH_FOR_FDA_EUA_iv_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_iv.json"
+    JSON_FILE_PATH_FOR_FDA_EUA_high_complexity_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_high_complexity.json"
+
     if merged:
         with open(JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA, "r") as f:
             fda_eua_merged_parsed_data = json.load(f)

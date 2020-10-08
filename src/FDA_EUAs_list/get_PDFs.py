@@ -19,6 +19,11 @@ def check_urls_are_unique(urls):
         "https://www.fda.gov/media/137741/download",  # error?
         "https://www.fda.gov/media/140715/download",  # error?
         "https://www.fda.gov/media/137181/download",  # ok?
+        "https://www.fda.gov/media/137355/download",  # error - QIAstat Letter Granting EUA Amendments (April 23, 2020) points to one for NeuMoDx Molecular, Inc.
+        "https://www.fda.gov/media/136599/download",  # ok - points to generic info
+        "https://www.fda.gov/media/136600/download",  # ok - points to generic info
+        "https://www.fda.gov/media/142307/download",  # error - Should be GK Accu-Right HCP doc but is their letter of authorization
+        "https://www.fda.gov/media/142421/download",  # error - Orawell IgM/IgG Rapid Test has this for HCP and Recipient
     ]
     unique_urls = set()
     for url in urls:
@@ -48,11 +53,20 @@ def download_urls(urls):
         time.sleep(DELAY_SECONDS_BETWEEN_REQUESTS)
 
 
-def main():
-    fda_eua_parsed_data = get_fda_eua_parsed_data(merged=False)
+def deprecated_main():
+    fda_eua_parsed_data = deprecated_get_fda_eua_parsed_data(merged=False)
     urls = filter_for_urls(fda_eua_parsed_data["fda_eua_iv_parsed_data"])
     urls += filter_for_urls(fda_eua_parsed_data["fda_eua_high_complexity_parsed_data"])
     print("Extracted {} urls to download".format(len(urls)))
+    check_urls_are_unique(urls)
+    download_urls(urls)
+
+
+def main():
+    fda_eua_parsed_data = get_fda_eua_parsed_data()
+    urls = filter_for_urls(fda_eua_parsed_data)
+    print("Extracted {} urls to download".format(len(urls)))
+    urls = [url for url in urls if url != "https://www.fda.gov/medical-devices/coronavirus-covid-19-and-medical-devices/sars-cov-2-reference-panel-comparative-data"]
     check_urls_are_unique(urls)
     download_urls(urls)
 

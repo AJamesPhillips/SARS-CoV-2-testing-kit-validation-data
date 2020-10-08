@@ -1,3 +1,4 @@
 
+from parsers.diagnostics_parser import DiagnosticsParser
 from parsers.high_complexity_diagnostics_parser import HighComplexityDiagnosticsParser
 from parsers.iv_diagnostics_parser import IVDiagnosticsParser
