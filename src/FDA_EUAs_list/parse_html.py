@@ -35,6 +35,8 @@ def preprocess_html(html):
     # normalise
     html = re.sub("<span\s*class=\"file-size\">396KB\)</span>", "396KB)", html)
     html = re.sub("394KB</td>", "394KB)</td>", html)
+    html = re.sub('"/media/136656"', '"/media/136656/download"', html)
+    html = re.sub('"/media-base/137163"', '"/media/137163/download"', html)
 
     return html
 

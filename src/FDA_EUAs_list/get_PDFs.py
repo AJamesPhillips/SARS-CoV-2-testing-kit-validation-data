@@ -50,7 +50,9 @@ def download_urls(urls):
 
 def main():
     fda_eua_parsed_data = get_fda_eua_parsed_data(merged=False)
-    urls = filter_for_urls(fda_eua_parsed_data)
+    urls = filter_for_urls(fda_eua_parsed_data["fda_eua_iv_parsed_data"])
+    urls += filter_for_urls(fda_eua_parsed_data["fda_eua_high_complexity_parsed_data"])
+    print("Extracted {} urls to download".format(len(urls)))
     check_urls_are_unique(urls)
     download_urls(urls)
 

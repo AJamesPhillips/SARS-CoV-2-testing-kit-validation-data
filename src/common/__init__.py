@@ -6,16 +6,31 @@ import re
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-FILE_DATE = "2020-08-18"
+
 DATA_DIRECTORY = dir_path + "/../../data/FDA-EUA/"
-JSON_FILE_PATH_FOR_FDA_EUA_PARSED_DATA = DATA_DIRECTORY + "parsed/{}.json".format(FILE_DATE)
+JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_merged.json"
+JSON_FILE_PATH_FOR_FDA_EUA_iv_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_iv.json"
+JSON_FILE_PATH_FOR_FDA_EUA_high_complexity_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_high_complexity.json"
 
 
-def get_fda_eua_parsed_data():
-    with open(JSON_FILE_PATH_FOR_FDA_EUA_PARSED_DATA, "r") as f:
-        fda_eua_parsed_data = json.load(f)
+def get_fda_eua_parsed_data(merged):
+    if merged:
+        with open(JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA, "r") as f:
+            fda_eua_merged_parsed_data = json.load(f)
 
-    return fda_eua_parsed_data
+        return fda_eua_merged_parsed_data
+
+    else:
+        with open(JSON_FILE_PATH_FOR_FDA_EUA_iv_PARSED_DATA, "r") as f:
+            fda_eua_iv_parsed_data = json.load(f)
+
+        with open(JSON_FILE_PATH_FOR_FDA_EUA_high_complexity_PARSED_DATA, "r") as f:
+            fda_eua_high_complexity_parsed_data = json.load(f)
+
+        return {
+            "fda_eua_iv_parsed_data": fda_eua_iv_parsed_data,
+            "fda_eua_high_complexity_parsed_data": fda_eua_high_complexity_parsed_data,
+        }
 
 
 # pass it fda_eua_parsed_data or a data row to get all urls
@@ -33,7 +48,11 @@ def filter_for_urls(data):
 
 def get_FDA_EUA_pdf_file_path_from_url(url):
     matches = re.match("https://www.fda.gov/media/(\d+)/download", url)
-    file_id = matches.groups()[0]
+    try:
+        file_id = matches.groups()[0]
+    except Exception as e:
+        print("failed on url: ", url)
+        raise e
     file_path = DATA_DIRECTORY + "PDFs/{}.pdf".format(file_id)
 
     return file_path
