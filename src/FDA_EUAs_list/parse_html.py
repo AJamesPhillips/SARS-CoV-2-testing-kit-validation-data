@@ -8,18 +8,33 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 data_path = dir_path + "/../../data/FDA-EUA/"
 
 
-def get_preprocessed_html(FILE_DATE):
-    FDA_EUA_html_page_file_path = data_path + "html-page/{}.htm".format(FILE_DATE)
-    with open(FDA_EUA_html_page_file_path, "r") as f:
-        html = f.read()
+def get_files_to_parse():
+    files = []
 
-        # simplify
-        html = re.sub("</?em>", "", html)
-        html = re.sub("<br />", " ", html)
-        html = re.sub("\s+", " ", html)
-        # normalise
-        html = re.sub("<span\s*class=\"file-size\">396KB\)</span>", "396KB)", html)
-        html = re.sub("394KB</td>", "394KB)</td>", html)
+    root_path = data_path + "html_pages"
+    for file_name in os.listdir(root_path):
+        if file_name.startswith("."):
+            continue
+
+        with open(root_path + "/" + file_name, "r") as f:
+            file_contents = f.read()
+
+        files.append({
+            "file_name": file_name.replace(".htm", ""),
+            "file_contents": file_contents,
+        })
+
+    return files
+
+
+def preprocess_html(html):
+    # simplify
+    html = re.sub("</?em>", "", html)
+    html = re.sub("<br />", " ", html)
+    html = re.sub("\s+", " ", html)
+    # normalise
+    html = re.sub("<span\s*class=\"file-size\">396KB\)</span>", "396KB)", html)
+    html = re.sub("394KB</td>", "394KB)</td>", html)
 
     return html
 
@@ -40,7 +55,7 @@ def parse_html(html):
     }
 
 
-def check_test_ids_are_unique(iv_diagnostics_data_rows, high_complexity_diagnostics_data_rows):
+def merge_data(iv_diagnostics_data_rows, high_complexity_diagnostics_data_rows):
     # skip first row as it is headers
     iv_diagnostics_data_rows = iv_diagnostics_data_rows[1:]
     high_complexity_diagnostics_data_rows = high_complexity_diagnostics_data_rows[1:]
@@ -50,45 +65,39 @@ def check_test_ids_are_unique(iv_diagnostics_data_rows, high_complexity_diagnost
         len(high_complexity_diagnostics_data_rows),
     ))
 
-    test_ids = set()
-    duplicates = set()
-
-    for data_row in iv_diagnostics_data_rows:
-        diagnostic_name = data_row[2]
-
-        if diagnostic_name in test_ids:
-            duplicates.add(diagnostic_name)
-        else:
-            test_ids.add(diagnostic_name)
-
-    for data_row in high_complexity_diagnostics_data_rows:
-        laboratory_name = data_row[1]
-
-        if laboratory_name in test_ids:
-            duplicates.add(laboratory_name)
-        else:
-            test_ids.add(laboratory_name)
-
-    if duplicates:
-        raise Exception("Found {} duplicates: {}".format(len(duplicates), duplicates))
-
-
-def merge_data(iv_diagnostics_data_rows, high_complexity_diagnostics_data_rows):
-    # skip first row as it is headers
-    iv_diagnostics_data_rows = iv_diagnostics_data_rows[1:]
-    high_complexity_diagnostics_data_rows = high_complexity_diagnostics_data_rows[1:]
-
     merged_data_rows = [
-        ["Date EUA First Issued", "manufacturer / laboratory name", "test name", "In Vitro / High Complexity"]
+        ["test_id", "Date EUA First Issued", "manufacturer / laboratory name", "test name", "In Vitro / High Complexity"]
     ]
 
     for data_row in iv_diagnostics_data_rows:
-        merged_data_rows.append([data_row[0], data_row[1], data_row[2], "In Vitro"])
+        test_id = data_row[1] + "__" + data_row[2]
+        merged_data_rows.append([test_id, data_row[0], data_row[1], data_row[2], "In Vitro"])
 
     for data_row in high_complexity_diagnostics_data_rows:
-        merged_data_rows.append([data_row[0], data_row[1], data_row[2], "High Complexity"])
+        test_id = data_row[1] + "__" + data_row[2]
+        merged_data_rows.append([test_id, data_row[0], data_row[1], data_row[2], "High Complexity"])
 
     return merged_data_rows
+
+
+def check_test_ids_are_unique(merged_data_rows):
+    # skip first row as it is headers
+    merged_data_rows = merged_data_rows[1:]
+
+    test_ids = set()
+    duplicates = set()
+
+    for data_row in merged_data_rows:
+        test_id = data_row[0]
+
+        if test_id in test_ids:
+            duplicates.add(test_id)
+        else:
+            test_ids.add(test_id)
+
+    if duplicates:
+        pass
+        #raise Exception("Found {} duplicates: {}".format(len(duplicates), duplicates))
 
 
 def store_results(file_name, data_rows):
@@ -98,21 +107,19 @@ def store_results(file_name, data_rows):
 
 
 def main():
-    FILE_DATE = "2020-08-18"
+    for f in get_files_to_parse():
 
-    html = get_preprocessed_html(FILE_DATE)
-    results = parse_html(html)
-    check_test_ids_are_unique(**results)
+        file_contents = f["file_contents"]
+        file_name = f["file_name"]
 
-    merged_data = merge_data(**results)
+        html = preprocess_html(file_contents)
+        results = parse_html(html)
+        merged_data = merge_data(**results)
+        check_test_ids_are_unique(merged_data)
 
-    store_results("{}_iv".format(FILE_DATE), results["iv_diagnostics_data_rows"])
-    store_results("latest_iv", results["iv_diagnostics_data_rows"])
-    store_results("{}_high_complexity".format(FILE_DATE), results["high_complexity_diagnostics_data_rows"])
-    store_results("latest_high_complexity", results["high_complexity_diagnostics_data_rows"])
-
-    store_results("{}_merged".format(FILE_DATE), results["iv_diagnostics_data_rows"])
-    store_results("latest_merged", merged_data)
+        store_results("{}_iv".format(file_name), results["iv_diagnostics_data_rows"])
+        store_results("{}_high_complexity".format(file_name), results["high_complexity_diagnostics_data_rows"])
+        store_results("{}_merged".format(file_name), merged_data)
 
 
 main()

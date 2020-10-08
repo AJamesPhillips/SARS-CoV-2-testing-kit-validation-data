@@ -4,13 +4,6 @@ from parsers.common import ParserState, ParserSubState, parse_date
 
 
 class HighComplexityDiagnosticsParser(HTMLParser):
-    table_number = 0
-    state = ParserState.INACTIVE
-    substate = ParserSubState.INACTIVE
-
-    current_row = None
-    current_a_tag = None
-    current_a_tag_url = None
     HEADERS = [
         "Date EUA First Issued",
         "Laboratory name",
@@ -18,7 +11,20 @@ class HighComplexityDiagnosticsParser(HTMLParser):
         #"Letters of Authorization (URLs to PDFs)",
         "Emergency Use Authorisation (URL to PDF)",
     ]
-    rows = []
+
+    def __init__(self):
+        super().__init__()
+        self.reset()
+
+        self.rows = []
+        self.state = ParserState.INACTIVE
+        self.table_number = 0  # table number count starts at 1
+        self.substate = ParserSubState.INACTIVE
+
+        self.current_row = None
+        self.current_a_tag = None
+        self.current_a_tag_url = None
+
 
     def handle_starttag(self, tag, attrs):
         if tag == "tbody" and self.state != ParserState.FINISHED:
@@ -71,6 +77,8 @@ class HighComplexityDiagnosticsParser(HTMLParser):
 
 
     def handle_data(self, data):
+        data = data.strip()
+
         if (self.state != ParserState.COLLECT_ROWS or
             self.substate != ParserSubState.COLLECT_CELL):
             return
@@ -83,11 +91,10 @@ class HighComplexityDiagnosticsParser(HTMLParser):
         elif self.data_position == 1:
             if self.current_row[1]:
                 raise Exception("Only expecting one value for Laboratory name")
-            self.current_row[1] = data.strip()
+            self.current_row[1] = data
 
         # Test name
         elif self.data_position == 2:
-            data = data.strip()
             if self.current_row[2]:
                 return
             if data:
@@ -100,7 +107,7 @@ class HighComplexityDiagnosticsParser(HTMLParser):
                 self.current_row[3] = self.current_a_tag_url
             elif "B)" in data:
                 pass
-            elif data.strip():
+            elif data:
                 print("Unparsed data", data)
 
         else:

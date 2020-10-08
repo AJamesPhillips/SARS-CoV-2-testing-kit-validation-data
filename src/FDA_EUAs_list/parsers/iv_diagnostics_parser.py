@@ -4,12 +4,6 @@ from parsers.common import ParserState, ParserSubState, parse_date
 
 
 class IVDiagnosticsParser(HTMLParser):
-    state = ParserState.INACTIVE
-    substate = ParserSubState.INACTIVE
-
-    current_row = None
-    current_a_tag = None
-    current_a_tag_url = None
     HEADERS = [
         "Date EUA First Issued",
         "Entity",
@@ -24,7 +18,21 @@ class IVDiagnosticsParser(HTMLParser):
         "Amendments and Other Documents (PDF)",
         "Federal Register Notice for EUA",
     ]
-    rows = []
+
+
+    def __init__(self):
+        super().__init__()
+        self.reset()
+
+        self.rows = []
+        self.state = ParserState.INACTIVE
+        self.table_number = 0  # table number count starts at 1
+        self.substate = ParserSubState.INACTIVE
+
+        self.current_row = None
+        self.current_a_tag = None
+        self.current_a_tag_url = None
+
 
     def handle_starttag(self, tag, attrs):
         if tag == "tbody" and self.state != ParserState.FINISHED:
@@ -80,6 +88,8 @@ class IVDiagnosticsParser(HTMLParser):
 
 
     def handle_data(self, data):
+        data = data.strip()
+
         if (self.state != ParserState.COLLECT_ROWS or
             self.substate != ParserSubState.COLLECT_CELL):
             return
@@ -145,14 +155,14 @@ class IVDiagnosticsParser(HTMLParser):
                 self.current_row[9] = self.current_a_tag_url
             elif "B)" in data:
                 pass
-            elif data.strip():
+            elif data:
                 print("Unparsed data", data)
 
         elif self.data_position == 6:
             if not self.current_a_tag_url:
                 if "None currently" in data:
                     pass
-                elif not data.strip():
+                elif not data:
                     pass
                 else:
                     print("Have unexpected text for \"Amendments and Other Documents\" field: ", data)
@@ -161,7 +171,7 @@ class IVDiagnosticsParser(HTMLParser):
                     print("Have unexpected url in \"Amendments and Other Documents\" field: ", self.current_a_tag_url)
                 elif "B)" in data:
                     pass
-                elif data.strip():
+                elif data:
                     self.current_row[10].append(self.current_a_tag_url)
 
         elif self.data_position == 7:
