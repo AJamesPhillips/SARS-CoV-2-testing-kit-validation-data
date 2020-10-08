@@ -52,6 +52,7 @@ var labels = {
     synthetic_specimen_virus_type_Partial_Live_Virus: 120,
     test_descriptor__manufacturer_name: 111,
     test_descriptor__test_name: 110,
+    test_technology: 7,
     validation_condition__author: 24,
     validation_condition__comparator_test: -1,
     validation_condition__date: 25,
@@ -62,7 +63,9 @@ var labels = {
     validation_condition__synthetic_specimen__clinical_matrix_source: 86,
     validation_condition__synthetic_specimen__viral_material: 62,
     validation_condition__synthetic_specimen__viral_material_source: 63,
-    validation_condition__transport_medium: -1
+    validation_condition__transport_medium: -1,
+    // This smells and suggests we should have kept the second layer of data_keys in conjunction with labels
+    _extra_url_to_IFU_or_EUA: -2
 };
 var LABEL_IDS__META__NOT_SPECIFIED = [
     labels.meta__not_specified,
@@ -126,7 +129,6 @@ function report_on_unused_labels(label_ids_to_names, used_annotation_label_ids) 
         108,
         5,
         60,
-        7,
     ];
     LABEL_IDS_TO_SILENCE.forEach(function (label_id) { return HANDLED_LABEL_IDS.add(label_id); });
     var unhandled_label_ids = used_annotation_label_ids.filter(function (x) { return !HANDLED_LABEL_IDS.has(x); });
@@ -139,27 +141,39 @@ function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
         .slice(1) // skip first row of json array which contains csv-like array of headers
         .map(function (fda_eua_parsed_data_row) {
         var _a;
-        var test_name = fda_eua_parsed_data_row[2];
-        var manufacturer_name = fda_eua_parsed_data_row[1];
-        var date = fda_eua_parsed_data_row[0];
+        var test_id = fda_eua_parsed_data_row[0];
+        var date = fda_eua_parsed_data_row[1];
+        var manufacturer_name = fda_eua_parsed_data_row[3];
+        var test_name = fda_eua_parsed_data_row[4];
+        var test_technology = fda_eua_parsed_data_row[6];
+        var EUAs = fda_eua_parsed_data_row[10];
+        var url_to_IFU_or_EUA = EUAs.length ? EUAs[0] : fda_eua_parsed_data_row[11];
         var row = (_a = {
-                test_id: test_name
+                test_id: test_id
             },
-            _a[labels.test_descriptor__manufacturer_name] = {
+            _a[labels.validation_condition__date] = {
                 annotations: [],
-                data: { value: manufacturer_name }
+                data: { value: date }
             },
             _a[labels.test_descriptor__test_name] = {
                 annotations: [],
                 data: { value: test_name }
             },
+            _a[labels.test_descriptor__manufacturer_name] = {
+                annotations: [],
+                data: { value: manufacturer_name }
+            },
+            _a[labels.test_technology] = {
+                annotations: [],
+                data: { value: test_technology }
+            },
             _a[labels.validation_condition__author] = {
                 annotations: [],
                 data: { value: "self" }
             },
-            _a[labels.validation_condition__date] = {
+            _a[labels._extra_url_to_IFU_or_EUA] = {
                 annotations: [],
-                data: { value: date }
+                data: { value: url_to_IFU_or_EUA }
             },
             _a);
         return row;
@@ -353,6 +367,10 @@ var headers = [
                 title: "Test name",
                 label_id: labels.test_descriptor__test_name
             },
+            {
+                title: "IFU or EUA",
+                label_id: labels._extra_url_to_IFU_or_EUA
+            }
         ]
     },
     {
@@ -360,6 +378,10 @@ var headers = [
         label_id: null,
         category: "test_claims",
         children: [
+            {
+                title: "Test technology",
+                label_id: labels.test_technology
+            },
             {
                 title: "Specimens",
                 label_id: null,
@@ -399,11 +421,6 @@ var headers = [
                     { title: "Sequences", label_id: labels.claims__primers_and_probes__sequences },
                     { title: "Sources", label_id: labels.claims__primers_and_probes__sources },
                 ]
-            },
-            {
-                title: "Test technology",
-                // e.g. RT-qPCR
-                label_id: null
             },
             {
                 // Not in May 13th version of FDA EUA template
@@ -663,7 +680,7 @@ function annotations_value_handler(data_node) {
         var comments = comments_from_annotations(annotations);
         string = value + "<br/>" + comments;
     }
-    return { string: string, refs: data_node.refs, data: { value: value } };
+    return { string: string, refs: data_node.refs || [], data: { value: value } };
 }
 var WARNING_HTML_SYMBOL = "<span class=\"warning_symbol\" title=\"Value not specified\">\u26A0</span>";
 var ERROR_HTML_SYMBOL = "<span class=\"error_symbol\" title=\"Potential error\">\u26A0</span>";
@@ -734,7 +751,7 @@ function lod_value_handler(data_node) {
     });
     if (!min_annotation) {
         return {
-            string: not_specified_value_html(""),
+            string: "",
             refs: [],
             data: { not_specified: true }
         };
@@ -774,13 +791,37 @@ function synthetic_specimen__viral_material_value_handler(data_node) {
     }
     return { string: string, refs: data_node.refs, data: { types: types } };
 }
+function link_value_handler(data_node) {
+    var url = data_node.data.value;
+    var pseudo_annotation = {
+        relative_file_path: get_FDA_EUA_pdf_file_path_from_url(url)
+    };
+    var refs = [ref_link(pseudo_annotation)];
+    return { string: "", refs: refs, data: { value: url } };
+}
+/** TypeScript version of python function */
+function get_FDA_EUA_pdf_file_path_from_url(url) {
+    var matches = url.match("https://www.fda.gov/media/(\\d+)/download");
+    var file_id = "";
+    try {
+        file_id = matches[1];
+    }
+    catch (e) {
+        console.error("failed on url: ", url);
+        throw e;
+    }
+    var file_path = "../../data/FDA-EUA/PDFs/" + file_id + ".pdf";
+    return file_path;
+}
 var value_handlers = (_a = {},
+    _a[labels.claims__limit_of_detection__value] = lod_value_handler,
     _a[labels.test_descriptor__manufacturer_name] = data_value_handler,
     _a[labels.test_descriptor__test_name] = data_value_handler,
+    _a[labels.test_technology] = data_value_handler,
     _a[labels.validation_condition__author] = data_value_handler,
     _a[labels.validation_condition__date] = data_value_handler,
-    _a[labels.claims__limit_of_detection__value] = lod_value_handler,
     _a[labels.validation_condition__synthetic_specimen__viral_material] = synthetic_specimen__viral_material_value_handler,
+    _a[labels._extra_url_to_IFU_or_EUA] = link_value_handler,
     _a);
 function create_table_cell_contents(data_node) {
     var value_title = html_safe_ish(data_node.html_display_string);
@@ -835,12 +876,14 @@ function update_progress() {
     var progress_el = document.getElementById("progress");
     var tbody = document.getElementsByTagName("tbody")[0];
     var total_rows = tbody.children.length;
+    var total_valid_rows = 0;
     var total_completed = 0;
     Array.from(tbody.children).forEach(function (row) {
-        total_completed += (row.children[2].innerText !== "" ? 1 : 0);
+        total_valid_rows += (row.children[3].innerText.includes("Serology") ? 0 : 1);
+        total_completed += (row.children[4].innerText !== "" ? 1 : 0);
     });
     var percentage = ((total_completed / total_rows) * 100).toFixed(1);
-    progress_el.innerText = percentage + "% " + total_completed + "/" + total_rows;
+    progress_el.innerText = percentage + "% " + total_completed + "/" + total_valid_rows + "  (" + total_rows + ")";
 }
 // DO NOT USE THIS IN PRODUCTION
 function html_safe_ish(value) {

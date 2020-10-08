@@ -44,6 +44,9 @@ def deprecated_get_fda_eua_parsed_data(merged):
         }
 
 
+urls_to_ignore = set([
+    "https://www.fda.gov/medical-devices/coronavirus-covid-19-and-medical-devices/sars-cov-2-reference-panel-comparative-data",
+])
 # pass it fda_eua_parsed_data or a data row to get all urls
 def filter_for_urls(data):
     urls = []
@@ -52,7 +55,8 @@ def filter_for_urls(data):
         for v in data:
             urls += filter_for_urls(v)
     elif isinstance(data, str) and re.match(r'^https?://', data):
-        urls.append(data)
+        if data not in urls_to_ignore:
+            urls.append(data)
 
     return urls
 
@@ -108,7 +112,7 @@ def get_annotation_files_by_test_id(fda_eua_parsed_data):
     annotation_files_by_test_id = dict()
 
     for data_row in data_rows:
-        test_name = data_row[2]
+        test_id = data_row[0]
         all_annotation_files = []
 
         urls = filter_for_urls(data_row)
@@ -124,6 +128,6 @@ def get_annotation_files_by_test_id(fda_eua_parsed_data):
                 annotation_file_contents = json.load(f)
                 all_annotation_files.append(annotation_file_contents)
 
-        annotation_files_by_test_id[test_name] = all_annotation_files
+        annotation_files_by_test_id[test_id] = all_annotation_files
 
     return annotation_files_by_test_id

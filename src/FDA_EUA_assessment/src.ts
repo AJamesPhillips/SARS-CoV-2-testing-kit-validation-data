@@ -14,10 +14,11 @@ type FDA_EUA_PARSED_DATA_ROW = [
     string,
     string,
     string,
-    string[],
+    string,
     string,
     string[],
     string,
+    string[]
 ]
 type FDA_EUA_PARSED_DATA = FDA_EUA_PARSED_DATA_ROW[]
 
@@ -107,6 +108,7 @@ const labels = {
     synthetic_specimen_virus_type_Partial_Live_Virus: 120,
     test_descriptor__manufacturer_name: 111,
     test_descriptor__test_name: 110,
+    test_technology: 7,
     validation_condition__author: 24,
     validation_condition__comparator_test: -1,
     validation_condition__date: 25,
@@ -118,6 +120,9 @@ const labels = {
     validation_condition__synthetic_specimen__viral_material: 62,
     validation_condition__synthetic_specimen__viral_material_source: 63,
     validation_condition__transport_medium: -1,
+
+    // This smells and suggests we should have kept the second layer of data_keys in conjunction with labels
+    _extra_url_to_IFU_or_EUA: -2,
 }
 type LABELS = typeof labels
 
@@ -198,8 +203,6 @@ function report_on_unused_labels (label_ids_to_names: LABEL_IDS_TO_NAMES, used_a
         108, // -> Meta/Not specified/Reasonable assumption,
         5, // -> Detects pathogen(s),
         60, // -> Third party detection system
-
-        7, // -> Test technology,
     ]
     LABEL_IDS_TO_SILENCE.forEach(label_id => HANDLED_LABEL_IDS.add(label_id))
 
@@ -235,27 +238,39 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
     .slice(1) // skip first row of json array which contains csv-like array of headers
     .map(fda_eua_parsed_data_row =>
         {
-            const test_name = fda_eua_parsed_data_row[2]
-            const manufacturer_name = fda_eua_parsed_data_row[1]
-            const date = fda_eua_parsed_data_row[0]
+            const test_id = fda_eua_parsed_data_row[0]
+            const date = fda_eua_parsed_data_row[1]
+            const manufacturer_name = fda_eua_parsed_data_row[3]
+            const test_name = fda_eua_parsed_data_row[4]
+            const test_technology = fda_eua_parsed_data_row[6]
+            const EUAs = fda_eua_parsed_data_row[10]
+            const url_to_IFU_or_EUA = EUAs.length ? EUAs[0] : fda_eua_parsed_data_row[11]
 
             const row: DATA_ROW = {
-                test_id: test_name,
-                [labels.test_descriptor__manufacturer_name]: {
+                test_id,
+                [labels.validation_condition__date]: {
                     annotations: [],
-                    data: { value: manufacturer_name },
+                    data: { value: date },
                 },
                 [labels.test_descriptor__test_name]: {
                     annotations: [],
                     data: { value: test_name },
                 },
+                [labels.test_descriptor__manufacturer_name]: {
+                    annotations: [],
+                    data: { value: manufacturer_name },
+                },
+                [labels.test_technology]: {
+                    annotations: [],
+                    data: { value: test_technology },
+                },
                 [labels.validation_condition__author]: {
                     annotations: [],
                     data: { value: "self" },
                 },
-                [labels.validation_condition__date]: {
+                [labels._extra_url_to_IFU_or_EUA]: {
                     annotations: [],
-                    data: { value: date },
+                    data: { value: url_to_IFU_or_EUA },
                 },
             }
 
@@ -489,6 +504,10 @@ const headers: HEADERS = [
                 title: "Test name",
                 label_id: labels.test_descriptor__test_name,
             },
+            {
+                title: "IFU or EUA",
+                label_id: labels._extra_url_to_IFU_or_EUA,
+            }
         ],
     },
     {
@@ -496,6 +515,10 @@ const headers: HEADERS = [
         label_id: null,
         category: "test_claims",
         children: [
+            {
+                title: "Test technology",
+                label_id: labels.test_technology,
+            },
             {
                 title: "Specimens",
                 label_id: null,
@@ -535,11 +558,6 @@ const headers: HEADERS = [
                     { title: "Sequences", label_id: labels.claims__primers_and_probes__sequences, },
                     { title: "Sources", label_id: labels.claims__primers_and_probes__sources, },
                 ]
-            },
-            {
-                title: "Test technology",
-                // e.g. RT-qPCR
-                label_id: null,
             },
             {
                 // Not in May 13th version of FDA EUA template
@@ -836,7 +854,7 @@ function annotations_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{ valu
         string = value + "<br/>" + comments
     }
 
-    return { string, refs: data_node.refs, data: { value } }
+    return { string, refs: data_node.refs || [], data: { value } }
 }
 
 
@@ -901,7 +919,7 @@ function comments_from_annotations (annotations: AnnotationWithFilePath[]): stri
 }
 
 
-function ref_link (annotation: AnnotationWithFilePath)
+function ref_link (annotation: { relative_file_path: string, id?: number })
 {
     const { relative_file_path, id } = annotation
     let ref = `http://localhost:5003/render_pdf?relative_file_path=${relative_file_path}`
@@ -948,7 +966,7 @@ function lod_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data
     if (!min_annotation)
     {
         return {
-            string: not_specified_value_html(""),
+            string: "",
             refs: [],
             data: { not_specified: true },
         }
@@ -1005,14 +1023,47 @@ function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE)
 }
 
 
+function link_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{ value: string }>
+{
+    const url = data_node.data.value
+    const pseudo_annotation = {
+        relative_file_path: get_FDA_EUA_pdf_file_path_from_url(url),
+    }
+    const refs = [ref_link(pseudo_annotation)]
+
+    return { string: "", refs, data: { value: url } }
+}
+
+
+/** TypeScript version of python function */
+function get_FDA_EUA_pdf_file_path_from_url (url)
+{
+    const matches = url.match(`https://www.fda.gov/media/(\\d+)/download`)
+    let file_id = ""
+    try
+    {
+        file_id = matches[1]
+    }
+    catch (e)
+    {
+        console.error("failed on url: ", url)
+        throw e
+    }
+    const file_path = `../../data/FDA-EUA/PDFs/${file_id}.pdf`
+
+    return file_path
+}
+
 
 const value_handlers: {[label_id: number]: VALUE_HANDLER<any>} = {
+    [labels.claims__limit_of_detection__value]: lod_value_handler,
     [labels.test_descriptor__manufacturer_name]: data_value_handler,
     [labels.test_descriptor__test_name]: data_value_handler,
+    [labels.test_technology]: data_value_handler,
     [labels.validation_condition__author]: data_value_handler,
     [labels.validation_condition__date]: data_value_handler,
-    [labels.claims__limit_of_detection__value]: lod_value_handler,
     [labels.validation_condition__synthetic_specimen__viral_material]: synthetic_specimen__viral_material_value_handler,
+    [labels._extra_url_to_IFU_or_EUA]: link_value_handler,
 }
 
 
@@ -1101,15 +1152,18 @@ function update_progress ()
     const progress_el = document.getElementById("progress")
 
     const tbody = document.getElementsByTagName("tbody")[0]
+
     const total_rows = tbody.children.length
+    let total_valid_rows = 0
     let total_completed = 0
     Array.from(tbody.children).forEach(row =>
         {
-            total_completed += ((row.children[2] as any).innerText !== "" ? 1 : 0)
+            total_valid_rows += ((row.children[3] as any).innerText.includes("Serology") ? 0 : 1)
+            total_completed += ((row.children[4] as any).innerText !== "" ? 1 : 0)
         })
 
     const percentage = ((total_completed / total_rows) * 100).toFixed(1)
-    progress_el.innerText = `${percentage}% ${total_completed}/${total_rows}`
+    progress_el.innerText = `${percentage}% ${total_completed}/${total_valid_rows}  (${total_rows})`
 }
 
 

@@ -66,7 +66,6 @@ def main():
     fda_eua_parsed_data = get_fda_eua_parsed_data()
     urls = filter_for_urls(fda_eua_parsed_data)
     print("Extracted {} urls to download".format(len(urls)))
-    urls = [url for url in urls if url != "https://www.fda.gov/medical-devices/coronavirus-covid-19-and-medical-devices/sars-cov-2-reference-panel-comparative-data"]
     check_urls_are_unique(urls)
     download_urls(urls)
 
