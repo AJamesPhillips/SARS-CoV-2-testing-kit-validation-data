@@ -1,0 +1,1298 @@
+[
+    [
+        "Date EUA First Issued",
+        "manufacturer / laboratory name",
+        "test name",
+        "In Vitro / High Complexity"
+    ],
+    [
+        "2020-02-04",
+        "CDC",
+        "CDC 2019-Novel Coronavirus (2019-nCoV) Real-Time RT-PCR Diagnostic Panel",
+        "In Vitro"
+    ],
+    [
+        "2020-02-29",
+        "Wadsworth Center, NYSDOH",
+        "New York SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Panel",
+        "In Vitro"
+    ],
+    [
+        "2020-03-12",
+        "Roche Molecular Systems, Inc. (RMS)",
+        "cobas SARS-CoV-2",
+        "In Vitro"
+    ],
+    [
+        "2020-03-13",
+        "Thermo Fisher Scientific, Inc.",
+        "TaqPath COVID-19 Combo Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-03-16",
+        "Hologic, Inc.",
+        "Panther Fusion SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-03-16",
+        "Laboratory Corporation of America",
+        "COVID-19 RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-03-17",
+        "Quidel Corp.",
+        "Lyra SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-03-17",
+        "Quest Diagnostics Infectious Disease, Inc.",
+        "Quest SARS-CoV-2 rRT-PCR",
+        "In Vitro"
+    ],
+    [
+        "2020-03-18",
+        "Abbott Molecular",
+        "Abbott RealTime SARS-CoV-2 assay",
+        "In Vitro"
+    ],
+    [
+        "2020-03-19",
+        "DiaSorin Molecular LLC",
+        "Simplexa COVID-19 Direct",
+        "In Vitro"
+    ],
+    [
+        "2020-03-19",
+        "GenMark Diagnostics, Inc.",
+        "ePlex SARS-CoV-2 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-03-20",
+        "Primerdesign Ltd",
+        "Primerdesign Ltd COVID-19 genesig Real-Time PCR assay",
+        "In Vitro"
+    ],
+    [
+        "2020-03-20",
+        "Cepheid",
+        "Xpert Xpress SARS-CoV-2 test",
+        "In Vitro"
+    ],
+    [
+        "2020-03-23",
+        "BioFire Defense, LLC",
+        "BioFire COVID-19 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-03-23",
+        "Mesa Biotech Inc.",
+        "Accula SARS-Cov-2 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-03-24",
+        "PerkinElmer, Inc.",
+        "PerkinElmer New Coronavirus Nucleic Acid Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-03-25",
+        "Avellino Lab USA, Inc.",
+        "AvellinoCoV2 test",
+        "In Vitro"
+    ],
+    [
+        "2020-03-26",
+        "BGI Genomics Co. Ltd",
+        "Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2",
+        "In Vitro"
+    ],
+    [
+        "2020-03-27",
+        "Abbott Diagnostics Scarborough, Inc.",
+        "ID NOW COVID-19",
+        "In Vitro"
+    ],
+    [
+        "2020-03-27",
+        "Luminex Molecular Diagnostics, Inc.",
+        "NxTAG CoV Extended Panel Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-03-30",
+        "NeuMoDx Molecular, Inc.",
+        "NeuMoDx SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-03-30",
+        "QIAGEN GmbH",
+        "QIAstat-Dx Respiratory SARS-CoV-2 Panel",
+        "In Vitro"
+    ],
+    [
+        "2020-04-01",
+        "Cellex Inc.",
+        "qSARS-CoV-2 IgG/IgM Rapid Test",
+        "In Vitro"
+    ],
+    [
+        "2020-04-01",
+        "Ipsum Diagnostics, LLC",
+        "COV-19 IDx assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-02",
+        "Becton, Dickinson & Company (BD)",
+        "BioGX SARS-CoV-2 Reagents for BD MAX System",
+        "In Vitro"
+    ],
+    [
+        "2020-04-03",
+        "Luminex Corporation",
+        "ARIES SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-03",
+        "ScienCell Research Laboratories",
+        "ScienCell SARS-CoV-2 Coronavirus Real-time RT-PCR (RT-qPCR) Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-03",
+        "Co-Diagnostics, Inc.",
+        "Logix Smart Coronavirus Disease 2019 (COVID-19) Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-06",
+        "Gnomegen LLC",
+        "Gnomegen COVID-19 RT-Digital PCR Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-07",
+        "InBios International, Inc.",
+        "Smart Detect SARS-CoV-2 rRT-PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-08",
+        "Becton, Dickinson & Company",
+        "BD SARS-CoV-2Reagents for BD MAX System",
+        "In Vitro"
+    ],
+    [
+        "2020-04-08",
+        "DiaCarta, Inc.",
+        "QuantiVirus SARS-CoV-2 Test kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-10",
+        "Atila BioSystems, Inc.",
+        "iAMP COVID-19 Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-10",
+        "Rutgers Clinical Genomics Laboratory at RUCDR Infinite Biologics - Rutgers University",
+        "Rutgers Clinical Genomics Laboratory TaqPath SARS-CoV-2-Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-14",
+        "Ortho Clinical Diagnostics, Inc.",
+        "VITROS Immunodiagnostic Products Anti-SARS-CoV-2 Total Reagent Pack",
+        "In Vitro"
+    ],
+    [
+        "2020-04-15",
+        "Maccura Biotechnology (USA) LLC",
+        "SARS-CoV-2 Fluorescent PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-15",
+        "Mount Sinai Laboratory",
+        "COVID-19 ELISA IgG Antibody Test",
+        "In Vitro"
+    ],
+    [
+        "2020-04-16",
+        "GenoSensor, LLC",
+        "GS COVID-19 RT-PCR KIT",
+        "In Vitro"
+    ],
+    [
+        "2020-04-16",
+        "KorvaLabs Inc.",
+        "Curative-Korva SARS-Cov-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-17",
+        "Fosun Pharma USA Inc.",
+        "Fosun COVID-19 RT-PCR Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-18",
+        "OSANG Healthcare",
+        "GeneFinder COVID-19 Plus RealAmp Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-20",
+        "Trax Management Services Inc.",
+        "PhoenixDx 2019-CoV",
+        "In Vitro"
+    ],
+    [
+        "2020-04-21",
+        "Seegene, Inc.",
+        "Allplex 2019-nCoV Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-22",
+        "altona Diagnostics GmbH",
+        "RealStar SARS-CoV02 RT-PCR Kits U.S.",
+        "In Vitro"
+    ],
+    [
+        "2020-04-23",
+        "SD Biosensor, Inc.",
+        "STANDARD M nCoV Real-Time Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-24",
+        "DiaSorin Inc.",
+        "LIAISON SARS-CoV-2 S1/S2 IgG",
+        "In Vitro"
+    ],
+    [
+        "2020-04-24",
+        "Ortho-Clinical Diagnostics, Inc.",
+        "VITROS Immunodiagnostic Products Anti-SARS-CoV-2 IgG Reagent",
+        "In Vitro"
+    ],
+    [
+        "2020-04-26",
+        "Abbott Laboratories Inc.",
+        "SARS-CoV-2 IgG assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-27",
+        "SEASUN BIOMATERIALS",
+        "U-TOP COVID-19 Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-29",
+        "LabGenomics Co., Ltd.",
+        "LabGun COVID-19 RT-PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-04-29",
+        "Rheonix, Inc.",
+        "Rheonix COVID-19 MDx Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-29",
+        "Bio-Rad Laboratories",
+        "Platelia SARS-CoV-2 Total Ab assay",
+        "In Vitro"
+    ],
+    [
+        "2020-04-30",
+        "Wadsworth Center, New York State Department of Health",
+        "New York SARS-CoV Microsphere Immunoassay for Antibody Detection",
+        "In Vitro"
+    ],
+    [
+        "2020-05-01",
+        "Bio-Rad Laboratories, Inc.",
+        "Bio-Rad SARS-CoV-2 ddPCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-05-01",
+        "BioFire Diagnostics, LLC",
+        "BioFire Respiratory Panel 2.1 (RP2.1)",
+        "In Vitro"
+    ],
+    [
+        "2020-05-02",
+        "Roche Diagnostics",
+        "Elecsys Anti-SARS-CoV-2",
+        "In Vitro"
+    ],
+    [
+        "2020-05-04",
+        "EUROIMMUN US Inc.",
+        "Anti-SARS-CoV-2 ELISA (IgG)",
+        "In Vitro"
+    ],
+    [
+        "2020-05-04",
+        "Sansure BioTech Inc. ",
+        "Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit (PCR-Fluorescence Probing)",
+        "In Vitro"
+    ],
+    [
+        "2020-05-05",
+        "Fast Track Diagnostics Luxembourg S.\u00e1.r.l. (a Siemens Healthineers Company) ",
+        "FTD SARS-CoV-2",
+        "In Vitro"
+    ],
+    [
+        "2020-05-06",
+        "OPTI Medical Systems, Inc.",
+        "OPTI SARS-CoV-2 RT PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-05-06",
+        "Sherlock BioSciences, Inc.",
+        "Sherlock CRISPR SARS-CoV-2 Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-06",
+        "BioM\u00e9rieux SA",
+        "SARS-COV-2 R-GENE",
+        "In Vitro"
+    ],
+    [
+        "2020-05-07",
+        "Zymo Research Corporation",
+        "Quick SARS-CoV-2rRT-PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-08",
+        "Quidel Corporation",
+        "Sofia 2 SARS Antigen FIA",
+        "In Vitro"
+    ],
+    [
+        "2020-05-08",
+        "Gnomegen LLC",
+        "Gnomegen COVID-19-RT-qPCR Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-11",
+        "1drop Inc.",
+        "1copy COVID-19 qPCR Multi Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-11",
+        "Abbott Molecular Inc.",
+        "Alinity m SARS-CoV-2 assay",
+        "In Vitro"
+    ],
+    [
+        "2020-05-13",
+        "Applied DNA Sciences, Inc.",
+        "Linea COVID-19 Assay Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-14",
+        "Hologic, Inc.",
+        "Aptima SARS-CoV-2 assay",
+        "In Vitro"
+    ],
+    [
+        "2020-05-14",
+        "GeneMatrix, Inc.",
+        "NeoPlex COVID-19 Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-15",
+        "Everlywell, Inc.",
+        "Everlywell COVID-19 Test Home Collection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-15",
+        "Fulgent Therapeutics, LLC",
+        "Fulgent COVID-19 by RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-05-15",
+        "Assurance Scientific Laboratories",
+        "Assurance SARS-CoV-2 Panel",
+        "In Vitro"
+    ],
+    [
+        "2020-05-18",
+        "Quidel Corporation",
+        "Lyra Direct SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-05-18",
+        "Color Genomics, Inc.",
+        "Color SARS Cov-2 Diagnostic Assay (reissued July 24, 2020)",
+        "In Vitro"
+    ],
+    [
+        "2020-05-21",
+        "BioCore Co., Ltd.",
+        "BioCore 2019-nCoV Real Time PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-21",
+        "SolGent Co., Ltd.",
+        "DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-21",
+        "Seasun Biomaterials, Inc.",
+        "AQ-TOP COVID-19 Rapid Detection",
+        "In Vitro"
+    ],
+    [
+        "2020-05-21",
+        "P23 Labs, LLC.",
+        "P23 Labs TaqPath SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-05-22",
+        "dba SpectronRx",
+        "Hymon SARS-CoV-2 Test Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-05-22",
+        "Exact Sciences Laboratories",
+        "SARS-CoV-2 (N gene detection) Test",
+        "In Vitro"
+    ],
+    [
+        "2020-05-28",
+        "PrivaPath Diagnostics, Inc.",
+        "LetsGetChecked Coronavirus (COVID-19) Test",
+        "In Vitro"
+    ],
+    [
+        "2020-05-29",
+        "Siemens Healthcare Diagnostics Inc.",
+        "ADVIA Centaur SARS-CoV-2 Total (COV2T)",
+        "In Vitro"
+    ],
+    [
+        "2020-05-29",
+        "Siemens Healthcare Diagnostics Inc.",
+        "Atellica IM SARS-CoV-2 Total (COV2T)",
+        "In Vitro"
+    ],
+    [
+        "2020-05-29",
+        "Healgen Scientific LLC",
+        "COVID-19 IgG/IgM Rapid Test Cassette (Whole Blood/Serum/Plasma)",
+        "In Vitro"
+    ],
+    [
+        "2020-06-01",
+        "Gravity Diagnostics, LLC",
+        "Gravity Diagnostics COVID-19 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-02",
+        "Roche Diagnostics",
+        "Elecsys IL-6",
+        "In Vitro"
+    ],
+    [
+        "2020-06-04",
+        "Vibrant America Clinical Labs",
+        "Vibrant COVID-19 Ab Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-04",
+        "Phosphorus Diagnostics LLC",
+        "Phosphorus COVID-19 RT-qPCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-04",
+        "Hangzhou Biotest Biotech Co., Ltd.",
+        "RightSign COVID-19 IgG/IgM Rapid Test Cassette",
+        "In Vitro"
+    ],
+    [
+        "2020-06-05",
+        "Genetron Health (Beijing) Co., Ltd.",
+        "Genetron SARS-CoV-2 RNA Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-08",
+        "Euroimmun US Inc.",
+        "EURORealTime SARS-CoV-2",
+        "In Vitro"
+    ],
+    [
+        "2020-06-08",
+        "Siemens Healthcare Diagnostics Inc.",
+        "Dimension EXL SARS-CoV-2 Total antibody assay (CV2T)",
+        "In Vitro"
+    ],
+    [
+        "2020-06-08",
+        "Siemens Healthcare Diagnostics Inc.",
+        "Dimension Vista SARS-CoV-2 Total antibody assay (COV2T)",
+        "In Vitro"
+    ],
+    [
+        "2020-06-09",
+        "Illumina, Inc.",
+        "Illumina COVIDSeq Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-09",
+        "ChromaCode Inc.",
+        "HDPCR SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-10",
+        "Cue Health Inc.",
+        "Cue COVID-19 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-10",
+        "TBG Biotechnology Corp.",
+        "ExProbe SARS-CoV-2 Testing Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-10",
+        "Tide Laboratories, LLC",
+        "DTPM COVID-19 RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-10",
+        "InBios International, Inc.",
+        "SCoV-2 Detect IgG ELISA",
+        "In Vitro"
+    ],
+    [
+        "2020-06-12",
+        "RTA Laboratories Biological Products Pharmaceutical and Machinery Industry ",
+        "Diagnovital SARS-CoV-2 Real-Time PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-13",
+        "Kaiser Permanente Mid-Atlantic States",
+        "KPMAS COVID-19 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-15",
+        "Applied BioCode, Inc.",
+        "BioCode SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-15",
+        "Emory Medical Laboratories",
+        "SARS-CoV-2 RBD IgG test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-17",
+        "Omnipathology Solutions Medical Corporation",
+        "Omni COVID-19 Assay by RT-PCR",
+        "In Vitro"
+    ],
+    [
+        "2020-06-17",
+        "The Ohio State University Wexner Medical Center",
+        "OSUWMC COVID-19 RT-PCR test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-18",
+        "3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.",
+        "TRUPCR SARS-CoV-2 Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-18",
+        "Jiangsu Bioperfectus Technologies Co., Ltd.",
+        "COVID-19 Coronavirus Real Time PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-18",
+        "Biohit Healthcare (Hefei) Co. Ltd.",
+        "Biohit SARS-CoV-2 IgM/IgG Antibody Test Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-19",
+        "Hangzhou Laihe Biotech Co., Ltd.",
+        "LYHER Novel Coronavirus (2019-nCoV) IgM/IgG Antibody Combo Test Kit (Colloidal Gold)",
+        "In Vitro"
+    ],
+    [
+        "2020-06-23",
+        "Gencurix, Inc.",
+        "GenePro SARS-CoV-2 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-23",
+        "University of Alabama at Birmingham Fungal Reference Lab",
+        "FRL SARS CoV-2 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-23",
+        "HealthQuest Esoterics",
+        "HealthQuest Esoterics TaqPath SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-23",
+        "Babson Diagnostics, Inc.",
+        "Babson Diagnostics aC19G1",
+        "In Vitro"
+    ],
+    [
+        "2020-06-24",
+        "University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory",
+        "MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-25",
+        "PlexBio Co., Ltd",
+        "IntelliPlex SARS-CoV-2 Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-25",
+        "PreciGenome LLC",
+        "FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR)",
+        "In Vitro"
+    ],
+    [
+        "2020-06-25",
+        "Diagnostic Solutions Laboratory, LLC",
+        "DSL COVID-19 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-26",
+        "Inform Diagnostics, Inc.",
+        "Inform Diagnostics SARS-CoV-2 RT-PCR Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-26",
+        "Beckman Coulter, Inc.",
+        "Access SARS-CoV-2 IgG",
+        "In Vitro"
+    ],
+    [
+        "2020-06-29",
+        "LifeHope Labs",
+        "LifeHope 2019-nCoV Real-Time RT-PCR Diagnostic Panel",
+        "In Vitro"
+    ],
+    [
+        "2020-06-29",
+        "Acupath Laboratories, Inc.",
+        "Acupath COVID-19 Real-Time (RT-PCR) Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-06-30",
+        "The Kroger Co.",
+        "Kroger Health COVID-19 Test Home Collection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-30",
+        "TNS Co., Ltd (Bio TNS)",
+        "COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit",
+        "In Vitro"
+    ],
+    [
+        "2020-06-30",
+        "Psomagen, Inc.",
+        "Psoma COVID-19 RT Test",
+        "In Vitro"
+    ],
+    [
+        "2020-06-30",
+        "InBios International, Inc.",
+        "SCoV-2 Detect IgM ELISA",
+        "In Vitro"
+    ],
+    [
+        "2020-07-01",
+        "CENTOGENE US, LLC",
+        "CentoFast-SARS-CoV-2 RT-PCR Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-02",
+        "Centers for Disease Control and Prevention (CDC)",
+        "Influenza SARS-CoV-2 (Flu SC2) Multiplex Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-02",
+        "Becton, Dickinson and Company (BD)",
+        "BD Veritor System for Rapid Detection of SARS-CoV-2",
+        "In Vitro"
+    ],
+    [
+        "2020-07-06",
+        "Laboratorio Clinico Toledo",
+        "Laboratorio Clinico Toledo SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-06",
+        "Assure Tech. (Hangzhou Co., Ltd)",
+        "Assure COVID-19 IgG/IgM Rapid Test Device",
+        "In Vitro"
+    ],
+    [
+        "2020-07-07",
+        "Enzo Life Sciences, Inc.",
+        "AMPIPROBE SARS-CoV-2 Test System",
+        "In Vitro"
+    ],
+    [
+        "2020-07-07",
+        "Access Bio, Inc.",
+        "CareStart COVID-19 MDx RT-PCR",
+        "In Vitro"
+    ],
+    [
+        "2020-07-07",
+        "Gene By Gene",
+        "Gene By Gene SARS-CoV-2 Detection Test",
+        "In Vitro"
+    ],
+    [
+        "2020-07-08",
+        "Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard ",
+        "CRSP SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-08",
+        "Diazyme Laboratories, Inc.",
+        "Diazyme DZ-Lite SARS-CoV-2 IgG CLIA Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-07-09",
+        "UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin",
+        "SARS-CoV-2 RNA DETECTR Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-09",
+        "BioSewoom, Inc.",
+        "Real-Q 2019-nCoV Detection Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-07-10",
+        "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
+        "WANTAI SARS-CoV-2 Ab Rapid Test",
+        "In Vitro"
+    ],
+    [
+        "2020-07-10",
+        "Boston Medical Center",
+        "BMC-CReM COVID-19 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-07-13",
+        "Compass Laboratory Services, LLC",
+        "Compass Laboratory Services SARS-CoV2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-13",
+        "Trax Management Services Inc.",
+        "PhoenixDx SARS-CoV-2 Multiplex",
+        "In Vitro"
+    ],
+    [
+        "2020-07-13",
+        "KogeneBiotech Co., Ltd.",
+        "PowerChek 2019-nCoV Real-time PCR Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-07-13",
+        "Salofa Oy",
+        "Sienna-Clarity COVIBLOCK COVID-19 IgG/IgM Rapid Test Cassette",
+        "In Vitro"
+    ],
+    [
+        "2020-07-15",
+        "Quest Diagnostics Infectious Disease, Inc.",
+        "Quest Diagnostics HA SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-15",
+        "Quest Diagnostics Infectious Disease, Inc.",
+        "Quest Diagnostics RC SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-15",
+        "Quest Diagnostics Infectious Disease, Inc.",
+        "Quest Diagnostics PF SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-16",
+        "Boston Heart Diagnostics",
+        "Boston Heart COVID-19 RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-07-16",
+        "Luminex Corporation",
+        "xMAP SARS-CoV-2 Multi-Antigen IgG Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-17",
+        "Access Genetics, LLC",
+        "OraRisk COVID-19 RT-PCR",
+        "In Vitro"
+    ],
+    [
+        "2020-07-17",
+        "Megna Health, Inc.",
+        "Rapid COVID-19 IgM/IgG Combo Test Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-07-21",
+        "DiaCarta, Inc.",
+        "QuantiVirus SARS-CoV-2 Multiplex Test Kit",
+        "In Vitro"
+    ],
+    [
+        "2020-07-23",
+        "Helix OpCo LLC (dba Helix)",
+        "Helix COVID-19 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-07-24",
+        "Jiangsu CoWin Biotech Co., Ltd.",
+        "Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing)",
+        "In Vitro"
+    ],
+    [
+        "2020-07-24",
+        "Xiamen Biotime Biotechnology Co., Ltd.",
+        "BIOTIME SARS-CoV-2 IgG/IgM Rapid Qualitative Test",
+        "In Vitro"
+    ],
+    [
+        "2020-07-24",
+        "Access Bio, Inc.",
+        "CareStart COVID-19 IgM/IgG",
+        "In Vitro"
+    ],
+    [
+        "2020-07-27",
+        "Sandia National Laboratories",
+        "SNL-NM 2019 nCoV Real-Time RT-PCR Diagnostic Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-27",
+        "Eli Lilly and Company",
+        "Lilly SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-07-30",
+        "Clinical Reference Laboratory, Inc.",
+        "CRL Rapid Response",
+        "In Vitro"
+    ],
+    [
+        "2020-07-31",
+        "Siemens Healthcare Diagnostics Inc.",
+        "Atellica IM SARS-CoV-2 IgG (COV2G)",
+        "In Vitro"
+    ],
+    [
+        "2020-07-31",
+        "Siemens Healthcare Diagnostics Inc.",
+        "ADVIA Centaur SARS-CoV-2 IgG (COV2G)",
+        "In Vitro"
+    ],
+    [
+        "2020-07-31",
+        "Xiamen Zeesan Biotech Co., Ltd.",
+        "SARS-CoV-2 Test Kit (Real-time PCR)",
+        "In Vitro"
+    ],
+    [
+        "2020-07-31",
+        "University of California San Diego Health",
+        "UCSD RC SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-03",
+        "Wren Laboratories LLC",
+        "Wren Laboratories COVID-19 PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-08-03",
+        "Ethos Laboratories",
+        "Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-03",
+        "Cleveland Clinic Robert J. Tomsich Pathology and Laboratory Medicine Institute",
+        "Cleveland Clinic SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-03",
+        "Poplar Healthcare",
+        "Poplar SARS-CoV-2 TMA Pooling assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-03",
+        "ISPM Labs, LLC dba Capstone Healthcare",
+        "Genus SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-05",
+        "Vela Operations Singapore Pte Ltd",
+        "ViroKey SARS-CoV-2 RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-08-05",
+        "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
+        "WANTAI SARS-CoV-2 Ab ELISA",
+        "In Vitro"
+    ],
+    [
+        "2020-08-06",
+        "Helix OpCo LLC (dba Helix)",
+        "Helix COVID-19 NGS Test",
+        "In Vitro"
+    ],
+    [
+        "2020-08-06",
+        "bioM\u00e9rieux SA",
+        "VIDAS SARS-CoV-2 IgG",
+        "In Vitro"
+    ],
+    [
+        "2020-08-06",
+        "bioM\u00e9rieux SA",
+        "VIDAS SARS-CoV-2 IgM",
+        "In Vitro"
+    ],
+    [
+        "2020-08-07",
+        "George Washington University Public Health Laboratory",
+        "GWU SARS-CoV-2 RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-08-10",
+        "Solaris Diagnostics",
+        "Solaris Multiplex SARS-CoV-2 Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-10",
+        "Alpha Genomix Laboratories",
+        "Alpha Genomix TaqPath SARS-CoV-2 Combo Assay",
+        "In Vitro"
+    ],
+    [
+        "2020-08-11",
+        "LumiraDx UK Ltd.",
+        "LumiraDx SARS-CoV-2 RNA STAR",
+        "In Vitro"
+    ],
+    [
+        "2020-08-11",
+        "Biomeme, Inc.",
+        "Biomeme SARS-CoV-2 Real-Time RT-PCR Test",
+        "In Vitro"
+    ],
+    [
+        "2020-08-13",
+        "Pro-Lab Diagnostics",
+        "Pro-AmpRT SARS-CoV-2 Test",
+        "In Vitro"
+    ],
+    [
+        "2020-08-15",
+        "Yale School of Public Health, Department of Epidemiology of Microbial Diseases",
+        "SalivaDirect",
+        "In Vitro"
+    ],
+    [
+        "2020-03-31",
+        "Yale New Haven Hospital, Clinical Virology Laboratory",
+        "SARS-CoV-2 PCR test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-02",
+        "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia",
+        "SARS-CoV-2 RT-PCR test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-02",
+        "Diagnostic Molecular Laboratory - Northwestern Medicine",
+        "SARS-Cov-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-03",
+        "Massachusetts General Hospital",
+        "MGH COVID-19 qPCR assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-06",
+        "Viracor Eurofins Clinical Diagnostics",
+        "Viracor SARS-CoV-2 assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-08",
+        "Stanford Health Care Clinical Virology Laboratory",
+        "Stanford SARS-CoV-2 assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-10",
+        "Specialty Diagnostic (SDI) Laboratories",
+        "SDI SARS-CoV-2 AssayLetter Granting Inclusion",
+        "High Complexity"
+    ],
+    [
+        "2020-04-10",
+        "Orig3n, Inc.",
+        "Orig3n 2019 Novel Coronavirus (COVID-19) Test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-10",
+        "University of North Carolina Medical Center",
+        "UNC Health SARS-CoV-2 real-time RT-PCR test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-13",
+        "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami",
+        "COVID-19 RT-PCR Test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-13",
+        "Integrity Laboratories",
+        "SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-14",
+        "Exact Sciences Laboratories",
+        "SARS-CoV-2 Test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-14",
+        "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital",
+        "Childrens-Altona-SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-15",
+        "CirrusDx Laboratories",
+        "CirrusDx SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-15",
+        "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory",
+        "CDI Enhanced COVID-19 Test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-20",
+        "Mayo Clinic Laboratories, Rochester, MN",
+        "SARS-CoV-2 Molecular Detection Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-22",
+        "Diatherix Eurofins Laboratory",
+        "SARS-CoV-2 PCR Test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-23",
+        "Southwest Regional PCR Laboratory LLC. dba MicroGen DX",
+        "COVID-19 Key",
+        "High Complexity"
+    ],
+    [
+        "2020-04-24",
+        "AIT Laboratories",
+        "SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-24",
+        "Ultimate Dx Laboratory",
+        "UDX SARS-CoV-2 Molecular Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-27",
+        "Nationwide Children\u2019s Hospital",
+        "SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-04-28",
+        "Biocerna",
+        "SARS-CoV-2 Test",
+        "High Complexity"
+    ],
+    [
+        "2020-04-30",
+        "Altru Diagnostics, Inc.",
+        "Altru Dx SARS-CoV-2 RT-PCR assay",
+        "High Complexity"
+    ],
+    [
+        "2020-05-03",
+        "UTMG Pathology Laboratory",
+        "UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-05-07",
+        "Biocollections Worldwide, Inc.",
+        "Biocollections Worldwide SARS-Co-V-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-05-12",
+        "Columbia University Laboratory of Personalized Genomic Medicine",
+        "Triplex CII-CoV-1 rRT-PCR Test",
+        "High Complexity"
+    ],
+    [
+        "2020-05-13",
+        "One Health Laboratories, LLC",
+        "SARS-CoV-2 Real-Time RT-PCR-Test",
+        "High Complexity"
+    ],
+    [
+        "2020-05-13",
+        "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",
+        "SARS-CoV-2-Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-05-22",
+        "Express Gene LLC (dba Molecular Diagnostics Laboratory)",
+        "Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
+        "High Complexity"
+    ],
+    [
+        "2020-05-22",
+        "Avera Institute for Human Genetics",
+        "Avera Institute for Human Genetics SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-06-01",
+        "Aspirus Reference Laboratory",
+        "Aspirus SARS-CoV-2 rRT Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-06-02",
+        "CSI Laboratories",
+        "CSI SARS-CoV-2 RT PCR Test",
+        "High Complexity"
+    ],
+    [
+        "2020-06-04",
+        "Nebraska Medicine Clinical Laboratory",
+        "NEcov19 RT-PCR Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-06-09",
+        "Warrior Diagnostics, Inc.",
+        "Warrior Diagnostics SARS-CoV-2 Assay",
+        "High Complexity"
+    ],
+    [
+        "2020-06-12",
+        "Cormeum Laboratory Services",
+        "Cormeum SARS-CoV-2 Assay",
+        "High Complexity"
+    ]
+]

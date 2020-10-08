@@ -1,12 +1,14 @@
 import os
 import re
 import requests
+import sys
 import time
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(0, dir_path + "/..")
 
 from common import get_fda_eua_parsed_data, filter_for_urls, get_FDA_EUA_pdf_file_path_from_url
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
 
 DELAY_SECONDS_BETWEEN_REQUESTS = 2
 
@@ -47,7 +49,7 @@ def download_urls(urls):
 
 
 def main():
-    fda_eua_parsed_data = get_fda_eua_parsed_data()
+    fda_eua_parsed_data = get_fda_eua_parsed_data(merged=False)
     urls = filter_for_urls(fda_eua_parsed_data)
     check_urls_are_unique(urls)
     download_urls(urls)

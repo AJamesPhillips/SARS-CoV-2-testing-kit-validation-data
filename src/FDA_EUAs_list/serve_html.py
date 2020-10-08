@@ -5,12 +5,9 @@ app = Flask(__name__)
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
-FILE_DATE = "2020-08-18"
-
-
 @app.route("/")
 def index():
-    file_path = dir_path + "/../../data/FDA-EUA/html-page/{}.htm".format(FILE_DATE)
+    file_path = dir_path + "/../../data/FDA-EUA/html-page/latest.htm"
     with open(file_path, "r") as f:
         contents = f.read()
 

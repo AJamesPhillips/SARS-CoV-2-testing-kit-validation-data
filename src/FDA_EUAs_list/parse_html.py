@@ -19,6 +19,7 @@ def get_preprocessed_html(FILE_DATE):
         html = re.sub("\s+", " ", html)
         # normalise
         html = re.sub("<span\s*class=\"file-size\">396KB\)</span>", "396KB)", html)
+        html = re.sub("394KB</td>", "394KB)</td>", html)
 
     return html
 
@@ -72,6 +73,24 @@ def check_test_ids_are_unique(iv_diagnostics_data_rows, high_complexity_diagnost
         raise Exception("Found {} duplicates: {}".format(len(duplicates), duplicates))
 
 
+def merge_data(iv_diagnostics_data_rows, high_complexity_diagnostics_data_rows):
+    # skip first row as it is headers
+    iv_diagnostics_data_rows = iv_diagnostics_data_rows[1:]
+    high_complexity_diagnostics_data_rows = high_complexity_diagnostics_data_rows[1:]
+
+    merged_data_rows = [
+        ["Date EUA First Issued", "manufacturer / laboratory name", "test name", "In Vitro / High Complexity"]
+    ]
+
+    for data_row in iv_diagnostics_data_rows:
+        merged_data_rows.append([data_row[0], data_row[1], data_row[2], "In Vitro"])
+
+    for data_row in high_complexity_diagnostics_data_rows:
+        merged_data_rows.append([data_row[0], data_row[1], data_row[2], "High Complexity"])
+
+    return merged_data_rows
+
+
 def store_results(file_name, data_rows):
     json_file_path_for_parsed_data = data_path + "parsed/{}.json".format(file_name)
     with open(json_file_path_for_parsed_data, "w") as f:
@@ -85,10 +104,15 @@ def main():
     results = parse_html(html)
     check_test_ids_are_unique(**results)
 
+    merged_data = merge_data(**results)
+
     store_results("{}_iv".format(FILE_DATE), results["iv_diagnostics_data_rows"])
     store_results("latest_iv", results["iv_diagnostics_data_rows"])
     store_results("{}_high_complexity".format(FILE_DATE), results["high_complexity_diagnostics_data_rows"])
     store_results("latest_high_complexity", results["high_complexity_diagnostics_data_rows"])
+
+    store_results("{}_merged".format(FILE_DATE), results["iv_diagnostics_data_rows"])
+    store_results("latest_merged", merged_data)
 
 
 main()
