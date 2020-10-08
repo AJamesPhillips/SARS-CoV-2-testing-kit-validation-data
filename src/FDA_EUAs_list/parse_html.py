@@ -70,12 +70,10 @@ def merge_data(iv_diagnostics_data_rows, high_complexity_diagnostics_data_rows):
     ]
 
     for data_row in iv_diagnostics_data_rows:
-        test_id = data_row[1] + "__" + data_row[2]
-        merged_data_rows.append([test_id, data_row[0], data_row[1], data_row[2], "In Vitro"])
+        merged_data_rows.append([*data_row[0:4], "In Vitro"])
 
     for data_row in high_complexity_diagnostics_data_rows:
-        test_id = data_row[1] + "__" + data_row[2]
-        merged_data_rows.append([test_id, data_row[0], data_row[1], data_row[2], "High Complexity"])
+        merged_data_rows.append([*data_row[0:4], "High Complexity"])
 
     return merged_data_rows
 

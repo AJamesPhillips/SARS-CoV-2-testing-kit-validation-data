@@ -1,215 +1,251 @@
 [
     [
+        "test_id",
         "Date EUA First Issued",
         "Laboratory name",
         "Test name",
         "Emergency Use Authorisation (URL to PDF)"
     ],
     [
+        "Yale New Haven Hospital, Clinical Virology Laboratory__SARS-CoV-2 PCR test",
         "2020-03-31",
         "Yale New Haven Hospital, Clinical Virology Laboratory",
         "SARS-CoV-2 PCR test",
         "https://www.fda.gov/media/136602/download"
     ],
     [
+        "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia__SARS-CoV-2 RT-PCR test",
         "2020-04-02",
         "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia",
         "SARS-CoV-2 RT-PCR test",
         "https://www.fda.gov/media/136656"
     ],
     [
+        "Diagnostic Molecular Laboratory - Northwestern Medicine__SARS-Cov-2 Assay",
         "2020-04-02",
         "Diagnostic Molecular Laboratory - Northwestern Medicine",
         "SARS-Cov-2 Assay",
         "https://www.fda.gov/media/136669/download"
     ],
     [
+        "Massachusetts General Hospital__MGH COVID-19 qPCR assay",
         "2020-04-03",
         "Massachusetts General Hospital",
         "MGH COVID-19 qPCR assay",
         "https://www.fda.gov/media/136699/download"
     ],
     [
+        "Viracor Eurofins Clinical Diagnostics__Viracor SARS-CoV-2 assay",
         "2020-04-06",
         "Viracor Eurofins Clinical Diagnostics",
         "Viracor SARS-CoV-2 assay",
         "https://www.fda.gov/media/136740/download"
     ],
     [
+        "Stanford Health Care Clinical Virology Laboratory__Stanford SARS-CoV-2 assay",
         "2020-04-08",
         "Stanford Health Care Clinical Virology Laboratory",
         "Stanford SARS-CoV-2 assay",
         "https://www.fda.gov/media/136818/download"
     ],
     [
+        "Specialty Diagnostic (SDI) Laboratories__SDI SARS-CoV-2 AssayLetter Granting Inclusion",
         "2020-04-10",
         "Specialty Diagnostic (SDI) Laboratories",
         "SDI SARS-CoV-2 AssayLetter Granting Inclusion",
         "https://www.fda.gov/media/136877/download"
     ],
     [
+        "Orig3n, Inc.__Orig3n 2019 Novel Coronavirus (COVID-19) Test",
         "2020-04-10",
         "Orig3n, Inc.",
         "Orig3n 2019 Novel Coronavirus (COVID-19) Test",
         "https://www.fda.gov/media/136873/download"
     ],
     [
+        "University of North Carolina Medical Center__UNC Health SARS-CoV-2 real-time RT-PCR test",
         "2020-04-10",
         "University of North Carolina Medical Center",
         "UNC Health SARS-CoV-2 real-time RT-PCR test",
         "https://www.fda.gov/media/136880/download"
     ],
     [
+        "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami__COVID-19 RT-PCR Test",
         "2020-04-13",
         "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami",
         "COVID-19 RT-PCR Test",
         "https://www.fda.gov/media/136944/download"
     ],
     [
+        "Integrity Laboratories__SARS-CoV-2 Assay",
         "2020-04-13",
         "Integrity Laboratories",
         "SARS-CoV-2 Assay",
         "https://www.fda.gov/media/136942/download"
     ],
     [
+        "Exact Sciences Laboratories__SARS-CoV-2 Test",
         "2020-04-14",
         "Exact Sciences Laboratories",
         "SARS-CoV-2 Test",
         "https://www.fda.gov/media/137095/download"
     ],
     [
+        "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital__Childrens-Altona-SARS-CoV-2 Assay",
         "2020-04-14",
         "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital",
         "Childrens-Altona-SARS-CoV-2 Assay",
         "https://www.fda.gov/media/136971/download"
     ],
     [
+        "CirrusDx Laboratories__CirrusDx SARS-CoV-2 Assay",
         "2020-04-15",
         "CirrusDx Laboratories",
         "CirrusDx SARS-CoV-2 Assay",
         "https://www.fda.gov/media/137034/download"
     ],
     [
+        "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory__CDI Enhanced COVID-19 Test",
         "2020-04-15",
         "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory",
         "CDI Enhanced COVID-19 Test",
         "https://www.fda.gov/media/137036/download"
     ],
     [
+        "Mayo Clinic Laboratories, Rochester, MN__SARS-CoV-2 Molecular Detection Assay",
         "2020-04-20",
         "Mayo Clinic Laboratories, Rochester, MN",
         "SARS-CoV-2 Molecular Detection Assay",
         "https://www.fda.gov/media-base/137163"
     ],
     [
+        "Diatherix Eurofins Laboratory__SARS-CoV-2 PCR Test",
         "2020-04-22",
         "Diatherix Eurofins Laboratory",
         "SARS-CoV-2 PCR Test",
         "https://www.fda.gov/media/137255/download"
     ],
     [
+        "Southwest Regional PCR Laboratory LLC. dba MicroGen DX__COVID-19 Key",
         "2020-04-23",
         "Southwest Regional PCR Laboratory LLC. dba MicroGen DX",
         "COVID-19 Key",
         "https://www.fda.gov/media/137370/download"
     ],
     [
+        "AIT Laboratories__SARS-CoV-2 Assay",
         "2020-04-24",
         "AIT Laboratories",
         "SARS-CoV-2 Assay",
         "https://www.fda.gov/media/137374/download"
     ],
     [
+        "Ultimate Dx Laboratory__UDX SARS-CoV-2 Molecular Assay",
         "2020-04-24",
         "Ultimate Dx Laboratory",
         "UDX SARS-CoV-2 Molecular Assay",
         "https://www.fda.gov/media/137372/download"
     ],
     [
+        "Nationwide Children\u2019s Hospital__SARS-CoV-2 Assay",
         "2020-04-27",
         "Nationwide Children\u2019s Hospital",
         "SARS-CoV-2 Assay",
         "https://www.fda.gov/media/137423/download"
     ],
     [
+        "Biocerna__SARS-CoV-2 Test",
         "2020-04-28",
         "Biocerna",
         "SARS-CoV-2 Test",
         "https://www.fda.gov/media/137450/download"
     ],
     [
+        "Altru Diagnostics, Inc.__Altru Dx SARS-CoV-2 RT-PCR assay",
         "2020-04-30",
         "Altru Diagnostics, Inc.",
         "Altru Dx SARS-CoV-2 RT-PCR assay",
         "https://www.fda.gov/media/137546/download"
     ],
     [
+        "UTMG Pathology Laboratory__UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
         "2020-05-03",
         "UTMG Pathology Laboratory",
         "UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
         "https://www.fda.gov/media/137656/download"
     ],
     [
+        "Biocollections Worldwide, Inc.__Biocollections Worldwide SARS-Co-V-2 Assay",
         "2020-05-07",
         "Biocollections Worldwide, Inc.",
         "Biocollections Worldwide SARS-Co-V-2 Assay",
         "https://www.fda.gov/media/137897/download"
     ],
     [
+        "Columbia University Laboratory of Personalized Genomic Medicine__Triplex CII-CoV-1 rRT-PCR Test",
         "2020-05-12",
         "Columbia University Laboratory of Personalized Genomic Medicine",
         "Triplex CII-CoV-1 rRT-PCR Test",
         "https://www.fda.gov/media/137983/download"
     ],
     [
+        "One Health Laboratories, LLC__SARS-CoV-2 Real-Time RT-PCR-Test",
         "2020-05-13",
         "One Health Laboratories, LLC",
         "SARS-CoV-2 Real-Time RT-PCR-Test",
         "https://www.fda.gov/media/138063/download"
     ],
     [
+        "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine__SARS-CoV-2-Assay",
         "2020-05-13",
         "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",
         "SARS-CoV-2-Assay",
         "https://www.fda.gov/media/138065/download"
     ],
     [
+        "Express Gene LLC (dba Molecular Diagnostics Laboratory)__Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
         "2020-05-22",
         "Express Gene LLC (dba Molecular Diagnostics Laboratory)",
         "Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
         "https://www.fda.gov/media/138330/download"
     ],
     [
+        "Avera Institute for Human Genetics__Avera Institute for Human Genetics SARS-CoV-2 Assay",
         "2020-05-22",
         "Avera Institute for Human Genetics",
         "Avera Institute for Human Genetics SARS-CoV-2 Assay",
         "https://www.fda.gov/media/138332/download"
     ],
     [
+        "Aspirus Reference Laboratory__Aspirus SARS-CoV-2 rRT Assay",
         "2020-06-01",
         "Aspirus Reference Laboratory",
         "Aspirus SARS-CoV-2 rRT Assay",
         "https://www.fda.gov/media/138526/download"
     ],
     [
+        "CSI Laboratories__CSI SARS-CoV-2 RT PCR Test",
         "2020-06-02",
         "CSI Laboratories",
         "CSI SARS-CoV-2 RT PCR Test",
         "https://www.fda.gov/media/138528/download"
     ],
     [
+        "Nebraska Medicine Clinical Laboratory__NEcov19 RT-PCR Assay",
         "2020-06-04",
         "Nebraska Medicine Clinical Laboratory",
         "NEcov19 RT-PCR Assay",
         "https://www.fda.gov/media/138625/download"
     ],
     [
+        "Warrior Diagnostics, Inc.__Warrior Diagnostics SARS-CoV-2 Assay",
         "2020-06-09",
         "Warrior Diagnostics, Inc.",
         "Warrior Diagnostics SARS-CoV-2 Assay",
         "https://www.fda.gov/media/138790/download"
     ],
     [
+        "Cormeum Laboratory Services__Cormeum SARS-CoV-2 Assay",
         "2020-06-12",
         "Cormeum Laboratory Services",
         "Cormeum SARS-CoV-2 Assay",

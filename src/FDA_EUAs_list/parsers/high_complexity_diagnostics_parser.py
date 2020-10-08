@@ -1,10 +1,11 @@
 from html.parser import HTMLParser
 
-from parsers.common import ParserState, ParserSubState, parse_date
+from parsers.common import get_test_id, ParserState, ParserSubState, parse_date
 
 
 class HighComplexityDiagnosticsParser(HTMLParser):
     HEADERS = [
+        "test_id",
         "Date EUA First Issued",
         "Laboratory name",
         "Test name",
@@ -25,6 +26,9 @@ class HighComplexityDiagnosticsParser(HTMLParser):
         self.current_a_tag = None
         self.current_a_tag_url = None
 
+        self.current_row_lab_name = None
+        self.current_row_test_name = None
+
 
     def handle_starttag(self, tag, attrs):
         if tag == "tbody" and self.state != ParserState.FINISHED:
@@ -41,7 +45,7 @@ class HighComplexityDiagnosticsParser(HTMLParser):
         # print("Got tag: ", tag)
         if tag == "tr":
             self.current_row = [""] * len(self.HEADERS)
-            #self.current_row[3] = []
+            #self.current_row[4] = []
             self.data_position = -1
 
         elif tag == "td":
@@ -67,12 +71,14 @@ class HighComplexityDiagnosticsParser(HTMLParser):
             self.substate = ParserSubState.INACTIVE
 
         elif tag == "tr":
+            test_id = get_test_id(self.current_row_lab_name, self.current_row_test_name)
+            self.current_row[0] = test_id
             self.rows.append(self.current_row)
             self.current_row = None
 
         elif tag == "tbody":
             self.state = ParserState.FINISHED
-            self.rows = sorted(self.rows, key=lambda row: row[0])
+            self.rows = sorted(self.rows, key=lambda row: row[1])
             self.rows.insert(0, self.HEADERS)
 
 
@@ -84,27 +90,29 @@ class HighComplexityDiagnosticsParser(HTMLParser):
             return
 
         if self.data_position == 0:
-            if self.current_row[0]:
+            if self.current_row[1]:
                 raise Exception("Only expecting one value for date")
-            self.current_row[0] = parse_date(data)
+            self.current_row[1] = parse_date(data)
 
         elif self.data_position == 1:
-            if self.current_row[1]:
+            if self.current_row[2]:
                 raise Exception("Only expecting one value for Laboratory name")
-            self.current_row[1] = data
+            self.current_row[2] = data
+            self.current_row_lab_name = data
 
         # Test name
         elif self.data_position == 2:
-            if self.current_row[2]:
+            if self.current_row[3]:
                 return
             if data:
-                self.current_row[2] = data
+                self.current_row[3] = data
+                self.current_row_test_name = data
 
         elif self.data_position == 3:
             if data == "EUA Summary":
-                if self.current_row[3]:
+                if self.current_row[4]:
                     raise Exception("Only expecting one value for EUA Summary URL")
-                self.current_row[3] = self.current_a_tag_url
+                self.current_row[4] = self.current_a_tag_url
             elif "B)" in data:
                 pass
             elif data:
