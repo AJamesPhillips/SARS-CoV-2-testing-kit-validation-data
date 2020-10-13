@@ -1,22 +1,22 @@
 [
   [
     "test_id",
-    "Developer",
-    "Test",
-    "Results status",
-    "Product LoD (NAAT Detectable Units / mL)",
-    "Sample/media type"
+    "developer_name",
+    "test_name",
+    "results_status",
+    "lod",
+    "sample_media_type"
   ],
   [
-    "1drop Inc.__1copy COVID-19 qPCR Multi Kit",
+    "1drop inc.__1copy covid-19 qpcr multi kit",
     "1drop Inc.",
     "1copy COVID-19 qPCR Multi Kit",
     "Results in Table 2A",
-    "18000",
+    18000,
     "Swabs in Transport Media"
   ],
   [
-    "3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.__TRUPCR SARS-CoV-2 Kit",
+    "3b blackbio biotech india ltd., a subsidiary of kilpest india ltd.__trupcr sars-cov-2 kit",
     "3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.",
     "TRUPCR SARS-CoV-2 Kit",
     "Did not provide shipping information",
@@ -24,23 +24,15 @@
     ""
   ],
   [
-    "AIT Laboratories__SARS-CoV-2 Assay",
-    "AIT Laboratories",
-    "SARS-CoV-2 Assay",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Abbott Diagnostics Scarborough, Inc.__ID NOW COVID-19",
+    "abbott diagnostics scarborough, inc.__id now covid-19",
     "Abbott Diagnostics Scarborough, Inc.",
     "ID NOW COVID-19",
     "Results in Table 2B",
-    "300000",
+    300000,
     "Direct Swabs (Dry Swabs)"
   ],
   [
-    "Abbott Molecular Inc.__Alinity m SARS-CoV-2 assay",
+    "abbott molecular inc.__alinity m sars-cov-2 assay",
     "Abbott Molecular Inc.",
     "Alinity m SARS-CoV-2 assay",
     "Data not returned",
@@ -48,23 +40,23 @@
     ""
   ],
   [
-    "Abbott Molecular__Abbott RealTime SARS-CoV-2 assay",
+    "abbott molecular__abbott realtime sars-cov-2 assay",
     "Abbott Molecular",
     "Abbott RealTime SARS-CoV-2 assay",
     "Results in Table 2A",
-    "5400",
+    5400,
     "Swabs in Transport Media"
   ],
   [
-    "Access Bio, Inc.__CareStart COVID-19 MDx RT-PCR",
+    "access bio, inc.__carestart covid-19 mdx rt-pcr",
     "Access Bio, Inc.",
     "CareStart COVID-19 MDx RT-PCR",
     "Results in Table 2A",
-    "5400",
+    5400,
     "Swabs in Transport Media"
   ],
   [
-    "Access Genetics, LLC__OraRisk COVID-19 RT-PCR",
+    "access genetics, llc__orarisk covid-19 rt-pcr",
     "Access Genetics, LLC",
     "OraRisk COVID-19 RT-PCR",
     "Data not returned",
@@ -72,1247 +64,23 @@
     ""
   ],
   [
-    "Acupath Laboratories, Inc__Acupath COVID-19 Real-Time (RT-PCR) Assay",
+    "acupath laboratories, inc.__acupath covid-19 real-time (rt-pcr) assay",
     "Acupath Laboratories, Inc",
     "Acupath COVID-19 Real-Time (RT-PCR) Assay",
     "Results in Table 2A",
-    "18000",
+    18000,
     "Swabs in Transport Media"
   ],
   [
-    "Altru Diagnostics, Inc.__Altru Dx SARS-CoV-2 RT-PCR assay",
-    "Altru Diagnostics, Inc.",
-    "Altru Dx SARS-CoV-2 RT-PCR assay",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Applied BioCode, Inc.__BioCode SARS-CoV-2 Assay",
-    "Applied BioCode, Inc.",
-    "BioCode SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Applied DNA Sciences, Inc.__Linea COVID-19 Assay Kit",
-    "Applied DNA Sciences, Inc.",
-    "Linea COVID-19 Assay Kit",
-    "Results in Table 2A",
-    "2500",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Aspirus Reference Laboratory__Aspirus SARS-CoV rRT Assay",
-    "Aspirus Reference Laboratory",
-    "Aspirus SARS-CoV rRT Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Assurance Scientific Laboratories__Assurance SARS-CoV-2 Panel",
-    "Assurance Scientific Laboratories",
-    "Assurance SARS-CoV-2 Panel",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Atila BioSystems, Inc.__iAMP COVID-19 Detection Kit",
-    "Atila BioSystems, Inc.",
-    "iAMP COVID-19 Detection Kit",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Avellino Lab USA, Inc.__AvellinoCoV2 test",
-    "Avellino Lab USA, Inc.",
-    "AvellinoCoV2 test",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "BGI Genomics Co. Ltd__Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2",
-    "BGI Genomics Co. Ltd",
-    "Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Becton, Dickinson & Company (BD)__BioGX SARS-CoV-2 Reagents for BD MAX System",
-    "Becton, Dickinson & Company (BD)",
-    "BioGX SARS-CoV-2 Reagents for BD MAX System",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Becton, Dickinson & Company__BD SARS-CoV-2 Reagents for BD MAX System",
-    "Becton, Dickinson & Company",
-    "BD SARS-CoV-2 Reagents for BD MAX System",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Bio-Rad Laboratories, Inc__Bio-Rad SARS-CoV-2 ddPCR Test",
-    "Bio-Rad Laboratories, Inc",
-    "Bio-Rad SARS-CoV-2 ddPCR Test",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "BioCore Co., Ltd.__BioCore 2019-nCoV Real Time PCR Kit",
-    "BioCore Co., Ltd.",
-    "BioCore 2019-nCoV Real Time PCR Kit",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "BioFire Defense, LLC__BioFire COVID-19 Test",
-    "BioFire Defense, LLC",
-    "BioFire COVID-19 Test",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "BioFire Diagnostics, LLC__BioFire Respiratory Panel 2.1 (RP2.1)",
-    "BioFire Diagnostics, LLC",
-    "BioFire Respiratory Panel 2.1 (RP2.1)",
-    "Data uninterpretable",
-    "",
-    ""
-  ],
-  [
-    "BioM\u00e9rieux SA__SARS-COV-2 R-GENE",
-    "BioM\u00e9rieux SA",
-    "SARS-COV-2 R-GENE",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "BioSewoom, Inc.__Real-Q 2019-nCoV Detection Kit",
-    "BioSewoom, Inc.",
-    "Real-Q 2019-nCoV Detection Kit",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Biocerna__SARS-CoV-2 Test",
-    "Biocerna",
-    "SARS-CoV-2 Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Biocollections Worldwide, Inc.__Biocollections Worldwide SARS-Co-V-2 Assay",
-    "Biocollections Worldwide, Inc.",
-    "Biocollections Worldwide SARS-Co-V-2 Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Biomeme, Inc.__Biomeme SARS-CoV-2 Real-Time RT-PCR Test",
-    "Biomeme, Inc.",
-    "Biomeme SARS-CoV-2 Real-Time RT-PCR Test",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Boston Heart Diagnostics__Boston Heart COVID-19 RT-PCR Test",
-    "Boston Heart Diagnostics",
-    "Boston Heart COVID-19 RT-PCR Test",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Boston Medical Center__BMC-CReM COVID-19 Test",
-    "Boston Medical Center",
-    "BMC-CReM COVID-19 Test",
-    "Results in Table 2A",
-    "600000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "CENTOGENE US, LLC__CentoFast-SARS-CoV-2 RT-PCR Assay",
-    "CENTOGENE US, LLC",
-    "CentoFast-SARS-CoV-2 RT-PCR Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "CSI Laboratories__CSI SARS-CoV-2 RT PCR Test",
-    "CSI Laboratories",
-    "CSI SARS-CoV-2 RT PCR Test",
-    "Data uninterpretable",
-    "",
-    ""
-  ],
-  [
-    "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine__SARS-CoV-2-Assay",
-    "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",
-    "SARS-CoV-2-Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Centers for Disease Control and Prevention (CDC)__CDC 2019-nCoV Real-Time RT-PCR Diagnostic Panel (CDC)",
-    "Centers for Disease Control and Prevention (CDC)",
-    "CDC 2019-nCoV Real-Time RT-PCR Diagnostic Panel (CDC)",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Centers for Disease Control and Prevention (CDC)__Influenza SARS-CoV-2 (Flu SC2) Multiplex Assay",
-    "Centers for Disease Control and Prevention (CDC)",
-    "Influenza SARS-CoV-2 (Flu SC2) Multiplex Assay",
-    "Results in Table 2A",
-    "5700",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Cepheid__Xpert Xpress SARS-CoV-2 test",
-    "Cepheid",
-    "Xpert Xpress SARS-CoV-2 test",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "ChromaCode Inc.__HDPCR SARS-CoV-2 Assay",
-    "ChromaCode Inc.",
-    "HDPCR SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "CirrusDx Laboratories__CirrusDx SARS-CoV-2 Assay",
-    "CirrusDx Laboratories",
-    "CirrusDx SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Cleveland Clinic Robert J. Tomsich Pathology and Laboratory Medicine Institute__Cleveland Clinic SARS-CoV-2 Assay",
-    "Cleveland Clinic Robert J. Tomsich Pathology and Laboratory Medicine Institute",
-    "Cleveland Clinic SARS-CoV-2 Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Clinical Reference Laboratory, Inc.__CRL Rapid Response",
-    "Clinical Reference Laboratory, Inc.",
-    "CRL Rapid Response",
-    "Results in Table 2C",
-    "5400",
-    "Saliva"
-  ],
-  [
-    "Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard__CRSP SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Assay",
-    "Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard",
-    "CRSP SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Assay",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Co-Diagnostics, Inc.__Logix Smart Coronavirus Disease 2019 (COVID-19) Kit",
-    "Co-Diagnostics, Inc.",
-    "Logix Smart Coronavirus Disease 2019 (COVID-19) Kit",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Color Genomics, Inc.__Color Genomics SARS-CoV-2 RT-LAMP Diagnostic Assay",
-    "Color Genomics, Inc.",
-    "Color Genomics SARS-CoV-2 RT-LAMP Diagnostic Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Columbia University Laboratory of Personalized Genomic Medicine__TRIPLEX CII-SARS-CoV-2 rRT-PCR TEST",
-    "Columbia University Laboratory of Personalized Genomic Medicine",
-    "TRIPLEX CII-SARS-CoV-2 rRT-PCR TEST",
-    "Results in Table 2A",
-    "6000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Compass Laboratory Services, LLC__Compass Laboratory Services SARS-CoV2 Assay",
-    "Compass Laboratory Services, LLC",
-    "Compass Laboratory Services SARS-CoV2 Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Cormeum Laboratory Services__Cormeum SARS-CoV-2 Assay",
-    "Cormeum Laboratory Services",
-    "Cormeum SARS-CoV-2 Assay",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Cue Health Inc.__Cue COVID-19 Test",
-    "Cue Health Inc.",
-    "Cue COVID-19 Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "DiaCarta, Inc__QuantiVirus SARS-CoV-2 Multiplex Test Kit",
-    "DiaCarta, Inc",
-    "QuantiVirus SARS-CoV-2 Multiplex Test Kit",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "DiaCarta, Inc__QuantiVirus SARS-CoV-2 Test kit",
-    "DiaCarta, Inc",
-    "QuantiVirus SARS-CoV-2 Test kit",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "DiaSorin Molecular LLC__Simplexa COVID-19 Direct assay",
-    "DiaSorin Molecular LLC",
-    "Simplexa COVID-19 Direct assay",
-    "Results in Table 2A",
-    "6000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Diagnostic Molecular Laboratory - Northwestern Medicine__SARS-COV-2 Assay",
-    "Diagnostic Molecular Laboratory - Northwestern Medicine",
-    "SARS-COV-2 Assay",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Diagnostic Solutions Laboratory, LLC__DSL COVID-19 Assay",
-    "Diagnostic Solutions Laboratory, LLC",
-    "DSL COVID-19 Assay",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Diatherix Eurofins Laboratory__SARS-CoV-2 PCR Test",
-    "Diatherix Eurofins Laboratory",
-    "SARS-CoV-2 PCR Test",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Eli Lilly and Company__Lilly SARS-CoV-2 Assay",
-    "Eli Lilly and Company",
-    "Lilly SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Enzo Life Sciences, Inc.__AMPIPROBE SARS-CoV-2 Test System",
-    "Enzo Life Sciences, Inc.",
-    "AMPIPROBE SARS-CoV-2 Test System",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Ethos Laboratories__Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay",
-    "Ethos Laboratories",
-    "Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Euroimmun US, Inc.__EURORealTime SARS-Cov-2",
-    "Euroimmun US, Inc.",
-    "EURORealTime SARS-Cov-2",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Exact Sciences Laboratories__SARS-CoV-2 (N gene detection) Test",
-    "Exact Sciences Laboratories",
-    "SARS-CoV-2 (N gene detection) Test",
-    "Results in Table 2A",
-    "6025",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Express Gene LLC (dba Molecular Diagnostics Laboratory)__Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
-    "Express Gene LLC (dba Molecular Diagnostics Laboratory)",
-    "Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Fast Track Diagnostics Luxembourg S.\u00e1.r.l. (a Siemens Healthineers Company)__FTD SARS-COV-2",
-    "Fast Track Diagnostics Luxembourg S.\u00e1.r.l. (a Siemens Healthineers Company)",
-    "FTD SARS-COV-2",
-    "Data uninterpretable",
-    "",
-    ""
-  ],
-  [
-    "Fluidigm Corporation__Advanta Dx SARS-CoV-2 RT-PCR Assay",
-    "Fluidigm Corporation",
-    "Advanta Dx SARS-CoV-2 RT-PCR Assay",
-    "Results in Table 2C",
-    "54000",
-    "Saliva"
-  ],
-  [
-    "Fosun Pharma USA Inc..__Fosun COVID-19 RT-PCR Detection Kit",
-    "Fosun Pharma USA Inc..",
-    "Fosun COVID-19 RT-PCR Detection Kit",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Fulgent Therapeutics, LLC__Fulgent COVID-19 by RT-PCR Test",
-    "Fulgent Therapeutics, LLC",
-    "Fulgent COVID-19 by RT-PCR Test",
-    "Results in Table 2A",
-    "3600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "GenMark Diagnostics, Inc.__ePlex SARS-CoV-2 Test",
-    "GenMark Diagnostics, Inc.",
-    "ePlex SARS-CoV-2 Test",
-    "Data uninterpretable",
-    "",
-    ""
-  ],
-  [
-    "Gene By Gene__Gene By Gene SARS-CoV-2 Detection Test",
-    "Gene By Gene",
-    "Gene By Gene SARS-CoV-2 Detection Test",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "GeneMatrix, Inc__NeoPlex COVID-19 Detection Kit",
-    "GeneMatrix, Inc",
-    "NeoPlex COVID-19 Detection Kit",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Genetron Health (Beijing) Co., Ltd.__Genetron SARS-CoV-2 RNA Test",
-    "Genetron Health (Beijing) Co., Ltd.",
-    "Genetron SARS-CoV-2 RNA Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "GenoSensor, LLC__GS COVID-19 RT-PCR KIT",
-    "GenoSensor, LLC",
-    "GS COVID-19 RT-PCR KIT",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "George Washington University Public Health Laboratory__GWU SARS-CoV-2 RT-PCR Test",
-    "George Washington University Public Health Laboratory",
-    "GWU SARS-CoV-2 RT-PCR Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Gnomegen LLC__Gnomegen COVID-19 RT-Digital PCR Detection Kit",
-    "Gnomegen LLC",
-    "Gnomegen COVID-19 RT-Digital PCR Detection Kit",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Gnomegen LLC__Gnomegen COVID-19-RT-qPCR Detection Kit",
-    "Gnomegen LLC",
-    "Gnomegen COVID-19-RT-qPCR Detection Kit",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Gravity Diagnostics, LLC__Gravity Diagnostics COVID-19 Assay (370KB)",
-    "Gravity Diagnostics, LLC",
-    "Gravity Diagnostics COVID-19 Assay (370KB)",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory__CDI Enhanced COVID-19 Test",
-    "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory",
-    "CDI Enhanced COVID-19 Test",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "HealthQuest Esoterics__HealthQuest Esoterics TaqPath SARS-CoV-2 Assay",
-    "HealthQuest Esoterics",
-    "HealthQuest Esoterics TaqPath SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Helix OpCo LLC (dba Helix)__Helix COVID-19 Test",
-    "Helix OpCo LLC (dba Helix)",
-    "Helix COVID-19 Test",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Hologic, Inc.__Aptima SARS-CoV-2 assay",
-    "Hologic, Inc.",
-    "Aptima SARS-CoV-2 assay",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Hologic, Inc.__Panther Fusion SARS-CoV-2 Assay",
-    "Hologic, Inc.",
-    "Panther Fusion SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Illumina, Inc.__Illumina COVIDSeq Test",
-    "Illumina, Inc.",
-    "Illumina COVIDSeq Test",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "InBios International, Inc__Smart Detect SARS-CoV-2 rRT-PCR Kit",
-    "InBios International, Inc",
-    "Smart Detect SARS-CoV-2 rRT-PCR Kit",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia__SARS-CoV-2 RT-PCR test",
-    "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia",
-    "SARS-CoV-2 RT-PCR test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital__Childrens-Altona-SARS-CoV-2 Assay",
-    "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital",
-    "Childrens-Altona-SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Infinity BiologiX LLC (formerly Rutgers Clinical Genomics Laboratory at RUCDR Infinite Biologics - Rutgers University)__Infinity BiologiX TaqPath SARS-CoV-2 Assay (formerly Rutgers Clinical Genomics Laboratory TaqPath SARS-CoV-2-Assay)",
-    "Infinity BiologiX LLC (formerly Rutgers Clinical Genomics Laboratory at RUCDR Infinite Biologics - Rutgers University)",
-    "Infinity BiologiX TaqPath SARS-CoV-2 Assay (formerly Rutgers Clinical Genomics Laboratory TaqPath SARS-CoV-2-Assay)",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Inform Diagnostics, Inc.__Inform Diagnostics SARS-CoV-2 RT-PCR Assay",
-    "Inform Diagnostics, Inc.",
-    "Inform Diagnostics SARS-CoV-2 RT-PCR Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Integrity Laboratories__SARS-COV-2 ASSAY",
-    "Integrity Laboratories",
-    "SARS-COV-2 ASSAY",
-    "Data uninterpretable",
-    "",
-    ""
-  ],
-  [
-    "Ipsum Diagnostics, LLC__COV-19 IDx assay",
-    "Ipsum Diagnostics, LLC",
-    "COV-19 IDx assay",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Jiangsu Bioperfectus Technologies Co., Ltd.__COVID-19 Coronavirus Real Time PCR Kit",
-    "Jiangsu Bioperfectus Technologies Co., Ltd.",
-    "COVID-19 Coronavirus Real Time PCR Kit",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Jiangsu CoWin Biotech Co., Ltd.__Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing)",
-    "Jiangsu CoWin Biotech Co., Ltd.",
-    "Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing)",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Kaiser Permanente Mid-Atlantic States__KPMAS COVID-19 Test (104KB)",
-    "Kaiser Permanente Mid-Atlantic States",
-    "KPMAS COVID-19 Test (104KB)",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "KogeneBiotech Co., Ltd.__PowerChek 2019-nCoV Real-time PCR Kit",
-    "KogeneBiotech Co., Ltd.",
-    "PowerChek 2019-nCoV Real-time PCR Kit",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "KorvaLabs Inc.__Curative-Korva SARS-Cov-2 Assay",
-    "KorvaLabs Inc.",
-    "Curative-Korva SARS-Cov-2 Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "LIFE TECHNOLOGIES (A PART OF THERMO FISHER SCIENTIFIC, INC.)__TAQPATH COVID-19 COMBO KIT, 100 RXN, TAQPATH COVID-19 COMBO KIT, 1,000 RXN",
-    "LIFE TECHNOLOGIES (A PART OF THERMO FISHER SCIENTIFIC, INC.)",
-    "TAQPATH COVID-19 COMBO KIT, 100 RXN, TAQPATH COVID-19 COMBO KIT, 1,000 RXN",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "LabGenomics Co., Ltd.__LabGun COVID-19 RT-PCR Kit",
-    "LabGenomics Co., Ltd.",
-    "LabGun COVID-19 RT-PCR Kit",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Laboratorio Clinico Toledo__Laboratorio Clinico Toledo SARS-CoV-2 Assay",
-    "Laboratorio Clinico Toledo",
-    "Laboratorio Clinico Toledo SARS-CoV-2 Assay",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Laboratory Corporation of America (LabCorp)__COVID-19 RT-PCR Test",
-    "Laboratory Corporation of America (LabCorp)",
-    "COVID-19 RT-PCR Test",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "LifeHope Labs__LifeHope 2019-nCoV Real-Time RT-PCR Diagnostic Panel",
-    "LifeHope Labs",
-    "LifeHope 2019-nCoV Real-Time RT-PCR Diagnostic Panel",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Luminex Corporation__ARIES SARS-CoV-2 Assay",
-    "Luminex Corporation",
-    "ARIES SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Luminex Molecular Diagnostics, Inc.__NxTAG CoV Extended Panel Assay",
-    "Luminex Molecular Diagnostics, Inc.",
-    "NxTAG CoV Extended Panel Assay",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "LumiraDx UK Ltd.__LumiraDx SARS-CoV-2 RNA STAR",
-    "LumiraDx UK Ltd.",
-    "LumiraDx SARS-CoV-2 RNA STAR",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Maccura Biotechnology (USA) LLC__SARS-CoV-2 Fluorescent PCR Kit",
-    "Maccura Biotechnology (USA) LLC",
-    "SARS-CoV-2 Fluorescent PCR Kit",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Massachusetts General Hospital__MGH COVID-19 qPCR assay",
-    "Massachusetts General Hospital",
-    "MGH COVID-19 qPCR assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Mesa Biotech Inc__Accula SARS-Cov-2 Test",
-    "Mesa Biotech Inc",
-    "Accula SARS-Cov-2 Test",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Nationwide Children's Hospital__SARS-CoV-2 Assay",
-    "Nationwide Children's Hospital",
+    "ait laboratories__sars-cov-2 assay",
+    "AIT Laboratories",
     "SARS-CoV-2 Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Nebraska Medicine Clinical Laboratory__NEcov19 RT-PCR Assay",
-    "Nebraska Medicine Clinical Laboratory",
-    "NEcov19 RT-PCR Assay",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "NeuMoDx Molecular, Inc.__NeuMoDx SARS-CoV-2 Assay",
-    "NeuMoDx Molecular, Inc.",
-    "NeuMoDx SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "OPTI Medical Systems, Inc.__OPTI SARS-COV-2 RT PCR Test",
-    "OPTI Medical Systems, Inc.",
-    "OPTI SARS-COV-2 RT PCR Test",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "OSANG Healthcare__GeneFinder COVID-19 Plus RealAmp Kit",
-    "OSANG Healthcare",
-    "GeneFinder COVID-19 Plus RealAmp Kit",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Omnipathology Solutions Medical Corporation__Omni COVID-19 Assay by RT-PCR",
-    "Omnipathology Solutions Medical Corporation",
-    "Omni COVID-19 Assay by RT-PCR",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "One Health Laboratories, LLC__SARS-CoV-2 Real-Time RT-PCR-Test",
-    "One Health Laboratories, LLC",
-    "SARS-CoV-2 Real-Time RT-PCR-Test",
     "Under interactive review",
     "",
     ""
   ],
   [
-    "Orig3n, Inc.__Orig3n 2019 Novel Coronavirus (COVID-19) Test",
-    "Orig3n, Inc.",
-    "Orig3n 2019 Novel Coronavirus (COVID-19) Test",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "P23 Labs, LLC.__P23 Labs TaqPath SARS-CoV-2 Assay",
-    "P23 Labs, LLC.",
-    "P23 Labs TaqPath SARS-CoV-2 Assay",
-    "Data uninterpretable",
-    "",
-    ""
-  ],
-  [
-    "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami__COVID-19 RT-PCR Test",
-    "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami",
-    "COVID-19 RT-PCR Test",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Patients Choice Laboratories, LLC__PCL SARS-CoV-2 Real-Time RT-PCR Assay",
-    "Patients Choice Laboratories, LLC",
-    "PCL SARS-CoV-2 Real-Time RT-PCR Assay",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "PerkinElmer, Inc.__PerkinElmer New Coronavirus Nucleic Acid Detection Kit",
-    "PerkinElmer, Inc.",
-    "PerkinElmer New Coronavirus Nucleic Acid Detection Kit",
-    "Results in Table 2A",
-    "180",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Phosphorus Diagnostics LLC__Phosphorus COVID-19 RT-qPCR Test",
-    "Phosphorus Diagnostics LLC",
-    "Phosphorus COVID-19 RT-qPCR Test",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "PlexBio Co., Ltd.__IntelliPlex SARS-CoV-2 Detection Kit",
-    "PlexBio Co., Ltd.",
-    "IntelliPlex SARS-CoV-2 Detection Kit",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "PreciGenome LLC__FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR)",
-    "PreciGenome LLC",
-    "FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR)",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Primerdesign Ltd.__Primerdesign Ltd COVID-19 genesig Real-Time PCR assay",
-    "Primerdesign Ltd.",
-    "Primerdesign Ltd COVID-19 genesig Real-Time PCR assay",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "PrivaPath Diagnostics, Inc.__LetsGetChecked Coronavirus (COVID-19) Test",
-    "PrivaPath Diagnostics, Inc.",
-    "LetsGetChecked Coronavirus (COVID-19) Test",
-    "Results in Table 2A",
-    "7200",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Pro-Lab Diagnostics__Pro-AmpRT SARS-CoV-2 Test",
-    "Pro-Lab Diagnostics",
-    "Pro-AmpRT SARS-CoV-2 Test",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Psomagen, Inc.__Psoma COVID-19 RT Test",
-    "Psomagen, Inc.",
-    "Psoma COVID-19 RT Test",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "QIAGEN GmbH__QIAstat-Dx Respiratory SARS-CoV-2 Panel",
-    "QIAGEN GmbH",
-    "QIAstat-Dx Respiratory SARS-CoV-2 Panel",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Quadrant Biosciences Inc.__Clarifi COVID-19 Test Kit",
-    "Quadrant Biosciences Inc.",
-    "Clarifi COVID-19 Test Kit",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Quest Diagnostics Infectious Disease, Inc.__Quest SARS-CoV-2 rRT-PCR",
-    "Quest Diagnostics Infectious Disease, Inc.",
-    "Quest SARS-CoV-2 rRT-PCR",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Quidel Corporation__Lyra Direct SARS-CoV-2 Assay",
-    "Quidel Corporation",
-    "Lyra Direct SARS-CoV-2 Assay",
-    "Results in Table 2B",
-    "540000",
-    "Direct Swabs (Dry Swabs)"
-  ],
-  [
-    "Quidel Corporation__Lyra SARS-CoV-2 Assay",
-    "Quidel Corporation",
-    "Lyra SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "6000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "RTA Laboratories Biological Products Pharmaceutical and Machinery Industry__Diagnovital SARS-CoV-2 Real-Time PCR Kit",
-    "RTA Laboratories Biological Products Pharmaceutical and Machinery Industry",
-    "Diagnovital SARS-CoV-2 Real-Time PCR Kit",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Rheonix, Inc.__Rheonix COVID-19 MDx Assay",
-    "Rheonix, Inc.",
-    "Rheonix COVID-19 MDx Assay",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Roche Molecular Systems, Inc. (RMS)__cobas SARS-CoV-2",
-    "Roche Molecular Systems, Inc. (RMS)",
-    "cobas SARS-CoV-2",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Roche Molecular Systems, Inc.__cobas SARS-CoV-2 & Influenza A/B",
-    "Roche Molecular Systems, Inc.",
-    "cobas SARS-CoV-2 & Influenza A/B",
-    "Results in Table 2A",
-    "1800",
-    "Swabs in Transport Media"
-  ],
-  [
-    "SD Biosensor, Inc.__STANDARD M nCoV Real-Time Detection Kit",
-    "SD Biosensor, Inc.",
-    "STANDARD M nCoV Real-Time Detection Kit",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "SEASUN BIOMATERIALS__U-TOP COVID-19 Detection Kit",
-    "SEASUN BIOMATERIALS",
-    "U-TOP COVID-19 Detection Kit",
-    "Results in Table 2A",
-    "600",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Sandia National Laboratories__SNL-NM 2019 nCoV Real-Time RT-PCR Diagnostic Assay",
-    "Sandia National Laboratories",
-    "SNL-NM 2019 nCoV Real-Time RT-PCR Diagnostic Assay",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Sansure BioTech Inc.__Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit (PCR-Fluorescence Probing)",
-    "Sansure BioTech Inc.",
-    "Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit (PCR-Fluorescence Probing)",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "ScienCell Research Laboratories__ScienCell SARS-CoV-2 Coronavirus Real-time RT-PCR (RT-qPCR) Detection Kit",
-    "ScienCell Research Laboratories",
-    "ScienCell SARS-CoV-2 Coronavirus Real-time RT-PCR (RT-qPCR) Detection Kit",
-    "Results in Table 2A",
-    "540",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Seasun Biomaterials, Inc__AQ-TOP COVID-19 Rapid Detection Kit",
-    "Seasun Biomaterials, Inc",
-    "AQ-TOP COVID-19 Rapid Detection Kit",
-    "Results in Table 2A",
-    "6000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Seegene, Inc.__Allplex 2019-nCoV Assay",
-    "Seegene, Inc.",
-    "Allplex 2019-nCoV Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Sherlock BioSciences, Inc.__Sherlock CRISPR SARS-CoV-2 Kit",
-    "Sherlock BioSciences, Inc.",
-    "Sherlock CRISPR SARS-CoV-2 Kit",
-    "Results in Table 2A",
-    "6000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "SolGent Co., Ltd__DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit",
-    "SolGent Co., Ltd",
-    "DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Solaris Diagnostics__Solaris Multiplex SARS-CoV-2 Assay",
-    "Solaris Diagnostics",
-    "Solaris Multiplex SARS-CoV-2 Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Southwest Regional PCR Laboratory LLC. dba MicroGen DX__COVID-19 Key",
-    "Southwest Regional PCR Laboratory LLC. dba MicroGen DX",
-    "COVID-19 Key",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Specialty Diagnostic (SDI) Laboratories__SDI SARS-CoV-2 Assay",
-    "Specialty Diagnostic (SDI) Laboratories",
-    "SDI SARS-CoV-2 Assay",
-    "Results in Table 2A",
-    "180000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Stanford Health Care Clinical Virology Laboratory__Stanford SARS-CoV-2 assay",
-    "Stanford Health Care Clinical Virology Laboratory",
-    "Stanford SARS-CoV-2 assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "TBG Biotechnology Corp.__ExProbe SARS-CoV-2 Testing Kit",
-    "TBG Biotechnology Corp.",
-    "ExProbe SARS-CoV-2 Testing Kit",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "TNS Co., Ltd (Bio TNS)__COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit",
-    "TNS Co., Ltd (Bio TNS)",
-    "COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "The Ohio State University Wexner Medical Center__OSUWMC COVID-19 RT-PCR test",
-    "The Ohio State University Wexner Medical Center",
-    "OSUWMC COVID-19 RT-PCR test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Tide Laboratories, LLC__DTPM COVID-19 RT-PCR Test",
-    "Tide Laboratories, LLC",
-    "DTPM COVID-19 RT-PCR Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Trax Management Services Inc.__PhoenixDx 2019-CoV",
-    "Trax Management Services Inc.",
-    "PhoenixDx 2019-CoV",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Trax Management Services Inc.__PhoenixDx SARS-CoV-2 Multiplex",
-    "Trax Management Services Inc.",
-    "PhoenixDx SARS-CoV-2 Multiplex",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin__SARS-CoV-2 RNA DETECTR Assay",
-    "UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin",
-    "SARS-CoV-2 RNA DETECTR Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "UTMG Pathology Laboratory__UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
-    "UTMG Pathology Laboratory",
-    "UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Ultimate Dx Laboratory__UDX SARS-CoV-2 Molecular Assay",
-    "Ultimate Dx Laboratory",
-    "UDX SARS-CoV-2 Molecular Assay",
-    "Results in Table 2A",
-    "18000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "University of Alabama at Birmingham Fungal Reference Lab__FRL SARS CoV-2 Test",
-    "University of Alabama at Birmingham Fungal Reference Lab",
-    "FRL SARS CoV-2 Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "University of North Carolina Medical Center__UNC Health SARS-CoV-2 real-time RT-PCR test",
-    "University of North Carolina Medical Center",
-    "UNC Health SARS-CoV-2 real-time RT-PCR test",
-    "Results in Table 2A",
-    "6000",
-    "Swabs in Transport Media"
-  ],
-  [
-    "University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory__MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay",
-    "University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory",
-    "MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Vela Operations Singapore Pte Ltd__ViroKey SARS-CoV-2 RT-PCR Test",
-    "Vela Operations Singapore Pte Ltd",
-    "ViroKey SARS-CoV-2 RT-PCR Test",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Wadsworth Center, New York State Department of Public Health__New York SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Panel",
-    "Wadsworth Center, New York State Department of Public Health",
-    "New York SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Panel",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "Warrior Diagnostics, Inc.__Warrior Diagnostics SARS-CoV-2 Assay",
-    "Warrior Diagnostics, Inc.",
-    "Warrior Diagnostics SARS-CoV-2 Assay",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Wren Laboratories LLC__Wren Laboratories COVID-19 PCR Test",
-    "Wren Laboratories LLC",
-    "Wren Laboratories COVID-19 PCR Test",
-    "Data not returned",
-    "",
-    ""
-  ],
-  [
-    "Xiamen Zeesan Biotech Co., Ltd.__SARS-CoV-2 Test Kit (Real-time PCR)",
-    "Xiamen Zeesan Biotech Co., Ltd.",
-    "SARS-CoV-2 Test Kit (Real-time PCR)",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Yale New Haven Hospital, Clinical Virology Laboratory__SARS-CoV-2 PCR Test",
-    "Yale New Haven Hospital, Clinical Virology Laboratory",
-    "SARS-CoV-2 PCR Test",
-    "Did not provide shipping information",
-    "",
-    ""
-  ],
-  [
-    "Yale School of Public Health, Department of Epidemiology of Microbial Diseases__SalivaDirect",
-    "Yale School of Public Health, Department of Epidemiology of Microbial Diseases",
-    "SalivaDirect",
-    "Results in Table 2C",
-    "18000",
-    "Saliva"
-  ],
-  [
-    "ZhuHai Sinochips Bioscience Co., Ltd__COVID-19 Nucleic Acid RT-PCR Test Kit",
-    "ZhuHai Sinochips Bioscience Co., Ltd",
-    "COVID-19 Nucleic Acid RT-PCR Test Kit",
-    "Results in Table 2A",
-    "5400",
-    "Swabs in Transport Media"
-  ],
-  [
-    "Zymo Research Corporation__Quick SARS-CoV-2rRT-PCR Kit",
-    "Zymo Research Corporation",
-    "Quick SARS-CoV-2rRT-PCR Kit",
-    "Under interactive review",
-    "",
-    ""
-  ],
-  [
-    "altona Diagnostics GmbH__REALSTAR SARS-COV-2 RT-PCR KIT U.S.",
+    "altona diagnostics gmbh__realstar sars-cov02 rt-pcr kits u.s.",
     "altona Diagnostics GmbH",
     "REALSTAR SARS-COV-2 RT-PCR KIT U.S.",
     "Under interactive review",
@@ -1320,10 +88,1242 @@
     ""
   ],
   [
-    "dba SpectronRX__Hymon SARS-CoV-2 Test Kit",
+    "altru diagnostics, inc.__altru dx sars-cov-2 rt-pcr assay",
+    "Altru Diagnostics, Inc.",
+    "Altru Dx SARS-CoV-2 RT-PCR assay",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "applied biocode, inc.__biocode sars-cov-2 assay",
+    "Applied BioCode, Inc.",
+    "BioCode SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "applied dna sciences, inc.__linea covid-19 assay kit",
+    "Applied DNA Sciences, Inc.",
+    "Linea COVID-19 Assay Kit",
+    "Results in Table 2A",
+    2500,
+    "Swabs in Transport Media"
+  ],
+  [
+    "aspirus reference laboratory__aspirus sars-cov-2 rrt assay",
+    "Aspirus Reference Laboratory",
+    "Aspirus SARS-CoV rRT Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "assurance scientific laboratories__assurance sars-cov-2 panel",
+    "Assurance Scientific Laboratories",
+    "Assurance SARS-CoV-2 Panel",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "atila biosystems, inc.__iamp covid-19 detection kit",
+    "Atila BioSystems, Inc.",
+    "iAMP COVID-19 Detection Kit",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "avellino lab usa, inc.__avellinocov2 test",
+    "Avellino Lab USA, Inc.",
+    "AvellinoCoV2 test",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "becton, dickinson & company (bd)__biogx sars-cov-2 reagents for bd max system",
+    "Becton, Dickinson & Company (BD)",
+    "BioGX SARS-CoV-2 Reagents for BD MAX System",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "becton, dickinson & company__bd sars-cov-2reagents for bd max system",
+    "Becton, Dickinson & Company",
+    "BD SARS-CoV-2 Reagents for BD MAX System",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "bgi genomics co. ltd__real-time fluorescent rt-pcr kit for detecting sars-cov-2",
+    "BGI Genomics Co. Ltd",
+    "Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "bio-rad laboratories, inc.__bio-rad sars-cov-2 ddpcr test",
+    "Bio-Rad Laboratories, Inc",
+    "Bio-Rad SARS-CoV-2 ddPCR Test",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "biocerna__sars-cov-2 test",
+    "Biocerna",
+    "SARS-CoV-2 Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "biocollections worldwide, inc.__biocollections worldwide sars-co-v-2 assay",
+    "Biocollections Worldwide, Inc.",
+    "Biocollections Worldwide SARS-Co-V-2 Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "biocore co., ltd.__biocore 2019-ncov real time pcr kit",
+    "BioCore Co., Ltd.",
+    "BioCore 2019-nCoV Real Time PCR Kit",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "biofire defense, llc__biofire covid-19 test",
+    "BioFire Defense, LLC",
+    "BioFire COVID-19 Test",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "biofire diagnostics, llc__biofire respiratory panel 2.1 (rp2.1)",
+    "BioFire Diagnostics, LLC",
+    "BioFire Respiratory Panel 2.1 (RP2.1)",
+    "Data uninterpretable",
+    "",
+    ""
+  ],
+  [
+    "biomeme, inc.__biomeme sars-cov-2 real-time rt-pcr test",
+    "Biomeme, Inc.",
+    "Biomeme SARS-CoV-2 Real-Time RT-PCR Test",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "biomérieux sa__sars-cov-2 r-gene",
+    "BioMérieux SA",
+    "SARS-COV-2 R-GENE",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "biosewoom, inc.__real-q 2019-ncov detection kit",
+    "BioSewoom, Inc.",
+    "Real-Q 2019-nCoV Detection Kit",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "boston heart diagnostics__boston heart covid-19 rt-pcr test",
+    "Boston Heart Diagnostics",
+    "Boston Heart COVID-19 RT-PCR Test",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "boston medical center__bmc-crem covid-19 test",
+    "Boston Medical Center",
+    "BMC-CReM COVID-19 Test",
+    "Results in Table 2A",
+    600000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "cedars-sinai medical center, department of pathology and laboratory medicine__sars-cov-2-assay",
+    "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",
+    "SARS-CoV-2-Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "cdc__cdc 2019-novel coronavirus (2019-ncov) real-time rt-pcr diagnostic panel",
+    "Centers for Disease Control and Prevention (CDC)",
+    "CDC 2019-nCoV Real-Time RT-PCR Diagnostic Panel (CDC)",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "centers for disease control and prevention (cdc)__influenza sars-cov-2 (flu sc2) multiplex assay",
+    "Centers for Disease Control and Prevention (CDC)",
+    "Influenza SARS-CoV-2 (Flu SC2) Multiplex Assay",
+    "Results in Table 2A",
+    5700,
+    "Swabs in Transport Media"
+  ],
+  [
+    "centogene us, llc__centofast-sars-cov-2 rt-pcr assay",
+    "CENTOGENE US, LLC",
+    "CentoFast-SARS-CoV-2 RT-PCR Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "cepheid__xpert xpress sars-cov-2 test",
+    "Cepheid",
+    "Xpert Xpress SARS-CoV-2 test",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "chromacode inc.__hdpcr sars-cov-2 assay",
+    "ChromaCode Inc.",
+    "HDPCR SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "cirrusdx laboratories__cirrusdx sars-cov-2 assay",
+    "CirrusDx Laboratories",
+    "CirrusDx SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "cleveland clinic robert j. tomsich pathology and laboratory medicine institute__cleveland clinic sars-cov-2 assay",
+    "Cleveland Clinic Robert J. Tomsich Pathology and Laboratory Medicine Institute",
+    "Cleveland Clinic SARS-CoV-2 Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "clinical reference laboratory, inc.__crl rapid response",
+    "Clinical Reference Laboratory, Inc.",
+    "CRL Rapid Response",
+    "Results in Table 2C",
+    5400,
+    "Saliva"
+  ],
+  [
+    "clinical research sequencing platform (crsp), llc at the broad institute of mit and harvard__crsp sars-cov-2 real-time reverse transcriptase (rt)-pcr diagnostic assay",
+    "Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard",
+    "CRSP SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Assay",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "co-diagnostics, inc.__logix smart coronavirus disease 2019 (covid-19) kit",
+    "Co-Diagnostics, Inc.",
+    "Logix Smart Coronavirus Disease 2019 (COVID-19) Kit",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "color genomics, inc.__color genomics sars-cov-2 rt-lamp diagnostic assay (reissued july 24, 2020)",
+    "Color Genomics, Inc.",
+    "Color Genomics SARS-CoV-2 RT-LAMP Diagnostic Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "columbia university laboratory of personalized genomic medicine__triplex cii-sars-cov-2 rrt-pcr test",
+    "Columbia University Laboratory of Personalized Genomic Medicine",
+    "TRIPLEX CII-SARS-CoV-2 rRT-PCR TEST",
+    "Results in Table 2A",
+    6000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "compass laboratory services, llc__compass laboratory services sars-cov2 assay",
+    "Compass Laboratory Services, LLC",
+    "Compass Laboratory Services SARS-CoV2 Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "cormeum laboratory services__cormeum sars-cov-2 assay",
+    "Cormeum Laboratory Services",
+    "Cormeum SARS-CoV-2 Assay",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "csi laboratories__csi sars-cov-2 rt pcr test",
+    "CSI Laboratories",
+    "CSI SARS-CoV-2 RT PCR Test",
+    "Data uninterpretable",
+    "",
+    ""
+  ],
+  [
+    "cue health inc.__cue covid-19 test",
+    "Cue Health Inc.",
+    "Cue COVID-19 Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "dba spectronrx__hymon sars-cov-2 test kit",
     "dba SpectronRX",
     "Hymon SARS-CoV-2 Test Kit",
     "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "diacarta, inc.__quantivirus sars-cov-2 multiplex test kit",
+    "DiaCarta, Inc",
+    "QuantiVirus SARS-CoV-2 Multiplex Test Kit",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "diacarta, inc.__quantivirus sars-cov-2 test kit",
+    "DiaCarta, Inc",
+    "QuantiVirus SARS-CoV-2 Test kit",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "diagnostic molecular laboratory - northwestern medicine__sars-cov-2 assay",
+    "Diagnostic Molecular Laboratory - Northwestern Medicine",
+    "SARS-COV-2 Assay",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "diagnostic solutions laboratory, llc__dsl covid-19 assay",
+    "Diagnostic Solutions Laboratory, LLC",
+    "DSL COVID-19 Assay",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "diasorin molecular llc__simplexa covid-19 direct assay",
+    "DiaSorin Molecular LLC",
+    "Simplexa COVID-19 Direct assay",
+    "Results in Table 2A",
+    6000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "diatherix eurofins laboratory__sars-cov-2 pcr test",
+    "Diatherix Eurofins Laboratory",
+    "SARS-CoV-2 PCR Test",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "eli lilly and company__lilly sars-cov-2 assay",
+    "Eli Lilly and Company",
+    "Lilly SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "enzo life sciences, inc.__ampiprobe sars-cov-2 test system",
+    "Enzo Life Sciences, Inc.",
+    "AMPIPROBE SARS-CoV-2 Test System",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "ethos laboratories__ethos laboratories sars-cov-2 maldi-tof assay",
+    "Ethos Laboratories",
+    "Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "euroimmun us inc.__eurorealtime sars-cov-2",
+    "Euroimmun US, Inc.",
+    "EURORealTime SARS-Cov-2",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "exact sciences laboratories__sars-cov-2 (n gene detection) test",
+    "Exact Sciences Laboratories",
+    "SARS-CoV-2 (N gene detection) Test",
+    "Results in Table 2A",
+    6025,
+    "Swabs in Transport Media"
+  ],
+  [
+    "express gene llc (dba molecular diagnostics laboratory)__express gene 2019-ncov rt-pcr diagnostic panel",
+    "Express Gene LLC (dba Molecular Diagnostics Laboratory)",
+    "Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "fast track diagnostics luxembourg s.á.r.l. (a siemens healthineers company)__ftd sars-cov-2",
+    "Fast Track Diagnostics Luxembourg S.á.r.l. (a Siemens Healthineers Company)",
+    "FTD SARS-COV-2",
+    "Data uninterpretable",
+    "",
+    ""
+  ],
+  [
+    "fluidigm corporation__advanta dx sars-cov-2 rt-pcr assay",
+    "Fluidigm Corporation",
+    "Advanta Dx SARS-CoV-2 RT-PCR Assay",
+    "Results in Table 2C",
+    54000,
+    "Saliva"
+  ],
+  [
+    "fosun pharma usa inc.__fosun covid-19 rt-pcr detection kit",
+    "Fosun Pharma USA Inc..",
+    "Fosun COVID-19 RT-PCR Detection Kit",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "fulgent therapeutics, llc__fulgent covid-19 by rt-pcr test",
+    "Fulgent Therapeutics, LLC",
+    "Fulgent COVID-19 by RT-PCR Test",
+    "Results in Table 2A",
+    3600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "gene by gene__gene by gene sars-cov-2 detection test",
+    "Gene By Gene",
+    "Gene By Gene SARS-CoV-2 Detection Test",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "genematrix, inc.__neoplex covid-19 detection kit",
+    "GeneMatrix, Inc",
+    "NeoPlex COVID-19 Detection Kit",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "genetron health (beijing) co., ltd.__genetron sars-cov-2 rna test",
+    "Genetron Health (Beijing) Co., Ltd.",
+    "Genetron SARS-CoV-2 RNA Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "genmark diagnostics, inc.__eplex sars-cov-2 test",
+    "GenMark Diagnostics, Inc.",
+    "ePlex SARS-CoV-2 Test",
+    "Data uninterpretable",
+    "",
+    ""
+  ],
+  [
+    "genosensor, llc__gs covid-19 rt-pcr kit",
+    "GenoSensor, LLC",
+    "GS COVID-19 RT-PCR KIT",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "george washington university public health laboratory__gwu sars-cov-2 rt-pcr test",
+    "George Washington University Public Health Laboratory",
+    "GWU SARS-CoV-2 RT-PCR Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "gnomegen llc__gnomegen covid-19 rt-digital pcr detection kit",
+    "Gnomegen LLC",
+    "Gnomegen COVID-19 RT-Digital PCR Detection Kit",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "gnomegen llc__gnomegen covid-19-rt-qpcr detection kit",
+    "Gnomegen LLC",
+    "Gnomegen COVID-19-RT-qPCR Detection Kit",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "gravity diagnostics, llc__gravity diagnostics covid-19 assay",
+    "Gravity Diagnostics, LLC",
+    "Gravity Diagnostics COVID-19 Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "hackensack university medical center (humc) molecular pathology laboratory__cdi enhanced covid-19 test",
+    "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory",
+    "CDI Enhanced COVID-19 Test",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "healthquest esoterics__healthquest esoterics taqpath sars-cov-2 assay",
+    "HealthQuest Esoterics",
+    "HealthQuest Esoterics TaqPath SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "helix opco llc (dba helix)__helix covid-19 test",
+    "Helix OpCo LLC (dba Helix)",
+    "Helix COVID-19 Test",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "hologic, inc.__aptima sars-cov-2 assay",
+    "Hologic, Inc.",
+    "Aptima SARS-CoV-2 assay",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "hologic, inc.__panther fusion sars-cov-2 assay",
+    "Hologic, Inc.",
+    "Panther Fusion SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "illumina, inc.__illumina covidseq test",
+    "Illumina, Inc.",
+    "Illumina COVIDSeq Test",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "inbios international, inc.__smart detect sars-cov-2 rrt-pcr kit",
+    "InBios International, Inc",
+    "Smart Detect SARS-CoV-2 rRT-PCR Kit",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "infectious disease diagnostics laboratory - children's hospital of philadelphia__sars-cov-2 rt-pcr test",
+    "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia",
+    "SARS-CoV-2 RT-PCR test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "infectious diseases diagnostics laboratory (iddl), boston children's hospital__childrens-altona-sars-cov-2 assay",
+    "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital",
+    "Childrens-Altona-SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "infinity biologix llc__infinity biologix taqpath sars-cov-2 assay 04/10/2020",
+    "Infinity BiologiX LLC (formerly Rutgers Clinical Genomics Laboratory at RUCDR Infinite Biologics - Rutgers University)",
+    "Infinity BiologiX TaqPath SARS-CoV-2 Assay (formerly Rutgers Clinical Genomics Laboratory TaqPath SARS-CoV-2-Assay)",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "inform diagnostics, inc.__inform diagnostics sars-cov-2 rt-pcr assay",
+    "Inform Diagnostics, Inc.",
+    "Inform Diagnostics SARS-CoV-2 RT-PCR Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "integrity laboratories__sars-cov-2 assay",
+    "Integrity Laboratories",
+    "SARS-COV-2 ASSAY",
+    "Data uninterpretable",
+    "",
+    ""
+  ],
+  [
+    "ipsum diagnostics, llc__cov-19 idx assay",
+    "Ipsum Diagnostics, LLC",
+    "COV-19 IDx assay",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "jiangsu bioperfectus technologies co., ltd.__covid-19 coronavirus real time pcr kit",
+    "Jiangsu Bioperfectus Technologies Co., Ltd.",
+    "COVID-19 Coronavirus Real Time PCR Kit",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "jiangsu cowin biotech co., ltd.__novel coronavirus (sars-cov-2) fast nucleic acid detection kit (pcr-fluorescence probing)",
+    "Jiangsu CoWin Biotech Co., Ltd.",
+    "Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing)",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "kaiser permanente mid-atlantic states__kpmas covid-19 test",
+    "Kaiser Permanente Mid-Atlantic States",
+    "KPMAS COVID-19 Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "kogenebiotech co., ltd.__powerchek 2019-ncov real-time pcr kit",
+    "KogeneBiotech Co., Ltd.",
+    "PowerChek 2019-nCoV Real-time PCR Kit",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "korvalabs inc.__curative-korva sars-cov-2 assay",
+    "KorvaLabs Inc.",
+    "Curative-Korva SARS-Cov-2 Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "labgenomics co., ltd.__labgun covid-19 rt-pcr kit",
+    "LabGenomics Co., Ltd.",
+    "LabGun COVID-19 RT-PCR Kit",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "laboratorio clinico toledo__laboratorio clinico toledo sars-cov-2 assay",
+    "Laboratorio Clinico Toledo",
+    "Laboratorio Clinico Toledo SARS-CoV-2 Assay",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "laboratory corporation of america (labcorp)__covid-19 rt-pcr test",
+    "Laboratory Corporation of America (LabCorp)",
+    "COVID-19 RT-PCR Test",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "thermo fisher scientific, inc.__taqpath covid-19 combo kit",
+    "LIFE TECHNOLOGIES (A PART OF THERMO FISHER SCIENTIFIC, INC.)",
+    "TAQPATH COVID-19 COMBO KIT, 100 RXN, TAQPATH COVID-19 COMBO KIT, 1,000 RXN",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "lifehope labs__lifehope 2019-ncov real-time rt-pcr diagnostic panel",
+    "LifeHope Labs",
+    "LifeHope 2019-nCoV Real-Time RT-PCR Diagnostic Panel",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "luminex corporation__aries sars-cov-2 assay",
+    "Luminex Corporation",
+    "ARIES SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "luminex molecular diagnostics, inc.__nxtag cov extended panel assay",
+    "Luminex Molecular Diagnostics, Inc.",
+    "NxTAG CoV Extended Panel Assay",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "lumiradx uk ltd.__lumiradx sars-cov-2 rna star",
+    "LumiraDx UK Ltd.",
+    "LumiraDx SARS-CoV-2 RNA STAR",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "maccura biotechnology (usa) llc__sars-cov-2 fluorescent pcr kit",
+    "Maccura Biotechnology (USA) LLC",
+    "SARS-CoV-2 Fluorescent PCR Kit",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "massachusetts general hospital__mgh covid-19 qpcr assay",
+    "Massachusetts General Hospital",
+    "MGH COVID-19 qPCR assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "mesa biotech inc.__accula sars-cov-2 test",
+    "Mesa Biotech Inc",
+    "Accula SARS-Cov-2 Test",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "nationwide children’s hospital__sars-cov-2 assay",
+    "Nationwide Children's Hospital",
+    "SARS-CoV-2 Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "nebraska medicine clinical laboratory__necov19 rt-pcr assay",
+    "Nebraska Medicine Clinical Laboratory",
+    "NEcov19 RT-PCR Assay",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "neumodx molecular, inc.__neumodx sars-cov-2 assay",
+    "NeuMoDx Molecular, Inc.",
+    "NeuMoDx SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "omnipathology solutions medical corporation__omni covid-19 assay by rt-pcr",
+    "Omnipathology Solutions Medical Corporation",
+    "Omni COVID-19 Assay by RT-PCR",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "one health laboratories, llc__sars-cov-2 real-time rt-pcr-test",
+    "One Health Laboratories, LLC",
+    "SARS-CoV-2 Real-Time RT-PCR-Test",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "opti medical systems, inc.__opti sars-cov-2 rt pcr test",
+    "OPTI Medical Systems, Inc.",
+    "OPTI SARS-COV-2 RT PCR Test",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "orig3n, inc.__orig3n 2019 novel coronavirus (covid-19) test",
+    "Orig3n, Inc.",
+    "Orig3n 2019 Novel Coronavirus (COVID-19) Test",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "osang healthcare__genefinder covid-19 plus realamp kit",
+    "OSANG Healthcare",
+    "GeneFinder COVID-19 Plus RealAmp Kit",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "p23 labs, llc.__p23 labs taqpath sars-cov-2 assay",
+    "P23 Labs, LLC.",
+    "P23 Labs TaqPath SARS-CoV-2 Assay",
+    "Data uninterpretable",
+    "",
+    ""
+  ],
+  [
+    "pathology/laboratory medicine lab of baptist hospital miami__covid-19 rt-pcr test",
+    "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami",
+    "COVID-19 RT-PCR Test",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "patients choice laboratories, llc__pcl sars-cov-2 real-time rt-pcr assay",
+    "Patients Choice Laboratories, LLC",
+    "PCL SARS-CoV-2 Real-Time RT-PCR Assay",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "perkinelmer, inc.__perkinelmer new coronavirus nucleic acid detection kit",
+    "PerkinElmer, Inc.",
+    "PerkinElmer New Coronavirus Nucleic Acid Detection Kit",
+    "Results in Table 2A",
+    180,
+    "Swabs in Transport Media"
+  ],
+  [
+    "phosphorus diagnostics llc__phosphorus covid-19 rt-qpcr test",
+    "Phosphorus Diagnostics LLC",
+    "Phosphorus COVID-19 RT-qPCR Test",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "plexbio co., ltd__intelliplex sars-cov-2 detection kit",
+    "PlexBio Co., Ltd.",
+    "IntelliPlex SARS-CoV-2 Detection Kit",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "precigenome llc__fastplex triplex sars-cov-2 detection kit (rt-digital pcr)",
+    "PreciGenome LLC",
+    "FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR)",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "primerdesign ltd__primerdesign ltd covid-19 genesig real-time pcr assay",
+    "Primerdesign Ltd.",
+    "Primerdesign Ltd COVID-19 genesig Real-Time PCR assay",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "privapath diagnostics, inc.__letsgetchecked coronavirus (covid-19) test",
+    "PrivaPath Diagnostics, Inc.",
+    "LetsGetChecked Coronavirus (COVID-19) Test",
+    "Results in Table 2A",
+    7200,
+    "Swabs in Transport Media"
+  ],
+  [
+    "pro-lab diagnostics__pro-amprt sars-cov-2 test",
+    "Pro-Lab Diagnostics",
+    "Pro-AmpRT SARS-CoV-2 Test",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "psomagen, inc.__psoma covid-19 rt test",
+    "Psomagen, Inc.",
+    "Psoma COVID-19 RT Test",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "qiagen gmbh__qiastat-dx respiratory sars-cov-2 panel",
+    "QIAGEN GmbH",
+    "QIAstat-Dx Respiratory SARS-CoV-2 Panel",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "quadrant biosciences inc.__clarifi covid-19 test kit 09/22/2020",
+    "Quadrant Biosciences Inc.",
+    "Clarifi COVID-19 Test Kit",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "quest diagnostics infectious disease, inc.__quest sars-cov-2 rrt-pcr",
+    "Quest Diagnostics Infectious Disease, Inc.",
+    "Quest SARS-CoV-2 rRT-PCR",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "quidel corporation__lyra direct sars-cov-2 assay",
+    "Quidel Corporation",
+    "Lyra Direct SARS-CoV-2 Assay",
+    "Results in Table 2B",
+    540000,
+    "Direct Swabs (Dry Swabs)"
+  ],
+  [
+    "quidel corporation__lyra sars-cov-2 assay",
+    "Quidel Corporation",
+    "Lyra SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    6000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "rheonix, inc.__rheonix covid-19 mdx assay",
+    "Rheonix, Inc.",
+    "Rheonix COVID-19 MDx Assay",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "roche molecular systems, inc. (rms)__cobas sars-cov-2",
+    "Roche Molecular Systems, Inc. (RMS)",
+    "cobas SARS-CoV-2",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "roche molecular systems, inc.__cobas sars-cov-2 & influenza a/b",
+    "Roche Molecular Systems, Inc.",
+    "cobas SARS-CoV-2 & Influenza A/B",
+    "Results in Table 2A",
+    1800,
+    "Swabs in Transport Media"
+  ],
+  [
+    "rta laboratories biological products pharmaceutical and machinery industry__diagnovital sars-cov-2 real-time pcr kit",
+    "RTA Laboratories Biological Products Pharmaceutical and Machinery Industry",
+    "Diagnovital SARS-CoV-2 Real-Time PCR Kit",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "sandia national laboratories__snl-nm 2019 ncov real-time rt-pcr diagnostic assay",
+    "Sandia National Laboratories",
+    "SNL-NM 2019 nCoV Real-Time RT-PCR Diagnostic Assay",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "sansure biotech inc.__novel coronavirus (2019-ncov) nucleic acid diagnostic kit (pcr-fluorescence probing)",
+    "Sansure BioTech Inc.",
+    "Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit (PCR-Fluorescence Probing)",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "sciencell research laboratories__sciencell sars-cov-2 coronavirus real-time rt-pcr (rt-qpcr) detection kit",
+    "ScienCell Research Laboratories",
+    "ScienCell SARS-CoV-2 Coronavirus Real-time RT-PCR (RT-qPCR) Detection Kit",
+    "Results in Table 2A",
+    540,
+    "Swabs in Transport Media"
+  ],
+  [
+    "sd biosensor, inc.__standard m ncov real-time detection kit",
+    "SD Biosensor, Inc.",
+    "STANDARD M nCoV Real-Time Detection Kit",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "seasun biomaterials, inc.__aq-top covid-19 rapid detection",
+    "Seasun Biomaterials, Inc",
+    "AQ-TOP COVID-19 Rapid Detection Kit",
+    "Results in Table 2A",
+    6000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "seasun biomaterials__u-top covid-19 detection kit",
+    "SEASUN BIOMATERIALS",
+    "U-TOP COVID-19 Detection Kit",
+    "Results in Table 2A",
+    600,
+    "Swabs in Transport Media"
+  ],
+  [
+    "seegene, inc.__allplex 2019-ncov assay",
+    "Seegene, Inc.",
+    "Allplex 2019-nCoV Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "sherlock biosciences, inc.__sherlock crispr sars-cov-2 kit",
+    "Sherlock BioSciences, Inc.",
+    "Sherlock CRISPR SARS-CoV-2 Kit",
+    "Results in Table 2A",
+    6000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "solaris diagnostics__solaris multiplex sars-cov-2 assay",
+    "Solaris Diagnostics",
+    "Solaris Multiplex SARS-CoV-2 Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "solgent co., ltd.__diaplexq novel coronavirus (2019-ncov) detection kit",
+    "SolGent Co., Ltd",
+    "DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "southwest regional pcr laboratory llc. dba microgen dx__covid-19 key",
+    "Southwest Regional PCR Laboratory LLC. dba MicroGen DX",
+    "COVID-19 Key",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "specialty diagnostic (sdi) laboratories__sdi sars-cov-2 assayletter granting inclusion",
+    "Specialty Diagnostic (SDI) Laboratories",
+    "SDI SARS-CoV-2 Assay",
+    "Results in Table 2A",
+    180000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "stanford health care clinical virology laboratory__stanford sars-cov-2 assay",
+    "Stanford Health Care Clinical Virology Laboratory",
+    "Stanford SARS-CoV-2 assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "tbg biotechnology corp.__exprobe sars-cov-2 testing kit",
+    "TBG Biotechnology Corp.",
+    "ExProbe SARS-CoV-2 Testing Kit",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "the ohio state university wexner medical center__osuwmc covid-19 rt-pcr test",
+    "The Ohio State University Wexner Medical Center",
+    "OSUWMC COVID-19 RT-PCR test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "tide laboratories, llc__dtpm covid-19 rt-pcr test",
+    "Tide Laboratories, LLC",
+    "DTPM COVID-19 RT-PCR Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "tns co., ltd (bio tns)__covid-19 rt-pcr peptide nucleic acid (pna) kit",
+    "TNS Co., Ltd (Bio TNS)",
+    "COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "trax management services inc.__phoenixdx 2019-cov",
+    "Trax Management Services Inc.",
+    "PhoenixDx 2019-CoV",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "trax management services inc.__phoenixdx sars-cov-2 multiplex",
+    "Trax Management Services Inc.",
+    "PhoenixDx SARS-CoV-2 Multiplex",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "ucsf health clinical laboratories, ucsf clinical labs at china basin__sars-cov-2 rna detectr assay",
+    "UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin",
+    "SARS-CoV-2 RNA DETECTR Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "ultimate dx laboratory__udx sars-cov-2 molecular assay",
+    "Ultimate Dx Laboratory",
+    "UDX SARS-CoV-2 Molecular Assay",
+    "Results in Table 2A",
+    18000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "university of alabama at birmingham fungal reference lab__frl sars cov-2 test",
+    "University of Alabama at Birmingham Fungal Reference Lab",
+    "FRL SARS CoV-2 Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "university of north carolina medical center__unc health sars-cov-2 real-time rt-pcr test",
+    "University of North Carolina Medical Center",
+    "UNC Health SARS-CoV-2 real-time RT-PCR test",
+    "Results in Table 2A",
+    6000,
+    "Swabs in Transport Media"
+  ],
+  [
+    "university of texas md anderson cancer center, molecular diagnostics laboratory__md anderson high-throughput sars-cov-2 rt-pcr assay",
+    "University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory",
+    "MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "utmg pathology laboratory__uthsc/uch sars-cov-2-rt-pcr assay",
+    "UTMG Pathology Laboratory",
+    "UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "vela operations singapore pte ltd__virokey sars-cov-2 rt-pcr test",
+    "Vela Operations Singapore Pte Ltd",
+    "ViroKey SARS-CoV-2 RT-PCR Test",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "wadsworth center, new york state department of health's (cdc)__new york sars-cov-2 real-time reverse transcriptase (rt)-pcr diagnostic panel",
+    "Wadsworth Center, New York State Department of Public Health",
+    "New York SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Panel",
+    "Under interactive review",
+    "",
+    ""
+  ],
+  [
+    "warrior diagnostics, inc.__warrior diagnostics sars-cov-2 assay",
+    "Warrior Diagnostics, Inc.",
+    "Warrior Diagnostics SARS-CoV-2 Assay",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "wren laboratories llc__wren laboratories covid-19 pcr test",
+    "Wren Laboratories LLC",
+    "Wren Laboratories COVID-19 PCR Test",
+    "Data not returned",
+    "",
+    ""
+  ],
+  [
+    "xiamen zeesan biotech co., ltd.__sars-cov-2 test kit (real-time pcr)",
+    "Xiamen Zeesan Biotech Co., Ltd.",
+    "SARS-CoV-2 Test Kit (Real-time PCR)",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "yale new haven hospital, clinical virology laboratory__sars-cov-2 pcr test",
+    "Yale New Haven Hospital, Clinical Virology Laboratory",
+    "SARS-CoV-2 PCR Test",
+    "Did not provide shipping information",
+    "",
+    ""
+  ],
+  [
+    "yale school of public health, department of epidemiology of microbial diseases__salivadirect",
+    "Yale School of Public Health, Department of Epidemiology of Microbial Diseases",
+    "SalivaDirect",
+    "Results in Table 2C",
+    18000,
+    "Saliva"
+  ],
+  [
+    "zhuhai sinochips bioscience co., ltd.__covid-19 nucleic acid rt-pcr test kit",
+    "ZhuHai Sinochips Bioscience Co., Ltd",
+    "COVID-19 Nucleic Acid RT-PCR Test Kit",
+    "Results in Table 2A",
+    5400,
+    "Swabs in Transport Media"
+  ],
+  [
+    "zymo research corporation__quick sars-cov-2rrt-pcr kit",
+    "Zymo Research Corporation",
+    "Quick SARS-CoV-2rRT-PCR Kit",
+    "Under interactive review",
     "",
     ""
   ]

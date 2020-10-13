@@ -144,7 +144,7 @@
 "width": "47px",
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "0.125 but table 2 shows it should be 0.25 or the 0.5 for ABI 7500 Sputum could be 0.25.  However perhaps this is because ORF1ab positive treated differently to E gene positive (see Interpretation of Results table on page 10)",
+"text": "0.125",
 "labels": [
 {
 "id": 66,
@@ -155,7 +155,7 @@
 "text": "Meta/Error"
 }
 ],
-"comment": ""
+"comment": "0.125 but table 2 shows it should be 0.25 or the 0.5 for ABI 7500 Sputum could be 0.25.  However perhaps this is because ORF1ab positive treated differently to E gene positive (see Interpretation of Results table on page 10)"
 },
 {
 "id": 9,

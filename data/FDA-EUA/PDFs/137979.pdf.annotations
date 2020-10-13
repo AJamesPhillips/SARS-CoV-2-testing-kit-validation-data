@@ -262,12 +262,7 @@
 "height": "16px",
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "TCID50 / mL",
-"labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
-],
+"labels": [],
 "comment": ""
 },
 {

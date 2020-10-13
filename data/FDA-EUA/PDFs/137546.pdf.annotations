@@ -2,6 +2,181 @@
 "version": 3,
 "relative_file_path": "../../data/FDA-EUA/PDFs/137546.pdf",
 "file_sha1_hash": "57b7f9d3638bd2724bc3d7b7d62aefb29c748132",
-"annotations": [],
+"annotations": [
+{
+"id": 0,
+"page_number": 1,
+"left": "128px",
+"top": "485px",
+"width": "631px",
+"height": "38px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "upper respiratory specimens (such as nasal, midturbinate, nasopharyngeal, and oropharyngeal swab specimens)",
+"labels": [
+{
+"id": 0,
+"text": "Supported specimen types"
+}
+],
+"comment": ""
+},
+{
+"id": 1,
+"page_number": 2,
+"left": "300px",
+"top": "227px",
+"width": "248px",
+"height": "36px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "ORF1ab, N, S",
+"labels": [
+{
+"id": 6,
+"text": "Viral gene(s) targetted"
+}
+],
+"comment": ""
+},
+{
+"id": 2,
+"page_number": 3,
+"left": "450px",
+"top": "333px",
+"width": "138px",
+"height": "31px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "RNase P (RP)",
+"labels": [
+{
+"id": 83,
+"text": "Controls/Internal/Human gene target"
+}
+],
+"comment": ""
+},
+{
+"id": 3,
+"page_number": 5,
+"left": "131px",
+"top": "210px",
+"width": "644px",
+"height": "47px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "Leftover negative deidentified clinical specimens (NP swabs) from prior to the COVID19 pandemic (i.e., prior to Dec. 2019) were pooled to create the negative matrix",
+"labels": [
+{
+"id": 86,
+"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 4,
+"page_number": 5,
+"left": "493px",
+"top": "211px",
+"width": "87px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "NP swabs",
+"labels": [
+{
+"id": 64,
+"text": "Specimen/Synthetic Specimen/Clinical matrix"
+}
+],
+"comment": ""
+},
+{
+"id": 5,
+"page_number": 5,
+"left": "179px",
+"top": "292px",
+"width": "112px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genomic RNA",
+"labels": [
+{
+"id": 62,
+"text": "Specimen/Synthetic Specimen/Virus"
+},
+{
+"id": 112,
+"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
+}
+],
+"comment": ""
+},
+{
+"id": 6,
+"page_number": 5,
+"left": "328px",
+"top": "290px",
+"width": "435px",
+"height": "27px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "BEI Resources (NR-52285; v2019-nCoV/USA-WA1/2020 lot# 70033700",
+"labels": [
+{
+"id": 63,
+"text": "Specimen/Synthetic Specimen/Virus/Source"
+}
+],
+"comment": ""
+},
+{
+"id": 7,
+"page_number": 5,
+"left": "148px",
+"top": "803px",
+"width": "47px",
+"height": "22px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "0.625",
+"labels": [
+{
+"id": 66,
+"text": "Limit of Detection (LOD)/Value"
+}
+],
+"comment": ""
+},
+{
+"id": 8,
+"page_number": 5,
+"left": "194px",
+"top": "803px",
+"width": "80px",
+"height": "23px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "genome copies / \u03bcL",
+"labels": [
+{
+"id": 67,
+"text": "Limit of Detection (LOD)/Units"
+}
+],
+"comment": ""
+},
+{
+"id": 9,
+"page_number": 5,
+"left": "591px",
+"top": "462px",
+"width": "22px",
+"height": "18px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "20",
+"labels": [
+{
+"id": 68,
+"text": "Limit of Detection (LOD)/Minimum Replicates"
+}
+],
+"comment": ""
+}
+],
 "comments": []
 }

@@ -15,7 +15,7 @@
         "Amendments and Other Documents (PDF)"
     ],
     [
-        "CDC__CDC 2019-Novel Coronavirus (2019-nCoV) Real-Time RT-PCR Diagnostic Panel",
+        "cdc__cdc 2019-novel coronavirus (2019-ncov) real-time rt-pcr diagnostic panel",
         "2020-02-04",
         "2020-07-13",
         "CDC",
@@ -36,7 +36,7 @@
         ]
     ],
     [
-        "Wadsworth Center, New York State Department of Health's (CDC)__New York SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Panel",
+        "wadsworth center, new york state department of health's (cdc)__new york sars-cov-2 real-time reverse transcriptase (rt)-pcr diagnostic panel",
         "2020-02-29",
         "2020-03-15",
         "Wadsworth Center, New York State Department of Health's (CDC)",
@@ -55,7 +55,7 @@
         ]
     ],
     [
-        "Roche Molecular Systems, Inc. (RMS)__cobas SARS-CoV-2",
+        "roche molecular systems, inc. (rms)__cobas sars-cov-2",
         "2020-03-12",
         "2020-05-13",
         "Roche Molecular Systems, Inc. (RMS)",
@@ -75,7 +75,7 @@
         ]
     ],
     [
-        "Thermo Fisher Scientific, Inc.__TaqPath COVID-19 Combo Kit",
+        "thermo fisher scientific, inc.__taqpath covid-19 combo kit",
         "2020-03-13",
         "2020-07-17",
         "Thermo Fisher Scientific, Inc.",
@@ -97,7 +97,7 @@
         ]
     ],
     [
-        "Hologic, Inc.__Panther Fusion SARS-CoV-2 Assay",
+        "hologic, inc.__panther fusion sars-cov-2 assay",
         "2020-03-16",
         "2020-09-23",
         "Hologic, Inc.",
@@ -116,7 +116,7 @@
         ]
     ],
     [
-        "Laboratory Corporation of America (LabCorp)__COVID-19 RT-PCR Test",
+        "laboratory corporation of america (labcorp)__covid-19 rt-pcr test",
         "2020-03-16",
         "2020-09-18",
         "Laboratory Corporation of America (LabCorp)",
@@ -137,7 +137,7 @@
         ]
     ],
     [
-        "Quidel Corporation__Lyra SARS-CoV-2 Assay",
+        "quidel corporation__lyra sars-cov-2 assay",
         "2020-03-17",
         "2020-04-08",
         "Quidel Corporation",
@@ -157,7 +157,7 @@
         ]
     ],
     [
-        "Quest Diagnostics Infectious Disease, Inc.__Quest SARS-CoV-2 rRT-PCR",
+        "quest diagnostics infectious disease, inc.__quest sars-cov-2 rrt-pcr",
         "2020-03-17",
         "2020-09-21",
         "Quest Diagnostics Infectious Disease, Inc.",
@@ -180,7 +180,7 @@
         ]
     ],
     [
-        "Abbott Molecular__Abbott RealTime SARS-CoV-2 assay",
+        "abbott molecular__abbott realtime sars-cov-2 assay",
         "2020-03-18",
         "2020-07-30",
         "Abbott Molecular",
@@ -200,7 +200,7 @@
         ]
     ],
     [
-        "DiaSorin Molecular LLC__Simplexa COVID-19 Direct",
+        "diasorin molecular llc__simplexa covid-19 direct",
         "2020-03-19",
         "2020-06-04",
         "DiaSorin Molecular LLC",
@@ -221,7 +221,7 @@
         ]
     ],
     [
-        "GenMark Diagnostics, Inc.__ePlex SARS-CoV-2 Test",
+        "genmark diagnostics, inc.__eplex sars-cov-2 test",
         "2020-03-19",
         "2020-08-18",
         "GenMark Diagnostics, Inc.",
@@ -240,7 +240,7 @@
         ]
     ],
     [
-        "Primerdesign Ltd__Primerdesign Ltd COVID-19 genesig Real-Time PCR assay",
+        "primerdesign ltd__primerdesign ltd covid-19 genesig real-time pcr assay",
         "2020-03-20",
         "2020-04-08",
         "Primerdesign Ltd",
@@ -259,7 +259,7 @@
         ]
     ],
     [
-        "Cepheid__Xpert Xpress SARS-CoV-2 test",
+        "cepheid__xpert xpress sars-cov-2 test",
         "2020-03-20",
         "2020-09-21",
         "Cepheid",
@@ -282,7 +282,7 @@
         ]
     ],
     [
-        "BioFire Defense, LLC__BioFire COVID-19 Test",
+        "biofire defense, llc__biofire covid-19 test",
         "2020-03-23",
         "2020-04-30",
         "BioFire Defense, LLC",
@@ -301,7 +301,7 @@
         ]
     ],
     [
-        "Mesa Biotech Inc.__Accula SARS-Cov-2 Test",
+        "mesa biotech inc.__accula sars-cov-2 test",
         "2020-03-23",
         "2020-08-24",
         "Mesa Biotech Inc.",
@@ -321,7 +321,7 @@
         ]
     ],
     [
-        "PerkinElmer, Inc.__PerkinElmer New Coronavirus Nucleic Acid Detection Kit",
+        "perkinelmer, inc.__perkinelmer new coronavirus nucleic acid detection kit",
         "2020-03-24",
         "2020-09-25",
         "PerkinElmer, Inc.",
@@ -340,7 +340,7 @@
         ]
     ],
     [
-        "Avellino Lab USA, Inc.__AvellinoCoV2 test",
+        "avellino lab usa, inc.__avellinocov2 test",
         "2020-03-25",
         "2020-09-25",
         "Avellino Lab USA, Inc.",
@@ -359,7 +359,7 @@
         ]
     ],
     [
-        "BGI Genomics Co. Ltd__Real-Time Fluorescent RT-PCR Kit for Detecting SARS-CoV-2",
+        "bgi genomics co. ltd__real-time fluorescent rt-pcr kit for detecting sars-cov-2",
         "2020-03-26",
         "2020-04-24",
         "BGI Genomics Co. Ltd",
@@ -378,7 +378,7 @@
         ]
     ],
     [
-        "Abbott Diagnostics Scarborough, Inc.__ID NOW COVID-19",
+        "abbott diagnostics scarborough, inc.__id now covid-19",
         "2020-03-27",
         "2020-09-17",
         "Abbott Diagnostics Scarborough, Inc.",
@@ -397,7 +397,7 @@
         ]
     ],
     [
-        "Luminex Molecular Diagnostics, Inc.__NxTAG CoV Extended Panel Assay",
+        "luminex molecular diagnostics, inc.__nxtag cov extended panel assay",
         "2020-03-27",
         "2020-03-27",
         "Luminex Molecular Diagnostics, Inc.",
@@ -414,7 +414,7 @@
         []
     ],
     [
-        "NeuMoDx Molecular, Inc.__NeuMoDx SARS-CoV-2 Assay",
+        "neumodx molecular, inc.__neumodx sars-cov-2 assay",
         "2020-03-30",
         "2020-04-23",
         "NeuMoDx Molecular, Inc.",
@@ -433,7 +433,7 @@
         ]
     ],
     [
-        "QIAGEN GmbH__QIAstat-Dx Respiratory SARS-CoV-2 Panel",
+        "qiagen gmbh__qiastat-dx respiratory sars-cov-2 panel",
         "2020-03-30",
         "2020-09-21",
         "QIAGEN GmbH",
@@ -454,7 +454,7 @@
         ]
     ],
     [
-        "Yale New Haven Hospital, Clinical Virology Laboratory__SARS-CoV-2 PCR test",
+        "yale new haven hospital, clinical virology laboratory__sars-cov-2 pcr test",
         "2020-03-31",
         "2020-06-04",
         "Yale New Haven Hospital, Clinical Virology Laboratory",
@@ -471,7 +471,7 @@
         ]
     ],
     [
-        "Cellex Inc.__qSARS-CoV-2 IgG/IgM Rapid Test",
+        "cellex inc.__qsars-cov-2 igg/igm rapid test",
         "2020-04-01",
         "2020-06-12",
         "Cellex Inc.",
@@ -488,7 +488,7 @@
         []
     ],
     [
-        "Ipsum Diagnostics, LLC__COV-19 IDx assay",
+        "ipsum diagnostics, llc__cov-19 idx assay",
         "2020-04-01",
         "2020-04-01",
         "Ipsum Diagnostics, LLC",
@@ -503,7 +503,7 @@
         []
     ],
     [
-        "Becton, Dickinson & Company (BD)__BioGX SARS-CoV-2 Reagents for BD MAX System",
+        "becton, dickinson & company (bd)__biogx sars-cov-2 reagents for bd max system",
         "2020-04-02",
         "2020-09-22",
         "Becton, Dickinson & Company (BD)",
@@ -522,7 +522,7 @@
         ]
     ],
     [
-        "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia__SARS-CoV-2 RT-PCR test",
+        "infectious disease diagnostics laboratory - children's hospital of philadelphia__sars-cov-2 rt-pcr test",
         "2020-04-02",
         "2020-04-02",
         "Infectious Disease Diagnostics Laboratory - Children's Hospital of Philadelphia",
@@ -537,7 +537,7 @@
         []
     ],
     [
-        "Diagnostic Molecular Laboratory - Northwestern Medicine__SARS-Cov-2 Assay",
+        "diagnostic molecular laboratory - northwestern medicine__sars-cov-2 assay",
         "2020-04-02",
         "2020-04-02",
         "Diagnostic Molecular Laboratory - Northwestern Medicine",
@@ -552,7 +552,7 @@
         []
     ],
     [
-        "Luminex Corporation__ARIES SARS-CoV-2 Assay",
+        "luminex corporation__aries sars-cov-2 assay",
         "2020-04-03",
         "2020-05-11",
         "Luminex Corporation",
@@ -571,7 +571,7 @@
         ]
     ],
     [
-        "ScienCell Research Laboratories__ScienCell SARS-CoV-2 Coronavirus Real-time RT-PCR (RT-qPCR) Detection Kit",
+        "sciencell research laboratories__sciencell sars-cov-2 coronavirus real-time rt-pcr (rt-qpcr) detection kit",
         "2020-04-03",
         "2020-09-22",
         "ScienCell Research Laboratories",
@@ -591,7 +591,7 @@
         ]
     ],
     [
-        "Co-Diagnostics, Inc.__Logix Smart Coronavirus Disease 2019 (COVID-19) Kit",
+        "co-diagnostics, inc.__logix smart coronavirus disease 2019 (covid-19) kit",
         "2020-04-03",
         "2020-04-03",
         "Co-Diagnostics, Inc.",
@@ -608,7 +608,7 @@
         []
     ],
     [
-        "Massachusetts General Hospital__MGH COVID-19 qPCR assay",
+        "massachusetts general hospital__mgh covid-19 qpcr assay",
         "2020-04-03",
         "2020-04-03",
         "Massachusetts General Hospital",
@@ -623,7 +623,7 @@
         []
     ],
     [
-        "Gnomegen LLC__Gnomegen COVID-19 RT-Digital PCR Detection Kit",
+        "gnomegen llc__gnomegen covid-19 rt-digital pcr detection kit",
         "2020-04-06",
         "2020-04-28",
         "Gnomegen LLC",
@@ -640,7 +640,7 @@
         []
     ],
     [
-        "Viracor Eurofins Clinical Diagnostics__Viracor SARS-CoV-2 assay",
+        "viracor eurofins clinical diagnostics__viracor sars-cov-2 assay",
         "2020-04-06",
         "2020-04-06",
         "Viracor Eurofins Clinical Diagnostics",
@@ -655,7 +655,7 @@
         []
     ],
     [
-        "InBios International, Inc.__Smart Detect SARS-CoV-2 rRT-PCR Kit",
+        "inbios international, inc.__smart detect sars-cov-2 rrt-pcr kit",
         "2020-04-07",
         "2020-10-02",
         "InBios International, Inc.",
@@ -676,7 +676,7 @@
         ]
     ],
     [
-        "Becton, Dickinson & Company__BD SARS-CoV-2Reagents for BD MAX System",
+        "becton, dickinson & company__bd sars-cov-2reagents for bd max system",
         "2020-04-08",
         "2020-09-23",
         "Becton, Dickinson & Company",
@@ -695,7 +695,7 @@
         ]
     ],
     [
-        "DiaCarta, Inc.__QuantiVirus SARS-CoV-2 Test kit",
+        "diacarta, inc.__quantivirus sars-cov-2 test kit",
         "2020-04-08",
         "2020-04-08",
         "DiaCarta, Inc.",
@@ -712,7 +712,7 @@
         []
     ],
     [
-        "Stanford Health Care Clinical Virology Laboratory__Stanford SARS-CoV-2 assay",
+        "stanford health care clinical virology laboratory__stanford sars-cov-2 assay",
         "2020-04-08",
         "2020-04-08",
         "Stanford Health Care Clinical Virology Laboratory",
@@ -727,7 +727,7 @@
         []
     ],
     [
-        "Atila BioSystems, Inc.__iAMP COVID-19 Detection Kit",
+        "atila biosystems, inc.__iamp covid-19 detection kit",
         "2020-04-10",
         "2020-07-18",
         "Atila BioSystems, Inc.",
@@ -746,7 +746,7 @@
         ]
     ],
     [
-        "Infinity BiologiX LLC__Infinity BiologiX TaqPath SARS-CoV-2 Assay 04/10/2020",
+        "infinity biologix llc__infinity biologix taqpath sars-cov-2 assay 04/10/2020",
         "2020-04-10",
         "2020-09-18",
         "Infinity BiologiX LLC",
@@ -763,7 +763,7 @@
         []
     ],
     [
-        "Specialty Diagnostic (SDI) Laboratories__SDI SARS-CoV-2 AssayLetter Granting Inclusion",
+        "specialty diagnostic (sdi) laboratories__sdi sars-cov-2 assayletter granting inclusion",
         "2020-04-10",
         "2020-04-10",
         "Specialty Diagnostic (SDI) Laboratories",
@@ -778,7 +778,7 @@
         []
     ],
     [
-        "Orig3n, Inc.__Orig3n 2019 Novel Coronavirus (COVID-19) Test",
+        "orig3n, inc.__orig3n 2019 novel coronavirus (covid-19) test",
         "2020-04-10",
         "2020-04-10",
         "Orig3n, Inc.",
@@ -793,7 +793,7 @@
         []
     ],
     [
-        "University of North Carolina Medical Center__UNC Health SARS-CoV-2 real-time RT-PCR test",
+        "university of north carolina medical center__unc health sars-cov-2 real-time rt-pcr test",
         "2020-04-10",
         "2020-09-21",
         "University of North Carolina Medical Center",
@@ -811,7 +811,7 @@
         ]
     ],
     [
-        "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami__COVID-19 RT-PCR Test",
+        "pathology/laboratory medicine lab of baptist hospital miami__covid-19 rt-pcr test",
         "2020-04-13",
         "2020-09-21",
         "Pathology/Laboratory Medicine Lab of Baptist Hospital Miami",
@@ -829,7 +829,7 @@
         ]
     ],
     [
-        "Integrity Laboratories__SARS-CoV-2 Assay",
+        "integrity laboratories__sars-cov-2 assay",
         "2020-04-13",
         "2020-04-13",
         "Integrity Laboratories",
@@ -844,7 +844,7 @@
         []
     ],
     [
-        "Ortho Clinical Diagnostics, Inc.__VITROS Immunodiagnostic Products Anti-SARS-CoV-2 Total Reagent Pack",
+        "ortho clinical diagnostics, inc.__vitros immunodiagnostic products anti-sars-cov-2 total reagent pack",
         "2020-04-14",
         "2020-05-09",
         "Ortho Clinical Diagnostics, Inc.",
@@ -863,7 +863,7 @@
         ]
     ],
     [
-        "Exact Sciences Laboratories__SARS-CoV-2 Test",
+        "exact sciences laboratories__sars-cov-2 test",
         "2020-04-14",
         "2020-04-14",
         "Exact Sciences Laboratories",
@@ -878,7 +878,7 @@
         []
     ],
     [
-        "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital__Childrens-Altona-SARS-CoV-2 Assay",
+        "infectious diseases diagnostics laboratory (iddl), boston children's hospital__childrens-altona-sars-cov-2 assay",
         "2020-04-14",
         "2020-09-21",
         "Infectious Diseases Diagnostics Laboratory (IDDL), Boston Children's Hospital",
@@ -896,7 +896,7 @@
         ]
     ],
     [
-        "Maccura Biotechnology (USA) LLC__SARS-CoV-2 Fluorescent PCR Kit",
+        "maccura biotechnology (usa) llc__sars-cov-2 fluorescent pcr kit",
         "2020-04-15",
         "2020-04-15",
         "Maccura Biotechnology (USA) LLC",
@@ -915,7 +915,7 @@
         ]
     ],
     [
-        "Mount Sinai Laboratory__COVID-19 ELISA IgG Antibody Test",
+        "mount sinai laboratory__covid-19 elisa igg antibody test",
         "2020-04-15",
         "2020-04-15",
         "Mount Sinai Laboratory",
@@ -930,7 +930,7 @@
         []
     ],
     [
-        "CirrusDx Laboratories__CirrusDx SARS-CoV-2 Assay",
+        "cirrusdx laboratories__cirrusdx sars-cov-2 assay",
         "2020-04-15",
         "2020-09-21",
         "CirrusDx Laboratories",
@@ -948,7 +948,7 @@
         ]
     ],
     [
-        "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory__CDI Enhanced COVID-19 Test",
+        "hackensack university medical center (humc) molecular pathology laboratory__cdi enhanced covid-19 test",
         "2020-04-15",
         "2020-09-21",
         "Hackensack University Medical Center (HUMC) Molecular Pathology Laboratory",
@@ -966,7 +966,7 @@
         ]
     ],
     [
-        "GenoSensor, LLC__GS COVID-19 RT-PCR KIT",
+        "genosensor, llc__gs covid-19 rt-pcr kit",
         "2020-04-16",
         "2020-04-16",
         "GenoSensor, LLC",
@@ -983,7 +983,7 @@
         []
     ],
     [
-        "KorvaLabs Inc.__Curative-Korva SARS-Cov-2 Assay",
+        "korvalabs inc.__curative-korva sars-cov-2 assay",
         "2020-04-16",
         "2020-06-11",
         "KorvaLabs Inc.",
@@ -1000,7 +1000,7 @@
         ]
     ],
     [
-        "Fosun Pharma USA Inc.__Fosun COVID-19 RT-PCR Detection Kit",
+        "fosun pharma usa inc.__fosun covid-19 rt-pcr detection kit",
         "2020-04-17",
         "2020-04-17",
         "Fosun Pharma USA Inc.",
@@ -1017,7 +1017,7 @@
         []
     ],
     [
-        "OSANG Healthcare__GeneFinder COVID-19 Plus RealAmp Kit",
+        "osang healthcare__genefinder covid-19 plus realamp kit",
         "2020-04-18",
         "2020-04-18",
         "OSANG Healthcare",
@@ -1034,7 +1034,7 @@
         []
     ],
     [
-        "Trax Management Services Inc.__PhoenixDx 2019-CoV",
+        "trax management services inc.__phoenixdx 2019-cov",
         "2020-04-20",
         "2020-08-08",
         "Trax Management Services Inc.",
@@ -1054,7 +1054,7 @@
         ]
     ],
     [
-        "Mayo Clinic Laboratories, Rochester, MN__SARS-CoV-2 Molecular Detection Assay",
+        "mayo clinic laboratories, rochester, mn__sars-cov-2 molecular detection assay",
         "2020-04-20",
         "2020-07-29",
         "Mayo Clinic Laboratories, Rochester, MN",
@@ -1071,7 +1071,7 @@
         ]
     ],
     [
-        "Seegene, Inc.__Allplex 2019-nCoV Assay",
+        "seegene, inc.__allplex 2019-ncov assay",
         "2020-04-21",
         "2020-07-27",
         "Seegene, Inc.",
@@ -1090,7 +1090,7 @@
         ]
     ],
     [
-        "altona Diagnostics GmbH__RealStar SARS-CoV02 RT-PCR Kits U.S.",
+        "altona diagnostics gmbh__realstar sars-cov02 rt-pcr kits u.s.",
         "2020-04-22",
         "2020-04-22",
         "altona Diagnostics GmbH",
@@ -1107,7 +1107,7 @@
         []
     ],
     [
-        "Diatherix Eurofins Laboratory__SARS-CoV-2 PCR Test",
+        "diatherix eurofins laboratory__sars-cov-2 pcr test",
         "2020-04-22",
         "2020-09-22",
         "Diatherix Eurofins Laboratory",
@@ -1122,7 +1122,7 @@
         []
     ],
     [
-        "SD Biosensor, Inc.__STANDARD M nCoV Real-Time Detection Kit",
+        "sd biosensor, inc.__standard m ncov real-time detection kit",
         "2020-04-23",
         "2020-04-23",
         "SD Biosensor, Inc.",
@@ -1139,7 +1139,7 @@
         []
     ],
     [
-        "Southwest Regional PCR Laboratory LLC. dba MicroGen DX__COVID-19 Key",
+        "southwest regional pcr laboratory llc. dba microgen dx__covid-19 key",
         "2020-04-23",
         "2020-04-23",
         "Southwest Regional PCR Laboratory LLC. dba MicroGen DX",
@@ -1154,7 +1154,7 @@
         []
     ],
     [
-        "DiaSorin Inc.__LIAISON SARS-CoV-2 S1/S2 IgG",
+        "diasorin inc.__liaison sars-cov-2 s1/s2 igg",
         "2020-04-24",
         "2020-07-22",
         "DiaSorin Inc.",
@@ -1173,7 +1173,7 @@
         ]
     ],
     [
-        "Ortho-Clinical Diagnostics, Inc.__VITROS Immunodiagnostic Products Anti-SARS-CoV-2 IgG Reagent",
+        "ortho-clinical diagnostics, inc.__vitros immunodiagnostic products anti-sars-cov-2 igg reagent",
         "2020-04-24",
         "2020-04-24",
         "Ortho-Clinical Diagnostics, Inc.",
@@ -1192,7 +1192,7 @@
         ]
     ],
     [
-        "AIT Laboratories__SARS-CoV-2 Assay",
+        "ait laboratories__sars-cov-2 assay",
         "2020-04-24",
         "2020-04-24",
         "AIT Laboratories",
@@ -1207,7 +1207,7 @@
         []
     ],
     [
-        "Ultimate Dx Laboratory__UDX SARS-CoV-2 Molecular Assay",
+        "ultimate dx laboratory__udx sars-cov-2 molecular assay",
         "2020-04-24",
         "2020-04-24",
         "Ultimate Dx Laboratory",
@@ -1222,7 +1222,7 @@
         []
     ],
     [
-        "Abbott Laboratories Inc.__SARS-CoV-2 IgG assay",
+        "abbott laboratories inc.__sars-cov-2 igg assay",
         "2020-04-26",
         "2020-09-18",
         "Abbott Laboratories Inc.",
@@ -1244,7 +1244,7 @@
         ]
     ],
     [
-        "SEASUN BIOMATERIALS__U-TOP COVID-19 Detection Kit",
+        "seasun biomaterials__u-top covid-19 detection kit",
         "2020-04-27",
         "2020-09-01",
         "SEASUN BIOMATERIALS",
@@ -1263,10 +1263,10 @@
         ]
     ],
     [
-        "Nationwide Children\u2019s Hospital__SARS-CoV-2 Assay",
+        "nationwide children’s hospital__sars-cov-2 assay",
         "2020-04-27",
         "2020-04-27",
-        "Nationwide Children\u2019s Hospital",
+        "Nationwide Children’s Hospital",
         "SARS-CoV-2 Assay",
         "https://www.fda.gov/media/137424/download",
         "Molecular, U",
@@ -1278,7 +1278,7 @@
         []
     ],
     [
-        "Biocerna__SARS-CoV-2 Test",
+        "biocerna__sars-cov-2 test",
         "2020-04-28",
         "2020-04-28",
         "Biocerna",
@@ -1293,7 +1293,7 @@
         []
     ],
     [
-        "LabGenomics Co., Ltd.__LabGun COVID-19 RT-PCR Kit",
+        "labgenomics co., ltd.__labgun covid-19 rt-pcr kit",
         "2020-04-29",
         "2020-09-22",
         "LabGenomics Co., Ltd.",
@@ -1310,7 +1310,7 @@
         []
     ],
     [
-        "Rheonix, Inc.__Rheonix COVID-19 MDx Assay",
+        "rheonix, inc.__rheonix covid-19 mdx assay",
         "2020-04-29",
         "2020-09-21",
         "Rheonix, Inc.",
@@ -1330,7 +1330,7 @@
         ]
     ],
     [
-        "Bio-Rad Laboratories__Platelia SARS-CoV-2 Total Ab assay",
+        "bio-rad laboratories__platelia sars-cov-2 total ab assay",
         "2020-04-29",
         "2020-07-21",
         "Bio-Rad Laboratories",
@@ -1349,7 +1349,7 @@
         ]
     ],
     [
-        "Wadsworth Center, New York State Department of Health__New York SARS-CoV Microsphere Immunoassay for Antibody Detection",
+        "wadsworth center, new york state department of health__new york sars-cov microsphere immunoassay for antibody detection",
         "2020-04-30",
         "2020-04-30",
         "Wadsworth Center, New York State Department of Health",
@@ -1364,7 +1364,7 @@
         []
     ],
     [
-        "Altru Diagnostics, Inc.__Altru Dx SARS-CoV-2 RT-PCR assay",
+        "altru diagnostics, inc.__altru dx sars-cov-2 rt-pcr assay",
         "2020-04-30",
         "2020-06-04",
         "Altru Diagnostics, Inc.",
@@ -1381,7 +1381,7 @@
         ]
     ],
     [
-        "Bio-Rad Laboratories, Inc.__Bio-Rad SARS-CoV-2 ddPCR Test",
+        "bio-rad laboratories, inc.__bio-rad sars-cov-2 ddpcr test",
         "2020-05-01",
         "2020-09-18",
         "Bio-Rad Laboratories, Inc.",
@@ -1398,7 +1398,7 @@
         []
     ],
     [
-        "BioFire Diagnostics, LLC__BioFire Respiratory Panel 2.1 (RP2.1)",
+        "biofire diagnostics, llc__biofire respiratory panel 2.1 (rp2.1)",
         "2020-05-01",
         "2020-05-01",
         "BioFire Diagnostics, LLC",
@@ -1415,7 +1415,7 @@
         []
     ],
     [
-        "Roche Diagnostics__Elecsys Anti-SARS-CoV-2",
+        "roche diagnostics__elecsys anti-sars-cov-2",
         "2020-05-02",
         "2020-07-21",
         "Roche Diagnostics",
@@ -1435,7 +1435,7 @@
         ]
     ],
     [
-        "UTMG Pathology Laboratory__UTHSC/UCH SARS-CoV-2-RT-PCR Assay",
+        "utmg pathology laboratory__uthsc/uch sars-cov-2-rt-pcr assay",
         "2020-05-03",
         "2020-07-22",
         "UTMG Pathology Laboratory",
@@ -1453,7 +1453,7 @@
         ]
     ],
     [
-        "EUROIMMUN US Inc.__Anti-SARS-CoV-2 ELISA (IgG)",
+        "euroimmun us inc.__anti-sars-cov-2 elisa (igg)",
         "2020-05-04",
         "2020-05-04",
         "EUROIMMUN US Inc.",
@@ -1470,7 +1470,7 @@
         []
     ],
     [
-        "Sansure BioTech Inc.__Novel Coronavirus (2019-nCoV) Nucleic Acid Diagnostic Kit (PCR-Fluorescence Probing)",
+        "sansure biotech inc.__novel coronavirus (2019-ncov) nucleic acid diagnostic kit (pcr-fluorescence probing)",
         "2020-05-04",
         "2020-05-04",
         "Sansure BioTech Inc.",
@@ -1487,10 +1487,10 @@
         []
     ],
     [
-        "Fast Track Diagnostics Luxembourg S.\u00e1.r.l. (a Siemens Healthineers Company)__FTD SARS-CoV-2",
+        "fast track diagnostics luxembourg s.á.r.l. (a siemens healthineers company)__ftd sars-cov-2",
         "2020-05-05",
         "2020-07-09",
-        "Fast Track Diagnostics Luxembourg S.\u00e1.r.l. (a Siemens Healthineers Company)",
+        "Fast Track Diagnostics Luxembourg S.á.r.l. (a Siemens Healthineers Company)",
         "FTD SARS-CoV-2",
         "https://www.fda.gov/media/137687/download",
         "Molecular Real-time RT-PCR",
@@ -1506,7 +1506,7 @@
         ]
     ],
     [
-        "OPTI Medical Systems, Inc.__OPTI SARS-CoV-2 RT PCR Test",
+        "opti medical systems, inc.__opti sars-cov-2 rt pcr test",
         "2020-05-06",
         "2020-07-29",
         "OPTI Medical Systems, Inc.",
@@ -1526,7 +1526,7 @@
         ]
     ],
     [
-        "Sherlock BioSciences, Inc.__Sherlock CRISPR SARS-CoV-2 Kit",
+        "sherlock biosciences, inc.__sherlock crispr sars-cov-2 kit",
         "2020-05-06",
         "2020-09-21",
         "Sherlock BioSciences, Inc.",
@@ -1546,10 +1546,10 @@
         ]
     ],
     [
-        "BioM\u00e9rieux SA__SARS-COV-2 R-GENE",
+        "biomérieux sa__sars-cov-2 r-gene",
         "2020-05-06",
         "2020-05-06",
-        "BioM\u00e9rieux SA",
+        "BioMérieux SA",
         "SARS-COV-2 R-GENE",
         "https://www.fda.gov/media/137743/download",
         "Molecular Real-time RT-PCR",
@@ -1563,7 +1563,7 @@
         []
     ],
     [
-        "Zymo Research Corporation__Quick SARS-CoV-2rRT-PCR Kit",
+        "zymo research corporation__quick sars-cov-2rrt-pcr kit",
         "2020-05-07",
         "2020-05-28",
         "Zymo Research Corporation",
@@ -1583,7 +1583,7 @@
         ]
     ],
     [
-        "Biocollections Worldwide, Inc.__Biocollections Worldwide SARS-Co-V-2 Assay",
+        "biocollections worldwide, inc.__biocollections worldwide sars-co-v-2 assay",
         "2020-05-07",
         "2020-05-07",
         "Biocollections Worldwide, Inc.",
@@ -1598,7 +1598,7 @@
         []
     ],
     [
-        "Quidel Corporation__Sofia 2 SARS Antigen FIA",
+        "quidel corporation__sofia 2 sars antigen fia",
         "2020-05-08",
         "2020-07-17",
         "Quidel Corporation",
@@ -1618,7 +1618,7 @@
         ]
     ],
     [
-        "Gnomegen LLC__Gnomegen COVID-19-RT-qPCR Detection Kit",
+        "gnomegen llc__gnomegen covid-19-rt-qpcr detection kit",
         "2020-05-08",
         "2020-05-08",
         "Gnomegen LLC",
@@ -1635,7 +1635,7 @@
         []
     ],
     [
-        "1drop Inc.__1copy COVID-19 qPCR Multi Kit",
+        "1drop inc.__1copy covid-19 qpcr multi kit",
         "2020-05-11",
         "2020-05-11",
         "1drop Inc.",
@@ -1652,7 +1652,7 @@
         []
     ],
     [
-        "Abbott Molecular Inc.__Alinity m SARS-CoV-2 assay",
+        "abbott molecular inc.__alinity m sars-cov-2 assay",
         "2020-05-11",
         "2020-08-24",
         "Abbott Molecular Inc.",
@@ -1672,7 +1672,7 @@
         ]
     ],
     [
-        "Columbia University Laboratory of Personalized Genomic Medicine__TRIPLEX CII-SARS-CoV-2 rRT-PCR TEST",
+        "columbia university laboratory of personalized genomic medicine__triplex cii-sars-cov-2 rrt-pcr test",
         "2020-05-12",
         "2020-05-12",
         "Columbia University Laboratory of Personalized Genomic Medicine",
@@ -1689,7 +1689,7 @@
         ]
     ],
     [
-        "Applied DNA Sciences, Inc.__Linea COVID-19 Assay Kit",
+        "applied dna sciences, inc.__linea covid-19 assay kit",
         "2020-05-13",
         "2020-09-21",
         "Applied DNA Sciences, Inc.",
@@ -1711,7 +1711,7 @@
         ]
     ],
     [
-        "One Health Laboratories, LLC__SARS-CoV-2 Real-Time RT-PCR-Test",
+        "one health laboratories, llc__sars-cov-2 real-time rt-pcr-test",
         "2020-05-13",
         "2020-05-13",
         "One Health Laboratories, LLC",
@@ -1726,7 +1726,7 @@
         []
     ],
     [
-        "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine__SARS-CoV-2-Assay",
+        "cedars-sinai medical center, department of pathology and laboratory medicine__sars-cov-2-assay",
         "2020-05-13",
         "2020-05-13",
         "Cedars-Sinai Medical Center, Department of Pathology and Laboratory Medicine",
@@ -1741,7 +1741,7 @@
         []
     ],
     [
-        "Hologic, Inc.__Aptima SARS-CoV-2 assay",
+        "hologic, inc.__aptima sars-cov-2 assay",
         "2020-05-14",
         "2020-10-05",
         "Hologic, Inc.",
@@ -1761,7 +1761,7 @@
         ]
     ],
     [
-        "GeneMatrix, Inc.__NeoPlex COVID-19 Detection Kit",
+        "genematrix, inc.__neoplex covid-19 detection kit",
         "2020-05-14",
         "2020-09-21",
         "GeneMatrix, Inc.",
@@ -1781,7 +1781,7 @@
         ]
     ],
     [
-        "Everlywell, Inc.__Everlywell COVID-19 Test Home Collection Kit",
+        "everlywell, inc.__everlywell covid-19 test home collection kit",
         "2020-05-15",
         "2020-09-04",
         "Everlywell, Inc.",
@@ -1800,7 +1800,7 @@
         ]
     ],
     [
-        "Fulgent Therapeutics, LLC__Fulgent COVID-19 by RT-PCR Test",
+        "fulgent therapeutics, llc__fulgent covid-19 by rt-pcr test",
         "2020-05-15",
         "2020-06-15",
         "Fulgent Therapeutics, LLC",
@@ -1819,7 +1819,7 @@
         ]
     ],
     [
-        "Assurance Scientific Laboratories__Assurance SARS-CoV-2 Panel",
+        "assurance scientific laboratories__assurance sars-cov-2 panel",
         "2020-05-15",
         "2020-9-21",
         "Assurance Scientific Laboratories",
@@ -1839,7 +1839,7 @@
         ]
     ],
     [
-        "Quidel Corporation__Lyra Direct SARS-CoV-2 Assay",
+        "quidel corporation__lyra direct sars-cov-2 assay",
         "2020-05-18",
         "2020-05-18",
         "Quidel Corporation",
@@ -1856,7 +1856,7 @@
         []
     ],
     [
-        "Color Genomics, Inc.__Color Genomics SARS-Cov-2 RT-LAMP Diagnostic Assay (reissued July 24, 2020)",
+        "color genomics, inc.__color genomics sars-cov-2 rt-lamp diagnostic assay (reissued july 24, 2020)",
         "2020-05-18",
         "2020-09-22",
         "Color Genomics, Inc.",
@@ -1876,7 +1876,7 @@
         ]
     ],
     [
-        "BioCore Co., Ltd.__BioCore 2019-nCoV Real Time PCR Kit",
+        "biocore co., ltd.__biocore 2019-ncov real time pcr kit",
         "2020-05-21",
         "2020-09-21",
         "BioCore Co., Ltd.",
@@ -1896,7 +1896,7 @@
         ]
     ],
     [
-        "SolGent Co., Ltd.__DiaPlexQ Novel Coronavirus (2019-nCoV) Detection Kit",
+        "solgent co., ltd.__diaplexq novel coronavirus (2019-ncov) detection kit",
         "2020-05-21",
         "2020-05-21",
         "SolGent Co., Ltd.",
@@ -1913,7 +1913,7 @@
         []
     ],
     [
-        "Seasun Biomaterials, Inc.__AQ-TOP COVID-19 Rapid Detection",
+        "seasun biomaterials, inc.__aq-top covid-19 rapid detection",
         "2020-05-21",
         "2020-05-21",
         "Seasun Biomaterials, Inc.",
@@ -1930,7 +1930,7 @@
         []
     ],
     [
-        "P23 Labs, LLC.__P23 Labs TaqPath SARS-CoV-2 Assay",
+        "p23 labs, llc.__p23 labs taqpath sars-cov-2 assay",
         "2020-05-21",
         "2020-07-10",
         "P23 Labs, LLC.",
@@ -1950,7 +1950,7 @@
         ]
     ],
     [
-        "dba SpectronRx__Hymon SARS-CoV-2 Test Kit",
+        "dba spectronrx__hymon sars-cov-2 test kit",
         "2020-05-22",
         "2020-08-11",
         "dba SpectronRx",
@@ -1969,7 +1969,7 @@
         ]
     ],
     [
-        "Exact Sciences Laboratories__SARS-CoV-2 (N gene detection) Test",
+        "exact sciences laboratories__sars-cov-2 (n gene detection) test",
         "2020-05-22",
         "2020-09-21",
         "Exact Sciences Laboratories",
@@ -1990,7 +1990,7 @@
         ]
     ],
     [
-        "Express Gene LLC (dba Molecular Diagnostics Laboratory)__Express Gene 2019-nCoV RT-PCR Diagnostic Panel",
+        "express gene llc (dba molecular diagnostics laboratory)__express gene 2019-ncov rt-pcr diagnostic panel",
         "2020-05-22",
         "2020-05-22",
         "Express Gene LLC (dba Molecular Diagnostics Laboratory)",
@@ -2005,7 +2005,7 @@
         []
     ],
     [
-        "Avera Institute for Human Genetics__Avera Institute for Human Genetics SARS-CoV-2 Assay",
+        "avera institute for human genetics__avera institute for human genetics sars-cov-2 assay",
         "2020-05-22",
         "2020-05-22",
         "Avera Institute for Human Genetics",
@@ -2020,7 +2020,7 @@
         []
     ],
     [
-        "PrivaPath Diagnostics, Inc.__LetsGetChecked Coronavirus (COVID-19) Test",
+        "privapath diagnostics, inc.__letsgetchecked coronavirus (covid-19) test",
         "2020-05-28",
         "2020-08-14",
         "PrivaPath Diagnostics, Inc.",
@@ -2039,7 +2039,7 @@
         ]
     ],
     [
-        "Siemens Healthcare Diagnostics Inc.__ADVIA Centaur SARS-CoV-2 Total (COV2T)",
+        "siemens healthcare diagnostics inc.__advia centaur sars-cov-2 total (cov2t)",
         "2020-05-29",
         "2020-05-29",
         "Siemens Healthcare Diagnostics Inc.",
@@ -2056,7 +2056,7 @@
         []
     ],
     [
-        "Siemens Healthcare Diagnostics Inc.__Atellica IM SARS-CoV-2 Total (COV2T)",
+        "siemens healthcare diagnostics inc.__atellica im sars-cov-2 total (cov2t)",
         "2020-05-29",
         "2020-05-29",
         "Siemens Healthcare Diagnostics Inc.",
@@ -2073,7 +2073,7 @@
         []
     ],
     [
-        "Healgen Scientific LLC__COVID-19 IgG/IgM Rapid Test Cassette (Whole Blood/Serum/Plasma)",
+        "healgen scientific llc__covid-19 igg/igm rapid test cassette (whole blood/serum/plasma)",
         "2020-05-29",
         "2020-05-29",
         "Healgen Scientific LLC",
@@ -2090,7 +2090,7 @@
         []
     ],
     [
-        "Gravity Diagnostics, LLC__Gravity Diagnostics COVID-19 Assay",
+        "gravity diagnostics, llc__gravity diagnostics covid-19 assay",
         "2020-06-01",
         "2020-09-21",
         "Gravity Diagnostics, LLC",
@@ -2109,7 +2109,7 @@
         ]
     ],
     [
-        "Aspirus Reference Laboratory__Aspirus SARS-CoV-2 rRT Assay",
+        "aspirus reference laboratory__aspirus sars-cov-2 rrt assay",
         "2020-06-01",
         "2020-06-01",
         "Aspirus Reference Laboratory",
@@ -2124,7 +2124,7 @@
         []
     ],
     [
-        "Roche Diagnostics__Elecsys IL-6",
+        "roche diagnostics__elecsys il-6",
         "2020-06-02",
         "2020-06-02",
         "Roche Diagnostics",
@@ -2141,7 +2141,7 @@
         []
     ],
     [
-        "CSI Laboratories__CSI SARS-CoV-2 RT PCR Test",
+        "csi laboratories__csi sars-cov-2 rt pcr test",
         "2020-06-02",
         "2020-06-02",
         "CSI Laboratories",
@@ -2156,7 +2156,7 @@
         []
     ],
     [
-        "Vibrant America Clinical Labs__Vibrant COVID-19 Ab Assay",
+        "vibrant america clinical labs__vibrant covid-19 ab assay",
         "2020-06-04",
         "2020-06-04",
         "Vibrant America Clinical Labs",
@@ -2171,7 +2171,7 @@
         []
     ],
     [
-        "Phosphorus Diagnostics LLC__Phosphorus COVID-19 RT-qPCR Test",
+        "phosphorus diagnostics llc__phosphorus covid-19 rt-qpcr test",
         "2020-06-04",
         "2020-06-04",
         "Phosphorus Diagnostics LLC",
@@ -2191,7 +2191,7 @@
         ]
     ],
     [
-        "Hangzhou Biotest Biotech Co., Ltd.__RightSign COVID-19 IgG/IgM Rapid Test Cassette",
+        "hangzhou biotest biotech co., ltd.__rightsign covid-19 igg/igm rapid test cassette",
         "2020-06-04",
         "2020-08-31",
         "Hangzhou Biotest Biotech Co., Ltd.",
@@ -2211,7 +2211,7 @@
         ]
     ],
     [
-        "Nebraska Medicine Clinical Laboratory__NEcov19 RT-PCR Assay",
+        "nebraska medicine clinical laboratory__necov19 rt-pcr assay",
         "2020-06-04",
         "2020-06-04",
         "Nebraska Medicine Clinical Laboratory",
@@ -2226,7 +2226,7 @@
         []
     ],
     [
-        "Genetron Health (Beijing) Co., Ltd.__Genetron SARS-CoV-2 RNA Test",
+        "genetron health (beijing) co., ltd.__genetron sars-cov-2 rna test",
         "2020-06-05",
         "2020-06-05",
         "Genetron Health (Beijing) Co., Ltd.",
@@ -2243,7 +2243,7 @@
         []
     ],
     [
-        "Euroimmun US Inc.__EURORealTime SARS-CoV-2",
+        "euroimmun us inc.__eurorealtime sars-cov-2",
         "2020-06-08",
         "2020-09-21",
         "Euroimmun US Inc.",
@@ -2263,7 +2263,7 @@
         ]
     ],
     [
-        "Siemens Healthcare Diagnostics Inc.__Dimension EXL SARS-CoV-2 Total antibody assay (CV2T)",
+        "siemens healthcare diagnostics inc.__dimension exl sars-cov-2 total antibody assay (cv2t)",
         "2020-06-08",
         "2020-08-07",
         "Siemens Healthcare Diagnostics Inc.",
@@ -2282,7 +2282,7 @@
         ]
     ],
     [
-        "Siemens Healthcare Diagnostics Inc.__Dimension Vista SARS-CoV-2 Total antibody assay (COV2T)",
+        "siemens healthcare diagnostics inc.__dimension vista sars-cov-2 total antibody assay (cov2t)",
         "2020-06-08",
         "2020-08-07",
         "Siemens Healthcare Diagnostics Inc.",
@@ -2301,7 +2301,7 @@
         ]
     ],
     [
-        "Illumina, Inc.__Illumina COVIDSeq Test",
+        "illumina, inc.__illumina covidseq test",
         "2020-06-09",
         "2020-08-20",
         "Illumina, Inc.",
@@ -2320,7 +2320,7 @@
         ]
     ],
     [
-        "ChromaCode Inc.__HDPCR SARS-CoV-2 Assay",
+        "chromacode inc.__hdpcr sars-cov-2 assay",
         "2020-06-09",
         "2020-09-21",
         "ChromaCode Inc.",
@@ -2340,7 +2340,7 @@
         ]
     ],
     [
-        "Warrior Diagnostics, Inc.__Warrior Diagnostics SARS-CoV-2 Assay",
+        "warrior diagnostics, inc.__warrior diagnostics sars-cov-2 assay",
         "2020-06-09",
         "2020-06-09",
         "Warrior Diagnostics, Inc.",
@@ -2355,7 +2355,7 @@
         []
     ],
     [
-        "Cue Health Inc.__Cue COVID-19 Test",
+        "cue health inc.__cue covid-19 test",
         "2020-06-10",
         "2020-08-20",
         "Cue Health Inc.",
@@ -2374,7 +2374,7 @@
         ]
     ],
     [
-        "TBG Biotechnology Corp.__ExProbe SARS-CoV-2 Testing Kit",
+        "tbg biotechnology corp.__exprobe sars-cov-2 testing kit",
         "2020-06-10",
         "2020-06-10",
         "TBG Biotechnology Corp.",
@@ -2391,7 +2391,7 @@
         []
     ],
     [
-        "Tide Laboratories, LLC__DTPM COVID-19 RT-PCR Test",
+        "tide laboratories, llc__dtpm covid-19 rt-pcr test",
         "2020-06-10",
         "2020-06-10",
         "Tide Laboratories, LLC",
@@ -2406,7 +2406,7 @@
         []
     ],
     [
-        "InBios International, Inc.__SCoV-2 Detect IgG ELISA",
+        "inbios international, inc.__scov-2 detect igg elisa",
         "2020-06-10",
         "2020-06-10",
         "InBios International, Inc.",
@@ -2423,7 +2423,7 @@
         []
     ],
     [
-        "RTA Laboratories Biological Products Pharmaceutical and Machinery Industry__Diagnovital SARS-CoV-2 Real-Time PCR Kit",
+        "rta laboratories biological products pharmaceutical and machinery industry__diagnovital sars-cov-2 real-time pcr kit",
         "2020-06-12",
         "2020-06-12",
         "RTA Laboratories Biological Products Pharmaceutical and Machinery Industry",
@@ -2440,7 +2440,7 @@
         []
     ],
     [
-        "Cormeum Laboratory Services__Cormeum SARS-CoV-2 Assay",
+        "cormeum laboratory services__cormeum sars-cov-2 assay",
         "2020-06-12",
         "2020-06-12",
         "Cormeum Laboratory Services",
@@ -2455,7 +2455,7 @@
         []
     ],
     [
-        "Kaiser Permanente Mid-Atlantic States__KPMAS COVID-19 Test",
+        "kaiser permanente mid-atlantic states__kpmas covid-19 test",
         "2020-06-13",
         "2020-09-09",
         "Kaiser Permanente Mid-Atlantic States",
@@ -2472,7 +2472,7 @@
         []
     ],
     [
-        "Applied BioCode, Inc.__BioCode SARS-CoV-2 Assay",
+        "applied biocode, inc.__biocode sars-cov-2 assay",
         "2020-06-15",
         "2020-06-15",
         "Applied BioCode, Inc.",
@@ -2489,7 +2489,7 @@
         []
     ],
     [
-        "Emory Medical Laboratories__SARS-CoV-2 RBD IgG test",
+        "emory medical laboratories__sars-cov-2 rbd igg test",
         "2020-06-15",
         "2020-06-15",
         "Emory Medical Laboratories",
@@ -2504,7 +2504,7 @@
         []
     ],
     [
-        "Omnipathology Solutions Medical Corporation__Omni COVID-19 Assay by RT-PCR",
+        "omnipathology solutions medical corporation__omni covid-19 assay by rt-pcr",
         "2020-06-17",
         "2020-06-17",
         "Omnipathology Solutions Medical Corporation",
@@ -2519,7 +2519,7 @@
         []
     ],
     [
-        "The Ohio State University Wexner Medical Center__OSUWMC COVID-19 RT-PCR test",
+        "the ohio state university wexner medical center__osuwmc covid-19 rt-pcr test",
         "2020-06-17",
         "2020-06-17",
         "The Ohio State University Wexner Medical Center",
@@ -2534,7 +2534,7 @@
         []
     ],
     [
-        "3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.__TRUPCR SARS-CoV-2 Kit",
+        "3b blackbio biotech india ltd., a subsidiary of kilpest india ltd.__trupcr sars-cov-2 kit",
         "2020-06-18",
         "2020-07-21",
         "3B Blackbio Biotech India Ltd., a subsidiary of Kilpest India Ltd.",
@@ -2553,7 +2553,7 @@
         ]
     ],
     [
-        "Jiangsu Bioperfectus Technologies Co., Ltd.__COVID-19 Coronavirus Real Time PCR Kit",
+        "jiangsu bioperfectus technologies co., ltd.__covid-19 coronavirus real time pcr kit",
         "2020-06-18",
         "2020-06-18",
         "Jiangsu Bioperfectus Technologies Co., Ltd.",
@@ -2570,7 +2570,7 @@
         []
     ],
     [
-        "Biohit Healthcare (Hefei) Co. Ltd.__Biohit SARS-CoV-2 IgM/IgG Antibody Test Kit",
+        "biohit healthcare (hefei) co. ltd.__biohit sars-cov-2 igm/igg antibody test kit",
         "2020-06-18",
         "2020-08-03",
         "Biohit Healthcare (Hefei) Co. Ltd.",
@@ -2589,7 +2589,7 @@
         ]
     ],
     [
-        "Hangzhou Laihe Biotech Co., Ltd.__LYHER Novel Coronavirus (2019-nCoV) IgM/IgG Antibody Combo Test Kit (Colloidal Gold)",
+        "hangzhou laihe biotech co., ltd.__lyher novel coronavirus (2019-ncov) igm/igg antibody combo test kit (colloidal gold)",
         "2020-06-19",
         "2020-08-12",
         "Hangzhou Laihe Biotech Co., Ltd.",
@@ -2608,7 +2608,7 @@
         ]
     ],
     [
-        "Gencurix, Inc.__GenePro SARS-CoV-2 Test",
+        "gencurix, inc.__genepro sars-cov-2 test",
         "2020-06-23",
         "2020-06-23",
         "Gencurix, Inc.",
@@ -2625,7 +2625,7 @@
         []
     ],
     [
-        "University of Alabama at Birmingham Fungal Reference Lab__FRL SARS CoV-2 Test",
+        "university of alabama at birmingham fungal reference lab__frl sars cov-2 test",
         "2020-06-23",
         "2020-06-23",
         "University of Alabama at Birmingham Fungal Reference Lab",
@@ -2640,7 +2640,7 @@
         []
     ],
     [
-        "HealthQuest Esoterics__HealthQuest Esoterics TaqPath SARS-CoV-2 Assay",
+        "healthquest esoterics__healthquest esoterics taqpath sars-cov-2 assay",
         "2020-06-23",
         "2020-09-21",
         "HealthQuest Esoterics",
@@ -2658,7 +2658,7 @@
         ]
     ],
     [
-        "Babson Diagnostics, Inc.__Babson Diagnostics aC19G1",
+        "babson diagnostics, inc.__babson diagnostics ac19g1",
         "2020-06-23",
         "2020-06-23",
         "Babson Diagnostics, Inc.",
@@ -2673,7 +2673,7 @@
         []
     ],
     [
-        "University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory__MD Anderson High-throughput SARS-CoV-2 RT-PCR Assay",
+        "university of texas md anderson cancer center, molecular diagnostics laboratory__md anderson high-throughput sars-cov-2 rt-pcr assay",
         "2020-06-24",
         "2020-06-24",
         "University of Texas MD Anderson Cancer Center, Molecular Diagnostics Laboratory",
@@ -2688,7 +2688,7 @@
         []
     ],
     [
-        "PlexBio Co., Ltd__IntelliPlex SARS-CoV-2 Detection Kit",
+        "plexbio co., ltd__intelliplex sars-cov-2 detection kit",
         "2020-06-25",
         "2020-06-25",
         "PlexBio Co., Ltd",
@@ -2705,7 +2705,7 @@
         []
     ],
     [
-        "PreciGenome LLC__FastPlex Triplex SARS-CoV-2 detection kit (RT-Digital PCR)",
+        "precigenome llc__fastplex triplex sars-cov-2 detection kit (rt-digital pcr)",
         "2020-06-25",
         "2020-06-25",
         "PreciGenome LLC",
@@ -2722,7 +2722,7 @@
         []
     ],
     [
-        "Diagnostic Solutions Laboratory, LLC__DSL COVID-19 Assay",
+        "diagnostic solutions laboratory, llc__dsl covid-19 assay",
         "2020-06-25",
         "2020-06-25",
         "Diagnostic Solutions Laboratory, LLC",
@@ -2737,7 +2737,7 @@
         []
     ],
     [
-        "Inform Diagnostics, Inc.__Inform Diagnostics SARS-CoV-2 RT-PCR Assay",
+        "inform diagnostics, inc.__inform diagnostics sars-cov-2 rt-pcr assay",
         "2020-06-26",
         "2020-06-26",
         "Inform Diagnostics, Inc.",
@@ -2752,7 +2752,7 @@
         []
     ],
     [
-        "Beckman Coulter, Inc.__Access SARS-CoV-2 IgG",
+        "beckman coulter, inc.__access sars-cov-2 igg",
         "2020-06-26",
         "2020-06-26",
         "Beckman Coulter, Inc.",
@@ -2769,7 +2769,7 @@
         []
     ],
     [
-        "LifeHope Labs__LifeHope 2019-nCoV Real-Time RT-PCR Diagnostic Panel",
+        "lifehope labs__lifehope 2019-ncov real-time rt-pcr diagnostic panel",
         "2020-06-29",
         "2020-06-29",
         "LifeHope Labs",
@@ -2784,7 +2784,7 @@
         []
     ],
     [
-        "Acupath Laboratories, Inc.__Acupath COVID-19 Real-Time (RT-PCR) Assay",
+        "acupath laboratories, inc.__acupath covid-19 real-time (rt-pcr) assay",
         "2020-06-29",
         "2020-09-24",
         "Acupath Laboratories, Inc.",
@@ -2802,7 +2802,7 @@
         ]
     ],
     [
-        "The Kroger Co.__Kroger Health COVID-19 Test Home Collection Kit",
+        "the kroger co.__kroger health covid-19 test home collection kit",
         "2020-06-30",
         "2020-06-30",
         "The Kroger Co.",
@@ -2819,7 +2819,7 @@
         []
     ],
     [
-        "TNS Co., Ltd (Bio TNS)__COVID-19 RT-PCR Peptide Nucleic Acid (PNA) kit",
+        "tns co., ltd (bio tns)__covid-19 rt-pcr peptide nucleic acid (pna) kit",
         "2020-06-30",
         "2020-06-30",
         "TNS Co., Ltd (Bio TNS)",
@@ -2836,7 +2836,7 @@
         []
     ],
     [
-        "Psomagen, Inc.__Psoma COVID-19 RT Test",
+        "psomagen, inc.__psoma covid-19 rt test",
         "2020-06-30",
         "2020-09-21",
         "Psomagen, Inc.",
@@ -2854,7 +2854,7 @@
         ]
     ],
     [
-        "InBios International, Inc.__SCoV-2 Detect IgM ELISA",
+        "inbios international, inc.__scov-2 detect igm elisa",
         "2020-06-30",
         "2020-06-30",
         "InBios International, Inc.",
@@ -2871,7 +2871,7 @@
         []
     ],
     [
-        "CENTOGENE US, LLC__CentoFast-SARS-CoV-2 RT-PCR Assay",
+        "centogene us, llc__centofast-sars-cov-2 rt-pcr assay",
         "2020-07-01",
         "2020-07-01",
         "CENTOGENE US, LLC",
@@ -2886,7 +2886,7 @@
         []
     ],
     [
-        "Centers for Disease Control and Prevention (CDC)__Influenza SARS-CoV-2 (Flu SC2) Multiplex Assay",
+        "centers for disease control and prevention (cdc)__influenza sars-cov-2 (flu sc2) multiplex assay",
         "2020-07-02",
         "2020-09-21",
         "Centers for Disease Control and Prevention (CDC)",
@@ -2906,7 +2906,7 @@
         ]
     ],
     [
-        "Becton, Dickinson and Company (BD)__BD Veritor System for Rapid Detection of SARS-CoV-2",
+        "becton, dickinson and company (bd)__bd veritor system for rapid detection of sars-cov-2",
         "2020-07-02",
         "2020-07-23",
         "Becton, Dickinson and Company (BD)",
@@ -2925,7 +2925,7 @@
         ]
     ],
     [
-        "Laboratorio Clinico Toledo__Laboratorio Clinico Toledo SARS-CoV-2 Assay",
+        "laboratorio clinico toledo__laboratorio clinico toledo sars-cov-2 assay",
         "2020-07-06",
         "2020-07-06",
         "Laboratorio Clinico Toledo",
@@ -2940,7 +2940,7 @@
         []
     ],
     [
-        "Assure Tech. (Hangzhou Co., Ltd)__Assure COVID-19 IgG/IgM Rapid Test Device",
+        "assure tech. (hangzhou co., ltd)__assure covid-19 igg/igm rapid test device",
         "2020-07-06",
         "2020-09-23",
         "Assure Tech. (Hangzhou Co., Ltd)",
@@ -2957,7 +2957,7 @@
         []
     ],
     [
-        "Enzo Life Sciences, Inc.__AMPIPROBE SARS-CoV-2 Test System",
+        "enzo life sciences, inc.__ampiprobe sars-cov-2 test system",
         "2020-07-07",
         "2020-07-07",
         "Enzo Life Sciences, Inc.",
@@ -2974,7 +2974,7 @@
         []
     ],
     [
-        "Access Bio, Inc.__CareStart COVID-19 MDx RT-PCR",
+        "access bio, inc.__carestart covid-19 mdx rt-pcr",
         "2020-07-07",
         "2020-07-07",
         "Access Bio, Inc.",
@@ -2991,7 +2991,7 @@
         []
     ],
     [
-        "Gene By Gene__Gene By Gene SARS-CoV-2 Detection Test",
+        "gene by gene__gene by gene sars-cov-2 detection test",
         "2020-07-07",
         "2020-07-07",
         "Gene By Gene",
@@ -3006,7 +3006,7 @@
         []
     ],
     [
-        "Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard__CRSP SARS-CoV-2 Real-time Reverse Transcriptase (RT)-PCR Diagnostic Assay",
+        "clinical research sequencing platform (crsp), llc at the broad institute of mit and harvard__crsp sars-cov-2 real-time reverse transcriptase (rt)-pcr diagnostic assay",
         "2020-07-08",
         "2020-08-31",
         "Clinical Research Sequencing Platform (CRSP), LLC at the Broad Institute of MIT and Harvard",
@@ -3023,7 +3023,7 @@
         ]
     ],
     [
-        "Diazyme Laboratories, Inc.__Diazyme DZ-Lite SARS-CoV-2 IgG CLIA Kit",
+        "diazyme laboratories, inc.__diazyme dz-lite sars-cov-2 igg clia kit",
         "2020-07-08",
         "2020-07-08",
         "Diazyme Laboratories, Inc.",
@@ -3040,7 +3040,7 @@
         []
     ],
     [
-        "UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin__SARS-CoV-2 RNA DETECTR Assay",
+        "ucsf health clinical laboratories, ucsf clinical labs at china basin__sars-cov-2 rna detectr assay",
         "2020-07-09",
         "2020-07-09",
         "UCSF Health Clinical Laboratories, UCSF Clinical Labs at China Basin",
@@ -3055,7 +3055,7 @@
         []
     ],
     [
-        "BioSewoom, Inc.__Real-Q 2019-nCoV Detection Kit",
+        "biosewoom, inc.__real-q 2019-ncov detection kit",
         "2020-07-09",
         "2020-07-09",
         "BioSewoom, Inc.",
@@ -3072,7 +3072,7 @@
         []
     ],
     [
-        "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.__WANTAI SARS-CoV-2 Ab Rapid Test",
+        "beijing wantai biological pharmacy enterprise co., ltd.__wantai sars-cov-2 ab rapid test",
         "2020-07-10",
         "2020-07-10",
         "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
@@ -3089,7 +3089,7 @@
         []
     ],
     [
-        "Boston Medical Center__BMC-CReM COVID-19 Test",
+        "boston medical center__bmc-crem covid-19 test",
         "2020-07-10",
         "2020-07-10",
         "Boston Medical Center",
@@ -3104,7 +3104,7 @@
         []
     ],
     [
-        "Compass Laboratory Services, LLC__Compass Laboratory Services SARS-CoV2 Assay",
+        "compass laboratory services, llc__compass laboratory services sars-cov2 assay",
         "2020-07-13",
         "2020-07-13",
         "Compass Laboratory Services, LLC",
@@ -3119,7 +3119,7 @@
         []
     ],
     [
-        "Trax Management Services Inc.__PhoenixDx SARS-CoV-2 Multiplex",
+        "trax management services inc.__phoenixdx sars-cov-2 multiplex",
         "2020-07-13",
         "2020-08-08",
         "Trax Management Services Inc.",
@@ -3138,7 +3138,7 @@
         ]
     ],
     [
-        "KogeneBiotech Co., Ltd.__PowerChek 2019-nCoV Real-time PCR Kit",
+        "kogenebiotech co., ltd.__powerchek 2019-ncov real-time pcr kit",
         "2020-07-13",
         "2020-09-21",
         "KogeneBiotech Co., Ltd.",
@@ -3158,7 +3158,7 @@
         ]
     ],
     [
-        "Salofa Oy__Sienna-Clarity COVIBLOCK COVID-19 IgG/IgM Rapid Test Cassette",
+        "salofa oy__sienna-clarity coviblock covid-19 igg/igm rapid test cassette",
         "2020-07-13",
         "2020-07-13",
         "Salofa Oy",
@@ -3175,7 +3175,7 @@
         []
     ],
     [
-        "Quest Diagnostics Infectious Disease, Inc.__Quest Diagnostics HA SARS-CoV-2 Assay",
+        "quest diagnostics infectious disease, inc.__quest diagnostics ha sars-cov-2 assay",
         "2020-07-15",
         "2020-08-21",
         "Quest Diagnostics Infectious Disease, Inc.",
@@ -3192,7 +3192,7 @@
         []
     ],
     [
-        "Quest Diagnostics Infectious Disease, Inc.__Quest Diagnostics RC SARS-CoV-2 Assay",
+        "quest diagnostics infectious disease, inc.__quest diagnostics rc sars-cov-2 assay",
         "2020-07-15",
         "2020-08-21",
         "Quest Diagnostics Infectious Disease, Inc.",
@@ -3209,7 +3209,7 @@
         []
     ],
     [
-        "Quest Diagnostics Infectious Disease, Inc.__Quest Diagnostics PF SARS-CoV-2 Assay",
+        "quest diagnostics infectious disease, inc.__quest diagnostics pf sars-cov-2 assay",
         "2020-07-15",
         "2020-08-21",
         "Quest Diagnostics Infectious Disease, Inc.",
@@ -3226,7 +3226,7 @@
         []
     ],
     [
-        "Boston Heart Diagnostics__Boston Heart COVID-19 RT-PCR Test",
+        "boston heart diagnostics__boston heart covid-19 rt-pcr test",
         "2020-07-16",
         "2020-09-21",
         "Boston Heart Diagnostics",
@@ -3245,7 +3245,7 @@
         ]
     ],
     [
-        "Luminex Corporation__xMAP SARS-CoV-2 Multi-Antigen IgG Assay",
+        "luminex corporation__xmap sars-cov-2 multi-antigen igg assay",
         "2020-07-16",
         "2020-07-16",
         "Luminex Corporation",
@@ -3262,7 +3262,7 @@
         []
     ],
     [
-        "Access Genetics, LLC__OraRisk COVID-19 RT-PCR",
+        "access genetics, llc__orarisk covid-19 rt-pcr",
         "2020-07-17",
         "2020-09-25",
         "Access Genetics, LLC",
@@ -3277,7 +3277,7 @@
         []
     ],
     [
-        "Megna Health, Inc.__Rapid COVID-19 IgM/IgG Combo Test Kit",
+        "megna health, inc.__rapid covid-19 igm/igg combo test kit",
         "2020-07-17",
         "2020-07-17",
         "Megna Health, Inc.",
@@ -3294,7 +3294,7 @@
         []
     ],
     [
-        "DiaCarta, Inc.__QuantiVirus SARS-CoV-2 Multiplex Test Kit",
+        "diacarta, inc.__quantivirus sars-cov-2 multiplex test kit",
         "2020-07-21",
         "2020-07-21",
         "DiaCarta, Inc.",
@@ -3311,7 +3311,7 @@
         []
     ],
     [
-        "Helix OpCo LLC (dba Helix)__Helix COVID-19 Test",
+        "helix opco llc (dba helix)__helix covid-19 test",
         "2020-07-23",
         "2020-07-23",
         "Helix OpCo LLC (dba Helix)",
@@ -3326,7 +3326,7 @@
         []
     ],
     [
-        "Jiangsu CoWin Biotech Co., Ltd.__Novel Coronavirus (SARS-CoV-2) Fast Nucleic Acid Detection Kit (PCR-Fluorescence Probing)",
+        "jiangsu cowin biotech co., ltd.__novel coronavirus (sars-cov-2) fast nucleic acid detection kit (pcr-fluorescence probing)",
         "2020-07-24",
         "2020-07-24",
         "Jiangsu CoWin Biotech Co., Ltd.",
@@ -3343,7 +3343,7 @@
         []
     ],
     [
-        "Xiamen Biotime Biotechnology Co., Ltd.__BIOTIME SARS-CoV-2 IgG/IgM Rapid Qualitative Test",
+        "xiamen biotime biotechnology co., ltd.__biotime sars-cov-2 igg/igm rapid qualitative test",
         "2020-07-24",
         "2020-07-24",
         "Xiamen Biotime Biotechnology Co., Ltd.",
@@ -3360,7 +3360,7 @@
         []
     ],
     [
-        "Access Bio, Inc.__CareStart COVID-19 IgM/IgG",
+        "access bio, inc.__carestart covid-19 igm/igg",
         "2020-07-24",
         "2020-07-24",
         "Access Bio, Inc.",
@@ -3377,7 +3377,7 @@
         []
     ],
     [
-        "Sandia National Laboratories__SNL-NM 2019 nCoV Real-Time RT-PCR Diagnostic Assay",
+        "sandia national laboratories__snl-nm 2019 ncov real-time rt-pcr diagnostic assay",
         "2020-07-27",
         "2020-07-27",
         "Sandia National Laboratories",
@@ -3392,7 +3392,7 @@
         []
     ],
     [
-        "Eli Lilly and Company__Lilly SARS-CoV-2 Assay",
+        "eli lilly and company__lilly sars-cov-2 assay",
         "2020-07-27",
         "2020-09-21",
         "Eli Lilly and Company",
@@ -3409,7 +3409,7 @@
         ]
     ],
     [
-        "Clinical Reference Laboratory, Inc.__CRL Rapid Response",
+        "clinical reference laboratory, inc.__crl rapid response",
         "2020-07-30",
         "2020-07-30",
         "Clinical Reference Laboratory, Inc.",
@@ -3426,7 +3426,7 @@
         []
     ],
     [
-        "Siemens Healthcare Diagnostics Inc.__Atellica IM SARS-CoV-2 IgG (COV2G)",
+        "siemens healthcare diagnostics inc.__atellica im sars-cov-2 igg (cov2g)",
         "2020-07-31",
         "2020-07-31",
         "Siemens Healthcare Diagnostics Inc.",
@@ -3443,7 +3443,7 @@
         []
     ],
     [
-        "Siemens Healthcare Diagnostics Inc.__ADVIA Centaur SARS-CoV-2 IgG (COV2G)",
+        "siemens healthcare diagnostics inc.__advia centaur sars-cov-2 igg (cov2g)",
         "2020-07-31",
         "2020-07-31",
         "Siemens Healthcare Diagnostics Inc.",
@@ -3460,7 +3460,7 @@
         []
     ],
     [
-        "Xiamen Zeesan Biotech Co., Ltd.__SARS-CoV-2 Test Kit (Real-time PCR)",
+        "xiamen zeesan biotech co., ltd.__sars-cov-2 test kit (real-time pcr)",
         "2020-07-31",
         "2020-07-31",
         "Xiamen Zeesan Biotech Co., Ltd.",
@@ -3477,7 +3477,7 @@
         []
     ],
     [
-        "University of California San Diego Health__UCSD RC SARS-CoV-2 Assay",
+        "university of california san diego health__ucsd rc sars-cov-2 assay",
         "2020-07-31",
         "2020-07-31",
         "University of California San Diego Health",
@@ -3492,7 +3492,7 @@
         []
     ],
     [
-        "Wren Laboratories LLC__Wren Laboratories COVID-19 PCR Test",
+        "wren laboratories llc__wren laboratories covid-19 pcr test",
         "2020-08-03",
         "2020-08-03",
         "Wren Laboratories LLC",
@@ -3507,7 +3507,7 @@
         []
     ],
     [
-        "Ethos Laboratories__Ethos Laboratories SARS-CoV-2 MALDI-TOF Assay",
+        "ethos laboratories__ethos laboratories sars-cov-2 maldi-tof assay",
         "2020-08-03",
         "2020-09-21",
         "Ethos Laboratories",
@@ -3529,7 +3529,7 @@
         ]
     ],
     [
-        "Cleveland Clinic Robert J. Tomsich Pathology and Laboratory Medicine Institute__Cleveland Clinic SARS-CoV-2 Assay",
+        "cleveland clinic robert j. tomsich pathology and laboratory medicine institute__cleveland clinic sars-cov-2 assay",
         "2020-08-03",
         "2020-08-03",
         "Cleveland Clinic Robert J. Tomsich Pathology and Laboratory Medicine Institute",
@@ -3544,7 +3544,7 @@
         []
     ],
     [
-        "Poplar Healthcare__Poplar SARS-CoV-2 TMA Pooling assay",
+        "poplar healthcare__poplar sars-cov-2 tma pooling assay",
         "2020-08-03",
         "2020-08-03",
         "Poplar Healthcare",
@@ -3559,7 +3559,7 @@
         []
     ],
     [
-        "ISPM Labs, LLC dba Capstone Healthcare__Genus SARS-CoV-2 Assay",
+        "ispm labs, llc dba capstone healthcare__genus sars-cov-2 assay",
         "2020-08-03",
         "2020-08-03",
         "ISPM Labs, LLC dba Capstone Healthcare",
@@ -3574,7 +3574,7 @@
         []
     ],
     [
-        "Vela Operations Singapore Pte Ltd__ViroKey SARS-CoV-2 RT-PCR Test",
+        "vela operations singapore pte ltd__virokey sars-cov-2 rt-pcr test",
         "2020-08-05",
         "2020-08-05",
         "Vela Operations Singapore Pte Ltd",
@@ -3591,7 +3591,7 @@
         []
     ],
     [
-        "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.__WANTAI SARS-CoV-2 Ab ELISA",
+        "beijing wantai biological pharmacy enterprise co., ltd.__wantai sars-cov-2 ab elisa",
         "2020-08-05",
         "2020-08-05",
         "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
@@ -3608,7 +3608,7 @@
         []
     ],
     [
-        "Helix OpCo LLC (dba Helix)__Helix COVID-19 NGS Test",
+        "helix opco llc (dba helix)__helix covid-19 ngs test",
         "2020-08-06",
         "2020-08-06",
         "Helix OpCo LLC (dba Helix)",
@@ -3623,10 +3623,10 @@
         []
     ],
     [
-        "bioM\u00e9rieux SA__VIDAS SARS-CoV-2 IgG",
+        "biomérieux sa__vidas sars-cov-2 igg",
         "2020-08-06",
         "2020-08-06",
-        "bioM\u00e9rieux SA",
+        "bioMérieux SA",
         "VIDAS SARS-CoV-2 IgG",
         "https://www.fda.gov/media/140934/download",
         "Serology IgG, ELFA",
@@ -3640,10 +3640,10 @@
         []
     ],
     [
-        "bioM\u00e9rieux SA__VIDAS SARS-CoV-2 IgM",
+        "biomérieux sa__vidas sars-cov-2 igm",
         "2020-08-06",
         "2020-08-06",
-        "bioM\u00e9rieux SA",
+        "bioMérieux SA",
         "VIDAS SARS-CoV-2 IgM",
         "https://www.fda.gov/media/140930/download",
         "Serology IgM, ELFA",
@@ -3657,7 +3657,7 @@
         []
     ],
     [
-        "George Washington University Public Health Laboratory__GWU SARS-CoV-2 RT-PCR Test",
+        "george washington university public health laboratory__gwu sars-cov-2 rt-pcr test",
         "2020-08-07",
         "2020-08-07",
         "George Washington University Public Health Laboratory",
@@ -3672,7 +3672,7 @@
         []
     ],
     [
-        "Solaris Diagnostics__Solaris Multiplex SARS-CoV-2 Assay",
+        "solaris diagnostics__solaris multiplex sars-cov-2 assay",
         "2020-08-10",
         "2020-08-10",
         "Solaris Diagnostics",
@@ -3687,7 +3687,7 @@
         []
     ],
     [
-        "Alpha Genomix Laboratories__Alpha Genomix TaqPath SARS-CoV-2 Combo Assay",
+        "alpha genomix laboratories__alpha genomix taqpath sars-cov-2 combo assay",
         "2020-08-10",
         "2020-08-10",
         "Alpha Genomix Laboratories",
@@ -3702,7 +3702,7 @@
         []
     ],
     [
-        "LumiraDx UK Ltd.__LumiraDx SARS-CoV-2 RNA STAR",
+        "lumiradx uk ltd.__lumiradx sars-cov-2 rna star",
         "2020-08-11",
         "2020-08-11",
         "LumiraDx UK Ltd.",
@@ -3719,7 +3719,7 @@
         []
     ],
     [
-        "Biomeme, Inc.__Biomeme SARS-CoV-2 Real-Time RT-PCR Test",
+        "biomeme, inc.__biomeme sars-cov-2 real-time rt-pcr test",
         "2020-08-11",
         "2020-08-11",
         "Biomeme, Inc.",
@@ -3736,7 +3736,7 @@
         []
     ],
     [
-        "Pro-Lab Diagnostics__Pro-AmpRT SARS-CoV-2 Test",
+        "pro-lab diagnostics__pro-amprt sars-cov-2 test",
         "2020-08-13",
         "2020-08-13",
         "Pro-Lab Diagnostics",
@@ -3751,7 +3751,7 @@
         []
     ],
     [
-        "Yale School of Public Health, Department of Epidemiology of Microbial Diseases__SalivaDirect",
+        "yale school of public health, department of epidemiology of microbial diseases__salivadirect",
         "2020-08-15",
         "2020-08-28",
         "Yale School of Public Health, Department of Epidemiology of Microbial Diseases",
@@ -3768,7 +3768,7 @@
         ]
     ],
     [
-        "ZhuHai Sinochips Bioscience Co., Ltd.__COVID-19 Nucleic Acid RT-PCR Test Kit",
+        "zhuhai sinochips bioscience co., ltd.__covid-19 nucleic acid rt-pcr test kit",
         "2020-08-17",
         "2020-08-17",
         "ZhuHai Sinochips Bioscience Co., Ltd.",
@@ -3785,7 +3785,7 @@
         []
     ],
     [
-        "BioCheck, Inc.__BioCheck SARS-CoV-2 IgG and IgM Combo Test",
+        "biocheck, inc.__biocheck sars-cov-2 igg and igm combo test",
         "2020-08-17",
         "2020-08-17",
         "BioCheck, Inc.",
@@ -3802,7 +3802,7 @@
         []
     ],
     [
-        "Diazyme Laboratories, Inc.__Diazyme DZ-Lite SARS-CoV-2 IgM CLIA Kit",
+        "diazyme laboratories, inc.__diazyme dz-lite sars-cov-2 igm clia kit",
         "2020-08-17",
         "2020-08-17",
         "Diazyme Laboratories, Inc.",
@@ -3819,7 +3819,7 @@
         []
     ],
     [
-        "LumiraDx UK Ltd.__LumiraDx SARS-CoV-2 Ag Test",
+        "lumiradx uk ltd.__lumiradx sars-cov-2 ag test",
         "2020-08-18",
         "2020-08-18",
         "LumiraDx UK Ltd.",
@@ -3836,7 +3836,7 @@
         []
     ],
     [
-        "Texas Department of State Health Services, Laboratory Services Section__Texas Department of State Health Services (DSHS) SARS-CoV-2 Assay",
+        "texas department of state health services, laboratory services section__texas department of state health services (dshs) sars-cov-2 assay",
         "2020-08-21",
         "2020-08-21",
         "Texas Department of State Health Services, Laboratory Services Section",
@@ -3851,7 +3851,7 @@
         []
     ],
     [
-        "DxTerity Diagnostics, Inc.__DxTerity SARS-CoV-2 RT-PCR Test",
+        "dxterity diagnostics, inc.__dxterity sars-cov-2 rt-pcr test",
         "2020-08-21",
         "2020-08-21",
         "DxTerity Diagnostics, Inc.",
@@ -3866,7 +3866,7 @@
         []
     ],
     [
-        "Guardant Health, Inc.__Guardant-19",
+        "guardant health, inc.__guardant-19",
         "2020-08-21",
         "2020-08-21",
         "Guardant Health, Inc.",
@@ -3881,7 +3881,7 @@
         []
     ],
     [
-        "QDx Pathology Services__QDX SARS-CoV-2 Assay",
+        "qdx pathology services__qdx sars-cov-2 assay",
         "2020-08-25",
         "2020-08-25",
         "QDx Pathology Services",
@@ -3898,7 +3898,7 @@
         []
     ],
     [
-        "Fluidigm Corporation__Advanta Dx SARS-CoV-2 RT-PCR Assay",
+        "fluidigm corporation__advanta dx sars-cov-2 rt-pcr assay",
         "2020-08-25",
         "2020-09-21",
         "Fluidigm Corporation",
@@ -3918,7 +3918,7 @@
         ]
     ],
     [
-        "Biocan Diagnostics Inc.__Tell Me Fast Novel Coronavirus (COVID-19) IgG/IgM Antibody Test",
+        "biocan diagnostics inc.__tell me fast novel coronavirus (covid-19) igg/igm antibody test",
         "2020-08-25",
         "2020-08-25",
         "Biocan Diagnostics Inc.",
@@ -3935,7 +3935,7 @@
         []
     ],
     [
-        "Abbott Diagnostics Scarborough, Inc.__BinaxNOW COVID-19 Ag Card",
+        "abbott diagnostics scarborough, inc.__binaxnow covid-19 ag card",
         "2020-08-26",
         "2020-08-26",
         "Abbott Diagnostics Scarborough, Inc.",
@@ -3952,7 +3952,7 @@
         []
     ],
     [
-        "Cuur Diagnostics__Cuur Diagnostics SARS-CoV-2 Molecular Assay",
+        "cuur diagnostics__cuur diagnostics sars-cov-2 molecular assay",
         "2020-08-26",
         "2020-10-02",
         "Cuur Diagnostics",
@@ -3967,7 +3967,7 @@
         []
     ],
     [
-        "DxTerity Diagnostics, Inc.__DxTerity SARS-CoV-2 RT PCR CE Test",
+        "dxterity diagnostics, inc.__dxterity sars-cov-2 rt pcr ce test",
         "2020-08-28",
         "2020-08-28",
         "DxTerity Diagnostics, Inc.",
@@ -3984,7 +3984,7 @@
         []
     ],
     [
-        "Patients Choice Laboratories, LLC__PCL SARS-CoV-2 Real-Time RT-PCR Assay",
+        "patients choice laboratories, llc__pcl sars-cov-2 real-time rt-pcr assay",
         "2020-08-28",
         "2020-09-21",
         "Patients Choice Laboratories, LLC",
@@ -4002,7 +4002,7 @@
         ]
     ],
     [
-        "BayCare Laboratories, LLC__BayCare SARS-CoV-2 RT PCR Assay",
+        "baycare laboratories, llc__baycare sars-cov-2 rt pcr assay",
         "2020-08-31",
         "2020-08-31",
         "BayCare Laboratories, LLC",
@@ -4017,7 +4017,7 @@
         []
     ],
     [
-        "Mammoth Biosciences, Inc.__SARS-CoV-2 DETECTR Reagent Kit",
+        "mammoth biosciences, inc.__sars-cov-2 detectr reagent kit",
         "2020-08-31",
         "2020-08-31",
         "Mammoth Biosciences, Inc.",
@@ -4034,7 +4034,7 @@
         []
     ],
     [
-        "MiraDx__MiraDx SARS-CoV-2 RT-PCR assay",
+        "miradx__miradx sars-cov-2 rt-pcr assay",
         "2020-08-31",
         "2020-08-31",
         "MiraDx",
@@ -4049,7 +4049,7 @@
         []
     ],
     [
-        "T2 Biosystems, Inc.__T2SARS-CoV-2 Panel",
+        "t2 biosystems, inc.__t2sars-cov-2 panel",
         "2020-08-31",
         "2020-08-31",
         "T2 Biosystems, Inc.",
@@ -4066,7 +4066,7 @@
         []
     ],
     [
-        "University of Arizona Genetics Core for Clinical Services__COVID-19 ELISA pan-Ig Antibody Test",
+        "university of arizona genetics core for clinical services__covid-19 elisa pan-ig antibody test",
         "2020-08-31",
         "2020-08-31",
         "University of Arizona Genetics Core for Clinical Services",
@@ -4081,7 +4081,7 @@
         []
     ],
     [
-        "TBG Biotechnology Corp.__TBG SARS-CoV-2 IgG / IgM Rapid Test Kit",
+        "tbg biotechnology corp.__tbg sars-cov-2 igg / igm rapid test kit",
         "2020-08-31",
         "2020-08-31",
         "TBG Biotechnology Corp.",
@@ -4098,7 +4098,7 @@
         []
     ],
     [
-        "Color Genomics, Inc.__Color COVID-19 Test Self-Swab Collection Kit",
+        "color genomics, inc.__color covid-19 test self-swab collection kit",
         "2020-08-31",
         "2020-09-15",
         "Color Genomics, Inc.",
@@ -4115,7 +4115,7 @@
         []
     ],
     [
-        "OPTOLANE Technologies, Inc.__Kaira 2019-nCoV Detection Kit",
+        "optolane technologies, inc.__kaira 2019-ncov detection kit",
         "2020-09-01",
         "2020-09-01",
         "OPTOLANE Technologies, Inc.",
@@ -4132,7 +4132,7 @@
         []
     ],
     [
-        "Detectachem Inc.__MobileDetect Bio BCC19 (MD-Bio BCC19) Test Kit",
+        "detectachem inc.__mobiledetect bio bcc19 (md-bio bcc19) test kit",
         "2020-09-01",
         "2020-10-06",
         "Detectachem Inc.",
@@ -4149,7 +4149,7 @@
         []
     ],
     [
-        "Bioeksen R&D Technologies Ltd.__Bio-Speedy Direct RT-qPCR SARS-CoV-2",
+        "bioeksen r&d technologies ltd.__bio-speedy direct rt-qpcr sars-cov-2",
         "2020-09-02",
         "2020-09-02",
         "Bioeksen R&D Technologies Ltd.",
@@ -4166,7 +4166,7 @@
         []
     ],
     [
-        "Roche Molecular Systems, Inc.__cobas SARS-CoV-2 & Influenza A/B",
+        "roche molecular systems, inc.__cobas sars-cov-2 & influenza a/b",
         "2020-09-03",
         "2020-09-03",
         "Roche Molecular Systems, Inc.",
@@ -4183,7 +4183,7 @@
         []
     ],
     [
-        "Sugentech, Inc.__SGTi-flex COVID-19 IgG",
+        "sugentech, inc.__sgti-flex covid-19 igg",
         "2020-09-03",
         "2020-09-03",
         "Sugentech, Inc.",
@@ -4200,7 +4200,7 @@
         []
     ],
     [
-        "BillionToOne, Inc.__qSanger-COVID-19 Assay",
+        "billiontoone, inc.__qsanger-covid-19 assay",
         "2020-09-04",
         "2020-09-04",
         "BillionToOne, Inc.",
@@ -4217,7 +4217,7 @@
         []
     ],
     [
-        "Verily Life Sciences__Verily COVID-19 RT-PCR Test",
+        "verily life sciences__verily covid-19 rt-pcr test",
         "2020-09-08",
         "2020-09-08",
         "Verily Life Sciences",
@@ -4232,7 +4232,7 @@
         []
     ],
     [
-        "BioCheck, Inc.__BioCheck SARS-CoV-2 IgM Antibody Test Kit",
+        "biocheck, inc.__biocheck sars-cov-2 igm antibody test kit",
         "2020-09-09",
         "2020-09-09",
         "BioCheck, Inc.",
@@ -4249,7 +4249,7 @@
         []
     ],
     [
-        "BioCheck, Inc.__BioCheck SARS-CoV-2 IgG Antibody Test Kit",
+        "biocheck, inc.__biocheck sars-cov-2 igg antibody test kit",
         "2020-09-09",
         "2020-09-09",
         "BioCheck, Inc.",
@@ -4266,7 +4266,7 @@
         []
     ],
     [
-        "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.__Wantai SARS-CoV-2 RT-PCR Kit",
+        "beijing wantai biological pharmacy enterprise co., ltd.__wantai sars-cov-2 rt-pcr kit",
         "2020-09-09",
         "2020-09-09",
         "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
@@ -4283,7 +4283,7 @@
         []
     ],
     [
-        "Shenzhen New Industries Biomedical Engineering Co., Ltd.__MAGLUMI 2019-nCoV IgM/IgG",
+        "shenzhen new industries biomedical engineering co., ltd.__maglumi 2019-ncov igm/igg",
         "2020-09-14",
         "2020-09-14",
         "Shenzhen New Industries Biomedical Engineering Co., Ltd.",
@@ -4300,7 +4300,7 @@
         []
     ],
     [
-        "Roche Molecular Systems, Inc.__cobas SARS-CoV-2 & Influenza A/B Nucleic Acid Test for use on the cobas Liat System",
+        "roche molecular systems, inc.__cobas sars-cov-2 & influenza a/b nucleic acid test for use on the cobas liat system",
         "2020-09-14",
         "2020-09-18",
         "Roche Molecular Systems, Inc.",
@@ -4319,7 +4319,7 @@
         ]
     ],
     [
-        "Visby Medical, Inc.__Visby Medical COVID-19",
+        "visby medical, inc.__visby medical covid-19",
         "2020-09-16",
         "2020-09-16",
         "Visby Medical, Inc.",
@@ -4336,7 +4336,7 @@
         []
     ],
     [
-        "GK Pharmaceuticals Contract Manufacturing Operations__GK ACCU-RIGHT SARS-CoV-2 RT-PCR KIT",
+        "gk pharmaceuticals contract manufacturing operations__gk accu-right sars-cov-2 rt-pcr kit",
         "2020-09-18",
         "2020-09-18",
         "GK Pharmaceuticals Contract Manufacturing Operations",
@@ -4353,7 +4353,7 @@
         []
     ],
     [
-        "KimForest Enterprise Co., Ltd.__KimForest SARS-CoV-2 Detection Kit v1",
+        "kimforest enterprise co., ltd.__kimforest sars-cov-2 detection kit v1",
         "2020-09-21",
         "2020-09-21",
         "KimForest Enterprise Co., Ltd.",
@@ -4370,7 +4370,7 @@
         []
     ],
     [
-        "Quadrant Biosciences Inc.__Clarifi COVID-19 Test Kit 09/22/2020",
+        "quadrant biosciences inc.__clarifi covid-19 test kit 09/22/2020",
         "2020-09-22",
         "2020-09-22",
         "Quadrant Biosciences Inc.",
@@ -4387,7 +4387,7 @@
         []
     ],
     [
-        "Vela Operations Singapore Pte. Ltd.__ViroKey SARS-CoV-2 RT-PCR Test v2.0 09/22/2020",
+        "vela operations singapore pte. ltd.__virokey sars-cov-2 rt-pcr test v2.0 09/22/2020",
         "2020-09-22",
         "2020-09-22",
         "Vela Operations Singapore Pte. Ltd.",
@@ -4404,7 +4404,7 @@
         []
     ],
     [
-        "Clear Labs, Inc.__Clear Dx SARS-CoV-2 Test 09/23/2020",
+        "clear labs, inc.__clear dx sars-cov-2 test 09/23/2020",
         "2020-09-23",
         "2020-09-23",
         "Clear Labs, Inc.",
@@ -4421,7 +4421,7 @@
         []
     ],
     [
-        "Jiangsu Well Biotech Co., Ltd.__Orawell IgM/IgG Rapid Test 09/23/2020",
+        "jiangsu well biotech co., ltd.__orawell igm/igg rapid test 09/23/2020",
         "2020-09-23",
         "2020-09-23",
         "Jiangsu Well Biotech Co., Ltd.",
@@ -4438,7 +4438,7 @@
         []
     ],
     [
-        "Cepheid__Xpert Xpress SARS-CoV-2/Flu/RSV 09/24/2020",
+        "cepheid__xpert xpress sars-cov-2/flu/rsv 09/24/2020",
         "2020-09-24",
         "2020-10-01",
         "Cepheid",
@@ -4456,7 +4456,7 @@
         []
     ],
     [
-        "Genetrack Biolabs, Inc.__Genetrack SARS-CoV-2 Molecular Assay",
+        "genetrack biolabs, inc.__genetrack sars-cov-2 molecular assay",
         "2020-09-25",
         "2020-09-25",
         "Genetrack Biolabs, Inc.",
@@ -4473,7 +4473,7 @@
         []
     ],
     [
-        "Quotient Suisse SA__MosaiQ COVID-19 Antibody Magazine",
+        "quotient suisse sa__mosaiq covid-19 antibody magazine",
         "2020-09-25",
         "2020-09-25",
         "Quotient Suisse SA",
@@ -4490,7 +4490,7 @@
         []
     ],
     [
-        "DiaSorin, Inc.__DiaSorin LIAISON SARS-CoV-2 IgM Assay",
+        "diasorin, inc.__diasorin liaison sars-cov-2 igm assay",
         "2020-09-29",
         "2020-09-29",
         "DiaSorin, Inc.",
@@ -4507,7 +4507,7 @@
         []
     ],
     [
-        "NanoEntek America, Inc.__FREND COVID-19 total Ab",
+        "nanoentek america, inc.__frend covid-19 total ab",
         "2020-09-29",
         "2020-09-29",
         "NanoEntek America, Inc.",
@@ -4524,7 +4524,7 @@
         []
     ],
     [
-        "Nirmidas Biotech, Inc.__Nirmidas COVID-19 (SARS-CoV-2) IgM/IgG Antibody Detection Kit",
+        "nirmidas biotech, inc.__nirmidas covid-19 (sars-cov-2) igm/igg antibody detection kit",
         "2020-09-29",
         "2020-09-29",
         "Nirmidas Biotech, Inc.",
@@ -4541,7 +4541,7 @@
         []
     ],
     [
-        "CENTOGENE US, LLC__CentoSure SARS-CoV-2 RT-PCR Assay",
+        "centogene us, llc__centosure sars-cov-2 rt-pcr assay",
         "2020-09-29",
         "2020-09-29",
         "CENTOGENE US, LLC",
@@ -4556,11 +4556,11 @@
         []
     ],
     [
-        "Akron Children\u2019s Hospital__Akron Children\u2019s Hospital SARS-CoV-2 Assay",
+        "akron children’s hospital__akron children’s hospital sars-cov-2 assay",
         "2020-09-29",
         "2020-09-29",
-        "Akron Children\u2019s Hospital",
-        "Akron Children\u2019s Hospital SARS-CoV-2 Assay",
+        "Akron Children’s Hospital",
+        "Akron Children’s Hospital SARS-CoV-2 Assay",
         "https://www.fda.gov/media/142540/download",
         "Molecular Real-time RT-PCR",
         "H",
@@ -4571,7 +4571,7 @@
         []
     ],
     [
-        "National Jewish Health__SARS-CoV-2 MassArray Test",
+        "national jewish health__sars-cov-2 massarray test",
         "2020-09-29",
         "2020-09-29",
         "National Jewish Health",
@@ -4586,7 +4586,7 @@
         []
     ],
     [
-        "Alimetrix, Inc.__Alimetrix SARS-CoV-2 RT-PCR Assay",
+        "alimetrix, inc.__alimetrix sars-cov-2 rt-pcr assay",
         "2020-09-30",
         "2020-09-30",
         "Alimetrix, Inc.",
@@ -4601,7 +4601,7 @@
         []
     ],
     [
-        "Aeon Global Health__Aeon Global Health SARS-CoV-2 Assay",
+        "aeon global health__aeon global health sars-cov-2 assay",
         "2020-09-30",
         "2020-09-30",
         "Aeon Global Health",
@@ -4616,7 +4616,7 @@
         []
     ],
     [
-        "UMass Memorial Medical Center__UMass Molecular Virology Laboratory 2019-nCoV rRT-PCR Dx Panel",
+        "umass memorial medical center__umass molecular virology laboratory 2019-ncov rrt-pcr dx panel",
         "2020-10-01",
         "2020-10-01",
         "UMass Memorial Medical Center",
@@ -4631,7 +4631,7 @@
         []
     ],
     [
-        "Beckman Coulter, Inc.__Access IL-6",
+        "beckman coulter, inc.__access il-6",
         "2020-10-01",
         "2020-10-01",
         "Beckman Coulter, Inc.",
@@ -4648,7 +4648,7 @@
         []
     ],
     [
-        "Tempus Labs, Inc.__iC SARS-CoV2 Test",
+        "tempus labs, inc.__ic sars-cov2 test",
         "2020-10-01",
         "2020-10-01",
         "Tempus Labs, Inc.",
@@ -4663,7 +4663,7 @@
         []
     ],
     [
-        "Quidel Corporation__Sofia 2 Flu + SARS Antigen FIA",
+        "quidel corporation__sofia 2 flu + sars antigen fia",
         "2020-10-02",
         "2020-10-02",
         "Quidel Corporation",
@@ -4680,7 +4680,7 @@
         []
     ],
     [
-        "Thermo Fisher Scientific__OmniPATH COVID-19 Total Antibody ELISA Test",
+        "thermo fisher scientific__omnipath covid-19 total antibody elisa test",
         "2020-10-02",
         "2020-10-06",
         "Thermo Fisher Scientific",
@@ -4697,7 +4697,7 @@
         []
     ],
     [
-        "BioFire Diagnostics, LLC__BioFire Respiratory Panel 2.1-EZ (RP2.1-EZ)",
+        "biofire diagnostics, llc__biofire respiratory panel 2.1-ez (rp2.1-ez)",
         "2020-10-02",
         "2020-10-02",
         "BioFire Diagnostics, LLC",
@@ -4714,7 +4714,7 @@
         []
     ],
     [
-        "SEASUN BIOMATERIALS, Inc.__AQ-TOP COVID-19 Rapid Detection Kit PLUS",
+        "seasun biomaterials, inc.__aq-top covid-19 rapid detection kit plus",
         "2020-10-05",
         "2020-10-05",
         "SEASUN BIOMATERIALS, Inc.",
@@ -4731,7 +4731,7 @@
         []
     ],
     [
-        "ZEUS Scientific, Inc.__ZEUS ELISA SARS-CoV-2 IgG Test System",
+        "zeus scientific, inc.__zeus elisa sars-cov-2 igg test system",
         "2020-10-06",
         "2020-10-06",
         "ZEUS Scientific, Inc.",
@@ -4748,7 +4748,7 @@
         []
     ],
     [
-        "University of California, Los Angeles (UCLA)__UCLA SwabSeq COVID-19 Diagnostic Platform",
+        "university of california, los angeles (ucla)__ucla swabseq covid-19 diagnostic platform",
         "2020-10-06",
         "2020-10-06",
         "University of California, Los Angeles (UCLA)",
