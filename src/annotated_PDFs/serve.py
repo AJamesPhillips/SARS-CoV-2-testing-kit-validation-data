@@ -65,7 +65,7 @@ def upsert_meta_data_annotations_file(relative_file_path):
     )
 
     with open(meta_file_path, "w") as f:
-        json.dump(meta_data, f, indent=0)
+        json.dump(meta_data, f, indent=0, ensure_ascii=False)
 
     return meta_data
 
@@ -185,7 +185,7 @@ def render_pdf():
     with open(dir_path + "/" + relative_file_path + ".annotations", "r") as f:
         pdf_file_data_json = f.read()
 
-    common_labels_json = json.dumps(common_labels)
+    common_labels_json = json.dumps(common_labels, ensure_ascii=False)
 
     html = (html
         .replace("\"<PDFJS>\"", pdfjs_file)
@@ -232,9 +232,9 @@ def annotation():
 
     # Racy but should be fine for single user
     with open(dir_path + "/" + relative_file_path + ".annotations", "w") as f:
-        json.dump(pdf_file_data, f, indent=0)
+        json.dump(pdf_file_data, f, indent=0, ensure_ascii=False)
 
-    return json.dumps(annotations)
+    return json.dumps(annotations, ensure_ascii=False)
 
 
 @app.after_request

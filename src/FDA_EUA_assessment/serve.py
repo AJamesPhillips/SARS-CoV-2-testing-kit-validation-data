@@ -18,15 +18,17 @@ def index():
 
     labels = calculate_common_labels()
     fda_eua_parsed_data = get_fda_eua_parsed_data()
+    # skip first row as it is headers
+    fda_eua_parsed_data = fda_eua_parsed_data[1:]
     annotation_files_by_test_id = get_annotation_files_by_test_id(fda_eua_parsed_data)
 
     src_file_path = dir_path + "/src.js"
     with open(src_file_path, "r") as f:
         src = f.read()
 
-    html_contents = html_contents.replace("\"<LABEL_IDS_TO_NAMES>\"", json.dumps(labels))
-    html_contents = html_contents.replace("\"<FDA_EUA_PARSED_DATA>\"", json.dumps(fda_eua_parsed_data))
-    html_contents = html_contents.replace("\"<ANNOTATION_FILES_BY_TEST_ID>\"", json.dumps(annotation_files_by_test_id))
+    html_contents = html_contents.replace("\"<LABEL_IDS_TO_NAMES>\"", json.dumps(labels, ensure_ascii=False))
+    html_contents = html_contents.replace("\"<FDA_EUA_PARSED_DATA>\"", json.dumps(fda_eua_parsed_data, ensure_ascii=False))
+    html_contents = html_contents.replace("\"<ANNOTATION_FILES_BY_TEST_ID>\"", json.dumps(annotation_files_by_test_id, ensure_ascii=False))
     html_contents = html_contents.replace("\"<SRC>\"", src)
 
     return html_contents

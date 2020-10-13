@@ -22,6 +22,10 @@
     python3 src/FDA_reference_panel/get_latest_version.py
     python3 src/FDA_reference_panel/parse_versions.py
 
+### Merge data
+
+    python3 src/merged_data/merge.py
+
 ## Run local pages
 
 ### FDA EUA html pages

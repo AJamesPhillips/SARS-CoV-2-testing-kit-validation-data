@@ -25,11 +25,11 @@ class ParserSubState(Enum):
 class Parser(HTMLParser):
     HEADERS = [
         "test_id",
-        "Developer",
-        "Test",
-        "Results status",
-        "Product LoD (NAAT Detectable Units / mL)",
-        "Sample/media type"
+        "developer_name",
+        "test_name",
+        "results_status",
+        "lod", # Product LoD (NAAT Detectable Units / mL)",
+        "sample_media_type",
     ]
 
 
@@ -96,10 +96,10 @@ class Parser(HTMLParser):
                         break
 
                 if not row_to_update:
-                    print(json.dumps(self.rows, indent=4))
+                    print(json.dumps(self.rows, indent=4, ensure_ascii=False))
                     raise Exception("Could not match temporary_row in rows. {}".format(self.temporary_row))
 
-                LOD_value = self.temporary_row[0]
+                LOD_value = int(self.temporary_row[0])
                 swab_media_type = ""
                 if self.table_number == 2:
                     swab_media_type = "Swabs in Transport Media"
@@ -114,7 +114,7 @@ class Parser(HTMLParser):
                     raise Exception("Unsupported table number: {}".format(self.table_number))
 
                 if row_to_update[4] or row_to_update[5]:
-                    print(json.dumps(self.rows, indent=4))
+                    print(json.dumps(self.rows, indent=4, ensure_ascii=False))
                     raise Exception("Already have values \"{}\" and \"{}\" for row: {} but trying to update with: \"{}\" and \"{}\"".format(row_to_update[4], row_to_update[5], row_to_update, LOD_value, swab_media_type))
 
                 row_to_update[4] = LOD_value

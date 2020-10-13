@@ -115,7 +115,7 @@ def check_test_ids_are_unique(data_rows):
 def store_results(file_name, data_rows):
     json_file_path_for_parsed_data = data_path + "parsed/{}.json".format(file_name)
     with open(json_file_path_for_parsed_data, "w") as f:
-        json.dump(data_rows, f, indent=4)
+        json.dump(data_rows, f, indent=4, ensure_ascii=False)
 
 
 def deprecated_main_2020_08_18():

@@ -1,76 +1,27 @@
 import csv
-import json
 import os
-import re
 import sys
 
 from common.get_test_id import get_test_id
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-
-DATA_DIRECTORY = dir_path + "/../../data/FDA-EUA/"
-JSON_FILE_PATH_FOR_FDA_EUA_PARSED_DATA = DATA_DIRECTORY + "parsed/latest.json"
-
-
-def get_fda_eua_parsed_data():
-    with open(JSON_FILE_PATH_FOR_FDA_EUA_PARSED_DATA, "r") as f:
-        fda_eua_merged_parsed_data = json.load(f)
-
-    return fda_eua_merged_parsed_data
-
-
-def deprecated_get_fda_eua_parsed_data(merged):
-    JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_merged.json"
-    JSON_FILE_PATH_FOR_FDA_EUA_iv_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_iv.json"
-    JSON_FILE_PATH_FOR_FDA_EUA_high_complexity_PARSED_DATA = DATA_DIRECTORY + "parsed/latest_high_complexity.json"
-
-    if merged:
-        with open(JSON_FILE_PATH_FOR_FDA_EUA_merged_PARSED_DATA, "r") as f:
-            fda_eua_merged_parsed_data = json.load(f)
-
-        return fda_eua_merged_parsed_data
-
-    else:
-        with open(JSON_FILE_PATH_FOR_FDA_EUA_iv_PARSED_DATA, "r") as f:
-            fda_eua_iv_parsed_data = json.load(f)
-
-        with open(JSON_FILE_PATH_FOR_FDA_EUA_high_complexity_PARSED_DATA, "r") as f:
-            fda_eua_high_complexity_parsed_data = json.load(f)
-
-        return {
-            "fda_eua_iv_parsed_data": fda_eua_iv_parsed_data,
-            "fda_eua_high_complexity_parsed_data": fda_eua_high_complexity_parsed_data,
-        }
-
-
-urls_to_ignore = set([
-    "https://www.fda.gov/medical-devices/coronavirus-covid-19-and-medical-devices/sars-cov-2-reference-panel-comparative-data",
-])
-# pass it fda_eua_parsed_data or a data row to get all urls
-def filter_for_urls(data):
-    urls = []
-
-    if isinstance(data, list):
-        for v in data:
-            urls += filter_for_urls(v)
-    elif isinstance(data, str) and re.match(r'^https?://', data):
-        if data not in urls_to_ignore:
-            urls.append(data)
-
-    return urls
-
-
-def get_FDA_EUA_pdf_file_path_from_url(url):
-    matches = re.match("https://www.fda.gov/media/(\d+)/download", url)
-    try:
-        file_id = matches.groups()[0]
-    except Exception as e:
-        print("failed on url: ", url)
-        raise e
-    file_path = DATA_DIRECTORY + "PDFs/{}.pdf".format(file_id)
-
-    return file_path
+from common.FDA_EUAs_parsed_data import (
+    get_fda_eua_parsed_data,
+    deprecated_get_fda_eua_parsed_data,
+)
+from common.annotations_data import (
+    filter_for_urls,
+    get_FDA_EUA_pdf_file_path_from_url,
+    get_annotation_files_by_test_id,
+    get_annotations_by_label_id,
+)
+from common.FDA_reference_panel_lod_data import (
+    get_fda_reference_panel_lod_data_by_test_id,
+)
+from common.paths import (
+    dir_path,
+    DATA_DIRECTORY_EUAs,
+    DATA_FILE_PATH_EUAs_LATEST_PARSED_DATA,
+    DATA_FILE_PATH_merged_data,
+)
 
 
 def calculate_common_labels():
@@ -102,32 +53,3 @@ def get_directories():
         directories = [directory for directory in directories if os.path.isdir(dir_path + "/" + directory)]
 
     return directories
-
-
-def get_annotation_files_by_test_id(fda_eua_parsed_data):
-
-    # skip first row as it is headers
-    data_rows = fda_eua_parsed_data[1:]
-
-    annotation_files_by_test_id = dict()
-
-    for data_row in data_rows:
-        test_id = data_row[0]
-        all_annotation_files = []
-
-        urls = filter_for_urls(data_row)
-
-        for url in urls:
-            file_path = get_FDA_EUA_pdf_file_path_from_url(url)
-            annotations_file_path = file_path + ".annotations"
-
-            if not os.path.isfile(annotations_file_path):
-                continue
-
-            with open(annotations_file_path, "r") as f:
-                annotation_file_contents = json.load(f)
-                all_annotation_files.append(annotation_file_contents)
-
-        annotation_files_by_test_id[test_id] = all_annotation_files
-
-    return annotation_files_by_test_id
