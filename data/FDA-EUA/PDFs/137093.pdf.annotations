@@ -121,7 +121,7 @@
 "width": "61px",
 "height": "25px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

@@ -62,7 +62,7 @@
 "width": "80px",
 "height": "33px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "300 \u03bcL",
+"text": "300 μL",
 "labels": [
 {
 "id": 35,
@@ -210,7 +210,7 @@
 "width": "59px",
 "height": "14px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

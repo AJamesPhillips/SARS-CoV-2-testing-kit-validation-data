@@ -214,7 +214,7 @@
 "width": "49px",
 "height": "25px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,
@@ -231,7 +231,7 @@
 "width": "552px",
 "height": "23px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "Refers to CDC N1 primer/probe set in \"FDA EUA EUA200001 \u201cCDC 2019-Novel Coronavirus (2019-nCoV) Real-Time RT-PCR Diagnostics Panel\u201d\"",
+"text": "Refers to CDC N1 primer/probe set in \"FDA EUA EUA200001 “CDC 2019-Novel Coronavirus (2019-nCoV) Real-Time RT-PCR Diagnostics Panel”\"",
 "labels": [
 {
 "id": 78,

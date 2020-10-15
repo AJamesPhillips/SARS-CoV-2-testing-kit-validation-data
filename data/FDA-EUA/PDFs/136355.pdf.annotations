@@ -193,14 +193,14 @@
 "labels": [
 {
 "id": 72,
-"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
+"text": "Nucleic acid amplification/Reaction/Volume in μL"
 },
 {
 "id": 73,
 "text": "Meta/Not specified"
 }
 ],
-"comment": "Marked as not specified as it is not clear this is the final reaction volume and if 60 \u03bcL is the volume dispensed by the pipettes"
+"comment": "Marked as not specified as it is not clear this is the final reaction volume and if 60 μL is the volume dispensed by the pipettes"
 },
 {
 "id": 12,

@@ -79,7 +79,7 @@
 "width": "584px",
 "height": "23px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "inactivated SARS\u2011CoV\u20112 viral culture (BetaCoV/France/IDF0571/2020, GISAID EPI ISL 411219)",
+"text": "inactivated SARS‑CoV‑2 viral culture (BetaCoV/France/IDF0571/2020, GISAID EPI ISL 411219)",
 "labels": [
 {
 "id": 62,
@@ -189,7 +189,7 @@
 "width": "131px",
 "height": "23px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

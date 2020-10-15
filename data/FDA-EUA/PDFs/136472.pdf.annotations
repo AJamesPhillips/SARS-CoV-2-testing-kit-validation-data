@@ -45,7 +45,7 @@
 "width": "257px",
 "height": "24px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "human housekeeping gene \u03b2-Actin",
+"text": "human housekeeping gene β-Actin",
 "labels": [
 {
 "id": 83,
@@ -66,7 +66,7 @@
 "labels": [
 {
 "id": 72,
-"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
+"text": "Nucleic acid amplification/Reaction/Volume in μL"
 }
 ],
 "comment": ""
@@ -197,7 +197,7 @@
 "width": "108px",
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

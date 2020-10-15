@@ -28,7 +28,7 @@
 "width": "279px",
 "height": "19px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "Copan UTM-RT\u00ae System or BD\u2122 UVT System",
+"text": "Copan UTM-RT® System or BD™ UVT System",
 "labels": [
 {
 "id": 34,
@@ -231,7 +231,7 @@
 "width": "75px",
 "height": "26px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

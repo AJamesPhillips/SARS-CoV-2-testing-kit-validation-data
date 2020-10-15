@@ -45,7 +45,7 @@
 "width": "506px",
 "height": "43px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "Universal Transport Medium\u2122, UTM\u00ae (Copan, Murrieta, California, USA)",
+"text": "Universal Transport Medium™, UTM® (Copan, Murrieta, California, USA)",
 "labels": [
 {
 "id": 34,
@@ -83,7 +83,7 @@
 "width": "505px",
 "height": "45px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "4.6E+05 plaque forming units (PFU)/mL before inactivation; Institute of Virology, Charit\u00e9 Berlin, Germany",
+"text": "4.6E+05 plaque forming units (PFU)/mL before inactivation; Institute of Virology, Charité Berlin, Germany",
 "labels": [
 {
 "id": 63,
@@ -100,7 +100,7 @@
 "width": "244px",
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "UTM\u00ae containing simulated nasal matrix  (5% w/v mucin, 5% v/v whole blood, 0.8% v/v NaCl (95% saline) and 0.00002% w/v human genomic DNA)",
+"text": "UTM® containing simulated nasal matrix  (5% w/v mucin, 5% v/v whole blood, 0.8% v/v NaCl (95% saline) and 0.00002% w/v human genomic DNA)",
 "labels": [
 {
 "id": 64,
@@ -184,7 +184,7 @@
 "width": "52px",
 "height": "17px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "PFU / \u03bcL",
+"text": "PFU / μL",
 "labels": [
 {
 "id": 67,

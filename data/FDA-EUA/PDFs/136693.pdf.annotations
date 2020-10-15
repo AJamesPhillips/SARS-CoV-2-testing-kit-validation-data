@@ -45,7 +45,7 @@
 "width": "584px",
 "height": "22px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "Universal Transport Medium (UTM-RT\u00ae, Copan Diagnostics, Inc, Catalogue 328C) or equivalent",
+"text": "Universal Transport Medium (UTM-RT®, Copan Diagnostics, Inc, Catalogue 328C) or equivalent",
 "labels": [
 {
 "id": 34,
@@ -138,7 +138,7 @@
 "width": "755px",
 "height": "57px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "SARS-Related Coronavirus 2 gamma-irradiated viral fluid consists of a crude preparation of cell lysate and supernatant from Cercopithecus aethiops kidney epithelial cells (Vero E6; ATCC\u00ae CRL-1586\u2122) infected with severe acute respiratory syndrome-related coronavirus 2 (SARS-CoV-2)",
+"text": "SARS-Related Coronavirus 2 gamma-irradiated viral fluid consists of a crude preparation of cell lysate and supernatant from Cercopithecus aethiops kidney epithelial cells (Vero E6; ATCC® CRL-1586™) infected with severe acute respiratory syndrome-related coronavirus 2 (SARS-CoV-2)",
 "labels": [
 {
 "id": 63,
@@ -239,7 +239,7 @@
 "width": "61px",
 "height": "28px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

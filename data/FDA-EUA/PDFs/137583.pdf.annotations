@@ -112,7 +112,7 @@
 "width": "60px",
 "height": "19px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,
@@ -163,7 +163,7 @@
 "width": "122px",
 "height": "30px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "ATCC\u00ae VR-1986HK",
+"text": "ATCC® VR-1986HK",
 "labels": [
 {
 "id": 63,

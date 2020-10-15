@@ -222,14 +222,14 @@
 "width": "47px",
 "height": "26px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 73,
 "text": "Meta/Not specified"
 }
 ],
-"comment": "Marked not specified because a) the input clinical volume can be up to 3.5 ml according to Qiagen's QIAamp DSP Viral RNA Mini Kit, b) it's not clear if 140 \u00b5L was used for the extraction step, c) if 60 \u00b5L was eluted from RNA extraction was 5 \u00b5L of this used for the test to go into each reaction volume?"
+"comment": "Marked not specified because a) the input clinical volume can be up to 3.5 ml according to Qiagen's QIAamp DSP Viral RNA Mini Kit, b) it's not clear if 140 µL was used for the extraction step, c) if 60 µL was eluted from RNA extraction was 5 µL of this used for the test to go into each reaction volume?"
 },
 {
 "id": 13,

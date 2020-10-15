@@ -83,7 +83,7 @@
 "width": "221px",
 "height": "27px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "AccuPlex\u2122 SARS-CoV-2 Reference Material Kit, Seracare, Cat. No. 0505-0126",
+"text": "AccuPlex™ SARS-CoV-2 Reference Material Kit, Seracare, Cat. No. 0505-0126",
 "labels": [
 {
 "id": 63,
@@ -172,7 +172,7 @@
 "width": "82px",
 "height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

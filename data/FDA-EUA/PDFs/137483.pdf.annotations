@@ -83,7 +83,7 @@
 "width": "691px",
 "height": "51px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "National Culture Collection for Pathogens of Korea (NCCP No.43326, Lot: 012669-T0013, Concentration: 10\u03bcg/\u03bcL)",
+"text": "National Culture Collection for Pathogens of Korea (NCCP No.43326, Lot: 012669-T0013, Concentration: 10μg/μL)",
 "labels": [
 {
 "id": 63,
@@ -155,7 +155,7 @@
 "width": "179px",
 "height": "27px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

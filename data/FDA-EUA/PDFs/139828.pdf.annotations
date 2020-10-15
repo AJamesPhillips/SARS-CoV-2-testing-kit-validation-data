@@ -62,7 +62,7 @@
 "width": "284px",
 "height": "27px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "SeraCare AccuPlex\u2122 SARS-CoV-2 Reference Material",
+"text": "SeraCare AccuPlex™ SARS-CoV-2 Reference Material",
 "labels": [
 {
 "id": 62,
@@ -176,7 +176,7 @@
 "width": "88px",
 "height": "25px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

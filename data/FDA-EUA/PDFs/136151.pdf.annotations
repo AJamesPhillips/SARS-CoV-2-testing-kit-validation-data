@@ -123,7 +123,7 @@
 "text": "Limit of Detection (LOD)/Value"
 }
 ],
-"comment": "genome copies / \u03bcL  for NP swabs"
+"comment": "genome copies / μL  for NP swabs"
 },
 {
 "id": 7,
@@ -133,7 +133,7 @@
 "width": "49px",
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,
@@ -174,7 +174,7 @@
 "text": "Limit of Detection (LOD)/Value"
 }
 ],
-"comment": "genome copies / \u03bcL  for BAL"
+"comment": "genome copies / μL  for BAL"
 },
 {
 "id": 10,
@@ -314,7 +314,7 @@
 "labels": [
 {
 "id": 72,
-"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
+"text": "Nucleic acid amplification/Reaction/Volume in μL"
 },
 {
 "id": 73,

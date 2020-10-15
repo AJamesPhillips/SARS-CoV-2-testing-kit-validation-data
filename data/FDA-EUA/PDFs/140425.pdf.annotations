@@ -142,7 +142,7 @@
 "width": "67px",
 "height": "18px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,
@@ -176,7 +176,7 @@
 "width": "181px",
 "height": "22px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "ACTB (\u03b2-actin)",
+"text": "ACTB (β-actin)",
 "labels": [
 {
 "id": 83,

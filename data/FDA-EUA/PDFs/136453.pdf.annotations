@@ -172,7 +172,7 @@
 "width": "92px",
 "height": "36px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,
@@ -193,7 +193,7 @@
 "labels": [
 {
 "id": 72,
-"text": "Nucleic acid amplification/Reaction/Volume in \u03bcL"
+"text": "Nucleic acid amplification/Reaction/Volume in μL"
 },
 {
 "id": 99,

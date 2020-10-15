@@ -134,7 +134,7 @@
 "width": "664px",
 "height": "37px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "purified SARS-2 genomic RNA was spiked into 200\u03bcL of pooled NCM containing 10\u03bcL MS2 internal control that was pre-mixed with easyMag\u00ae lysis buffer to bring the total volume to 1mL",
+"text": "purified SARS-2 genomic RNA was spiked into 200μL of pooled NCM containing 10μL MS2 internal control that was pre-mixed with easyMag® lysis buffer to bring the total volume to 1mL",
 "labels": [
 {
 "id": 101,
@@ -189,7 +189,7 @@
 "width": "56px",
 "height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,

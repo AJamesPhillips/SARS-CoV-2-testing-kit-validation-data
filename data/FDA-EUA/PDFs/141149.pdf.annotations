@@ -79,7 +79,7 @@
 "width": "195px",
 "height": "23px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "\u03b3-irradiated SARS-CoV-2",
+"text": "γ-irradiated SARS-CoV-2",
 "labels": [
 {
 "id": 62,
@@ -196,7 +196,7 @@
 "text": "Limit of Detection (LOD)/Value"
 }
 ],
-"comment": "Calculated from 1 swab per 1000 \u03bcL transport medium, so 125 genomes per 1000 \u03bcL == 0.125 genomes per 1 \u03bcL"
+"comment": "Calculated from 1 swab per 1000 μL transport medium, so 125 genomes per 1000 μL == 0.125 genomes per 1 μL"
 },
 {
 "id": 11,
@@ -206,7 +206,7 @@
 "width": "221px",
 "height": "28px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / \u03bcL",
+"text": "genome copies / μL",
 "labels": [
 {
 "id": 67,
