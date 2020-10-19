@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "bfbaf0c7d6c933bdbed6371bd2a35e6c2c0dbe46",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal, oropharyngeal, nasal, and mid-turbinate nasal swab specimens, bronchoalveolar lavage fluid (BAL), and sputum",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -50,10 +43,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper respiratory specimen and sputum",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -67,14 +57,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genomic SARS-CoV-2 RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -88,14 +72,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -109,14 +87,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -134,10 +106,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RdRp, E, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -151,10 +120,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.5",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -168,10 +134,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -185,13 +148,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

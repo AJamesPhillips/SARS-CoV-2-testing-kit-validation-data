@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "b0ac4118fc46ebd0e3a8ee2743f0c7dbdd9a38fd",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal aspirates, nasal washes and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, RdRp",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "E",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "HPRT1",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -80,14 +67,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "inactivated SARS‑CoV‑2 viral culture (BetaCoV/France/IDF0571/2020, GISAID EPI ISL 411219)",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 119,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
 ],
 "comment": ""
 },
@@ -101,10 +82,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "VIRPATH laboratory, Lyon, France",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -118,10 +96,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "lysed negative clinical nasopharyngeal swabs",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -135,14 +110,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -156,10 +125,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -173,10 +139,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "380",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -190,13 +153,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "afae8cfcb83917aaf86e39168c8e990ae4ad6768",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled oropharyngeal swab specimen",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "12 individuals at 4 different time points",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -58,14 +51,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "inactivated SARS-CoV-2 virus (isolate 2/231/human/2020/CHN)",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 119,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
 ],
 "comment": ""
 },
@@ -79,10 +66,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -96,10 +80,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Great to see this level of documentation.  But why is there ratio between N and ORF1ab copies / ml from inactivated virus not 1:1?  How was this characterised?",
 "labels": [
-{
-"id": 90,
-"text": "Meta/Question to answer"
-}
+"Meta/Question to answer"
 ],
 "comment": ""
 },
@@ -113,10 +94,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.024884",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "N gene target.  Level of precision seems too high."
 },
@@ -130,10 +108,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -147,10 +122,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.009307",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "ORF1ab gene target"
 },
@@ -164,14 +136,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "95",
 "labels": [
-{
-"id": 96,
-"text": "Statistics/Confidence intervals/Percentage"
-},
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Statistics/Confidence intervals/Percentage",
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -185,14 +151,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.017032",
 "labels": [
-{
-"id": 98,
-"text": "Statistics/Confidence intervals/Lower value"
-},
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Statistics/Confidence intervals/Lower value",
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "N gene target"
 },
@@ -206,14 +166,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.057917",
 "labels": [
-{
-"id": 97,
-"text": "Statistics/Confidence intervals/Upper value"
-},
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Statistics/Confidence intervals/Upper value",
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "N gene target"
 },
@@ -227,14 +181,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.007428",
 "labels": [
-{
-"id": 98,
-"text": "Statistics/Confidence intervals/Lower value"
-},
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Statistics/Confidence intervals/Lower value",
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "ORF1ab gene target"
 },
@@ -248,14 +196,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.013003",
 "labels": [
-{
-"id": 97,
-"text": "Statistics/Confidence intervals/Upper value"
-},
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Statistics/Confidence intervals/Upper value",
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "ORF1ab gene target"
 },
@@ -269,10 +211,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.030467",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "N gene target."
 },
@@ -286,10 +225,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, ORF1ab",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -303,10 +239,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "oropharyngeal swab, nasopharyngeal swab, and anterior nasal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -320,17 +253,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

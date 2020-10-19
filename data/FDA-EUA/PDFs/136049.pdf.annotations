@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "f11389354034a294f1721988435f610172a76cea",
 "annotations": [
 {
@@ -16,10 +15,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "simulated clinical matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -33,10 +29,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "7",
 "labels": [
-{
-"id": 70,
-"text": "Limit of Detection (LOD)/Concentration Range/Number of steps"
-}
+"Limit of Detection (LOD)/Concentration Range/Number of steps"
 ],
 "comment": ""
 },
@@ -50,10 +43,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "3",
 "labels": [
-{
-"id": 71,
-"text": "Limit of Detection (LOD)/Concentration Range/Dilution per step"
-}
+"Limit of Detection (LOD)/Concentration Range/Dilution per step"
 ],
 "comment": ""
 },
@@ -67,10 +57,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "21",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -84,10 +71,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.009",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -101,10 +85,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "TCID50 / mL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -118,14 +99,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "cultured virus isolate",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -139,10 +114,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources (USA-WA1/2020, catalog number NR-52281)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -156,10 +128,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "lot number 70033175, 2.8E+05 TCID50/mL",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -177,10 +146,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal, nasopharyngeal, and oropharyngeal swab ",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -194,10 +160,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Copan Universal Transport Medium System (UTM-RT), BD™ Universal Viral Transport System (UVT), cobas® PCR Media, or 0.9% physiological saline",
 "labels": [
-{
-"id": 34,
-"text": "Specimen/Transport medium"
-}
+"Specimen/Transport medium"
 ],
 "comment": ""
 },
@@ -211,10 +174,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -228,10 +188,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "E",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -245,17 +202,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Primers and probes/Sequences",
+"Meta/Not specified"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

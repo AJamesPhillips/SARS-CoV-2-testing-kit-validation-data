@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "59bd38d249d9cfa89adf46a51d9732be25b0a401",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal and oropharyngeal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": "N1, N2"
 },
@@ -92,10 +79,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -109,10 +93,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "10",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -126,10 +107,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / reaction",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -143,10 +121,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "5 upper respiratory samples (oropharyngeal swabs)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -160,14 +135,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -181,14 +150,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "whole viral genomic RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -202,14 +165,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "cells infected with SARS-CoV-2 obtained from a COVID-19 positive specimen in Hefei, China (COV20851-2)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -223,10 +180,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Meta/Not specified"
 ],
 "comment": "Marked not specified because a) the input clinical volume can be up to 3.5 ml according to Qiagen's QIAamp DSP Viral RNA Mini Kit, b) it's not clear if 140 µL was used for the extraction step, c) if 60 µL was eluted from RNA extraction was 5 µL of this used for the test to go into each reaction volume?"
 },
@@ -240,10 +194,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Up to 3500",
 "labels": [
-{
-"id": 35,
-"text": "Specimen/Volume ul"
-}
+"Specimen/Volume ul"
 ],
 "comment": "According to Qiagen's QIAamp DSP Viral RNA Mini Kit"
 },
@@ -257,10 +208,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "140",
 "labels": [
-{
-"id": 11,
-"text": "RNA extraction & purification/Specimen input volume ul"
-}
+"RNA extraction & purification/Specimen input volume ul"
 ],
 "comment": ""
 },
@@ -274,10 +222,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "60",
 "labels": [
-{
-"id": 13,
-"text": "RNA extraction & purification/Elution volume ul"
-}
+"RNA extraction & purification/Elution volume ul"
 ],
 "comment": ""
 },
@@ -291,13 +236,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "5",
 "labels": [
-{
-"id": 16,
-"text": "Reverse transcription/Input volume ul"
-}
+"Reverse transcription/Input volume ul"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

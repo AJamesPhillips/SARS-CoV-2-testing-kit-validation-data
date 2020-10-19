@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "5bc6e193da73f4ce0bf8c7e84cbc2eb1f6d1663e",
 "annotations": [
 {
@@ -12,14 +11,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "quantitated extracted viral genomic RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -33,14 +26,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -54,10 +41,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "48",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -71,10 +55,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.5",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "LoD for Viral Genomic RNA in UTM with RNasin"
 },
@@ -88,10 +69,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -109,10 +87,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Viral Genomic RNA in UTM with RNasin",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -126,10 +101,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swabs (NPS), nasal swabs (NS), nasal wash/aspirate (NW) or bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -143,14 +115,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "inactivated titered COVID-19 viral particles, strain 2019-nCoV/USA-WA1/2020",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -164,14 +130,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -185,10 +145,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -202,10 +159,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.242",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "LoD for inactivated viral particles in pooled Nasal Swab specimens in UTM"
 },
@@ -223,10 +177,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled negative nasal swab specimens in UTM",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -240,10 +191,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.5",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "LoD for inactivated viral particles in pooled Nasal Wash specimens"
 },
@@ -257,10 +205,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled negative NW (Nasal Wash) specimen matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -274,10 +219,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "1.208",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "LoD for inactivated viral particles in pooled negative BAL matrix"
 },
@@ -291,10 +233,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled negative BAL matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -308,10 +247,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab, S",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -325,10 +261,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 87,
-"text": "Potential interfering substances"
-}
+"Potential interfering substances"
 ],
 "comment": ""
 },
@@ -342,10 +275,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 88,
-"text": "Potential interfering substances/Test synthetic sample"
-}
+"Potential interfering substances/Test synthetic sample"
 ],
 "comment": ""
 },
@@ -371,17 +301,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Primers and probes/Sequences",
+"Meta/Not specified"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

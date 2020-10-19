@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "f9a694500522d767e43fd367d32d5a3c80c655ba",
 "annotations": [
 {
@@ -12,14 +11,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 viral RNA transcript containing an 1100 nucleotide region from the N gene",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -33,10 +26,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "stabilizing buffer RNA Diluent P",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -50,14 +40,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -71,10 +55,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "21",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -88,10 +69,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.136",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -105,10 +83,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -122,14 +97,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper respiratory specimens (for example, nasopharyngeal swabs, oropharyngeal swabs, sputum, BAL, and tracheal aspirates)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-},
-{
-"id": 74,
-"text": "Meta/Error"
-}
+"Supported specimen types",
+"Meta/Error"
 ],
 "comment": "Marked with error as BAL etc are lower respiratory specimens"
 },
@@ -143,10 +112,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -160,17 +126,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N1 & N3",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Primers and probes/Sequences",
+"Meta/Not specified"
 ],
 "comment": "Marked not specified as the specific sequences of primers and probes are not given."
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

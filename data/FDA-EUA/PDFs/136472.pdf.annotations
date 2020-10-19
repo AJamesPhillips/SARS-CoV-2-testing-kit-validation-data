@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "75e78f94c461feb9daab1cb57822b45f70e36369",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "throat (oropharyngeal) swabs, nasopharyngeal swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal washes, nasal aspirates and bronchoalveolar lavage fluid (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "human housekeeping gene β-Actin",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "30",
 "labels": [
-{
-"id": 72,
-"text": "Nucleic acid amplification/Reaction/Volume in μL"
-}
+"Nucleic acid amplification/Reaction/Volume in μL"
 ],
 "comment": ""
 },
@@ -80,14 +67,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Can not find mention of the pseudo-virus or RNA extraction \"above\"",
 "labels": [
-{
-"id": 73,
-"text": "Meta/Not specified"
-},
-{
-"id": 100,
-"text": "Meta/Error/Omission"
-}
+"Meta/Not specified",
+"Meta/Error/Omission"
 ],
 "comment": ""
 },
@@ -101,14 +82,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Can not find this ddPCR data in \"Table 7 below\"",
 "labels": [
-{
-"id": 73,
-"text": "Meta/Not specified"
-},
-{
-"id": 100,
-"text": "Meta/Error/Omission"
-}
+"Meta/Not specified",
+"Meta/Error/Omission"
 ],
 "comment": ""
 },
@@ -122,14 +97,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pseudo-virus RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": "What is this \"pseudo-virus\"?"
 },
@@ -143,14 +112,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "In house manufactured RNA",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": "Not clear what this material is as it is from a \"pseudo-virus\".  Also ddPCR obviously has large errors."
 },
@@ -164,10 +127,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -181,10 +141,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.1",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -198,10 +155,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": "Assuming it's referring to genome copies."
 },
@@ -219,10 +173,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Three SARS-CoV-2 positive clinical specimens",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-}
+"Specimen/Synthetic Specimen/Virus"
 ],
 "comment": ""
 },
@@ -236,10 +187,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.15",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "throat swab synthetic clinical specimen"
 },
@@ -253,10 +201,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.1",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "BAL synthetic clinical specimen"
 },
@@ -270,10 +215,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "negative clinical matrices (Throat swab and BAL)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -287,17 +229,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix",
+"Meta/Not specified"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

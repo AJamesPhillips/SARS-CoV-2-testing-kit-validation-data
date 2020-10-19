@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "12e1f4dad3f055eb4489c825bff2097e927391bc",
 "annotations": [
 {
@@ -16,10 +15,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swab, oropharyngeal swab, anterior nasal swab, and mid-turbinate swab specimens as well as nasopharyngeal wash/ aspirate, nasal aspirate and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -33,10 +29,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab, E",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -50,10 +43,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RPP25 protein subunit gene (RNase P (RP))",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -67,14 +57,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "heat inactivated SARS-CoV-2 virus material",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 115,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
 ],
 "comment": ""
 },
@@ -88,10 +72,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources (Cat. No. NR-52286, lot number 70033548",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -105,10 +86,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled nasopharyngeal (NP) clinical swab sample matrix in UTM which were determined as SARS-CoV-2 negative",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -122,14 +100,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -143,10 +115,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -160,10 +129,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "6",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -177,13 +143,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

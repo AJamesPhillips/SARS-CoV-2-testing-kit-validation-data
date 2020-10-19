@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "82fbe48b59e6b8cd8db15e2c408d13e02b02e3f5",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "oropharyngeal (throat) swab, nasopharyngeal swab, nasal swab, and oral fluid specimens",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "swab (Curative Inc., #K00023)",
 "labels": [
-{
-"id": 33,
-"text": "Specimen/Swab type"
-}
+"Specimen/Swab type"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "collection tube (Curative Inc., #K00016)",
 "labels": [
-{
-"id": 56,
-"text": "Specimen/Transport container(s)"
-}
+"Specimen/Transport container(s)"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "containing DNA/RNA Shield (Zymo Research, #R1100)",
 "labels": [
-{
-"id": 34,
-"text": "Specimen/Transport medium"
-}
+"Specimen/Transport medium"
 ],
 "comment": ""
 },
@@ -84,10 +71,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -101,10 +85,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -118,10 +99,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "IDT, Biosearch Technologies",
 "labels": [
-{
-"id": 79,
-"text": "Primers and probes/Source"
-}
+"Primers and probes/Source"
 ],
 "comment": ""
 },
@@ -135,14 +113,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genomic SARS-CoV-2 RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -156,10 +128,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources Catalog No. NR52285 (Lot # 70333700)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -173,14 +142,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "negative oral fluid specimens",
 "labels": [
-{
-"id": 73,
-"text": "Meta/Not specified"
-},
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Meta/Not specified",
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": "Marked as not specified as \"oral fluid\" covers multiple, and different, clinical matrices."
 },
@@ -194,10 +157,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "volunteer donors",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -215,10 +175,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "DNA/RNA Shield solution",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": "Not technical clinical matrix but is inline with how samples would arrive at a lab."
 },
@@ -232,10 +189,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Zymo Research, #R1100",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -249,10 +203,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -266,10 +217,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.2",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -283,13 +231,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

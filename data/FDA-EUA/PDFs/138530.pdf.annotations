@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "0c4008eb4688f25334b7476eb32900899ab20a76",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal, nasopharyngeal (NP) and oropharyngeal (OP) swab and Bronchoalveolar Lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal swab specimens that are self-collected at home or in a healthcare setting",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": "N1, N2"
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "IDT",
 "labels": [
-{
-"id": 79,
-"text": "Primers and probes/Source"
-}
+"Primers and probes/Source"
 ],
 "comment": ""
 },
@@ -80,10 +67,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "identical to those described in the CDC emergency use authorized assay, the CDC 2019-nCoV Real-Time RT-PCR Diagnostic Panel",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-}
+"Primers and probes/Sequences"
 ],
 "comment": ""
 },
@@ -97,10 +81,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-}
+"Primers and probes/Sequences"
 ],
 "comment": ""
 },
@@ -114,10 +95,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -131,14 +109,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Genomic RNA from SARS-Related Coronavirus 2, Isolate USA-WA1/2020",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -152,10 +124,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources Cat#: NR-52285, Lot#: 70033320",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -169,10 +138,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -186,10 +152,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal (NP) clinical matrix collected in Liquid Amies media, presumed negative",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -203,14 +166,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -224,10 +181,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "2.4",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -241,13 +195,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

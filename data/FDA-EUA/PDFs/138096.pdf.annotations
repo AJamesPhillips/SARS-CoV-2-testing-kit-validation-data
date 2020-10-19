@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "773cede93ac6a30df0b1b08414f0eb76e7afa9d8",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal (NP), nasal, mid-turbinate and oropharyngeal (OP) swab specimens, nasopharyngeal wash/ aspirate or nasal aspirates",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled negative clinical nasopharyngeal swab specimens",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -46,14 +39,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -67,14 +54,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "inactivated cultured SARSCoV-2 virus (USA-WA1/2020)",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 119,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)"
 ],
 "comment": ""
 },
@@ -88,10 +69,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources; NR-52281",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": "https://www.beiresources.org/Catalog/animalviruses/NR-52281.aspx"
 },
@@ -105,10 +83,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.01",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -122,10 +97,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "TCID50 / mL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -139,14 +111,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.026",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-},
-{
-"id": 99,
-"text": "Meta/Potential error"
-}
+"Limit of Detection (LOD)/Value",
+"Meta/Potential error"
 ],
 "comment": "Why is the TCID50 / mL higher and not lower in the neat sample?   Unless perhaps the contrived clinical sample has been concentrated as part of the processing?"
 },
@@ -160,10 +126,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -177,10 +140,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab, ORF1ab",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -194,13 +154,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "target capture, Transcription Mediated Amplification (TMA), and Dual Kinetic Assay (DKA)",
 "labels": [
-{
-"id": 7,
-"text": "Test technology"
-}
+"Test technology"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

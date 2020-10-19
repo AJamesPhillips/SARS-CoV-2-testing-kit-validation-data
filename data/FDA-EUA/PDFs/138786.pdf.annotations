@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "3ef3621b5388f407faef1580eb68a19868777857",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swabs, oropharyngeal swabs, anterior nasal swabs, mid-turbinate nasal swabs as well as nasal aspirate, nasal wash, and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": "N1, N2"
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Armored RNA Quant® SARS-CoV-2 control",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 114,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 ],
 "comment": ""
 },
@@ -84,10 +68,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Asuragen (Catalog Number 52030)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -101,10 +82,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "negative nasopharyngeal swab",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -118,14 +96,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -139,10 +111,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -156,10 +125,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "assuming 100% extraction efficiency",
 "labels": [
-{
-"id": 90,
-"text": "Meta/Question to answer"
-}
+"Meta/Question to answer"
 ],
 "comment": "What does this mean?"
 },
@@ -173,10 +139,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "1",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "Applied Biosystems 7500 Fast and the Applied Biosystems Quant Studio 7"
 },
@@ -190,10 +153,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -207,10 +167,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "250",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "Applied Biosystems Quant Studio 12K system"
 },
@@ -224,13 +181,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "200",
 "labels": [
-{
-"id": 35,
-"text": "Specimen/Volume ul"
-}
+"Specimen/Volume ul"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

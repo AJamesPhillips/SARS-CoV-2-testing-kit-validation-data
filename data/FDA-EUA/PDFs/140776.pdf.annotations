@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "0ca277c3f86bb35fde91b98bb81b33b4c8a0e9b0",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal, oropharyngeal (throat), anterior nasal, and mid-turbinate nasal swabs, as well as nasopharyngeal washes/aspirates or nasal aspirates, and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N1, N3",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "60",
 "labels": [
-{
-"id": 41,
-"text": "Confusion matrix/True positives"
-}
+"Confusion matrix/True positives"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "3",
 "labels": [
-{
-"id": 44,
-"text": "Confusion matrix/False positives"
-}
+"Confusion matrix/False positives"
 ],
 "comment": ""
 },
@@ -80,10 +67,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "57",
 "labels": [
-{
-"id": 43,
-"text": "Confusion matrix/True negatives"
-}
+"Confusion matrix/True negatives"
 ],
 "comment": ""
 },
@@ -97,10 +81,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0",
 "labels": [
-{
-"id": 42,
-"text": "Confusion matrix/False negatives"
-}
+"Confusion matrix/False negatives"
 ],
 "comment": ""
 },
@@ -114,10 +95,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -131,14 +109,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "10006606",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Primers and probes/Sequences",
+"Meta/Not specified"
 ],
 "comment": "This catalog number does not exist in IDT on 2020-09-30"
 },
@@ -152,14 +124,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "synthetic SARS-CoV-2 viral RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -173,10 +139,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Twist Bioscience Cat # MT007544.1",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -190,10 +153,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled clinical negative, nasopharyngeal swab or oropharyngeal swab matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -207,14 +167,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -228,10 +182,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "30",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -245,10 +196,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "10",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -262,13 +210,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

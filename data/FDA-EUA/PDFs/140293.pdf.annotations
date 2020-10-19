@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "91d05d379e025d72e17f88cc435829414f79a34a",
 "annotations": [
 {
@@ -16,10 +15,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swab and nasal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -33,10 +29,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "universal transport media, and oral saline rinse",
 "labels": [
-{
-"id": 34,
-"text": "Specimen/Transport medium"
-}
+"Specimen/Transport medium"
 ],
 "comment": ""
 },
@@ -50,10 +43,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RdRp",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -67,10 +57,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -84,14 +71,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 RNA based pseudovirus",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 114,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 ],
 "comment": ""
 },
@@ -105,10 +86,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SeraCare",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -122,10 +100,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pool of nasal swab in oral rinse previously tested negative",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -139,14 +114,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -160,10 +129,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "15",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -177,10 +143,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -194,13 +157,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

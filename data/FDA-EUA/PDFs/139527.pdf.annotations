@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "f01875eab919fa002dd0bdd26490809724e1be6c",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal (NP), oropharyngeal (OP), anterior nasal and mid-turbinate nasal swabs, nasopharyngeal wash/aspirate or nasal aspirates, and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RdRp, E, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "MS2 Bacteriophage",
 "labels": [
-{
-"id": 105,
-"text": "Controls/Internal/Full process"
-}
+"Controls/Internal/Full process"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 genomic RNA fragments",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-}
+"Specimen/Synthetic Specimen/Virus"
 ],
 "comment": ""
 },
@@ -80,10 +67,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "produced by transfecting HEK-293 cells with plasmids expressing either the N, E or RdRP mRNA of SARS-CoV-2",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -97,10 +81,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "negative nasopharyngeal (NP) swabs in viral transport media (VTM)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -114,14 +95,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -135,10 +110,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -152,14 +124,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 Reference Material",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 114,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 ],
 "comment": ""
 },
@@ -173,10 +139,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SeraCare; AccuPlex™ SARS-CoV-2 Reference Material Kit, Cat 0505-0126",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -190,10 +153,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.140",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -207,13 +167,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "8b9b1858f984220b836fc3007673d361b20aae3e",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "dry oropharyngeal swabs",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "E, RdRp",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "internal control derived from sequences of the Equine Arteritis Virus (EAV) genome",
 "labels": [
-{
-"id": 105,
-"text": "Controls/Internal/Full process"
-}
+"Controls/Internal/Full process"
 ],
 "comment": ""
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "AccuPlex SARS-CoV-2 Verification panel",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 114,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 ],
 "comment": ""
 },
@@ -84,10 +68,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SeraCare, Gaithersburg MD 20878",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -101,10 +82,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "dry oropharyngeal swab/s",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -118,10 +96,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "PBS solution",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -135,10 +110,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "subject who tested negative for SARS-CoV-2",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -152,10 +124,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -169,10 +138,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "5",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -186,13 +152,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

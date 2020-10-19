@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "5da277cdebc5813f8d8b6fe1c08e08eb97d5d8bb",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Universal Transport Medium (UTM-RT®, Copan Diagnostics, Inc, Catalogue 328C) or equivalent",
 "labels": [
-{
-"id": 34,
-"text": "Specimen/Transport medium"
-}
+"Specimen/Transport medium"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -80,14 +67,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "gamma-irradiated SARS CoV-2 viral fluid (SARS-Related Coronavirus 2, isolate USA-WA1/2020)",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 116,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Gamma radiation)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Gamma radiation)"
 ],
 "comment": ""
 },
@@ -105,10 +86,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Negative nasopharyngeal specimens",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -122,10 +100,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "collected from 2019-06-19 to 2019-07-14 from a US site",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -139,18 +114,9 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-Related Coronavirus 2 gamma-irradiated viral fluid consists of a crude preparation of cell lysate and supernatant from Cercopithecus aethiops kidney epithelial cells (Vero E6; ATCC® CRL-1586™) infected with severe acute respiratory syndrome-related coronavirus 2 (SARS-CoV-2)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 101,
-"text": "Specimen/Synthetic Specimen/Other components"
-},
-{
-"id": 102,
-"text": "Specimen/Synthetic Specimen/Production method"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Specimen/Synthetic Specimen/Other components",
+"Specimen/Synthetic Specimen/Production method"
 ],
 "comment": ""
 },
@@ -164,10 +130,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Biodefense and Emerging Infections Research Resources Repository (BEI catalog number: NR-52287)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -181,14 +144,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "NRC-52281 lot 70033641 and NR-52287",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 99,
-"text": "Meta/Potential error"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Potential error"
 ],
 "comment": "Seems to have some inconsistency."
 },
@@ -206,10 +163,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "200",
 "labels": [
-{
-"id": 35,
-"text": "Specimen/Volume ul"
-}
+"Specimen/Volume ul"
 ],
 "comment": ""
 },
@@ -223,10 +177,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.333",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "Assuming this is the claimed limit of detection."
 },
@@ -240,10 +191,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -257,13 +205,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

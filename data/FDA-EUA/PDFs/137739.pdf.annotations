@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "8d724583dd9641f6c120d2d95a1cbe8744913ecf",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper and lower respiratory specimens (such as nasal, nasopharyngeal, oropharyngeal swabs, sputum, lower respiratory tract aspirates, bronchoalveolar lavage, and nasopharyngeal wash/aspirate or nasal aspirate)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": "N1 N2"
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "synthetic SARS-CoV-2 RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -84,10 +68,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Twist Bioscience, San Francisco, CA, part # MT007544.1",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -101,10 +82,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal (NP) swab (upper respiratory sample type) and sputum (lower respiratory sample type)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -118,10 +96,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Samples were collected prior to 2020 and were considered negative",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -135,10 +110,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -152,10 +124,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.7",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "sputum"
 },
@@ -169,10 +138,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -186,13 +152,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.9",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "NP swab"
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

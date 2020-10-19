@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "288a7557a76d90d38af66d4c08911116d8a3a003",
 "annotations": [
 {
@@ -35,10 +34,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "This is when the internal control is more important.  And this data could be very valuable for all public health initiatives around the world.",
 "labels": [
-{
-"id": 74,
-"text": "Meta/Error"
-}
+"Meta/Error"
 ],
 "id": 2,
 "comment": ""
@@ -64,10 +60,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Hologic Panther Fusion SARS-CoV-2 assay or the Hologic Aptima SARS-CoV-2 Assay (Panther System)",
 "labels": [
-{
-"id": 60,
-"text": "Third party detection system"
-}
+"Third party detection system"
 ],
 "id": 4,
 "comment": ""
@@ -130,10 +123,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -147,10 +137,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.01",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "See http://localhost:5003/render_pdf?relative_file_path=../../data/FDA-EUA/PDFs/136156.pdf&highlighted_annotation_ids=3"
 },
@@ -164,13 +151,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "TCID50 / mL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": "http://localhost:5003/render_pdf?relative_file_path=../../data/FDA-EUA/PDFs/136156.pdf&highlighted_annotation_ids=4"
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

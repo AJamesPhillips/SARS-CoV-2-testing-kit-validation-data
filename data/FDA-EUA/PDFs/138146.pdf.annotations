@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "05b403485fca306b22c3c50c51d531455678aa3d",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Home self-collected nasal swabs",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2- negative human/porcine matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -84,14 +68,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "previously confirmed, high-positive patient samples",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -105,14 +83,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -126,18 +98,9 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-},
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Limit of Detection (LOD)/Value",
+"Limit of Detection (LOD)/Units",
+"Meta/Not specified"
 ],
 "comment": "Perhaps information is contained within Quantigen Biosciences COVID-19 swab stability data?"
 },
@@ -151,17 +114,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Viral gene(s) targetted",
+"Meta/Not specified"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

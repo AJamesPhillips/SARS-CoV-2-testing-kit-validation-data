@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "b1d0a803857fb70c021389dd31b15d9341c0e5dc",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal (NP) swabs, oropharyngeal (OP) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasopharyngeal wash/aspirates, nasal aspirates, and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,14 +25,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "synthetic SARS-CoV-2 RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -50,10 +40,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Twist part # 102019",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -67,10 +54,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled negative clinical matrix (nasopharyngeal swab specimen)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -84,14 +68,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -105,10 +83,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "1",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -122,10 +97,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -139,21 +111,13 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-},
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Viral gene(s) targetted",
+"Controls/Internal/Human gene target",
+"Meta/Not specified"
 ],
 "comment": "May be specified somewhere but it's not in the most obvious / accessible places."
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

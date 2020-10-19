@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "a4c9ea190e9e184616f4ea34207a2ae6559fa417",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, oropharyngeal swab specimens and nasopharyngeal wash/aspirate or nasal aspirate specimens)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RdRp, ORF1a",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,14 +39,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "non-human synthetic DNA fragment",
 "labels": [
-{
-"id": 105,
-"text": "Controls/Internal/Full process"
-},
-{
-"id": 99,
-"text": "Meta/Potential error"
-}
+"Controls/Internal/Full process",
+"Meta/Potential error"
 ],
 "comment": "Marked as potential error as DNA fragment, unless packaged, is a purification but not an extraction-from-membrane/envelope control."
 },
@@ -67,14 +54,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "inactivated SARS-CoV-2",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 115,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
 ],
 "comment": "Heat inactivated based on BEI cat # NR-52286"
 },
@@ -88,10 +69,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI, cat.# NR-52286",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -105,10 +83,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -122,14 +97,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -143,10 +112,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -160,10 +126,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.56",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -177,13 +140,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

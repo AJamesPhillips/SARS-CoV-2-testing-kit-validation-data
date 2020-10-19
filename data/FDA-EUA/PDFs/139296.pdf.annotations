@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "a980a83eed2aeef352480d508890fc21104a11ff",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal and oropharyngeal swabs, anterior nasal swab and mid-turbinate nasal swabs, nasopharyngeal aspirates/washes or nasal aspirates, and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "E, RdRp, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "reference RNA control",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -84,10 +68,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ThermoFisher Scientific, USA (AcroMetrixTM Coronavirus 2019 (COVID-19) RNA Control (Cat # 954519))",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -101,14 +82,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "(nasopharyngeal swab, oropharyngeal swab, and bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-},
-{
-"id": 100,
-"text": "Meta/Error/Omission"
-}
+"Specimen/Synthetic Specimen/Clinical matrix",
+"Meta/Error/Omission"
 ],
 "comment": ""
 },
@@ -122,14 +97,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "were screened negative by an EUA authorized assay",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": "Marked as Not specified as the specific EUA assay used is not declared. And the source of the clinical specimen matrices is not given."
 },
@@ -143,10 +112,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -160,10 +126,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "10",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -177,13 +140,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

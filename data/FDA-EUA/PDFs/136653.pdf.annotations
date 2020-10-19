@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "1248a93edde53bc77d5051e8177a4c852bccc580",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal, nasal, mid-turbinate, and oropharyngeal swab specimens, nasopharyngeal wash/aspirate or nasal aspirates",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 56,
-"text": "Specimen/Transport container(s)"
-}
+"Specimen/Transport container(s)"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BD Universal Viral Transport System (UVT) or Copan Universal Transport Media System (UTM)",
 "labels": [
-{
-"id": 34,
-"text": "Specimen/Transport medium"
-}
+"Specimen/Transport medium"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nucleocapsid phosphoprotein gene (N1 and N2 regions)",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -80,10 +67,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -97,14 +81,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "References N1 and N2 primer/probe sets of the United States Centers for Disease Control and Prevention (US CDC)",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Primers and probes/Sequences",
+"Meta/Not specified"
 ],
 "comment": "Says \"based on\", so may be different sequence etc"
 },
@@ -118,14 +96,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genomic viral RNA from SARS-CoV-2",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -139,10 +111,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources (Cat. No. NR-52285)",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -156,10 +125,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "pooled negative nasopharyngeal clinical matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -173,10 +139,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -190,10 +153,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.04",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -207,10 +167,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -224,13 +181,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Sequences identical to CDC N1 and N2 primer/probes.",
 "labels": [
-{
-"id": 78,
-"text": "Primers and probes/Sequences"
-}
+"Primers and probes/Sequences"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

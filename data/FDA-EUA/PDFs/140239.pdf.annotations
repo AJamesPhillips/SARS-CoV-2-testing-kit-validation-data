@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "9121a1f855af807d524170018a79b4815a60993d",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -32,5 +28,6 @@
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "15f6a67e620b0e5d40fc8c0ac040e40bad0da5da",
 "annotations": [
 {
@@ -12,14 +11,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 viral genomic RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 112,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Naked RNA"
 ],
 "comment": ""
 },
@@ -33,14 +26,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "not specified",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -54,10 +41,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -77,10 +61,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "sputum and nasopharyngeal swab specimen (collected in UTM)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -94,10 +75,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -111,10 +89,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.5",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -128,10 +103,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.25",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -145,14 +117,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.125",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-},
-{
-"id": 74,
-"text": "Meta/Error"
-}
+"Limit of Detection (LOD)/Value",
+"Meta/Error"
 ],
 "comment": "0.125 but table 2 shows it should be 0.25 or the 0.5 for ABI 7500 Sputum could be 0.25.  However perhaps this is because ORF1ab positive treated differently to E gene positive (see Interpretation of Results table on page 10)"
 },
@@ -166,10 +132,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.5",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -183,10 +146,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.25",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -200,10 +160,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Minor error: should be CFX96",
 "labels": [
-{
-"id": 74,
-"text": "Meta/Error"
-}
+"Meta/Error"
 ],
 "comment": ""
 },
@@ -217,14 +174,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab (RdRp), E",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-},
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Viral gene(s) targetted",
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -238,10 +189,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Nasopharyngeal swab, Oropharyngeal swab, Nasal mid-turbinate (NMT) swab, also called Deep Nasal Swab, Anterior nares specimen (NS), Sputum",
 "labels": [
-{
-"id": 75,
-"text": "Specimen/Collection protocol"
-}
+"Specimen/Collection protocol"
 ],
 "comment": ""
 },
@@ -255,14 +203,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -276,13 +218,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal, oropharyngeal, nasal, and midturbinate nasal swab, and sputum",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

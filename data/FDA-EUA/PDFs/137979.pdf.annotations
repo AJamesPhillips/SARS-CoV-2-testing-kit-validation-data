@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "451b904845a2e36d736519dc49ddc99a028373a5",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal (NP) and oropharyngeal (OP) swabs, bronchoalveolar lavage fluid (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RdRp, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -50,10 +43,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "hydroxypyruvate reductase gene from the pumpkin plant, in Armored RNA particle that has been diluted in negative human plasma",
 "labels": [
-{
-"id": 105,
-"text": "Controls/Internal/Full process"
-}
+"Controls/Internal/Full process"
 ],
 "comment": "Clinical matrix not the same as that of the test."
 },
@@ -67,14 +57,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "recombinant virus containing SARS-CoV-2 RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 114,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles"
 ],
 "comment": ""
 },
@@ -88,10 +72,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SeraCare, AccuPlex COVID-19",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -105,10 +86,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "simulated nasal matrix (SNM)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -122,14 +100,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -143,10 +115,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.100",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "genome copies / μL"
 },
@@ -160,10 +129,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 },
@@ -177,10 +143,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "inactivated cultured SARS-CoV-2 virus (USA-WA1/2020)",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-}
+"Specimen/Synthetic Specimen/Virus"
 ],
 "comment": ""
 },
@@ -194,10 +157,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "BEI Resources; NR-52287",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -211,10 +171,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "21",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -228,10 +185,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -245,10 +199,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.0037",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "TCID50 / mL"
 },
@@ -274,14 +225,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.0022",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-},
-{
-"id": 98,
-"text": "Statistics/Confidence intervals/Lower value"
-}
+"Limit of Detection (LOD)/Value",
+"Statistics/Confidence intervals/Lower value"
 ],
 "comment": "TCID50 / mL"
 },
@@ -295,17 +240,12 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.0099",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-},
-{
-"id": 97,
-"text": "Statistics/Confidence intervals/Upper value"
-}
+"Limit of Detection (LOD)/Value",
+"Statistics/Confidence intervals/Upper value"
 ],
 "comment": "TCID50 / mL"
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

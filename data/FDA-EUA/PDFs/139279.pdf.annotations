@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "256e4cf599b082ba44b37435cf8a07bc2bd957f5",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal aspirates, nasal washes, bronchoalveolar lavage (BAL) fluid and sputum",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "ORF1ab, N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "15 total, 5 SARS-CoV-2 positive clinical specimens each of nasopharyngeal swabs, throat swabs and sputum",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -88,10 +72,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "negative clinical matrix",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -105,14 +86,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -126,14 +101,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Quantitative RT-PCR was used to estimate the concentration of virus in each specimen prior to dilution",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -147,10 +116,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Three lots of COVID-19 Coronavirus Real Time PCR Kits were included in the study.",
 "labels": [
-{
-"id": 107,
-"text": "Limit of Detection (LOD)/Protocol"
-}
+"Limit of Detection (LOD)/Protocol"
 ],
 "comment": ""
 },
@@ -164,10 +130,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.35",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -181,13 +144,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

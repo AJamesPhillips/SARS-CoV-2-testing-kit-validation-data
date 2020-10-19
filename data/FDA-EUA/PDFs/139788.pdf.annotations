@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "c289e23553b1b491a3bc1dec9bbbe8560317c4a6",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper respiratory specimens (such as nasal, mid-turbinate, nasopharyngeal, and oropharyngeal swab specimens) and bronchoalveolar lavage",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, E",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 74,
-"text": "Meta/Error"
-}
+"Meta/Error"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 74,
-"text": "Meta/Error"
-}
+"Meta/Error"
 ],
 "comment": "RNAase P is spelt RNase P and not abbreviated to RdRp"
 },
@@ -80,10 +67,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RdRp",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -97,14 +81,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "in-vitro transcribed EAV (Equine Arteritis Virus) RNA extraction control [of] the SARS-CoV-2 E gene",
 "labels": [
-{
-"id": 105,
-"text": "Controls/Internal/Full process"
-},
-{
-"id": 108,
-"text": "Meta/Not specified/Reasonable assumption"
-}
+"Controls/Internal/Full process",
+"Meta/Not specified/Reasonable assumption"
 ],
 "comment": "Marked with assumption as assuming it's enveloped rather than naked RNA"
 },
@@ -118,10 +96,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 RNA",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-}
+"Specimen/Synthetic Specimen/Virus"
 ],
 "comment": ""
 },
@@ -135,10 +110,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Sera Care Control Catalog #0505-0126",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -152,10 +124,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swab",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -169,10 +138,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "confirmed negative for SARS-CoV-2",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -186,14 +152,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "previously characterized positive nasopharyngeal patient sample",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -207,14 +167,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -228,10 +182,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.203",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "E gene target"
 },
@@ -245,10 +196,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "21",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "N gene target"
 },
@@ -262,10 +210,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.203",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "RdRp gene target"
 },
@@ -279,10 +224,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -296,13 +238,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "genome copies / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

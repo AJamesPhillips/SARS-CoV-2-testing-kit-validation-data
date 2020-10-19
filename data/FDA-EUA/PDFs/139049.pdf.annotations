@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "865924839d042d48cff72ea9aa4490e286a135df",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper respiratory specimens (such as nasopharyngeal swabs (NPS), oropharyngeal swabs (OPS), and nasal swabs) or bronchoalveolar lavage (BAL)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "NPS and BAL",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -46,14 +39,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -71,18 +58,9 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "quantified inactivated virus stocks",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 115,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
-},
-{
-"id": 108,
-"text": "Meta/Not specified/Reasonable assumption"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)",
+"Meta/Not specified/Reasonable assumption"
 ],
 "comment": "Marked with 'reasonable assumption' referring to the method of inactivation (heat) as Zeptometrix supplies heat inactivated virus (https://www.zeptometrix.com/products/sars-cov-2-isolate-usa-wa1-2020-culture-fluid-heat-inactivated-05-ml) and does seem to provide virus inactivated using other methods"
 },
@@ -96,10 +74,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Zeptometrix",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -113,10 +88,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -130,10 +102,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.0172",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -147,13 +116,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "TCID50 / mL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

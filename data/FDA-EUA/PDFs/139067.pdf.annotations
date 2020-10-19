@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "8f4e0284e61e7b31bb9519c559f0383881e39de2",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal swab specimens self-collected",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N, ORF1ab, S",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "MS2 Bacteriophage",
 "labels": [
-{
-"id": 105,
-"text": "Controls/Internal/Full process"
-}
+"Controls/Internal/Full process"
 ],
 "comment": ""
 },
@@ -63,18 +53,9 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-},
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Limit of Detection (LOD)/Value",
+"Limit of Detection (LOD)/Units",
+"Meta/Not specified"
 ],
 "comment": "It's not clear which LOD this refers to.  Is it this document that references ThermoFishers CoViD-19 EUA kit http://microbrush.com/wp-content/uploads/2020/09/COVID19-Elution-Validation-Quantigen.pdf ?"
 },
@@ -88,18 +69,9 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-},
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Clinical matrix",
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -113,18 +85,9 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "SARS-CoV-2 positive patient sample pools",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 108,
-"text": "Meta/Not specified/Reasonable assumption"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Meta/Not specified/Reasonable assumption",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -138,14 +101,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -159,10 +116,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -176,13 +130,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 107,
-"text": "Limit of Detection (LOD)/Protocol"
-}
+"Limit of Detection (LOD)/Protocol"
 ],
 "comment": "All of the expected positive samples remained positive.  Interesting there is some attempt at quantifying the margin of error though this is not completed"
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

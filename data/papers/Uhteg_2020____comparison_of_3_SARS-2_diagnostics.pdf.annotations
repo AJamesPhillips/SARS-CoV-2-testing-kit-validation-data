@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "6ce385a8170e169f83258ae1db0b631c21dbb018",
 "annotations": [
 {
@@ -87,5 +86,6 @@
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

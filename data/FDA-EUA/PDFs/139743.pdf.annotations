@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "9ad959a903ae3c48bdc45650b5bbcf61ae40f36f",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "upper or lower respiratory specimens (such as nasopharyngeal, oropharyngeal and nasal swabs, sputum, lower respiratory tract aspirates, bronchoalveolar lavage, and nasopharyngeal wash/aspirate or nasal aspirate)",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "RNase P (RP)",
 "labels": [
-{
-"id": 83,
-"text": "Controls/Internal/Human gene target"
-}
+"Controls/Internal/Human gene target"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "N",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -63,10 +53,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "influenza A virus, influenza B virus, and SARS-CoV-2",
 "labels": [
-{
-"id": 5,
-"text": "Detects pathogen(s)"
-}
+"Detects pathogen(s)"
 ],
 "comment": ""
 },
@@ -80,14 +67,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "live viral stocks of [...] SARS-COV-2 virus, 2019-nCoV/USA-WA1/2020",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 118,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
 "comment": ""
 },
@@ -101,14 +82,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-},
-{
-"id": 73,
-"text": "Meta/Not specified"
-}
+"Specimen/Synthetic Specimen/Virus/Source",
+"Meta/Not specified"
 ],
 "comment": ""
 },
@@ -122,10 +97,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "dilutions of each virus were prepared with a diluent consisting of a suspension of human A549 cells and viral transport medium (VTM)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-}
+"Specimen/Synthetic Specimen/Clinical matrix"
 ],
 "comment": ""
 },
@@ -139,14 +111,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "https://www.cdc.gov/coronavirus/2019-ncov/downloads/Viral-Transport-Medium.pdf",
 "labels": [
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-},
-{
-"id": 108,
-"text": "Meta/Not specified/Reasonable assumption"
-}
+"Specimen/Synthetic Specimen/Clinical matrix/Source",
+"Meta/Not specified/Reasonable assumption"
 ],
 "comment": "Assuming it's CDC's own formula."
 },
@@ -160,10 +126,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -177,10 +140,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.0101",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": "TaqPath 1-step Multiplex"
 },
@@ -194,10 +154,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "0.0506",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -211,13 +168,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "TCID50 / reaction",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

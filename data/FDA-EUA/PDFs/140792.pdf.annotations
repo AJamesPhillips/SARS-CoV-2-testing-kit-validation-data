@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "35d4a07ccbdcf894951cee354060c207d1088699",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "clinician-instructed self-collected nasal swab specimens, and clinician-collected nasal, nasopharyngeal, and oropharyngeal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,13 +25,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Aptima SARS-CoV-2 assay from Hologic",
 "labels": [
-{
-"id": 60,
-"text": "Third party detection system"
-}
+"Third party detection system"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "2c136f1c74501c66655047abca89e1b66ac5d401",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasal swab",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,13 +25,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Hologic Panther Fusion SARS-CoV-2 molecular test",
 "labels": [
-{
-"id": 60,
-"text": "Third party detection system"
-}
+"Third party detection system"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }

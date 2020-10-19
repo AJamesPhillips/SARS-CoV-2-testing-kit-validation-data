@@ -1,5 +1,4 @@
 {
-"version": 3,
 "file_sha1_hash": "09463fa532ee27fe845961bd2a7beeaab1838101",
 "annotations": [
 {
@@ -12,10 +11,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "nasopharyngeal swabs, oropharyngeal (throat) swabs, anterior nasal swabs, mid-turbinate nasal swabs, nasal washes and nasal aspirates",
 "labels": [
-{
-"id": 0,
-"text": "Supported specimen types"
-}
+"Supported specimen types"
 ],
 "comment": ""
 },
@@ -29,10 +25,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "E, S",
 "labels": [
-{
-"id": 6,
-"text": "Viral gene(s) targetted"
-}
+"Viral gene(s) targetted"
 ],
 "comment": ""
 },
@@ -46,10 +39,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "Universal Transport Medium™, UTM® (Copan, Murrieta, California, USA)",
 "labels": [
-{
-"id": 34,
-"text": "Specimen/Transport medium"
-}
+"Specimen/Transport medium"
 ],
 "comment": ""
 },
@@ -63,14 +53,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "heat inactivated SARS-CoV-2 cell culture supernatant",
 "labels": [
-{
-"id": 62,
-"text": "Specimen/Synthetic Specimen/Virus"
-},
-{
-"id": 115,
-"text": "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
-}
+"Specimen/Synthetic Specimen/Virus",
+"Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)"
 ],
 "comment": ""
 },
@@ -84,10 +68,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "4.6E+05 plaque forming units (PFU)/mL before inactivation; Institute of Virology, Charité Berlin, Germany",
 "labels": [
-{
-"id": 63,
-"text": "Specimen/Synthetic Specimen/Virus/Source"
-}
+"Specimen/Synthetic Specimen/Virus/Source"
 ],
 "comment": ""
 },
@@ -101,14 +82,8 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "UTM® containing simulated nasal matrix  (5% w/v mucin, 5% v/v whole blood, 0.8% v/v NaCl (95% saline) and 0.00002% w/v human genomic DNA)",
 "labels": [
-{
-"id": 64,
-"text": "Specimen/Synthetic Specimen/Clinical matrix"
-},
-{
-"id": 86,
-"text": "Specimen/Synthetic Specimen/Clinical matrix/Source"
-}
+"Specimen/Synthetic Specimen/Clinical matrix",
+"Specimen/Synthetic Specimen/Clinical matrix/Source"
 ],
 "comment": ""
 },
@@ -134,10 +109,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "500",
 "labels": [
-{
-"id": 11,
-"text": "RNA extraction & purification/Specimen input volume ul"
-}
+"RNA extraction & purification/Specimen input volume ul"
 ],
 "comment": ""
 },
@@ -151,10 +123,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "20",
 "labels": [
-{
-"id": 68,
-"text": "Limit of Detection (LOD)/Minimum Replicates"
-}
+"Limit of Detection (LOD)/Minimum Replicates"
 ],
 "comment": ""
 },
@@ -168,10 +137,7 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "100",
 "labels": [
-{
-"id": 66,
-"text": "Limit of Detection (LOD)/Value"
-}
+"Limit of Detection (LOD)/Value"
 ],
 "comment": ""
 },
@@ -185,13 +151,11 @@
 "colour": "rgba(200, 200, 255, 0.6)",
 "text": "PFU / μL",
 "labels": [
-{
-"id": 67,
-"text": "Limit of Detection (LOD)/Units"
-}
+"Limit of Detection (LOD)/Units"
 ],
 "comment": ""
 }
 ],
-"comments": []
+"comments": [],
+"schema_version": 5
 }
