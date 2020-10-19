@@ -922,7 +922,7 @@ function comments_from_annotations (annotations: AnnotationWithFilePath[]): stri
 function ref_link (annotation: { relative_file_path: string, id?: number })
 {
     const { relative_file_path, id } = annotation
-    let ref = `http://localhost:5003/render_pdf?relative_file_path=${relative_file_path}`
+    let ref = `http://localhost:5003/r/1772.2/-1?relative_file_path=${relative_file_path}`
 
     if (id !== undefined) ref += `&highlighted_annotation_ids=${id}`
 
@@ -1049,7 +1049,7 @@ function get_FDA_EUA_pdf_file_path_from_url (url)
         console.error("failed on url: ", url)
         throw e
     }
-    const file_path = `../../data/FDA-EUA/PDFs/${file_id}.pdf`
+    const file_path = `FDA-EUA/PDFs/${file_id}.pdf`
 
     return file_path
 }

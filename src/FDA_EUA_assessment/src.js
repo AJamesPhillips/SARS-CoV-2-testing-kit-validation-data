@@ -722,7 +722,7 @@ function comments_from_annotations(annotations) {
 }
 function ref_link(annotation) {
     var relative_file_path = annotation.relative_file_path, id = annotation.id;
-    var ref = "http://localhost:5003/render_pdf?relative_file_path=" + relative_file_path;
+    var ref = "http://localhost:5003/r/1772.2/-1?relative_file_path=" + relative_file_path;
     if (id !== undefined)
         ref += "&highlighted_annotation_ids=" + id;
     return ref;
@@ -810,7 +810,7 @@ function get_FDA_EUA_pdf_file_path_from_url(url) {
         console.error("failed on url: ", url);
         throw e;
     }
-    var file_path = "../../data/FDA-EUA/PDFs/" + file_id + ".pdf";
+    var file_path = "FDA-EUA/PDFs/" + file_id + ".pdf";
     return file_path;
 }
 var value_handlers = (_a = {},
