@@ -24,27 +24,6 @@ from common.paths import (
 )
 
 
-def calculate_common_labels():
-    common_labels = dict()
-
-    with open(dir_path + "/common_labels.csv", "r") as f:
-        labels_csv = csv.reader(f, delimiter=",")
-        for (i, values) in enumerate(labels_csv):
-            try:
-                label_id = int(values[0])
-            except Exception as e:
-                raise Exception("Invalid label id: \"{}\" on row: {}".format(values[0], i))
-
-            label_text = values[1]
-
-            if label_id in common_labels:
-                raise Exception("Common labels has duplicate id: {} for label text: \"{}\" and \"{}\"".format(label_id, common_labels[label_id], label_text))
-
-            common_labels[label_id] = label_text
-
-    return common_labels
-
-
 def get_directories():
     with open(dir_path + "/PDF_directories.txt", "r") as f:
         directories = f.read().split("\n")

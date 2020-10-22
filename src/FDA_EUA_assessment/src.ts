@@ -1,10 +1,4 @@
 
-interface LABEL_IDS_TO_NAMES
-{
-    [label_id: number]: string
-}
-
-
 type FDA_EUA_PARSED_DATA_ROW = [
     string,
     string,
@@ -23,12 +17,6 @@ type FDA_EUA_PARSED_DATA_ROW = [
 type FDA_EUA_PARSED_DATA = FDA_EUA_PARSED_DATA_ROW[]
 
 
-interface Label
-{
-    id: number
-    text: string
-}
-
 interface Annotation
 {
     id: number
@@ -39,7 +27,7 @@ interface Annotation
     height: string
     colour: string
     text: string
-    labels: Label[]
+    labels: string[]
     comment: string
     deleted?: false  // should not actually ever be present
 }
@@ -71,146 +59,142 @@ interface ANNOTATION_FILES_BY_TEST_ID
 }
 
 
-declare var label_ids_to_names: LABEL_IDS_TO_NAMES
 declare var fda_eua_parsed_data: FDA_EUA_PARSED_DATA
 declare var annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID
 
 
 const labels = {
-    claims__controls__internal__human_gene_target: 83,
-    claims__limit_of_detection__minimum_replicates: 68,
-    claims__limit_of_detection__value: 66,
-    claims__limit_of_detection__units: 67,
-    claims__primers_and_probes__sequences: 78,
-    claims__primers_and_probes__sources: 79,
-    claims__reaction_volume_uL: 72,
-    claims__specimen__supported_types: 0,
-    claims__specimen__transport_medium: 34,
-    claims__target_viral_genes: 6,
-    meta__error: 74,
-    meta__not_specified: 73,
-    meta__not_specified__partial_info: 109,
-    meta__potential_error: 99,
-    metrics__confusion_matrix__false_negatives: 42,
-    metrics__confusion_matrix__false_positives: 44,
-    metrics__confusion_matrix__true_negatives: 43,
-    metrics__confusion_matrix__true_positives: 41,
-    metrics__num_clinical_samples__negative_controls: -1,
-    metrics__num_clinical_samples__positive: -1,
-    synthetic_specimen_virus_type_Naked_RNA: 112,
-    synthetic_specimen_virus_type_Antigens: 113,
-    synthetic_specimen_virus_type_Synthetic_Viral_Particles: 114,
-    synthetic_specimen_virus_type_Inactivated_Virus__Heat: 115,
-    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: 116,
-    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: 117,
-    synthetic_specimen_virus_type_Live_Virus: 118,
-    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: 119,
-    synthetic_specimen_virus_type_Partial_Live_Virus: 120,
-    test_descriptor__manufacturer_name: 111,
-    test_descriptor__test_name: 110,
-    test_technology: 7,
-    validation_condition__author: 24,
-    validation_condition__comparator_test: -1,
-    validation_condition__date: 25,
-    validation_condition__sample_volume: -1,
-    validation_condition__specimen_type: -1,
-    validation_condition__swab_type: -1,
-    validation_condition__synthetic_specimen__clinical_matrix: 64,
-    validation_condition__synthetic_specimen__clinical_matrix_source: 86,
-    validation_condition__synthetic_specimen__viral_material: 62,
-    validation_condition__synthetic_specimen__viral_material_source: 63,
-    validation_condition__transport_medium: -1,
+    claims__controls__internal__human_gene_target: "Controls/Internal/Human gene target",
+    claims__limit_of_detection__minimum_replicates: "Limit of Detection (LOD)/Minimum Replicates",
+    claims__limit_of_detection__value: "Limit of Detection (LOD)/Value",
+    claims__limit_of_detection__units: "Limit of Detection (LOD)/Units",
+    claims__primers_and_probes__sequences: "Primers and probes/Sequences",
+    claims__primers_and_probes__sources: "Primers and probes/Sources",
+    claims__reaction_volume_uL: "Nucleic acid amplification/Reaction/Volume in μL",
+    claims__specimen__supported_types: "Supported specimen types",
+    claims__specimen__transport_medium: "Specimen/Transport medium",
+    claims__target_viral_genes: "Viral gene(s) targetted",
+    meta__error: "Meta/Error",
+    meta__error__omission: "Meta/Error/Omission",
+    meta__not_specified: "Meta/Not specified",
+    meta__not_specified__partial_info: "Meta/Not specified/Partial information to reproduce",
+    meta__potential_error: "Meta/Potential error",
+    metrics__confusion_matrix__false_negatives: "Confusion matrix/False negatives",
+    metrics__confusion_matrix__false_positives: "Confusion matrix/False positives",
+    metrics__confusion_matrix__true_negatives: "Confusion matrix/True negatives",
+    metrics__confusion_matrix__true_positives: "Confusion matrix/True positives",
+    metrics__num_clinical_samples__negative_controls: "Number of clinical samples/Controls (negatives)",
+    metrics__num_clinical_samples__positive: "Number of clinical samples/Positives",
+    synthetic_specimen_virus_type_Naked_RNA: "Specimen/Synthetic Specimen/Virus/Type/Naked RNA",
+    synthetic_specimen_virus_type_Antigens: "Specimen/Synthetic Specimen/Virus/Type/Antigens",
+    synthetic_specimen_virus_type_Synthetic_Viral_Particles: "Specimen/Synthetic Specimen/Virus/Type/Synthetic Viral Particles",
+    synthetic_specimen_virus_type_Inactivated_Virus__Heat: "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Heat)",
+    synthetic_specimen_virus_type_Inactivated_Virus__Gammma: "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Gamma radiation)",
+    synthetic_specimen_virus_type_Inactivated_Virus__Chemical: "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (Chemical)",
+    synthetic_specimen_virus_type_Inactivated_Virus__method_not_specified: "Specimen/Synthetic Specimen/Virus/Type/Inactivated Virus (method unspecified)",
+    synthetic_specimen_virus_type_Live_Virus: "Specimen/Synthetic Specimen/Virus/Type/Live Virus",
+    synthetic_specimen_virus_type_Partial_Live_Virus: "Specimen/Synthetic Specimen/Virus/Type/Partial Live Virus",
+    test_descriptor__manufacturer_name: "Test manufacturer",
+    test_descriptor__test_name: "Test name",
+    test_technology: "Test technology",
+    validation_condition__author: "Author",
+    validation_condition__comparator_test: "-1",
+    validation_condition__date: "Date",
+    validation_condition__sample_volume: "-1",
+    validation_condition__specimen_type: "-1",
+    validation_condition__swab_type: "-1",
+    validation_condition__synthetic_specimen__clinical_matrix: "Specimen/Synthetic Specimen/Clinical matrix",
+    validation_condition__synthetic_specimen__clinical_matrix_source: "Specimen/Synthetic Specimen/Clinical matrix/Source",
+    validation_condition__synthetic_specimen__viral_material: "Specimen/Synthetic Specimen/Virus",
+    validation_condition__synthetic_specimen__viral_material_source: "Specimen/Synthetic Specimen/Virus/Source",
+    validation_condition__transport_medium: "-1",
 
     // This smells and suggests we should have kept the second layer of data_keys in conjunction with labels
-    _extra_url_to_IFU_or_EUA: -2,
+    _extra_url_to_IFU_or_EUA: "-2",
 }
 type LABELS = typeof labels
 
-const LABEL_IDS__META__NOT_SPECIFIED = [
+
+const LABELS__META__NOT_SPECIFIED = [
     labels.meta__not_specified,
     labels.meta__not_specified__partial_info,
 ]
-const LABEL_IDS__META__ERRORS = [
+const LABELS__META__ERRORS = [
     labels.meta__error,
     labels.meta__potential_error,
 ]
-const LABEL_IDS__META = [
-    ...LABEL_IDS__META__NOT_SPECIFIED,
-    ...LABEL_IDS__META__ERRORS,
+const LABELS__META = [
+    ...LABELS__META__NOT_SPECIFIED,
+    ...LABELS__META__ERRORS,
 ]
 
-function get_used_annotation_label_ids (annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID)
+function get_used_annotation_labels (annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID)
 {
-    const used_annotation_label_ids = new Set<number>()
+    const used_annotation_labels = new Set<string>()
 
     ;(Object as any).values(annotation_files_by_test_id)
-        .forEach((annotation_files: AnnotationFile[]) => {
+        .forEach((annotation_files: AnnotationFile[]) =>
+        {
             annotation_files.forEach(annotation_file =>
+            {
+                annotation_file.annotations
+                .filter(is_annotation)
+                .forEach(annotation =>
                 {
-                    annotation_file.annotations
-                        .filter(is_annotation)
-                        .forEach(annotation =>
-                            {
-                                annotation.labels.forEach(label =>
-                                    {
-                                        used_annotation_label_ids.add(label.id)
-                                    })
-                            })
+                    annotation.labels.forEach(label => used_annotation_labels.add(label))
                 })
+            })
         })
 
-    return used_annotation_label_ids
+    return used_annotation_labels
 }
 
 
 // Report on unused labels
-function report_on_unused_labels (label_ids_to_names: LABEL_IDS_TO_NAMES, used_annotation_label_ids: number[])
+function report_on_unused_labels (used_annotation_labels: string[])
 {
-    const HANDLED_LABEL_IDS = new Set<number>((Object as any).values(labels))
+    const HANDLED_LABELS = new Set<string>((Object as any).values(labels))
 
-    const LABEL_IDS_HANDLED_ELSE_WHERE = LABEL_IDS__META
-    LABEL_IDS_HANDLED_ELSE_WHERE.forEach(label_id => HANDLED_LABEL_IDS.add(label_id))
-
-    const LABEL_IDS_TO_SILENCE = [
-        70, // -> Limit of Detection (LOD)/Concentration Range/Number of steps,
-        71, // -> Limit of Detection (LOD)/Concentration Range/Dilution per step,
-        84, // -> Controls/Internal/Extraction control material/Description,
-        85, // -> Controls/Internal/Extraction control material/Source,
-        // 86, // -> Specimen/Synthetic Specimen/Clinical matrix/Source,
-        87, // -> Potential interfering substances,
-        88, // -> Potential interfering substances/Test synthetic sample,
-        75, // -> Specimen/Collection protocol,
-        89, // -> Time to test result in minutes,
-        90, // -> Meta/Question to answer,
-        96, // -> Statistics/Confidence intervals/Percentage,
-        98, // -> Statistics/Confidence intervals/Lower value,
-        97, // -> Statistics/Confidence intervals/Upper value,
-        100, // -> Meta/Error/Omission,
-        82, // -> Controls/Internal,
-        101, // -> Specimen/Synthetic Specimen/Other components,
-        102, // -> Specimen/Synthetic Specimen/Production method
-        105, // -> Controls/Internal/Full process,
-        103, // -> Specimen/Synthetic Specimen/Swab type,
-        104, // -> Specimen/Synthetic Specimen/Transport medium,
-        35, // -> Specimen/Volume ul,
-        56, // -> Specimen/Transport container(s),
-        13, // -> RNA extraction & purification/Elution volume ul,
-        11, // -> RNA extraction & purification/Specimen input volume ul,
-        33, // -> Specimen/Swab type,
-        107, // -> Limit of Detection (LOD)/Protocol,
-        106, // -> Viral protein(s) targetted,
-        16, // -> Reverse transcription/Input volume ul,
-        108, // -> Meta/Not specified/Reasonable assumption,
-        5, // -> Detects pathogen(s),
-        60, // -> Third party detection system
+    const LABELS_TO_SILENCE = [
+        "Limit of Detection (LOD)/Concentration Range/Number of steps",
+        "Limit of Detection (LOD)/Concentration Range/Dilution per step",
+        "Controls/Internal/Extraction control material/Description",
+        "Controls/Internal/Extraction control material/Source",
+        "Specimen/Synthetic Specimen/Clinical matrix/Source",
+        "Potential interfering substances",
+        "Potential interfering substances/Test synthetic sample",
+        "Specimen/Collection protocol",
+        "Time to test result in minutes",
+        "Meta/Question to answer",
+        "Statistics/Confidence intervals/Percentage",
+        "Statistics/Confidence intervals/Lower value",
+        "Statistics/Confidence intervals/Upper value",
+        "Meta/Error/Omission",
+        "Controls/Internal",
+        "Specimen/Synthetic Specimen/Other components",
+        "Specimen/Synthetic Specimen/Production method",
+        "Controls/Internal/Full process",
+        "Specimen/Synthetic Specimen/Swab type",
+        "Specimen/Synthetic Specimen/Transport medium",
+        "Specimen/Volume ul",
+        "Specimen/Transport container(s)",
+        "RNA extraction & purification/Elution volume ul",
+        "RNA extraction & purification/Specimen input volume ul",
+        "Specimen/Swab type",
+        "Limit of Detection (LOD)/Protocol",
+        "Viral protein(s) targetted",
+        "Reverse transcription/Input volume ul",
+        "Meta/Not specified/Reasonable assumption",
+        "Detects pathogen(s)",
+        "Third party detection system",
     ]
-    LABEL_IDS_TO_SILENCE.forEach(label_id => HANDLED_LABEL_IDS.add(label_id))
+    LABELS_TO_SILENCE.forEach(label => HANDLED_LABELS.add(label))
 
-    const unhandled_label_ids = used_annotation_label_ids.filter(x => !HANDLED_LABEL_IDS.has(x))
+    const unhandled_labels = used_annotation_labels.filter(x => !HANDLED_LABELS.has(x))
 
-    if (unhandled_label_ids.length)
+    if (unhandled_labels.length)
     {
-        console.log(`Unhandled label ids: ${unhandled_label_ids.map(id => `\n * ${id} -> ${label_ids_to_names[id]}`)}`)
+        console.log(`Unhandled labels: ${unhandled_labels.map(label => `\n * ${label}`)}`)
     }
 }
 
@@ -225,10 +209,11 @@ interface DATA_NODE
     refs?: string[]
     data?: any
 }
-interface DATA_ROW
+type DATA_ROW =
 {
     test_id: string
-    [label_id: number]: DATA_NODE
+} | {
+    [label: string]: DATA_NODE
 }
 
 
@@ -281,40 +266,40 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
 
 function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_id: ANNOTATION_FILES_BY_TEST_ID, labels: LABELS)
 {
-    const test_id = row.test_id
+    const test_id = row.test_id as string
 
     const annotation_files = annotation_files_by_test_id[test_id]
     if (!annotation_files) return
 
-    ;(Object as any).values(labels).forEach((label_id: number) =>
+    ;(Object as any).values(labels).forEach((label: string) =>
         {
-            if (row[label_id]) return // hack to avoid overwriting fields already set from parse FDA EUA data
+            if (row[label]) return // hack to avoid overwriting fields already set from parse FDA EUA data
 
-            const annotations = filter_annotation_files_for_label(annotation_files, label_id)
-            row[label_id] = { annotations, refs: annotations.map(ref_link) }
+            const annotations = filter_annotation_files_for_label(annotation_files, label)
+            row[label] = { annotations, refs: annotations.map(ref_link) }
         })
 }
 
 
-function filter_annotation_files_for_label (annotation_files: AnnotationFile[], label_id: number): AnnotationWithFilePath[]
+function filter_annotation_files_for_label (annotation_files: AnnotationFile[], label: string): AnnotationWithFilePath[]
 {
     let annotations: AnnotationWithFilePath[] = []
     annotation_files.forEach(annotation_file =>
         {
-            annotations = [...annotations, ...filter_annotations_for_label(annotation_file, label_id)]
+            annotations = [...annotations, ...filter_annotations_for_label(annotation_file, label)]
         })
 
     return annotations
 }
 
 
-function filter_annotations_for_label (annotation_file: AnnotationFile, label_id: number): AnnotationWithFilePath[]
+function filter_annotations_for_label (annotation_file: AnnotationFile, label: string): AnnotationWithFilePath[]
 {
     return annotation_file.annotations
         .filter(is_annotation)
         .filter(annotation =>
             {
-                return annotation.labels.filter(label => label.id === label_id).length
+                return annotation.labels.filter(l => l === label).length
             })
         .map(annotation =>
             ({
@@ -480,7 +465,7 @@ function activate_options ()
 
 interface HEADER {
     title: string
-    label_id: number
+    label: string
 }
 type HEADERS =
 (HEADER & {
@@ -493,43 +478,43 @@ type HEADERS =
 const headers: HEADERS = [
     {
         title: "Manufacturer",
-        label_id: null,
+        label: null,
         category: "test_descriptor",
         children: [
             {
                 title: "Name",
-                label_id: labels.test_descriptor__manufacturer_name,
+                label: labels.test_descriptor__manufacturer_name,
             },
             {
                 title: "Test name",
-                label_id: labels.test_descriptor__test_name,
+                label: labels.test_descriptor__test_name,
             },
             {
                 title: "IFU or EUA",
-                label_id: labels._extra_url_to_IFU_or_EUA,
+                label: labels._extra_url_to_IFU_or_EUA,
             }
         ],
     },
     {
         title: "Claims",
-        label_id: null,
+        label: null,
         category: "test_claims",
         children: [
             {
                 title: "Test technology",
-                label_id: labels.test_technology,
+                label: labels.test_technology,
             },
             {
                 title: "Specimens",
-                label_id: null,
+                label: null,
                 children: [
                     {
                         title: "Supported specimen types",
-                        label_id: labels.claims__specimen__supported_types,
+                        label: labels.claims__specimen__supported_types,
                     },
                     {
                         title: "Transport medium",
-                        label_id: labels.claims__specimen__transport_medium,
+                        label: labels.claims__specimen__transport_medium,
                     },
                 ]
             },
@@ -539,191 +524,191 @@ const headers: HEADERS = [
                 // e.g. * patients suspected of COVID-19 by a healthcare provider
                 //      * pooled samples
                 //      * general, asymptomatic screening population i.e. screening of individuals without symptoms or other reasons to suspect COVID-19
-                label_id: null,
+                label: null,
             },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Sample pooling",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Approach", label_id: null, },
-                    { title: "Max no. specimens", label_id: null, },
+                    { title: "Approach", label: null, },
+                    { title: "Max no. specimens", label: null, },
                 ]
             },
-            { title: "Target gene(s) of SARS-CoV-2", label_id: labels.claims__target_viral_genes, },
+            { title: "Target gene(s) of SARS-CoV-2", label: labels.claims__target_viral_genes, },
             {
                 title: "Primers and probes",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Sequences", label_id: labels.claims__primers_and_probes__sequences, },
-                    { title: "Sources", label_id: labels.claims__primers_and_probes__sources, },
+                    { title: "Sequences", label: labels.claims__primers_and_probes__sequences, },
+                    { title: "Sources", label: labels.claims__primers_and_probes__sources, },
                 ]
             },
             {
                 // Not in May 13th version of FDA EUA template
                 // i.e. can include more than just SARS-CoV-2
                 title: "Detects pathogen(s)",
-                label_id: null,
+                label: null,
             },
             {
                 title: "Limit of Detection (LOD)",
-                label_id: null,
+                label: null,
                 children: [
                     {
                         title: "value",
-                        label_id: labels.claims__limit_of_detection__value,
+                        label: labels.claims__limit_of_detection__value,
                     },
                     {
                         title: "units",
-                        label_id: labels.claims__limit_of_detection__units,
+                        label: labels.claims__limit_of_detection__units,
                     },
                     {
                         title: "Minimum replicates",
-                        label_id: labels.claims__limit_of_detection__minimum_replicates,
+                        label: labels.claims__limit_of_detection__minimum_replicates,
                     },
                 ]
             },
             {
                 title: "Intended user",
                 // e.g. CLIA labs
-                label_id: null,
+                label: null,
             },
-            { title: "Compatible equipment", label_id: null, },
+            { title: "Compatible equipment", label: null, },
             // {
                 // Product Overview/Test Principle...
                 //     // primer and probe sets and briefly describe what they detect. Please include the nucleic acid sequences for all primers and probes used in the test. Please indicate if the test uses biotin-Streptavidin/avidin chemistry
                 // },
             {
                 title: "Controls",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Human gene", label_id: labels.claims__controls__internal__human_gene_target, },
+                    { title: "Human gene", label: labels.claims__controls__internal__human_gene_target, },
                 ]
             },
             {
                 title: "RNA extraction",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Specimen input volume", label_id: null, },
-                    { title: "RNA extraction method(s)", label_id: null, },
-                    { title: "Nucleic acid elution volume", label_id: null, },
-                    { title: "Purification manual &/ automated", label_id: null, },
+                    { title: "Specimen input volume", label: null, },
+                    { title: "RNA extraction method(s)", label: null, },
+                    { title: "Nucleic acid elution volume", label: null, },
+                    { title: "Purification manual &/ automated", label: null, },
                 ]
             },
             {
                 title: "Reverse transcription",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Input volume", label_id: null, },
-                    { title: "Enzyme mix / kits", label_id: null, },
+                    { title: "Input volume", label: null, },
+                    { title: "Enzyme mix / kits", label: null, },
                 ]
             },
             {
                 title: "PCR / amplification",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Instrument", label_id: null, },
-                    { title: "Enzyme mix / kits", label_id: null, },
-                    { title: "Reaction volume / μL", label_id: labels.claims__reaction_volume_uL, },
+                    { title: "Instrument", label: null, },
+                    { title: "Enzyme mix / kits", label: null, },
+                    { title: "Reaction volume / μL", label: labels.claims__reaction_volume_uL, },
                 ]
             },
             {
                 title: "PCR quantification fluoresence detection",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Instrument", label_id: null, },
+                    { title: "Instrument", label: null, },
                 ]
             },
         ],
     },
     {
         title: "Validation conditions",
-        label_id: null,
+        label: null,
         category: "validation_condition",
         children: [
             {
                 title: "Author",
-                label_id: labels.validation_condition__author,
+                label: labels.validation_condition__author,
             },
             {
                 title: "Date",
-                label_id: labels.validation_condition__date,
+                label: labels.validation_condition__date,
             },
             {
                 title: "Patient details",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Age", label_id: null, },
-                    { title: "Race", label_id: null, },
-                    { title: "Gender", label_id: null, },
+                    { title: "Age", label: null, },
+                    { title: "Race", label: null, },
+                    { title: "Gender", label: null, },
                 ]
             },
-            { title: "Disease stage", label_id: null, },
+            { title: "Disease stage", label: null, },
             {
                 title: "Synthetic Specimen",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Viral material", label_id:labels.validation_condition__synthetic_specimen__viral_material, },
-                    { title: "Viral material source", label_id:labels.validation_condition__synthetic_specimen__viral_material_source, },
-                    { title: "Clinical matrix", label_id:labels.validation_condition__synthetic_specimen__clinical_matrix, },
-                    { title: "Clinical matrix source", label_id:labels.validation_condition__synthetic_specimen__clinical_matrix_source, },
+                    { title: "Viral material", label:labels.validation_condition__synthetic_specimen__viral_material, },
+                    { title: "Viral material source", label:labels.validation_condition__synthetic_specimen__viral_material_source, },
+                    { title: "Clinical matrix", label:labels.validation_condition__synthetic_specimen__clinical_matrix, },
+                    { title: "Clinical matrix source", label:labels.validation_condition__synthetic_specimen__clinical_matrix_source, },
                 ]
             },
             {
                 title: "Specimen",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "Type", label_id: labels.validation_condition__specimen_type, },
-                    { title: "Swab type", label_id: labels.validation_condition__swab_type, },
-                    { title: "Transport medium", label_id: labels.validation_condition__transport_medium, },
-                    { title: "Sample volume", label_id: labels.validation_condition__sample_volume, },
+                    { title: "Type", label: labels.validation_condition__specimen_type, },
+                    { title: "Swab type", label: labels.validation_condition__swab_type, },
+                    { title: "Transport medium", label: labels.validation_condition__transport_medium, },
+                    { title: "Sample volume", label: labels.validation_condition__sample_volume, },
                 ]
             },
         ],
     },
     {
         title: "Overall score",
-        label_id: null,
+        label: null,
         category: "metric"
     },
     {
         title: "Metrics",
-        label_id: null,
+        label: null,
         category: "metric",
         children: [
             {
                 title: "Number of clinical samples",
-                label_id: null,
+                label: null,
                 children: [
                     {
                         title: "Positives",
-                        label_id: labels.metrics__num_clinical_samples__positive,
+                        label: labels.metrics__num_clinical_samples__positive,
                     },
                     {
                         title: "Controls (negatives)",
-                        label_id: labels.metrics__num_clinical_samples__negative_controls,
+                        label: labels.metrics__num_clinical_samples__negative_controls,
                     },
                 ]
             },
             {
                 title: "Comparator test",
-                label_id: labels.validation_condition__comparator_test,
+                label: labels.validation_condition__comparator_test,
             },
             {
                 title: "Confusion matrix",
-                label_id: null,
+                label: null,
                 children: [
-                    { title: "True positives", label_id: labels.metrics__confusion_matrix__true_positives },
-                    { title: "False negatives", label_id: labels.metrics__confusion_matrix__false_negatives },
-                    { title: "True negatives", label_id: labels.metrics__confusion_matrix__true_negatives },
-                    { title: "False positives", label_id: labels.metrics__confusion_matrix__false_positives },
+                    { title: "True positives", label: labels.metrics__confusion_matrix__true_positives },
+                    { title: "False negatives", label: labels.metrics__confusion_matrix__false_negatives },
+                    { title: "True negatives", label: labels.metrics__confusion_matrix__true_negatives },
+                    { title: "False positives", label: labels.metrics__confusion_matrix__false_positives },
                 ]
             },
         ],
     },
     {
         title: "Derived values",
-        label_id: null,
+        label: null,
         category: "derived_values",
         children: [],
     },
@@ -820,10 +805,10 @@ function iterate_lowest_header (headers: HEADERS, func: (header: HEADER) => void
 }
 
 
-function has_only_subset_of_labels(labels: Label[], allowed_subset_ids: number[])
+function has_only_subset_of_labels(labels: string[], allowed_subset_labels: string[])
 {
-    const allowed = new Set(allowed_subset_ids)
-    return labels.filter(label => !allowed.has(label.id)).length === 0
+    const allowed = new Set(allowed_subset_labels)
+    return labels.filter(label => !allowed.has(label)).length === 0
 }
 
 
@@ -875,13 +860,13 @@ function value_from_annotations (annotations: AnnotationWithFilePath[]): string
     let value = annotations.map(annotation => {
         let value = annotation.text
 
-        if (annotation.labels.find(label => LABEL_IDS__META__NOT_SPECIFIED.includes(label.id)))
+        if (annotation.labels.find(label => LABELS__META__NOT_SPECIFIED.includes(label)))
         {
             includes_warning = true
             value = not_specified_value_html(value)
         }
 
-        if (annotation.labels.find(label => LABEL_IDS__META__ERRORS.includes(label.id)))
+        if (annotation.labels.find(label => LABELS__META__ERRORS.includes(label)))
         {
             includes_error = true
             value = `${ERROR_HTML_SYMBOL} ${value}`
@@ -931,7 +916,7 @@ function ref_link (annotation: { relative_file_path: string, id?: number })
 
 
 
-const lod_allowed_label_ids = [ labels.claims__limit_of_detection__value, ...LABEL_IDS__META ]
+const lod_allowed_labels = [ labels.claims__limit_of_detection__value, ...LABELS__META ]
 type lod_value_data = { min: number, max: number } | { not_specified: true }
 function lod_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data>
 {
@@ -943,7 +928,7 @@ function lod_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data
     data_node.annotations
         .forEach(annotation =>
             {
-                if (has_only_subset_of_labels(annotation.labels, lod_allowed_label_ids))
+                if (has_only_subset_of_labels(annotation.labels, lod_allowed_labels))
                 {
                     const v = parseFloat(annotation.text)
                     const new_min = Math.min(min, v)
@@ -982,7 +967,7 @@ function lod_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<lod_value_data
 }
 
 
-const virus_type_label_ids = new Set([
+const virus_type_labels = new Set([
     labels.synthetic_specimen_virus_type_Naked_RNA,
     labels.synthetic_specimen_virus_type_Antigens,
     labels.synthetic_specimen_virus_type_Synthetic_Viral_Particles,
@@ -1004,11 +989,11 @@ function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE)
     if (annotations.length)
     {
 
-        annotations.forEach(a => a.labels.forEach(({ id }) =>
+        annotations.forEach(a => a.labels.forEach(label =>
         {
-            if (virus_type_label_ids.has(id))
+            if (virus_type_labels.has(label))
             {
-                const parts = label_ids_to_names[id].split("/")
+                const parts = label.split("/")
                 types.push(parts[parts.length - 1])
             }
         }))
@@ -1055,7 +1040,7 @@ function get_FDA_EUA_pdf_file_path_from_url (url)
 }
 
 
-const value_handlers: {[label_id: number]: VALUE_HANDLER<any>} = {
+const value_handlers: {[label: string]: VALUE_HANDLER<any>} = {
     [labels.claims__limit_of_detection__value]: lod_value_handler,
     [labels.test_descriptor__manufacturer_name]: data_value_handler,
     [labels.test_descriptor__test_name]: data_value_handler,
@@ -1099,10 +1084,10 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         iterate_lowest_header(headers, (header: HEADER) =>
         {
             const cell = row.insertCell()
-            const data_node: DATA_NODE = data_row[header.label_id]
+            const data_node: DATA_NODE = data_row[header.label]
             if (data_node)
             {
-                const value_handler = value_handlers[header.label_id] || annotations_value_handler
+                const value_handler = value_handlers[header.label] || annotations_value_handler
                 const value = value_handler(data_node)
 
                 data_node.html_display_string = value.string
@@ -1133,7 +1118,7 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         const synthetic_specimen__viral_material = (data_row[labels.validation_condition__synthetic_specimen__viral_material] || {}).data || {}
 
         data_for_export.push({
-            test_id: data_row.test_id,
+            test_id: data_row.test_id as string,
             developer_name: data_row[labels.test_descriptor__manufacturer_name].data.value,
             test_name: data_row[labels.test_descriptor__test_name].data.value,
             lod_min: lod.min,
@@ -1176,8 +1161,8 @@ function html_safe_ish (value)
 
 
 activate_options()
-const used_annotation_label_ids = Array.from(get_used_annotation_label_ids(annotation_files_by_test_id))
-report_on_unused_labels(label_ids_to_names, used_annotation_label_ids)
+const used_annotation_labels = Array.from(get_used_annotation_labels(annotation_files_by_test_id))
+report_on_unused_labels(used_annotation_labels)
 const data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data)
 data_rows.forEach(row => add_data_from_annotations(row, annotation_files_by_test_id, labels))
 build_header(headers)
