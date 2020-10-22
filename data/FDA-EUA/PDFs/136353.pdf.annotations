@@ -2,141 +2,141 @@
 "file_sha1_hash": "f8b2ae8fcedcb4324e7473f9e4680f7db7db3895",
 "annotations": [
 {
-"id": 0,
-"page_number": 4,
-"left": "329px",
-"top": "186px",
-"width": "158px",
-"height": "24px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "nasopharyngeal swabs",
+"comment": "",
+"height": "24px",
+"id": 0,
 "labels": [
 "Supported specimen types"
 ],
-"comment": ""
+"left": "329px",
+"page_number": 4,
+"text": "nasopharyngeal swabs",
+"top": "186px",
+"width": "158px"
 },
 {
-"id": 1,
-"page_number": 4,
-"left": "500px",
-"top": "187px",
-"width": "111px",
-"height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "transport media",
+"comment": "",
+"height": "21px",
+"id": 1,
 "labels": [
 "Specimen/Transport medium",
 "Meta/Not specified"
 ],
-"comment": ""
+"left": "500px",
+"page_number": 4,
+"text": "transport media",
+"top": "187px",
+"width": "111px"
 },
 {
-"id": 2,
-"page_number": 28,
-"left": "168px",
-"top": "171px",
-"width": "162px",
-"height": "21px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "live SARS-CoV-2 virus (USA_WA1/2020 strain)",
+"comment": "",
+"height": "21px",
+"id": 2,
 "labels": [
 "Specimen/Synthetic Specimen/Virus",
 "Specimen/Synthetic Specimen/Virus/Type/Live Virus"
 ],
-"comment": ""
+"left": "168px",
+"page_number": 28,
+"text": "live SARS-CoV-2 virus (USA_WA1/2020 strain)",
+"top": "171px",
+"width": "162px"
 },
 {
-"id": 3,
-"page_number": 28,
-"left": "85px",
-"top": "193px",
-"width": "394px",
-"height": "20px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "World Reference Center for Emerging Viruses and Arboviruses (WRCEVA)",
+"comment": "",
+"height": "20px",
+"id": 3,
 "labels": [
 "Specimen/Synthetic Specimen/Virus/Source"
 ],
-"comment": ""
+"left": "85px",
+"page_number": 28,
+"text": "World Reference Center for Emerging Viruses and Arboviruses (WRCEVA)",
+"top": "193px",
+"width": "394px"
 },
 {
-"id": 4,
-"page_number": 28,
-"left": "475px",
-"top": "183px",
-"width": "19px",
-"height": "31px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "",
+"comment": "",
+"height": "31px",
+"id": 4,
 "labels": [
 "Specimen/Synthetic Specimen/Clinical matrix",
 "Meta/Not specified"
 ],
-"comment": ""
+"left": "475px",
+"page_number": 28,
+"text": "",
+"top": "183px",
+"width": "19px"
 },
 {
-"id": 5,
-"page_number": 28,
-"left": "205px",
-"top": "427px",
-"width": "72px",
-"height": "24px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "0.33",
+"comment": "",
+"height": "24px",
+"id": 5,
 "labels": [
 "Limit of Detection (LOD)/Value"
 ],
-"comment": ""
+"left": "205px",
+"page_number": 28,
+"text": "0.33",
+"top": "427px",
+"width": "72px"
 },
 {
-"id": 6,
-"page_number": 28,
-"left": "167px",
-"top": "398px",
-"width": "154px",
-"height": "24px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "genome copies / μL",
+"comment": "",
+"height": "24px",
+"id": 6,
 "labels": [
 "Limit of Detection (LOD)/Units"
 ],
-"comment": ""
-},
-{
-"id": 7,
-"deleted": true
-},
-{
-"id": 8,
-"deleted": true
-},
-{
-"id": 9,
+"left": "167px",
 "page_number": 28,
-"left": "132px",
-"top": "309px",
-"width": "45px",
-"height": "23px",
+"text": "genome copies / μL",
+"top": "398px",
+"width": "154px"
+},
+{
+"deleted": true,
+"id": 7
+},
+{
+"deleted": true,
+"id": 8
+},
+{
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "20",
+"comment": "",
+"height": "23px",
+"id": 9,
 "labels": [
 "Limit of Detection (LOD)/Minimum Replicates"
 ],
-"comment": ""
+"left": "132px",
+"page_number": 28,
+"text": "20",
+"top": "309px",
+"width": "45px"
 },
 {
-"id": 10,
-"page_number": 18,
-"left": "531px",
-"top": "297px",
-"width": "80px",
-"height": "79px",
 "colour": "rgba(200, 200, 255, 0.6)",
-"text": "ORF1ab, ORF1ab, ORF8",
+"comment": "",
+"height": "79px",
+"id": 10,
 "labels": [
 "Viral gene(s) targetted"
 ],
-"comment": ""
+"left": "531px",
+"page_number": 18,
+"text": "ORF1ab, ORF1ab, ORF8",
+"top": "297px",
+"width": "80px"
 }
 ],
 "comments": [],
