@@ -1,0 +1,19 @@
+{
+"file_sha1_hash": "5fec7f8270550edaca4f6a497ba6ce32e916e4cf",
+"annotations": [
+{
+"id": 0,
+"page_number": 4,
+"left": "131px",
+"top": "248px",
+"width": "582px",
+"height": "26px",
+"colour": "rgba(200, 200, 255, 0.6)",
+"text": "include the nucleic acid sequences for all primers and probes used in the test",
+"labels": [],
+"comment": "Specific request to include the nucleic acid sequences for all primers and probes."
+}
+],
+"comments": [],
+"schema_version": 5
+}
