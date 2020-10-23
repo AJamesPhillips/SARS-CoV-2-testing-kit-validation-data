@@ -7,7 +7,7 @@ import time
 dir_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, dir_path + "/..")
 
-from common import get_fda_eua_parsed_data, filter_for_urls, get_FDA_EUA_pdf_file_path_from_url
+from common import get_fda_eua_parsed_data, filter_for_urls, get_FDA_EUA_pdf_file_path_from_FDA_url
 
 
 DELAY_SECONDS_BETWEEN_REQUESTS = 2
@@ -39,7 +39,7 @@ def check_urls_are_unique(urls):
 def download_urls(urls):
     for url in urls:
 
-        file_path = get_FDA_EUA_pdf_file_path_from_url(url)
+        file_path = get_FDA_EUA_pdf_file_path_from_FDA_url(url)
 
         if os.path.isfile(file_path):
             print("Skipping " + url)

@@ -311,6 +311,9 @@ def get_merged_data ():
         EUAs = fda_eua_row[10]
         url_to_IFU_or_EUA = EUAs[0] if EUAs else fda_eua_row[11]
 
+        anot8_org_file_id = get_anot8_org_file_id_from_FDA_url(url)
+        anot8_org_permalink = get_anot8_org_permalink(url)
+
         if test_id in fda_reference_panel_lod_data_by_test_id:
             fda_reference_panel_lod_data = fda_reference_panel_lod_data_by_test_id[test_id]
 
@@ -346,6 +349,10 @@ def get_merged_data ():
                 "test_name": test_name,
                 "test_technology": test_technology,
                 "url_to_IFU_or_EUA": url_to_IFU_or_EUA,
+            },
+            "anot8_org": {
+                "file_id": anot8_org_file_id,
+                "permalink": anot8_org_permalink,
             },
             "fda_reference_panel_lod_data": {
                 "different_developer_name": different_developer_name,

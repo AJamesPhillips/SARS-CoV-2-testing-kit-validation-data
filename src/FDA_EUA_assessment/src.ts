@@ -12,7 +12,8 @@ type FDA_EUA_PARSED_DATA_ROW = [
     string,
     string[],
     string,
-    string[]
+    string[],
+    string, // TODO remove anot8_org_file_id
 ]
 type FDA_EUA_PARSED_DATA = FDA_EUA_PARSED_DATA_ROW[]
 
@@ -29,6 +30,7 @@ interface Annotation
     text: string
     labels: string[]
     comment: string
+    anot8_org_file_id: string // added to each annotation by the server, // TODO remove anot8_org_file_id
     deleted?: false  // should not actually ever be present
 }
 interface DeletedAnnotation
@@ -41,14 +43,9 @@ function is_annotation (annotation: AnnotationEntry): annotation is Annotation {
     return !annotation.deleted
 }
 
-interface AnnotationWithFilePath extends Annotation
-{
-    relative_file_path: string
-}
 interface AnnotationFile
 {
     version: number
-    relative_file_path: string
     file_sha1_hash: string
     annotations: AnnotationEntry[]
     comments: string[]
@@ -156,37 +153,38 @@ function report_on_unused_labels (used_annotation_labels: string[])
     const HANDLED_LABELS = new Set<string>((Object as any).values(labels))
 
     const LABELS_TO_SILENCE = [
-        "Limit of Detection (LOD)/Concentration Range/Number of steps",
-        "Limit of Detection (LOD)/Concentration Range/Dilution per step",
+        "Controls/Internal",
         "Controls/Internal/Extraction control material/Description",
         "Controls/Internal/Extraction control material/Source",
-        "Specimen/Synthetic Specimen/Clinical matrix/Source",
+        "Controls/Internal/Full process",
+        "Detects pathogen(s)",
+        "Limit of Detection (LOD)/Concentration Range/Dilution per step",
+        "Limit of Detection (LOD)/Concentration Range/Number of steps",
+        "Limit of Detection (LOD)/Protocol",
+        "Meta/Error/Omission",
+        "Meta/Not specified/Reasonable assumption",
+        "Meta/Question to answer",
         "Potential interfering substances",
         "Potential interfering substances/Test synthetic sample",
-        "Specimen/Collection protocol",
-        "Time to test result in minutes",
-        "Meta/Question to answer",
-        "Statistics/Confidence intervals/Percentage",
-        "Statistics/Confidence intervals/Lower value",
-        "Statistics/Confidence intervals/Upper value",
-        "Meta/Error/Omission",
-        "Controls/Internal",
-        "Specimen/Synthetic Specimen/Other components",
-        "Specimen/Synthetic Specimen/Production method",
-        "Controls/Internal/Full process",
-        "Specimen/Synthetic Specimen/Swab type",
-        "Specimen/Synthetic Specimen/Transport medium",
-        "Specimen/Volume ul",
-        "Specimen/Transport container(s)",
+        "Primers and probes/Source",
         "RNA extraction & purification/Elution volume ul",
         "RNA extraction & purification/Specimen input volume ul",
-        "Specimen/Swab type",
-        "Limit of Detection (LOD)/Protocol",
-        "Viral protein(s) targetted",
         "Reverse transcription/Input volume ul",
-        "Meta/Not specified/Reasonable assumption",
-        "Detects pathogen(s)",
+        "Specimen/Collection protocol",
+        "Specimen/Swab type",
+        "Specimen/Synthetic Specimen/Clinical matrix/Source",
+        "Specimen/Synthetic Specimen/Other components",
+        "Specimen/Synthetic Specimen/Production method",
+        "Specimen/Synthetic Specimen/Swab type",
+        "Specimen/Synthetic Specimen/Transport medium",
+        "Specimen/Transport container(s)",
+        "Specimen/Volume ul",
+        "Statistics/Confidence intervals/Lower value",
+        "Statistics/Confidence intervals/Percentage",
+        "Statistics/Confidence intervals/Upper value",
         "Third party detection system",
+        "Time to test result in minutes",
+        "Viral protein(s) targetted",
     ]
     LABELS_TO_SILENCE.forEach(label => HANDLED_LABELS.add(label))
 
@@ -201,7 +199,7 @@ function report_on_unused_labels (used_annotation_labels: string[])
 
 interface DATA_NODE
 {
-    annotations: AnnotationWithFilePath[]
+    annotations: Annotation[]
 
     // Other fields added during rendering
     // TODO: remove this complete hack
@@ -230,6 +228,7 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
             const test_technology = fda_eua_parsed_data_row[6]
             const EUAs = fda_eua_parsed_data_row[10]
             const url_to_IFU_or_EUA = EUAs.length ? EUAs[0] : fda_eua_parsed_data_row[11]
+            const anot8_org_file_id = fda_eua_parsed_data_row[13] // TODO remove anot8_org_file_id
 
             const row: DATA_ROW = {
                 test_id,
@@ -255,7 +254,7 @@ function reformat_fda_eua_parsed_data_as_rows (fda_eua_parsed_data: FDA_EUA_PARS
                 },
                 [labels._extra_url_to_IFU_or_EUA]: {
                     annotations: [],
-                    data: { value: url_to_IFU_or_EUA },
+                    data: { value: anot8_org_file_id },
                 },
             }
 
@@ -281,9 +280,9 @@ function add_data_from_annotations (row: DATA_ROW, annotation_files_by_test_id: 
 }
 
 
-function filter_annotation_files_for_label (annotation_files: AnnotationFile[], label: string): AnnotationWithFilePath[]
+function filter_annotation_files_for_label (annotation_files: AnnotationFile[], label: string): Annotation[]
 {
-    let annotations: AnnotationWithFilePath[] = []
+    let annotations: Annotation[] = []
     annotation_files.forEach(annotation_file =>
         {
             annotations = [...annotations, ...filter_annotations_for_label(annotation_file, label)]
@@ -293,7 +292,7 @@ function filter_annotation_files_for_label (annotation_files: AnnotationFile[], 
 }
 
 
-function filter_annotations_for_label (annotation_file: AnnotationFile, label: string): AnnotationWithFilePath[]
+function filter_annotations_for_label (annotation_file: AnnotationFile, label: string): Annotation[]
 {
     return annotation_file.annotations
         .filter(is_annotation)
@@ -301,11 +300,6 @@ function filter_annotations_for_label (annotation_file: AnnotationFile, label: s
             {
                 return annotation.labels.filter(l => l === label).length
             })
-        .map(annotation =>
-            ({
-              ...annotation,
-              relative_file_path: annotation_file.relative_file_path,
-            }))
 }
 
 
@@ -466,6 +460,7 @@ function activate_options ()
 interface HEADER {
     title: string
     label: string
+    hidden?: boolean
 }
 type HEADERS =
 (HEADER & {
@@ -525,14 +520,16 @@ const headers: HEADERS = [
                 //      * pooled samples
                 //      * general, asymptomatic screening population i.e. screening of individuals without symptoms or other reasons to suspect COVID-19
                 label: null,
+                hidden: true,
             },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Sample pooling",
                 label: null,
+                hidden: true,
                 children: [
-                    { title: "Approach", label: null, },
-                    { title: "Max no. specimens", label: null, },
+                    { title: "Approach", label: null, hidden: true, },
+                    { title: "Max no. specimens", label: null, hidden: true, },
                 ]
             },
             { title: "Target gene(s) of SARS-CoV-2", label: labels.claims__target_viral_genes, },
@@ -541,7 +538,7 @@ const headers: HEADERS = [
                 label: null,
                 children: [
                     { title: "Sequences", label: labels.claims__primers_and_probes__sequences, },
-                    { title: "Sources", label: labels.claims__primers_and_probes__sources, },
+                    { title: "Sources", label: labels.claims__primers_and_probes__sources, hidden: true, },
                 ]
             },
             {
@@ -549,6 +546,7 @@ const headers: HEADERS = [
                 // i.e. can include more than just SARS-CoV-2
                 title: "Detects pathogen(s)",
                 label: null,
+                hidden: true,
             },
             {
                 title: "Limit of Detection (LOD)",
@@ -572,8 +570,9 @@ const headers: HEADERS = [
                 title: "Intended user",
                 // e.g. CLIA labs
                 label: null,
+                hidden: true,
             },
-            { title: "Compatible equipment", label: null, },
+            { title: "Compatible equipment", label: null, hidden: true, },
             // {
                 // Product Overview/Test Principle...
                 //     // primer and probe sets and briefly describe what they detect. Please include the nucleic acid sequences for all primers and probes used in the test. Please indicate if the test uses biotin-Streptavidin/avidin chemistry
@@ -589,26 +588,26 @@ const headers: HEADERS = [
                 title: "RNA extraction",
                 label: null,
                 children: [
-                    { title: "Specimen input volume", label: null, },
-                    { title: "RNA extraction method(s)", label: null, },
-                    { title: "Nucleic acid elution volume", label: null, },
-                    { title: "Purification manual &/ automated", label: null, },
+                    { title: "Specimen input volume", label: null, hidden: true, },
+                    { title: "RNA extraction method(s)", label: null, hidden: true, },
+                    { title: "Nucleic acid elution volume", label: null, hidden: true, },
+                    { title: "Purification manual &/ automated", label: null, hidden: true, },
                 ]
             },
             {
                 title: "Reverse transcription",
                 label: null,
                 children: [
-                    { title: "Input volume", label: null, },
-                    { title: "Enzyme mix / kits", label: null, },
+                    { title: "Input volume", label: null, hidden: true, },
+                    { title: "Enzyme mix / kits", label: null, hidden: true, },
                 ]
             },
             {
                 title: "PCR / amplification",
                 label: null,
                 children: [
-                    { title: "Instrument", label: null, },
-                    { title: "Enzyme mix / kits", label: null, },
+                    { title: "Instrument", label: null, hidden: true, },
+                    { title: "Enzyme mix / kits", label: null, hidden: true, },
                     { title: "Reaction volume / μL", label: labels.claims__reaction_volume_uL, },
                 ]
             },
@@ -616,7 +615,7 @@ const headers: HEADERS = [
                 title: "PCR quantification fluoresence detection",
                 label: null,
                 children: [
-                    { title: "Instrument", label: null, },
+                    { title: "Instrument", label: null, hidden: true, },
                 ]
             },
         ],
@@ -638,12 +637,12 @@ const headers: HEADERS = [
                 title: "Patient details",
                 label: null,
                 children: [
-                    { title: "Age", label: null, },
-                    { title: "Race", label: null, },
-                    { title: "Gender", label: null, },
+                    { title: "Age", label: null, hidden: true, },
+                    { title: "Race", label: null, hidden: true, },
+                    { title: "Gender", label: null, hidden: true, },
                 ]
             },
-            { title: "Disease stage", label: null, },
+            { title: "Disease stage", label: null, hidden: true, },
             {
                 title: "Synthetic Specimen",
                 label: null,
@@ -658,10 +657,26 @@ const headers: HEADERS = [
                 title: "Specimen",
                 label: null,
                 children: [
-                    { title: "Type", label: labels.validation_condition__specimen_type, },
-                    { title: "Swab type", label: labels.validation_condition__swab_type, },
-                    { title: "Transport medium", label: labels.validation_condition__transport_medium, },
-                    { title: "Sample volume", label: labels.validation_condition__sample_volume, },
+                    {
+                        title: "Type",
+                        label: labels.validation_condition__specimen_type,
+                        hidden: true,
+                    },
+                    {
+                        title: "Swab type",
+                        label: labels.validation_condition__swab_type,
+                        hidden: true,
+                    },
+                    {
+                        title: "Transport medium",
+                        label: labels.validation_condition__transport_medium,
+                        hidden: true,
+                    },
+                    {
+                        title: "Sample volume",
+                        label: labels.validation_condition__sample_volume,
+                        hidden: true,
+                    },
                 ]
             },
         ],
@@ -669,7 +684,8 @@ const headers: HEADERS = [
     {
         title: "Overall score",
         label: null,
-        category: "metric"
+        category: "metric",
+        hidden: true,
     },
     {
         title: "Metrics",
@@ -683,25 +699,44 @@ const headers: HEADERS = [
                     {
                         title: "Positives",
                         label: labels.metrics__num_clinical_samples__positive,
+                        hidden: true,
                     },
                     {
                         title: "Controls (negatives)",
                         label: labels.metrics__num_clinical_samples__negative_controls,
+                        hidden: true,
                     },
                 ]
             },
             {
                 title: "Comparator test",
                 label: labels.validation_condition__comparator_test,
+                hidden: true,
             },
             {
                 title: "Confusion matrix",
                 label: null,
                 children: [
-                    { title: "True positives", label: labels.metrics__confusion_matrix__true_positives },
-                    { title: "False negatives", label: labels.metrics__confusion_matrix__false_negatives },
-                    { title: "True negatives", label: labels.metrics__confusion_matrix__true_negatives },
-                    { title: "False positives", label: labels.metrics__confusion_matrix__false_positives },
+                    {
+                        title: "True positives",
+                        label: labels.metrics__confusion_matrix__true_positives,
+                        hidden: true,
+                    },
+                    {
+                        title: "False negatives",
+                        label: labels.metrics__confusion_matrix__false_negatives,
+                        hidden: true,
+                    },
+                    {
+                        title: "True negatives",
+                        label: labels.metrics__confusion_matrix__true_negatives,
+                        hidden: true,
+                    },
+                    {
+                        title: "False positives",
+                        label: labels.metrics__confusion_matrix__false_positives,
+                        hidden: true,
+                    },
                 ]
             },
         ],
@@ -711,6 +746,7 @@ const headers: HEADERS = [
         label: null,
         category: "derived_values",
         children: [],
+        hidden: true,
     },
 ]
 
@@ -732,7 +768,7 @@ function build_header (headers: HEADERS)
         let row1_height = 1
         if (!(element1.children && element1.children.length))
         {
-            row1_width = 1
+            row1_width = (element1.hidden ? 0 : 1)
             row1_height = 3
         }
         else for (let i2 = 0; i2 < element1.children.length; ++i2)
@@ -743,18 +779,18 @@ function build_header (headers: HEADERS)
             let row2_height = 1
             if (!(element2.children && element2.children.length))
             {
-                row2_width = 1
+                row2_width = (element2.hidden ? 0 : 1)
                 row2_height = 2
             }
             else for (let i3 = 0; i3 < element2.children.length; ++i3)
             {
                 const element3 = element2.children[i3]
-                row2_width++
+                row2_width += (element3.hidden ? 0 : 1)
 
                 const cell3 = document.createElement("th")
                 row3.appendChild(cell3)
                 cell3.innerHTML = element3.title
-                cell3.className = className
+                cell3.className = className + (element3.hidden ? " hidden" : "")
             }
 
             const cell2 = document.createElement("th")
@@ -762,7 +798,7 @@ function build_header (headers: HEADERS)
             cell2.innerHTML = element2.title
             cell2.colSpan = row2_width
             cell2.rowSpan = row2_height
-            cell2.className = className
+            cell2.className = className + ((element2.hidden || (row2_width === 0)) ? " hidden" : "")
 
             row1_width += row2_width
         }
@@ -772,7 +808,7 @@ function build_header (headers: HEADERS)
         cell1.innerHTML = element1.title
         cell1.colSpan = row1_width
         cell1.rowSpan = row1_height
-        cell1.className = className
+        cell1.className = className + ((element1.hidden || (row1_width === 0)) ? " hidden" : "")
     }
 }
 
@@ -852,7 +888,7 @@ function not_specified_value_html (value: string)
 }
 
 
-function value_from_annotations (annotations: AnnotationWithFilePath[]): string
+function value_from_annotations (annotations: Annotation[]): string
 {
     let includes_warning = false
     let includes_error = false
@@ -889,7 +925,7 @@ function value_from_annotations (annotations: AnnotationWithFilePath[]): string
 }
 
 
-function comments_from_annotations (annotations: AnnotationWithFilePath[]): string
+function comments_from_annotations (annotations: Annotation[]): string
 {
     let comments = ""
 
@@ -904,12 +940,13 @@ function comments_from_annotations (annotations: AnnotationWithFilePath[]): stri
 }
 
 
-function ref_link (annotation: { relative_file_path: string, id?: number })
+function ref_link (annotation: { anot8_org_file_id: string, id?: number })
 {
-    const { relative_file_path, id } = annotation
-    let ref = `http://localhost:5003/r/1772.2/-1?relative_file_path=${relative_file_path}`
+    const { anot8_org_file_id, id } = annotation
+    // let ref = `http://localhost:5003/r/1772.2/${anot8_org_file_id}`
+    let ref = `https://anot8.org/r/1772.2/${anot8_org_file_id}`
 
-    if (id !== undefined) ref += `&highlighted_annotation_ids=${id}`
+    if (id !== undefined) ref += `?highlighted_annotation_ids=${id}`
 
     return ref
 }
@@ -983,6 +1020,7 @@ function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE)
     const annotations = data_node.annotations
 
     const v = annotations.map(a => a.text).join("; ")
+    const comments = comments_from_annotations(annotations)
 
     let string = ""
     let types: string[] = []
@@ -1001,7 +1039,7 @@ function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE)
 
         const type = types.length ? types.join(", ") : `<span style="color: #ccc;">not parsed</span>`
 
-        string = type + " | " + v
+        string = type + " | " + v + "<br/>" + comments
     }
 
     return { string, refs: data_node.refs, data: { types } }
@@ -1010,18 +1048,18 @@ function synthetic_specimen__viral_material_value_handler (data_node: DATA_NODE)
 
 function link_value_handler (data_node: DATA_NODE): VALUE_FOR_CELL<{ value: string }>
 {
-    const url = data_node.data.value
+    const anot8_org_file_id = data_node.data.value
     const pseudo_annotation = {
-        relative_file_path: get_FDA_EUA_pdf_file_path_from_url(url),
+        anot8_org_file_id,
     }
     const refs = [ref_link(pseudo_annotation)]
 
-    return { string: "", refs, data: { value: url } }
+    return { string: "", refs, data: { value: anot8_org_file_id } }
 }
 
 
 /** TypeScript version of python function */
-function get_FDA_EUA_pdf_file_path_from_url (url)
+function get_FDA_EUA_pdf_file_path_from_FDA_url (url)
 {
     const matches = url.match(`https://www.fda.gov/media/(\\d+)/download`)
     let file_id = ""
@@ -1068,7 +1106,11 @@ function create_table_cell_contents (data_node: DATA_NODE)
     const ref_container_el = document.createElement("div")
     ref_container_el.innerHTML = data_node.refs.map(r => ` <a class="reference" href="${r}">R</a>`).join(" ")
 
-    return [value_el, ref_container_el]
+    const cell_el = document.createElement("div")
+    cell_el.appendChild(value_el)
+    cell_el.appendChild(ref_container_el)
+
+    return cell_el
 }
 
 
@@ -1084,6 +1126,7 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         iterate_lowest_header(headers, (header: HEADER) =>
         {
             const cell = row.insertCell()
+            cell.className = header.hidden ? "hidden" : ""
             const data_node: DATA_NODE = data_row[header.label]
             if (data_node)
             {
@@ -1094,13 +1137,14 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
                 data_node.refs = value.refs
                 data_node.data = value.data
 
-                const children = create_table_cell_contents(data_node)
-                children.forEach(child_el => cell.appendChild(child_el))
+                const child_el = create_table_cell_contents(data_node)
+                cell.appendChild(child_el)
             }
         })
     })
 
     // Complete hack: TODO remove this
+    // Replacing with merge.py
     interface TempData
     {
         test_id: string
@@ -1128,7 +1172,7 @@ function populate_table_body (headers: HEADERS, data_rows: DATA_ROW[])
         })
     })
 
-    console.log(JSON.stringify(data_for_export, null, 2))
+    //console.log(JSON.stringify(data_for_export, null, 2))
 }
 
 
@@ -1163,8 +1207,15 @@ function html_safe_ish (value)
 activate_options()
 const used_annotation_labels = Array.from(get_used_annotation_labels(annotation_files_by_test_id))
 report_on_unused_labels(used_annotation_labels)
-const data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data)
+let data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data)
 data_rows.forEach(row => add_data_from_annotations(row, annotation_files_by_test_id, labels))
+// temporarily filter out rows from
+data_rows = data_rows.filter(d => {
+    const tech = (d["Test technology"].data.value as string).toLowerCase()
+    // Finds most of the them.
+    const remove = tech.includes("serology") || tech.includes("igg") || tech.includes("igm")
+    return !remove
+})
 build_header(headers)
 populate_table_body(headers, data_rows)
 update_progress()

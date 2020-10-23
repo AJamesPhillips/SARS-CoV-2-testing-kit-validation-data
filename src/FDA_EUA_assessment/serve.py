@@ -4,7 +4,7 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from common import get_fda_eua_parsed_data, get_annotation_files_by_test_id
+from common import get_fda_eua_parsed_data, get_annotation_files_by_test_id, get_anot8_org_file_id_from_FDA_url
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 app = Flask(__name__)
@@ -19,6 +19,15 @@ def index():
     fda_eua_parsed_data = get_fda_eua_parsed_data()
     # skip first row as it is headers
     fda_eua_parsed_data = fda_eua_parsed_data[1:]
+
+    # TODO REMOVE (copied from merge.py)
+    for fda_eua_row in fda_eua_parsed_data:
+        EUAs = fda_eua_row[10]
+        url_to_IFU_or_EUA = EUAs[0] if EUAs else fda_eua_row[11]
+        anot8_org_file_id = get_anot8_org_file_id_from_FDA_url(url_to_IFU_or_EUA)
+        fda_eua_row.append(anot8_org_file_id)
+    # ^^^ REMOVE section ^^^
+
     annotation_files_by_test_id = get_annotation_files_by_test_id(fda_eua_parsed_data)
 
     src_file_path = dir_path + "/src.js"

@@ -1,14 +1,3 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -95,37 +84,38 @@ function get_used_annotation_labels(annotation_files_by_test_id) {
 function report_on_unused_labels(used_annotation_labels) {
     var HANDLED_LABELS = new Set(Object.values(labels));
     var LABELS_TO_SILENCE = [
-        "Limit of Detection (LOD)/Concentration Range/Number of steps",
-        "Limit of Detection (LOD)/Concentration Range/Dilution per step",
+        "Controls/Internal",
         "Controls/Internal/Extraction control material/Description",
         "Controls/Internal/Extraction control material/Source",
-        "Specimen/Synthetic Specimen/Clinical matrix/Source",
+        "Controls/Internal/Full process",
+        "Detects pathogen(s)",
+        "Limit of Detection (LOD)/Concentration Range/Dilution per step",
+        "Limit of Detection (LOD)/Concentration Range/Number of steps",
+        "Limit of Detection (LOD)/Protocol",
+        "Meta/Error/Omission",
+        "Meta/Not specified/Reasonable assumption",
+        "Meta/Question to answer",
         "Potential interfering substances",
         "Potential interfering substances/Test synthetic sample",
-        "Specimen/Collection protocol",
-        "Time to test result in minutes",
-        "Meta/Question to answer",
-        "Statistics/Confidence intervals/Percentage",
-        "Statistics/Confidence intervals/Lower value",
-        "Statistics/Confidence intervals/Upper value",
-        "Meta/Error/Omission",
-        "Controls/Internal",
-        "Specimen/Synthetic Specimen/Other components",
-        "Specimen/Synthetic Specimen/Production method",
-        "Controls/Internal/Full process",
-        "Specimen/Synthetic Specimen/Swab type",
-        "Specimen/Synthetic Specimen/Transport medium",
-        "Specimen/Volume ul",
-        "Specimen/Transport container(s)",
+        "Primers and probes/Source",
         "RNA extraction & purification/Elution volume ul",
         "RNA extraction & purification/Specimen input volume ul",
-        "Specimen/Swab type",
-        "Limit of Detection (LOD)/Protocol",
-        "Viral protein(s) targetted",
         "Reverse transcription/Input volume ul",
-        "Meta/Not specified/Reasonable assumption",
-        "Detects pathogen(s)",
+        "Specimen/Collection protocol",
+        "Specimen/Swab type",
+        "Specimen/Synthetic Specimen/Clinical matrix/Source",
+        "Specimen/Synthetic Specimen/Other components",
+        "Specimen/Synthetic Specimen/Production method",
+        "Specimen/Synthetic Specimen/Swab type",
+        "Specimen/Synthetic Specimen/Transport medium",
+        "Specimen/Transport container(s)",
+        "Specimen/Volume ul",
+        "Statistics/Confidence intervals/Lower value",
+        "Statistics/Confidence intervals/Percentage",
+        "Statistics/Confidence intervals/Upper value",
         "Third party detection system",
+        "Time to test result in minutes",
+        "Viral protein(s) targetted",
     ];
     LABELS_TO_SILENCE.forEach(function (label) { return HANDLED_LABELS.add(label); });
     var unhandled_labels = used_annotation_labels.filter(function (x) { return !HANDLED_LABELS.has(x); });
@@ -145,6 +135,7 @@ function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
         var test_technology = fda_eua_parsed_data_row[6];
         var EUAs = fda_eua_parsed_data_row[10];
         var url_to_IFU_or_EUA = EUAs.length ? EUAs[0] : fda_eua_parsed_data_row[11];
+        var anot8_org_file_id = fda_eua_parsed_data_row[13]; // TODO remove anot8_org_file_id
         var row = (_a = {
                 test_id: test_id
             },
@@ -170,7 +161,7 @@ function reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data) {
             },
             _a[labels._extra_url_to_IFU_or_EUA] = {
                 annotations: [],
-                data: { value: url_to_IFU_or_EUA }
+                data: { value: anot8_org_file_id }
             },
             _a);
         return row;
@@ -200,9 +191,6 @@ function filter_annotations_for_label(annotation_file, label) {
         .filter(is_annotation)
         .filter(function (annotation) {
         return annotation.labels.filter(function (l) { return l === label; }).length;
-    })
-        .map(function (annotation) {
-        return (__assign(__assign({}, annotation), { relative_file_path: annotation_file.relative_file_path }));
     });
 }
 // const extracted_data: DATA = [
@@ -399,15 +387,17 @@ var headers = [
                 // e.g. * patients suspected of COVID-19 by a healthcare provider
                 //      * pooled samples
                 //      * general, asymptomatic screening population i.e. screening of individuals without symptoms or other reasons to suspect COVID-19
-                label: null
+                label: null,
+                hidden: true
             },
             {
                 // Not in May 13th version of FDA EUA template
                 title: "Sample pooling",
                 label: null,
+                hidden: true,
                 children: [
-                    { title: "Approach", label: null },
-                    { title: "Max no. specimens", label: null },
+                    { title: "Approach", label: null, hidden: true },
+                    { title: "Max no. specimens", label: null, hidden: true },
                 ]
             },
             { title: "Target gene(s) of SARS-CoV-2", label: labels.claims__target_viral_genes },
@@ -416,14 +406,15 @@ var headers = [
                 label: null,
                 children: [
                     { title: "Sequences", label: labels.claims__primers_and_probes__sequences },
-                    { title: "Sources", label: labels.claims__primers_and_probes__sources },
+                    { title: "Sources", label: labels.claims__primers_and_probes__sources, hidden: true },
                 ]
             },
             {
                 // Not in May 13th version of FDA EUA template
                 // i.e. can include more than just SARS-CoV-2
                 title: "Detects pathogen(s)",
-                label: null
+                label: null,
+                hidden: true
             },
             {
                 title: "Limit of Detection (LOD)",
@@ -446,9 +437,10 @@ var headers = [
             {
                 title: "Intended user",
                 // e.g. CLIA labs
-                label: null
+                label: null,
+                hidden: true
             },
-            { title: "Compatible equipment", label: null },
+            { title: "Compatible equipment", label: null, hidden: true },
             // {
             // Product Overview/Test Principle...
             //     // primer and probe sets and briefly describe what they detect. Please include the nucleic acid sequences for all primers and probes used in the test. Please indicate if the test uses biotin-Streptavidin/avidin chemistry
@@ -464,26 +456,26 @@ var headers = [
                 title: "RNA extraction",
                 label: null,
                 children: [
-                    { title: "Specimen input volume", label: null },
-                    { title: "RNA extraction method(s)", label: null },
-                    { title: "Nucleic acid elution volume", label: null },
-                    { title: "Purification manual &/ automated", label: null },
+                    { title: "Specimen input volume", label: null, hidden: true },
+                    { title: "RNA extraction method(s)", label: null, hidden: true },
+                    { title: "Nucleic acid elution volume", label: null, hidden: true },
+                    { title: "Purification manual &/ automated", label: null, hidden: true },
                 ]
             },
             {
                 title: "Reverse transcription",
                 label: null,
                 children: [
-                    { title: "Input volume", label: null },
-                    { title: "Enzyme mix / kits", label: null },
+                    { title: "Input volume", label: null, hidden: true },
+                    { title: "Enzyme mix / kits", label: null, hidden: true },
                 ]
             },
             {
                 title: "PCR / amplification",
                 label: null,
                 children: [
-                    { title: "Instrument", label: null },
-                    { title: "Enzyme mix / kits", label: null },
+                    { title: "Instrument", label: null, hidden: true },
+                    { title: "Enzyme mix / kits", label: null, hidden: true },
                     { title: "Reaction volume / μL", label: labels.claims__reaction_volume_uL },
                 ]
             },
@@ -491,7 +483,7 @@ var headers = [
                 title: "PCR quantification fluoresence detection",
                 label: null,
                 children: [
-                    { title: "Instrument", label: null },
+                    { title: "Instrument", label: null, hidden: true },
                 ]
             },
         ]
@@ -513,12 +505,12 @@ var headers = [
                 title: "Patient details",
                 label: null,
                 children: [
-                    { title: "Age", label: null },
-                    { title: "Race", label: null },
-                    { title: "Gender", label: null },
+                    { title: "Age", label: null, hidden: true },
+                    { title: "Race", label: null, hidden: true },
+                    { title: "Gender", label: null, hidden: true },
                 ]
             },
-            { title: "Disease stage", label: null },
+            { title: "Disease stage", label: null, hidden: true },
             {
                 title: "Synthetic Specimen",
                 label: null,
@@ -533,10 +525,26 @@ var headers = [
                 title: "Specimen",
                 label: null,
                 children: [
-                    { title: "Type", label: labels.validation_condition__specimen_type },
-                    { title: "Swab type", label: labels.validation_condition__swab_type },
-                    { title: "Transport medium", label: labels.validation_condition__transport_medium },
-                    { title: "Sample volume", label: labels.validation_condition__sample_volume },
+                    {
+                        title: "Type",
+                        label: labels.validation_condition__specimen_type,
+                        hidden: true
+                    },
+                    {
+                        title: "Swab type",
+                        label: labels.validation_condition__swab_type,
+                        hidden: true
+                    },
+                    {
+                        title: "Transport medium",
+                        label: labels.validation_condition__transport_medium,
+                        hidden: true
+                    },
+                    {
+                        title: "Sample volume",
+                        label: labels.validation_condition__sample_volume,
+                        hidden: true
+                    },
                 ]
             },
         ]
@@ -544,7 +552,8 @@ var headers = [
     {
         title: "Overall score",
         label: null,
-        category: "metric"
+        category: "metric",
+        hidden: true
     },
     {
         title: "Metrics",
@@ -557,26 +566,45 @@ var headers = [
                 children: [
                     {
                         title: "Positives",
-                        label: labels.metrics__num_clinical_samples__positive
+                        label: labels.metrics__num_clinical_samples__positive,
+                        hidden: true
                     },
                     {
                         title: "Controls (negatives)",
-                        label: labels.metrics__num_clinical_samples__negative_controls
+                        label: labels.metrics__num_clinical_samples__negative_controls,
+                        hidden: true
                     },
                 ]
             },
             {
                 title: "Comparator test",
-                label: labels.validation_condition__comparator_test
+                label: labels.validation_condition__comparator_test,
+                hidden: true
             },
             {
                 title: "Confusion matrix",
                 label: null,
                 children: [
-                    { title: "True positives", label: labels.metrics__confusion_matrix__true_positives },
-                    { title: "False negatives", label: labels.metrics__confusion_matrix__false_negatives },
-                    { title: "True negatives", label: labels.metrics__confusion_matrix__true_negatives },
-                    { title: "False positives", label: labels.metrics__confusion_matrix__false_positives },
+                    {
+                        title: "True positives",
+                        label: labels.metrics__confusion_matrix__true_positives,
+                        hidden: true
+                    },
+                    {
+                        title: "False negatives",
+                        label: labels.metrics__confusion_matrix__false_negatives,
+                        hidden: true
+                    },
+                    {
+                        title: "True negatives",
+                        label: labels.metrics__confusion_matrix__true_negatives,
+                        hidden: true
+                    },
+                    {
+                        title: "False positives",
+                        label: labels.metrics__confusion_matrix__false_positives,
+                        hidden: true
+                    },
                 ]
             },
         ]
@@ -585,7 +613,8 @@ var headers = [
         title: "Derived values",
         label: null,
         category: "derived_values",
-        children: []
+        children: [],
+        hidden: true
     },
 ];
 function build_header(headers) {
@@ -600,7 +629,7 @@ function build_header(headers) {
         var row1_width = 0;
         var row1_height = 1;
         if (!(element1.children && element1.children.length)) {
-            row1_width = 1;
+            row1_width = (element1.hidden ? 0 : 1);
             row1_height = 3;
         }
         else
@@ -609,24 +638,24 @@ function build_header(headers) {
                 var row2_width = 0;
                 var row2_height = 1;
                 if (!(element2.children && element2.children.length)) {
-                    row2_width = 1;
+                    row2_width = (element2.hidden ? 0 : 1);
                     row2_height = 2;
                 }
                 else
                     for (var i3 = 0; i3 < element2.children.length; ++i3) {
                         var element3 = element2.children[i3];
-                        row2_width++;
+                        row2_width += (element3.hidden ? 0 : 1);
                         var cell3 = document.createElement("th");
                         row3.appendChild(cell3);
                         cell3.innerHTML = element3.title;
-                        cell3.className = className;
+                        cell3.className = className + (element3.hidden ? " hidden" : "");
                     }
                 var cell2 = document.createElement("th");
                 row2.appendChild(cell2);
                 cell2.innerHTML = element2.title;
                 cell2.colSpan = row2_width;
                 cell2.rowSpan = row2_height;
-                cell2.className = className;
+                cell2.className = className + ((element2.hidden || (row2_width === 0)) ? " hidden" : "");
                 row1_width += row2_width;
             }
         var cell1 = document.createElement("th");
@@ -634,7 +663,7 @@ function build_header(headers) {
         cell1.innerHTML = element1.title;
         cell1.colSpan = row1_width;
         cell1.rowSpan = row1_height;
-        cell1.className = className;
+        cell1.className = className + ((element1.hidden || (row1_width === 0)) ? " hidden" : "");
     }
 }
 function iterate_lowest_header(headers, func) {
@@ -718,10 +747,11 @@ function comments_from_annotations(annotations) {
     return comments;
 }
 function ref_link(annotation) {
-    var relative_file_path = annotation.relative_file_path, id = annotation.id;
-    var ref = "http://localhost:5003/r/1772.2/-1?relative_file_path=" + relative_file_path;
+    var anot8_org_file_id = annotation.anot8_org_file_id, id = annotation.id;
+    // let ref = `http://localhost:5003/r/1772.2/${anot8_org_file_id}`
+    var ref = "https://anot8.org/r/1772.2/" + anot8_org_file_id;
     if (id !== undefined)
-        ref += "&highlighted_annotation_ids=" + id;
+        ref += "?highlighted_annotation_ids=" + id;
     return ref;
 }
 var lod_allowed_labels = __spreadArrays([labels.claims__limit_of_detection__value], LABELS__META);
@@ -773,6 +803,7 @@ var virus_type_labels = new Set([
 function synthetic_specimen__viral_material_value_handler(data_node) {
     var annotations = data_node.annotations;
     var v = annotations.map(function (a) { return a.text; }).join("; ");
+    var comments = comments_from_annotations(annotations);
     var string = "";
     var types = [];
     if (annotations.length) {
@@ -783,20 +814,20 @@ function synthetic_specimen__viral_material_value_handler(data_node) {
             }
         }); });
         var type = types.length ? types.join(", ") : "<span style=\"color: #ccc;\">not parsed</span>";
-        string = type + " | " + v;
+        string = type + " | " + v + "<br/>" + comments;
     }
     return { string: string, refs: data_node.refs, data: { types: types } };
 }
 function link_value_handler(data_node) {
-    var url = data_node.data.value;
+    var anot8_org_file_id = data_node.data.value;
     var pseudo_annotation = {
-        relative_file_path: get_FDA_EUA_pdf_file_path_from_url(url)
+        anot8_org_file_id: anot8_org_file_id
     };
     var refs = [ref_link(pseudo_annotation)];
-    return { string: "", refs: refs, data: { value: url } };
+    return { string: "", refs: refs, data: { value: anot8_org_file_id } };
 }
 /** TypeScript version of python function */
-function get_FDA_EUA_pdf_file_path_from_url(url) {
+function get_FDA_EUA_pdf_file_path_from_FDA_url(url) {
     var matches = url.match("https://www.fda.gov/media/(\\d+)/download");
     var file_id = "";
     try {
@@ -830,7 +861,10 @@ function create_table_cell_contents(data_node) {
     });
     var ref_container_el = document.createElement("div");
     ref_container_el.innerHTML = data_node.refs.map(function (r) { return " <a class=\"reference\" href=\"" + r + "\">R</a>"; }).join(" ");
-    return [value_el, ref_container_el];
+    var cell_el = document.createElement("div");
+    cell_el.appendChild(value_el);
+    cell_el.appendChild(ref_container_el);
+    return cell_el;
 }
 function populate_table_body(headers, data_rows) {
     var table_el = document.getElementById("data_table");
@@ -839,6 +873,7 @@ function populate_table_body(headers, data_rows) {
         var row = tbody_el.insertRow();
         iterate_lowest_header(headers, function (header) {
             var cell = row.insertCell();
+            cell.className = header.hidden ? "hidden" : "";
             var data_node = data_row[header.label];
             if (data_node) {
                 var value_handler = value_handlers[header.label] || annotations_value_handler;
@@ -846,8 +881,8 @@ function populate_table_body(headers, data_rows) {
                 data_node.html_display_string = value.string;
                 data_node.refs = value.refs;
                 data_node.data = value.data;
-                var children = create_table_cell_contents(data_node);
-                children.forEach(function (child_el) { return cell.appendChild(child_el); });
+                var child_el = create_table_cell_contents(data_node);
+                cell.appendChild(child_el);
             }
         });
     });
@@ -866,7 +901,7 @@ function populate_table_body(headers, data_rows) {
             synthetic_specimen__viral_material: synthetic_specimen__viral_material.types
         });
     });
-    console.log(JSON.stringify(data_for_export, null, 2));
+    //console.log(JSON.stringify(data_for_export, null, 2))
 }
 function update_progress() {
     var progress_el = document.getElementById("progress");
@@ -891,6 +926,13 @@ var used_annotation_labels = Array.from(get_used_annotation_labels(annotation_fi
 report_on_unused_labels(used_annotation_labels);
 var data_rows = reformat_fda_eua_parsed_data_as_rows(fda_eua_parsed_data);
 data_rows.forEach(function (row) { return add_data_from_annotations(row, annotation_files_by_test_id, labels); });
+// temporarily filter out rows from
+data_rows = data_rows.filter(function (d) {
+    var tech = d["Test technology"].data.value.toLowerCase();
+    // Finds most of the them.
+    var remove = tech.includes("serology") || tech.includes("igg") || tech.includes("igm");
+    return !remove;
+});
 build_header(headers);
 populate_table_body(headers, data_rows);
 update_progress();
